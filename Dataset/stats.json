@@ -1,0 +1,138 @@
+{
+  "state": "running",
+  "offline": false,
+  "disk_low": false,
+  "disk_free_gb": 30.7,
+  "product": "Parallel Web Technologies",
+  "developer": "ProLab Robotics",
+  "started": 1794210096.303224,
+  "started_iso": "2026-11-09T13:11:36",
+  "updated": 1794210130.203718,
+  "updated_iso": "2026-11-09T13:12:10",
+  "uptime_s": 34,
+  "workers": 1000,
+  "effective_workers": 250,
+  "in_flight": 1001,
+  "busy_by_kind": {
+    "text": 256,
+    "web_images": 96,
+    "archive": 647,
+    "seed": 1,
+    "vla": 1
+  },
+  "waiting": 969,
+  "processes": 4,
+  "fields": {
+    "mathematics": 10536,
+    "computer science": 5788,
+    "psychology": 3914,
+    "engineering": 3872,
+    "physics": 3100,
+    "programming": 2863,
+    "robotics": 2458,
+    "medicine": 202,
+    "general knowledge": 101
+  },
+  "topic_fields": {
+    "biology": 5528,
+    "chemistry": 1127,
+    "computer science": 2320,
+    "earth and space": 2626,
+    "economics and finance": 2873,
+    "engineering": 5314,
+    "humanities": 11040,
+    "machine learning": 85,
+    "materials science": 1499,
+    "mathematics": 998,
+    "medicine": 9020,
+    "physics": 1433,
+    "programming": 74,
+    "psychology": 1278,
+    "robotics": 88,
+    "statistics": 341
+  },
+  "by_source": {
+    "stack exchange dump": 101,
+    "openlifescienceai/medmcqa": 0
+  },
+  "counts": {
+    "text": 32834,
+    "originals": 333,
+    "variants": 32501,
+    "web_images": 53,
+    "synthetic_images": 840,
+    "images": 893,
+    "vla_episodes": 828,
+    "vla_frames": 10315,
+    "tokens": 11536479,
+    "tasks_done": 9399,
+    "tasks_failed": 0,
+    "topics_added": 49341,
+    "preference": 93
+  },
+  "by_kind": {
+    "archive": 4,
+    "text": 0,
+    "web_images": 14,
+    "synthetic_images": 63,
+    "vla": 186,
+    "expand": 0,
+    "seed": 1,
+    "seed_concepts": 0
+  },
+  "tokens": 11536479,
+  "per_min": 3247.8,
+  "topics": {
+    "known": 50601,
+    "explored": 122,
+    "queued": 50239,
+    "space": 3036060
+  },
+  "system": {
+    "time": 1794210130.2030342,
+    "cpu": 36.5,
+    "cpu_cores": [
+      29.3,
+      26.3,
+      22.9,
+      20.0,
+      61.2,
+      58.4,
+      45.9,
+      27.8
+    ],
+    "mem": 79.7,
+    "mem_used_gb": 3.08,
+    "mem_total_gb": 8.0,
+    "proc_mem_mb": 166.9,
+    "threads": 255,
+    "proc_cpu": 0.0,
+    "net_rx": 4010734592,
+    "net_tx": 4257925120,
+    "down_kbps": 290.6,
+    "up_kbps": 40.8,
+    "disk_free_gb": 30.7,
+    "load": [
+      4.58,
+      20.06,
+      18.88
+    ],
+    "cores": 8
+  },
+  "disk_mb": 27.9,
+  "github": {
+    "state": "off",
+    "error": "",
+    "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
+    "last_push": 0.0,
+    "next_sync_s": 298,
+    "commits": 0
+  },
+  "last_sample": {
+    "type": "generated image",
+    "topic": "object detection",
+    "problem": "A metal plate with 7 objects: a black diamond at the bottom centre, a black ring at the top centre, a white ring at the top centre, an orange hexagon at the bottom right, a green circle at the bottom centre, a black square on the left, a blue diamond at the top right.",
+    "solution": "7 labelled objects",
+    "source": "AITE generator"
+  }
+}
