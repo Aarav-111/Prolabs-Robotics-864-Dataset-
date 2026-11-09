@@ -446,6 +446,7 @@ def _settings_spec():
     add("GitHub", "gh_interval_min", "Sync every (minutes)", "float", 5.0, (1, 1440))
     add("GitHub", "gh_push_data", "Push dataset shards and images (not just stats)", "bool", True)
     add("GitHub", "gh_stream", "GitHub first: delete local copies once GitHub has them (tiny local buffer)", "bool", True)
+    add("GitHub", "gh_batch_mb", "Upload at most this much per sync (MB) - the rest goes next sync", "float", 25.0, (1, 2000))
     add("GitHub", "gh_max_repo_mb", "Stop pushing data above (MB) - GitHub blocks repositories far beyond ~5 GB", "float", 4500.0, (10, 10000000))
     add("GitHub", "gh_author_name", "Commit author name", "str", "AITE Agent")
     add("GitHub", "gh_author_email", "Commit author email", "str", "aite-agent@users.noreply.github.com")
@@ -2899,8 +2900,8 @@ def run_pipeline(inp, st, log=print, cancel=None, progress=None, searcher=None, 
 # requests per second per host - each value is at or under what that service documents for keyless clients
 PWT_HOST_RATES = {
     "api.stackexchange.com": 2.0,             # 30/s max per IP; the keyless daily quota (300) is the real limit
-    "datasets-server.huggingface.co": 4.0,
-    "huggingface.co": 2.0,
+    "datasets-server.huggingface.co": 1.5,   # Hugging Face answers 429 above this for anonymous clients
+    "huggingface.co": 1.0,
     "en.wikibooks.org": 1.0, "en.wikipedia.org": 4.0, "commons.wikimedia.org": 2.0, "upload.wikimedia.org": 2.0,
     "thumb.wikimedia.org": 2.0,
     "export.arxiv.org": 0.33,                 # arXiv asks for one request every 3 seconds
@@ -4017,6 +4018,8 @@ class GitHubSync:
             code, out = self.run(up, "fetch", "-q", "--depth", "1", "origin", branch)
             if code == 0:
                 self.run(up, "reset", "-q", "--hard", "FETCH_HEAD")
+        self.run(up, "config", "http.postBuffer", "524288000")  # large pushes over slow uploads
+        self.run(up, "config", "http.version", "HTTP/1.1")
         self.run(up, "config", "user.name", self.st.get("gh_author_name") or "AITE Agent")
         self.run(up, "config", "user.email", self.st.get("gh_author_email") or "aite-agent@users.noreply.github.com")
         sub = os.path.basename(self.root.rstrip("/")) if os.path.basename(self.root.rstrip("/")) == "Dataset" else ""
@@ -4025,11 +4028,24 @@ class GitHubSync:
         over = float(self.store_mb()) > float(self.st.get("gh_max_repo_mb", 4500))
         files = [f for f in self.META_FILES if os.path.exists(os.path.join(self.root, f))]
         if push_data and not over:
+            data = []
             for d in self.DATA_DIRS:
                 for dp, dn, fn in os.walk(os.path.join(self.root, d)):
                     for f in fn:
                         if not f.endswith((".open", ".tmp")):
-                            files.append(os.path.relpath(os.path.join(dp, f), self.root))
+                            fp = os.path.join(dp, f)
+                            try:
+                                data.append((os.path.getmtime(fp), os.path.getsize(fp), os.path.relpath(fp, self.root)))
+                            except OSError:
+                                pass
+            cap, used = float(self.st.get("gh_batch_mb", 25)) * 2 ** 20, 0
+            prio = {"text": 0, "preference": 1, "detection": 2, "vla": 3, "images": 4}
+            data.sort(key=lambda x: (prio.get(x[2].split("/")[0], 9), x[0]))
+            for _t, size, rel in data:  # most valuable first, one batch at a time (big pushes time out on slow uploads)
+                if used and used + size > cap:
+                    break
+                files.append(rel)
+                used += size
         if not files:
             return True
         added = 0
@@ -4089,6 +4105,14 @@ class GitHubSync:
                     except OSError:
                         pass
 
+    def backlog(self):
+        """Finished data files still waiting for GitHub."""
+        for d in self.DATA_DIRS:
+            for dp, dn, fn in os.walk(os.path.join(self.root, d)):
+                if any(not f.endswith((".open", ".tmp")) for f in fn):
+                    return True
+        return False
+
     def store_mb(self):
         try:
             with open(os.path.join(self.root, ".agent", "pushed_mb.json")) as f:
@@ -4110,7 +4134,10 @@ class GitHubSync:
             return False
         if self.st.get("gh_stream", True) and str(self.st.get("gh_repo", "")).strip():
             try:
+                t0 = time.time()
                 ok = self.stream(push_data)
+                while ok and push_data and time.time() - t0 < 240 and self.backlog():  # drain at the connection's speed
+                    ok = self.stream(push_data)
                 with open(os.path.join(self.root, ".agent", "pushed_mb.json"), "w") as f:
                     json.dump({"mb": self.store_mb()}, f)
                 self.pushed_mb = 0.0
@@ -4305,8 +4332,17 @@ class Agent:
                 w[k] = 0.0
         return w
 
+    KIND_CAP = {"text": 64, "web_images": 24}  # per process: more would only queue at the same rate-limited sites
+
     def pick_kind(self):
         w = {k: v for k, v in self.mix().items() if k in ("archive", "text", "web_images")}
+        with self.lock:
+            now_busy = {k: sum(1 for v in self.inflight.values() if v[0] == k) for k in w}
+        for k, cap in self.KIND_CAP.items():
+            if k in w and now_busy.get(k, 0) >= cap:
+                w[k] = 0.0
+        if not any(w.values()):
+            return None
         tot = sum(w.values()) or 1
         with self.lock:
             busy = {k: sum(1 for v in self.inflight.values() if v[0] == k) for k in w}
@@ -4417,7 +4453,11 @@ class Agent:
             self.counts["originals"] += orig
             self.counts["variants"] += len(rows) - orig
             self.counts["tokens"] += sum(len(r["problem"]) + len(r["solution"]) for r in rows) // 4
-            self.count_field(field, len(rows))
+            per = {}
+            for r in rows:
+                per[r.get("field") or field] = per.get(r.get("field") or field, 0) + 1
+            for f_, n_ in per.items():
+                self.count_field(f_, n_)
             s = rows[0]
             self.last_sample = {"type": label, "topic": topic, "problem": shorten(s["problem"], 400),
                                 "solution": shorten(s["solution"], 400), "source": s["source"]}
@@ -4514,8 +4554,9 @@ class Agent:
             if src["kind"] == "se":
                 meta = r.get("metadata") or []
                 host = meta[1].split("://", 1)[-1].rstrip("/") if len(meta) > 1 else ""
-                if host != src["site"] or not r.get("answers"):
-                    continue
+                if not host or ".meta." in host or host.startswith("meta.") or not r.get("answers"):
+                    continue  # meta sites discuss the websites themselves - not knowledge
+                field = ARCHIVE_SITES.get(host, ("general knowledge", 1))[0]
                 ans = sorted(r["answers"], key=lambda a: (not a.get("selected"), -int(a.get("pm_score") or 0)))
                 best = ans[0]
                 if int(best.get("pm_score") or 0) < q_min and not best.get("selected"):
@@ -4525,6 +4566,7 @@ class Agent:
                 title = shorten(sentences(problem)[0] if sentences(problem) else problem, 120)
                 it = item(field, "stackexchange", title, problem, solution, url, int(best.get("pm_score") or 0),
                           {"license": "CC BY-SA 4.0", "site": host, "archive": SE_ARCHIVE})
+                it["_site"] = host
                 items.append(it)
                 worse = [a for a in ans[1:] if int(best.get("pm_score") or 0) - int(a.get("pm_score") or 0) >= 2]
                 if worse:
@@ -4550,18 +4592,13 @@ class Agent:
         src = self.pick_archive()
         if src is None:
             return
-        if src["kind"] == "se":
-            try:
-                rng_ = self.se_range(http, src["site"])
-            except RuntimeError:
-                self.log(f"Archive: could not reach the Stack Exchange dump for {src['site']} - will try again later")
-                return
-            if not rng_ or rng_[1] <= rng_[0]:
-                return
-            lo, hi = rng_
+        if src["kind"] == "se":  # sweep the whole dump from many places at once - every real expert site is kept
+            lo, hi = 0, SE_ARCHIVE_ROWS
+            slot = random.randrange(16)
+            key = f"cursor:se:{slot}"
         else:
             lo, hi = 0, src["rows"]
-        key = f"cursor:{src['name']}"
+            key = f"cursor:{src['name']}"
         cur = self.store.get(key)
         if cur is None or not lo <= cur < hi:
             cur = random.randint(lo, max(lo, hi - 1))
@@ -4573,10 +4610,12 @@ class Agent:
             return
         field = src["field"]
         items, prefs = self.archive_records(src, rows, field)
+        if src["kind"] == "se":
+            field = "stack exchange"
         for it in items:
             it["uid"] = _rid(it["url"], it["problem"][:200])[:12]
-        inp = {"topics": [field], "quantity": max(1, len(items)), "quality": int(self.st.get("agent_quality", 5)),
-               "data_type": "problems & solution papers",
+        inp = {"topics": sorted({it["topic"] for it in items}) or [field], "quantity": max(1, len(items)),
+               "quality": int(self.st.get("agent_quality", 5)), "data_type": "problems & solution papers",
                "datagen_variations": int(self.st.get("agent_variations", 3)) if product_on(self.st, "product_datagen") else 0,
                "datagen_styles": list(STYLES), "datagen_formats": list(FORMATS), "datagen_methods": list(METHODS)}
         st = dict(self.st, topic_relevance=False, dg_seed=random.randint(1, 10 ** 9))
@@ -4585,9 +4624,12 @@ class Agent:
         else:
             kept, _rej, _why = Filterer(st, lambda m: None).run(items, inp) if items else ([], [], {})
         variants = DataGen(st, lambda m: None).generate(kept, inp) if kept and inp["datagen_variations"] else []
-        out = [dict(agent_text_record(r, st), field=field, level="advanced" if src.get("advanced") else "mixed",
-                    data_type="archive", archive=src["name"]) for r in kept + variants]
-        out = self.write_text_rows(out, src["name"], field, "archive Q&A")
+        out = [dict(agent_text_record(r, st), field=r.get("topic") or field,
+                    level="advanced" if r.get("meta", {}).get("site") in ("mathoverflow.net", "cstheory.stackexchange.com") else "mixed",
+                    data_type="archive", archive=r.get("meta", {}).get("site") or src["name"]) for r in kept + variants]
+        for f_ in {r["field"] for r in out}:
+            self.count_field(f_, 0)
+        out = self.write_text_rows(out, src["name"], src["field"], "archive Q&A")
         if prefs and product_on(self.st, "product_preference"):
             fresh = set(self.store.first_seen([x["id"] for x in prefs]))
             prefs = [x for x in prefs if x["id"] in fresh]
@@ -4599,18 +4641,9 @@ class Agent:
                  + (f", +{len(prefs)} preference pairs" if prefs else ""))
 
     def pick_archive(self):
-        srcs = []
-        for site, (field, w) in ARCHIVE_SITES.items():
-            srcs.append(({"kind": "se", "name": site, "site": site, "dataset": SE_ARCHIVE, "config": "default", "field": field,
-                          "advanced": site in ("mathoverflow.net", "cstheory.stackexchange.com")},
-                         w * FIELD_WEIGHTS.get(field, 1) / 10))
+        srcs = [({"kind": "se", "name": "stack exchange dump", "dataset": SE_ARCHIVE, "config": "default", "field": "stack exchange"}, 8.0)]
         for name, d in HF_ARCHIVES.items():
             srcs.append((dict(d, kind="hf", name=name, dataset=name), d["weight"] * FIELD_WEIGHTS.get(d["field"], 1) / 10))
-        if self.offline:
-            srcs = [x for x in srcs if x[0]["kind"] == "hf" or x[0]["site"] in ("math.stackexchange.com", "mathoverflow.net")]
-        srcs = [x for x in srcs if self.store.get(f"se_range:{x[0]['name']}", [0, 1]) != [0, 0]]  # skip sites not in the dump
-        if not srcs:
-            return None
         return random.choices([x[0] for x in srcs], weights=[x[1] for x in srcs])[0]
 
     def _img_dir(self, kind):
@@ -4889,7 +4922,12 @@ class Agent:
         return getattr(self, "_disk_low", False)
 
     def n_procs(self):
-        return max(1, math.ceil(self.workers / AGENTS_PER_PROCESS))
+        """Enough processes for the thread limit, and up to one per CPU core so DataGen's CPU work runs in parallel."""
+        return max(1, math.ceil(self.workers / AGENTS_PER_PROCESS), min(os.cpu_count() or 1, math.ceil(self.workers / 250)))
+
+    def share(self, n=None):
+        n = n or self.n_procs()
+        return max(1, math.ceil(self.workers / n))
 
     def manage_processes(self):
         """More agents than one process can hold (macOS: ~2,000 threads per process) -> extra worker processes."""
@@ -4954,7 +4992,8 @@ class Agent:
                 except Exception:
                     pass
             self.workers = int(procs.get("workers", self.workers))
-            share = max(0, min(AGENTS_PER_PROCESS, self.workers - self.worker_id * AGENTS_PER_PROCESS))
+            per = max(1, math.ceil(self.workers / max(1, n)))
+            share = max(0, min(per, self.workers - self.worker_id * per))
             self.pool._max_workers = max(self.pool._max_workers, share)
             if self.limiter and getattr(self, "_np", None) != n:
                 self._np = n
@@ -5061,7 +5100,7 @@ class Agent:
                 cap = float(self.st.get("agent_cpu_cap", 85))
                 if cpu > cap:
                     self.eff = max(1, int(self.eff * 0.8))
-                own = min(AGENTS_PER_PROCESS, self.workers)
+                own = self.share()
                 if cpu > cap:
                     pass
                 elif self.eff < own:
@@ -7133,8 +7172,8 @@ def main_gui():
         ag["root"] = tempfile.mkdtemp(prefix="aite_agent_smoke_")
         smoke_settings = os.path.join(ag["root"], "settings.json")
         with open(smoke_settings, "w") as f_:
-            json.dump(dict(default_settings(), _version=SETTINGS_VERSION, pwt_workers=32, agent_quality=5, agent_batch=8,
-                           agent_variations=3), f_)
+            json.dump(dict(default_settings(), _version=SETTINGS_VERSION, pwt_workers=33, agent_quality=6, agent_batch=9,
+                           agent_variations=2), f_)  # values that are not old defaults (those get migrated)
         os.environ["AITE_SETTINGS"] = smoke_settings  # the background agent reads defaults, never the user's settings
     agent_pg = box(root, "page")
     ag_sf = ScrollFrame(agent_pg, "page")
@@ -10571,10 +10610,11 @@ def _selftest():
               "GitHub sync commits into <repo>/Dataset and pushes")
         check(json.load(open(os.path.join(root_a, "stats.json")))["counts"]["text"] == c["text"], "stats.json written")
         arch = [r for r in rows if r.get("data_type") == "archive"]
-        check(arch and any(r.get("archive") == "math.stackexchange.com" for r in arch) and
+        check(arch and any((r.get("archive") or "").endswith(("stackexchange.com", ".net", ".com")) for r in arch) and
               any("Answer: C) Vitamin C" in r["solution"] for r in arch), "archive lane: Stack Exchange dump + MedMCQA rows")
-        check(ag_.store.get("se_range:math.stackexchange.com") == [5000000, 6000000] and
-              ag_.store.get("se_range:mathoverflow.net") == [6000000, 6500000], "binary search finds each site's rows")
+        sites_ = {r.get("archive") for r in arch if r.get("source") == "stackexchange"}
+        check(len(sites_ & {"math.stackexchange.com", "mathoverflow.net", "physics.stackexchange.com", "Stackoverflow.com"}) >= 2
+              and not any(".meta." in (x or "") for x in sites_), f"archive sweep keeps real sites ({sorted(x for x in sites_ if x)[:5]})")
         prefs_ = [json.loads(l) for f in glob.glob(os.path.join(root_a, "preference", "*.jsonl.gz")) for l in gzip.open(f, "rt")]
         check(prefs_ and all(p["chosen_score"] - p["rejected_score"] >= 2 and p["chosen"] != p["rejected"] for p in prefs_),
               "preference pairs: chosen beats rejected by 2+ votes")
