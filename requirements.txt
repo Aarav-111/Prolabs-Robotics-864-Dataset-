@@ -1,0 +1,7 @@
+Pillow>=10
+sympy>=1.12
+psutil>=5.9
+certifi
+pypdf>=4
+pyobjc-framework-Cocoa; sys_platform == "darwin"
+# The Trainer installs its own tools (mlx-lm) into .trainer-venv with one click.
