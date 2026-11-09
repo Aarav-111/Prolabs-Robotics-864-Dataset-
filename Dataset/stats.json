@@ -2,23 +2,22 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 30.0,
+  "disk_free_gb": 30.1,
   "product": "Parallel Web Technologies",
   "developer": "ProLab Robotics",
   "started": 1794241096.833544,
   "started_iso": "2026-11-09T21:48:16",
-  "updated": 1794241187.908536,
-  "updated_iso": "2026-11-09T21:49:47",
-  "uptime_s": 91,
+  "updated": 1794241240.552354,
+  "updated_iso": "2026-11-09T21:50:40",
+  "uptime_s": 144,
   "workers": 1000,
   "effective_workers": 250,
-  "in_flight": 1180,
+  "in_flight": 1165,
   "busy_by_kind": {
-    "text": 256,
-    "archive": 1791,
-    "web_images": 55
+    "text": 254,
+    "archive": 1791
   },
-  "waiting": 2094,
+  "waiting": 2041,
   "processes": 4,
   "fields": {
     "mathematics": 12753,
@@ -31,8 +30,8 @@
     "medicine": 1728,
     "economics and finance": 1172,
     "materials science": 303,
-    "general knowledge": 101,
-    "biology": 92
+    "biology": 293,
+    "general knowledge": 101
   },
   "topic_fields": {
     "biology": 13640,
@@ -57,83 +56,83 @@
     "openlifescienceai/medmcqa": 268
   },
   "counts": {
-    "text": 39773,
-    "originals": 387,
-    "variants": 39386,
-    "web_images": 78,
+    "text": 39974,
+    "originals": 388,
+    "variants": 39586,
+    "web_images": 82,
     "synthetic_images": 4224,
-    "images": 4302,
+    "images": 4306,
     "vla_episodes": 4224,
     "vla_frames": 52029,
-    "tokens": 14352783,
-    "tasks_done": 11004,
+    "tokens": 14446647,
+    "tasks_done": 11065,
     "tasks_failed": 0,
-    "topics_added": 102089,
+    "topics_added": 102741,
     "preference": 204
   },
   "by_kind": {
     "archive": 5,
     "text": 0,
-    "web_images": 19,
+    "web_images": 34,
     "synthetic_images": 10,
     "vla": 32,
     "expand": 0,
     "seed": 2,
-    "seed_concepts": 6
+    "seed_concepts": 10
   },
-  "tokens": 14352783,
-  "per_min": 1517.1,
+  "tokens": 14446647,
+  "per_min": 1035.1,
   "topics": {
-    "known": 103350,
-    "explored": 146,
-    "queued": 102904,
-    "space": 6201000
+    "known": 104002,
+    "explored": 148,
+    "queued": 103556,
+    "space": 6240120
   },
   "system": {
-    "time": 1794241187.90754,
-    "cpu": 47.5,
+    "time": 1794241240.5482829,
+    "cpu": 71.6,
     "cpu_cores": [
-      35.4,
-      33.5,
-      28.1,
-      27.3,
-      65.9,
-      66.8,
-      61.1,
-      61.0
+      57.6,
+      56.7,
+      54.5,
+      52.1,
+      91.5,
+      92.4,
+      82.1,
+      85.3
     ],
-    "mem": 82.2,
-    "mem_used_gb": 2.88,
+    "mem": 80.9,
+    "mem_used_gb": 2.77,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 74.8,
+    "proc_mem_mb": 71.8,
     "threads": 293,
     "proc_cpu": 0.0,
-    "net_rx": 4164625408,
-    "net_tx": 4394001408,
-    "down_kbps": 85.4,
-    "up_kbps": 21.3,
-    "disk_free_gb": 30.0,
+    "net_rx": 4171077632,
+    "net_tx": 4412780544,
+    "down_kbps": 45.0,
+    "up_kbps": 16.1,
+    "disk_free_gb": 30.1,
     "load": [
-      5.17,
-      6.82,
-      8.64
+      3.91,
+      6.23,
+      8.32
     ],
     "cores": 8
   },
-  "disk_mb": 306.1,
+  "disk_mb": 282.1,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794241186.302479,
-    "next_sync_s": 241,
-    "commits": 1
+    "last_push": 1794241237.1499789,
+    "next_sync_s": 188,
+    "commits": 2
   },
   "last_sample": {
     "type": "web image",
-    "topic": "spectral sequences",
-    "problem": "Sequence of selected early type dwarf spectra.",
-    "solution": "CC BY-SA 3.0",
+    "topic": "cattle fattening",
+    "problem": "Farm and Bundesautobahn 31 in Samern, Samtgemeinde Sch\u00fcttorf, district of Grafschaft Bentheim, Lower Saxony, Germany",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
