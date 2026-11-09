@@ -59,15 +59,37 @@ The data it collects lives right here, in [`Dataset/`](Dataset). Agent mode upda
 
 Press **Start collecting** once. After that, AITE keeps building the dataset by itself, even while its window is closed, until you press **Pause**.
 
-- **Endless topics.** A built-in map of the sciences, then OpenAlex's catalogue of about 4,500 research topics, then Wikipedia's links between ideas. Add your own *focus topics* to go first.
+- **Endless, deep topics.** The topic engine covers 16 fields, from fundamentals to research level (étale cohomology, Iwasawa theory, Yang–Mills theory, BCS superconductivity, model predictive control...). It uses:
+  - about 1,500 curated topics;
+  - OpenAlex's 4,516 research topics and their roughly 45,000 keywords;
+  - 64,723 OpenAlex concepts;
+  - Wikipedia's links between ideas.
+
+  Topics rotate field by field, mixing basic and advanced. Add your own *focus topics* to go first.
+- **[`Dataset/topics.json`](Dataset/topics.json).** Every topic, with a ✓ when its data is complete. Topics being collected right now show *in progress* with their agent number. After a restart, or on another computer that clones this repo, collection continues with the topics still left.
+- **Open Q&A archives.** Whole sites of the public Stack Exchange dump (10.8M human-written questions and answers, CC BY-SA), including MathOverflow, physics, chemistry, CS theory, electronics and statistics. Also MedMCQA, PubMedQA and ARC, with no daily quota.
 - **Training-ready data.**
-  - **Text:** chat-format question/answer rows, plus a plain `text` field, a fixed train/validation split, token counts, a quality tier and the source licence.
+  - **Text:** chat-format question/answer rows, plus a plain `text` field, a fixed train/validation split, token counts, a quality tier, the field and the source licence.
+  - **Preference pairs:** a better and a worse answer to the same question, from vote scores, ready for DPO.
   - **Web images:** free-licence images from Wikimedia Commons, each with its caption, author and licence.
   - **Generated images:** scenes with exact object boxes, outlines, captions and question/answer pairs, for object recognition.
   - **Robot VLA episodes:** pick-and-place runs with frames, actions and an instruction, for vision-language-action models.
-- **Parallel Web Technologies** (by ProLab Robotics). Hundreds of tasks run at once across many sites and topics, and every site keeps its own polite rate limit.
-- **Live stats.** CPU, memory, network and counts appear on screen every second and are pushed to this repo every 5 minutes.
+- **Parallel agents.** 1,000 by default and up to 20,000. You can change the number while it runs. Above 1,500, extra worker processes start automatically, and each website's rate limit is shared between them. The **N agents** button in the top bar shows what every agent is doing and which website it is waiting on.
+- **Big defaults.** Quality 10, 50 records per topic and 100 DataGen variations per record (up to 10,000).
+- **GitHub first.** New data is committed to `main` every 5 minutes through a tiny upload copy. Once GitHub confirms a push, the local copies are deleted, so your computer keeps only the newest few minutes. A disk guard pauses collection if free space drops below 5 GB. GitHub caps repositories at about 5 GB, so data pushes stop at the budget in Settings > GitHub (stats and topics keep updating). TB-scale datasets need a dataset host such as Hugging Face Hub.
+- **Live stats.** CPU, memory, network and counts are shown visually every second and pushed to this repo every 5 minutes.
 - **Settings on the page.** Quality, records per topic, DataGen variations, CPU cap, data types and focus topics. Changes apply immediately.
+
+## Products (all by ProLab Robotics)
+
+Everything AITE does is grouped into products. Each one has its own switch in **Settings > Products**.
+
+| Category | Products |
+| --- | --- |
+| Collection | **Parallel Web Technologies** · **AITE Agent** · **Topic Engine** · **Open Archives** · **Web Search** |
+| Data quality | **Quality Filter** · **DataGen** · **Preference Pairs** |
+| Vision & robotics | **Web Vision** · **Synthetic Vision** · **Robot VLA Studio** |
+| Training & delivery | **LLM Trainer** · **GitHub Sync** · **Manual Studio** |
 
 ---
 
@@ -95,9 +117,17 @@ Each good record becomes many new versions:
 
 ## Train a Model
 
-Open the **Trainer** page and follow its six steps: get the trainer, choose a model, check your data, train, try it, keep it.
+Press **Train a model** (top bar, next to the two modes) and follow its six steps: get the trainer, choose a model, choose your data, train, try it, keep it.
 
-AITE fine-tunes an open model (Qwen 2.5 or Llama 3.2) **on your Mac** with Apple's MLX: no code, no cloud, no API keys. The **Try it** step compares the model's answers before and after training. The finished model opens in LM Studio.
+AITE fine-tunes an open model **on your Mac** with Apple's MLX: no code and no cloud. You can pick any model:
+- 16 built-in models (0.36B–14B, including maths, coding and reasoning models);
+- models you have already downloaded;
+- your own trained models, to keep training them;
+- any MLX model id or folder.
+
+- **Your data:** train on everything collected, or on a custom set. Choose the number of examples, the fields, the sources and topic keywords, then preview the set.
+- **Try it:** your model **runs inside AITE**. Chat with the model before and after training side by side. Load held-back check questions and see each answer scored. **Compare on check questions** reports Before vs After as correct answers and closeness to the reference.
+- **Keep it:** the finished model is saved as one folder that opens in LM Studio.
 
 The full guide, in plain words plus a technical blueprint (data prep, SFT, DPO, evaluation, vision and robot models, cloud GPUs), is in **[TRAINING_BLUEPRINT.md](TRAINING_BLUEPRINT.md)**.
 
@@ -121,7 +151,7 @@ python app/AITE.py                 # the app (Agent page opens first)
 | `python app/AITE.py --run '{"topics":["algebra"],"quantity":10}' --out data.json` | One Manual-mode run. |
 | `python app/AITE.py --selftest` | Offline self-test. |
 
-**Pushing the dataset to GitHub.** Agent mode commits `Dataset/` to `main` every 5 minutes. Pushing uses your normal git login. Otherwise, put a GitHub token with *Contents: read and write* permission in `app/github_token.txt`; that file is never committed. To push somewhere else, change the repository link in **Settings > GitHub**.
+**Pushing the dataset to GitHub.** Agent mode commits `Dataset/` (data, `stats.json`, `topics.json`, the live README) to `main` every 5 minutes. It uses your computer's normal git login; AITE stores no keys, tokens or passwords. To push somewhere else, change the repository link in **Settings > GitHub**.
 
 ---
 
