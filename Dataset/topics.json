@@ -1,12 +1,12 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-10T08:46:07",
+"updated": "2026-11-10T08:48:11",
 "total": 109913,
-"done": 1342,
+"done": 1347,
 "in_progress": 32,
-"left": 108539,
+"left": 108534,
 "parallel_agents": {
-"running": 31,
+"running": 36,
 "topics": [
 {
 "agent": 2,
@@ -30,107 +30,127 @@
 },
 {
 "agent": 592,
-"topic": "mean curvature flow"
-},
-{
-"agent": 593,
-"topic": "nash equilibrium"
-},
-{
-"agent": 594,
-"topic": "grover's algorithm"
-},
-{
-"agent": 597,
-"topic": "stokes parameters"
-},
-{
-"agent": 598,
 "topic": "explanation-based learning"
 },
 {
-"agent": 599,
-"topic": "go concurrency"
-},
-{
-"agent": 600,
+"agent": 593,
 "topic": "technology insertion"
 },
 {
-"agent": 601,
-"topic": "uv stabilizers"
-},
-{
-"agent": 602,
+"agent": 594,
 "topic": "regularization"
 },
 {
-"agent": 603,
-"topic": "spectral leakage"
-},
-{
-"agent": 604,
+"agent": 595,
 "topic": "pickering stabilization"
 },
 {
-"agent": 605,
-"topic": "microwave remote sensing"
+"agent": 596,
+"topic": "nash equilibrium"
 },
 {
-"agent": 606,
-"topic": "striatum"
-},
-{
-"agent": 608,
+"agent": 597,
 "topic": "speech recognition"
 },
 {
-"agent": 609,
-"topic": "point cloud denoising"
-},
-{
-"agent": 610,
-"topic": "shield tunneling"
-},
-{
-"agent": 611,
-"topic": "membrane attack complex"
-},
-{
-"agent": 612,
-"topic": "isotachophoresis"
-},
-{
-"agent": 613,
+"agent": 598,
 "topic": "quadratic forms"
 },
 {
-"agent": 614,
+"agent": 599,
 "topic": "trade in services"
 },
 {
-"agent": 619,
+"agent": 601,
+"topic": "sunflower cultivation"
+},
+{
+"agent": 602,
+"topic": "navier–stokes equations"
+},
+{
+"agent": 603,
+"topic": "point cloud denoising"
+},
+{
+"agent": 604,
+"topic": "shield tunneling"
+},
+{
+"agent": 605,
+"topic": "network management architecture"
+},
+{
+"agent": 606,
+"topic": "membrane attack complex"
+},
+{
+"agent": 607,
+"topic": "electric waves"
+},
+{
+"agent": 608,
+"topic": "isotachophoresis"
+},
+{
+"agent": 609,
+"topic": "ionic liquid recycling"
+},
+{
+"agent": 610,
 "topic": "aerospace adhesives"
 },
 {
-"agent": 620,
+"agent": 611,
+"topic": "mental health care organization"
+},
+{
+"agent": 612,
 "topic": "oxygen barrier"
 },
 {
-"agent": 621,
+"agent": 613,
 "topic": "echinococcosis"
 },
 {
-"agent": 623,
+"agent": 614,
+"topic": "microwave remote sensing"
+},
+{
+"agent": 615,
 "topic": "forest statistics"
 },
 {
-"agent": 624,
+"agent": 616,
 "topic": "future internet"
 },
 {
-"agent": 625,
+"agent": 617,
 "topic": "multilevel models"
+},
+{
+"agent": 619,
+"topic": "grover's algorithm"
+},
+{
+"agent": 620,
+"topic": "vision transformers"
+},
+{
+"agent": 622,
+"topic": "rural prosperity"
+},
+{
+"agent": 623,
+"topic": "dopamine"
+},
+{
+"agent": 624,
+"topic": "backup"
+},
+{
+"agent": 625,
+"topic": "enamel paint"
 }
 ]
 },
@@ -151,19 +171,19 @@
 "in_progress": 1
 },
 "engineering": {
-"done": 98,
-"left": 12476,
+"done": 99,
+"left": 12475,
 "in_progress": 1
 },
 "general": {
 "done": 56,
-"left": 7539,
-"in_progress": 1
+"left": 7538,
+"in_progress": 2
 },
 "computer science": {
 "done": 126,
-"left": 5592,
-"in_progress": 1
+"left": 5591,
+"in_progress": 2
 },
 "economics and finance": {
 "done": 52,
@@ -176,29 +196,29 @@
 "in_progress": 0
 },
 "materials science": {
-"done": 37,
+"done": 38,
 "left": 3406,
-"in_progress": 3
+"in_progress": 2
 },
 "chemistry": {
 "done": 112,
-"left": 2871,
-"in_progress": 1
+"left": 2870,
+"in_progress": 2
 },
 "physics": {
-"done": 121,
+"done": 122,
 "left": 2716,
-"in_progress": 8
+"in_progress": 7
 },
 "psychology": {
 "done": 31,
-"left": 2784,
-"in_progress": 0
+"left": 2783,
+"in_progress": 1
 },
 "mathematics": {
-"done": 153,
+"done": 154,
 "left": 2006,
-"in_progress": 5
+"in_progress": 4
 },
 "statistics": {
 "done": 72,
@@ -216,12 +236,72 @@
 "in_progress": 3
 },
 "programming": {
-"done": 69,
+"done": 70,
 "left": 4,
-"in_progress": 1
+"in_progress": 0
 }
 },
 "topics": [
+{
+"topic": "spectral leakage",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:47:29"
+},
+{
+"topic": "uv stabilizers",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:47:25"
+},
+{
+"topic": "go concurrency",
+"field": "programming",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:47:20"
+},
+{
+"topic": "stokes parameters",
+"field": "physics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:47:16"
+},
+{
+"topic": "mean curvature flow",
+"field": "mathematics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:47:08"
+},
 {
 "topic": "trade in services",
 "field": "economics and finance",
@@ -229,9 +309,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 614,
+"agent": 599,
 "records": 497,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:45:28"
 },
 {
@@ -243,7 +323,7 @@
 "status": "done",
 "agent": null,
 "records": 5013,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:43:04"
 },
 {
@@ -253,9 +333,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 605,
+"agent": 614,
 "records": 5602,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:43:04"
 },
 {
@@ -697,9 +777,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 620,
 "records": 11381,
-"images": 4,
+"images": 6,
 "completed": "2026-11-10T08:35:48"
 },
 {
@@ -709,9 +789,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 611,
+"agent": 606,
 "records": 5489,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -723,7 +803,7 @@
 "status": "done",
 "agent": null,
 "records": 3774,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -733,9 +813,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 610,
+"agent": 604,
 "records": 2919,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -745,9 +825,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 621,
+"agent": 613,
 "records": 4359,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:35:27"
 },
 {
@@ -757,9 +837,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 593,
+"agent": 596,
 "records": 5462,
-"images": 4,
+"images": 6,
 "completed": "2026-11-10T08:35:24"
 },
 {
@@ -829,9 +909,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 601,
 "records": 990,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:35:24"
 },
 {
@@ -865,9 +945,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 608,
+"agent": 597,
 "records": 4866,
-"images": 4,
+"images": 6,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -925,9 +1005,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 622,
 "records": 1448,
-"images": 5,
+"images": 7,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -937,9 +1017,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 625,
+"agent": 617,
 "records": 1134,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -949,9 +1029,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 624,
+"agent": 616,
 "records": 2195,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1021,9 +1101,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 594,
+"agent": 619,
 "records": 3908,
-"images": 4,
+"images": 6,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1143,7 +1223,7 @@
 "status": "done",
 "agent": null,
 "records": 3416,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1263,7 +1343,7 @@
 "status": "done",
 "agent": null,
 "records": 4090,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:33:35"
 },
 {
@@ -1287,7 +1367,7 @@
 "status": "done",
 "agent": null,
 "records": 2528,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:33:31"
 },
 {
@@ -1309,9 +1389,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 620,
+"agent": 612,
 "records": 2998,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:33:01"
 },
 {
@@ -1321,9 +1401,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 623,
 "records": 7217,
-"images": 5,
+"images": 7,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1335,7 +1415,7 @@
 "status": "done",
 "agent": null,
 "records": 2133,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1345,9 +1425,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 609,
+"agent": 603,
 "records": 6687,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1381,9 +1461,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 625,
 "records": 1470,
-"images": 5,
+"images": 7,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1393,9 +1473,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 623,
+"agent": 615,
 "records": 841,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1441,9 +1521,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 619,
+"agent": 610,
 "records": 1034,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1453,9 +1533,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 612,
+"agent": 608,
 "records": 1585,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1477,9 +1557,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 624,
 "records": 5744,
-"images": 5,
+"images": 7,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1537,9 +1617,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 606,
+"agent": null,
 "records": 2514,
-"images": 5,
+"images": 6,
 "completed": "2026-11-10T08:32:58"
 },
 {
@@ -70560,8 +70640,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 602,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -286116,8 +286196,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 609,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -325405,7 +325485,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 598,
+"agent": 592,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -344400,8 +344480,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 605,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -498217,7 +498297,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 600,
+"agent": 593,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -542052,8 +542132,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 607,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -628970,18 +629050,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "spectral leakage",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 603,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -929629,7 +929697,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 602,
+"agent": 594,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -958117,7 +958185,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 604,
+"agent": 595,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -968683,18 +968751,6 @@
 "completed": ""
 },
 {
-"topic": "uv stabilizers",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 601,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "v2alc",
 "field": "materials science",
 "level": "specialist",
@@ -972097,7 +972153,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 613,
+"agent": 598,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -984446,18 +984502,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "mean curvature flow",
-"field": "mathematics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 592,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1270687,18 +1270731,6 @@
 "completed": ""
 },
 {
-"topic": "stokes parameters",
-"field": "physics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 597,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "stokes q and u maps",
 "field": "physics",
 "level": "specialist",
@@ -1274714,18 +1274746,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "go concurrency",
-"field": "programming",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 599,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1292352,8 +1292372,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 611,
 "records": 0,
 "images": 0,
 "completed": ""
