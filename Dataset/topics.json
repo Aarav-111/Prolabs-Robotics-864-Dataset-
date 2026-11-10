@@ -1,12 +1,12 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-10T08:40:58",
+"updated": "2026-11-10T08:43:06",
 "total": 109913,
-"done": 1332,
-"in_progress": 32,
-"left": 108549,
+"done": 1341,
+"in_progress": 30,
+"left": 108542,
 "parallel_agents": {
-"running": 30,
+"running": 21,
 "topics": [
 {
 "agent": 2,
@@ -37,96 +37,60 @@
 "topic": "forest statistics"
 },
 {
-"agent": 594,
-"topic": "backup"
-},
-{
-"agent": 597,
-"topic": "dopamine"
-},
-{
-"agent": 599,
-"topic": "chatbot development"
-},
-{
-"agent": 600,
-"topic": "transitive relation"
-},
-{
-"agent": 601,
-"topic": "real-time ethernet"
-},
-{
-"agent": 602,
-"topic": "timetabling problem"
-},
-{
-"agent": 603,
-"topic": "dihydroflavonol 4-reductase"
-},
-{
-"agent": 604,
-"topic": "copper(i) oxide"
-},
-{
-"agent": 605,
+"agent": 596,
 "topic": "sunflower cultivation"
 },
 {
-"agent": 606,
-"topic": "membrane attack complex"
-},
-{
-"agent": 607,
-"topic": "multilevel models"
-},
-{
-"agent": 608,
+"agent": 597,
 "topic": "nash equilibrium"
 },
 {
-"agent": 609,
+"agent": 598,
 "topic": "grover's algorithm"
 },
 {
-"agent": 610,
-"topic": "vision transformers"
-},
-{
-"agent": 611,
+"agent": 599,
 "topic": "speech recognition"
 },
 {
-"agent": 612,
+"agent": 600,
 "topic": "spinel structure"
 },
 {
-"agent": 613,
-"topic": "copper flotation"
-},
-{
-"agent": 614,
-"topic": "microwave remote sensing"
-},
-{
-"agent": 615,
-"topic": "basic education"
-},
-{
-"agent": 616,
+"agent": 601,
 "topic": "mean curvature flow"
 },
 {
-"agent": 618,
+"agent": 602,
 "topic": "echinococcosis"
 },
 {
-"agent": 619,
-"topic": "future internet"
+"agent": 609,
+"topic": "stokes parameters"
 },
 {
-"agent": 625,
-"topic": "infertility diagnosis"
+"agent": 611,
+"topic": "explanation-based learning"
+},
+{
+"agent": 612,
+"topic": "go concurrency"
+},
+{
+"agent": 613,
+"topic": "technology insertion"
+},
+{
+"agent": 614,
+"topic": "uv stabilizers"
+},
+{
+"agent": 615,
+"topic": "regularization"
+},
+{
+"agent": 616,
+"topic": "spectral leakage"
 }
 ]
 },
@@ -142,38 +106,38 @@
 "in_progress": 3
 },
 "biology": {
-"done": 111,
+"done": 112,
 "left": 13530,
-"in_progress": 2
+"in_progress": 1
 },
 "engineering": {
-"done": 97,
-"left": 12477,
+"done": 98,
+"left": 12476,
 "in_progress": 1
 },
 "general": {
-"done": 54,
+"done": 56,
 "left": 7539,
-"in_progress": 3
+"in_progress": 1
 },
 "computer science": {
-"done": 125,
-"left": 5593,
+"done": 126,
+"left": 5592,
 "in_progress": 1
 },
 "economics and finance": {
-"done": 50,
-"left": 5638,
+"done": 51,
+"left": 5637,
 "in_progress": 1
 },
 "earth and space": {
-"done": 45,
+"done": 46,
 "left": 5462,
-"in_progress": 1
+"in_progress": 0
 },
 "materials science": {
-"done": 36,
-"left": 3408,
+"done": 37,
+"left": 3407,
 "in_progress": 2
 },
 "chemistry": {
@@ -183,8 +147,8 @@
 },
 "physics": {
 "done": 121,
-"left": 2717,
-"in_progress": 7
+"left": 2716,
+"in_progress": 8
 },
 "psychology": {
 "done": 31,
@@ -197,9 +161,9 @@
 "in_progress": 4
 },
 "statistics": {
-"done": 71,
+"done": 72,
 "left": 889,
-"in_progress": 2
+"in_progress": 1
 },
 "robotics": {
 "done": 60,
@@ -208,16 +172,124 @@
 },
 "machine learning": {
 "done": 72,
-"left": 11,
-"in_progress": 2
+"left": 10,
+"in_progress": 3
 },
 "programming": {
 "done": 69,
-"left": 5,
-"in_progress": 0
+"left": 4,
+"in_progress": 1
 }
 },
 "topics": [
+{
+"topic": "basic education",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 5013,
+"images": 0,
+"completed": "2026-11-10T08:43:04"
+},
+{
+"topic": "microwave remote sensing",
+"field": "earth and space",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 5602,
+"images": 0,
+"completed": "2026-11-10T08:43:04"
+},
+{
+"topic": "copper(i) oxide",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:43:04"
+},
+{
+"topic": "timetabling problem",
+"field": "statistics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:43:04"
+},
+{
+"topic": "dihydroflavonol 4-reductase",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:43:04"
+},
+{
+"topic": "chatbot development",
+"field": "economics and finance",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:43:04"
+},
+{
+"topic": "real-time ethernet",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:43:04"
+},
+{
+"topic": "transitive relation",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:41:59"
+},
+{
+"topic": "copper flotation",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:41:42"
+},
 {
 "topic": "machine learning",
 "field": "machine learning",
@@ -573,9 +645,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 610,
+"agent": null,
 "records": 11381,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:35:48"
 },
 {
@@ -585,9 +657,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 606,
+"agent": null,
 "records": 5489,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -597,9 +669,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 612,
+"agent": 600,
 "records": 3774,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -611,7 +683,7 @@
 "status": "done",
 "agent": null,
 "records": 2919,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -621,9 +693,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 618,
+"agent": 602,
 "records": 4359,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:35:27"
 },
 {
@@ -633,9 +705,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 608,
+"agent": 597,
 "records": 5462,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:35:24"
 },
 {
@@ -705,9 +777,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 605,
+"agent": 596,
 "records": 990,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:35:24"
 },
 {
@@ -741,9 +813,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 611,
+"agent": 599,
 "records": 4866,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -803,7 +875,7 @@
 "status": "done",
 "agent": null,
 "records": 1448,
-"images": 3,
+"images": 4,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -813,9 +885,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 607,
+"agent": null,
 "records": 1134,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -825,9 +897,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 619,
+"agent": null,
 "records": 2195,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -897,9 +969,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 609,
+"agent": 598,
 "records": 3908,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1019,7 +1091,7 @@
 "status": "done",
 "agent": null,
 "records": 3416,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1137,7 +1209,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 625,
+"agent": null,
 "records": 4090,
 "images": 3,
 "completed": "2026-11-10T08:33:35"
@@ -1163,7 +1235,7 @@
 "status": "done",
 "agent": null,
 "records": 2528,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:33:31"
 },
 {
@@ -1187,7 +1259,7 @@
 "status": "done",
 "agent": null,
 "records": 2998,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:33:01"
 },
 {
@@ -1197,9 +1269,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 597,
+"agent": null,
 "records": 7217,
-"images": 3,
+"images": 4,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1211,7 +1283,7 @@
 "status": "done",
 "agent": 592,
 "records": 2133,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1223,7 +1295,7 @@
 "status": "done",
 "agent": null,
 "records": 6687,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1259,7 +1331,7 @@
 "status": "done",
 "agent": null,
 "records": 1470,
-"images": 3,
+"images": 4,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1271,7 +1343,7 @@
 "status": "done",
 "agent": 593,
 "records": 841,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1319,7 +1391,7 @@
 "status": "done",
 "agent": null,
 "records": 1034,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1331,7 +1403,7 @@
 "status": "done",
 "agent": null,
 "records": 1585,
-"images": 2,
+"images": 3,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1353,9 +1425,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 594,
+"agent": null,
 "records": 5744,
-"images": 3,
+"images": 4,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -22738,18 +22810,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "basic education",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 615,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -100911,18 +100971,6 @@
 "completed": ""
 },
 {
-"topic": "transitive relation",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 600,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "translational research",
 "field": "general",
 "level": "research concept",
@@ -150166,18 +150214,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "dihydroflavonol 4-reductase",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 603,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -325316,8 +325352,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 611,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -353170,18 +353206,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "real-time ethernet",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 601,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -408507,18 +408531,6 @@
 "completed": ""
 },
 {
-"topic": "microwave remote sensing",
-"field": "earth and space",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 614,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "mid-atlantic ridge",
 "field": "earth and space",
 "level": "specialist",
@@ -445462,18 +445474,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "chatbot development",
-"field": "economics and finance",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 599,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -498164,8 +498164,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 613,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -531046,18 +531046,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "copper flotation",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 613,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -628952,8 +628940,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 616,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -929600,8 +929588,8 @@
 "level": "advanced",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 615,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -937270,18 +937258,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "copper(i) oxide",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 604,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -968672,8 +968648,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 614,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -984441,7 +984417,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 616,
+"agent": 601,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1270676,8 +1270652,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 609,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1274708,8 +1274684,8 @@
 "level": "advanced",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 612,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1318678,18 +1318654,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "timetabling problem",
-"field": "statistics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 602,
 "records": 0,
 "images": 0,
 "completed": ""
