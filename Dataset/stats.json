@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 30.0,
+  "disk_free_gb": 29.0,
   "product": "Parallel Web Technologies",
   "developer": "ProLab Robotics",
   "started": 1794277716.316424,
   "started_iso": "2026-11-10T07:58:36",
-  "updated": 1794277779.969275,
-  "updated_iso": "2026-11-10T07:59:39",
-  "uptime_s": 64,
+  "updated": 1794277818.977195,
+  "updated_iso": "2026-11-10T08:00:18",
+  "uptime_s": 103,
   "workers": 5000,
   "effective_workers": 625,
   "in_flight": 2725,
   "busy_by_kind": {
-    "archive": 2459,
+    "archive": 2535,
     "text": 2400,
-    "web_images": 141
+    "web_images": 65
   },
-  "waiting": 4976,
+  "waiting": 4965,
   "processes": 8,
   "fields": {
     "mathematics": 52175,
@@ -67,13 +67,13 @@
     "text": 182967,
     "originals": 1149,
     "variants": 181818,
-    "web_images": 198,
+    "web_images": 199,
     "synthetic_images": 14064,
-    "images": 14262,
+    "images": 14263,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 84930543,
-    "tasks_done": 15927,
+    "tasks_done": 16003,
     "tasks_failed": 0,
     "topics_added": 108651,
     "preference": 204
@@ -81,7 +81,7 @@
   "by_kind": {
     "archive": 0,
     "text": 0,
-    "web_images": 16,
+    "web_images": 26,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -89,7 +89,7 @@
     "seed_concepts": 0
   },
   "tokens": 84930543,
-  "per_min": 5.8,
+  "per_min": 4.2,
   "topics": {
     "known": 109912,
     "explored": 762,
@@ -211,50 +211,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794277779.9680388,
-    "cpu": 58.8,
+    "time": 1794277818.976136,
+    "cpu": 74.9,
     "cpu_cores": [
-      36.8,
-      33.2,
-      30.8,
-      29.8,
-      90.2,
-      84.7,
-      86.4,
-      78.7
+      59.5,
+      59.3,
+      55.8,
+      55.6,
+      93.1,
+      91.2,
+      92.1,
+      92.1
     ],
-    "mem": 84.3,
-    "mem_used_gb": 2.64,
+    "mem": 84.4,
+    "mem_used_gb": 2.65,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 108.7,
+    "proc_mem_mb": 108.8,
     "threads": 629,
     "proc_cpu": 0.0,
-    "net_rx": 4305847296,
-    "net_tx": 4638150656,
-    "down_kbps": 35.6,
-    "up_kbps": 14.0,
-    "disk_free_gb": 30.0,
+    "net_rx": 4314374144,
+    "net_tx": 4651718656,
+    "down_kbps": 365.1,
+    "up_kbps": 34.2,
+    "disk_free_gb": 29.0,
     "load": [
-      4.11,
-      7.87,
-      10.11
+      3.24,
+      7.16,
+      9.75
     ],
     "cores": 8
   },
-  "disk_mb": 735.6,
+  "disk_mb": 711.8,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794277777.638897,
-    "next_sync_s": 271,
-    "commits": 1
+    "last_push": 1794277813.060534,
+    "next_sync_s": 232,
+    "commits": 2
   },
   "last_sample": {
     "type": "web image",
-    "topic": "regional financial center",
-    "problem": "A photo by Billie Ward. (This work is licensed under a Creative Commons Attribution 4.0 International License. Please provide attribution and a link back to this web page in a manner that associates the image with the image credit.)",
-    "solution": "CC BY 2.0",
+    "topic": "functional programming",
+    "problem": "Bahasa Pemrograman Fungsional",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
