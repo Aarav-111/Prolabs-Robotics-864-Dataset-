@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 27.9,
+  "disk_free_gb": 26.5,
   "product": "Parallel Web Technologies",
   "developer": "ProLab Robotics",
   "started": 1794279260.7094789,
   "started_iso": "2026-11-10T08:24:20",
-  "updated": 1794280418.081611,
-  "updated_iso": "2026-11-10T08:43:38",
-  "uptime_s": 1157,
+  "updated": 1794280556.631237,
+  "updated_iso": "2026-11-10T08:45:56",
+  "uptime_s": 1296,
   "workers": 5000,
   "effective_workers": 625,
   "in_flight": 625,
@@ -18,7 +18,7 @@
     "text": 15,
     "web_images": 24
   },
-  "waiting": 623,
+  "waiting": 621,
   "processes": 1,
   "fields": {
     "mathematics": 52175,
@@ -26,8 +26,8 @@
     "machine learning": 16292,
     "general": 14774,
     "engineering": 13249,
+    "economics and finance": 12320,
     "earth and space": 11849,
-    "economics and finance": 11823,
     "chemistry": 11080,
     "statistics": 10147,
     "biology": 8246,
@@ -65,36 +65,36 @@
     "qiaojin/PubMedQA": 96
   },
   "counts": {
-    "text": 219571,
-    "originals": 1341,
-    "variants": 218230,
-    "web_images": 316,
+    "text": 220068,
+    "originals": 1344,
+    "variants": 218724,
+    "web_images": 335,
     "synthetic_images": 14064,
-    "images": 14380,
+    "images": 14399,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 99713313,
-    "tasks_done": 19309,
+    "tokens": 99900953,
+    "tasks_done": 19348,
     "tasks_failed": 0,
     "topics_added": 108651,
     "preference": 347
   },
   "by_kind": {
     "archive": 6,
-    "text": 33,
-    "web_images": 182,
+    "text": 34,
+    "web_images": 220,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 99713313,
-  "per_min": 2137.6,
+  "tokens": 99900953,
+  "per_min": 2236.7,
   "topics": {
     "known": 109913,
-    "explored": 1341,
-    "queued": 108540,
+    "explored": 1342,
+    "queued": 108539,
     "space": 6594780,
     "next": [
       [
@@ -147,6 +147,11 @@
       ]
     ],
     "recent": [
+      [
+        "trade in services",
+        "economics and finance",
+        497
+      ],
       [
         "basic education",
         "",
@@ -201,61 +206,56 @@
         "legendre polynomials",
         "mathematics",
         0
-      ],
-      [
-        "bit manipulation",
-        "programming",
-        0
       ]
     ],
     "in_progress": 32,
     "focus_left": 0
   },
   "system": {
-    "time": 1794280418.078785,
-    "cpu": 100.0,
+    "time": 1794280556.6303842,
+    "cpu": 44.5,
     "cpu_cores": [
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      100.0
+      43.1,
+      39.5,
+      34.3,
+      31.3,
+      61.5,
+      59.6,
+      46.9,
+      40.0
     ],
-    "mem": 84.9,
-    "mem_used_gb": 2.9,
+    "mem": 82.6,
+    "mem_used_gb": 2.97,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 74.5,
+    "proc_mem_mb": 116.7,
     "threads": 629,
     "proc_cpu": 0.0,
-    "net_rx": 4964481024,
-    "net_tx": 718813184,
-    "down_kbps": 1738.4,
-    "up_kbps": 29.5,
-    "disk_free_gb": 27.8,
+    "net_rx": 5145485312,
+    "net_tx": 746190848,
+    "down_kbps": 414.2,
+    "up_kbps": 26.4,
+    "disk_free_gb": 26.6,
     "load": [
-      288.32,
-      86.5,
-      39.14
+      44.22,
+      65.28,
+      38.13
     ],
     "cores": 8
   },
-  "disk_mb": 274.4,
+  "disk_mb": 253.7,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794280387.193841,
-    "next_sync_s": 131,
-    "commits": 10
+    "last_push": 1794280503.424204,
+    "next_sync_s": 294,
+    "commits": 11
   },
   "last_sample": {
     "type": "web image",
-    "topic": "glutamine",
-    "problem": "Glutamine (Gln)",
-    "solution": "CC0",
+    "topic": "speech recognition",
+    "problem": "Electrodes used in subvocal speech recognition research.",
+    "solution": "Public domain",
     "source": "wikimedia commons"
   }
 }
