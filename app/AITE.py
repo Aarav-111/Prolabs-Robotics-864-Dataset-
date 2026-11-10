@@ -425,6 +425,9 @@ def _settings_spec():
     add("Agent", "agent_types", "Text data types (comma)", "str", ",".join(AGENT_TEXT_TYPES))
     add("Agent", "agent_focus_topics", "Focus topics, collected first (comma)", "str", "")
     add("Agent", "agent_focus_only", "Collect only my focus topics", "bool", False)
+    add("Agent", "agent_topics_parallel", "Topics collected at the same time (all processes) - more just queue at the sites", "int", 120, (1, 20000))
+    add("Agent", "agent_verbose", "Super verbose log: every request and every step of every task", "bool", True)
+    add("Network", "http_verbose", "Log every web request (site, path, status, size, time)", "bool", True)
     add("Agent", "agent_local_floor", "Generated items allowed before text arrives", "int", 100, (0, 100000))
     add("Agent", "agent_variations", "DataGen variations per record", "int", 100, (0, MAX_VARIATIONS))
     add("Agent", "agent_task_timeout", "Max seconds per task", "int", 120, (20, 3600))
@@ -925,6 +928,7 @@ class Http:
             self.last_host[host] = time.time()
             try:
                 body = urllib.parse.urlencode(data).encode() if data else None
+                t_req = time.time()
                 req = urllib.request.Request(url, data=body, headers={
                     "User-Agent": self.st.get("user_agent") or USER_AGENT, "Accept-Encoding": "gzip",
                     "Accept": "text/html,application/json,application/xml;q=0.9,*/*;q=0.8"})
@@ -933,6 +937,10 @@ class Http:
                     if r.headers.get("Content-Encoding") == "gzip":
                         raw = zlib.decompressobj(16 + zlib.MAX_WBITS).decompress(raw)
                     self.status = r.status
+                    if self.st.get("http_verbose"):
+                        pu = urllib.parse.urlparse(url)
+                        self.log(f"  {'POST' if data else 'GET '} {host}{shorten(pu.path + ('?' + pu.query if pu.query else ''), 110)} "
+                                 f"-> {r.status} · {len(raw) / 1024:.1f} KB · {(time.time() - t_req) * 1000:.0f} ms")
                     return r.status, raw, r.headers.get("Content-Type", "")
             except urllib.error.HTTPError as e:
                 self.status = e.code
@@ -4295,7 +4303,7 @@ class Agent:
         self.sync_thread = None
         self.last_sample = self.store.get("last_sample", {})
         self.last_image = self.store.get("last_image", "")
-        self.http_factory = (lambda: make_fake_http("ok")) if offline else (lambda: Http(self.st, lambda m: None))
+        self.http_factory = (lambda: make_fake_http("ok")) if offline else (lambda: Http(self.st, self.vlog))
         self.exiting = False
         self.local_counts = {"synthetic_images": "synthetic_images", "vla": "vla_episodes"}
 
@@ -4329,15 +4337,29 @@ class Agent:
                 self.log(f"Focus topics added: {', '.join(focus[:8])}")
         self.log("Settings applied")
 
+    def vlog(self, msg):
+        """Verbose detail (requests, search / filter / DataGen steps) - only when super verbose is on."""
+        if self.st.get("agent_verbose", True):
+            self.log(msg)
+
+    def tlog(self, tag):
+        return lambda m: self.vlog(f"[{tag}] {m.strip()}")
+
     # ---- logging
     def log(self, msg):
-        line = f"{datetime.now().strftime('%H:%M:%S')}  {msg}"
+        line = f"{datetime.now().strftime('%H:%M:%S')}{'  w' + str(self.worker_id) if getattr(self, 'worker_id', 0) else '    '}  {msg}"
         with self.ev_lock:
             self.events.append(line)
             del self.events[:-200]
         try:
             self.log_f.write(line + "\n")
             self.log_f.flush()
+            if self.log_f.tell() > 50 * 2 ** 20 and not getattr(self, "worker_id", 0):  # keep the verbose log at ~50 MB
+                with self.ev_lock:
+                    self.log_f.close()
+                    lp = os.path.join(self.adir, "agent.log")
+                    os.replace(lp, lp + ".1")
+                    self.log_f = open(lp, "a", encoding="utf-8")
         except (OSError, ValueError):
             pass
         if self._ext_log:
@@ -4367,7 +4389,8 @@ class Agent:
         w = {k: v for k, v in self.mix().items() if k in ("archive", "text", "web_images")}
         with self.lock:
             now_busy = {k: sum(1 for v in self.inflight.values() if v[0] == k) for k in w}
-        for k, cap in self.KIND_CAP.items():
+        caps = dict(self.KIND_CAP, text=max(1, math.ceil(int(self.st.get("agent_topics_parallel", 120)) / max(1, getattr(self, "_np", None) or self.n_procs()))))
+        for k, cap in caps.items():
             if k in w and now_busy.get(k, 0) >= cap:
                 w[k] = 0.0
         if not any(w.values()):
@@ -4512,8 +4535,11 @@ class Agent:
         if dt != "research papers":  # arXiv allows one request per 3 s for everyone: keep it for paper tasks
             st["arxiv_enabled"] = False
         cancel = threading.Event()
-        searcher = Searcher(st, lambda m: None, cancel, http=self.http_factory())
-        res = run_pipeline(inp, st, lambda m: None, cancel, searcher=searcher)
+        tl = self.tlog(topic)
+        self.vlog(f"Text  '{topic}' [{field or 'general'}] starts: {dt}, quality {inp['quality']}, {inp['quantity']} records, "
+                  f"DataGen x{inp['datagen_variations']}, site {st.get('se_default_site')}")
+        searcher = Searcher(st, tl, cancel, http=self.http_factory())
+        res = run_pipeline(inp, st, tl, cancel, searcher=searcher)
         rows = [dict(agent_text_record(r, st), level=level, data_type=dt, field=field or "general")
                 for r in res["records"] + res["variants"]]
         rows = self.write_text_rows(rows, topic, field, "text")
@@ -4651,8 +4677,8 @@ class Agent:
         if not product_on(self.st, "product_filter"):
             kept = items
         else:
-            kept, _rej, _why = Filterer(st, lambda m: None).run(items, inp) if items else ([], [], {})
-        variants = DataGen(st, lambda m: None).generate(kept, inp) if kept and inp["datagen_variations"] else []
+            kept, _rej, _why = Filterer(st, self.tlog(src["name"])).run(items, inp) if items else ([], [], {})
+        variants = DataGen(st, self.tlog(src["name"])).generate(kept, inp) if kept and inp["datagen_variations"] else []
         out = [dict(agent_text_record(r, st), field=r.get("topic") or field,
                     level="advanced" if r.get("meta", {}).get("site") in ("mathoverflow.net", "cstheory.stackexchange.com") else "mixed",
                     data_type="archive", archive=r.get("meta", {}).get("site") or src["name"]) for r in kept + variants]
@@ -4831,6 +4857,7 @@ class Agent:
         by_kind_now = {}
         for k, _a, _t in busy:
             by_kind_now[k] = by_kind_now.get(k, 0) + 1
+        own_busy = list(busy)
         hosts = self.limiter.snapshot() if self.limiter else {}
         waiting = self.limiter.waiting() if self.limiter else 0
         for d in wf_:  # add the worker processes' agents
@@ -4850,7 +4877,8 @@ class Agent:
                 "product": PWT_NAME, "developer": PWT_DEVELOPER,
                 "started": self.started, "started_iso": datetime.fromtimestamp(self.started).isoformat(timespec="seconds"),
                 "updated": now, "updated_iso": datetime.now().isoformat(timespec="seconds"), "uptime_s": round(now - self.started),
-                "workers": self.workers, "effective_workers": self.eff, "in_flight": len(busy),
+                "workers": self.workers, "effective_workers": self.eff,
+                "in_flight": len(own_busy) + sum(int(d.get("in_flight", 0)) for d in wf_),
                 "busy": [{"kind": k, "arg": (a if isinstance(a, str) else (a[0] if isinstance(a, tuple) else a)), "s": s}
                          for k, a, s in sorted(busy, key=lambda x: -x[2])[:500]],
                 "busy_by_kind": by_kind_now, "waiting": waiting, "processes": 1 + len(wf_),
@@ -7170,7 +7198,10 @@ def main_gui():
                     self.create_text(bx, 358, text=f"{src} {v:,}", anchor="w", fill=T["dim"], font=font(-3))
     tab_progress = box(views, "card")
     run_canvas = RunProgress(tab_progress)
-    run_canvas.pack(fill="both", expand=True)
+    run_canvas.pack(fill="x")
+    run_canvas.configure(height=380)
+    plog_fr, plog_t = text_area(tab_progress, "code", mono=True, h=10, size=-3)
+    plog_fr.pack(fill="both", expand=True, pady=(8, 0))
     tab_prev, prev_t = text_area(views, "card", h=20)
     tab_tbl = box(views, "card")
     tab_log, log_t = text_area(views, "code", mono=True, h=20, size=-2)
@@ -7562,7 +7593,7 @@ def main_gui():
     act_vis.pack(fill="x", pady=(8, 0))
     afr, act_t = text_area(act_card.inner, "code", mono=True, h=11, size=-3)
     act_t.configure(state="disabled")
-    act_log_on = {"v": False}
+    act_log_on = {"v": False, "pos": 0}
 
     def toggle_act_log():
         act_log_on["v"] = not act_log_on["v"]
@@ -7571,6 +7602,30 @@ def main_gui():
         log_btn.draw()
     log_btn = Pill(arow, "Show log", toggle_act_log, "ghost", h=28, size=-3)
     log_btn.pack(side="right", padx=(0, 8))
+    act_t.configure(height=22)
+    toggle_act_log()  # super verbose: the live log is open from the start
+
+    def tail_agent_log():
+        """The last lines of agent.log - every request and step from every agent process."""
+        lp = os.path.join(ag["root"], ".agent", "agent.log")
+        try:
+            size = os.path.getsize(lp)
+            with open(lp, "rb") as f:
+                f.seek(max(0, size - 60000))
+                txt = f.read().decode("utf-8", "replace")
+        except OSError:
+            return
+        if size == act_log_on["pos"]:
+            return
+        act_log_on["pos"] = size
+        lines = txt.split("\n")[1:][-400:]
+        at_end = act_t.yview()[1] > 0.98
+        act_t.configure(state="normal")
+        act_t.delete("1.0", "end")
+        act_t.insert("end", "\n".join(lines))
+        act_t.configure(state="disabled")
+        if at_end:
+            act_t.see("end")
 
     def agent_settings_changed():
         """Settings reach a running agent at its next restart; the worker count applies live."""
@@ -7654,7 +7709,7 @@ def main_gui():
                     ag_sub.configure(text=f"Paused by itself: only {s.get('disk_free_gb', 0)} GB of disk space left (guard: "
                                           f"{st['agent_min_free_gb']} GB, Agent settings). Free some space and it carries on.")
                 elif s and live:
-                    ag_sub.configure(text=f"{s['in_flight']} tasks running in parallel · {s['per_min']:,} items/min · "
+                    ag_sub.configure(text=f"{s.get('waiting', 0):,} waiting for a website's turn · {s['in_flight']} tasks running in parallel · {s['per_min']:,} items/min · "
                                           f"up {fmt_s(s['uptime_s'])}" + (" · offline test data" if s.get("offline") else ""))
                 ag_dot.color = "green" if live else "blue"
                 ag_btn.text, ag_btn.icon, ag_btn.kind = "Pause", "stop", "outline"
@@ -7703,7 +7758,9 @@ def main_gui():
                 topic_cols["done"].configure(text="\n".join(f"✓ {n}  · {r:,} rows" for n, f, r in tp.get("recent", [])) or "-")
                 topics_info.configure(text=f"✓ {tp['explored']:,} done · {tp.get('in_progress', 0):,} in progress · "
                                            f"{tp['queued']:,} left" + (f" · {tp.get('focus_left', 0)} of yours next" if tp.get("focus_left") else ""))
-                ev = s.get("events", [])
+                if act_log_on["v"]:
+                    tail_agent_log()
+                ev = [] if act_log_on["v"] else s.get("events", [])
                 if ev and ev[-1:] != ag["last_ev"]:
                     ag["last_ev"] = ev[-1:]
                     act_t.configure(state="normal")
@@ -8808,6 +8865,10 @@ def main_gui():
         if st["log_timestamps"]:
             msg = datetime.now().strftime("%H:%M:%S  ") + msg
         log_t.insert("end", msg + "\n")
+        plog_t.insert("end", msg + "\n")
+        if int(plog_t.index("end").split(".")[0]) > 2000:
+            plog_t.delete("1.0", "500.0")
+        plog_t.see("end")
         n = int(log_t.index("end").split(".")[0])
         if n > int(st["log_max_lines"]):
             log_t.delete("1.0", f"{n - int(st['log_max_lines'])}.0")
