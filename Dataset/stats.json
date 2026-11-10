@@ -2,24 +2,24 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 28.1,
+  "disk_free_gb": 29.1,
   "product": "Parallel Web Technologies",
   "developer": "ProLab Robotics",
   "started": 1794279260.7094789,
   "started_iso": "2026-11-10T08:24:20",
-  "updated": 1794279689.319377,
-  "updated_iso": "2026-11-10T08:31:29",
-  "uptime_s": 429,
+  "updated": 1794279813.042259,
+  "updated_iso": "2026-11-10T08:33:33",
+  "uptime_s": 552,
   "workers": 5000,
   "effective_workers": 625,
-  "in_flight": 4999,
+  "in_flight": 625,
   "busy_by_kind": {
-    "archive": 4688,
-    "text": 120,
-    "web_images": 191
+    "archive": 586,
+    "text": 15,
+    "web_images": 24
   },
-  "waiting": 4985,
-  "processes": 8,
+  "waiting": 621,
+  "processes": 1,
   "fields": {
     "mathematics": 52175,
     "computer science": 32670,
@@ -28,16 +28,16 @@
     "economics and finance": 11823,
     "chemistry": 11080,
     "statistics": 10147,
+    "general": 9761,
     "biology": 8246,
     "physics": 8209,
     "psychology": 7727,
+    "materials science": 6850,
     "earth and space": 6247,
     "programming": 5352,
     "medicine": 5311,
     "humanities": 4117,
-    "materials science": 3852,
     "robotics": 3515,
-    "general": 2544,
     "general knowledge": 101
   },
   "topic_fields": {
@@ -65,36 +65,36 @@
     "qiaojin/PubMedQA": 96
   },
   "counts": {
-    "text": 198741,
-    "originals": 1212,
-    "variants": 197529,
+    "text": 208956,
+    "originals": 1276,
+    "variants": 207680,
     "web_images": 222,
     "synthetic_images": 14064,
     "images": 14286,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 91680828,
-    "tasks_done": 19194,
+    "tokens": 95497334,
+    "tasks_done": 19221,
     "tasks_failed": 0,
     "topics_added": 108651,
     "preference": 347
   },
   "by_kind": {
     "archive": 6,
-    "text": 10,
-    "web_images": 90,
+    "text": 14,
+    "web_images": 113,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 91680828,
-  "per_min": 1958.9,
+  "tokens": 95497334,
+  "per_min": 2053.8,
   "topics": {
     "known": 109913,
-    "explored": 1233,
-    "queued": 108563,
+    "explored": 1255,
+    "queued": 108559,
     "space": 6594780,
     "next": [
       [
@@ -148,114 +148,114 @@
     ],
     "recent": [
       [
-        "pediatric nurse practitioners",
+        "maxillofacial infections",
         "medicine",
+        2528
+      ],
+      [
+        "footbridge design",
+        "engineering",
         0
       ],
       [
-        "self-supervised learning",
-        "machine learning",
-        0
+        "oxygen barrier",
+        "materials science",
+        2998
       ],
       [
-        "literary analysis",
-        "humanities",
-        0
+        "dopamine",
+        "",
+        7217
       ],
       [
-        "solow growth model",
-        "economics and finance",
-        0
+        "glutamine",
+        "",
+        2133
       ],
       [
-        "onset detection",
+        "point cloud denoising",
         "computer science",
-        0
+        6687
       ],
       [
-        "multi-armed bandits",
+        "hidden markov models",
         "machine learning",
         0
       ],
       [
-        "expectation maximization",
+        "adversarial examples",
         "machine learning",
         0
       ],
       [
-        "actor-critic methods",
-        "machine learning",
-        0
+        "enamel paint",
+        "",
+        1470
       ],
       [
-        "linked lists",
-        "programming",
-        0
+        "forest statistics",
+        "biology",
+        841
       ],
       [
-        "mental faculties",
+        "helper t cell epitopes",
         "biology",
         0
       ],
       [
-        "reading difficulties",
-        "psychology",
-        0
-      ],
-      [
-        "schiff base",
-        "",
+        "m3 muscarinic receptor",
+        "biology",
         0
       ]
     ],
-    "in_progress": 117,
+    "in_progress": 99,
     "focus_left": 0
   },
   "system": {
-    "time": 1794279689.294074,
-    "cpu": 63.9,
+    "time": 1794279813.04086,
+    "cpu": 99.9,
     "cpu_cores": [
-      30.0,
-      28.1,
-      25.8,
-      26.8,
-      99.6,
-      99.6,
-      99.6,
-      100.0
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      99.6
     ],
-    "mem": 79.4,
-    "mem_used_gb": 2.94,
+    "mem": 82.4,
+    "mem_used_gb": 2.72,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 198.4,
+    "proc_mem_mb": 124.4,
     "threads": 629,
     "proc_cpu": 0.0,
-    "net_rx": 4628334592,
-    "net_tx": 577222656,
-    "down_kbps": 52.5,
-    "up_kbps": 16.8,
-    "disk_free_gb": 28.1,
+    "net_rx": 4635745280,
+    "net_tx": 594578432,
+    "down_kbps": 33.9,
+    "up_kbps": 9.4,
+    "disk_free_gb": 28.9,
     "load": [
-      5.39,
-      7.33,
-      12.4
+      15.83,
+      10.04,
+      12.76
     ],
     "cores": 8
   },
-  "disk_mb": 467.8,
+  "disk_mb": 446.5,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794279633.876585,
-    "next_sync_s": 205,
-    "commits": 1
+    "last_push": 1794279806.498812,
+    "next_sync_s": 81,
+    "commits": 3
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "string manipulation",
-    "problem": "Squier Precision Bass bridge",
-    "solution": "CC BY-SA 4.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "oxygen barrier",
+    "problem": "Effect of Oxygen Defects Blocking Barriers on Gadolinium Doped Ceria (GDC) Electro-Chemo-Mechanical Properties Some oxygen defective metal oxides, such as cerium and bismuth oxides, have recently shown exceptional electrostrictive properties that are even superior to the best performing lead-based electrostrictors, e.g. lead-magnesium-niobates (PMN). Compared to piezoelectric ceramics,\u2026",
+    "solution": "In this work, we investigate for the first time the role of oxygen defect configuration on the electro-chemo-mechanical properties. This is achieved by tuning the oxygen defects blocking barrier density in polycrystalline gadolinium doped ceria with known oxygen vacancy concentration, Ce0.9Gd0.1O2-x,x= 0.05. Nanometric starting powders of ca. 12 nm are sintered in different conditions, including\u2026",
+    "source": "arxiv"
   }
 }
