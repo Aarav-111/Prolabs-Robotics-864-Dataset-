@@ -1,12 +1,12 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-10T08:36:50",
+"updated": "2026-11-10T08:37:51",
 "total": 109913,
-"done": 1317,
-"in_progress": 43,
+"done": 1328,
+"in_progress": 32,
 "left": 108553,
 "parallel_agents": {
-"running": 31,
+"running": 34,
 "topics": [
 {
 "agent": 2,
@@ -46,91 +46,103 @@
 },
 {
 "agent": 596,
-"topic": "enamel paint"
-},
-{
-"agent": 597,
 "topic": "glutamine"
 },
 {
-"agent": 598,
-"topic": "isotachophoresis"
-},
-{
-"agent": 599,
-"topic": "aerospace adhesives"
-},
-{
-"agent": 600,
-"topic": "oxygen barrier"
-},
-{
-"agent": 601,
+"agent": 597,
 "topic": "forest statistics"
 },
 {
-"agent": 602,
+"agent": 598,
 "topic": "dopamine"
 },
 {
-"agent": 603,
+"agent": 599,
 "topic": "backup"
 },
 {
-"agent": 605,
-"topic": "striatum"
+"agent": 601,
+"topic": "isotachophoresis"
 },
 {
-"agent": 613,
+"agent": 605,
 "topic": "chatbot development"
 },
 {
-"agent": 614,
+"agent": 606,
 "topic": "transitive relation"
 },
 {
-"agent": 615,
+"agent": 607,
 "topic": "real-time ethernet"
 },
 {
-"agent": 616,
+"agent": 608,
 "topic": "timetabling problem"
 },
 {
-"agent": 617,
+"agent": 609,
 "topic": "dihydroflavonol 4-reductase"
 },
 {
-"agent": 618,
+"agent": 610,
 "topic": "copper(i) oxide"
 },
 {
-"agent": 619,
+"agent": 611,
 "topic": "rural prosperity"
 },
 {
-"agent": 620,
+"agent": 612,
 "topic": "infertility diagnosis"
 },
 {
-"agent": 621,
+"agent": 613,
 "topic": "spinel structure"
 },
 {
-"agent": 622,
-"topic": "maxillofacial infections"
-},
-{
-"agent": 623,
+"agent": 614,
 "topic": "invasive fungal infections"
 },
 {
-"agent": 624,
+"agent": 615,
 "topic": "sunflower cultivation"
 },
 {
-"agent": 625,
+"agent": 616,
 "topic": "shield tunneling"
+},
+{
+"agent": 617,
+"topic": "membrane attack complex"
+},
+{
+"agent": 618,
+"topic": "echinococcosis"
+},
+{
+"agent": 619,
+"topic": "future internet"
+},
+{
+"agent": 620,
+"topic": "multilevel models"
+},
+{
+"agent": 621,
+"topic": "nash equilibrium"
+},
+{
+"agent": 622,
+"topic": "grover's algorithm"
+},
+{
+"agent": 623,
+"topic": "vision transformers"
+},
+{
+"agent": 624,
+"topic": "speech recognition"
 }
 ]
 },
@@ -141,19 +153,19 @@
 "in_progress": 2
 },
 "medicine": {
-"done": 70,
+"done": 71,
 "left": 20607,
-"in_progress": 4
-},
-"biology": {
-"done": 110,
-"left": 13530,
 "in_progress": 3
 },
-"engineering": {
-"done": 95,
-"left": 12478,
+"biology": {
+"done": 111,
+"left": 13530,
 "in_progress": 2
+},
+"engineering": {
+"done": 97,
+"left": 12478,
+"in_progress": 0
 },
 "general": {
 "done": 54,
@@ -171,9 +183,9 @@
 "in_progress": 1
 },
 "earth and space": {
-"done": 44,
+"done": 45,
 "left": 5463,
-"in_progress": 1
+"in_progress": 0
 },
 "materials science": {
 "done": 36,
@@ -186,9 +198,9 @@
 "in_progress": 1
 },
 "physics": {
-"done": 120,
+"done": 121,
 "left": 2717,
-"in_progress": 8
+"in_progress": 7
 },
 "psychology": {
 "done": 31,
@@ -196,9 +208,9 @@
 "in_progress": 0
 },
 "mathematics": {
-"done": 151,
+"done": 152,
 "left": 2008,
-"in_progress": 5
+"in_progress": 4
 },
 "statistics": {
 "done": 71,
@@ -206,22 +218,154 @@
 "in_progress": 2
 },
 "robotics": {
-"done": 59,
+"done": 60,
 "left": 28,
-"in_progress": 1
+"in_progress": 0
 },
 "machine learning": {
-"done": 70,
+"done": 71,
 "left": 11,
-"in_progress": 4
+"in_progress": 3
 },
 "programming": {
-"done": 65,
+"done": 67,
 "left": 5,
-"in_progress": 4
+"in_progress": 2
 }
 },
 "topics": [
+{
+"topic": "mine hoisting system",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:37:04"
+},
+{
+"topic": "pseudo-second-order kinetics",
+"field": "earth and space",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:37:03"
+},
+{
+"topic": "servo motors",
+"field": "robotics",
+"level": "core",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:37:01"
+},
+{
+"topic": "convolutional neural networks",
+"field": "machine learning",
+"level": "core",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:37:01"
+},
+{
+"topic": "ubiquitination",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:37:01"
+},
+{
+"topic": "concrete drying",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:37:01"
+},
+{
+"topic": "rust lifetimes",
+"field": "programming",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:55"
+},
+{
+"topic": "lacrimal drainage surgery",
+"field": "medicine",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:55"
+},
+{
+"topic": "rust ownership",
+"field": "programming",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:51"
+},
+{
+"topic": "normalizing constants",
+"field": "mathematics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:51"
+},
+{
+"topic": "multilevel fast multipole algorithm",
+"field": "physics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:51"
+},
 {
 "topic": "semantic segmentation",
 "field": "machine learning",
@@ -397,9 +541,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 623,
 "records": 11381,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:35:48"
 },
 {
@@ -409,9 +553,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 617,
 "records": 5489,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -421,7 +565,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 621,
+"agent": 613,
 "records": 3774,
 "images": 1,
 "completed": "2026-11-10T08:35:47"
@@ -433,7 +577,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 625,
+"agent": 616,
 "records": 2919,
 "images": 1,
 "completed": "2026-11-10T08:35:47"
@@ -445,9 +589,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 618,
 "records": 4359,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:35:27"
 },
 {
@@ -457,9 +601,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 621,
 "records": 5462,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:35:24"
 },
 {
@@ -529,7 +673,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 624,
+"agent": 615,
 "records": 990,
 "images": 1,
 "completed": "2026-11-10T08:35:24"
@@ -565,9 +709,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 624,
 "records": 4866,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -625,9 +769,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 619,
+"agent": 611,
 "records": 1448,
-"images": 1,
+"images": 2,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -637,9 +781,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 620,
 "records": 1134,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -649,9 +793,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 619,
 "records": 2195,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -721,9 +865,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 622,
 "records": 3908,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -841,7 +985,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 623,
+"agent": 614,
 "records": 3416,
 "images": 1,
 "completed": "2026-11-10T08:34:56"
@@ -961,7 +1105,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 620,
+"agent": 612,
 "records": 4090,
 "images": 1,
 "completed": "2026-11-10T08:33:35"
@@ -985,7 +1129,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 622,
+"agent": null,
 "records": 2528,
 "images": 1,
 "completed": "2026-11-10T08:33:31"
@@ -1009,7 +1153,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 600,
+"agent": null,
 "records": 2998,
 "images": 2,
 "completed": "2026-11-10T08:33:01"
@@ -1021,7 +1165,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 602,
+"agent": 598,
 "records": 7217,
 "images": 3,
 "completed": "2026-11-10T08:33:00"
@@ -1033,7 +1177,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 597,
+"agent": 596,
 "records": 2133,
 "images": 2,
 "completed": "2026-11-10T08:33:00"
@@ -1081,7 +1225,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 596,
+"agent": null,
 "records": 1470,
 "images": 3,
 "completed": "2026-11-10T08:32:59"
@@ -1093,7 +1237,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 601,
+"agent": 597,
 "records": 841,
 "images": 2,
 "completed": "2026-11-10T08:32:59"
@@ -1141,7 +1285,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 599,
+"agent": null,
 "records": 1034,
 "images": 2,
 "completed": "2026-11-10T08:32:59"
@@ -1153,7 +1297,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 598,
+"agent": 601,
 "records": 1585,
 "images": 2,
 "completed": "2026-11-10T08:32:59"
@@ -1177,7 +1321,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 603,
+"agent": 599,
 "records": 5744,
 "images": 3,
 "completed": "2026-11-10T08:32:59"
@@ -1237,7 +1381,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 605,
+"agent": null,
 "records": 2514,
 "images": 3,
 "completed": "2026-11-10T08:32:58"
@@ -100741,7 +100885,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 614,
+"agent": 606,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -150001,7 +150145,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 617,
+"agent": 609,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -261247,18 +261391,6 @@
 "completed": ""
 },
 {
-"topic": "ubiquitination",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "udder health",
 "field": "biology",
 "level": "specialist",
@@ -353017,7 +353149,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 615,
+"agent": 607,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -417295,18 +417427,6 @@
 "completed": ""
 },
 {
-"topic": "pseudo-second-order kinetics",
-"field": "earth and space",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "psychrobacter immobilis",
 "field": "earth and space",
 "level": "specialist",
@@ -445321,7 +445441,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 613,
+"agent": 605,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -528619,18 +528739,6 @@
 "completed": ""
 },
 {
-"topic": "concrete drying",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "concrete durability",
 "field": "engineering",
 "level": "specialist",
@@ -587197,18 +587305,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "mine hoisting system",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -929335,18 +929431,6 @@
 "completed": ""
 },
 {
-"topic": "convolutional neural networks",
-"field": "machine learning",
-"level": "core",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "machine learning",
 "field": "machine learning",
 "level": "core",
@@ -937177,7 +937261,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 618,
+"agent": 610,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -986269,18 +986353,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "normalizing constants",
-"field": "mathematics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1119229,18 +1119301,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "lacrimal drainage surgery",
-"field": "medicine",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1259191,18 +1259251,6 @@
 "completed": ""
 },
 {
-"topic": "multilevel fast multipole algorithm",
-"field": "physics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "multipartite entanglement",
 "field": "physics",
 "level": "specialist",
@@ -1274689,30 +1274737,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "rust lifetimes",
-"field": "programming",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "rust ownership",
-"field": "programming",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1308223,18 +1308247,6 @@
 "completed": ""
 },
 {
-"topic": "servo motors",
-"field": "robotics",
-"level": "core",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "behavior cloning",
 "field": "robotics",
 "level": "advanced",
@@ -1318693,7 +1318705,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 616,
+"agent": 608,
 "records": 0,
 "images": 0,
 "completed": ""

@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 29.2,
+  "disk_free_gb": 29.1,
   "product": "Parallel Web Technologies",
   "developer": "ProLab Robotics",
   "started": 1794279260.7094789,
   "started_iso": "2026-11-10T08:24:20",
-  "updated": 1794280054.3948102,
-  "updated_iso": "2026-11-10T08:37:34",
-  "uptime_s": 794,
+  "updated": 1794280084.075049,
+  "updated_iso": "2026-11-10T08:38:04",
+  "uptime_s": 823,
   "workers": 5000,
   "effective_workers": 625,
   "in_flight": 625,
@@ -18,7 +18,7 @@
     "text": 15,
     "web_images": 24
   },
-  "waiting": 620,
+  "waiting": 621,
   "processes": 1,
   "fields": {
     "mathematics": 52175,
@@ -68,13 +68,13 @@
     "text": 208956,
     "originals": 1276,
     "variants": 207680,
-    "web_images": 244,
+    "web_images": 247,
     "synthetic_images": 14064,
-    "images": 14308,
+    "images": 14311,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 95497334,
-    "tasks_done": 19239,
+    "tasks_done": 19243,
     "tasks_failed": 0,
     "topics_added": 108651,
     "preference": 347
@@ -82,7 +82,7 @@
   "by_kind": {
     "archive": 6,
     "text": 20,
-    "web_images": 125,
+    "web_images": 129,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -90,7 +90,7 @@
     "seed_concepts": 0
   },
   "tokens": 95497334,
-  "per_min": 2241.6,
+  "per_min": 5.0,
   "topics": {
     "known": 109913,
     "explored": 1328,
@@ -212,33 +212,33 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794280054.394014,
-    "cpu": 33.3,
+    "time": 1794280084.074128,
+    "cpu": 53.9,
     "cpu_cores": [
-      22.4,
-      20.4,
-      17.1,
-      14.7,
-      65.6,
-      52.1,
-      35.7,
-      37.9
+      37.0,
+      35.4,
+      31.3,
+      29.4,
+      79.7,
+      75.9,
+      70.8,
+      71.6
     ],
-    "mem": 84.4,
-    "mem_used_gb": 2.56,
+    "mem": 83.7,
+    "mem_used_gb": 2.55,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 168.1,
+    "proc_mem_mb": 116.8,
     "threads": 629,
     "proc_cpu": 0.0,
-    "net_rx": 4653861888,
-    "net_tx": 643788800,
-    "down_kbps": 33.5,
-    "up_kbps": 6.1,
-    "disk_free_gb": 29.2,
+    "net_rx": 4657886208,
+    "net_tx": 657295360,
+    "down_kbps": 317.2,
+    "up_kbps": 32.9,
+    "disk_free_gb": 29.1,
     "load": [
-      3.33,
-      7.33,
-      11.01
+      4.59,
+      7.27,
+      10.87
     ],
     "cores": 8
   },
@@ -247,15 +247,15 @@
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794280052.216981,
-    "next_sync_s": 193,
-    "commits": 6
+    "last_push": 1794280080.623384,
+    "next_sync_s": 164,
+    "commits": 7
   },
   "last_sample": {
     "type": "web image",
-    "topic": "enamel paint",
-    "problem": "Saint Catherine by L\u00e9onard II Limosin (c. 1550\u2013c. 1625), 1600-1625, enamel and gold paint on copper, Saint Louis Art Museum",
-    "solution": "CC0",
+    "topic": "maxillofacial infections",
+    "problem": "U.S. Army Lt. Col. David Tucker, an oral and maxillofacial surgeon assigned to Brooke Army Medical Center in San Antonio, Texas, observes Ghanaian dental interns drain an infection in a patient\u2019s cheek during Medical Readiness Training Exercise 17-2 at the 37th Military Hospital in Accra, Ghana, Feb. 13, 2017. MEDRETE 17-2 includes participants from the Ghanaian government, U.S. Army Africa, Brooke Army Medical Center, and the North Dakota National Guard. It is the second in a series of medical readiness training exercises that USARAF is scheduled to facilitate in various countries in\u2026",
+    "solution": "Public domain",
     "source": "wikimedia commons"
   }
 }
