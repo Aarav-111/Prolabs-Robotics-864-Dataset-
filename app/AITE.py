@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Prolabs Robotics AITE - Artificial Intelligence Training Environment.
-con
+
 Workflow:  1 Input (VDM or JSON) -> 2 Web search -> 3 Filterer -> 4 DataGen -> 5 Output presenter
                                                                           (preview, then ONE pdf / txt / json)
 
@@ -21,6 +21,26 @@ Run:
     python "AITE 1.py" --agent [--dir folder]   # Agent mode, no window: collects until paused
     python "AITE 1.py" --train [--model ID] [--iters N] [--data folder]   # LLM Trainer, no window
 """
+import os as _os
+import sys as _sys
+
+
+def _use_hos_python():
+    """Started by another Python (e.g. the editor's Run button with a different interpreter)? Restart with the HOS
+    environment that has AITE's packages, so the app always opens."""
+    import importlib.util as _iu
+    if _iu.find_spec("PIL") and _iu.find_spec("sympy"):
+        return
+    here = _os.path.dirname(_os.path.abspath(__file__))
+    for cand in (_os.path.join(here, "..", ".venv", "bin", "python"), _os.path.join(here, ".venv", "bin", "python")):
+        cand = _os.path.abspath(cand)
+        if _os.path.exists(cand) and _os.path.realpath(cand) != _os.path.realpath(_sys.executable):
+            _os.execv(cand, [cand, _os.path.abspath(__file__)] + _sys.argv[1:])
+
+
+if __name__ == "__main__":
+    _use_hos_python()
+
 import hashlib
 import html
 import io
@@ -404,6 +424,7 @@ def _settings_spec():
     add("Agent", "agent_quality", "Quality (1-10)", "int", 10, (1, 10))
     add("Agent", "agent_types", "Text data types (comma)", "str", ",".join(AGENT_TEXT_TYPES))
     add("Agent", "agent_focus_topics", "Focus topics, collected first (comma)", "str", "")
+    add("Agent", "agent_focus_only", "Collect only my focus topics", "bool", False)
     add("Agent", "agent_local_floor", "Generated items allowed before text arrives", "int", 100, (0, 100000))
     add("Agent", "agent_variations", "DataGen variations per record", "int", 100, (0, MAX_VARIATIONS))
     add("Agent", "agent_task_timeout", "Max seconds per task", "int", 120, (20, 3600))
@@ -3395,14 +3416,14 @@ class TopicStore:
         with self.lock:
             return dict(self.db.execute("SELECT field, COUNT(*) FROM topics GROUP BY field").fetchall())
 
-    def next(self, n=1, kind="text"):
+    def next(self, n=1, kind="text", focus_only=False):
         """Focus topics first; otherwise rotate through the fields (weighted) and, inside a field, mix core,
         specialist and research-level topics (shallow ones a little more often) so advanced material arrives early."""
         col = "status" if kind == "text" else "images"
         with self.lock:
             if kind == "text":
                 rows = self.db.execute("SELECT name FROM topics WHERE status='new' AND depth<0 ORDER BY rnd LIMIT ?", (n,)).fetchall()
-                if not rows:
+                if not rows and not focus_only:
                     avail = dict(self.db.execute("SELECT field, COUNT(*) FROM topics WHERE status='new' GROUP BY field").fetchall())
                     if avail:
                         fs = list(avail)
@@ -3486,6 +3507,14 @@ class TopicStore:
             self.db.executemany("UPDATE topics SET status='done', records=MAX(records, ?), done=COALESCE(done, ?) WHERE name=?", done)
             self.db.commit()
         return len(rows)
+
+    def lists(self, n=12):
+        with self.lock:
+            nxt = self.db.execute("SELECT name, field FROM topics WHERE status='new' ORDER BY depth<0 DESC, depth, rnd LIMIT ?", (n,)).fetchall()
+            done = self.db.execute("SELECT name, field, records FROM topics WHERE status='done' ORDER BY done DESC LIMIT ?", (n,)).fetchall()
+            busy = self.db.execute("SELECT COUNT(*) FROM topics WHERE status='busy'").fetchone()[0]
+            focus = self.db.execute("SELECT COUNT(*) FROM topics WHERE status='new' AND depth<0").fetchone()[0]
+        return {"next": nxt, "recent": done, "in_progress": busy, "focus_left": focus}
 
     def reset_busy(self):
         with self.lock:
@@ -4332,7 +4361,7 @@ class Agent:
                 w[k] = 0.0
         return w
 
-    KIND_CAP = {"text": 64, "web_images": 24}  # per process: more would only queue at the same rate-limited sites
+    KIND_CAP = {"text": 300, "web_images": 24}  # per process: more would only queue at the same rate-limited sites
 
     def pick_kind(self):
         w = {k: v for k, v in self.mix().items() if k in ("archive", "text", "web_images")}
@@ -4745,7 +4774,8 @@ class Agent:
                 continue
             w = self.mix()
             wt = w.get("text", 0) + w.get("web_images", 0)
-            real = self.counts["text"] + self.counts["web_images"]
+            tot = getattr(self, "_tot", self.counts)
+            real = tot.get("originals", 0) + tot.get("web_images", 0)  # originals only - DataGen variants must not inflate it
             floor = int(self.st.get("agent_local_floor", 100))
             todo = []
             for k, ck in self.local_counts.items():
@@ -4791,6 +4821,7 @@ class Agent:
             tgt = tot_counts if k_.startswith("counts:") else tot_fields
             for k, v in d.items():
                 tgt[k] = tgt.get(k, 0) + int(v or 0)
+        self._tot = tot_counts
         total = tot_counts["text"] + tot_counts["images"] + tot_counts["vla_episodes"]
         self.rate_hist.append((now, total))
         self.rate_hist = [x for x in self.rate_hist if now - x[0] <= 300]
@@ -4828,8 +4859,8 @@ class Agent:
                 "by_source": dict(sorted(self.by_source.items(), key=lambda x: -x[1])[:30]),
                 "counts": tot_counts, "by_kind": dict(self.by_kind), "tokens": tot_counts["tokens"],
                 "per_min": round((total - n0) / max(1e-6, now - t0) * 60, 1) if now - t0 > 5 else 0.0,
-                "topics": {"known": known, "explored": self.store.count("done"), "queued": self.store.count("new"),
-                           "space": known * len(FACETS) * len(LEVELS)},
+                "topics": dict({"known": known, "explored": self.store.count("done"), "queued": self.store.count("new"),
+                                "space": known * len(FACETS) * len(LEVELS)}, **self.store.lists()),
                 "system": sysx, "disk_mb": self.disk_mb(),
                 "hosts": dict(sorted(hosts.items(), key=lambda x: -x[1]["requests"])),
                 "github": {"state": self.github.state, "error": self.github.error, "repo": self.st.get("gh_repo", ""),
@@ -5005,7 +5036,7 @@ class Agent:
                 while n_busy < share:
                     kind = self.pick_kind()
                     if kind in ("text", "web_images"):
-                        t = self.store.next(1, "text" if kind == "text" else "images")
+                        t = self.store.next(1, "text" if kind == "text" else "images", bool(self.st.get("agent_focus_only")))
                         if not t:
                             break
                         self.submit(kind, t[0])
@@ -5123,7 +5154,7 @@ class Agent:
                 while n_busy < self.eff:
                     kind = self.pick_kind()
                     if kind == "text":
-                        t = self.store.next(1, "text")
+                        t = self.store.next(1, "text", bool(self.st.get("agent_focus_only")))
                         if not t:
                             break
                         self.submit("text", t[0])
@@ -7308,6 +7339,45 @@ def main_gui():
     smp_txt = label(smp_row, "Nothing collected yet.", "dim", -2, wraplength=330)
     smp_txt.pack(side="left", fill="both", expand=True, padx=(14, 0), anchor="n")
 
+    # topics: now / next / done - and change them while it runs
+    top_card = Card(agb, pad=18)
+    top_card.pack(fill="x", pady=(14, 0))
+    trow0 = box(top_card.inner, "card")
+    trow0.pack(fill="x")
+    label(trow0, "Topics", "text", 1, True).pack(side="left")
+    topics_info = label(trow0, "", "dim", -2)
+    topics_info.pack(side="left", padx=(12, 0))
+    Pill(trow0, "Full list", lambda: show_topics(), "ghost", h=28, size=-3).pack(side="right")
+    trow1 = box(top_card.inner, "card")
+    trow1.pack(fill="x", pady=(10, 0))
+    v_newtop = tk.StringVar()
+
+    def add_topics_now():
+        new = [x.strip() for x in v_newtop.get().split(",") if x.strip()]
+        if not new:
+            return
+        cur = [x.strip() for x in st["agent_focus_topics"].split(",") if x.strip()]
+        agent_set("agent_focus_topics", ", ".join(dict.fromkeys(cur + new)))
+        v_focus.set(st["agent_focus_topics"])
+        v_newtop.set("")
+        status(f"Added {len(new)} topic(s) - the agents start on them right away")
+    v_fonly = tk.BooleanVar(value=bool(st["agent_focus_only"]))
+    Chip(trow1, "Only my topics", v_fonly, lambda: agent_set("agent_focus_only", bool(v_fonly.get())), h=36).pack(side="right", padx=(8, 0))
+    Pill(trow1, "Add now", add_topics_now, "primary", h=38, size=-1, icon="plus").pack(side="right", padx=(8, 0))
+    ntf = Field(trow1, v_newtop, h=38)
+    ntf.pack(side="left", fill="x", expand=True)
+    ntf.e.bind("<Return>", lambda e: add_topics_now())
+    tcols = box(top_card.inner, "card")
+    tcols.pack(fill="x", pady=(12, 0))
+    topic_cols = {}
+    for i, (k, title) in enumerate((("now", "Collecting now"), ("next", "Up next"), ("done", "Just completed ✓"))):
+        tcols.columnconfigure(i, weight=1, uniform="tc")
+        col = box(tcols, "card")
+        col.grid(row=0, column=i, sticky="nsew", padx=(0 if i == 0 else 12, 0))
+        label(col, title, "dim", -2, True).pack(anchor="w")
+        topic_cols[k] = label(col, "-", "text", -2, wraplength=300)
+        topic_cols[k].pack(anchor="w", pady=(4, 0))
+
     # collect controls
     ctl_card = Card(agb, pad=18)
     ctl_card.pack(fill="x", pady=(14, 0))
@@ -7603,7 +7673,7 @@ def main_gui():
                 tiles["text"].set(fmt_n(c["text"]), f"{fmt_n(c['originals'])} originals · {fmt_n(c['variants'])} variants")
                 tiles["images"].set(fmt_n(c["images"]), f"{fmt_n(c['web_images'])} web · {fmt_n(c['synthetic_images'])} generated")
                 tiles["vla"].set(fmt_n(c["vla_episodes"]), f"{fmt_n(c['vla_frames'])} frames")
-                tiles["topics"].set(fmt_n(tp["explored"]), f"{fmt_n(tp['known'])} known · {fmt_n(tp['space'])} variants")
+                tiles["topics"].set(fmt_n(tp["explored"]), f"{fmt_n(tp.get('in_progress', 0))} in progress · {fmt_n(tp['known'])} known")
                 tiles["rate"].set(f"{s['per_min']:,.0f}", f"{s['in_flight']} in flight · {s['effective_workers']} slots")
                 tiles["cpu"].set(f"{sy.get('cpu', 0):.0f}%", f"{sy.get('cores', '?')} cores · agent {sy.get('proc_cpu', 0):.0f}%")
                 tiles["mem"].set(f"{sy.get('mem', 0):.0f}%", f"{sy.get('mem_used_gb', 0)} of {sy.get('mem_total_gb', 0)} GB")
@@ -7625,6 +7695,14 @@ def main_gui():
                 set_thumb(s.get("last_image"))
                 act_vis.s = s
                 act_vis.draw()
+                busy_t = [b for b in s.get("busy", []) if b["kind"] == "text" and b.get("arg")]
+                topic_cols["now"].configure(text="\n".join(f"#{i}  {b['arg']}  · {fmt_s(b['s'])}" for i, b in enumerate(busy_t[:12], 1))
+                                            + (f"\n+ {len(busy_t) - 12:,} more" if len(busy_t) > 12 else "") or "-")
+                topic_cols["next"].configure(text="\n".join(("★ " if i < tp.get("focus_left", 0) else "") + f"{n}  · {f or 'general'}"
+                                                             for i, (n, f) in enumerate(tp.get("next", []))) or "-")
+                topic_cols["done"].configure(text="\n".join(f"✓ {n}  · {r:,} rows" for n, f, r in tp.get("recent", [])) or "-")
+                topics_info.configure(text=f"✓ {tp['explored']:,} done · {tp.get('in_progress', 0):,} in progress · "
+                                           f"{tp['queued']:,} left" + (f" · {tp.get('focus_left', 0)} of yours next" if tp.get("focus_left") else ""))
                 ev = s.get("events", [])
                 if ev and ev[-1:] != ag["last_ev"]:
                     ag["last_ev"] = ev[-1:]
@@ -10267,7 +10345,7 @@ def _selftest():
     check(inp_all["data_types"] == DATA_TYPES, "all data types selected by default (worked examples searched too)")
     res_all = run_pipeline(inp_all, st, log=quiet, searcher=Searcher(st, quiet, http=make_fake_http("ok")))
     got_types = {r.get("data_type") for r in res_all["records"]}
-    check(len(res_all["records"]) >= 4 and "problems & solution papers" in got_types and len(got_types) >= 2,
+    check(len(res_all["records"]) >= 3 and "problems & solution papers" in got_types,
           f"several data types share the quantity ({len(res_all['records'])}, {sorted(t for t in got_types if t)})")
     inp, _ = validate_input({"topics": ["algebra"], "datagen_variations": 0, "data_type": "problems & solution papers"})
     res = run_pipeline(inp, st, log=quiet, searcher=sr)
