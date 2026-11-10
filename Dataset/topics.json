@@ -1,136 +1,136 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-10T08:29:54",
+"updated": "2026-11-10T08:30:28",
 "total": 109913,
-"done": 1215,
-"in_progress": 115,
-"left": 108583,
+"done": 1232,
+"in_progress": 117,
+"left": 108564,
 "parallel_agents": {
 "running": 19,
 "topics": [
 {
-"agent": 1,
-"topic": "body dysmorphic symptoms"
-},
-{
-"agent": 3,
+"agent": 2,
 "topic": "respiratory physiology"
 },
 {
-"agent": 5,
+"agent": 4,
 "topic": "dopamine"
 },
 {
-"agent": 9,
+"agent": 8,
 "topic": "lie algebras"
 },
 {
-"agent": 11,
+"agent": 10,
 "topic": "hypothesis testing"
 },
 {
-"agent": 13,
+"agent": 12,
 "topic": "statistical learning theory"
 },
 {
-"agent": 593,
+"agent": 592,
 "topic": "adversarial examples"
 },
 {
-"agent": 594,
+"agent": 593,
 "topic": "hidden markov models"
 },
 {
-"agent": 595,
+"agent": 594,
 "topic": "microeconomics"
 },
 {
-"agent": 596,
+"agent": 595,
 "topic": "disaster medical response"
 },
 {
-"agent": 604,
+"agent": 603,
 "topic": "string manipulation"
 },
 {
-"agent": 612,
+"agent": 610,
 "topic": "acousto-optic tunable filter"
 },
 {
-"agent": 619,
+"agent": 616,
 "topic": "neutrino physics"
 },
 {
-"agent": 620,
+"agent": 617,
 "topic": "ylides"
 },
 {
-"agent": 621,
+"agent": 618,
 "topic": "stochastic calculus"
 },
 {
-"agent": 622,
+"agent": 619,
 "topic": "dropout"
 },
 {
-"agent": 623,
+"agent": 620,
 "topic": "oxygen barrier"
 },
 {
-"agent": 624,
+"agent": 621,
 "topic": "time series forecasting"
 },
 {
-"agent": 625,
+"agent": 622,
 "topic": "mixed-type equations"
+},
+{
+"agent": 623,
+"topic": "naval aviation"
 }
 ]
 },
 "fields": {
 "humanities": {
-"done": 47,
+"done": 49,
 "left": 22983,
-"in_progress": 9
+"in_progress": 7
 },
 "medicine": {
 "done": 65,
-"left": 20609,
-"in_progress": 7
+"left": 20607,
+"in_progress": 9
 },
 "biology": {
-"done": 99,
-"left": 13532,
+"done": 100,
+"left": 13531,
 "in_progress": 12
 },
 "engineering": {
 "done": 90,
-"left": 12481,
-"in_progress": 4
+"left": 12478,
+"in_progress": 7
 },
 "general": {
-"done": 46,
+"done": 47,
 "left": 7541,
-"in_progress": 9
+"in_progress": 8
 },
 "computer science": {
-"done": 117,
-"left": 5595,
+"done": 118,
+"left": 5594,
 "in_progress": 7
 },
 "economics and finance": {
-"done": 47,
+"done": 48,
 "left": 5639,
-"in_progress": 3
+"in_progress": 2
 },
 "earth and space": {
 "done": 43,
-"left": 5464,
-"in_progress": 1
+"left": 5463,
+"in_progress": 2
 },
 "materials science": {
-"done": 32,
+"done": 33,
 "left": 3409,
-"in_progress": 5
+"in_progress": 4
 },
 "chemistry": {
 "done": 105,
@@ -139,18 +139,18 @@
 },
 "physics": {
 "done": 114,
-"left": 2722,
-"in_progress": 9
+"left": 2717,
+"in_progress": 14
 },
 "psychology": {
-"done": 27,
+"done": 29,
 "left": 2784,
-"in_progress": 4
+"in_progress": 2
 },
 "mathematics": {
-"done": 141,
-"left": 2011,
-"in_progress": 12
+"done": 142,
+"left": 2009,
+"in_progress": 13
 },
 "statistics": {
 "done": 67,
@@ -163,17 +163,197 @@
 "in_progress": 4
 },
 "machine learning": {
-"done": 59,
-"left": 13,
-"in_progress": 13
+"done": 64,
+"left": 12,
+"in_progress": 9
 },
 "programming": {
-"done": 61,
-"left": 10,
-"in_progress": 3
+"done": 63,
+"left": 7,
+"in_progress": 4
 }
 },
 "topics": [
+{
+"topic": "self-supervised learning",
+"field": "machine learning",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:30:08"
+},
+{
+"topic": "literary analysis",
+"field": "humanities",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:30:03"
+},
+{
+"topic": "solow growth model",
+"field": "economics and finance",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:30:03"
+},
+{
+"topic": "onset detection",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:30:03"
+},
+{
+"topic": "multi-armed bandits",
+"field": "machine learning",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:30:03"
+},
+{
+"topic": "expectation maximization",
+"field": "machine learning",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:30:02"
+},
+{
+"topic": "actor-critic methods",
+"field": "machine learning",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:30:00"
+},
+{
+"topic": "linked lists",
+"field": "programming",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:29:59"
+},
+{
+"topic": "mental faculties",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:29:59"
+},
+{
+"topic": "reading difficulties",
+"field": "psychology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:29:59"
+},
+{
+"topic": "schiff base",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:29:58"
+},
+{
+"topic": "sql queries",
+"field": "programming",
+"level": "core",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 1,
+"completed": "2026-11-10T08:29:58"
+},
+{
+"topic": "julia",
+"field": "programming",
+"level": "core",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:29:56"
+},
+{
+"topic": "philosophy of mind",
+"field": "humanities",
+"level": "core",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 1,
+"completed": "2026-11-10T08:29:55"
+},
+{
+"topic": "federated learning",
+"field": "machine learning",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:29:55"
+},
 {
 "topic": "case problem solving",
 "field": "economics and finance",
@@ -184,7 +364,43 @@
 "agent": null,
 "records": 0,
 "images": 0,
-"completed": "2026-11-10T08:29:52"
+"completed": "2026-11-10T08:29:55"
+},
+{
+"topic": "trigonometry",
+"field": "mathematics",
+"level": "core",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 1,
+"completed": "2026-11-10T08:29:55"
+},
+{
+"topic": "body dysmorphic symptoms",
+"field": "psychology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:29:54"
+},
+{
+"topic": "nuclear quadrupole resonance",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:29:54"
 },
 {
 "topic": "metaclasses",
@@ -321,18 +537,6 @@
 {
 "topic": "large deviations",
 "field": "mathematics",
-"level": "advanced",
-"done": true,
-"check": "✓",
-"status": "done",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": "2026-11-10T08:29:47"
-},
-{
-"topic": "linked lists",
-"field": "programming",
 "level": "advanced",
 "done": true,
 "check": "✓",
@@ -805,9 +1009,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 604,
+"agent": 603,
 "records": 1343,
-"images": 54,
+"images": 56,
 "completed": "2026-11-10T08:28:10"
 },
 {
@@ -817,9 +1021,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 596,
+"agent": 595,
 "records": 706,
-"images": 55,
+"images": 57,
 "completed": "2026-11-10T08:27:41"
 },
 {
@@ -829,9 +1033,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 612,
+"agent": 610,
 "records": 113,
-"images": 55,
+"images": 56,
 "completed": "2026-11-10T08:27:40"
 },
 {
@@ -853,9 +1057,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 595,
+"agent": 594,
 "records": 7579,
-"images": 55,
+"images": 56,
 "completed": "2026-11-10T08:27:18"
 },
 {
@@ -38617,7 +38821,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 5,
+"agent": 4,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -87121,18 +87325,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "schiff base",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -197455,18 +197647,6 @@
 "completed": ""
 },
 {
-"topic": "mental faculties",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "mep50",
 "field": "biology",
 "level": "specialist",
@@ -260208,7 +260388,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -301993,7 +302173,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 620,
+"agent": 617,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -302952,7 +303132,7 @@
 "level": "advanced",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -345505,18 +345685,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "onset detection",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -416448,7 +416616,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -435649,18 +435817,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "solow growth model",
-"field": "economics and finance",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -527808,7 +527964,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -586416,7 +586572,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -591096,8 +591252,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 623,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -652831,18 +652987,6 @@
 "completed": ""
 },
 {
-"topic": "philosophy of mind",
-"field": "humanities",
-"level": "core",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 1,
-"completed": ""
-},
-{
 "topic": "semantics",
 "field": "humanities",
 "level": "core",
@@ -653005,18 +653149,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "literary analysis",
-"field": "humanities",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -928668,7 +928800,7 @@
 "level": "core",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -928705,21 +928837,9 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 13,
+"agent": 12,
 "records": 0,
 "images": 1,
-"completed": ""
-},
-{
-"topic": "actor-critic methods",
-"field": "machine learning",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
 "completed": ""
 },
 {
@@ -928741,7 +928861,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 593,
+"agent": 592,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -928789,31 +928909,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 622,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "expectation maximization",
-"field": "machine learning",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "federated learning",
-"field": "machine learning",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
+"agent": 619,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -928837,7 +928933,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 594,
+"agent": 593,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -928891,18 +928987,6 @@
 "completed": ""
 },
 {
-"topic": "multi-armed bandits",
-"field": "machine learning",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "normalizing flows",
 "field": "machine learning",
 "level": "advanced",
@@ -928921,18 +929005,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "self-supervised learning",
-"field": "machine learning",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -928969,7 +929041,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 624,
+"agent": 621,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -954967,18 +955039,6 @@
 "completed": ""
 },
 {
-"topic": "nuclear quadrupole resonance",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "nuclear reactor materials",
 "field": "materials science",
 "level": "specialist",
@@ -955909,7 +955969,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 623,
+"agent": 620,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -970105,7 +970165,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 9,
+"agent": 8,
 "records": 0,
 "images": 1,
 "completed": ""
@@ -970216,18 +970276,6 @@
 "agent": null,
 "records": 0,
 "images": 0,
-"completed": ""
-},
-{
-"topic": "trigonometry",
-"field": "mathematics",
-"level": "core",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 1,
 "completed": ""
 },
 {
@@ -971761,7 +971809,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 621,
+"agent": 618,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -984325,7 +984373,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 625,
+"agent": 622,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -984720,7 +984768,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -985896,7 +985944,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -994693,7 +994741,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 3,
+"agent": 2,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1098636,7 +1098684,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1118892,7 +1118940,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1242912,7 +1242960,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1255272,7 +1255320,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1258908,7 +1258956,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1259701,7 +1259749,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 619,
+"agent": 616,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1260948,7 +1260996,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1271940,7 +1271988,7 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1274383,30 +1274431,6 @@
 "completed": ""
 },
 {
-"topic": "julia",
-"field": "programming",
-"level": "core",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "sql queries",
-"field": "programming",
-"level": "core",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 1,
-"completed": ""
-},
-{
 "topic": "binary trees",
 "field": "programming",
 "level": "advanced",
@@ -1274448,7 +1274472,7 @@
 "level": "advanced",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1274508,7 +1274532,7 @@
 "level": "advanced",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1274520,7 +1274544,7 @@
 "level": "advanced",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1277654,18 +1277678,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "body dysmorphic symptoms",
-"field": "psychology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 1,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1299667,18 +1299679,6 @@
 "completed": ""
 },
 {
-"topic": "reading difficulties",
-"field": "psychology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "reading disorders",
 "field": "psychology",
 "level": "specialist",
@@ -1308433,7 +1308433,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 11,
+"agent": 10,
 "records": 0,
 "images": 1,
 "completed": ""
