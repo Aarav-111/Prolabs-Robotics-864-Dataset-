@@ -4938,6 +4938,7 @@ class Agent:
             self.log(f"topics.json not written: {e}")
 
     def history(self, s):
+        os.makedirs(os.path.join(self.root, "stats"), exist_ok=True)  # recreated if someone removed it
         p = os.path.join(self.root, "stats", "history.csv")
         new = not os.path.exists(p)
         c, sy = s["counts"], s["system"]
@@ -5198,15 +5199,19 @@ class Agent:
                     n_busy += 1
             if now - last_stats >= 2:
                 last_stats = now
-                s = self.stats()
-                self.write_stats(s)
-                if now - last_hist >= 60:
-                    last_hist = now
-                    self.history(s)
-                    self.export_topics()
-                if now >= self.next_sync:
-                    self.next_sync = now + float(self.st.get("gh_interval_min", 5)) * 60
-                    self.sync(s)
+                try:  # bookkeeping problems are logged - they never stop collection
+                    os.makedirs(self.adir, exist_ok=True)
+                    s = self.stats()
+                    self.write_stats(s)
+                    if now - last_hist >= 60:
+                        last_hist = now
+                        self.history(s)
+                        self.export_topics()
+                    if now >= self.next_sync:
+                        self.next_sync = now + float(self.st.get("gh_interval_min", 5)) * 60
+                        self.sync(s)
+                except Exception as e:
+                    self.log(f"Stats / sync step skipped: {type(e).__name__}: {e}")
             for w in self.writers.values():
                 w.rotate()
             time.sleep(0.25)
@@ -5249,13 +5254,17 @@ def agent_dir(st):
 
 
 def agent_pid(root):
+    """The running agent's pid - None if it exited, even when its process entry lingers as a zombie."""
     try:
         with open(os.path.join(root, ".agent", "agent.pid")) as f:
             pid = int(f.read().strip())
-        os.kill(pid, 0)
-        return pid
     except (OSError, ValueError):
         return None
+    try:  # reap it if this process started it (a finished child stays a zombie until reaped)
+        os.waitpid(pid, os.WNOHANG)
+    except (ChildProcessError, OSError):
+        pass
+    return pid if _alive(pid) else None
 
 
 def agent_control(root, **kw):
@@ -7632,6 +7641,8 @@ def main_gui():
         agent_control(ag["root"], workers=int(st["pwt_workers"]))
 
     def agent_alive():
+        if ag.get("proc") is not None and ag["proc"].poll() is not None:
+            ag["proc"] = None  # reaped: a crashed agent is restarted, never left as a zombie
         return agent_pid(ag["root"]) is not None
 
     def agent_spawn_once():
