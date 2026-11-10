@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 21.5,
+  "disk_free_gb": 21.1,
   "product": "Parallel Web Technologies",
   "developer": "ProLab Robotics",
   "started": 1794279260.7094789,
   "started_iso": "2026-11-10T08:24:20",
-  "updated": 1794281825.1332202,
-  "updated_iso": "2026-11-10T09:07:05",
-  "uptime_s": 2564,
+  "updated": 1794281889.514315,
+  "updated_iso": "2026-11-10T09:08:09",
+  "uptime_s": 2629,
   "workers": 5000,
   "effective_workers": 625,
   "in_flight": 625,
@@ -18,7 +18,7 @@
     "text": 15,
     "web_images": 24
   },
-  "waiting": 624,
+  "waiting": 625,
   "processes": 1,
   "fields": {
     "mathematics": 53676,
@@ -68,21 +68,21 @@
     "text": 240147,
     "originals": 1461,
     "variants": 238686,
-    "web_images": 379,
+    "web_images": 384,
     "synthetic_images": 14064,
-    "images": 14443,
+    "images": 14448,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 107222046,
-    "tasks_done": 19694,
+    "tasks_done": 19713,
     "tasks_failed": 0,
     "topics_added": 108651,
     "preference": 376
   },
   "by_kind": {
     "archive": 12,
-    "text": 71,
-    "web_images": 523,
+    "text": 74,
+    "web_images": 539,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -90,11 +90,11 @@
     "seed_concepts": 0
   },
   "tokens": 107222046,
-  "per_min": 902.8,
+  "per_min": 921.4,
   "topics": {
     "known": 109914,
-    "explored": 1377,
-    "queued": 108505,
+    "explored": 1380,
+    "queued": 108502,
     "space": 6594840,
     "next": [
       [
@@ -148,6 +148,21 @@
     ],
     "recent": [
       [
+        "surrogacy contracts",
+        "humanities",
+        0
+      ],
+      [
+        "bookkeeping education",
+        "economics and finance",
+        0
+      ],
+      [
+        "chloroperlidae",
+        "biology",
+        0
+      ],
+      [
         "attention mechanisms",
         "machine learning",
         4369
@@ -191,71 +206,56 @@
         "advanced mathematics",
         "",
         0
-      ],
-      [
-        "vector algebra",
-        "",
-        0
-      ],
-      [
-        "judicial power",
-        "humanities",
-        506
-      ],
-      [
-        "talent management",
-        "economics and finance",
-        0
       ]
     ],
     "in_progress": 32,
     "focus_left": 0
   },
   "system": {
-    "time": 1794281825.1320052,
-    "cpu": 96.9,
+    "time": 1794281889.509931,
+    "cpu": 66.7,
     "cpu_cores": [
-      95.9,
-      95.0,
-      94.1,
-      94.1,
-      99.1,
-      99.1,
-      99.5,
-      98.6
+      87.6,
+      86.8,
+      86.4,
+      84.9,
+      15.5,
+      78.7,
+      0.0,
+      93.8
     ],
-    "mem": 66.1,
-    "mem_used_gb": 4.18,
+    "mem": 90.0,
+    "mem_used_gb": 4.49,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 195.4,
+    "proc_mem_mb": 64.0,
     "threads": 629,
     "proc_cpu": 0.0,
-    "net_rx": 6070390784,
-    "net_tx": 1073866752,
-    "down_kbps": 11.4,
-    "up_kbps": 5.0,
-    "disk_free_gb": 21.5,
+    "net_rx": 6075776000,
+    "net_tx": 1092246528,
+    "down_kbps": 10.8,
+    "up_kbps": 3.1,
+    "disk_free_gb": 21.2,
     "load": [
-      60.45,
-      203.36,
-      142.39
+      200.98,
+      206.75,
+      147.52
     ],
     "cores": 8
   },
-  "disk_mb": 137.9,
+  "disk_mb": 113.4,
   "github": {
-    "state": "error",
-    "error": "RuntimeError: error: RPC failed; curl 56 Recv failure: Connection reset by peer\nsend-pack: unexpected disconnect while reading sideband packet\nfatal: the remote end hung up unexpectedly",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794281343.944018,
-    "next_sync_s": 287,
-    "commits": 16
+    "last_push": 1794281881.355308,
+    "next_sync_s": 222,
+    "commits": 17
   },
   "last_sample": {
-    "type": "text",
+    "type": "web image",
     "topic": "attention mechanisms",
-    "problem": "Linear Attention Architectures: Mechanisms, Trade-offs, and Cross-Layer Routing Self-attention lets each token retrieve information from the full context, but its quadratic cost in sequence length limits training and inference at long context. This paper presents a comparative study of softmax attention and four recent recurrent linear-attention architectures: DeltaNet, Gated DeltaNet, Kimi\u2026",
-    "solution": "Our experiments center on 350M-parameter models trained for 15B tokens, and include optimizer and learning-rate comparisons, hybrid-versus-pure stack comparisons, sequence-length runtime measurements, larger DeltaNet runs at 1.3B and 3B parameters, and a small set of downstream evaluations. The reported speed results measure training throughput and iteration time; we do not provide an empirical\u2026",
-    "source": "arxiv"
+    "problem": "Illustrations for the Transformer, and attention mechanism. Encoder cross-attention, computing the context vector by a linear sum.",
+    "solution": "CC BY 4.0",
+    "source": "wikimedia commons"
   }
 }
