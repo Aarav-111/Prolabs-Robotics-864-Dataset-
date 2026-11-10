@@ -1,12 +1,12 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-10T08:56:42",
+"updated": "2026-11-10T09:06:54",
 "total": 109914,
-"done": 1362,
+"done": 1377,
 "in_progress": 32,
-"left": 108520,
+"left": 108505,
 "parallel_agents": {
-"running": 28,
+"running": 29,
 "topics": [
 {
 "agent": 2,
@@ -25,107 +25,111 @@
 "topic": "statistical learning theory"
 },
 {
-"agent": 591,
+"agent": 585,
 "topic": "dropout"
 },
 {
-"agent": 592,
+"agent": 586,
 "topic": "regularization"
 },
 {
-"agent": 593,
-"topic": "binary trees"
-},
-{
-"agent": 594,
-"topic": "electric waves"
-},
-{
-"agent": 597,
-"topic": "acis"
-},
-{
-"agent": 598,
-"topic": "knowledge sharing culture"
-},
-{
-"agent": 599,
-"topic": "talent management"
-},
-{
-"agent": 600,
-"topic": "vector algebra"
-},
-{
-"agent": 601,
+"agent": 587,
 "topic": "maths"
 },
 {
-"agent": 602,
-"topic": "future internet"
-},
-{
-"agent": 603,
-"topic": "network management architecture"
-},
-{
-"agent": 604,
-"topic": "mobile crowdsourcing"
-},
-{
-"agent": 605,
-"topic": "ionic liquid recycling"
-},
-{
-"agent": 606,
-"topic": "multilevel models"
-},
-{
-"agent": 607,
-"topic": "nash equilibrium"
-},
-{
-"agent": 608,
-"topic": "grover's algorithm"
-},
-{
-"agent": 609,
-"topic": "vision transformers"
-},
-{
-"agent": 610,
-"topic": "speech recognition"
-},
-{
-"agent": 611,
+"agent": 588,
 "topic": "algebra"
 },
 {
+"agent": 589,
+"topic": "backpropagation"
+},
+{
+"agent": 590,
+"topic": "encoders and odometry"
+},
+{
+"agent": 591,
+"topic": "chloroperlidae"
+},
+{
+"agent": 592,
+"topic": "bookkeeping education"
+},
+{
+"agent": 593,
+"topic": "surrogacy contracts"
+},
+{
+"agent": 600,
+"topic": "glutamine"
+},
+{
+"agent": 601,
+"topic": "basic education"
+},
+{
+"agent": 602,
+"topic": "trade in services"
+},
+{
+"agent": 603,
+"topic": "sunflower cultivation"
+},
+{
+"agent": 604,
+"topic": "point cloud denoising"
+},
+{
+"agent": 605,
+"topic": "colorant stability"
+},
+{
+"agent": 606,
+"topic": "shield tunneling"
+},
+{
+"agent": 607,
+"topic": "membrane attack complex"
+},
+{
+"agent": 608,
+"topic": "isotachophoresis"
+},
+{
+"agent": 609,
+"topic": "aerospace adhesives"
+},
+{
+"agent": 610,
+"topic": "oxygen barrier"
+},
+{
+"agent": 611,
+"topic": "echinococcosis"
+},
+{
 "agent": 612,
-"topic": "advanced mathematics"
+"topic": "microwave remote sensing"
 },
 {
 "agent": 613,
-"topic": "judicial power"
+"topic": "electric waves"
 },
 {
 "agent": 614,
-"topic": "clinical social work"
+"topic": "ethylene oxide"
 },
 {
 "agent": 615,
-"topic": "image-based rendering"
-},
-{
-"agent": 616,
-"topic": "function theory"
+"topic": "attention mechanisms"
 }
 ]
 },
 "fields": {
 "humanities": {
-"done": 55,
-"left": 22981,
+"done": 56,
+"left": 22980,
 "in_progress": 3
 },
 "medicine": {
@@ -135,8 +139,8 @@
 },
 "biology": {
 "done": 112,
-"left": 13530,
-"in_progress": 1
+"left": 13528,
+"in_progress": 3
 },
 "engineering": {
 "done": 100,
@@ -144,23 +148,23 @@
 "in_progress": 0
 },
 "general": {
-"done": 55,
-"left": 7538,
-"in_progress": 4
+"done": 57,
+"left": 7537,
+"in_progress": 3
 },
 "computer science": {
-"done": 130,
-"left": 5589,
+"done": 131,
+"left": 5588,
 "in_progress": 0
 },
 "economics and finance": {
-"done": 53,
-"left": 5635,
+"done": 55,
+"left": 5633,
 "in_progress": 1
 },
 "earth and space": {
-"done": 46,
-"left": 5462,
+"done": 47,
+"left": 5461,
 "in_progress": 0
 },
 "materials science": {
@@ -174,9 +178,9 @@
 "in_progress": 1
 },
 "physics": {
-"done": 123,
+"done": 124,
 "left": 2714,
-"in_progress": 8
+"in_progress": 7
 },
 "psychology": {
 "done": 32,
@@ -189,27 +193,207 @@
 "in_progress": 4
 },
 "statistics": {
-"done": 73,
+"done": 74,
 "left": 887,
-"in_progress": 2
+"in_progress": 1
 },
 "robotics": {
-"done": 60,
-"left": 28,
-"in_progress": 0
+"done": 62,
+"left": 25,
+"in_progress": 1
 },
 "machine learning": {
-"done": 73,
-"left": 9,
-"in_progress": 3
+"done": 75,
+"left": 6,
+"in_progress": 4
 },
 "programming": {
-"done": 70,
-"left": 3,
-"in_progress": 1
+"done": 72,
+"left": 2,
+"in_progress": 0
 }
 },
 "topics": [
+{
+"topic": "attention mechanisms",
+"field": "machine learning",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": 615,
+"records": 4369,
+"images": 9,
+"completed": "2026-11-10T09:06:51"
+},
+{
+"topic": "purchase decision",
+"field": "economics and finance",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T09:05:43"
+},
+{
+"topic": "vectorization",
+"field": "programming",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T09:03:44"
+},
+{
+"topic": "boreal peatlands",
+"field": "earth and space",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T09:03:41"
+},
+{
+"topic": "low-rank adaptation",
+"field": "machine learning",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T09:03:40"
+},
+{
+"topic": "motion planning",
+"field": "robotics",
+"level": "core",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T09:03:40"
+},
+{
+"topic": "forward kinematics",
+"field": "robotics",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T09:03:16"
+},
+{
+"topic": "vecchia approximation",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T09:00:31"
+},
+{
+"topic": "advanced mathematics",
+"field": "general",
+"level": "focus",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T09:00:25"
+},
+{
+"topic": "vector algebra",
+"field": "general",
+"level": "focus",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T09:00:09"
+},
+{
+"topic": "judicial power",
+"field": "humanities",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 506,
+"images": 12,
+"completed": "2026-11-10T08:59:11"
+},
+{
+"topic": "talent management",
+"field": "economics and finance",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:57:44"
+},
+{
+"topic": "knowledge sharing culture",
+"field": "statistics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:57:42"
+},
+{
+"topic": "acis",
+"field": "physics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:57:35"
+},
+{
+"topic": "binary trees",
+"field": "programming",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:57:28"
+},
 {
 "topic": "image-based rendering",
 "field": "computer science",
@@ -217,9 +401,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 615,
+"agent": null,
 "records": 5172,
-"images": 4,
+"images": 11,
 "completed": "2026-11-10T08:56:41"
 },
 {
@@ -229,9 +413,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 614,
+"agent": null,
 "records": 2353,
-"images": 4,
+"images": 12,
 "completed": "2026-11-10T08:56:41"
 },
 {
@@ -241,9 +425,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 616,
+"agent": null,
 "records": 1501,
-"images": 3,
+"images": 11,
 "completed": "2026-11-10T08:56:41"
 },
 {
@@ -277,9 +461,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 604,
+"agent": null,
 "records": 3414,
-"images": 9,
+"images": 11,
 "completed": "2026-11-10T08:53:58"
 },
 {
@@ -349,9 +533,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 594,
+"agent": 613,
 "records": 1863,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:51:49"
 },
 {
@@ -361,9 +545,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 605,
+"agent": null,
 "records": 115,
-"images": 9,
+"images": 11,
 "completed": "2026-11-10T08:51:43"
 },
 {
@@ -385,9 +569,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 603,
+"agent": null,
 "records": 670,
-"images": 9,
+"images": 11,
 "completed": "2026-11-10T08:49:34"
 },
 {
@@ -481,9 +665,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 602,
 "records": 497,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:45:28"
 },
 {
@@ -493,9 +677,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 601,
 "records": 5013,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:43:04"
 },
 {
@@ -505,9 +689,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 612,
 "records": 5602,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:43:04"
 },
 {
@@ -949,9 +1133,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 609,
+"agent": null,
 "records": 11381,
-"images": 9,
+"images": 11,
 "completed": "2026-11-10T08:35:48"
 },
 {
@@ -961,9 +1145,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 607,
 "records": 5489,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -975,7 +1159,7 @@
 "status": "done",
 "agent": null,
 "records": 3774,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -985,9 +1169,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 606,
 "records": 2919,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -997,9 +1181,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 611,
 "records": 4359,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:35:27"
 },
 {
@@ -1009,9 +1193,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 607,
+"agent": null,
 "records": 5462,
-"images": 9,
+"images": 11,
 "completed": "2026-11-10T08:35:24"
 },
 {
@@ -1081,9 +1265,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 603,
 "records": 990,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:35:24"
 },
 {
@@ -1117,9 +1301,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 610,
+"agent": null,
 "records": 4866,
-"images": 9,
+"images": 11,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -1179,7 +1363,7 @@
 "status": "done",
 "agent": null,
 "records": 1448,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -1189,9 +1373,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 606,
+"agent": null,
 "records": 1134,
-"images": 9,
+"images": 11,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -1201,9 +1385,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 602,
+"agent": null,
 "records": 2195,
-"images": 9,
+"images": 11,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1273,9 +1457,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 608,
+"agent": null,
 "records": 3908,
-"images": 9,
+"images": 11,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1395,7 +1579,7 @@
 "status": "done",
 "agent": null,
 "records": 3416,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1515,7 +1699,7 @@
 "status": "done",
 "agent": null,
 "records": 4090,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:33:35"
 },
 {
@@ -1539,7 +1723,7 @@
 "status": "done",
 "agent": null,
 "records": 2528,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:33:31"
 },
 {
@@ -1561,9 +1745,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 610,
 "records": 2998,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:33:01"
 },
 {
@@ -1575,7 +1759,7 @@
 "status": "done",
 "agent": null,
 "records": 7217,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1585,9 +1769,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 600,
 "records": 2133,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1597,9 +1781,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 604,
 "records": 6687,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1635,7 +1819,7 @@
 "status": "done",
 "agent": null,
 "records": 1470,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1647,7 +1831,7 @@
 "status": "done",
 "agent": null,
 "records": 841,
-"images": 9,
+"images": 11,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1693,9 +1877,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 609,
 "records": 1034,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1705,9 +1889,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 608,
 "records": 1585,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1731,7 +1915,7 @@
 "status": "done",
 "agent": null,
 "records": 5744,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1791,7 +1975,7 @@
 "status": "done",
 "agent": null,
 "records": 2514,
-"images": 9,
+"images": 12,
 "completed": "2026-11-10T08:32:58"
 },
 {
@@ -16555,37 +16739,13 @@
 "completed": "2026-11-09T13:06:35"
 },
 {
-"topic": "vector algebra",
-"field": "general",
-"level": "focus",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 600,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "maths",
 "field": "general",
 "level": "focus",
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 601,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "advanced mathematics",
-"field": "general",
-"level": "focus",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 612,
+"agent": 587,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -45000,8 +45160,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 614,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -137760,8 +137920,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 591,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -142092,8 +142252,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 605,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -367291,18 +367451,6 @@
 "completed": ""
 },
 {
-"topic": "vecchia approximation",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "vector graphics",
 "field": "computer science",
 "level": "specialist",
@@ -378692,18 +378840,6 @@
 },
 {
 "topic": "borate minerals",
-"field": "earth and space",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "boreal peatlands",
 "field": "earth and space",
 "level": "specialist",
 "done": false,
@@ -442656,8 +442792,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 592,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -487855,18 +487991,6 @@
 "completed": ""
 },
 {
-"topic": "purchase decision",
-"field": "economics and finance",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "purchase decision factors",
 "field": "economics and finance",
 "level": "specialist",
@@ -497390,18 +497514,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "talent management",
-"field": "economics and finance",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 599,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -786319,18 +786431,6 @@
 "completed": ""
 },
 {
-"topic": "judicial power",
-"field": "humanities",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 613,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "judicial reasoning",
 "field": "humanities",
 "level": "specialist",
@@ -896136,8 +896236,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 593,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -929647,25 +929747,13 @@
 "completed": ""
 },
 {
-"topic": "attention mechanisms",
-"field": "machine learning",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "backpropagation",
 "field": "machine learning",
 "level": "advanced",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 589,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -929689,7 +929777,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 591,
+"agent": 585,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -929708,18 +929796,6 @@
 },
 {
 "topic": "interpretability",
-"field": "machine learning",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "low-rank adaptation",
 "field": "machine learning",
 "level": "advanced",
 "done": false,
@@ -929761,7 +929837,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 592,
+"agent": 586,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -970669,7 +970745,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 611,
+"agent": 588,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1243135,18 +1243211,6 @@
 "completed": ""
 },
 {
-"topic": "acis",
-"field": "physics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 597,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "acoustic band gaps",
 "field": "physics",
 "level": "specialist",
@@ -1274731,18 +1274795,6 @@
 "completed": ""
 },
 {
-"topic": "binary trees",
-"field": "programming",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 593,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "build systems",
 "field": "programming",
 "level": "advanced",
@@ -1274756,18 +1274808,6 @@
 },
 {
 "topic": "regex",
-"field": "programming",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "vectorization",
 "field": "programming",
 "level": "advanced",
 "done": false,
@@ -1308211,18 +1308251,6 @@
 "completed": ""
 },
 {
-"topic": "motion planning",
-"field": "robotics",
-"level": "core",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "robot dynamics",
 "field": "robotics",
 "level": "core",
@@ -1308324,26 +1308352,14 @@
 "level": "advanced",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 590,
 "records": 0,
 "images": 0,
 "completed": ""
 },
 {
 "topic": "extended kalman filter",
-"field": "robotics",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "forward kinematics",
 "field": "robotics",
 "level": "advanced",
 "done": false,
@@ -1314110,18 +1314126,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "knowledge sharing culture",
-"field": "statistics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 598,
 "records": 0,
 "images": 0,
 "completed": ""
