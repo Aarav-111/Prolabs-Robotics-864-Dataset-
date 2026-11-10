@@ -1,12 +1,12 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-10T08:35:49",
+"updated": "2026-11-10T08:36:50",
 "total": 109913,
-"done": 1303,
-"in_progress": 57,
+"done": 1317,
+"in_progress": 43,
 "left": 108553,
 "parallel_agents": {
-"running": 27,
+"running": 31,
 "topics": [
 {
 "agent": 2,
@@ -50,71 +50,87 @@
 },
 {
 "agent": 597,
-"topic": "striatum"
-},
-{
-"agent": 598,
 "topic": "glutamine"
 },
 {
-"agent": 599,
-"topic": "point cloud denoising"
-},
-{
-"agent": 600,
+"agent": 598,
 "topic": "isotachophoresis"
 },
 {
-"agent": 601,
+"agent": 599,
 "topic": "aerospace adhesives"
 },
 {
-"agent": 602,
+"agent": 600,
 "topic": "oxygen barrier"
 },
 {
-"agent": 603,
+"agent": 601,
 "topic": "forest statistics"
 },
 {
-"agent": 604,
+"agent": 602,
 "topic": "dopamine"
 },
 {
-"agent": 605,
+"agent": 603,
 "topic": "backup"
 },
 {
-"agent": 617,
+"agent": 605,
+"topic": "striatum"
+},
+{
+"agent": 613,
 "topic": "chatbot development"
 },
 {
-"agent": 618,
+"agent": 614,
 "topic": "transitive relation"
 },
 {
-"agent": 619,
+"agent": 615,
 "topic": "real-time ethernet"
 },
 {
-"agent": 620,
+"agent": 616,
 "topic": "timetabling problem"
 },
 {
-"agent": 621,
+"agent": 617,
 "topic": "dihydroflavonol 4-reductase"
 },
 {
-"agent": 622,
+"agent": 618,
 "topic": "copper(i) oxide"
 },
 {
-"agent": 623,
+"agent": 619,
 "topic": "rural prosperity"
 },
 {
-"agent": 624,
+"agent": 620,
 "topic": "infertility diagnosis"
+},
+{
+"agent": 621,
+"topic": "spinel structure"
+},
+{
+"agent": 622,
+"topic": "maxillofacial infections"
+},
+{
+"agent": 623,
+"topic": "invasive fungal infections"
+},
+{
+"agent": 624,
+"topic": "sunflower cultivation"
+},
+{
+"agent": 625,
+"topic": "shield tunneling"
 }
 ]
 },
@@ -130,14 +146,14 @@
 "in_progress": 4
 },
 "biology": {
-"done": 108,
+"done": 110,
 "left": 13530,
-"in_progress": 5
+"in_progress": 3
 },
 "engineering": {
-"done": 94,
+"done": 95,
 "left": 12478,
-"in_progress": 3
+"in_progress": 2
 },
 "general": {
 "done": 54,
@@ -145,19 +161,19 @@
 "in_progress": 2
 },
 "computer science": {
-"done": 123,
+"done": 125,
 "left": 5593,
-"in_progress": 3
+"in_progress": 1
 },
 "economics and finance": {
-"done": 49,
+"done": 50,
 "left": 5638,
-"in_progress": 2
+"in_progress": 1
 },
 "earth and space": {
-"done": 43,
+"done": 44,
 "left": 5463,
-"in_progress": 2
+"in_progress": 1
 },
 "materials science": {
 "done": 36,
@@ -170,14 +186,14 @@
 "in_progress": 1
 },
 "physics": {
-"done": 119,
+"done": 120,
 "left": 2717,
-"in_progress": 9
+"in_progress": 8
 },
 "psychology": {
-"done": 30,
+"done": 31,
 "left": 2784,
-"in_progress": 1
+"in_progress": 0
 },
 "mathematics": {
 "done": 151,
@@ -185,27 +201,195 @@
 "in_progress": 5
 },
 "statistics": {
-"done": 69,
+"done": 71,
 "left": 889,
-"in_progress": 4
-},
-"robotics": {
-"done": 58,
-"left": 28,
 "in_progress": 2
 },
+"robotics": {
+"done": 59,
+"left": 28,
+"in_progress": 1
+},
 "machine learning": {
-"done": 69,
+"done": 70,
 "left": 11,
-"in_progress": 5
+"in_progress": 4
 },
 "programming": {
-"done": 64,
+"done": 65,
 "left": 5,
-"in_progress": 5
+"in_progress": 4
 }
 },
 "topics": [
+{
+"topic": "semantic segmentation",
+"field": "machine learning",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:46"
+},
+{
+"topic": "sensor network security",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:45"
+},
+{
+"topic": "structural calculation",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:44"
+},
+{
+"topic": "shiga toxin",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:44"
+},
+{
+"topic": "bibliographic records",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:42"
+},
+{
+"topic": "surface reconstruction",
+"field": "physics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:41"
+},
+{
+"topic": "block designs",
+"field": "statistics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:40"
+},
+{
+"topic": "publication bias",
+"field": "statistics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:40"
+},
+{
+"topic": "particle filter",
+"field": "robotics",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:39"
+},
+{
+"topic": "natural resource wealth",
+"field": "economics and finance",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:39"
+},
+{
+"topic": "carlin-type gold deposits",
+"field": "earth and space",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:36"
+},
+{
+"topic": "gender dysphoria",
+"field": "psychology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:33"
+},
+{
+"topic": "cgiar research programs",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:33"
+},
+{
+"topic": "python generators",
+"field": "programming",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:36:32"
+},
 {
 "topic": "vision transformers",
 "field": "machine learning",
@@ -237,9 +421,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 621,
 "records": 3774,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -249,9 +433,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 625,
 "records": 2919,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -345,9 +529,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 624,
 "records": 990,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:35:24"
 },
 {
@@ -441,7 +625,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 623,
+"agent": 619,
 "records": 1448,
 "images": 1,
 "completed": "2026-11-10T08:34:57"
@@ -657,9 +841,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 623,
 "records": 3416,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -777,7 +961,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 624,
+"agent": 620,
 "records": 4090,
 "images": 1,
 "completed": "2026-11-10T08:33:35"
@@ -801,9 +985,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 622,
 "records": 2528,
-"images": 0,
+"images": 1,
 "completed": "2026-11-10T08:33:31"
 },
 {
@@ -825,7 +1009,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 602,
+"agent": 600,
 "records": 2998,
 "images": 2,
 "completed": "2026-11-10T08:33:01"
@@ -837,7 +1021,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 604,
+"agent": 602,
 "records": 7217,
 "images": 3,
 "completed": "2026-11-10T08:33:00"
@@ -849,7 +1033,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 598,
+"agent": 597,
 "records": 2133,
 "images": 2,
 "completed": "2026-11-10T08:33:00"
@@ -861,7 +1045,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 599,
+"agent": null,
 "records": 6687,
 "images": 2,
 "completed": "2026-11-10T08:33:00"
@@ -909,7 +1093,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 603,
+"agent": 601,
 "records": 841,
 "images": 2,
 "completed": "2026-11-10T08:32:59"
@@ -957,7 +1141,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 601,
+"agent": 599,
 "records": 1034,
 "images": 2,
 "completed": "2026-11-10T08:32:59"
@@ -969,7 +1153,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 600,
+"agent": 598,
 "records": 1585,
 "images": 2,
 "completed": "2026-11-10T08:32:59"
@@ -993,7 +1177,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 605,
+"agent": 603,
 "records": 5744,
 "images": 3,
 "completed": "2026-11-10T08:32:59"
@@ -1053,7 +1237,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 597,
+"agent": 605,
 "records": 2514,
 "images": 3,
 "completed": "2026-11-10T08:32:58"
@@ -100557,7 +100741,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 618,
+"agent": 614,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -135831,18 +136015,6 @@
 "completed": ""
 },
 {
-"topic": "cgiar research programs",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "cgmp hydrolysis",
 "field": "biology",
 "level": "specialist",
@@ -149829,7 +150001,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 621,
+"agent": 617,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -242475,18 +242647,6 @@
 "completed": ""
 },
 {
-"topic": "shiga toxin",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "shiga toxin-producing escherichia coli",
 "field": "biology",
 "level": "specialist",
@@ -310311,18 +310471,6 @@
 "completed": ""
 },
 {
-"topic": "bibliographic records",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "bichrome pottery",
 "field": "computer science",
 "level": "specialist",
@@ -352869,7 +353017,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 619,
+"agent": 615,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -357153,18 +357301,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "sensor network security",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -379233,18 +379369,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "carlin-type gold deposits",
-"field": "earth and space",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -445197,7 +445321,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 617,
+"agent": 613,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -479733,18 +479857,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "natural resource wealth",
-"field": "economics and finance",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -631509,18 +631621,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "structural calculation",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -929403,18 +929503,6 @@
 "completed": ""
 },
 {
-"topic": "semantic segmentation",
-"field": "machine learning",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "sequence to sequence models",
 "field": "machine learning",
 "level": "advanced",
@@ -937089,7 +937177,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 622,
+"agent": 618,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1271331,18 +1271419,6 @@
 "completed": ""
 },
 {
-"topic": "surface reconstruction",
-"field": "physics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "surface relaxation",
 "field": "physics",
 "level": "specialist",
@@ -1274602,18 +1274678,6 @@
 "check": "",
 "status": "in progress",
 "agent": 592,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "python generators",
-"field": "programming",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1287117,18 +1287181,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "gender dysphoria",
-"field": "psychology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1308339,18 +1308391,6 @@
 "completed": ""
 },
 {
-"topic": "particle filter",
-"field": "robotics",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "pick and place",
 "field": "robotics",
 "level": "advanced",
@@ -1309845,18 +1309885,6 @@
 "done": false,
 "check": "",
 "status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "block designs",
-"field": "statistics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
@@ -1316499,18 +1316527,6 @@
 "completed": ""
 },
 {
-"topic": "publication bias",
-"field": "statistics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "pure nash equilibrium",
 "field": "statistics",
 "level": "specialist",
@@ -1318677,7 +1318693,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 620,
+"agent": 616,
 "records": 0,
 "images": 0,
 "completed": ""
