@@ -1,12 +1,12 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-10T08:48:11",
+"updated": "2026-11-10T08:49:13",
 "total": 109913,
 "done": 1347,
 "in_progress": 32,
 "left": 108534,
 "parallel_agents": {
-"running": 36,
+"running": 38,
 "topics": [
 {
 "agent": 2,
@@ -46,111 +46,119 @@
 },
 {
 "agent": 596,
-"topic": "nash equilibrium"
-},
-{
-"agent": 597,
-"topic": "speech recognition"
-},
-{
-"agent": 598,
 "topic": "quadratic forms"
 },
 {
-"agent": 599,
+"agent": 597,
 "topic": "trade in services"
 },
 {
-"agent": 601,
-"topic": "sunflower cultivation"
-},
-{
-"agent": 602,
+"agent": 598,
 "topic": "navier–stokes equations"
 },
 {
-"agent": 603,
-"topic": "point cloud denoising"
-},
-{
-"agent": 604,
-"topic": "shield tunneling"
-},
-{
-"agent": 605,
+"agent": 599,
 "topic": "network management architecture"
 },
 {
-"agent": 606,
-"topic": "membrane attack complex"
-},
-{
-"agent": 607,
+"agent": 600,
 "topic": "electric waves"
 },
 {
-"agent": 608,
-"topic": "isotachophoresis"
-},
-{
-"agent": 609,
+"agent": 601,
 "topic": "ionic liquid recycling"
 },
 {
-"agent": 610,
-"topic": "aerospace adhesives"
-},
-{
-"agent": 611,
+"agent": 602,
 "topic": "mental health care organization"
 },
 {
-"agent": 612,
-"topic": "oxygen barrier"
-},
-{
-"agent": 613,
-"topic": "echinococcosis"
-},
-{
-"agent": 614,
-"topic": "microwave remote sensing"
-},
-{
-"agent": 615,
-"topic": "forest statistics"
-},
-{
-"agent": 616,
-"topic": "future internet"
-},
-{
-"agent": 617,
-"topic": "multilevel models"
-},
-{
-"agent": 619,
-"topic": "grover's algorithm"
-},
-{
-"agent": 620,
+"agent": 603,
 "topic": "vision transformers"
 },
 {
-"agent": 622,
+"agent": 604,
+"topic": "speech recognition"
+},
+{
+"agent": 605,
 "topic": "rural prosperity"
 },
 {
-"agent": 623,
+"agent": 606,
 "topic": "dopamine"
 },
 {
-"agent": 624,
+"agent": 607,
 "topic": "backup"
 },
 {
-"agent": 625,
+"agent": 608,
 "topic": "enamel paint"
+},
+{
+"agent": 609,
+"topic": "infertility diagnosis"
+},
+{
+"agent": 610,
+"topic": "spinel structure"
+},
+{
+"agent": 611,
+"topic": "maxillofacial infections"
+},
+{
+"agent": 612,
+"topic": "invasive fungal infections"
+},
+{
+"agent": 613,
+"topic": "striatum"
+},
+{
+"agent": 614,
+"topic": "glutamine"
+},
+{
+"agent": 615,
+"topic": "basic education"
+},
+{
+"agent": 617,
+"topic": "sunflower cultivation"
+},
+{
+"agent": 618,
+"topic": "point cloud denoising"
+},
+{
+"agent": 619,
+"topic": "shield tunneling"
+},
+{
+"agent": 620,
+"topic": "membrane attack complex"
+},
+{
+"agent": 621,
+"topic": "isotachophoresis"
+},
+{
+"agent": 622,
+"topic": "aerospace adhesives"
+},
+{
+"agent": 623,
+"topic": "oxygen barrier"
+},
+{
+"agent": 624,
+"topic": "echinococcosis"
+},
+{
+"agent": 625,
+"topic": "microwave remote sensing"
 }
 ]
 },
@@ -309,9 +317,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 599,
+"agent": 597,
 "records": 497,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:45:28"
 },
 {
@@ -321,9 +329,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 615,
 "records": 5013,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:43:04"
 },
 {
@@ -333,9 +341,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 614,
+"agent": 625,
 "records": 5602,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:43:04"
 },
 {
@@ -777,7 +785,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 620,
+"agent": 603,
 "records": 11381,
 "images": 6,
 "completed": "2026-11-10T08:35:48"
@@ -789,9 +797,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 606,
+"agent": 620,
 "records": 5489,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -801,9 +809,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 610,
 "records": 3774,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -813,9 +821,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 604,
+"agent": 619,
 "records": 2919,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -825,9 +833,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 613,
+"agent": 624,
 "records": 4359,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:35:27"
 },
 {
@@ -837,7 +845,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 596,
+"agent": null,
 "records": 5462,
 "images": 6,
 "completed": "2026-11-10T08:35:24"
@@ -909,9 +917,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 601,
+"agent": 617,
 "records": 990,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:35:24"
 },
 {
@@ -945,7 +953,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 597,
+"agent": 604,
 "records": 4866,
 "images": 6,
 "completed": "2026-11-10T08:34:57"
@@ -1005,7 +1013,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 622,
+"agent": 605,
 "records": 1448,
 "images": 7,
 "completed": "2026-11-10T08:34:57"
@@ -1017,7 +1025,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 617,
+"agent": null,
 "records": 1134,
 "images": 6,
 "completed": "2026-11-10T08:34:57"
@@ -1029,7 +1037,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 616,
+"agent": null,
 "records": 2195,
 "images": 6,
 "completed": "2026-11-10T08:34:56"
@@ -1101,7 +1109,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 619,
+"agent": null,
 "records": 3908,
 "images": 6,
 "completed": "2026-11-10T08:34:56"
@@ -1221,9 +1229,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 612,
 "records": 3416,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1341,9 +1349,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 609,
 "records": 4090,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:33:35"
 },
 {
@@ -1365,9 +1373,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 611,
 "records": 2528,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:33:31"
 },
 {
@@ -1389,9 +1397,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 612,
+"agent": 623,
 "records": 2998,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:33:01"
 },
 {
@@ -1401,7 +1409,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 623,
+"agent": 606,
 "records": 7217,
 "images": 7,
 "completed": "2026-11-10T08:33:00"
@@ -1413,9 +1421,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 614,
 "records": 2133,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1425,9 +1433,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 603,
+"agent": 618,
 "records": 6687,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1461,7 +1469,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 625,
+"agent": 608,
 "records": 1470,
 "images": 7,
 "completed": "2026-11-10T08:32:59"
@@ -1473,7 +1481,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 615,
+"agent": null,
 "records": 841,
 "images": 6,
 "completed": "2026-11-10T08:32:59"
@@ -1521,9 +1529,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 610,
+"agent": 622,
 "records": 1034,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1533,9 +1541,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 608,
+"agent": 621,
 "records": 1585,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1557,7 +1565,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 624,
+"agent": 607,
 "records": 5744,
 "images": 7,
 "completed": "2026-11-10T08:32:59"
@@ -1617,9 +1625,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 613,
 "records": 2514,
-"images": 6,
+"images": 7,
 "completed": "2026-11-10T08:32:58"
 },
 {
@@ -70641,7 +70649,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 602,
+"agent": 598,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -286197,7 +286205,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 609,
+"agent": 601,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -344481,7 +344489,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 605,
+"agent": 599,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -542133,7 +542141,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 607,
+"agent": 600,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -972153,7 +972161,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 598,
+"agent": 596,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1292373,7 +1292381,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 611,
+"agent": 602,
 "records": 0,
 "images": 0,
 "completed": ""

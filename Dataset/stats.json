@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 26.5,
+  "disk_free_gb": 26.4,
   "product": "Parallel Web Technologies",
   "developer": "ProLab Robotics",
   "started": 1794279260.7094789,
   "started_iso": "2026-11-10T08:24:20",
-  "updated": 1794280714.656244,
-  "updated_iso": "2026-11-10T08:48:34",
-  "uptime_s": 1454,
+  "updated": 1794280798.080302,
+  "updated_iso": "2026-11-10T08:49:58",
+  "uptime_s": 1537,
   "workers": 5000,
   "effective_workers": 625,
   "in_flight": 625,
@@ -22,7 +22,7 @@
   "processes": 1,
   "fields": {
     "mathematics": 52175,
-    "computer science": 32670,
+    "computer science": 33340,
     "machine learning": 16292,
     "general": 14774,
     "engineering": 13249,
@@ -65,36 +65,36 @@
     "qiaojin/PubMedQA": 96
   },
   "counts": {
-    "text": 220068,
-    "originals": 1344,
-    "variants": 218724,
+    "text": 220738,
+    "originals": 1348,
+    "variants": 219390,
     "web_images": 343,
     "synthetic_images": 14064,
     "images": 14407,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 99900953,
-    "tasks_done": 19401,
+    "tokens": 100177015,
+    "tasks_done": 19426,
     "tasks_failed": 0,
     "topics_added": 108651,
     "preference": 347
   },
   "by_kind": {
     "archive": 6,
-    "text": 39,
-    "web_images": 268,
+    "text": 43,
+    "web_images": 289,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 99900953,
-  "per_min": 105.3,
+  "tokens": 100177015,
+  "per_min": 237.5,
   "topics": {
     "known": 109913,
-    "explored": 1347,
-    "queued": 108534,
+    "explored": 1351,
+    "queued": 108530,
     "space": 6594780,
     "next": [
       [
@@ -148,6 +148,26 @@
     ],
     "recent": [
       [
+        "pickering stabilization",
+        "materials science",
+        0
+      ],
+      [
+        "network management architecture",
+        "computer science",
+        670
+      ],
+      [
+        "explanation-based learning",
+        "computer science",
+        0
+      ],
+      [
+        "technology insertion",
+        "economics and finance",
+        0
+      ],
+      [
         "spectral leakage",
         "engineering",
         0
@@ -186,76 +206,56 @@
         "microwave remote sensing",
         "earth and space",
         5602
-      ],
-      [
-        "copper(i) oxide",
-        "materials science",
-        0
-      ],
-      [
-        "timetabling problem",
-        "statistics",
-        0
-      ],
-      [
-        "dihydroflavonol 4-reductase",
-        "biology",
-        0
-      ],
-      [
-        "chatbot development",
-        "economics and finance",
-        0
       ]
     ],
     "in_progress": 32,
     "focus_left": 0
   },
   "system": {
-    "time": 1794280714.653596,
-    "cpu": 99.9,
+    "time": 1794280798.0783858,
+    "cpu": 71.7,
     "cpu_cores": [
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      99.5,
-      100.0,
-      99.5
+      75.2,
+      73.3,
+      68.7,
+      65.4,
+      81.8,
+      77.6,
+      65.9,
+      65.9
     ],
-    "mem": 84.6,
-    "mem_used_gb": 2.95,
+    "mem": 83.1,
+    "mem_used_gb": 2.97,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 69.1,
+    "proc_mem_mb": 63.0,
     "threads": 629,
     "proc_cpu": 0.0,
-    "net_rx": 5348905984,
-    "net_tx": 830017536,
-    "down_kbps": 950.1,
-    "up_kbps": 25.1,
-    "disk_free_gb": 26.5,
+    "net_rx": 5487907840,
+    "net_tx": 883229696,
+    "down_kbps": 1073.9,
+    "up_kbps": 188.6,
+    "disk_free_gb": 26.4,
     "load": [
-      16.75,
-      44.68,
-      34.15
+      16.06,
+      37.86,
+      32.56
     ],
     "cores": 8
   },
-  "disk_mb": 230.1,
+  "disk_mb": 205.1,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794280704.8929899,
-    "next_sync_s": 136,
-    "commits": 13
+    "last_push": 1794280790.953365,
+    "next_sync_s": 52,
+    "commits": 14
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "microwave remote sensing",
-    "problem": "unknown devices mounted on light pole in nyc. Appears to be a Remote Traffic Microwave Radar Sensor -- https://designmind.frogdesign.com/2014/05/unseen-sensors-constantly-sensing-rarely-seen/",
-    "solution": "CC BY-SA 4.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "network management architecture",
+    "problem": "Graph Neural Networks for Scalable Radio Resource Management: Architecture Design and Theoretical Analysis Deep learning has recently emerged as a disruptive technology to solve challenging radio resource management problems in wireless networks. However, the neural network architectures adopted by existing works suffer from poor scalability, generalization, and lack of interpretability. A\u2026",
+    "solution": "In this paper, we propose to apply graph neural networks (GNNs) to solve large-scale radio resource management problems, supported by effective neural network architecture design and theoretical analysis. Specifically, we first demonstrate that radio resource management problems can be formulated as graph optimization problems that enjoy a universal permutation equivariance property. We then\u2026",
+    "source": "arxiv"
   }
 }
