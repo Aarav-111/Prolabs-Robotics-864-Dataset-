@@ -2,27 +2,27 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 29.0,
+  "disk_free_gb": 28.8,
   "product": "Parallel Web Technologies",
   "developer": "ProLab Robotics",
-  "started": 1794277716.316424,
-  "started_iso": "2026-11-10T07:58:36",
-  "updated": 1794277838.427941,
-  "updated_iso": "2026-11-10T08:00:38",
-  "uptime_s": 122,
+  "started": 1794278807.2272692,
+  "started_iso": "2026-11-10T08:16:47",
+  "updated": 1794278849.117837,
+  "updated_iso": "2026-11-10T08:17:29",
+  "uptime_s": 42,
   "workers": 5000,
   "effective_workers": 625,
   "in_flight": 2725,
   "busy_by_kind": {
-    "archive": 2552,
-    "text": 2400,
-    "web_images": 48
+    "archive": 4688,
+    "text": 120,
+    "web_images": 192
   },
-  "waiting": 4969,
+  "waiting": 4991,
   "processes": 8,
   "fields": {
     "mathematics": 52175,
-    "computer science": 30599,
+    "computer science": 32670,
     "machine learning": 16292,
     "engineering": 13249,
     "statistics": 10147,
@@ -64,16 +64,16 @@
     "openlifescienceai/medmcqa": 268
   },
   "counts": {
-    "text": 182967,
+    "text": 185038,
     "originals": 1149,
-    "variants": 181818,
-    "web_images": 199,
+    "variants": 183889,
+    "web_images": 212,
     "synthetic_images": 14064,
-    "images": 14263,
+    "images": 14276,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 84930543,
-    "tasks_done": 16043,
+    "tokens": 85683122,
+    "tasks_done": 18164,
     "tasks_failed": 0,
     "topics_added": 108651,
     "preference": 204
@@ -81,24 +81,52 @@
   "by_kind": {
     "archive": 0,
     "text": 0,
-    "web_images": 31,
+    "web_images": 11,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 84930543,
-  "per_min": 3.5,
+  "tokens": 85683122,
+  "per_min": 0.0,
   "topics": {
     "known": 109912,
-    "explored": 762,
-    "queued": 106974,
+    "explored": 1153,
+    "queued": 108643,
     "space": 6594720,
     "next": [
       [
+        "databases",
+        "computer science"
+      ],
+      [
+        "botany",
+        "biology"
+      ],
+      [
+        "microcontrollers",
+        "engineering"
+      ],
+      [
         "linguistics",
         "humanities"
+      ],
+      [
+        "quantum mechanics",
+        "physics"
+      ],
+      [
+        "quantum chemistry",
+        "chemistry"
+      ],
+      [
+        "word problems",
+        "mathematics"
+      ],
+      [
+        "differential equations",
+        "mathematics"
       ],
       [
         "option pricing",
@@ -113,142 +141,114 @@
         "humanities"
       ],
       [
-        "biophysics",
-        "biology"
-      ],
-      [
-        "decision making",
-        "psychology"
-      ],
-      [
-        "object oriented programming",
-        "computer science"
-      ],
-      [
-        "computational chemistry",
-        "chemistry"
-      ],
-      [
-        "organometallic chemistry",
-        "chemistry"
-      ],
-      [
-        "cognitive psychology",
-        "psychology"
-      ],
-      [
-        "nanomaterials",
-        "materials science"
-      ],
-      [
-        "semantics",
-        "humanities"
+        "analysis of variance",
+        "statistics"
       ]
     ],
     "recent": [
       [
-        "digital game-based learning",
-        "psychology",
-        0
-      ],
-      [
-        "frail scale",
+        "vasovagal syncope",
         "medicine",
         0
       ],
       [
-        "biosimilarity",
+        "kubernetes",
+        "computer science",
+        0
+      ],
+      [
+        "bass diffusion model",
+        "statistics",
+        0
+      ],
+      [
+        "conservatism",
+        "",
+        0
+      ],
+      [
+        "reference products",
         "biology",
         0
       ],
       [
-        "dairy cattle welfare",
-        "biology",
-        0
-      ],
-      [
-        "veteran resettlement",
-        "humanities",
-        0
-      ],
-      [
-        "ship resistance",
-        "engineering",
-        0
-      ],
-      [
-        "cell spreading",
-        "biology",
-        0
-      ],
-      [
-        "analytic functions",
-        "mathematics",
-        0
-      ],
-      [
-        "poly(ionic liquids)",
+        "critical nucleus",
         "chemistry",
         0
       ],
       [
-        "q-learning",
-        "machine learning",
+        "object grasping",
+        "engineering",
         0
       ],
       [
-        "geometric ergodicity",
+        "alkali metal fluorides",
+        "chemistry",
+        0
+      ],
+      [
+        "spontaneous emission",
+        "physics",
+        0
+      ],
+      [
+        "tile assembly model",
         "mathematics",
         0
       ],
       [
-        "high-dimensional sampling",
-        "mathematics",
+        "entrepreneurial success",
+        "economics and finance",
+        0
+      ],
+      [
+        "steinernema feltiae",
+        "biology",
         0
       ]
     ],
-    "in_progress": 2176,
+    "in_progress": 116,
     "focus_left": 0
   },
   "system": {
-    "time": 1794277838.427201,
-    "cpu": 25.9,
+    "time": 1794278849.1169438,
+    "cpu": 36.5,
     "cpu_cores": [
-      19.2,
-      17.3,
-      13.9,
-      12.9,
-      45.7,
-      39.0,
-      35.4,
-      23.7
+      30.1,
+      28.2,
+      22.3,
+      22.3,
+      58.6,
+      57.7,
+      40.5,
+      32.6
     ],
-    "mem": 83.4,
-    "mem_used_gb": 2.85,
+    "mem": 83.0,
+    "mem_used_gb": 2.83,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 88.3,
+    "proc_mem_mb": 90.2,
     "threads": 629,
     "proc_cpu": 0.0,
-    "net_rx": 4322275328,
-    "net_tx": 4659078144,
-    "down_kbps": 544.5,
-    "up_kbps": 127.8,
-    "disk_free_gb": 29.0,
+    "net_rx": 4572161024,
+    "net_tx": 452723712,
+    "down_kbps": 76.3,
+    "up_kbps": 16.6,
+    "disk_free_gb": 28.8,
     "load": [
-      5.79,
-      7.48,
-      9.8
+      11.02,
+      27.98,
+      19.85
     ],
     "cores": 8
   },
-  "disk_mb": 711.8,
+  "disk_mb": 569.4,
   "github": {
-    "state": "pushed",
+    "state": "off",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794277813.060534,
-    "next_sync_s": 212,
-    "commits": 2
+    "last_push": 0.0,
+    "next_sync_s": 289,
+    "commits": 0
   },
   "last_sample": {
     "type": "web image",
