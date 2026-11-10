@@ -1,12 +1,12 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-10T08:30:28",
+"updated": "2026-11-10T08:32:35",
 "total": 109913,
-"done": 1232,
+"done": 1233,
 "in_progress": 117,
-"left": 108564,
+"left": 108563,
 "parallel_agents": {
-"running": 19,
+"running": 30,
 "topics": [
 {
 "agent": 2,
@@ -38,51 +38,95 @@
 },
 {
 "agent": 594,
-"topic": "microeconomics"
+"topic": "string manipulation"
 },
 {
 "agent": 595,
 "topic": "disaster medical response"
 },
 {
-"agent": 603,
-"topic": "string manipulation"
-},
-{
-"agent": 610,
+"agent": 599,
 "topic": "acousto-optic tunable filter"
 },
 {
-"agent": 616,
+"agent": 601,
 "topic": "neutrino physics"
 },
 {
-"agent": 617,
+"agent": 602,
 "topic": "ylides"
 },
 {
-"agent": 618,
+"agent": 603,
 "topic": "stochastic calculus"
 },
 {
-"agent": 619,
+"agent": 604,
 "topic": "dropout"
 },
 {
-"agent": 620,
+"agent": 605,
 "topic": "oxygen barrier"
 },
 {
-"agent": 621,
+"agent": 606,
 "topic": "time series forecasting"
 },
 {
-"agent": 622,
+"agent": 607,
 "topic": "mixed-type equations"
 },
 {
-"agent": 623,
+"agent": 608,
 "topic": "naval aviation"
+},
+{
+"agent": 610,
+"topic": "microeconomics"
+},
+{
+"agent": 613,
+"topic": "prosthetic fitting"
+},
+{
+"agent": 615,
+"topic": "closed cup flash point"
+},
+{
+"agent": 616,
+"topic": "pulse electrodeposition"
+},
+{
+"agent": 617,
+"topic": "contract theory"
+},
+{
+"agent": 618,
+"topic": "immunotherapy"
+},
+{
+"agent": 619,
+"topic": "boundary layers"
+},
+{
+"agent": 620,
+"topic": "hoare logic"
+},
+{
+"agent": 621,
+"topic": "matroids"
+},
+{
+"agent": 622,
+"topic": "quantum computing"
+},
+{
+"agent": 623,
+"topic": "motivation"
+},
+{
+"agent": 624,
+"topic": "regional financial center"
 }
 ]
 },
@@ -93,9 +137,9 @@
 "in_progress": 7
 },
 "medicine": {
-"done": 65,
+"done": 66,
 "left": 20607,
-"in_progress": 9
+"in_progress": 8
 },
 "biology": {
 "done": 100,
@@ -159,8 +203,8 @@
 },
 "robotics": {
 "done": 55,
-"left": 29,
-"in_progress": 4
+"left": 28,
+"in_progress": 5
 },
 "machine learning": {
 "done": 64,
@@ -174,6 +218,18 @@
 }
 },
 "topics": [
+{
+"topic": "pediatric nurse practitioners",
+"field": "medicine",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:31:24"
+},
 {
 "topic": "self-supervised learning",
 "field": "machine learning",
@@ -1009,9 +1065,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 603,
+"agent": 594,
 "records": 1343,
-"images": 56,
+"images": 60,
 "completed": "2026-11-10T08:28:10"
 },
 {
@@ -1023,7 +1079,7 @@
 "status": "done",
 "agent": 595,
 "records": 706,
-"images": 57,
+"images": 59,
 "completed": "2026-11-10T08:27:41"
 },
 {
@@ -1033,9 +1089,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 610,
+"agent": 599,
 "records": 113,
-"images": 56,
+"images": 59,
 "completed": "2026-11-10T08:27:40"
 },
 {
@@ -1057,9 +1113,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 594,
+"agent": 610,
 "records": 7579,
-"images": 56,
+"images": 59,
 "completed": "2026-11-10T08:27:18"
 },
 {
@@ -5763,7 +5819,7 @@
 "status": "done",
 "agent": null,
 "records": 2071,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T08:00:52"
 },
 {
@@ -6013,9 +6069,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 624,
 "records": 3916,
-"images": 59,
+"images": 61,
 "completed": "2026-11-10T07:58:11"
 },
 {
@@ -6915,7 +6971,7 @@
 "status": "done",
 "agent": null,
 "records": 6864,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:55:46"
 },
 {
@@ -6999,7 +7055,7 @@
 "status": "done",
 "agent": null,
 "records": 3483,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:55:37"
 },
 {
@@ -7057,9 +7113,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 621,
 "records": 20198,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:55:25"
 },
 {
@@ -7107,7 +7163,7 @@
 "status": "done",
 "agent": null,
 "records": 402,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:55:20"
 },
 {
@@ -7359,7 +7415,7 @@
 "status": "done",
 "agent": null,
 "records": 2544,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:54:54"
 },
 {
@@ -7707,7 +7763,7 @@
 "status": "done",
 "agent": null,
 "records": 1121,
-"images": 58,
+"images": 60,
 "completed": "2026-11-10T07:54:34"
 },
 {
@@ -7731,7 +7787,7 @@
 "status": "done",
 "agent": null,
 "records": 999,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:54:33"
 },
 {
@@ -7849,9 +7905,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 615,
 "records": 2428,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:54:31"
 },
 {
@@ -8619,7 +8675,7 @@
 "status": "done",
 "agent": null,
 "records": 3164,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:53:36"
 },
 {
@@ -8643,7 +8699,7 @@
 "status": "done",
 "agent": null,
 "records": 3813,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:53:33"
 },
 {
@@ -9375,7 +9431,7 @@
 "status": "done",
 "agent": null,
 "records": 1835,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:52:48"
 },
 {
@@ -9421,9 +9477,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 613,
 "records": 2223,
-"images": 58,
+"images": 60,
 "completed": "2026-11-10T07:52:48"
 },
 {
@@ -9627,7 +9683,7 @@
 "status": "done",
 "agent": null,
 "records": 668,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:52:35"
 },
 {
@@ -9675,7 +9731,7 @@
 "status": "done",
 "agent": null,
 "records": 4412,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:52:34"
 },
 {
@@ -9747,7 +9803,7 @@
 "status": "done",
 "agent": null,
 "records": 764,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:52:34"
 },
 {
@@ -10215,7 +10271,7 @@
 "status": "done",
 "agent": null,
 "records": 1599,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:51:30"
 },
 {
@@ -10251,7 +10307,7 @@
 "status": "done",
 "agent": null,
 "records": 2487,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:49:25"
 },
 {
@@ -10335,7 +10391,7 @@
 "status": "done",
 "agent": null,
 "records": 10856,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:18"
 },
 {
@@ -10347,7 +10403,7 @@
 "status": "done",
 "agent": null,
 "records": 16974,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:17"
 },
 {
@@ -10359,7 +10415,7 @@
 "status": "done",
 "agent": null,
 "records": 2992,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:16"
 },
 {
@@ -10371,7 +10427,7 @@
 "status": "done",
 "agent": null,
 "records": 3009,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:16"
 },
 {
@@ -10383,7 +10439,7 @@
 "status": "done",
 "agent": null,
 "records": 4839,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:16"
 },
 {
@@ -10395,7 +10451,7 @@
 "status": "done",
 "agent": null,
 "records": 4738,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:15"
 },
 {
@@ -10407,7 +10463,7 @@
 "status": "done",
 "agent": null,
 "records": 5180,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:15"
 },
 {
@@ -10419,7 +10475,7 @@
 "status": "done",
 "agent": null,
 "records": 2093,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:15"
 },
 {
@@ -10431,7 +10487,7 @@
 "status": "done",
 "agent": null,
 "records": 6028,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:15"
 },
 {
@@ -10443,7 +10499,7 @@
 "status": "done",
 "agent": null,
 "records": 4991,
-"images": 58,
+"images": 61,
 "completed": "2026-11-10T07:46:14"
 },
 {
@@ -10455,7 +10511,7 @@
 "status": "done",
 "agent": null,
 "records": 9966,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:14"
 },
 {
@@ -10467,7 +10523,7 @@
 "status": "done",
 "agent": null,
 "records": 4503,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:14"
 },
 {
@@ -10503,7 +10559,7 @@
 "status": "done",
 "agent": null,
 "records": 3730,
-"images": 58,
+"images": 60,
 "completed": "2026-11-10T07:46:13"
 },
 {
@@ -10515,7 +10571,7 @@
 "status": "done",
 "agent": null,
 "records": 1193,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:13"
 },
 {
@@ -10575,7 +10631,7 @@
 "status": "done",
 "agent": null,
 "records": 2357,
-"images": 59,
+"images": 60,
 "completed": "2026-11-10T07:46:13"
 },
 {
@@ -10587,7 +10643,7 @@
 "status": "done",
 "agent": null,
 "records": 872,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:13"
 },
 {
@@ -10647,7 +10703,7 @@
 "status": "done",
 "agent": null,
 "records": 13195,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:12"
 },
 {
@@ -10707,7 +10763,7 @@
 "status": "done",
 "agent": null,
 "records": 2250,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:10"
 },
 {
@@ -10719,7 +10775,7 @@
 "status": "done",
 "agent": null,
 "records": 6811,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:10"
 },
 {
@@ -10731,7 +10787,7 @@
 "status": "done",
 "agent": null,
 "records": 3329,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:09"
 },
 {
@@ -10743,7 +10799,7 @@
 "status": "done",
 "agent": null,
 "records": 2683,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T07:46:08"
 },
 {
@@ -11247,7 +11303,7 @@
 "status": "done",
 "agent": null,
 "records": 3148,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T06:07:21"
 },
 {
@@ -11259,7 +11315,7 @@
 "status": "done",
 "agent": null,
 "records": 1953,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T06:07:21"
 },
 {
@@ -11271,7 +11327,7 @@
 "status": "done",
 "agent": null,
 "records": 11543,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T04:23:38"
 },
 {
@@ -11283,7 +11339,7 @@
 "status": "done",
 "agent": null,
 "records": 5282,
-"images": 58,
+"images": 60,
 "completed": "2026-11-10T04:07:52"
 },
 {
@@ -11295,7 +11351,7 @@
 "status": "done",
 "agent": null,
 "records": 2490,
-"images": 58,
+"images": 60,
 "completed": "2026-11-10T04:07:51"
 },
 {
@@ -11307,7 +11363,7 @@
 "status": "done",
 "agent": null,
 "records": 2011,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T04:07:51"
 },
 {
@@ -11331,7 +11387,7 @@
 "status": "done",
 "agent": null,
 "records": 402,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T04:07:51"
 },
 {
@@ -11847,7 +11903,7 @@
 "status": "done",
 "agent": null,
 "records": 1297,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T04:07:51"
 },
 {
@@ -12795,7 +12851,7 @@
 "status": "done",
 "agent": null,
 "records": 2424,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T02:52:42"
 },
 {
@@ -12843,7 +12899,7 @@
 "status": "done",
 "agent": null,
 "records": 1432,
-"images": 58,
+"images": 59,
 "completed": "2026-11-10T02:52:42"
 },
 {
@@ -12891,7 +12947,7 @@
 "status": "done",
 "agent": null,
 "records": 1570,
-"images": 58,
+"images": 60,
 "completed": "2026-11-10T01:15:07"
 },
 {
@@ -12913,9 +12969,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 618,
 "records": 402,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T22:37:49"
 },
 {
@@ -12963,7 +13019,7 @@
 "status": "done",
 "agent": null,
 "records": 1951,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T21:51:41"
 },
 {
@@ -12987,7 +13043,7 @@
 "status": "done",
 "agent": null,
 "records": 2452,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T21:51:40"
 },
 {
@@ -12999,7 +13055,7 @@
 "status": "done",
 "agent": null,
 "records": 1142,
-"images": 59,
+"images": 60,
 "completed": "2026-11-09T21:51:40"
 },
 {
@@ -13095,7 +13151,7 @@
 "status": "done",
 "agent": null,
 "records": 557,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T21:51:24"
 },
 {
@@ -13119,7 +13175,7 @@
 "status": "done",
 "agent": null,
 "records": 3072,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T21:51:05"
 },
 {
@@ -13131,7 +13187,7 @@
 "status": "done",
 "agent": null,
 "records": 831,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T21:51:00"
 },
 {
@@ -13179,7 +13235,7 @@
 "status": "done",
 "agent": null,
 "records": 201,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T21:50:49"
 },
 {
@@ -13203,7 +13259,7 @@
 "status": "done",
 "agent": null,
 "records": 201,
-"images": 58,
+"images": 60,
 "completed": "2026-11-09T21:50:28"
 },
 {
@@ -13239,7 +13295,7 @@
 "status": "done",
 "agent": null,
 "records": 500,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:16:05"
 },
 {
@@ -13251,7 +13307,7 @@
 "status": "done",
 "agent": null,
 "records": 505,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:15:12"
 },
 {
@@ -13333,9 +13389,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 616,
 "records": 303,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:14:35"
 },
 {
@@ -13345,9 +13401,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 617,
 "records": 1172,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:14:30"
 },
 {
@@ -13395,7 +13451,7 @@
 "status": "done",
 "agent": null,
 "records": 298,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:14:12"
 },
 {
@@ -13407,7 +13463,7 @@
 "status": "done",
 "agent": null,
 "records": 385,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:14:11"
 },
 {
@@ -13479,7 +13535,7 @@
 "status": "done",
 "agent": null,
 "records": 92,
-"images": 58,
+"images": 60,
 "completed": "2026-11-09T13:13:50"
 },
 {
@@ -13491,7 +13547,7 @@
 "status": "done",
 "agent": null,
 "records": 1414,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:13:50"
 },
 {
@@ -14269,9 +14325,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 622,
 "records": 4888,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:37"
 },
 {
@@ -14281,9 +14337,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 623,
 "records": 3914,
-"images": 58,
+"images": 60,
 "completed": "2026-11-09T13:08:36"
 },
 {
@@ -14295,7 +14351,7 @@
 "status": "done",
 "agent": null,
 "records": 3872,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:36"
 },
 {
@@ -14319,7 +14375,7 @@
 "status": "done",
 "agent": null,
 "records": 2642,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:36"
 },
 {
@@ -14331,7 +14387,7 @@
 "status": "done",
 "agent": null,
 "records": 2679,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:35"
 },
 {
@@ -14343,7 +14399,7 @@
 "status": "done",
 "agent": null,
 "records": 2264,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:35"
 },
 {
@@ -14355,7 +14411,7 @@
 "status": "done",
 "agent": null,
 "records": 2643,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:35"
 },
 {
@@ -14367,7 +14423,7 @@
 "status": "done",
 "agent": null,
 "records": 1888,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:35"
 },
 {
@@ -14377,9 +14433,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 620,
 "records": 900,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:34"
 },
 {
@@ -14389,9 +14445,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 619,
 "records": 1212,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:34"
 },
 {
@@ -14403,7 +14459,7 @@
 "status": "done",
 "agent": null,
 "records": 1567,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:34"
 },
 {
@@ -14427,7 +14483,7 @@
 "status": "done",
 "agent": null,
 "records": 599,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:34"
 },
 {
@@ -14523,7 +14579,7 @@
 "status": "done",
 "agent": null,
 "records": 1884,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:34"
 },
 {
@@ -14739,7 +14795,7 @@
 "status": "done",
 "agent": null,
 "records": 891,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:34"
 },
 {
@@ -14943,7 +14999,7 @@
 "status": "done",
 "agent": null,
 "records": 688,
-"images": 58,
+"images": 59,
 "completed": "2026-11-09T13:08:34"
 },
 {
@@ -302173,7 +302229,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 617,
+"agent": 602,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -591253,7 +591309,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 623,
+"agent": 608,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -928909,7 +928965,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 619,
+"agent": 604,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -929041,7 +929097,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 621,
+"agent": 606,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -955969,7 +956025,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 620,
+"agent": 605,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -971809,7 +971865,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 618,
+"agent": 603,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -984373,7 +984429,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 622,
+"agent": 607,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1166815,18 +1166871,6 @@
 "completed": ""
 },
 {
-"topic": "pediatric nurse practitioners",
-"field": "medicine",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "pediatric occupational therapy",
 "field": "medicine",
 "level": "specialist",
@@ -1259749,7 +1259793,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 616,
+"agent": 601,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1308108,7 +1308152,7 @@
 "level": "core",
 "done": false,
 "check": "",
-"status": "left",
+"status": "in progress",
 "agent": null,
 "records": 0,
 "images": 0,
