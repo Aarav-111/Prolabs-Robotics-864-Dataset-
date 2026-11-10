@@ -1,12 +1,12 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-10T08:45:50",
+"updated": "2026-11-10T08:46:07",
 "total": 109913,
 "done": 1342,
 "in_progress": 32,
 "left": 108539,
 "parallel_agents": {
-"running": 29,
+"running": 31,
 "topics": [
 {
 "agent": 2,
@@ -30,99 +30,107 @@
 },
 {
 "agent": 592,
-"topic": "nash equilibrium"
-},
-{
-"agent": 593,
-"topic": "grover's algorithm"
-},
-{
-"agent": 594,
 "topic": "mean curvature flow"
 },
 {
-"agent": 599,
+"agent": 593,
+"topic": "nash equilibrium"
+},
+{
+"agent": 594,
+"topic": "grover's algorithm"
+},
+{
+"agent": 597,
 "topic": "stokes parameters"
 },
 {
-"agent": 600,
+"agent": 598,
 "topic": "explanation-based learning"
 },
 {
-"agent": 601,
+"agent": 599,
 "topic": "go concurrency"
 },
 {
-"agent": 602,
+"agent": 600,
 "topic": "technology insertion"
 },
 {
-"agent": 603,
+"agent": 601,
 "topic": "uv stabilizers"
 },
 {
-"agent": 604,
+"agent": 602,
 "topic": "regularization"
 },
 {
-"agent": 605,
+"agent": 603,
 "topic": "spectral leakage"
 },
 {
-"agent": 606,
+"agent": 604,
 "topic": "pickering stabilization"
 },
 {
-"agent": 607,
+"agent": 605,
 "topic": "microwave remote sensing"
 },
 {
-"agent": 608,
+"agent": 606,
 "topic": "striatum"
 },
 {
-"agent": 610,
+"agent": 608,
 "topic": "speech recognition"
 },
 {
-"agent": 612,
-"topic": "glutamine"
-},
-{
-"agent": 613,
-"topic": "basic education"
-},
-{
-"agent": 614,
-"topic": "sunflower cultivation"
-},
-{
-"agent": 615,
+"agent": 609,
 "topic": "point cloud denoising"
 },
 {
-"agent": 616,
+"agent": 610,
 "topic": "shield tunneling"
 },
 {
-"agent": 617,
+"agent": 611,
 "topic": "membrane attack complex"
 },
 {
-"agent": 618,
+"agent": 612,
 "topic": "isotachophoresis"
 },
 {
-"agent": 619,
+"agent": 613,
 "topic": "quadratic forms"
 },
 {
-"agent": 620,
+"agent": 614,
 "topic": "trade in services"
 },
 {
-"agent": 625,
+"agent": 619,
 "topic": "aerospace adhesives"
+},
+{
+"agent": 620,
+"topic": "oxygen barrier"
+},
+{
+"agent": 621,
+"topic": "echinococcosis"
+},
+{
+"agent": 623,
+"topic": "forest statistics"
+},
+{
+"agent": 624,
+"topic": "future internet"
+},
+{
+"agent": 625,
+"topic": "multilevel models"
 }
 ]
 },
@@ -221,7 +229,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 620,
+"agent": 614,
 "records": 497,
 "images": 5,
 "completed": "2026-11-10T08:45:28"
@@ -233,7 +241,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 613,
+"agent": null,
 "records": 5013,
 "images": 5,
 "completed": "2026-11-10T08:43:04"
@@ -245,9 +253,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 607,
+"agent": 605,
 "records": 5602,
-"images": 4,
+"images": 5,
 "completed": "2026-11-10T08:43:04"
 },
 {
@@ -701,7 +709,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 617,
+"agent": 611,
 "records": 5489,
 "images": 5,
 "completed": "2026-11-10T08:35:47"
@@ -725,7 +733,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 616,
+"agent": 610,
 "records": 2919,
 "images": 5,
 "completed": "2026-11-10T08:35:47"
@@ -737,9 +745,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 621,
 "records": 4359,
-"images": 4,
+"images": 5,
 "completed": "2026-11-10T08:35:27"
 },
 {
@@ -749,7 +757,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 592,
+"agent": 593,
 "records": 5462,
 "images": 4,
 "completed": "2026-11-10T08:35:24"
@@ -821,7 +829,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 614,
+"agent": null,
 "records": 990,
 "images": 5,
 "completed": "2026-11-10T08:35:24"
@@ -857,7 +865,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 610,
+"agent": 608,
 "records": 4866,
 "images": 4,
 "completed": "2026-11-10T08:34:57"
@@ -929,9 +937,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 625,
 "records": 1134,
-"images": 4,
+"images": 5,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -941,9 +949,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 624,
 "records": 2195,
-"images": 4,
+"images": 5,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1013,7 +1021,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 593,
+"agent": 594,
 "records": 3908,
 "images": 4,
 "completed": "2026-11-10T08:34:56"
@@ -1301,9 +1309,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 620,
 "records": 2998,
-"images": 4,
+"images": 5,
 "completed": "2026-11-10T08:33:01"
 },
 {
@@ -1325,7 +1333,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 612,
+"agent": null,
 "records": 2133,
 "images": 5,
 "completed": "2026-11-10T08:33:00"
@@ -1337,7 +1345,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 615,
+"agent": 609,
 "records": 6687,
 "images": 5,
 "completed": "2026-11-10T08:33:00"
@@ -1385,9 +1393,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 623,
 "records": 841,
-"images": 4,
+"images": 5,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1433,7 +1441,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 625,
+"agent": 619,
 "records": 1034,
 "images": 5,
 "completed": "2026-11-10T08:32:59"
@@ -1445,7 +1453,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 618,
+"agent": 612,
 "records": 1585,
 "images": 5,
 "completed": "2026-11-10T08:32:59"
@@ -1529,7 +1537,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 608,
+"agent": 606,
 "records": 2514,
 "images": 5,
 "completed": "2026-11-10T08:32:58"
@@ -325397,7 +325405,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 600,
+"agent": 598,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -498209,7 +498217,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 602,
+"agent": 600,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -628973,7 +628981,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 605,
+"agent": 603,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -929621,7 +929629,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 604,
+"agent": 602,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -958109,7 +958117,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 606,
+"agent": 604,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -968681,7 +968689,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 603,
+"agent": 601,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -972089,7 +972097,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 619,
+"agent": 613,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -984449,7 +984457,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 594,
+"agent": 592,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1270685,7 +1270693,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 599,
+"agent": 597,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1274717,7 +1274725,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 601,
+"agent": 599,
 "records": 0,
 "images": 0,
 "completed": ""
