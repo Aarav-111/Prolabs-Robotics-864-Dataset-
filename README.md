@@ -29,6 +29,35 @@ The data it collects lives right here, in [`Dataset/`](Dataset). Agent mode upda
 
 ---
 
+## What's New
+
+| Update | What changed |
+| --- | --- |
+| **Many topics at once** | A new *topics in parallel* setting runs many topics together instead of one by one. |
+| **Live topic list** | See every topic live. Add your own, or switch on *only mine* to collect just those. |
+| **Capped generators** | Generated data is limited by the number of real originals, so synthetic data never outgrows real data. |
+| **Super verbose live log** | Every agent action is logged, with a *waiting* count and an accurate *in flight* count. |
+| **Crash recovery** | Agent mode now restarts by itself after a crash (stale process id fixed). Stats repair themselves. |
+| **Runs from any Python** | No need for a special setup. Any Python 3 install works. |
+| **GitHub-first uploads** | Data is uploaded in batches, with an archive sweep and scaling across processes. |
+
+### Live Snapshot
+
+Agent mode has been running non-stop. Latest numbers from [`Dataset/stats.json`](Dataset/stats.json):
+
+| Data | Count |
+| --- | --- |
+| Text records | 220,000+ |
+| Real originals | 1,300+ |
+| Images | 14,400+ |
+| Robot VLA episodes | 14,000+ (170,000+ frames) |
+| Tokens | 100M+ |
+| Topics known | 109,000+ |
+
+These numbers grow every 5 minutes.
+
+---
+
 ## Three Modes
 
 | Mode | For | What it does |
@@ -59,14 +88,14 @@ The data it collects lives right here, in [`Dataset/`](Dataset). Agent mode upda
 
 Press **Start collecting** once. After that, AITE keeps building the dataset by itself, even while its window is closed, until you press **Pause**.
 
-- **Endless, deep topics.** The topic engine covers 16 fields, from fundamentals to research level (étale cohomology, Iwasawa theory, Yang–Mills theory, BCS superconductivity, model predictive control...). It uses:
+- **Endless, deep topics.** The topic engine covers 16 fields, from fundamentals to research level (Ã©tale cohomology, Iwasawa theory, YangâMills theory, BCS superconductivity, model predictive control...). It uses:
   - about 1,500 curated topics;
   - OpenAlex's 4,516 research topics and their roughly 45,000 keywords;
   - 64,723 OpenAlex concepts;
   - Wikipedia's links between ideas.
 
   Topics rotate field by field, mixing basic and advanced. Add your own *focus topics* to go first.
-- **[`Dataset/topics.json`](Dataset/topics.json).** Every topic, with a ✓ when its data is complete. Topics being collected right now show *in progress* with their agent number. After a restart, or on another computer that clones this repo, collection continues with the topics still left.
+- **[`Dataset/topics.json`](Dataset/topics.json).** Every topic, with a â when its data is complete. Topics being collected right now show *in progress* with their agent number. After a restart, or on another computer that clones this repo, collection continues with the topics still left.
 - **Open Q&A archives.** Whole sites of the public Stack Exchange dump (10.8M human-written questions and answers, CC BY-SA), including MathOverflow, physics, chemistry, CS theory, electronics and statistics. Also MedMCQA, PubMedQA and ARC, with no daily quota.
 - **Training-ready data.**
   - **Text:** chat-format question/answer rows, plus a plain `text` field, a fixed train/validation split, token counts, a quality tier, the field and the source licence.
@@ -86,10 +115,10 @@ Everything AITE does is grouped into products. Each one has its own switch in **
 
 | Category | Products |
 | --- | --- |
-| Collection | **Parallel Web Technologies** · **AITE Agent** · **Topic Engine** · **Open Archives** · **Web Search** |
-| Data quality | **Quality Filter** · **DataGen** · **Preference Pairs** |
-| Vision & robotics | **Web Vision** · **Synthetic Vision** · **Robot VLA Studio** |
-| Training & delivery | **LLM Trainer** · **GitHub Sync** · **Manual Studio** |
+| Collection | **Parallel Web Technologies** Â· **AITE Agent** Â· **Topic Engine** Â· **Open Archives** Â· **Web Search** |
+| Data quality | **Quality Filter** Â· **DataGen** Â· **Preference Pairs** |
+| Vision & robotics | **Web Vision** Â· **Synthetic Vision** Â· **Robot VLA Studio** |
+| Training & delivery | **LLM Trainer** Â· **GitHub Sync** Â· **Manual Studio** |
 
 ---
 
@@ -120,7 +149,7 @@ Each good record becomes many new versions:
 Press **Train a model** (top bar, next to the two modes) and follow its six steps: get the trainer, choose a model, choose your data, train, try it, keep it.
 
 AITE fine-tunes an open model **on your Mac** with Apple's MLX: no code and no cloud. You can pick any model:
-- 16 built-in models (0.36B–14B, including maths, coding and reasoning models);
+- 16 built-in models (0.36Bâ14B, including maths, coding and reasoning models);
 - models you have already downloaded;
 - your own trained models, to keep training them;
 - any MLX model id or folder.
