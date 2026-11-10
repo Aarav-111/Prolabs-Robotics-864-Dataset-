@@ -1,12 +1,12 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-10T08:49:13",
-"total": 109913,
-"done": 1347,
+"updated": "2026-11-10T08:56:42",
+"total": 109914,
+"done": 1362,
 "in_progress": 32,
-"left": 108534,
+"left": 108520,
 "parallel_agents": {
-"running": 38,
+"running": 28,
 "topics": [
 {
 "agent": 2,
@@ -30,143 +30,103 @@
 },
 {
 "agent": 592,
-"topic": "explanation-based learning"
-},
-{
-"agent": 593,
-"topic": "technology insertion"
-},
-{
-"agent": 594,
 "topic": "regularization"
 },
 {
-"agent": 595,
-"topic": "pickering stabilization"
+"agent": 593,
+"topic": "binary trees"
 },
 {
-"agent": 596,
-"topic": "quadratic forms"
-},
-{
-"agent": 597,
-"topic": "trade in services"
-},
-{
-"agent": 598,
-"topic": "navier–stokes equations"
-},
-{
-"agent": 599,
-"topic": "network management architecture"
-},
-{
-"agent": 600,
+"agent": 594,
 "topic": "electric waves"
 },
 {
+"agent": 597,
+"topic": "acis"
+},
+{
+"agent": 598,
+"topic": "knowledge sharing culture"
+},
+{
+"agent": 599,
+"topic": "talent management"
+},
+{
+"agent": 600,
+"topic": "vector algebra"
+},
+{
 "agent": 601,
-"topic": "ionic liquid recycling"
+"topic": "maths"
 },
 {
 "agent": 602,
-"topic": "mental health care organization"
+"topic": "future internet"
 },
 {
 "agent": 603,
-"topic": "vision transformers"
+"topic": "network management architecture"
 },
 {
 "agent": 604,
-"topic": "speech recognition"
+"topic": "mobile crowdsourcing"
 },
 {
 "agent": 605,
-"topic": "rural prosperity"
+"topic": "ionic liquid recycling"
 },
 {
 "agent": 606,
-"topic": "dopamine"
+"topic": "multilevel models"
 },
 {
 "agent": 607,
-"topic": "backup"
+"topic": "nash equilibrium"
 },
 {
 "agent": 608,
-"topic": "enamel paint"
+"topic": "grover's algorithm"
 },
 {
 "agent": 609,
-"topic": "infertility diagnosis"
+"topic": "vision transformers"
 },
 {
 "agent": 610,
-"topic": "spinel structure"
+"topic": "speech recognition"
 },
 {
 "agent": 611,
-"topic": "maxillofacial infections"
+"topic": "algebra"
 },
 {
 "agent": 612,
-"topic": "invasive fungal infections"
+"topic": "advanced mathematics"
 },
 {
 "agent": 613,
-"topic": "striatum"
+"topic": "judicial power"
 },
 {
 "agent": 614,
-"topic": "glutamine"
+"topic": "clinical social work"
 },
 {
 "agent": 615,
-"topic": "basic education"
+"topic": "image-based rendering"
 },
 {
-"agent": 617,
-"topic": "sunflower cultivation"
-},
-{
-"agent": 618,
-"topic": "point cloud denoising"
-},
-{
-"agent": 619,
-"topic": "shield tunneling"
-},
-{
-"agent": 620,
-"topic": "membrane attack complex"
-},
-{
-"agent": 621,
-"topic": "isotachophoresis"
-},
-{
-"agent": 622,
-"topic": "aerospace adhesives"
-},
-{
-"agent": 623,
-"topic": "oxygen barrier"
-},
-{
-"agent": 624,
-"topic": "echinococcosis"
-},
-{
-"agent": 625,
-"topic": "microwave remote sensing"
+"agent": 616,
+"topic": "function theory"
 }
 ]
 },
 "fields": {
 "humanities": {
-"done": 54,
-"left": 22983,
-"in_progress": 2
+"done": 55,
+"left": 22981,
+"in_progress": 3
 },
 "medicine": {
 "done": 71,
@@ -179,23 +139,23 @@
 "in_progress": 1
 },
 "engineering": {
-"done": 99,
+"done": 100,
 "left": 12475,
-"in_progress": 1
+"in_progress": 0
 },
 "general": {
-"done": 56,
+"done": 55,
 "left": 7538,
-"in_progress": 2
+"in_progress": 4
 },
 "computer science": {
-"done": 126,
-"left": 5591,
-"in_progress": 2
+"done": 130,
+"left": 5589,
+"in_progress": 0
 },
 "economics and finance": {
-"done": 52,
-"left": 5636,
+"done": 53,
+"left": 5635,
 "in_progress": 1
 },
 "earth and space": {
@@ -204,34 +164,34 @@
 "in_progress": 0
 },
 "materials science": {
-"done": 38,
+"done": 39,
 "left": 3406,
-"in_progress": 2
-},
-"chemistry": {
-"done": 112,
-"left": 2870,
-"in_progress": 2
-},
-"physics": {
-"done": 122,
-"left": 2716,
-"in_progress": 7
-},
-"psychology": {
-"done": 31,
-"left": 2783,
 "in_progress": 1
 },
+"chemistry": {
+"done": 113,
+"left": 2870,
+"in_progress": 1
+},
+"physics": {
+"done": 123,
+"left": 2714,
+"in_progress": 8
+},
+"psychology": {
+"done": 32,
+"left": 2783,
+"in_progress": 0
+},
 "mathematics": {
-"done": 154,
-"left": 2006,
+"done": 157,
+"left": 2003,
 "in_progress": 4
 },
 "statistics": {
-"done": 72,
-"left": 889,
-"in_progress": 1
+"done": 73,
+"left": 887,
+"in_progress": 2
 },
 "robotics": {
 "done": 60,
@@ -239,17 +199,221 @@
 "in_progress": 0
 },
 "machine learning": {
-"done": 72,
-"left": 10,
+"done": 73,
+"left": 9,
 "in_progress": 3
 },
 "programming": {
 "done": 70,
-"left": 4,
-"in_progress": 0
+"left": 3,
+"in_progress": 1
 }
 },
 "topics": [
+{
+"topic": "image-based rendering",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": 615,
+"records": 5172,
+"images": 4,
+"completed": "2026-11-10T08:56:41"
+},
+{
+"topic": "clinical social work",
+"field": "humanities",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": 614,
+"records": 2353,
+"images": 4,
+"completed": "2026-11-10T08:56:41"
+},
+{
+"topic": "function theory",
+"field": "mathematics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": 616,
+"records": 1501,
+"images": 3,
+"completed": "2026-11-10T08:56:41"
+},
+{
+"topic": "independent random variables",
+"field": "mathematics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:55:17"
+},
+{
+"topic": "unruh-dewitt detector",
+"field": "physics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:54:59"
+},
+{
+"topic": "mobile crowdsourcing",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": 604,
+"records": 3414,
+"images": 9,
+"completed": "2026-11-10T08:53:58"
+},
+{
+"topic": "mental health care organization",
+"field": "psychology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:52:37"
+},
+{
+"topic": "adam optimizer",
+"field": "machine learning",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:52:34"
+},
+{
+"topic": "navier–stokes equations",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:52:29"
+},
+{
+"topic": "inventory model",
+"field": "statistics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:52:24"
+},
+{
+"topic": "quadratic forms",
+"field": "mathematics",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:52:12"
+},
+{
+"topic": "electric waves",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": 594,
+"records": 1863,
+"images": 9,
+"completed": "2026-11-10T08:51:49"
+},
+{
+"topic": "ionic liquid recycling",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": 605,
+"records": 115,
+"images": 9,
+"completed": "2026-11-10T08:51:43"
+},
+{
+"topic": "pickering stabilization",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:49:41"
+},
+{
+"topic": "network management architecture",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": 603,
+"records": 670,
+"images": 9,
+"completed": "2026-11-10T08:49:34"
+},
+{
+"topic": "explanation-based learning",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:49:17"
+},
+{
+"topic": "technology insertion",
+"field": "economics and finance",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-10T08:49:15"
+},
 {
 "topic": "spectral leakage",
 "field": "engineering",
@@ -317,9 +481,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 597,
+"agent": null,
 "records": 497,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:45:28"
 },
 {
@@ -329,9 +493,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 615,
+"agent": null,
 "records": 5013,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:43:04"
 },
 {
@@ -341,9 +505,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 625,
+"agent": null,
 "records": 5602,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:43:04"
 },
 {
@@ -785,9 +949,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 603,
+"agent": 609,
 "records": 11381,
-"images": 6,
+"images": 9,
 "completed": "2026-11-10T08:35:48"
 },
 {
@@ -797,9 +961,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 620,
+"agent": null,
 "records": 5489,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -809,9 +973,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 610,
+"agent": null,
 "records": 3774,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -821,9 +985,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 619,
+"agent": null,
 "records": 2919,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:35:47"
 },
 {
@@ -833,9 +997,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 624,
+"agent": null,
 "records": 4359,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:35:27"
 },
 {
@@ -845,9 +1009,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 607,
 "records": 5462,
-"images": 6,
+"images": 9,
 "completed": "2026-11-10T08:35:24"
 },
 {
@@ -917,9 +1081,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 617,
+"agent": null,
 "records": 990,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:35:24"
 },
 {
@@ -953,9 +1117,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 604,
+"agent": 610,
 "records": 4866,
-"images": 6,
+"images": 9,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -1013,9 +1177,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 605,
+"agent": null,
 "records": 1448,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -1025,9 +1189,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 606,
 "records": 1134,
-"images": 6,
+"images": 9,
 "completed": "2026-11-10T08:34:57"
 },
 {
@@ -1037,9 +1201,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 602,
 "records": 2195,
-"images": 6,
+"images": 9,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1109,9 +1273,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 608,
 "records": 3908,
-"images": 6,
+"images": 9,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1229,9 +1393,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 612,
+"agent": null,
 "records": 3416,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:34:56"
 },
 {
@@ -1349,9 +1513,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 609,
+"agent": null,
 "records": 4090,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:33:35"
 },
 {
@@ -1373,9 +1537,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 611,
+"agent": null,
 "records": 2528,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:33:31"
 },
 {
@@ -1397,9 +1561,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 623,
+"agent": null,
 "records": 2998,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:33:01"
 },
 {
@@ -1409,9 +1573,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 606,
+"agent": null,
 "records": 7217,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1421,9 +1585,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 614,
+"agent": null,
 "records": 2133,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1433,9 +1597,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 618,
+"agent": null,
 "records": 6687,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:33:00"
 },
 {
@@ -1469,9 +1633,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 608,
+"agent": null,
 "records": 1470,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1483,7 +1647,7 @@
 "status": "done",
 "agent": null,
 "records": 841,
-"images": 6,
+"images": 9,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1529,9 +1693,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 622,
+"agent": null,
 "records": 1034,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1541,9 +1705,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 621,
+"agent": null,
 "records": 1585,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1565,9 +1729,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 607,
+"agent": null,
 "records": 5744,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:32:59"
 },
 {
@@ -1625,9 +1789,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 613,
+"agent": null,
 "records": 2514,
-"images": 7,
+"images": 9,
 "completed": "2026-11-10T08:32:58"
 },
 {
@@ -2495,18 +2659,6 @@
 "completed": "2026-11-10T08:27:40"
 },
 {
-"topic": "vector algebra",
-"field": "general",
-"level": "focus",
-"done": true,
-"check": "✓",
-"status": "done",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": "2026-11-10T08:27:21"
-},
-{
 "topic": "microeconomics",
 "field": "economics and finance",
 "level": "core",
@@ -2541,18 +2693,6 @@
 "records": 0,
 "images": 0,
 "completed": "2026-11-10T08:27:10"
-},
-{
-"topic": "maths",
-"field": "general",
-"level": "focus",
-"done": true,
-"check": "✓",
-"status": "done",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": "2026-11-10T08:26:49"
 },
 {
 "topic": "asyncio",
@@ -16413,6 +16553,42 @@
 "records": 0,
 "images": 1,
 "completed": "2026-11-09T13:06:35"
+},
+{
+"topic": "vector algebra",
+"field": "general",
+"level": "focus",
+"done": false,
+"check": "",
+"status": "in progress",
+"agent": 600,
+"records": 0,
+"images": 0,
+"completed": ""
+},
+{
+"topic": "maths",
+"field": "general",
+"level": "focus",
+"done": false,
+"check": "",
+"status": "in progress",
+"agent": 601,
+"records": 0,
+"images": 0,
+"completed": ""
+},
+{
+"topic": "advanced mathematics",
+"field": "general",
+"level": "focus",
+"done": false,
+"check": "",
+"status": "in progress",
+"agent": 612,
+"records": 0,
+"images": 0,
+"completed": ""
 },
 {
 "topic": "(+)-naloxone",
@@ -70638,18 +70814,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "navier–stokes equations",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 598,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -286199,18 +286363,6 @@
 "completed": ""
 },
 {
-"topic": "ionic liquid recycling",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 601,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "ionic liquid synthesis",
 "field": "chemistry",
 "level": "specialist",
@@ -325487,18 +325639,6 @@
 "completed": ""
 },
 {
-"topic": "explanation-based learning",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 592,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "exploration-exploitation balance",
 "field": "computer science",
 "level": "specialist",
@@ -332784,18 +332924,6 @@
 },
 {
 "topic": "image watermarking",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "image-based rendering",
 "field": "computer science",
 "level": "specialist",
 "done": false,
@@ -341123,18 +341251,6 @@
 "completed": ""
 },
 {
-"topic": "mobile crowdsourcing",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "mobile devices in education",
 "field": "computer science",
 "level": "specialist",
@@ -344478,18 +344594,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "network management architecture",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 599,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -497296,8 +497400,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 599,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -498294,18 +498398,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "technology insertion",
-"field": "economics and finance",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 593,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -542130,18 +542222,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "electric waves",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 600,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -694775,18 +694855,6 @@
 "completed": ""
 },
 {
-"topic": "clinical social work",
-"field": "humanities",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "clinical sociology",
 "field": "humanities",
 "level": "specialist",
@@ -786256,8 +786324,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 613,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -929579,18 +929647,6 @@
 "completed": ""
 },
 {
-"topic": "adam optimizer",
-"field": "machine learning",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "attention mechanisms",
 "field": "machine learning",
 "level": "advanced",
@@ -929705,7 +929761,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 594,
+"agent": 592,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -958187,18 +958243,6 @@
 "completed": ""
 },
 {
-"topic": "pickering stabilization",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 595,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "piezoelectric ceramics",
 "field": "materials science",
 "level": "specialist",
@@ -970621,11 +970665,11 @@
 {
 "topic": "algebra",
 "field": "mathematics",
-"level": "core",
+"level": "focus",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 611,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -972150,18 +972194,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "quadratic forms",
-"field": "mathematics",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 596,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -979595,18 +979627,6 @@
 "completed": ""
 },
 {
-"topic": "function theory",
-"field": "mathematics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "functional data",
 "field": "mathematics",
 "level": "specialist",
@@ -982200,18 +982220,6 @@
 },
 {
 "topic": "independent identically distributed random variables",
-"field": "mathematics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "independent random variables",
 "field": "mathematics",
 "level": "specialist",
 "done": false,
@@ -1243132,8 +1243140,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 597,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1273463,18 +1273471,6 @@
 "completed": ""
 },
 {
-"topic": "unruh-dewitt detector",
-"field": "physics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "unstable periodic orbits",
 "field": "physics",
 "level": "specialist",
@@ -1274740,8 +1274736,8 @@
 "level": "advanced",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 593,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1292370,18 +1292366,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "mental health care organization",
-"field": "psychology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 602,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1313843,18 +1313827,6 @@
 "completed": ""
 },
 {
-"topic": "inventory model",
-"field": "statistics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "inventory optimization",
 "field": "statistics",
 "level": "specialist",
@@ -1314148,8 +1314120,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 598,
 "records": 0,
 "images": 0,
 "completed": ""

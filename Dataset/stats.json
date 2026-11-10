@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 26.4,
+  "disk_free_gb": 25.7,
   "product": "Parallel Web Technologies",
   "developer": "ProLab Robotics",
   "started": 1794279260.7094789,
   "started_iso": "2026-11-10T08:24:20",
-  "updated": 1794280798.080302,
-  "updated_iso": "2026-11-10T08:49:58",
-  "uptime_s": 1537,
+  "updated": 1794281217.192131,
+  "updated_iso": "2026-11-10T08:56:57",
+  "uptime_s": 1956,
   "workers": 5000,
   "effective_workers": 625,
   "in_flight": 625,
@@ -18,30 +18,30 @@
     "text": 15,
     "web_images": 24
   },
-  "waiting": 622,
+  "waiting": 623,
   "processes": 1,
   "fields": {
-    "mathematics": 52175,
-    "computer science": 33340,
+    "mathematics": 53676,
+    "computer science": 41926,
     "machine learning": 16292,
+    "engineering": 15112,
     "general": 14774,
-    "engineering": 13249,
     "economics and finance": 12320,
     "earth and space": 11849,
-    "chemistry": 11080,
+    "chemistry": 11195,
     "statistics": 10147,
     "biology": 8246,
     "physics": 8209,
     "psychology": 7727,
     "materials science": 6850,
+    "humanities": 6470,
     "programming": 5352,
     "medicine": 5311,
-    "humanities": 4117,
     "robotics": 3515,
     "general knowledge": 101
   },
   "topic_fields": {
-    "": 7596,
+    "": 7597,
     "biology": 13643,
     "chemistry": 2984,
     "computer science": 5719,
@@ -65,37 +65,37 @@
     "qiaojin/PubMedQA": 96
   },
   "counts": {
-    "text": 220738,
-    "originals": 1348,
-    "variants": 219390,
-    "web_images": 343,
+    "text": 235156,
+    "originals": 1430,
+    "variants": 233726,
+    "web_images": 355,
     "synthetic_images": 14064,
-    "images": 14407,
+    "images": 14419,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 100177015,
-    "tasks_done": 19426,
+    "tokens": 105464854,
+    "tasks_done": 19542,
     "tasks_failed": 0,
     "topics_added": 108651,
     "preference": 347
   },
   "by_kind": {
     "archive": 6,
-    "text": 43,
-    "web_images": 289,
+    "text": 56,
+    "web_images": 392,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 100177015,
-  "per_min": 237.5,
+  "tokens": 105464854,
+  "per_min": 2493.0,
   "topics": {
-    "known": 109913,
-    "explored": 1351,
-    "queued": 108530,
-    "space": 6594780,
+    "known": 109914,
+    "explored": 1362,
+    "queued": 108520,
+    "space": 6594840,
     "next": [
       [
         "databases",
@@ -148,114 +148,114 @@
     ],
     "recent": [
       [
-        "pickering stabilization",
-        "materials science",
-        0
-      ],
-      [
-        "network management architecture",
+        "image-based rendering",
         "computer science",
-        670
+        5172
       ],
       [
-        "explanation-based learning",
-        "computer science",
-        0
+        "clinical social work",
+        "humanities",
+        2353
       ],
       [
-        "technology insertion",
-        "economics and finance",
-        0
+        "function theory",
+        "mathematics",
+        1501
       ],
       [
-        "spectral leakage",
-        "engineering",
-        0
-      ],
-      [
-        "uv stabilizers",
-        "materials science",
-        0
-      ],
-      [
-        "go concurrency",
-        "programming",
-        0
-      ],
-      [
-        "stokes parameters",
-        "physics",
-        0
-      ],
-      [
-        "mean curvature flow",
+        "independent random variables",
         "mathematics",
         0
       ],
       [
-        "trade in services",
-        "economics and finance",
-        497
+        "unruh-dewitt detector",
+        "physics",
+        0
       ],
       [
-        "basic education",
+        "mobile crowdsourcing",
+        "computer science",
+        3414
+      ],
+      [
+        "mental health care organization",
+        "psychology",
+        0
+      ],
+      [
+        "adam optimizer",
+        "machine learning",
+        0
+      ],
+      [
+        "navier\u2013stokes equations",
         "",
-        5013
+        0
       ],
       [
-        "microwave remote sensing",
-        "earth and space",
-        5602
+        "inventory model",
+        "statistics",
+        0
+      ],
+      [
+        "quadratic forms",
+        "mathematics",
+        0
+      ],
+      [
+        "electric waves",
+        "engineering",
+        1863
       ]
     ],
     "in_progress": 32,
     "focus_left": 0
   },
   "system": {
-    "time": 1794280798.0783858,
-    "cpu": 71.7,
+    "time": 1794281217.1905909,
+    "cpu": 98.0,
     "cpu_cores": [
-      75.2,
-      73.3,
-      68.7,
-      65.4,
-      81.8,
-      77.6,
-      65.9,
-      65.9
+      97.7,
+      97.3,
+      97.3,
+      97.7,
+      98.6,
+      98.6,
+      98.6,
+      98.2
     ],
-    "mem": 83.1,
-    "mem_used_gb": 2.97,
+    "mem": 83.6,
+    "mem_used_gb": 2.88,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 63.0,
+    "proc_mem_mb": 61.0,
     "threads": 629,
     "proc_cpu": 0.0,
-    "net_rx": 5487907840,
-    "net_tx": 883229696,
-    "down_kbps": 1073.9,
-    "up_kbps": 188.6,
-    "disk_free_gb": 26.4,
+    "net_rx": 5908828160,
+    "net_tx": 974901248,
+    "down_kbps": 992.5,
+    "up_kbps": 181.9,
+    "disk_free_gb": 25.7,
     "load": [
-      16.06,
-      37.86,
-      32.56
+      10.36,
+      37.74,
+      36.04
     ],
     "cores": 8
   },
-  "disk_mb": 205.1,
+  "disk_mb": 158.7,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794280790.953365,
-    "next_sync_s": 52,
-    "commits": 14
+    "last_push": 1794280866.437452,
+    "next_sync_s": 238,
+    "commits": 15
   },
   "last_sample": {
     "type": "text",
-    "topic": "network management architecture",
-    "problem": "Graph Neural Networks for Scalable Radio Resource Management: Architecture Design and Theoretical Analysis Deep learning has recently emerged as a disruptive technology to solve challenging radio resource management problems in wireless networks. However, the neural network architectures adopted by existing works suffer from poor scalability, generalization, and lack of interpretability. A\u2026",
-    "solution": "In this paper, we propose to apply graph neural networks (GNNs) to solve large-scale radio resource management problems, supported by effective neural network architecture design and theoretical analysis. Specifically, we first demonstrate that radio resource management problems can be formulated as graph optimization problems that enjoy a universal permutation equivariance property. We then\u2026",
+    "topic": "image-based rendering",
+    "problem": "Differentiable Inverse Rendering with Interpretable Basis BRDFs Inverse rendering seeks to reconstruct both geometry and spatially varying BRDFs (SVBRDFs) from captured images. To address the inherent ill-posedness of inverse rendering, basis BRDF representations are commonly used, modeling SVBRDFs as spatially varying blends of a set of basis BRDFs. However, existing methods often yield basis\u2026",
+    "solution": "In this paper, we introduce a differentiable inverse rendering method that produces interpretable basis BRDFs. Our approach models a scene using 2D Gaussians, where the reflectance of each Gaussian is defined by a weighted blend of basis BRDFs. We efficiently render an image from the 2D Gaussians and basis BRDFs using differentiable rasterization and impose a rendering loss with the input\u2026",
     "source": "arxiv"
   }
 }
