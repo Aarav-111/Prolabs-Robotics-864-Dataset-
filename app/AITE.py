@@ -9401,6 +9401,7 @@ def main_gui():
         st["rag_answer_mode"] = v
         st["rag_use_model"] = v != "records"
         persist()
+        chat_layout()
     Segmented(mrow, ["compare", "with", "plain", "records"], v_amode, amode_changed,
               labels={"compare": "Compare: without vs with data", "with": "With data", "plain": "Model only",
                       "records": "Records"}).pack(side="left")
@@ -9470,9 +9471,39 @@ def main_gui():
     qf = Field(prow, v_q, h=46)
     qf.pack(side="left", fill="x", expand=True)
     qf.e.bind("<Return>", lambda e: rag_ask())
-    cfr, chat_t = text_area(cc.body, "code", h=18, size=-1)
-    cfr.pack(fill="x")
+    chat_hold = box(cc.body, "card")
+    chat_hold.pack(fill="x")
+    cfr, chat_t = text_area(chat_hold, "code", h=18, size=-1)
     chat_t.configure(state="disabled", cursor="arrow")
+    # Compare: two columns side by side - the model alone (left) and the same model with your data (right)
+    cmp_fr = box(chat_hold, "card")
+    cmp_fr.columnconfigure(0, weight=1, uniform="cmp")
+    cmp_fr.columnconfigure(1, weight=1, uniform="cmp")
+    cmp_t = {}
+    for i_, (k_, title_, tone_, sub_) in enumerate((
+            ("plain", "WITHOUT your data", "grey", "the model alone - what it already knows"),
+            ("with", "WITH your data", "green", "the same model + the records that are about your question"))):
+        col_ = box(cmp_fr, "card")
+        col_.grid(row=0, column=i_, sticky="nsew", padx=(0, 6) if i_ == 0 else (6, 0))
+        hd_ = box(col_, "card")
+        hd_.pack(fill="x", pady=(0, 6))
+        Badge(hd_, title_, tone_).pack(side="left")
+        label(hd_, "  " + sub_, "faint", -4).pack(side="left")
+        fr_, tx_ = text_area(col_, "code", h=22, size=-1)
+        fr_.pack(fill="both", expand=True)
+        tx_.configure(state="disabled", cursor="arrow")
+        cmp_t[k_] = tx_
+
+    def chat_layout():
+        """Compare shows the two columns; every other mode shows the single conversation."""
+        if v_amode.get() == "compare":
+            cfr.pack_forget()
+            cmp_fr.pack(fill="x")
+        else:
+            cmp_fr.pack_forget()
+            cfr.pack(fill="x")
+        rg["rev"] = rg.get("rev", 0) + 1
+    chat_layout()
     cbar = FlowFrame(cc.body, "card")
     cbar.pack(fill="x", pady=(8, 0))
     for ex in ("Explain the Lanczos algorithm", "How do robots plan a trajectory?", "Pad a number with zeros in PHP",
@@ -9837,6 +9868,95 @@ def main_gui():
             rg["busy"], rg["rev"] = False, rg["rev"] + 1
         threading.Thread(target=work, daemon=True).start()
 
+    def chat_tags(w_):
+        mono = font(-2, mono=True)
+        w_.tag_configure("md_h1", font=font(4, True), foreground=T["text"], spacing1=10, spacing3=4)
+        w_.tag_configure("md_h2", font=font(2, True), foreground=T["text"], spacing1=8, spacing3=3)
+        w_.tag_configure("md_h3", font=font(0, True), foreground=T["text"], spacing1=6, spacing3=2)
+        w_.tag_configure("md_li", font=font(-1), foreground=T["text"], lmargin1=14, lmargin2=34, spacing1=2)
+        w_.tag_configure("md_b", font=font(-1, True))
+        w_.tag_configure("md_ic", font=mono, background=T["soft"], foreground=T["text"])
+        w_.tag_configure("md_code", font=mono, background=T["soft"], foreground=T["text"], lmargin1=16, lmargin2=16,
+                         rmargin=16, spacing1=0, spacing3=0)
+        w_.tag_configure("md_lang", font=font(-4, True), foreground=T["faint"], background=T["soft"], lmargin1=16, spacing1=6)
+        w_.tag_configure("md_cite", font=font(-3, True), foreground=T["blue"])
+        w_.tag_configure("md_gap", font=font(-6))
+        w_.tag_configure("q", font=font(0, True), foreground=T["text"], spacing1=10)
+        w_.tag_configure("meta", font=font(-4), foreground=T["faint"])
+        w_.tag_configure("a", font=font(-1), foreground=T["text"])
+        w_.tag_configure("src", font=font(-3), foreground=T["dim"], lmargin1=12, lmargin2=28)
+        w_.tag_configure("fld", font=font(-4, True), foreground=T["green"])
+        w_.tag_configure("link", font=font(-4), foreground=T["blue"], underline=True)
+
+    def render_compare():
+        """The two Compare columns: every question once on each side, the answers next to each other."""
+        L, R = cmp_t["plain"], cmp_t["with"]
+        for w_ in (L, R):
+            w_.configure(state="normal")
+            w_.delete("1.0", "end")
+            chat_tags(w_)
+        if not rg["chat"]:
+            L.insert("end", "Ask a question above. This side answers with the model alone.\n", "meta")
+            R.insert("end", "This side answers the same question with the records from your dataset that are about it, "
+                            "and lists them as sources.\n", "meta")
+        for n_, t_ in enumerate(rg["chat"]):
+            for w_ in (L, R):
+                w_.insert("end", "You  ", "meta")
+                w_.insert("end", t_["q"] + "\n", "q")
+            mode_, hits_ = t_.get("mode") or "with", t_.get("hits") or []
+            model_ = t_.get("model") or ""
+            if t_["state"] == "searching":
+                L.insert("end", "waiting…\n\n", "meta")
+                R.insert("end", "Searching your data for records about this question…\n\n", "meta")
+                continue
+            # left: the model alone
+            if mode_ == "compare" and t_.get("a_plain"):
+                L.insert("end", f"{model_} alone\n", "meta")
+                md_insert(L, t_["a_plain"].strip())
+            elif mode_ == "compare" and t_["state"] == "thinking":
+                L.insert("end", f"{model_} is writing…\n", "meta")
+            elif mode_ == "plain":
+                L.insert("end", f"{model_} alone\n", "meta")
+                md_insert(L, (t_.get("a") or "").strip())
+            elif not model_ or mode_ == "records":
+                L.insert("end", "No model was used for this question (Records mode, or a direct answer).\n", "meta")
+                if mode_ != "records":
+                    md_insert(L, (t_.get("a") or "").strip())
+            else:
+                L.insert("end", "Not asked on this side (the question was asked in 'With data' mode).\n", "meta")
+            L.insert("end", "\n")
+            # right: the model with your data
+            if mode_ == "plain":
+                R.insert("end", "Not asked on this side (the question was asked in 'Model only' mode).\n\n", "meta")
+                continue
+            ws = t_.get("weights") or []
+            if t_["state"] == "thinking" and not (mode_ != "compare" and t_.get("a")):
+                R.insert("end", f"{len(hits_)} records about this question · " +
+                         ("writing next…" if mode_ == "compare" and not t_.get("a_plain") else f"{model_} is writing…") + "\n", "meta")
+            elif t_.get("same"):
+                R.insert("end", "No record in your dataset is about this question, so your data adds nothing here: "
+                                "the answer is the same as on the left.\n", "meta")
+            else:
+                R.insert("end", (f"{model_} + {len(hits_)} records" if model_ else "from your dataset") +
+                         (f" · {t_.get('secs', 0):.1f} s" if t_["state"] == "done" else "") + "\n", "meta")
+                md_insert(R, (t_.get("a") or "").strip())
+            if hits_:
+                R.insert("end", "\nSources (closest in meaning first)\n", "meta")
+                for i, h in enumerate(hits_, 1):
+                    R.insert("end", f"[{h.get('rank', i)}]  {h.get('rel', 0):.1f}/10  {shorten(h['title'], 70)}  ", "src")
+                    R.insert("end", f"{h['field'] or h['topic'] or 'general'}", "fld")
+                    if h.get("url"):
+                        tag = f"c{n_}_{i}"
+                        R.insert("end", "  open", ("link", tag))
+                        R.tag_bind(tag, "<Button-1>", lambda e, u=h["url"]: __import__("webbrowser").open(u))
+                    R.insert("end", "\n", "src")
+            if ws:
+                R.insert("end", "Word relevance  " + "   ".join(f"{term} {w:g}" for term, w, *_ in ws[:6]) + "\n", "meta")
+            R.insert("end", "\n")
+        for w_ in (L, R):
+            w_.configure(state="disabled")
+            w_.see("end")
+
     def md_inline(t, text, base):
         """**bold**, `code` and [1] citations inside one line."""
         for part in re.split(r"(\*\*[^*\n]+\*\*|`[^`\n]+`|\[\d+\])", text):
@@ -9894,8 +10014,10 @@ def main_gui():
             t.insert("end", "\n", "a")
 
     def render_chat():
+        render_compare()
         chat_t.configure(state="normal")
         chat_t.delete("1.0", "end")
+        chat_tags(chat_t)
         mono = font(-2, mono=True)
         chat_t.tag_configure("md_h1", font=font(4, True), foreground=T["text"], spacing1=10, spacing3=4)
         chat_t.tag_configure("md_h2", font=font(2, True), foreground=T["text"], spacing1=8, spacing3=3)
@@ -11564,7 +11686,12 @@ def main_gui():
             assert model_rows and all(r_["badge"].tone in ("green", "grey", "red", "blue") for r_ in model_rows.values()), "model labels"
             assert any(r_["badge"].text == "Not downloaded" and r_["act"].text == "Download" for r_ in model_rows.values()) or \
                 all(r_["badge"].text == "Downloaded" for r_ in model_rows.values()), "Download button on models not on this Mac"
-            assert prow.winfo_ismapped() and prow.winfo_rooty() < cfr.winfo_rooty(), "the question box is visible, above the chat"
+            assert prow.winfo_ismapped() and prow.winfo_rooty() < chat_hold.winfo_rooty(), "the question box is visible, above the chat"
+            root.update()
+            assert v_amode.get() == "compare" and cmp_fr.winfo_ismapped() and not cfr.winfo_ismapped(), "Compare is the default view"
+            lx_, rx_ = cmp_t["plain"].winfo_rootx(), cmp_t["with"].winfo_rootx()
+            assert rx_ > lx_ + 200 and abs(cmp_t["plain"].winfo_rooty() - cmp_t["with"].winfo_rooty()) < 4 and \
+                abs(cmp_t["plain"].winfo_width() - cmp_t["with"].winfo_width()) < 30, "the two Compare columns are side by side"
             assert fflow.items and fields_chosen() is None, "ALL fields by default"
             fields_set(False)
             first_f = next(iter(fvars))
@@ -11586,6 +11713,18 @@ def main_gui():
             vl_ = vlog_t.get("1.0", "end")
             assert rg["chat"] and rg["chat"][-1]["hits"] and "Sources" in chat_ and "[1]" in chat_, chat_[:300]
             assert "QUESTION" in vl_ and "word rank" in vl_ and "relevance" in vl_ and "job  " in vl_ and "index:" in vl_, vl_[-600:]
+            assert cfr.winfo_ismapped() and not cmp_fr.winfo_ismapped(), "Records mode shows the single conversation"
+            v_amode.set("compare")
+            amode_changed("compare")
+            rg["chat"].append({"q": "what is a test", "a": "With data answer [1].", "a_plain": "Model alone answer.", "mode": "compare",
+                               "hits": rg["chat"][-1]["hits"][:1], "weights": [], "state": "done", "model": "Test model", "secs": 1.0})
+            render_chat()
+            root.update()
+            lt_, rt_ = cmp_t["plain"].get("1.0", "end"), cmp_t["with"].get("1.0", "end")
+            assert cmp_fr.winfo_ismapped() and "what is a test" in lt_ and "what is a test" in rt_ and "Model alone answer." in lt_ \
+                and "With data answer" in rt_ and "Sources" in rt_ and "With data answer" not in lt_, (lt_[-200:], rt_[-300:])
+            rg["chat"].pop()
+            render_chat()
             n_tg = len(guide_steps())
             for i_ in range(n_tg):
                 assert guide(i_) is not None, f"ask guide step {i_ + 1}"
