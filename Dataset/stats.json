@@ -5,20 +5,20 @@
   "disk_free_gb": 26.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
-  "started": 1794376249.420705,
-  "started_iso": "2026-11-11T11:20:49",
-  "updated": 1794376261.783243,
-  "updated_iso": "2026-11-11T11:21:01",
-  "uptime_s": 12,
+  "started": 1794376656.589798,
+  "started_iso": "2026-11-11T11:27:36",
+  "updated": 1794376696.272237,
+  "updated_iso": "2026-11-11T11:28:16",
+  "uptime_s": 40,
   "workers": 100,
   "effective_workers": 100,
   "in_flight": 100,
   "busy_by_kind": {
-    "archive": 43,
     "text": 43,
-    "web_images": 14
+    "web_images": 14,
+    "archive": 43
   },
-  "waiting": 86,
+  "waiting": 91,
   "processes": 1,
   "fields": {
     "mathematics": 54711,
@@ -26,16 +26,16 @@
     "computer science": 42312,
     "engineering": 27404,
     "machine learning": 20661,
-    "chemistry": 19691,
+    "chemistry": 20381,
     "biology": 18115,
     "earth and space": 14582,
     "economics and finance": 12320,
     "physics": 11017,
     "statistics": 10945,
-    "medicine": 8295,
+    "medicine": 8526,
+    "programming": 8233,
     "psychology": 7840,
     "materials science": 7162,
-    "programming": 7092,
     "humanities": 6976,
     "robotics": 3515,
     "general knowledge": 356
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 3515,
-    "openlifescienceai/medmcqa": 781,
+    "stack exchange dump": 5346,
+    "openlifescienceai/medmcqa": 1012,
     "qiaojin/PubMedQA": 96,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 317313,
-    "originals": 1840,
-    "variants": 315473,
-    "web_images": 452,
+    "text": 319375,
+    "originals": 1850,
+    "variants": 317525,
+    "web_images": 454,
     "synthetic_images": 14064,
-    "images": 14516,
+    "images": 14518,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 151862539,
-    "tasks_done": 25525,
+    "tokens": 152628194,
+    "tasks_done": 25669,
     "tasks_failed": 5,
     "topics_added": 108651,
-    "preference": 867
+    "preference": 1049
   },
   "by_kind": {
-    "archive": 0,
+    "archive": 37,
     "text": 0,
-    "web_images": 0,
+    "web_images": 6,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 151862539,
-  "per_min": 0.0,
+  "tokens": 152628194,
+  "per_min": 3138.1,
   "topics": {
     "known": 109914,
-    "explored": 2755,
-    "queued": 107116,
+    "explored": 2760,
+    "queued": 107111,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,31 @@
     ],
     "recent": [
       [
+        "acoustic ecology",
+        "humanities",
+        0
+      ],
+      [
+        "polymer nanofibers",
+        "materials science",
+        0
+      ],
+      [
+        "optical illusions",
+        "biology",
+        0
+      ],
+      [
+        "transactional analysis",
+        "psychology",
+        0
+      ],
+      [
+        "causal loop diagrams",
+        "statistics",
+        0
+      ],
+      [
         "fractional brownian motion",
         "economics and finance",
         0
@@ -182,81 +207,56 @@
         "statistical methods in medicine",
         "mathematics",
         0
-      ],
-      [
-        "lymphatic filariasis",
-        "medicine",
-        0
-      ],
-      [
-        "specimen polishing",
-        "materials science",
-        0
-      ],
-      [
-        "alpha interferon",
-        "",
-        0
-      ],
-      [
-        "coexisting attractors",
-        "physics",
-        0
-      ],
-      [
-        "baudolino",
-        "humanities",
-        0
       ]
     ],
     "in_progress": 43,
     "focus_left": 0
   },
   "system": {
-    "time": 1794376261.782599,
-    "cpu": 68.7,
+    "time": 1794376696.271654,
+    "cpu": 38.6,
     "cpu_cores": [
-      97.2,
-      96.8,
-      96.3,
-      96.8,
-      49.1,
-      49.3,
-      36.4,
-      26.4
+      22.3,
+      23.0,
+      20.3,
+      16.9,
+      69.0,
+      60.1,
+      53.1,
+      44.1
     ],
-    "mem": 74.4,
-    "mem_used_gb": 3.22,
+    "mem": 72.8,
+    "mem_used_gb": 3.26,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 84.9,
+    "proc_mem_mb": 206.5,
     "threads": 104,
     "proc_cpu": 0.0,
-    "net_rx": 3951787008,
-    "net_tx": 2396733440,
-    "down_kbps": 1034.1,
-    "up_kbps": 627.4,
-    "disk_free_gb": 26.1,
+    "net_rx": 4019544064,
+    "net_tx": 2452205568,
+    "down_kbps": 276.5,
+    "up_kbps": 158.1,
+    "disk_free_gb": 26.0,
     "load": [
-      7.89,
-      12.79,
-      11.6
+      4.12,
+      5.79,
+      8.35
     ],
     "cores": 8
   },
-  "disk_mb": 28.8,
+  "disk_mb": 20.0,
   "github": {
     "state": "off",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 0.0,
-    "next_sync_s": 296,
+    "next_sync_s": 291,
     "commits": 0
   },
   "last_sample": {
     "type": "web image",
-    "topic": "long-range wireless communication",
-    "problem": "The first experimental spark radio transmitter used by radio pioneer Guglielmo Marconi during his development of the first radiotelegraphy communication systems. Invented by Marconi's mentor Augusto Righi of Bologna, it was a form of Heinrich Hertz's transmitter using a spark gap made of four metal balls (the 'Righi oscillator') as a dipole resonator-antenna. The way it was supposed to work was: a pulse of high voltage from the induction coil, applied between the outer charging balls, caused a spark between each outer ball and the two inner balls, charging them with opposite voltage. Then a\u2026",
-    "solution": "Public domain",
+    "topic": "d2q9 lattice",
+    "problem": "Schematic of 8 of the 9 nearest-neighbour lattice vectors in the standard D2Q9 lattice used in the two-dimensional version of the Lattice Boltzmann fluid dynamics computer simulation method. Ninth vector is zero vector.",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
