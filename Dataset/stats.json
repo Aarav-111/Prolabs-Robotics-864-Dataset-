@@ -2,43 +2,43 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 33.5,
+  "disk_free_gb": 28.3,
   "product": "Parallel Web Technologies",
   "developer": "ProLab Robotics",
-  "started": 1794315017.730175,
-  "started_iso": "2026-11-10T18:20:17",
-  "updated": 1794315064.8279119,
-  "updated_iso": "2026-11-10T18:21:04",
-  "uptime_s": 47,
-  "workers": 5000,
-  "effective_workers": 625,
-  "in_flight": 5000,
+  "started": 1794375213.9951968,
+  "started_iso": "2026-11-11T11:03:33",
+  "updated": 1794375553.1392379,
+  "updated_iso": "2026-11-11T11:09:13",
+  "uptime_s": 339,
+  "workers": 100,
+  "effective_workers": 100,
+  "in_flight": 1174,
   "busy_by_kind": {
-    "text": 120,
-    "archive": 4688,
-    "web_images": 192
+    "archive": 1151,
+    "text": 21,
+    "web_images": 2
   },
-  "waiting": 4982,
-  "processes": 8,
+  "waiting": 1161,
+  "processes": 1,
   "fields": {
-    "mathematics": 53676,
-    "computer science": 41926,
+    "mathematics": 54711,
+    "general": 48436,
+    "computer science": 42312,
+    "engineering": 27404,
     "machine learning": 20661,
-    "general": 17671,
-    "engineering": 15313,
-    "chemistry": 12967,
+    "chemistry": 18506,
+    "biology": 18115,
+    "earth and space": 14582,
     "economics and finance": 12320,
-    "earth and space": 11849,
-    "physics": 10320,
-    "statistics": 10147,
-    "biology": 8246,
+    "physics": 11017,
+    "statistics": 10945,
+    "medicine": 8295,
     "psychology": 7840,
+    "materials science": 7162,
     "humanities": 6976,
-    "materials science": 6850,
-    "programming": 6213,
-    "medicine": 6140,
+    "programming": 6684,
     "robotics": 3515,
-    "general knowledge": 101
+    "general knowledge": 356
   },
   "topic_fields": {
     "": 7597,
@@ -60,58 +60,46 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 1049,
-    "openlifescienceai/medmcqa": 379,
+    "stack exchange dump": 1922,
+    "openlifescienceai/medmcqa": 781,
     "qiaojin/PubMedQA": 96
   },
   "counts": {
-    "text": 248815,
-    "originals": 1505,
-    "variants": 247310,
-    "web_images": 393,
+    "text": 315720,
+    "originals": 1839,
+    "variants": 313881,
+    "web_images": 436,
     "synthetic_images": 14064,
-    "images": 14457,
+    "images": 14500,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 110806749,
-    "tasks_done": 21379,
-    "tasks_failed": 1,
+    "tokens": 151167159,
+    "tasks_done": 25283,
+    "tasks_failed": 5,
     "topics_added": 108651,
-    "preference": 527
+    "preference": 819
   },
   "by_kind": {
-    "archive": 4,
-    "text": 0,
-    "web_images": 8,
+    "archive": 54,
+    "text": 9,
+    "web_images": 25,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 110806749,
-  "per_min": 3317.9,
+  "tokens": 151167159,
+  "per_min": 1727.6,
   "topics": {
     "known": 109914,
-    "explored": 1773,
-    "queued": 108035,
+    "explored": 2743,
+    "queued": 107065,
     "space": 6594840,
     "next": [
       [
-        "botany",
-        "biology"
-      ],
-      [
-        "microcontrollers",
-        "engineering"
-      ],
-      [
         "linguistics",
         "humanities"
-      ],
-      [
-        "quantum chemistry",
-        "chemistry"
       ],
       [
         "option pricing",
@@ -126,10 +114,6 @@
         "humanities"
       ],
       [
-        "game theory",
-        "mathematics"
-      ],
-      [
         "biophysics",
         "biology"
       ],
@@ -138,73 +122,89 @@
         "chemistry"
       ],
       [
-        "dynamics",
-        "physics"
-      ],
-      [
         "biochemistry",
         "chemistry"
+      ],
+      [
+        "decision making",
+        "psychology"
+      ],
+      [
+        "object oriented programming",
+        "computer science"
+      ],
+      [
+        "computational chemistry",
+        "chemistry"
+      ],
+      [
+        "organometallic chemistry",
+        "chemistry"
+      ],
+      [
+        "cognitive psychology",
+        "psychology"
       ]
     ],
     "recent": [
       [
-        "hierarchical data",
-        "mathematics",
-        0
-      ],
-      [
-        "atomic absorption spectrometry",
+        "red phase",
         "chemistry",
-        635
+        4110
       ],
       [
-        "fear of contagion",
-        "psychology",
-        0
-      ],
-      [
-        "biodiversity conservation",
-        "",
-        0
-      ],
-      [
-        "epidemic routing",
-        "computer science",
-        0
-      ],
-      [
-        "partial transmit sequence",
-        "engineering",
-        201
-      ],
-      [
-        "brunn-minkowski inequality",
-        "mathematics",
-        804
-      ],
-      [
-        "cylindrical vector beams",
+        "hybrid optomechanical system",
         "physics",
-        201
+        697
       ],
       [
-        "peace corps volunteers' photographs",
-        "economics and finance",
+        "vector algebra",
+        "",
+        28251
+      ],
+      [
+        "long-range wireless communication",
+        "engineering",
+        1206
+      ],
+      [
+        "neutrosophic probability",
+        "mathematics",
+        633
+      ],
+      [
+        "contractive conditions",
+        "mathematics",
         0
       ],
       [
-        "pyogenic granuloma",
+        "brugia pahangi",
         "medicine",
         0
       ],
       [
-        "media validation",
-        "computer science",
+        "hexamethylcyclotrisiloxane",
+        "materials science",
+        111
+      ],
+      [
+        "orofacial pain",
+        "medicine",
         0
       ],
       [
-        "nad biosynthesis",
+        "textbook affordability",
+        "humanities",
+        0
+      ],
+      [
+        "alveolar bone loss",
         "medicine",
+        0
+      ],
+      [
+        "catalytic graphitization",
+        "materials science",
         0
       ]
     ],
@@ -212,50 +212,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794315064.8263218,
-    "cpu": 68.0,
+    "time": 1794375553.1374662,
+    "cpu": 73.0,
     "cpu_cores": [
-      68.2,
-      65.4,
-      65.6,
-      65.9,
-      77.3,
-      73.7,
-      66.8,
-      61.1
+      62.6,
+      58.4,
+      56.7,
+      53.0,
+      82.6,
+      87.4,
+      91.1,
+      92.1
     ],
-    "mem": 84.4,
-    "mem_used_gb": 2.55,
+    "mem": 77.5,
+    "mem_used_gb": 2.99,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 64.3,
-    "threads": 629,
+    "proc_mem_mb": 142.0,
+    "threads": 1254,
     "proc_cpu": 0.0,
-    "net_rx": 108803072,
-    "net_tx": 87435264,
-    "down_kbps": 339.3,
-    "up_kbps": 234.6,
-    "disk_free_gb": 33.5,
+    "net_rx": 2257827840,
+    "net_tx": 1328553984,
+    "down_kbps": 37.8,
+    "up_kbps": 30.9,
+    "disk_free_gb": 28.3,
     "load": [
-      24.32,
-      39.9,
-      40.83
+      4.32,
+      5.05,
+      9.1
     ],
     "cores": 8
   },
-  "disk_mb": 91.5,
+  "disk_mb": 148.3,
   "github": {
-    "state": "off",
-    "error": "",
+    "state": "error",
+    "error": "RuntimeError: error: RPC failed; HTTP 408 curl 22 The requested URL returned error: 408\nsend-pack: unexpected disconnect while reading sideband packet\nfatal: the remote end hung up unexpectedly",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 0.0,
-    "next_sync_s": 285,
+    "next_sync_s": 294,
     "commits": 0
   },
   "last_sample": {
     "type": "archive Q&A",
-    "topic": "openlifescienceai/medmcqa",
-    "problem": "Let's practise this one: A patient on amphotericin B develops hypokalemia of 2,3 meq/l. K+ supplementation required:(AIIMS Nov 2013, Nov 2012) A) 40 mEq over 24 hours B) 60 mEq over 24 hours C) 80 mEq over 24 hours D) 120-160 mEq over 24 hours Fill in the blank in this worked solution: Let's walk through it together. Answer: _____ Explanation: Ans. d. 120-160 mEq over 24 hours (Ref: Cecil\u2026",
-    "solution": "The blank is: D) 120-160 mEq over 24 hours Let's walk through it together. Answer: D) 120-160 mEq over 24 hours Explanation: Ans. d. 120-160 mEq over 24 hours (Ref: Cecil Textbook of Medicine by Goldmann / Ausiello, Renal and Genitourinary Diseases 22/e p685)Except in unusual circumstances, the total amount of potassium administered daily should not exceed 200 mEq.Potassium SupplementationA\u2026",
-    "source": "huggingface"
+    "topic": "stack exchange dump",
+    "problem": "Q: Class exercise: Possible Duplicate: Whether variable name in any programming language takes memory space I was just reading about memory allocation, and can't help wonder this question: Do both ``` int x = 4; ``` and ``` int this_is_really_really_long_name_for_an_integer_variable = 4; ``` occupy same amount of memory (the total memory occupied by the variable. not just `sizeof(int)`) I\u2026",
+    "solution": "A: Let's walk through it together. In general they occupy the same amount of space, i.e. `sizeof(int)`. However, one could argue that when building an object file with additional symbols for debugging the ratio is different. The amount of data which the variable stores does not change but the debugging symbols occupy more space in case of the longer variable name. Consider a following example.\u2026",
+    "source": "stackexchange"
   }
 }

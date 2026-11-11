@@ -5,14 +5,14 @@ This file and `stats.json` are rewritten on every sync.
 
 | | |
 |---|---|
-| Text records (originals + DataGen variants) | **248,201** (1,505 originals, 246,696 variants) |
-| Web images (free licences, with attribution) | **393** |
+| Text records (originals + DataGen variants) | **315,657** (1,839 originals, 313,818 variants) |
+| Web images (free licences, with attribution) | **436** |
 | Generated detection images (boxes, polygons, captions, VQA) | **14,064** |
 | Robot VLA episodes (frames + actions + instruction) | **14,064** (173,566 frames) |
-| Topics explored / known | 1,773 / 109,914 |
-| Approx. text tokens | 110,586,418 |
-| Running since | 2026-11-10T18:20:17 |
-| Updated | 2026-11-10T18:20:49 |
+| Topics explored / known | 2,743 / 109,914 |
+| Approx. text tokens | 151,147,129 |
+| Running since | 2026-11-11T11:03:33 |
+| Updated | 2026-11-11T11:09:06 |
 
 ## Layout
 - `text/*.jsonl.gz` - one JSON object per line: `messages` (chat SFT), `problem`, `solution`, `topic`, `source`, `url`, `license`, `quality_score`, DataGen fields.
