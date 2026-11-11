@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 25.4,
+  "disk_free_gb": 25.6,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794376656.589798,
   "started_iso": "2026-11-11T11:27:36",
-  "updated": 1794377915.0508978,
-  "updated_iso": "2026-11-11T11:48:35",
-  "uptime_s": 1258,
+  "updated": 1794377968.41086,
+  "updated_iso": "2026-11-11T11:49:28",
+  "uptime_s": 1312,
   "workers": 100,
   "effective_workers": 100,
   "in_flight": 100,
@@ -18,7 +18,7 @@
     "text": 43,
     "archive": 43
   },
-  "waiting": 98,
+  "waiting": 97,
   "processes": 1,
   "fields": {
     "general": 114943,
@@ -91,7 +91,7 @@
     "seed_concepts": 0
   },
   "tokens": 268657691,
-  "per_min": 291.9,
+  "per_min": 170.2,
   "topics": {
     "known": 109914,
     "explored": 2812,
@@ -213,43 +213,43 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794377915.050121,
-    "cpu": 49.1,
+    "time": 1794377968.410097,
+    "cpu": 29.9,
     "cpu_cores": [
-      49.0,
-      43.9,
-      38.4,
-      38.2,
-      60.1,
-      59.2,
-      54.7,
-      49.3
+      17.8,
+      14.4,
+      13.3,
+      10.8,
+      50.7,
+      48.1,
+      51.2,
+      32.5
     ],
-    "mem": 75.5,
-    "mem_used_gb": 3.17,
+    "mem": 72.5,
+    "mem_used_gb": 3.31,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 55.1,
+    "proc_mem_mb": 153.0,
     "threads": 104,
     "proc_cpu": 0.0,
-    "net_rx": 4583105536,
-    "net_tx": 3057021952,
-    "down_kbps": 3843.9,
-    "up_kbps": 1989.3,
-    "disk_free_gb": 25.7,
+    "net_rx": 4820183040,
+    "net_tx": 3205017600,
+    "down_kbps": 3932.2,
+    "up_kbps": 2017.4,
+    "disk_free_gb": 25.5,
     "load": [
-      6.39,
-      4.82,
-      5.31
+      3.93,
+      4.42,
+      5.13
     ],
     "cores": 8
   },
-  "disk_mb": 60.5,
+  "disk_mb": 36.7,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 1794377913.977792,
-    "next_sync_s": 225,
+    "next_sync_s": 171,
     "commits": 2
   },
   "last_sample": {
