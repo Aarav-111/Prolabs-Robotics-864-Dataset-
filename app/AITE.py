@@ -5892,9 +5892,19 @@ RAG_STOP = set("a an the and or of to in on for with by is are was were be been 
                "whom how why when where do does did can could should would will shall may might must i you he she we they "
                "me my your our their its as at from into about than then so if not no yes please explain tell give show "
                "find solve use using there here have has had any some all each".split())
-RAG_SYSTEM = ("You answer questions using the numbered sources from the user's dataset. Use them when they are relevant and "
-              "cite them like [1] or [2]. Be correct and clear; show the steps for maths and code. If the sources do not "
-              "contain the answer, say so in one short line, then answer from your own knowledge.")
+RAG_SYSTEM = ("You are AITE's helpful assistant. Answer the user's question in your own words, clearly and correctly, "
+              "formatted in Markdown: start with a one-sentence direct answer, then use short paragraphs, '## ' headings or "
+              "'- ' bullet points where they help, numbered steps for maths, and fenced code blocks (```language) for code. "
+              "Combine two things: the numbered sources from the user's dataset AND your own knowledge. Use the sources that "
+              "are really about the question and cite them like [1]; add everything useful you know yourself that they miss "
+              "(definitions, background, examples, better methods). Never copy a source word for word and never start with "
+              "'A:' or 'Answer:'. If no source is about the question, ignore them all and answer fully from your own knowledge.")
+RAG_CHAT_SYSTEM = ("You are AITE's friendly assistant for a large dataset of questions and answers about maths, science, "
+                   "programming, robotics, medicine and more. Reply briefly and warmly in Markdown, and invite the user to ask "
+                   "a question about any of those topics.")
+RAG_SMALLTALK = re.compile(r"^\s*(hi+|hello+|hey+|yo|hiya|howdy|sup|thanks?( you)?|thank u|thx|ok(ay)?|cool|nice|great|bye|"
+                           r"good (morning|afternoon|evening|night)|how are you( doing)?|who are you|what are you|"
+                           r"what can you do|help)\s*[!.?]*\s*$", re.I)
 
 
 def _git(cwd, *args, timeout=1800):
@@ -6071,6 +6081,7 @@ class RagIndex:
         return " OR ".join('"' + t.replace('"', "") + '"' for t in toks)
 
     def search(self, text, k=6, field=None):
+        """The k best DIFFERENT records: DataGen variants of one question count once (the best-scoring one)."""
         q = self.query_of(text)
         if not q:
             return []
@@ -6082,13 +6093,24 @@ class RagIndex:
             sql += " AND field IN (" + ",".join("?" * len(fl)) + ")"
             args += fl
         sql += " ORDER BY s LIMIT ?"
-        args.append(int(k))
+        args.append(int(k) * 8)
         with self.lock:
             try:
                 rows = self.db.execute(sql, args).fetchall()
             except Exception:
                 return []
-        return [dict(zip(self.COLS + ("score",), r)) for r in rows]
+        out, seen = [], set()
+        for r in rows:
+            h = dict(zip(self.COLS + ("score",), r))
+            key = re.sub(r"\W+", " ", h["title"].lower()).strip()[:90] or h["rid"]
+            akey = re.sub(r"\W+", " ", h["a"].lower()).strip()[:160]
+            if key in seen or akey in seen:
+                continue
+            seen.update((key, akey))
+            out.append(h)
+            if len(out) >= int(k):
+                break
+        return out
 
     def close(self):
         try:
@@ -6097,16 +6119,76 @@ class RagIndex:
             pass
 
 
+def clip(s, n):
+    """Like shorten, but keeps line breaks (code and steps stay readable)."""
+    s = re.sub(r"\n{3,}", "\n\n", str(s or "").strip())
+    return s if len(s) <= n else s[:n].rsplit(" ", 1)[0] + "…"
+
+
+def rag_relevant(question, hits):
+    """Keeps only sources that share enough real words with the question (a greeting must not pull in a code sample)."""
+    terms = [t for t in re.findall(r"[^\W_]+", question.lower()) if t not in RAG_STOP and len(t) > 2]
+    if not terms:
+        return []
+    need = 1 if len(terms) <= 2 else 2
+    out = []
+    for h in hits:
+        head = (h["title"] + " " + h["q"][:600] + " " + h["topic"] + " " + h["field"]).lower()
+        if sum(1 for t in terms if t in head) >= need:
+            out.append(h)
+    return out
+
+
+_TEX_SYM = {"cdot": "·", "times": "×", "div": "÷", "pm": "±", "mp": "∓", "le": "≤", "leq": "≤", "ge": "≥", "geq": "≥",
+            "neq": "≠", "ne": "≠", "approx": "≈", "equiv": "≡", "infty": "∞", "to": "→", "rightarrow": "→", "Rightarrow": "⇒",
+            "leftarrow": "←", "iff": "⇔", "implies": "⇒", "in": "∈", "notin": "∉", "subset": "⊂", "subseteq": "⊆", "cup": "∪",
+            "cap": "∩", "forall": "∀", "exists": "∃", "partial": "∂", "nabla": "∇", "int": "∫", "iint": "∬", "oint": "∮",
+            "sum": "Σ", "prod": "Π", "sqrt": "√", "alpha": "α", "beta": "β", "gamma": "γ", "delta": "δ", "epsilon": "ε",
+            "varepsilon": "ε", "theta": "θ", "lambda": "λ", "mu": "μ", "nu": "ν", "pi": "π", "rho": "ρ", "sigma": "σ", "tau": "τ",
+            "phi": "φ", "varphi": "φ", "chi": "χ", "psi": "ψ", "omega": "ω", "Gamma": "Γ", "Delta": "Δ", "Theta": "Θ",
+            "Lambda": "Λ", "Sigma": "Σ", "Phi": "Φ", "Psi": "Ψ", "Omega": "Ω", "ldots": "…", "cdots": "⋯", "dots": "…",
+            "circ": "∘", "degree": "°", "angle": "∠", "perp": "⊥", "parallel": "∥", "mid": "|", "quad": "  ", "qquad": "    "}
+_SUP = str.maketrans("0123456789+-=()niax", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿⁱᵃˣ")
+_SUB = str.maketrans("0123456789+-=()aeoxijn", "₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎ₐₑₒₓᵢⱼₙ")
+
+
+def tex_pretty(s):
+    """LaTeX maths written by the model -> readable text (fractions, roots, powers, Greek letters, symbols)."""
+    s = re.sub(r"\$\$|\\\[|\\\]|\\\(|\\\)", "", s)
+    s = re.sub(r"(?<!\\)\$", "", s)
+    s = re.sub(r"\\(?:left|right|big|Big|bigg|Bigg)\s*([()\[\]|.])", lambda m: "" if m.group(1) == "." else m.group(1), s)
+    s = re.sub(r"\\(?:text|mathrm|mathbf|mathit|operatorname|textbf)\{([^{}]*)\}", r"\1", s)
+    for _ in range(3):
+        s = re.sub(r"\\[dt]?frac\{([^{}]*)\}\{([^{}]*)\}",
+                   lambda m: (m.group(1) if re.fullmatch(r"[\w.]+", m.group(1)) else f"({m.group(1)})") + "/" +
+                             (m.group(2) if re.fullmatch(r"[\w.]+", m.group(2)) else f"({m.group(2)})"), s)
+        s = re.sub(r"\\sqrt\{([^{}]*)\}", lambda m: "√" + (m.group(1) if re.fullmatch(r"\w+", m.group(1)) else f"({m.group(1)})"), s)
+    s = re.sub(r"\^\{([0-9+\-=()niax]+)\}", lambda m: m.group(1).translate(_SUP), s)
+    s = re.sub(r"\^([0-9n])", lambda m: m.group(1).translate(_SUP), s)
+    s = re.sub(r"_\{([0-9+\-=()aeoxijn]+)\}", lambda m: m.group(1).translate(_SUB), s)
+    s = re.sub(r"_([0-9])", lambda m: m.group(1).translate(_SUB), s)
+    s = re.sub(r"\\(sin|cos|tan|cot|sec|csc|ln|log|exp|lim|max|min|det|arcsin|arccos|arctan|sinh|cosh|tanh)\b", r"\1", s)
+    s = re.sub(r"\\([A-Za-z]+)", lambda m: _TEX_SYM.get(m.group(1), m.group(1)), s)
+    s = s.replace("\\,", " ").replace("\\;", " ").replace("\\!", "").replace("\\\\", " ").replace("{", "").replace("}", "")
+    return re.sub(r"[ \t]{2,}", " ", s)
+
+
+def tidy_model_answer(a):
+    a = re.sub(r"^\s*(A|Answer|Response)\s*:\s*", "", str(a or "").strip())
+    return a.strip()
+
+
 def rag_messages(question, hits, history=(), max_chars=6000):
     """The question with its numbered sources, as chat messages for the model."""
     parts, used = [], 0
     for i, h in enumerate(hits, 1):
-        block = f"[{i}] {h['title']}  ({h['field'] or h['topic']} · {h['source']})\nQ: {shorten(h['q'], 900)}\nA: {shorten(h['a'], 1400)}"
+        block = (f"[{i}] {h['title']}  ({h['field'] or h['topic']} · {h['source'].split(' · ')[0]})\n"
+                 f"Question: {clip(h['q'], 900)}\nAnswer: {clip(h['a'], 1600)}")
         if used + len(block) > max_chars and parts:
             break
         parts.append(block)
         used += len(block)
-    ctx = "\n\n".join(parts) if parts else "(no matching records in the dataset)"
+    ctx = "\n\n---\n\n".join(parts) if parts else "(no matching records in the dataset - answer from your own knowledge)"
     msgs = [m for m in list(history)[-6:] if m.get("role") in ("user", "assistant")]
     return msgs + [{"role": "user", "content": f"Sources from my dataset:\n\n{ctx}\n\nQuestion: {question}"}]
 
@@ -6116,7 +6198,7 @@ def rag_extractive(question, hits):
     if not hits:
         return "Nothing in the dataset matches this yet - Agent mode keeps collecting, so try again later or rephrase."
     h = hits[0]
-    return f"Closest record in your dataset [1]:\n\n{h['title']}\n\n{shorten(h['a'], 2500)}"
+    return f"## {h['title']}\n\nClosest record in your dataset [1]:\n\n{clip(h['a'], 3000)}"
 
 
 def model_downloaded(mid):
@@ -6303,7 +6385,9 @@ def cli_rag_update(root, offline=False):
     idx.close()
     every = 60 * int(st.get("kaggle_every_min", 60))
     if not offline and st.get("kaggle_enabled", True):
-        if time.time() - float(stat.get("kaggle_try_t", 0) or 0) > (every if stat.get("kaggle_ok") is not False else 600):
+        login_fixed = stat.get("kaggle_ok") is False and "login" in str(stat.get("kaggle_msg", "")).lower() and kaggle_logged_in()
+        wait = every if stat.get("kaggle_ok") is not False else 600  # a failed upload is retried after 10 minutes
+        if login_fixed or time.time() - float(stat.get("kaggle_try_t", 0) or 0) > wait:
             put(state="kaggle")
             jlog(f"Kaggle: uploading a new version of {st.get('kaggle_dataset')}…")
             t0 = time.time()
@@ -6311,7 +6395,8 @@ def cli_rag_update(root, offline=False):
             jlog(f"Kaggle: {kmsg} ({time.time() - t0:.1f} s)")
             put(state="done", kaggle_ok=kok, kaggle_msg=kmsg, kaggle_try_t=time.time(), **({"kaggle_t": time.time()} if kok else {}))
         else:
-            jlog(f"Kaggle: next version in {int((every - (time.time() - float(stat.get('kaggle_try_t', 0)))) // 60)} min")
+            left = int((wait - (time.time() - float(stat.get('kaggle_try_t', 0)))) // 60) + 1
+            jlog(f"Kaggle: next try in {left} min" + (" (" + str(stat.get("kaggle_msg", "")) + ")" if stat.get("kaggle_ok") is False else ""))
     jlog("background update finished")
     try:
         os.remove(pidf)
@@ -8687,21 +8772,32 @@ def main_gui():
             t0 = time.time()
             try:
                 vlog(f"QUESTION  {q!r}" + (f"  · fields = {', '.join(field)}" if field else "  · ALL fields"))
-                ix = rag_index()
-                fts = RagIndex.query_of(q)
-                vlog(f"search terms ({len(fts.split(' OR ')) if fts else 0}): {fts or '(none - only stop words)'}")
-                turn["hits"] = ix.search(q, int(st["rag_k"]), field)
-                turn["search_ms"] = int((time.time() - t0) * 1000)
-                vlog(f"BM25 full-text search over {fmt_n(rg['status'].get('count', 0))} records: {len(turn['hits'])} matches "
-                     f"in {turn['search_ms']} ms (best {st['rag_k']} kept)")
-                for i, h in enumerate(turn["hits"], 1):
-                    vlog(f"   [{i}] score {-h['score']:.2f}  {h['field'] or h['topic'] or 'general'} · {h['source']}  "
-                         f"{shorten(h['title'], 90)}  ({len(h['q']) + len(h['a']):,} chars)")
+                chat = bool(RAG_SMALLTALK.match(q))
+                if chat:
+                    vlog("small talk (greeting / thanks): no dataset search, the model just replies")
+                else:
+                    ix = rag_index()
+                    fts = RagIndex.query_of(q)
+                    vlog(f"search terms ({len(fts.split(' OR ')) if fts else 0}): {fts or '(none - only stop words)'}")
+                    raw = ix.search(q, int(st["rag_k"]), field)
+                    turn["search_ms"] = int((time.time() - t0) * 1000)
+                    vlog(f"BM25 full-text search over {fmt_n(rg['status'].get('count', 0))} records: {len(raw)} different "
+                         f"records in {turn['search_ms']} ms (DataGen variants of one question count once)")
+                    turn["hits"] = rag_relevant(q, raw)
+                    for i, h in enumerate(raw, 1):
+                        vlog(f"   {'KEEP' if h in turn['hits'] else 'drop'}  score {-h['score']:.2f}  {h['field'] or h['topic'] or 'general'}"
+                             f" · {h['source']}  {shorten(h['title'], 80)}  ({len(h['q']) + len(h['a']):,} chars)")
+                    vlog(f"relevance check: {len(turn['hits'])} of {len(raw)} records are about the question"
+                         + ("" if turn["hits"] else " - the model answers from its own knowledge"))
                 if use_model:
                     turn["state"] = "thinking"
                     rg["rev"] += 1
-                    msgs = rag_messages(q, turn["hits"], history, int(st["rag_context_chars"]))
-                    n_ch = sum(len(m_["content"]) for m_ in msgs) + len(RAG_SYSTEM)
+                    if chat:
+                        msgs = [m_ for m_ in history[-4:]] + [{"role": "user", "content": q}]
+                    else:
+                        msgs = rag_messages(q, turn["hits"], history, int(st["rag_context_chars"]))
+                    sysmsg = RAG_CHAT_SYSTEM if chat else RAG_SYSTEM
+                    n_ch = sum(len(m_["content"]) for m_ in msgs) + len(sysmsg)
                     vlog(f"prompt: {len(msgs)} messages ({len(history) // 2} earlier turns), {n_ch:,} characters ≈ {n_ch // 4:,} "
                          f"tokens · source limit {st['rag_context_chars']:,} chars")
                     w_ = rg.get("worker")
@@ -8715,14 +8811,16 @@ def main_gui():
                         vlog(f"model loaded in {time.time() - t1:.1f} s" + (f" - error: {wk.error}" if wk.error else ""))
                     vlog(f"generating: up to {st['rag_tokens']} tokens, temperature {st['rag_temp']}…")
                     t2 = time.time()
-                    turn["a"] = wk.ask("before", msgs, int(st["rag_tokens"]), temp=float(st["rag_temp"]), system=RAG_SYSTEM)
+                    turn["a"] = tidy_model_answer(wk.ask("before", msgs, int(st["rag_tokens"]), temp=float(st["rag_temp"]),
+                                                         system=sysmsg))
                     dt = max(0.01, time.time() - t2)
                     est = max(1, len(turn["a"]) // 4)
                     cites = sorted(set(re.findall(r"\[(\d+)\]", turn["a"])), key=int)
                     vlog(f"answer: {len(turn['a']):,} chars ≈ {est:,} tokens in {dt:.1f} s ≈ {est / dt:.0f} tokens/s · cites "
                          + (", ".join("[" + c + "]" for c in cites) or "no sources"))
                 else:
-                    turn["a"] = rag_extractive(q, turn["hits"])
+                    turn["a"] = ("Hi! Ask me anything about maths, science, programming, robotics, medicine and more - "
+                                 "I search ALL your data." if chat else rag_extractive(q, turn["hits"]))
                     vlog("records-only answer: quoting the best match (no model used)")
             except Exception as e:
                 vlog(f"ERROR {type(e).__name__}: {e}")
@@ -8732,9 +8830,77 @@ def main_gui():
             rg["busy"], rg["rev"] = False, rg["rev"] + 1
         threading.Thread(target=work, daemon=True).start()
 
+    def md_inline(t, text, base):
+        """**bold**, `code` and [1] citations inside one line."""
+        for part in re.split(r"(\*\*[^*\n]+\*\*|`[^`\n]+`|\[\d+\])", text):
+            if not part:
+                continue
+            if part.startswith("**") and part.endswith("**") and len(part) > 4:
+                t.insert("end", part[2:-2], (base, "md_b"))
+            elif part.startswith("`") and part.endswith("`") and len(part) > 2:
+                t.insert("end", part[1:-1], (base, "md_ic"))
+            elif re.fullmatch(r"\[\d+\]", part):
+                t.insert("end", part, (base, "md_cite"))
+            else:
+                t.insert("end", part, base)
+
+    def md_insert(t, text):
+        """Shows a Markdown answer formatted: headings, bullet and numbered lists, bold, inline code, code blocks."""
+        in_code = False
+        for ln in str(text).replace("\r", "").split("\n"):
+            st_ln = ln.strip()
+            if st_ln.startswith("```"):
+                in_code = not in_code
+                lang = st_ln[3:].strip()
+                if in_code and lang:
+                    t.insert("end", lang + "\n", "md_lang")
+                continue
+            if in_code:
+                t.insert("end", ln + "\n", "md_code")
+                continue
+            if st_ln in ("\\[", "\\]", "$$"):
+                continue  # display-maths fences
+            if re.search(r"\\[A-Za-z]+|\$|\^\{|_\{", ln):
+                ln = tex_pretty(ln)
+                st_ln = ln.strip()
+            m = re.match(r"^(#{1,4})\s+(.*)", st_ln)
+            if m:
+                md_inline(t, m.group(2).strip("# "), f"md_h{min(3, len(m.group(1)))}")
+                t.insert("end", "\n")
+                continue
+            m = re.match(r"^\s*[-*•]\s+(.*)", ln)
+            if m:
+                t.insert("end", "•  ", "md_li")
+                md_inline(t, m.group(1), "md_li")
+                t.insert("end", "\n", "md_li")
+                continue
+            m = re.match(r"^\s*(\d+)[.)]\s+(.*)", ln)
+            if m:
+                t.insert("end", f"{m.group(1)}.  ", "md_li")
+                md_inline(t, m.group(2), "md_li")
+                t.insert("end", "\n", "md_li")
+                continue
+            if not st_ln:
+                t.insert("end", "\n", "md_gap")
+                continue
+            md_inline(t, ln, "a")
+            t.insert("end", "\n", "a")
+
     def render_chat():
         chat_t.configure(state="normal")
         chat_t.delete("1.0", "end")
+        mono = font(-2, mono=True)
+        chat_t.tag_configure("md_h1", font=font(4, True), foreground=T["text"], spacing1=10, spacing3=4)
+        chat_t.tag_configure("md_h2", font=font(2, True), foreground=T["text"], spacing1=8, spacing3=3)
+        chat_t.tag_configure("md_h3", font=font(0, True), foreground=T["text"], spacing1=6, spacing3=2)
+        chat_t.tag_configure("md_li", font=font(-1), foreground=T["text"], lmargin1=14, lmargin2=34, spacing1=2)
+        chat_t.tag_configure("md_b", font=font(-1, True))
+        chat_t.tag_configure("md_ic", font=mono, background=T["soft"], foreground=T["text"])
+        chat_t.tag_configure("md_code", font=mono, background=T["soft"], foreground=T["text"], lmargin1=16, lmargin2=16,
+                             rmargin=16, spacing1=0, spacing3=0)
+        chat_t.tag_configure("md_lang", font=font(-4, True), foreground=T["faint"], background=T["soft"], lmargin1=16, spacing1=6)
+        chat_t.tag_configure("md_cite", font=font(-3, True), foreground=T["blue"])
+        chat_t.tag_configure("md_gap", font=font(-6))
         chat_t.tag_configure("q", font=font(0, True), foreground=T["text"], spacing1=10)
         chat_t.tag_configure("meta", font=font(-4), foreground=T["faint"])
         chat_t.tag_configure("a", font=font(-1), foreground=T["text"])
@@ -8753,11 +8919,13 @@ def main_gui():
             if t_["state"] == "thinking":
                 chat_t.insert("end", f"{len(t_['hits'])} matching records found · {t_['model']} is writing the answer…\n", "meta")
             else:
-                chat_t.insert("end", ("AI answer · " + t_["model"] if t_["model"] else "From your dataset") +
+                how = ("dataset + the model's own knowledge" if t_["hits"] else "the model's own knowledge (nothing in the dataset "
+                       "was about this)") if t_["model"] else "from your dataset"
+                chat_t.insert("end", (f"AI answer · {t_['model']} · " if t_["model"] else "") + how +
                               f" · {t_.get('secs', 0):.1f} s\n", "meta")
-                chat_t.insert("end", t_["a"].strip() + "\n", "a")
+                md_insert(chat_t, t_["a"].strip())
             if t_["hits"]:
-                chat_t.insert("end", "\nSources\n", "meta")
+                chat_t.insert("end", "\nSources from your dataset\n", "meta")
                 for i, h in enumerate(t_["hits"], 1):
                     chat_t.insert("end", f"[{i}] {shorten(h['title'], 110)}  ", "src")
                     chat_t.insert("end", f"{h['field'] or h['topic'] or 'general'} · {h['source']}" + (f" · {h['license']}" if h["license"] else ""), "fld")
