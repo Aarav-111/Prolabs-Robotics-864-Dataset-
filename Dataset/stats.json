@@ -2,43 +2,43 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 25.6,
+  "disk_free_gb": 26.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
-  "started": 1794376656.589798,
-  "started_iso": "2026-11-11T11:27:36",
-  "updated": 1794377968.41086,
-  "updated_iso": "2026-11-11T11:49:28",
-  "uptime_s": 1312,
-  "workers": 100,
-  "effective_workers": 100,
-  "in_flight": 100,
+  "started": 1794381222.025981,
+  "started_iso": "2026-11-11T12:43:42",
+  "updated": 1794382910.923692,
+  "updated_iso": "2026-11-11T13:11:50",
+  "uptime_s": 1689,
+  "workers": 256,
+  "effective_workers": 256,
+  "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 14,
-    "text": 43,
-    "archive": 43
+    "web_images": 24,
+    "text": 116,
+    "archive": 116
   },
-  "waiting": 97,
+  "waiting": 235,
   "processes": 1,
   "fields": {
-    "general": 114943,
-    "mathematics": 91312,
-    "computer science": 64706,
-    "engineering": 40260,
-    "physics": 35061,
-    "medicine": 32878,
-    "economics and finance": 23814,
-    "biology": 23124,
-    "chemistry": 21715,
+    "mathematics": 194293,
+    "general": 134751,
+    "computer science": 109492,
+    "engineering": 79964,
+    "physics": 71823,
+    "medicine": 45391,
+    "chemistry": 45274,
+    "statistics": 43381,
+    "earth and space": 42204,
+    "biology": 35451,
+    "economics and finance": 31045,
     "machine learning": 20661,
-    "earth and space": 14582,
-    "statistics": 12839,
-    "psychology": 8923,
-    "programming": 8233,
-    "materials science": 7162,
-    "humanities": 6976,
+    "humanities": 19764,
+    "materials science": 18082,
+    "programming": 10368,
+    "psychology": 9235,
     "robotics": 3515,
-    "general knowledge": 356
+    "general knowledge": 754
   },
   "topic_fields": {
     "": 7597,
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 5693,
-    "openlifescienceai/medmcqa": 1012,
+    "stack exchange dump": 11962,
+    "openlifescienceai/medmcqa": 3072,
     "qiaojin/PubMedQA": 96,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 526943,
-    "originals": 2963,
-    "variants": 523980,
-    "web_images": 484,
+    "text": 911331,
+    "originals": 5121,
+    "variants": 906210,
+    "web_images": 827,
     "synthetic_images": 14064,
-    "images": 14548,
+    "images": 14891,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 268657691,
-    "tasks_done": 25843,
+    "tokens": 459905790,
+    "tasks_done": 27112,
     "tasks_failed": 5,
     "topics_added": 108651,
-    "preference": 1158
+    "preference": 1800
   },
   "by_kind": {
-    "archive": 123,
-    "text": 52,
-    "web_images": 42,
+    "archive": 417,
+    "text": 349,
+    "web_images": 67,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 268657691,
-  "per_min": 170.2,
+  "tokens": 459905790,
+  "per_min": 12851.5,
   "topics": {
     "known": 109914,
-    "explored": 2812,
-    "queued": 107059,
+    "explored": 3298,
+    "queued": 106500,
     "space": 6594840,
     "next": [
       [
@@ -119,14 +119,6 @@
         "biology"
       ],
       [
-        "periodic trends",
-        "chemistry"
-      ],
-      [
-        "biochemistry",
-        "chemistry"
-      ],
-      [
         "decision making",
         "psychology"
       ],
@@ -145,118 +137,126 @@
       [
         "cognitive psychology",
         "psychology"
+      ],
+      [
+        "nanomaterials",
+        "materials science"
+      ],
+      [
+        "semantics",
+        "humanities"
       ]
     ],
     "recent": [
       [
-        "patient information transfer",
-        "medicine",
-        21138
+        "hardware-software co-design",
+        "computer science",
+        6616
       ],
       [
-        "mistake",
-        "",
-        35409
+        "supersaturated vapor",
+        "chemistry",
+        0
       ],
       [
-        "algebra",
+        "cell problems",
         "mathematics",
-        30437
+        5189
       ],
       [
-        "static dielectric constant",
-        "engineering",
-        5861
-      ],
-      [
-        "advanced mathematics",
-        "",
-        18133
-      ],
-      [
-        "shortest path algorithms",
-        "computer science",
-        6064
-      ],
-      [
-        "turbo decoding",
-        "computer science",
-        11865
-      ],
-      [
-        "non-equilibrium thermodynamics",
+        "inductive sensors",
         "physics",
-        10351
+        0
       ],
       [
-        "occupational justice",
-        "medicine",
-        2661
+        "interstellar extinction",
+        "physics",
+        5548
       ],
       [
-        "cartesian genetic programming",
+        "environmental identity",
+        "earth and space",
+        3567
+      ],
+      [
+        "malware analysis",
         "computer science",
-        3621
+        4094
       ],
       [
-        "molding (decorative)",
-        "",
-        2455
+        "charts",
+        "computer science",
+        0
       ],
       [
-        "household savings",
-        "economics and finance",
-        2354
+        "multi-robot systems",
+        "engineering",
+        3096
+      ],
+      [
+        "dynamic pricing",
+        "statistics",
+        2259
+      ],
+      [
+        "capillary isoelectric focusing",
+        "engineering",
+        0
+      ],
+      [
+        "paramagnetic impurities",
+        "chemistry",
+        1845
       ]
     ],
-    "in_progress": 43,
+    "in_progress": 116,
     "focus_left": 0
   },
   "system": {
-    "time": 1794377968.410097,
-    "cpu": 29.9,
+    "time": 1794382910.922543,
+    "cpu": 41.7,
     "cpu_cores": [
-      17.8,
-      14.4,
-      13.3,
-      10.8,
-      50.7,
-      48.1,
-      51.2,
-      32.5
+      50.3,
+      46.2,
+      44.7,
+      39.9,
+      48.7,
+      43.9,
+      32.6,
+      27.5
     ],
-    "mem": 72.5,
-    "mem_used_gb": 3.31,
+    "mem": 81.7,
+    "mem_used_gb": 2.66,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 153.0,
-    "threads": 104,
+    "proc_mem_mb": 400.9,
+    "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 4820183040,
-    "net_tx": 3205017600,
-    "down_kbps": 3932.2,
-    "up_kbps": 2017.4,
-    "disk_free_gb": 25.5,
+    "net_rx": 1727234048,
+    "net_tx": 1456299008,
+    "down_kbps": 1116.4,
+    "up_kbps": 629.6,
+    "disk_free_gb": 26.1,
     "load": [
-      3.93,
-      4.42,
-      5.13
+      3.57,
+      4.05,
+      5.26
     ],
     "cores": 8
   },
-  "disk_mb": 36.7,
+  "disk_mb": 129.5,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "RuntimeError: error: RPC failed; HTTP 408 curl 22 The requested URL returned error: 408\nsend-pack: unexpected disconnect while reading sideband packet\nfatal: the remote end hung up unexpectedly",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794377913.977792,
-    "next_sync_s": 171,
-    "commits": 2
+    "last_push": 0.0,
+    "next_sync_s": 292,
+    "commits": 0
   },
   "last_sample": {
-    "type": "archive Q&A",
-    "topic": "stack exchange dump",
-    "problem": "User: Okay, so: I\u2019m teaching chemistry to a home-ed 15 year old. Occasionally we do some practical work, since I believe very strongly that physical science learning should have some real lab work to bring it alive, and also to teach things like observational skills and attention to detail. My background is a PhD in organic chemistry, so I\u2019m familiar with hazard assessment, and all the lab work\u2026",
-    "solution": "Assistant: Here's how it works. I would go with a full fledged error propagation analysis on this one, because without systematic approach you might be guessing forever. So if I look at the calculation process you have the following equation to get from known quantities to the answer: $$X=\\left(\\frac{W_0}{W_e}-1\\right)\\left(\\frac{M_{CuSO_4}}{M_{H_2O}}\\right) \\tag{1}$$ where $W_0$ is the start\u2026",
-    "source": "stackexchange"
+    "type": "web image",
+    "topic": "radar propagation",
+    "problem": "Infrar\u00e9fraction d'un faisceau radar. Lorsque l'air est instable, le faisceau suit une trajectoire plus \u00e9lev\u00e9e que dans une atmosph\u00e8re normale et peut passer au-dessus des cibles o\u00f9 l'op\u00e9rateur peut penser que des cibles \u00e9lev\u00e9es sont en r\u00e9alit\u00e9 plus basses sur l'horizon.",
+    "solution": "CC BY-SA 3.0",
+    "source": "wikimedia commons"
   }
 }
