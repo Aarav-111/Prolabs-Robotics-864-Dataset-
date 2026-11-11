@@ -4083,34 +4083,52 @@ class GitHubSync:
                 used += size
         if not files:
             return True
-        added = 0
-        for rel in files:
-            src, dst = os.path.join(self.root, rel), os.path.join(up, sub, rel)
-            os.makedirs(os.path.dirname(dst), exist_ok=True)
-            try:
-                if os.path.exists(dst):
-                    os.remove(dst)
-                os.link(src, dst)  # a hard link: no second copy on disk
-            except OSError:
-                shutil.copy2(src, dst)
-            added += os.path.getsize(src)
-        self.run(up, "add", "--sparse", "-A", "--", sub or ".")
-        code, _ = self.run(up, "diff", "--cached", "--quiet")
-        if code == 0:
+        c = self.read_counts()
+
+        def stage_and_commit():
+            """Hard-links this batch into the upload copy and commits it on top of what is checked out."""
+            added_ = 0
+            for rel in files:
+                src, dst = os.path.join(self.root, rel), os.path.join(up, sub, rel)
+                os.makedirs(os.path.dirname(dst), exist_ok=True)
+                try:
+                    if os.path.exists(dst):
+                        os.remove(dst)
+                    os.link(src, dst)  # a hard link: no second copy on disk
+                except OSError:
+                    shutil.copy2(src, dst)
+                added_ += os.path.getsize(src)
+            self.run(up, "add", "--sparse", "-A", "--", sub or ".")
+            if self.run(up, "diff", "--cached", "--quiet")[0] == 0:
+                return added_, False
+            msg = (f"AITE agent: {c.get('text', 0):,} text · {c.get('images', 0):,} images · {c.get('vla_episodes', 0):,} VLA "
+                   f"episodes · +{added_ / 2 ** 20:.1f} MB")
+            code_, out_ = self.run(up, "commit", "-q", "-m", msg)
+            if code_ != 0:
+                raise RuntimeError(out_[-300:])
+            return added_, True
+
+        added, changed = stage_and_commit()
+        if not changed:
             self.cleanup_pushed(files)
             return True
-        c = self.read_counts()
-        msg = (f"AITE agent: {c.get('text', 0):,} text · {c.get('images', 0):,} images · {c.get('vla_episodes', 0):,} VLA "
-               f"episodes · +{added / 2 ** 20:.1f} MB")
-        code, out = self.run(up, "commit", "-q", "-m", msg)
-        if code != 0:
-            raise RuntimeError(out[-300:])
-        code, out = self.run(up, "push", "-q", "origin", f"HEAD:{branch}")
-        if code != 0 and ("rejected" in out or "fetch first" in out or "non-fast-forward" in out):
-            self.run(up, "fetch", "-q", "--depth", "1", "origin", branch)
-            self.run(up, "rebase", "-q", "FETCH_HEAD")
+        for attempt in range(3):
             code, out = self.run(up, "push", "-q", "origin", f"HEAD:{branch}")
+            if code == 0 or not ("rejected" in out or "fetch first" in out or "non-fast-forward" in out):
+                break
+            # GitHub moved on (another commit, e.g. the app): start again from GitHub's newest commit and redo this
+            # batch on top. A shallow copy cannot rebase, and old failed commits are simply dropped - their files are
+            # still here (local copies are only deleted after GitHub confirms them).
+            if self.run(up, "fetch", "-q", "--depth", "1", "origin", branch)[0] != 0:
+                break
+            self.run(up, "reset", "-q", "--hard", "FETCH_HEAD")
+            added, changed = stage_and_commit()
+            if not changed:
+                self.cleanup_pushed(files)
+                return True
         if code != 0:
+            self.run(up, "fetch", "-q", "--depth", "1", "origin", branch)
+            self.run(up, "reset", "-q", "--hard", "FETCH_HEAD")  # never let failed commits pile up into one huge push
             raise RuntimeError(out[-300:] or "git push failed")
         _, head = self.run(up, "rev-parse", "HEAD")
         _, remote = self.run(up, "ls-remote", "origin", f"refs/heads/{branch}")
@@ -11072,6 +11090,32 @@ def _selftest():
         check(not any(os.path.exists(os.path.join(os.path.dirname(root3), f)) for f in pushed_text + pushed_imgs[:50])
               and os.path.exists(os.path.join(root3, "stats.json")),
               f"GitHub first: pushed files are gone locally (left: {local_left} newer shard files)")
+        # GitHub moves on between our fetch and our push (e.g. the app was committed): the batch is redone on top
+        other = os.path.join(tmpd, "other_clone")
+        subprocess.run(["git", "clone", "-q", bare2, other], capture_output=True)
+        subprocess.run(["git", "-C", other, "config", "user.email", "t@t"], capture_output=True)
+        subprocess.run(["git", "-C", other, "config", "user.name", "t"], capture_output=True)
+        os.makedirs(os.path.join(root3, "text"), exist_ok=True)
+        with gzip.open(os.path.join(root3, "text", "text-race-000.jsonl.gz"), "wt") as f:
+            f.write(json.dumps({"id": "race1", "type": "text", "problem": "race?", "solution": "ok"}) + "\n")
+        real_run, moved = ag3.github.run, []
+
+        def racing_run(cwd, *args, **kw):
+            if args[:1] == ("push",) and not moved:
+                moved.append(1)
+                os.makedirs(os.path.join(other, "app"), exist_ok=True)
+                open(os.path.join(other, "app", "AITE.py"), "w").write("# new app\n")
+                subprocess.run(["git", "-C", other, "add", "-A"], capture_output=True)
+                subprocess.run(["git", "-C", other, "commit", "-q", "-m", "app"], capture_output=True)
+                subprocess.run(["git", "-C", other, "push", "-q", "origin", "HEAD:main"], capture_output=True)
+            return real_run(cwd, *args, **kw)
+        ag3.github.run = racing_run
+        ok_race = ag3.github.stream(True)
+        ag3.github.run = real_run
+        files4 = subprocess.run(["git", "--git-dir", bare2, "ls-tree", "-r", "--name-only", "main"], capture_output=True, text=True).stdout
+        check(moved and ok_race and "Dataset/text/text-race-000.jsonl.gz" in files4 and "app/AITE.py" in files4
+              and not os.path.exists(os.path.join(root3, "text", "text-race-000.jsonl.gz")),
+              "GitHub moved ahead during a push: batch redone on top, both kept, local copy removed")
     finally:
         SETTINGS_FILE = old_sf
         os.environ.pop("AITE_TEST_REMOTE", None)
