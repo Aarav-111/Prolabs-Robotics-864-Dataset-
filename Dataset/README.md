@@ -1,18 +1,18 @@
 # AITE dataset (live)
 
-Collected continuously by **Prolabs Robotics AITE** - Agent mode, powered by **Parallel Web Technologies** (ProLab Robotics).
+Collected continuously by **Prolabs Robotics AITE** - Agent mode, powered by **Parallel Web Technologies** (Prolabs Robotics).
 This file and `stats.json` are rewritten on every sync.
 
 | | |
 |---|---|
-| Text records (originals + DataGen variants) | **316,721** (1,839 originals, 314,882 variants) |
-| Web images (free licences, with attribution) | **439** |
+| Text records (originals + DataGen variants) | **317,313** (1,840 originals, 315,473 variants) |
+| Web images (free licences, with attribution) | **452** |
 | Generated detection images (boxes, polygons, captions, VQA) | **14,064** |
 | Robot VLA episodes (frames + actions + instruction) | **14,064** (173,566 frames) |
-| Topics explored / known | 2,744 / 109,914 |
-| Approx. text tokens | 151,556,212 |
-| Running since | 2026-11-11T11:03:33 |
-| Updated | 2026-11-11T11:14:08 |
+| Topics explored / known | 2,755 / 109,914 |
+| Approx. text tokens | 151,862,539 |
+| Running since | 2026-11-11T11:20:49 |
+| Updated | 2026-11-11T11:20:57 |
 
 ## Layout
 - `text/*.jsonl.gz` - one JSON object per line: `messages` (chat SFT), `problem`, `solution`, `topic`, `source`, `url`, `license`, `quality_score`, DataGen fields.
