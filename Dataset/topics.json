@@ -1,108 +1,104 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-11T11:11:03",
+"updated": "2026-11-11T11:14:08",
 "total": 109914,
-"done": 2743,
-"in_progress": 106,
+"done": 2744,
+"in_progress": 105,
 "left": 107065,
 "parallel_agents": {
-"running": 22,
+"running": 21,
 "topics": [
 {
-"agent": 3,
+"agent": 2,
 "topic": "overhead transmission lines"
 },
 {
-"agent": 4,
+"agent": 3,
 "topic": "specimen polishing"
 },
 {
-"agent": 5,
+"agent": 4,
 "topic": "humor perception"
 },
 {
-"agent": 7,
+"agent": 6,
 "topic": "plate vibration"
 },
 {
-"agent": 8,
+"agent": 7,
 "topic": "bandit algorithms"
 },
 {
-"agent": 9,
+"agent": 8,
 "topic": "optical illusions"
 },
 {
-"agent": 10,
+"agent": 9,
 "topic": "shortest path algorithms"
 },
 {
-"agent": 11,
+"agent": 10,
 "topic": "polymerization kinetics"
 },
 {
-"agent": 13,
+"agent": 12,
 "topic": "redox titrations"
 },
 {
-"agent": 14,
+"agent": 13,
 "topic": "algebra"
 },
 {
-"agent": 15,
+"agent": 14,
 "topic": "causal loop diagrams"
 },
 {
-"agent": 16,
+"agent": 15,
 "topic": "occupational justice"
 },
 {
-"agent": 19,
+"agent": 18,
 "topic": "multidisciplinary science and engineering research"
 },
 {
-"agent": 22,
+"agent": 21,
 "topic": "bereavement support"
 },
 {
-"agent": 24,
+"agent": 23,
 "topic": "fractional brownian motion"
 },
 {
-"agent": 27,
+"agent": 26,
 "topic": "computational algebra"
 },
 {
-"agent": 31,
+"agent": 30,
 "topic": "coexisting attractors"
 },
 {
-"agent": 33,
+"agent": 32,
 "topic": "astronomical instruments"
 },
 {
-"agent": 35,
+"agent": 34,
 "topic": "lymphatic filariasis"
 },
 {
-"agent": 37,
+"agent": 36,
 "topic": "alpha interferon"
 },
 {
-"agent": 39,
-"topic": "baudolino"
-},
-{
-"agent": 79,
+"agent": 77,
 "topic": "deformation twinning"
 }
 ]
 },
 "fields": {
 "humanities": {
-"done": 102,
+"done": 103,
 "left": 22935,
-"in_progress": 2
+"in_progress": 1
 },
 "medicine": {
 "done": 160,
@@ -186,6 +182,18 @@
 }
 },
 "topics": [
+{
+"topic": "baudolino",
+"field": "humanities",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-11T11:13:06"
+},
 {
 "topic": "red phase",
 "field": "chemistry",
@@ -9937,7 +9945,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 79,
+"agent": 77,
 "records": 2490,
 "images": 42,
 "completed": "2026-11-11T06:32:55"
@@ -33109,7 +33117,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 14,
+"agent": 13,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -35677,7 +35685,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 37,
+"agent": 36,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -228769,7 +228777,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 9,
+"agent": 8,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -284185,7 +284193,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 13,
+"agent": 12,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -307633,7 +307641,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 11,
+"agent": 10,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -317617,7 +317625,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 10,
+"agent": 9,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -328429,7 +328437,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 27,
+"agent": 26,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -473965,7 +473973,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 24,
+"agent": 23,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -607117,7 +607125,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 3,
+"agent": 2,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -613141,7 +613149,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 7,
+"agent": 6,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -684326,18 +684334,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "baudolino",
-"field": "humanities",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 39,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -971581,7 +971577,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 4,
+"agent": 3,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1131409,7 +1131405,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 35,
+"agent": 34,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1157941,7 +1157937,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 16,
+"agent": 15,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1247881,7 +1247877,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 33,
+"agent": 32,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1250809,7 +1250805,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 31,
+"agent": 30,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1279405,7 +1279401,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 22,
+"agent": 21,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1290409,7 +1290405,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 5,
+"agent": 4,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1310437,7 +1310433,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 8,
+"agent": 7,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1310953,7 +1310949,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 15,
+"agent": 14,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1315333,7 +1315329,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 19,
+"agent": 18,
 "records": 0,
 "images": 0,
 "completed": ""

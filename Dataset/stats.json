@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 28.3,
+  "disk_free_gb": 28.2,
   "product": "Parallel Web Technologies",
   "developer": "ProLab Robotics",
   "started": 1794375213.9951968,
   "started_iso": "2026-11-11T11:03:33",
-  "updated": 1794375720.994396,
-  "updated_iso": "2026-11-11T11:12:00",
-  "uptime_s": 507,
+  "updated": 1794375852.412441,
+  "updated_iso": "2026-11-11T11:14:12",
+  "uptime_s": 638,
   "workers": 100,
   "effective_workers": 100,
-  "in_flight": 1133,
+  "in_flight": 1117,
   "busy_by_kind": {
-    "archive": 1111,
-    "text": 21,
+    "archive": 1096,
+    "text": 20,
     "web_images": 1
   },
-  "waiting": 1132,
+  "waiting": 1100,
   "processes": 1,
   "fields": {
     "mathematics": 54711,
@@ -36,7 +36,7 @@
     "psychology": 7840,
     "materials science": 7162,
     "humanities": 6976,
-    "programming": 6830,
+    "programming": 6894,
     "robotics": 3515,
     "general knowledge": 356
   },
@@ -60,28 +60,29 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 2859,
+    "stack exchange dump": 2923,
     "openlifescienceai/medmcqa": 781,
-    "qiaojin/PubMedQA": 96
+    "qiaojin/PubMedQA": 96,
+    "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 316657,
+    "text": 316721,
     "originals": 1839,
-    "variants": 314818,
+    "variants": 314882,
     "web_images": 439,
     "synthetic_images": 14064,
     "images": 14503,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 151535800,
-    "tasks_done": 25324,
+    "tokens": 151556212,
+    "tasks_done": 25340,
     "tasks_failed": 5,
     "topics_added": 108651,
     "preference": 819
   },
   "by_kind": {
-    "archive": 94,
-    "text": 9,
+    "archive": 109,
+    "text": 10,
     "web_images": 26,
     "synthetic_images": 0,
     "vla": 0,
@@ -89,11 +90,11 @@
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 151535800,
-  "per_min": 219.6,
+  "tokens": 151556212,
+  "per_min": 201.3,
   "topics": {
     "known": 109914,
-    "explored": 2743,
+    "explored": 2744,
     "queued": 107065,
     "space": 6594840,
     "next": [
@@ -148,6 +149,11 @@
     ],
     "recent": [
       [
+        "baudolino",
+        "humanities",
+        0
+      ],
+      [
         "red phase",
         "chemistry",
         4110
@@ -201,61 +207,56 @@
         "alveolar bone loss",
         "medicine",
         0
-      ],
-      [
-        "catalytic graphitization",
-        "materials science",
-        0
       ]
     ],
-    "in_progress": 106,
+    "in_progress": 105,
     "focus_left": 0
   },
   "system": {
-    "time": 1794375720.993043,
-    "cpu": 36.6,
+    "time": 1794375852.411318,
+    "cpu": 46.6,
     "cpu_cores": [
-      48.1,
-      44.3,
-      40.4,
-      37.6,
-      37.1,
-      35.2,
-      27.2,
-      23.3
+      50.5,
+      48.2,
+      47.2,
+      43.6,
+      61.5,
+      56.7,
+      37.3,
+      28.4
     ],
     "mem": 81.5,
-    "mem_used_gb": 2.64,
+    "mem_used_gb": 2.61,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 101.9,
+    "proc_mem_mb": 158.0,
     "threads": 1254,
     "proc_cpu": 0.0,
-    "net_rx": 2608885760,
-    "net_tx": 1620752384,
-    "down_kbps": 949.2,
-    "up_kbps": 593.9,
+    "net_rx": 2886339584,
+    "net_tx": 1804673024,
+    "down_kbps": 3766.0,
+    "up_kbps": 2151.7,
     "disk_free_gb": 28.3,
     "load": [
-      4.01,
-      4.56,
-      8.18
+      7.74,
+      6.02,
+      8.24
     ],
     "cores": 8
   },
-  "disk_mb": 126.0,
+  "disk_mb": 76.2,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "RuntimeError: GitHub does not show the new commit yet - local copies kept, retrying next sync",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 1794375719.0896971,
-    "next_sync_s": 126,
+    "next_sync_s": 296,
     "commits": 3
   },
   "last_sample": {
     "type": "archive Q&A",
     "topic": "stack exchange dump",
-    "problem": "\\begin{problem} Let's practise this one: What are weak acids? My chemistry and biology classes skimmed over them briefly but nothing in depth. I understand that an acid is weak if it partially dissociates and breaks down into ionic compounds, but they never stated why. So my question is why do weak acids break down in water? Do strong acids dissociate at all? What if they were in a different\u2026",
-    "solution": "\\begin{solution} Let's walk through it together. What are weak acids? Examples of weak acids in water solution would be acetic acid (main component of vinegar) and ammonium ion (conjugate acid of ammonia). I understand that an acid is weak if it partial dissociates and breaks down into ionic compounds but they never stated why. An acid is weak if not all of the acid molecules ionize into\u2026",
+    "problem": "Q: Possible Duplicate: Whether variable name in any programming language takes memory space I was just reading about memory allocation, and can't help wonder this question: Do both ``` int x = 4; ``` and ``` int this_is_really_really_long_name_for_an_integer_variable = 4; ``` occupy same amount of memory (the total memory occupied by the variable. not just `sizeof(int)`) I understand that this\u2026",
+    "solution": "A: In general they occupy the same amount of space, i.e. `sizeof(int)`. However, one could argue that when building an object file with additional symbols for debugging the ratio is different. The amount of data which the variable stores does not change but the debugging symbols occupy more space in case of the longer variable name. Consider a following example. ``` $ cat short.c && gcc -c\u2026",
     "source": "stackexchange"
   }
 }
