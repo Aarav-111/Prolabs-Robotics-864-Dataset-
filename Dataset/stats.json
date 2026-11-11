@@ -2,39 +2,39 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 26.1,
+  "disk_free_gb": 26.8,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794376656.589798,
   "started_iso": "2026-11-11T11:27:36",
-  "updated": 1794376696.272237,
-  "updated_iso": "2026-11-11T11:28:16",
-  "uptime_s": 40,
+  "updated": 1794377850.498602,
+  "updated_iso": "2026-11-11T11:47:30",
+  "uptime_s": 1194,
   "workers": 100,
   "effective_workers": 100,
   "in_flight": 100,
   "busy_by_kind": {
-    "text": 43,
     "web_images": 14,
+    "text": 43,
     "archive": 43
   },
-  "waiting": 91,
+  "waiting": 86,
   "processes": 1,
   "fields": {
-    "mathematics": 54711,
-    "general": 48436,
-    "computer science": 42312,
-    "engineering": 27404,
+    "general": 114943,
+    "mathematics": 91312,
+    "computer science": 64706,
+    "engineering": 40260,
+    "physics": 35061,
+    "medicine": 32878,
+    "economics and finance": 23814,
+    "biology": 23124,
+    "chemistry": 21569,
     "machine learning": 20661,
-    "chemistry": 20381,
-    "biology": 18115,
     "earth and space": 14582,
-    "economics and finance": 12320,
-    "physics": 11017,
-    "statistics": 10945,
-    "medicine": 8526,
+    "statistics": 12839,
+    "psychology": 8923,
     "programming": 8233,
-    "psychology": 7840,
     "materials science": 7162,
     "humanities": 6976,
     "robotics": 3515,
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 5346,
+    "stack exchange dump": 5547,
     "openlifescienceai/medmcqa": 1012,
     "qiaojin/PubMedQA": 96,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 319375,
-    "originals": 1850,
-    "variants": 317525,
-    "web_images": 454,
+    "text": 526797,
+    "originals": 2963,
+    "variants": 523834,
+    "web_images": 468,
     "synthetic_images": 14064,
-    "images": 14518,
+    "images": 14532,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 152628194,
-    "tasks_done": 25669,
+    "tokens": 268475416,
+    "tasks_done": 25811,
     "tasks_failed": 5,
     "topics_added": 108651,
-    "preference": 1049
+    "preference": 1133
   },
   "by_kind": {
-    "archive": 37,
-    "text": 0,
-    "web_images": 6,
+    "archive": 94,
+    "text": 52,
+    "web_images": 39,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 152628194,
-  "per_min": 3138.1,
+  "tokens": 268475416,
+  "per_min": 1197.5,
   "topics": {
     "known": 109914,
-    "explored": 2760,
-    "queued": 107111,
+    "explored": 2812,
+    "queued": 107059,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "acoustic ecology",
-        "humanities",
-        0
+        "patient information transfer",
+        "medicine",
+        21138
       ],
       [
-        "polymer nanofibers",
-        "materials science",
-        0
-      ],
-      [
-        "optical illusions",
-        "biology",
-        0
-      ],
-      [
-        "transactional analysis",
-        "psychology",
-        0
-      ],
-      [
-        "causal loop diagrams",
-        "statistics",
-        0
-      ],
-      [
-        "fractional brownian motion",
-        "economics and finance",
-        0
-      ],
-      [
-        "computational algebra",
-        "computer science",
-        0
-      ],
-      [
-        "misogyny detection",
-        "computer science",
-        0
-      ],
-      [
-        "linkage (software)",
+        "mistake",
         "",
-        0
+        35409
       ],
       [
-        "heterocyclic chemistry",
-        "chemistry",
-        0
-      ],
-      [
-        "bandit algorithms",
-        "statistics",
-        0
-      ],
-      [
-        "statistical methods in medicine",
+        "algebra",
         "mathematics",
-        0
+        30437
+      ],
+      [
+        "static dielectric constant",
+        "engineering",
+        5861
+      ],
+      [
+        "advanced mathematics",
+        "",
+        18133
+      ],
+      [
+        "shortest path algorithms",
+        "computer science",
+        6064
+      ],
+      [
+        "turbo decoding",
+        "computer science",
+        11865
+      ],
+      [
+        "non-equilibrium thermodynamics",
+        "physics",
+        10351
+      ],
+      [
+        "occupational justice",
+        "medicine",
+        2661
+      ],
+      [
+        "cartesian genetic programming",
+        "computer science",
+        3621
+      ],
+      [
+        "molding (decorative)",
+        "",
+        2455
+      ],
+      [
+        "household savings",
+        "economics and finance",
+        2354
       ]
     ],
     "in_progress": 43,
     "focus_left": 0
   },
   "system": {
-    "time": 1794376696.271654,
-    "cpu": 38.6,
+    "time": 1794377850.497877,
+    "cpu": 40.6,
     "cpu_cores": [
-      22.3,
-      23.0,
-      20.3,
-      16.9,
-      69.0,
-      60.1,
-      53.1,
-      44.1
+      20.2,
+      16.7,
+      12.7,
+      10.5,
+      69.9,
+      65.7,
+      65.7,
+      63.8
     ],
-    "mem": 72.8,
-    "mem_used_gb": 3.26,
+    "mem": 74.6,
+    "mem_used_gb": 3.12,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 206.5,
+    "proc_mem_mb": 747.4,
     "threads": 104,
     "proc_cpu": 0.0,
-    "net_rx": 4019544064,
-    "net_tx": 2452205568,
-    "down_kbps": 276.5,
-    "up_kbps": 158.1,
-    "disk_free_gb": 26.0,
+    "net_rx": 4314291200,
+    "net_tx": 2878703616,
+    "down_kbps": 7390.6,
+    "up_kbps": 3899.0,
+    "disk_free_gb": 26.7,
     "load": [
-      4.12,
-      5.79,
-      8.35
+      4.38,
+      4.33,
+      5.19
     ],
     "cores": 8
   },
-  "disk_mb": 20.0,
+  "disk_mb": 34.2,
   "github": {
-    "state": "off",
+    "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 0.0,
-    "next_sync_s": 291,
-    "commits": 0
+    "last_push": 1794376709.070416,
+    "next_sync_s": 289,
+    "commits": 1
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "d2q9 lattice",
-    "problem": "Schematic of 8 of the 9 nearest-neighbour lattice vectors in the standard D2Q9 lattice used in the two-dimensional version of the Lattice Boltzmann fluid dynamics computer simulation method. Ninth vector is zero vector.",
-    "solution": "CC BY-SA 4.0",
-    "source": "wikimedia commons"
+    "type": "archive Q&A",
+    "topic": "stack exchange dump",
+    "problem": "I\u2019m teaching chemistry to a home-ed 15 year old. Occasionally we do some practical work, since I believe very strongly that physical science learning should have some real lab work to bring it alive, and also to teach things like observational skills and attention to detail. My background is a PhD in organic chemistry, so I\u2019m familiar with hazard assessment, and all the lab work I do with my\u2026",
+    "solution": "I would go with a full fledged error propagation analysis on this one, because without systematic approach you might be guessing forever. So if I look at the calculation process you have the following equation to get from known quantities to the answer: $$X=\\left(\\frac{W_0}{W_e}-1\\right)\\left(\\frac{M_{CuSO_4}}{M_{H_2O}}\\right) \\tag{1}$$ where $W_0$ is the start weight, $W_e$ the end weight and\u2026",
+    "source": "stackexchange"
   }
 }
