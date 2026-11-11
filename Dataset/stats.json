@@ -7,18 +7,18 @@
   "developer": "ProLab Robotics",
   "started": 1794375213.9951968,
   "started_iso": "2026-11-11T11:03:33",
-  "updated": 1794375611.263382,
-  "updated_iso": "2026-11-11T11:10:11",
-  "uptime_s": 397,
+  "updated": 1794375678.188668,
+  "updated_iso": "2026-11-11T11:11:18",
+  "uptime_s": 464,
   "workers": 100,
   "effective_workers": 100,
-  "in_flight": 1154,
+  "in_flight": 1147,
   "busy_by_kind": {
-    "archive": 1131,
+    "archive": 1125,
     "text": 21,
-    "web_images": 2
+    "web_images": 1
   },
-  "waiting": 1138,
+  "waiting": 1134,
   "processes": 1,
   "fields": {
     "mathematics": 54711,
@@ -26,7 +26,7 @@
     "computer science": 42312,
     "engineering": 27404,
     "machine learning": 20661,
-    "chemistry": 18780,
+    "chemistry": 19055,
     "biology": 18115,
     "earth and space": 14582,
     "economics and finance": 12320,
@@ -60,37 +60,37 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 2196,
+    "stack exchange dump": 2471,
     "openlifescienceai/medmcqa": 781,
     "qiaojin/PubMedQA": 96
   },
   "counts": {
-    "text": 315994,
+    "text": 316269,
     "originals": 1839,
-    "variants": 314155,
-    "web_images": 436,
+    "variants": 314430,
+    "web_images": 439,
     "synthetic_images": 14064,
-    "images": 14500,
+    "images": 14503,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 151280180,
-    "tasks_done": 25303,
+    "tokens": 151390099,
+    "tasks_done": 25310,
     "tasks_failed": 5,
     "topics_added": 108651,
     "preference": 819
   },
   "by_kind": {
-    "archive": 74,
+    "archive": 80,
     "text": 9,
-    "web_images": 25,
+    "web_images": 26,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 151280180,
-  "per_min": 1780.6,
+  "tokens": 151390099,
+  "per_min": 165.4,
   "topics": {
     "known": 109914,
     "explored": 2743,
@@ -212,50 +212,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794375611.262451,
-    "cpu": 38.6,
+    "time": 1794375678.1875598,
+    "cpu": 34.1,
     "cpu_cores": [
-      36.3,
-      34.4,
-      31.8,
-      27.4,
-      51.6,
-      49.1,
-      50.5,
-      27.9
+      45.0,
+      45.3,
+      38.7,
+      37.1,
+      31.9,
+      40.4,
+      19.8,
+      14.5
     ],
-    "mem": 79.6,
-    "mem_used_gb": 2.83,
+    "mem": 80.9,
+    "mem_used_gb": 2.74,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 163.2,
+    "proc_mem_mb": 104.4,
     "threads": 1254,
     "proc_cpu": 0.0,
-    "net_rx": 2431329280,
-    "net_tx": 1452441600,
-    "down_kbps": 3901.4,
-    "up_kbps": 2063.5,
+    "net_rx": 2525084672,
+    "net_tx": 1539269632,
+    "down_kbps": 691.6,
+    "up_kbps": 394.2,
     "disk_free_gb": 28.3,
     "load": [
-      4.09,
-      4.88,
-      8.79
+      3.25,
+      4.5,
+      8.34
     ],
     "cores": 8
   },
-  "disk_mb": 148.3,
+  "disk_mb": 126.0,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794375609.920477,
-    "next_sync_s": 235,
-    "commits": 1
+    "last_push": 1794375674.922582,
+    "next_sync_s": 169,
+    "commits": 2
   },
   "last_sample": {
     "type": "archive Q&A",
     "topic": "stack exchange dump",
-    "problem": "Q: What are weak acids? My chemistry and biology classes skimmed over them briefly but nothing in depth. I understand that an acid is weak if it partially dissociates and breaks down into ionic compounds, but they never stated why. So my question is why do weak acids break down in water? Do strong acids dissociate at all? What if they were in a different solution (or do they just stay themselves\u2026",
-    "solution": "A: What are weak acids? Examples of weak acids in water solution would be acetic acid (main component of vinegar) and ammonium ion (conjugate acid of ammonia). I understand that an acid is weak if it partial dissociates and breaks down into ionic compounds but they never stated why. An acid is weak if not all of the acid molecules ionize into hydrogen protons and its conjugate base in a\u2026",
+    "problem": "List the steps needed to solve: Class exercise: What are weak acids? My chemistry and biology classes skimmed over them briefly but nothing in depth. I understand that an acid is weak if it partially dissociates and breaks down into ionic compounds, but they never stated why. So my question is why do weak acids break down in water? Do strong acids dissociate at all? What if they were in a\u2026",
+    "solution": "1. Let's walk through it together. What are weak acids? 2. Examples of weak acids in water solution would be acetic acid (main component of vinegar) and ammonium ion (conjugate acid of ammonia). 3. I understand that an acid is weak if it partial dissociates and breaks down into ionic compounds but they never stated why. 4. An acid is weak if not all of the acid molecules ionize into hydrogen\u2026",
     "source": "stackexchange"
   }
 }

@@ -1,12 +1,12 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-11T11:10:03",
+"updated": "2026-11-11T11:11:03",
 "total": 109914,
 "done": 2743,
 "in_progress": 106,
 "left": 107065,
 "parallel_agents": {
-"running": 23,
+"running": 22,
 "topics": [
 {
 "agent": 3,
@@ -93,11 +93,7 @@
 "topic": "baudolino"
 },
 {
-"agent": 71,
-"topic": "sustainability reporting"
-},
-{
-"agent": 80,
+"agent": 79,
 "topic": "deformation twinning"
 }
 ]
@@ -9737,7 +9733,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 71,
+"agent": null,
 "records": 5873,
 "images": 42,
 "completed": "2026-11-11T06:48:52"
@@ -9941,7 +9937,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 80,
+"agent": 79,
 "records": 2490,
 "images": 42,
 "completed": "2026-11-11T06:32:55"
