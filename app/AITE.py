@@ -1,29 +1,5 @@
-#!/usr/bin/env python3
-"""Prolabs Robotics AITE - Artificial Intelligence Training Environment.
-
-Workflow:  1 Input (VDM or JSON) -> 2 Web search -> 3 Filterer -> 4 DataGen -> 5 Output presenter
-                                                                          (preview, then ONE pdf / txt / json)
-
-Web search uses no paid search API. AITE asks DuckDuckGo once per run with an honest user agent and
-respects it if DuckDuckGo answers with a bot check (HTTP 202) - it never tries to get around it.
-Official free APIs fill in: Stack Exchange, Hugging Face open datasets, Wikibooks, arXiv, OpenAlex,
-Wikipedia (plus DuckDuckGo's official Instant Answer API for topic context).
-
-Filterer: local quality scoring and rules (no API).
-DataGen: makes similar versions of every record - new numbers re-solved with SymPy (math), swapped
-names/items, synonyms, 10 writing styles and 11 formats.
-No API keys and no LLMs anywhere: every step runs locally or on free keyless APIs.
-
-Run:
-    python "AITE 1.py"                 # GUI
-    python "AITE 1.py" --selftest      # offline tests (no network, no API)
-    python "AITE 1.py" --run '{"topics":["algebra"],"quantity":5}' --out out.pdf
-    python "AITE 1.py" --agent [--dir folder]   # Agent mode, no window: collects until paused
-    python "AITE 1.py" --train [--model ID] [--iters N] [--data folder]   # LLM Trainer, no window
-"""
 import os as _os
 import sys as _sys
-
 
 def _use_hos_python():
     """Started by another Python (e.g. the editor's Run button with a different interpreter)? Restart with the HOS
@@ -68,9 +44,9 @@ APP = "Prolabs Robotics AITE"
 APP_SHORT = "Prolabs AITE"
 GITHUB_REPO = "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git"  # Settings > GitHub can change it
 PWT_NAME = "Parallel Web Technologies"  # product in Settings > Product
-PWT_DEVELOPER = "ProLab Robotics"
+PWT_DEVELOPER = "Prolabs Robotics"
 VERSION = "2.0"
-SETTINGS_VERSION = 3
+SETTINGS_VERSION = 3                                            
 HERE = os.path.dirname(os.path.abspath(__file__))
 SETTINGS_FILE = os.environ.get("AITE_SETTINGS") or os.path.join(HERE, "aite_settings.json")  # tests point at their own
 LAST_INPUT_FILE = os.path.join(HERE, "aite_last_input.json")
@@ -238,10 +214,11 @@ PRODUCT_GROUPS = {  # settings section -> [(setting key, product name, what it d
         ("product_web_vision", "Web Vision", "free-licence Wikimedia Commons images with captions, authors and licences"),
         ("product_synthetic_vision", "Synthetic Vision", "generated scenes with exact boxes, outlines, captions and VQA - object recognition data"),
         ("product_vla", "Robot VLA Studio", "pick-and-place episodes with frames, actions and instructions for vision-language-action models")],
-    "Products: Training & delivery": [
-        ("product_trainer", "LLM Trainer", "teaches an open model on this Mac with the collected data (MLX) - no code needed"),
+    "Products: Knowledge & delivery": [
+        ("product_trainer", "AITE Ask (RAG)", "ALL the data from GitHub in one search index, answered by a local AI model - no training"),
+        ("kaggle_enabled", "Kaggle Sync", "the whole dataset also published to Kaggle as a new version every hour"),
         ("gh_enabled", "GitHub Sync", "stats, topics.json and the new data pushed to main every few minutes"),
-        ("product_studio", "Manual Studio", "one exact run with preview, then ONE combined PDF, TXT or JSON file")],
+    ],
 }
 PRODUCT_OF_KIND = {"archive": "product_archives", "text": "product_web_search", "web_images": "product_web_vision",
                    "synthetic_images": "product_synthetic_vision", "vla": "product_vla"}
@@ -407,7 +384,7 @@ def _settings_spec():
     add("Output", "open_after_export", "Open file after export", "bool", False)
     add("Output", "sort_by", "Sort records by", "choice", "score", ["score", "source", "topic", "none"])
     add("Output", "max_chars_out", "Max chars per record", "int", 12000, (500, 200000))
-    add("General", "start_page", "Open in", "choice", "Agent", ["Agent", "Manual"])
+    add("General", "start_page", "Open in", "choice", "Agent", ["Agent", "Ask"])
     add("General", "guide_seen", "Interactive guide already shown", "bool", False)
     # Parallel Web Technologies
     add(PWT_NAME, "pwt_workers", "Parallel agents (more than 1,500 start extra worker processes)", "int", 1000, (1, MAX_AGENTS))
@@ -418,7 +395,7 @@ def _settings_spec():
     add("Agent", "agent_dir", "Dataset folder (inside the GitHub clone)", "str", _default_dataset_dir())
     add("Agent", "agent_resume", "Resume collecting when AITE opens", "bool", True)
     add("Agent", "agent_background", "Keep collecting while the window is closed", "bool", True)
-    add("Agent", "agent_cpu_cap", "Slow down above CPU %", "int", 85, (10, 100))
+    add("Agent", "agent_cpu_cap", "Slow down above CPU %", "int", 70, (10, 100))
     add("Agent", "agent_min_free_gb", "Pause by itself when free disk space is below (GB)", "float", 5.0, (0.5, 1000))
     add("Agent", "agent_batch", "Records per topic task", "int", 50, (1, 10000))
     add("Agent", "agent_quality", "Quality (1-10)", "int", 10, (1, 10))
@@ -443,7 +420,22 @@ def _settings_spec():
     add("Agent", "agent_vla_per_task", "VLA episodes per task", "int", 4, (1, 100))
     add("Agent", "agent_vla_size", "VLA frame size (px)", "int", 160, (64, 512))
     add("Agent", "agent_shard_mb", "Max shard size (MB, GitHub limit is 100)", "float", 45.0, (1, 95))
-    # Trainer (local LLM fine-tuning with MLX)
+    # Ask (RAG): the whole dataset, searchable, answered by a local model - no training
+    add("Ask (RAG)", "rag_model", "Model that answers (any MLX model id from Hugging Face, or a folder)", "str",
+        "mlx-community/Qwen2.5-1.5B-Instruct-4bit")
+    add("Ask (RAG)", "rag_use_model", "Answer with the AI model (off = show the best matching records only)", "bool", True)
+    add("Ask (RAG)", "rag_k", "Records the model reads per question", "int", 6, (1, 30))
+    add("Ask (RAG)", "rag_tokens", "Longest answer (tokens)", "int", 600, (32, 8192))
+    add("Ask (RAG)", "rag_context_chars", "Most source text given to the model (characters)", "int", 6000, (500, 60000))
+    add("Ask (RAG)", "rag_sync_min", "Get new data from GitHub every (minutes)", "int", 10, (1, 1440))
+    add("Ask (RAG)", "rag_include_local", "Also the newest rows on this Mac not pushed yet (so ALL data is in)", "bool", True)
+    add("Ask (RAG)", "rag_temp", "Creativity (temperature)", "float", 0.2, (0.0, 2.0))
+    # Kaggle: the whole dataset also goes to a Kaggle dataset (alongside GitHub), as a new version every so often
+    add("Kaggle", "kaggle_enabled", "Upload the dataset to Kaggle too (alongside GitHub)", "bool", True)
+    add("Kaggle", "kaggle_dataset", "Kaggle dataset (owner/name, or its link)", "str", "prolabsrobotics/prolabs-robotics-864")
+    add("Kaggle", "kaggle_every_min", "New Kaggle version every (minutes)", "int", 60, (10, 10080))
+    add("Kaggle", "kaggle_images", "Include the picture files (much bigger uploads)", "bool", False)
+    # Trainer (local LLM fine-tuning with MLX) - kept for the command line only (--train); the app uses Ask (RAG)
     add("Trainer", "trainer_model", "Model (any MLX model id from Hugging Face, or a folder)", "str", next(iter(TRAINER_MODELS)))
     add("Trainer", "trainer_length", "How long to train", "choice", "Short (~10 min)", list(TRAIN_LENGTHS) + ["Custom (iterations below)"])
     add("Trainer", "trainer_iters", "Custom: iterations", "int", 600, (10, 100000))
@@ -488,7 +480,7 @@ def default_settings():
 # value saved by an older AITE that was only ever the old default -> today's default (choices the user made are kept)
 SETTINGS_MIGRATE = {"gh_repo": [""], "agent_dir": [os.path.join(HERE, "dataset")], "pwt_workers": [32], "agent_quality": [5],
                     "agent_batch": [8], "agent_variations": [3], "agent_task_timeout": [180], "dg_max_total": [20000],
-                    "gh_max_repo_mb": [900.0, 900], "trainer_custom_rows": [500], "trainer_compare_n": [10]}
+                    "gh_max_repo_mb": [900.0, 900], "agent_cpu_cap": [85], "trainer_custom_rows": [500], "trainer_compare_n": [10]}
 
 
 def load_settings():
@@ -3381,8 +3373,14 @@ class TopicStore:
 
     def __init__(self, path):
         import sqlite3
-        self.db = sqlite3.connect(path, check_same_thread=False, timeout=30)
+        self.db = sqlite3.connect(path, check_same_thread=False, timeout=60)
         self.lock = threading.Lock()
+        try:  # several agent processes share this file: WAL lets readers and one writer work at once ("database is locked")
+            self.db.execute("PRAGMA journal_mode=WAL")
+            self.db.execute("PRAGMA synchronous=NORMAL")
+            self.db.execute("PRAGMA busy_timeout=60000")
+        except Exception:
+            pass
         with self.lock:
             self.db.executescript("""
                 CREATE TABLE IF NOT EXISTS topics(name TEXT PRIMARY KEY, origin TEXT, depth INT, status TEXT DEFAULT 'new',
@@ -4983,7 +4981,8 @@ class Agent:
 
     def n_procs(self):
         """Enough processes for the thread limit, and up to one per CPU core so DataGen's CPU work runs in parallel."""
-        return max(1, math.ceil(self.workers / AGENTS_PER_PROCESS), min(os.cpu_count() or 1, math.ceil(self.workers / 250)))
+        return max(1, math.ceil(self.workers / AGENTS_PER_PROCESS),
+                   min(max(1, (os.cpu_count() or 2) // 2), math.ceil(self.workers / 500)))  # half the cores: the Mac stays usable
 
     def share(self, n=None):
         n = n or self.n_procs()
@@ -5152,12 +5151,22 @@ class Agent:
                     self.reload()
                 except Exception as e:
                     self.log(f"Settings reload failed: {e}")
+            if not self.worker_id and not self.offline and \
+                    now - getattr(self, "_rag_t", 0) > 60 * int(self.st.get("rag_sync_min", 10)):
+                self._rag_t = now  # GitHub -> RAG index -> Kaggle, in its own low-priority process (one at a time)
+                try:
+                    import subprocess
+                    subprocess.Popen([sys.executable, os.path.abspath(__file__), "--rag-update", "--dir", self.root],
+                                     stdout=subprocess.DEVNULL, stderr=open(os.path.join(HERE, "rag_errors.log"), "a"),
+                                     stdin=subprocess.DEVNULL, start_new_session=True, cwd=HERE)
+                except Exception as e:
+                    self.log(f"RAG / Kaggle update not started: {e}")
             if ctl.get("sync_now", 0) > self.store.get("sync_done", 0):
                 self.store.put("sync_done", ctl["sync_now"])
                 self.next_sync = now
             if not self.paused and not self.disk_low():
                 cpu = (self.sys_prev or {}).get("cpu", 0) or 0
-                cap = float(self.st.get("agent_cpu_cap", 85))
+                cap = float(self.st.get("agent_cpu_cap", 70))
                 if cpu > cap:
                     self.eff = max(1, int(self.eff * 0.8))
                 own = self.share()
@@ -5852,6 +5861,455 @@ def model_label(mid):
     return local_models().get(mid) or (f"Folder - {os.path.basename(mid.rstrip('/'))}" if os.path.isdir(mid) else mid)
 
 
+# ============================================================================= RAG (ask the dataset with a local model)
+# No training: the whole dataset on GitHub is downloaded (text only, automatically), indexed for full-text search
+# (SQLite FTS5 / BM25 - nothing to install) and a local open model on this Mac answers questions from the best
+# matching records, citing them. No API keys, no cloud: the model runs with Apple's MLX in AITE's own environment.
+RAG_HOME = os.environ.get("AITE_RAG_HOME") or HERE  # tests point this at a temp folder
+RAG_DATA = os.path.join(RAG_HOME, "rag_data") if os.environ.get("AITE_RAG_HOME") else TRAINER_DATA  # sparse clone of the GitHub dataset: Dataset/text + Dataset/preference only (no pictures)
+RAG_INDEX = os.path.join(RAG_HOME, "rag_index.db")
+RAG_STATUS = os.path.join(RAG_HOME, "rag_status.json")
+RAG_SPARSE = ("Dataset/text", "Dataset/preference", "Dataset/detection", "Dataset/vla")  # every row file, not the picture files
+RAG_STOP = set("a an the and or of to in on for with by is are was were be been it this that these those what which who "
+               "whom how why when where do does did can could should would will shall may might must i you he she we they "
+               "me my your our their its as at from into about than then so if not no yes please explain tell give show "
+               "find solve use using there here have has had any some all each".split())
+RAG_SYSTEM = ("You answer questions using the numbered sources from the user's dataset. Use them when they are relevant and "
+              "cite them like [1] or [2]. Be correct and clear; show the steps for maths and code. If the sources do not "
+              "contain the answer, say so in one short line, then answer from your own knowledge.")
+
+
+def _git(cwd, *args, timeout=1800):
+    import subprocess
+    try:
+        r = subprocess.run(["git", "-c", "http.version=HTTP/1.1", "-c", "http.postBuffer=524288000", *args], cwd=cwd,
+                           capture_output=True, text=True, timeout=timeout, env=dict(os.environ, GIT_TERMINAL_PROMPT="0"))
+        return r.returncode, (r.stdout + r.stderr).strip()
+    except Exception as e:
+        return 1, f"{type(e).__name__}: {e}"
+
+
+def rag_sync(st, dest=None):
+    """Downloads (first time) or updates the dataset's text from GitHub - only text and preference rows, never the
+    pictures, as a shallow blobless sparse clone. Returns (ok, message)."""
+    dest = dest or RAG_DATA
+    repo, br = str(st.get("gh_repo", "")).strip(), st.get("gh_branch") or "main"
+    if not repo:
+        return False, "No GitHub repository set (Settings > GitHub)"
+    if os.path.isdir(os.path.join(dest, ".git")):
+        code, url = _git(dest, "remote", "get-url", "origin", timeout=30)
+        if code != 0 or url.strip().rstrip("/").removesuffix(".git") != repo.rstrip("/").removesuffix(".git"):
+            import shutil
+            shutil.rmtree(dest, ignore_errors=True)  # the repository link changed in Settings: start a fresh copy
+    if not os.path.isdir(os.path.join(dest, ".git")):
+        code, out = _git(os.path.dirname(dest) or ".", "clone", "-q", "--depth", "1", "--filter=blob:none", "--sparse", "-b", br,
+                         repo, dest)
+        if code != 0:
+            return False, "Could not download from GitHub: " + out[-200:]
+        code, out = _git(dest, "sparse-checkout", "set", *RAG_SPARSE)
+        return code == 0, "Downloaded the dataset from GitHub" if code == 0 else out[-200:]
+    code, out = _git(dest, "fetch", "-q", "--depth", "1", "--filter=blob:none", "origin", br)
+    if code != 0:
+        return False, "Could not reach GitHub: " + out[-200:]
+    _git(dest, "sparse-checkout", "set", *RAG_SPARSE, timeout=120)
+    code, out = _git(dest, "reset", "-q", "--hard", "FETCH_HEAD")
+    return code == 0, "Up to date with GitHub" if code == 0 else out[-200:]
+
+
+def rag_files(dirs):
+    out = []
+    for d in dirs:
+        for sub in ("text", "preference", "detection", "vla"):
+            p = os.path.join(d, sub)
+            if os.path.isdir(p):
+                for dp, _, fn in os.walk(p):
+                    out += [os.path.join(dp, f) for f in fn if f.endswith((".jsonl.gz", ".jsonl", ".jsonl.gz.open"))]  # .open = being written now
+    return sorted(out)
+
+
+def rag_dirs(st, agent_root=None):
+    """ALL the data: everything on GitHub, plus the newest rows on this Mac that are not pushed yet (with GitHub
+    first, local copies are deleted once pushed - so GitHub + local together are the whole dataset)."""
+    d = [os.path.join(RAG_DATA, "Dataset")]
+    if st.get("rag_include_local") and agent_root:
+        d.append(agent_root)
+    return d
+
+
+def _rag_row(r, variants=True):
+    """ANY dataset row -> (id, title, question, answer, topic, field, source, url, licence, tier), or None.
+    Everything goes in: Q&A originals and DataGen variants, preference pairs, web-image captions, generated
+    detection scenes (objects + Q&A) and robot VLA episodes (instruction, objects, actions)."""
+    t = r.get("type")
+    img = r.get("image") or ""
+    if t == "preference":
+        q, a = r.get("prompt") or "", r.get("chosen") or ""
+    elif t == "image-text":
+        q = f"Image: {r.get('title') or ''}\n{r.get('caption') or ''}"
+        a = f"{r.get('caption') or r.get('title') or ''}\n\nImage file: {img} · by {r.get('author') or 'unknown'}"
+    elif t == "detection":
+        objs = r.get("objects") or []
+        qa = r.get("qa") or []
+        q = f"Scene: {r.get('caption') or ''}"
+        a = (f"{r.get('caption') or ''}\nObjects: " + "; ".join(f"{o.get('label', '')} at {o.get('bbox', '')}" for o in objs if isinstance(o, dict))
+             + "".join(f"\nQ: {x.get('q')} A: {x.get('a')}" for x in qa if isinstance(x, dict)) + f"\nImage file: {img}")
+    elif t == "vla-episode":
+        steps = r.get("steps") or []
+        acts = [st_.get("action") for st_ in steps if isinstance(st_, dict) and st_.get("action") is not None]
+        q = f"Robot task: {r.get('instruction') or ''}"
+        a = (f"Instruction: {r.get('instruction') or ''}\nObjects: " +
+             ", ".join(f"{o.get('color', '')} {o.get('shape', '')}" for o in (r.get("objects") or []) if isinstance(o, dict)) +
+             f"\nSuccess: {r.get('success')}\n{len(steps)} steps · actions: " + shorten(json.dumps(acts), 1500) +
+             (f"\nFirst frame: {steps[0].get('observation', {}).get('image', '')}" if steps and isinstance(steps[0], dict) else ""))
+    else:
+        if r.get("kind") == "variant" and not variants:
+            return None
+        q, a = r.get("problem") or "", r.get("solution") or ""
+        if not (q and a):
+            m = r.get("messages") or []
+            m = [x for x in m if isinstance(x, dict)]
+            q = next((str(x.get("content", "")) for x in m if x.get("role") == "user"), "")
+            a = next((str(x.get("content", "")) for x in reversed(m) if x.get("role") == "assistant"), "")
+    q, a = str(q).replace("<image>", "").strip(), str(a).replace("<image>", "").strip()
+    if len(q) < 4 or len(a) < 1:
+        return None
+    rid = str(r.get("id") or _rid(q[:200], a[:200]))
+    title = re.sub(r"\s*\[[^\]]*·[^\]]*\]\s*$", "", str(r.get("title") or r.get("instruction") or r.get("caption") or q.split("\n")[0]))[:200]
+    kind = {"image-text": "web image", "detection": "generated image", "vla-episode": "robot episode",
+            "preference": "preference pair"}.get(t, "variant" if r.get("kind") == "variant" else "Q&A")
+    return (rid, title, q[:6000], a[:8000], str(r.get("topic") or ""), str(r.get("field") or ""),
+            row_source(r) + " · " + kind, str(r.get("url") or ""), str(r.get("license") or ""), str(r.get("quality_tier") or ""))
+
+
+class RagIndex:
+    """Full-text index of the dataset (SQLite FTS5, BM25 ranking, English stemming). Only new or changed files are
+    read on each update, so it keeps up with a growing dataset."""
+    COLS = ("rid", "title", "q", "a", "topic", "field", "source", "url", "license", "tier")
+
+    def __init__(self, path=None):
+        import sqlite3
+        path = self.path = path or RAG_INDEX  # read at call time (tests move it)
+        self.db = sqlite3.connect(path, check_same_thread=False, timeout=60)
+        self.lock = threading.Lock()
+        with self.lock:
+            self.db.execute("PRAGMA journal_mode=WAL")
+            self.db.executescript("""
+                CREATE TABLE IF NOT EXISTS files(path TEXT PRIMARY KEY, size INT, rows INT);
+                CREATE TABLE IF NOT EXISTS ids(rid TEXT PRIMARY KEY);
+                CREATE VIRTUAL TABLE IF NOT EXISTS docs USING fts5(rid UNINDEXED, title, q, a, topic, field,
+                    source UNINDEXED, url UNINDEXED, license UNINDEXED, tier UNINDEXED, tokenize='porter unicode61');""")
+            self.db.commit()
+
+    def count(self):
+        with self.lock:
+            return self.db.execute("SELECT count(*) FROM ids").fetchone()[0]
+
+    def n_files(self):
+        with self.lock:
+            return self.db.execute("SELECT count(*) FROM files").fetchone()[0]
+
+    def fields(self):
+        with self.lock:
+            return dict(self.db.execute("SELECT field, count(*) FROM docs GROUP BY field ORDER BY 2 DESC LIMIT 40").fetchall())
+
+    def update(self, dirs, variants=True, progress=None, cancel=None):
+        """Indexes every new or changed shard. Returns (files read, rows added)."""
+        files = rag_files(dirs)
+        with self.lock:
+            known = dict(self.db.execute("SELECT path, size FROM files").fetchall())
+        todo = []
+        for p in files:
+            try:
+                sz = os.path.getsize(p)
+            except OSError:
+                continue
+            if known.get(p) != sz:
+                todo.append((p, sz))
+        added = 0
+        for i, (p, sz) in enumerate(todo):
+            if cancel and cancel():
+                break
+            rows = [x for x in (_rag_row(r, variants) for r in _read_rows(p)) if x]
+            with self.lock:
+                n0 = self.db.total_changes
+                fresh = []
+                for x in rows:
+                    cur = self.db.execute("INSERT OR IGNORE INTO ids(rid) VALUES(?)", (x[0],))
+                    if cur.rowcount:
+                        fresh.append(x)
+                self.db.executemany("INSERT INTO docs(rid, title, q, a, topic, field, source, url, license, tier) "
+                                    "VALUES(?,?,?,?,?,?,?,?,?,?)", fresh)
+                self.db.execute("INSERT OR REPLACE INTO files(path, size, rows) VALUES(?,?,?)", (p, sz, len(fresh)))
+                self.db.commit()
+                added += len(fresh)
+            if progress:
+                progress(i + 1, len(todo), added)
+        return len(todo), added
+
+    @staticmethod
+    def query_of(text):
+        toks = [t for t in re.findall(r"[^\W_]+", text.lower()) if t not in RAG_STOP and (len(t) > 1 or t.isdigit())]
+        toks = list(dict.fromkeys(toks))[:24]
+        return " OR ".join('"' + t.replace('"', "") + '"' for t in toks)
+
+    def search(self, text, k=6, field=None):
+        q = self.query_of(text)
+        if not q:
+            return []
+        sql = ("SELECT rid, title, q, a, topic, field, source, url, license, tier, "
+               "bm25(docs, 0, 4.0, 2.0, 1.0, 3.0, 1.5, 0, 0, 0, 0) AS s FROM docs WHERE docs MATCH ?")
+        args = [q]
+        fl = [field] if isinstance(field, str) and field else list(field or [])
+        if fl:  # one field, several fields, or none (= ALL)
+            sql += " AND field IN (" + ",".join("?" * len(fl)) + ")"
+            args += fl
+        sql += " ORDER BY s LIMIT ?"
+        args.append(int(k))
+        with self.lock:
+            try:
+                rows = self.db.execute(sql, args).fetchall()
+            except Exception:
+                return []
+        return [dict(zip(self.COLS + ("score",), r)) for r in rows]
+
+    def close(self):
+        try:
+            self.db.close()
+        except Exception:
+            pass
+
+
+def rag_messages(question, hits, history=(), max_chars=6000):
+    """The question with its numbered sources, as chat messages for the model."""
+    parts, used = [], 0
+    for i, h in enumerate(hits, 1):
+        block = f"[{i}] {h['title']}  ({h['field'] or h['topic']} · {h['source']})\nQ: {shorten(h['q'], 900)}\nA: {shorten(h['a'], 1400)}"
+        if used + len(block) > max_chars and parts:
+            break
+        parts.append(block)
+        used += len(block)
+    ctx = "\n\n".join(parts) if parts else "(no matching records in the dataset)"
+    msgs = [m for m in list(history)[-6:] if m.get("role") in ("user", "assistant")]
+    return msgs + [{"role": "user", "content": f"Sources from my dataset:\n\n{ctx}\n\nQuestion: {question}"}]
+
+
+def rag_extractive(question, hits):
+    """An answer without any model: the best matching record, quoted with its source."""
+    if not hits:
+        return "Nothing in the dataset matches this yet - Agent mode keeps collecting, so try again later or rephrase."
+    h = hits[0]
+    return f"Closest record in your dataset [1]:\n\n{h['title']}\n\n{shorten(h['a'], 2500)}"
+
+
+def model_downloaded(mid):
+    """True when the whole model is on this Mac (a folder, or a finished Hugging Face download)."""
+    if os.path.isdir(mid):
+        return os.path.exists(os.path.join(mid, "config.json"))
+    base = os.environ.get("HF_HUB_CACHE") or os.path.join(os.environ.get("HF_HOME") or os.path.expanduser("~/.cache/huggingface"), "hub")
+    d = os.path.join(base, "models--" + mid.replace("/", "--"))
+    try:
+        if any(f.endswith(".incomplete") for f in os.listdir(os.path.join(d, "blobs"))):
+            return False
+        for snap in os.listdir(os.path.join(d, "snapshots")):
+            fs = os.listdir(os.path.join(d, "snapshots", snap))
+            if "config.json" in fs and any(f.endswith(".safetensors") for f in fs):
+                return True
+    except OSError:
+        pass
+    return False
+
+
+def model_download_start(mid):
+    """Downloads a model in the background (AI engine environment, plain HTTPS). Returns the process."""
+    import subprocess
+    os.makedirs(TRAINER_RUNS, exist_ok=True)
+    code = ("import sys; from huggingface_hub import snapshot_download; "
+            "snapshot_download(repo_id=sys.argv[1]); print('done', flush=True)")
+    return subprocess.Popen([trainer_python(), "-c", code, mid], stdout=subprocess.DEVNULL,
+                            stderr=open(os.path.join(TRAINER_RUNS, "download_errors.log"), "a"), env=trainer_env(),
+                            start_new_session=True, stdin=subprocess.DEVNULL)
+
+
+def kaggle_cli():
+    exe = os.path.join(os.path.dirname(sys.executable), "kaggle")
+    return [exe] if os.path.exists(exe) else [sys.executable, "-m", "kaggle"]
+
+
+def kaggle_env():
+    env = dict(os.environ, KAGGLE_CONFIG_DIR=os.environ.get("KAGGLE_CONFIG_DIR", os.path.expanduser("~/.kaggle")))
+    try:
+        import certifi  # python.org's Python has no system certificates: Kaggle's HTTPS would fail without this
+        env.setdefault("SSL_CERT_FILE", certifi.where())
+        env.setdefault("REQUESTS_CA_BUNDLE", certifi.where())
+    except ImportError:
+        pass
+    return env
+
+
+def kaggle_logged_in():
+    """Kaggle's own login on this Mac (kaggle.json or an access token from kaggle.com > Settings) - AITE stores no keys."""
+    d = os.environ.get("KAGGLE_CONFIG_DIR") or os.path.expanduser("~/.kaggle")
+    return bool(os.environ.get("KAGGLE_API_TOKEN") or (os.environ.get("KAGGLE_USERNAME") and os.environ.get("KAGGLE_KEY"))
+                or os.path.exists(os.path.join(d, "kaggle.json")) or os.path.exists(os.path.join(d, "access_token")))
+
+
+def kaggle_push(st, dirs, agent_root=None, stage=None):
+    """ALL the row files (GitHub copy + this Mac's newest) -> a new version of the Kaggle dataset. Files are hard-linked
+    into a staging folder (no extra disk space). Returns (ok, message)."""
+    import shutil
+    import subprocess
+    if not st.get("kaggle_enabled", True):
+        return None, "off"
+    if not kaggle_logged_in():
+        return False, "Kaggle login needed: kaggle.com > Settings > API > Create New Token, put kaggle.json in ~/.kaggle"
+    ds = str(st.get("kaggle_dataset", "")).strip().strip("/")
+    m = re.search(r"kaggle\.com/datasets/([^/]+/[^/?#]+)", ds)
+    ds = m.group(1) if m else ds
+    if ds.count("/") != 1:
+        return False, f"Kaggle dataset should look like owner/name, not '{ds}'"
+    stage = stage or os.path.join(RAG_HOME, "kaggle_stage")
+    shutil.rmtree(stage, ignore_errors=True)
+    os.makedirs(stage)
+    best = {}
+    for f in rag_files(dirs):
+        if f.endswith(".open"):
+            continue  # only finished shards go to Kaggle
+        key = (os.path.basename(os.path.dirname(f)), os.path.basename(f))
+        if key not in best or os.path.getsize(f) > os.path.getsize(best[key]):
+            best[key] = f
+    if st.get("kaggle_images"):
+        for d in dirs:
+            ip = os.path.join(d, "images")
+            for dp, _, fn in os.walk(ip):
+                for f in fn:
+                    best[(os.path.join("images", os.path.relpath(dp, ip)), f)] = os.path.join(dp, f)
+    try:
+        for (sub, name), f in best.items():
+            os.makedirs(os.path.join(stage, sub), exist_ok=True)
+            try:
+                os.link(f, os.path.join(stage, sub, name))
+            except OSError:
+                shutil.copy2(f, os.path.join(stage, sub, name))
+        for extra in ("stats.json", "topics.json", "README.md"):
+            for d in ([agent_root] if agent_root else []) + list(dirs):
+                if os.path.exists(os.path.join(d, extra)):
+                    shutil.copy2(os.path.join(d, extra), os.path.join(stage, extra))
+                    break
+        with open(os.path.join(stage, "dataset-metadata.json"), "w") as f:
+            json.dump({"id": ds, "title": "Prolabs Robotics 864", "licenses": [{"name": "CC-BY-SA-4.0"}]}, f)
+        msg = f"AITE update {time.strftime('%Y-%m-%d %H:%M')} - {len(best):,} files"
+        r = subprocess.run(kaggle_cli() + ["datasets", "version", "-p", stage, "-m", msg, "-r", "zip", "-q"],
+                           capture_output=True, text=True, timeout=6 * 3600, env=kaggle_env())
+        out = (r.stdout + r.stderr).strip()
+        if r.returncode == 0 and "error" not in out.lower():
+            return True, f"new version with {len(best):,} files"
+        if "404" in out or "not found" in out.lower():
+            r = subprocess.run(kaggle_cli() + ["datasets", "create", "-p", stage, "-r", "zip", "-q"],
+                               capture_output=True, text=True, timeout=6 * 3600, env=kaggle_env())
+            out = (r.stdout + r.stderr).strip()
+            if r.returncode == 0:
+                return True, f"dataset created with {len(best):,} files"
+        return False, "upload failed: " + out[-220:]
+    except Exception as e:
+        return False, f"upload failed: {type(e).__name__}: {e}"
+    finally:
+        shutil.rmtree(stage, ignore_errors=True)
+
+
+def cli_rag_update(root, offline=False):
+    """Background job (its own low-priority process): GitHub -> RAG_DATA -> index -> Kaggle. Writes RAG_STATUS and
+    rag.log (shown live, super verbose, on the Ask page)."""
+    try:
+        os.nice(15)
+    except OSError:
+        pass
+    os.makedirs(RAG_HOME, exist_ok=True)
+    pidf = os.path.join(RAG_HOME, "rag_update.pid")
+    try:
+        with open(pidf) as f:
+            if _alive(int(f.read().strip())):
+                return 0  # one at a time
+    except (OSError, ValueError):
+        pass
+    with open(pidf, "w") as f:
+        f.write(str(os.getpid()))
+    st = load_settings()
+    stat = {}
+    try:
+        with open(RAG_STATUS) as f:
+            stat = json.load(f)
+    except (OSError, ValueError):
+        pass
+
+    def jlog(msg):
+        try:
+            lp = os.path.join(RAG_HOME, "rag.log")
+            if os.path.exists(lp) and os.path.getsize(lp) > 20 * 2 ** 20:
+                os.replace(lp, lp + ".1")
+            with open(lp, "a") as f:
+                f.write(time.strftime("%H:%M:%S  ") + msg + "\n")
+        except OSError:
+            pass
+
+    def put(**kw):
+        stat.update(kw, t=time.time())
+        tmp = RAG_STATUS + ".tmp"
+        with open(tmp, "w") as f:
+            json.dump(stat, f)
+        os.replace(tmp, RAG_STATUS)
+    put(state="syncing")
+    jlog(f"background update started (pid {os.getpid()}): GitHub -> RAG index -> Kaggle")
+    if offline:
+        ok, msg = True, "offline test: local data only"
+    else:
+        jlog(f"GitHub: getting {st.get('gh_repo')} ({st.get('gh_branch') or 'main'}) into {RAG_DATA} - every row file")
+        t0 = time.time()
+        ok, msg = rag_sync(st)
+        jlog(f"GitHub: {msg} ({time.time() - t0:.1f} s)")
+    put(sync_ok=ok, sync_msg=msg, **({"sync_t": time.time()} if ok else {}))
+    idx = RagIndex()
+    dirs = rag_dirs(dict(st, rag_include_local=True) if offline else st, root)
+    put(state="indexing", done=0, todo=0, added=0, count=idx.count())
+    jlog(f"index: {len(rag_files(dirs))} row files in {' + '.join(dirs)} · {idx.count():,} records already indexed")
+    last = [0.0]
+
+    def prog(i, n, added):
+        jlog(f"index: file {i}/{n} done · +{added:,} new records so far")
+        if time.time() - last[0] > 1 or i == n:
+            last[0] = time.time()
+            put(done=i, todo=n, added=added, count=idx.count())
+    t0 = time.time()
+    nf, added = idx.update(dirs, progress=prog)
+    jlog(f"index: {nf} new/changed files read, +{added:,} records in {time.time() - t0:.1f} s · total {idx.count():,}")
+    put(state="done", files=len(rag_files(dirs)), added=added, count=idx.count(), fields=idx.fields(), index_t=time.time())
+    idx.close()
+    every = 60 * int(st.get("kaggle_every_min", 60))
+    if not offline and st.get("kaggle_enabled", True):
+        if time.time() - float(stat.get("kaggle_try_t", 0) or 0) > (every if stat.get("kaggle_ok") is not False else 600):
+            put(state="kaggle")
+            jlog(f"Kaggle: uploading a new version of {st.get('kaggle_dataset')}…")
+            t0 = time.time()
+            kok, kmsg = kaggle_push(st, rag_dirs(dict(st, rag_include_local=True), root), root)
+            jlog(f"Kaggle: {kmsg} ({time.time() - t0:.1f} s)")
+            put(state="done", kaggle_ok=kok, kaggle_msg=kmsg, kaggle_try_t=time.time(), **({"kaggle_t": time.time()} if kok else {}))
+        else:
+            jlog(f"Kaggle: next version in {int((every - (time.time() - float(stat.get('kaggle_try_t', 0)))) // 60)} min")
+    jlog("background update finished")
+    try:
+        os.remove(pidf)
+    except OSError:
+        pass
+    return 0
+
+
+def rag_models():
+    """Every model the Ask page can use: the built-in list plus models already on this Mac."""
+    out = {k: v[0] for k, v in TRAINER_MODELS.items()}
+    for k, v in local_models().items():
+        out.setdefault(k, v.replace("Downloaded - ", ""))
+    return out
+
+
 def new_run_dir(model):
     name = datetime.now().strftime("%Y%m%d-%H%M%S") + "-" + re.sub(r"[^a-z0-9-]+", "", os.path.basename(model.rstrip("/")).lower())[:40]
     return os.path.join(TRAINER_RUNS, name)
@@ -5916,14 +6374,16 @@ THEMES = {
               "outline": "#cccccc", "field": "#ffffff", "switch_off": "#e3e3e3", "switch_off_hover": "#d6d6d6",
               "blue": "#0385ff", "blue_hover": "#0074e0", "green": "#10a37f", "red": "#d8241a",
               "error_text": "#ba2623", "error_bg": "#fff1f0", "select_text": "#cfe3ff", "code": "#f9f9f9",
-              "track": "#e5e5e5", "bubble": "#e8e8e8"},
+              "track": "#e5e5e5", "bubble": "#e8e8e8", "orange": "#c2410c", "green_bg": "#e7f6f2", "blue_bg": "#e6f2ff",
+              "orange_bg": "#fff1e6", "grey_bg": "#f0f0f0"},
     "dark": {"page": "#212121", "sidebar": "#181818", "card": "#2a2a2a", "soft": "#303030", "border": "#3a3a3a",
              "divider": "#363636", "text": "#ececec", "dim": "#b4b4b4", "faint": "#8f8f8f", "selected": "#424242",
              "btn": "#ffffff", "btn_hover": "#e3e3e3", "btn_fg": "#0d0d0d", "ghost_hover": "#303030",
              "outline": "#4d4d4d", "field": "#303030", "switch_off": "#4a4a4a", "switch_off_hover": "#565656",
              "blue": "#0385ff", "blue_hover": "#0074e0", "green": "#10a37f", "red": "#ff6b62",
              "error_text": "#ff6b62", "error_bg": "#3a2120", "select_text": "#2c4a6e", "code": "#171717",
-             "track": "#424242", "bubble": "#303030"},
+             "track": "#424242", "bubble": "#303030", "orange": "#fb923c", "green_bg": "#173a31", "blue_bg": "#13304f",
+             "orange_bg": "#3d2616", "grey_bg": "#383838"},
 }
 UI_FONT = ".AppleSystemUIFont" if sys.platform == "darwin" else "Helvetica"  # = SF Pro, ChatGPT's Mac font
 MONO_FONT = "Menlo" if sys.platform == "darwin" else "Courier"
@@ -6048,12 +6508,15 @@ def main_gui():
     import tkinter.font as tkfont
     from tkinter import ttk, filedialog, messagebox
 
-    global SETTINGS_READONLY, TRAINER_RUNS
+    global SETTINGS_READONLY, TRAINER_RUNS, RAG_HOME, RAG_DATA, RAG_INDEX, RAG_STATUS
     smoke = bool(os.environ.get("AITE_GUI_SMOKE"))
     SETTINGS_READONLY = SETTINGS_READONLY or smoke
-    if smoke:  # test runs never land in the user's trainer_runs folder
+    if smoke:  # test runs never land in the user's trainer_runs / RAG folders
         import tempfile
         TRAINER_RUNS = tempfile.mkdtemp(prefix="aite_trainer_smoke_")
+        RAG_HOME = os.environ["AITE_RAG_HOME"] = tempfile.mkdtemp(prefix="aite_rag_smoke_")
+        RAG_DATA, RAG_INDEX = os.path.join(RAG_HOME, "rag_data"), os.path.join(RAG_HOME, "rag_index.db")
+        RAG_STATUS = os.path.join(RAG_HOME, "rag_status.json")
     st = load_settings() if not smoke else dict(default_settings(), pwt_workers=32, agent_quality=5, agent_batch=8,
                                                  agent_variations=3)
     _mac_app_name()
@@ -6863,11 +7326,10 @@ def main_gui():
     gear_btn.pack(side="left", padx=2)
     Pill(tright, "", lambda: show_help(), "icon", h=38, icon="help", tip="Help").pack(side="left", padx=2)
     v_page = tk.StringVar(value="Agent")
-    page_seg = Segmented(topbar, ["Agent", "Manual"], v_page, lambda p: show_page(p), h=40, size=0,
-                         labels={"Agent": "Agent mode", "Manual": "Manual mode"})
+    page_seg = Segmented(topbar, ["Agent"], v_page, lambda p: show_page(p), h=40, size=0, labels={"Agent": "Agent mode"})
     page_seg.place(relx=0.5, rely=0.5, anchor="center")
-    train_top = Pill(topbar, "Train a model", lambda: show_page("Trainer"), "outline", h=36, size=-1, icon="play",
-                     tip="LLM Trainer - teach your own AI model with the collected data (Cmd+3)")
+    train_top = Pill(topbar, "Ask your data", lambda: show_page("Ask"), "outline", h=36, size=-1, icon="up",
+                     tip="Ask (RAG) - questions about ALL the collected data, answered by a local AI model (Cmd+2)")
     train_top.place(relx=0.5, rely=0.5, anchor="w", x=page_seg.winfo_reqwidth() / 2 + 28)
     topbar.configure(height=44)
     box(root, "divider", height=1).pack(fill="x")
@@ -7615,23 +8077,37 @@ def main_gui():
     toggle_act_log()  # super verbose: the live log is open from the start
 
     def tail_agent_log():
-        """The last lines of agent.log - every request and step from every agent process."""
+        """Only the NEW lines of agent.log since the last look (never the whole file), shown in a short window:
+        every request and step from every agent process, without making the window slow."""
         lp = os.path.join(ag["root"], ".agent", "agent.log")
         try:
             size = os.path.getsize(lp)
+            if size == act_log_on["pos"]:
+                return
+            start = act_log_on["pos"] if 0 < act_log_on["pos"] < size and size - act_log_on["pos"] < 200000 else max(0, size - 20000)
             with open(lp, "rb") as f:
-                f.seek(max(0, size - 60000))
-                txt = f.read().decode("utf-8", "replace")
+                f.seek(start)
+                txt = f.read(200000).decode("utf-8", "replace")
         except OSError:
             return
-        if size == act_log_on["pos"]:
-            return
+        fresh = start != act_log_on["pos"]
         act_log_on["pos"] = size
-        lines = txt.split("\n")[1:][-400:]
+        lines = txt.split("\n")
+        if fresh:
+            lines = lines[1:]
+        lines = [ln for ln in lines if ln][-150:]
+        if not lines:
+            return
         at_end = act_t.yview()[1] > 0.98
         act_t.configure(state="normal")
-        act_t.delete("1.0", "end")
+        if fresh:
+            act_t.delete("1.0", "end")
+        else:
+            act_t.insert("end", "\n")
         act_t.insert("end", "\n".join(lines))
+        extra = int(act_t.index("end-1c").split(".")[0]) - 300
+        if extra > 0:
+            act_t.delete("1.0", f"{extra + 1}.0")
         act_t.configure(state="disabled")
         if at_end:
             act_t.see("end")
@@ -7734,7 +8210,12 @@ def main_gui():
                 agents_btn.text = txt_
                 agents_btn.configure(width=int(measure(txt_, agents_btn.fnt) + 2 * max(14, 34 * 0.42) + 20))
                 agents_btn.draw()
-            if s:
+            if s and state.get("page") != "Agent" and not once:
+                pass  # another page is open: no redrawing of hidden widgets (keeps the window smooth)
+            elif s and s.get("updated") == ag.get("drawn_upd") and not once:
+                pass  # nothing new since the last draw
+            elif s:
+                ag["drawn_upd"] = s.get("updated")
                 c, sy, tp, gh = s["counts"], s.get("system", {}), s["topics"], s["github"]
                 tiles["text"].set(fmt_n(c["text"]), f"{fmt_n(c['originals'])} originals · {fmt_n(c['variants'])} variants")
                 tiles["images"].set(fmt_n(c["images"]), f"{fmt_n(c['web_images'])} web · {fmt_n(c['synthetic_images'])} generated")
@@ -7783,821 +8264,641 @@ def main_gui():
         except Exception as e:  # the page must never die because of a half-written file
             status(f"Agent page: {type(e).__name__}: {e}")
         if not once:
-            root.after(1000, agent_poll)
+            root.after(1500, agent_poll)
 
-    # ---------------------------------------------------------------- Trainer page (local LLM training, no code needed)
-    tr = {"run": latest_run(), "ready": None, "installing": False, "busy": "", "data": None, "scan_t": 0.0,
-          "extra": [], "chat": {"before": [], "after": []}, "verdict": {}, "ref": None, "worker": None, "compare": None}
-    trainer_pg = box(root, "page")
-    tr_sf = ScrollFrame(trainer_pg, "page")
-    tr_sf.pack(fill="both", expand=True)
-    trb = box(tr_sf.body, "page")
-    trb.pack(fill="both", expand=True, padx=28, pady=(8, 24))
+    # ---------------------------------------------------------------- Ask page (RAG over ALL the data, local model, no training)
+    rg = {"proc": None, "spawn_t": 0.0, "engine": None, "installing": False, "install_log": "", "dl": {}, "chat": [],
+          "rev": 0, "drawn_rev": -1, "busy": False, "worker": None, "index": None, "rows_key": None, "status": {}}
+    ask_pg = box(root, "page")
+    ask_sf = ScrollFrame(ask_pg, "page")
+    ask_sf.pack(fill="both", expand=True)
+    akb = box(ask_sf.body, "page")
+    akb.pack(fill="both", expand=True, padx=28, pady=(8, 24))
     ram = mac_ram_gb()
 
-    def step_card(n, title, sub):
-        c = Card(trb, pad=20)
-        c.pack(fill="x", pady=(0, 14))
-        head = box(c.inner, "card")
-        head.pack(fill="x")
-        badge = Canvas(head, width=30, height=30)
-        badge.n, badge.ok = n, False
+    class Badge(Canvas):
+        """A coloured status label: green = ready/downloaded, blue = working, orange = needs attention, grey = not yet."""
+        TONES = {"green": ("green_bg", "green"), "blue": ("blue_bg", "blue"), "orange": ("orange_bg", "orange"),
+                 "grey": ("grey_bg", "dim"), "ink": ("btn", "btn_fg"), "red": ("error_bg", "error_text")}
 
-        def draw_badge(b=badge):
-            Canvas.draw(b)
-            fill = T["green"] if b.ok else T["btn"]
-            b.create_oval(1, 1, 29, 29, fill=fill, outline=fill)
-            if b.ok:
-                draw_icon(b, "check", 15, 15, "#ffffff", bg_fill=fill)
-            else:
-                b.create_text(15, 15.5, text=str(b.n), fill=T["btn_fg"], font=font(-1, True))
-        badge.draw = draw_badge
-        badge.pack(side="left", padx=(0, 12))
-        tbox = box(head, "card")
-        tbox.pack(side="left", fill="x", expand=True)
-        label(tbox, title, "text", 2, True).pack(anchor="w")
-        label(tbox, sub, "dim", -2, wraplength=820).pack(anchor="w", pady=(2, 0))
+        def __init__(self, master, text="", tone="grey", h=24):
+            self.fnt = font(-3, True)
+            self.text, self.tone = text, tone
+            super().__init__(master, height=h, width=self.need(text))
+
+        def need(self, t):
+            return int(measure(t, self.fnt) + 31)
+
+        def set(self, text, tone):
+            if (text, tone) == (self.text, self.tone):
+                return
+            self.text, self.tone = text, tone
+            self.configure(width=self.need(text))
+            self.draw()
+
+        def draw(self):
+            super().draw()
+            w, h = self.winfo_width(), self.winfo_height()
+            if w < 8:
+                return
+            bgk, fgk = self.TONES.get(self.tone, self.TONES["grey"])
+            self.create_polygon(g3_points(0.5, 0.5, w - 0.5, h - 0.5, h / 2, power=1.0), fill=T[bgk], outline=T[bgk])
+            self.create_oval(10, h / 2 - 3.5, 17, h / 2 + 3.5, fill=T[fgk], outline="")
+            self.create_text(22, h / 2, text=self.text, anchor="w", fill=T[fgk], font=self.fnt)
+
+    def ask_card(title, sub=None):
+        c = Card(akb, pad=20)
+        c.pack(fill="x", pady=(0, 14))
+        label(c.inner, title, "text", 2, True).pack(anchor="w")
+        if sub:
+            label(c.inner, sub, "dim", -2, wraplength=900).pack(anchor="w", pady=(2, 0))
         body = box(c.inner, "card")
         body.pack(fill="x", pady=(12, 0))
-        c.badge, c.body = badge, body
+        c.body = body
         return c
 
-    back_row = box(trb, "page")
+    back_row = box(akb, "page")
     back_row.pack(fill="x", pady=(0, 6))
     Pill(back_row, "Back", lambda: show_page(state.get("mode_page", "Agent")), "ghost", h=34, size=-1, icon="chevron").pack(side="left")
-    th = Card(trb, pad=22)
-    th.pack(fill="x", pady=(4, 14))
-    label(th.inner, "Train your own AI model", "text", 10, True).pack(anchor="w")
-    label(th.inner, "AITE teaches an open AI model, right here on this Mac, with the data you collected. No code, no cloud, "
-                    "no API keys - your data and your model never leave this computer. Follow the steps from top to bottom.",
-          "dim", -1, wraplength=900).pack(anchor="w", pady=(6, 0))
-    tr_status = label(th.inner, "", "faint", -2)
-    tr_status.pack(anchor="w", pady=(8, 0))
+    hc = Card(akb, pad=22)
+    hc.pack(fill="x", pady=(4, 14))
+    label(hc.inner, "Ask your dataset", "text", 10, True).pack(anchor="w")
+    label(hc.inner, "ALL the data AITE has collected - every Q&A, DataGen variant, preference pair, image caption, generated "
+                    "scene and robot episode - is downloaded from GitHub automatically and kept in one search index (RAG). "
+                    "A local AI model on this Mac reads the best matching records and answers, citing them. No training, "
+                    "no cloud, no API keys.", "dim", -1, wraplength=900).pack(anchor="w", pady=(6, 0))
+    sgrid = box(hc.inner, "card")
+    sgrid.pack(fill="x", pady=(14, 0))
+    badges, badge_sub = {}, {}
+    for i, (k, title) in enumerate((("github", "GitHub data"), ("index", "Search index (RAG)"), ("kaggle", "Kaggle"),
+                                     ("engine", "AI engine"), ("model", "Answer model"))):
+        cell = box(sgrid, "card")
+        cell.grid(row=i // 3, column=i % 3, sticky="nw", padx=(0, 22), pady=(0, 10))
+        label(cell, title, "faint", -3, True).pack(anchor="w")
+        badges[k] = Badge(cell, "Checking…", "grey")
+        badges[k].pack(anchor="w", pady=(4, 2))
+        badge_sub[k] = label(cell, "", "faint", -4, wraplength=230)
+        badge_sub[k].pack(anchor="w")
+    hbar = FlowFrame(hc.inner, "card")
+    hbar.pack(fill="x", pady=(12, 0))
+    hbar.add(Pill(hbar, "Get new data now", lambda: rag_update_start(force=True), "outline", h=32, size=-2, icon="down",
+                  tip="Downloads the newest data from GitHub and adds it to the index (this also happens by itself)"))
+    hbar.add(Pill(hbar, "Rebuild index", lambda: rag_update_start(force=True, rebuild=True), "ghost", h=32, size=-2,
+                  tip="Starts the search index again from zero (only needed if something looks wrong)"))
+    hbar.add(Pill(hbar, "Open data folder", lambda: open_path(RAG_DATA if os.path.isdir(RAG_DATA) else HERE), "ghost", h=32, size=-2))
+    hbar.add(Pill(hbar, "Ask settings", lambda: open_settings("Ask (RAG)"), "ghost", h=32, size=-2, icon="gear"))
+    eng_btn = Pill(hbar, "Install AI engine", lambda: rag_install(), "primary", h=32, size=-2, icon="down",
+                   tip="One-time download (about 0.5 GB) of Apple's MLX into AITE's own folder")
 
-    # 1 trainer
-    c1 = step_card(1, "Get the trainer", "A one-time download (about 0.5 GB) of Apple's MLX training tools into AITE's own "
-                                         "folder. It does not change anything else on your Mac.")
-    inst_lbl = label(c1.body, "Checking…", "dim", -1)
-    inst_lbl.pack(side="left")
-    inst_btn = Pill(c1.body, "Install trainer", lambda: tr_install(), "primary", h=40, icon="down")
-    inst_btn.pack(side="right")
+    # ---- the conversation
+    cc = ask_card("Ask your data", "Type a question in the box below. AITE searches ALL your data and the model answers "
+                                   "from the best records, with numbered sources you can open.")
+    cc.pack_forget()
+    cc.pack(fill="x", pady=(4, 14), before=hc)  # the question box is the first thing on the page
+    mrow = box(cc.body, "card")
+    mrow.pack(fill="x", pady=(0, 10))
+    v_amode = tk.StringVar(value="model" if st["rag_use_model"] else "records")
 
-    # 2 model
-    c2 = step_card(2, "Choose a model", f"Bigger models learn more but need more memory and time. This Mac has {ram} GB of "
-                                        "memory.")
-    v_tmodel = tk.StringVar(value=st["trainer_model"])
-    OTHER = "__other__"
-
-    def model_options():
-        opts = dict((k, f"{v[0]}  ·  {v[1]} GB" + ("" if v[2] <= max(8, ram) else f"  ·  needs {v[2]} GB memory"))
-                    for k, v in TRAINER_MODELS.items())
-        opts.update(local_models())
-        if v_tmodel.get() not in opts and v_tmodel.get() != OTHER:
-            opts[v_tmodel.get()] = model_label(v_tmodel.get())
-        opts[OTHER] = "Other model… (any MLX model or a folder)"
-        return opts
-
-    def pick_model(v):
-        if v == OTHER:
-            other_fr.pack(fill="x", pady=(10, 0), after=model_dd)
-            v_tmodel.set(st["trainer_model"])
-            return
-        other_fr.pack_forget()
-        st["trainer_model"] = v
+    def amode_changed(v):
+        st["rag_use_model"] = v == "model"
         persist()
-        tr_refresh()
-    mopts = model_options()
-    model_dd = Dropdown(c2.body, v_tmodel, list(mopts), pick_model, labels=mopts, w=560)
-    model_dd.pack(anchor="w")
+    Segmented(mrow, ["model", "records"], v_amode, amode_changed,
+              labels={"model": "AI answer + sources", "records": "Matching records only"}).pack(side="left")
+    frow = box(cc.body, "card")
+    frow.pack(fill="x", pady=(0, 10))
+    fhead = box(frow, "card")
+    fhead.pack(fill="x")
+    label(fhead, "Fields", "dim", -2, True).pack(side="left")
+    fsel_lbl = label(fhead, "  ALL fields", "faint", -3)
+    fsel_lbl.pack(side="left")
+    Pill(fhead, "Clear", lambda: fields_set(False), "ghost", h=26, size=-3).pack(side="right")
+    Pill(fhead, "Select all", lambda: fields_set(True), "outline", h=26, size=-3).pack(side="right", padx=(0, 6))
+    fflow = FlowFrame(frow, "card")
+    fflow.pack(fill="x", pady=(6, 0))
+    fvars = {}
+    v_fall = tk.BooleanVar(value=True)
+    rg["fkeys"] = None
 
-    def refresh_model_dd():
-        o = model_options()
-        model_dd.options, model_dd.labels = list(o), o
-        model_dd.draw()
-    model_dd.bind("<ButtonPress-1>", lambda e: refresh_model_dd(), add="+")
-    other_fr = box(c2.body, "card")
-    label(other_fr, "Any MLX model from Hugging Face (e.g. mlx-community/Qwen2.5-7B-Math-Instruct-4bit) or a model folder "
-                    "on this Mac - e.g. a model you trained before, to keep teaching it.", "dim", -2, wraplength=820).pack(anchor="w")
-    orow = box(other_fr, "card")
-    orow.pack(fill="x", pady=(6, 0))
+    def fields_chosen():
+        """None = ALL fields; otherwise the list picked."""
+        on = [k for k, v in fvars.items() if v.get()]
+        return None if v_fall.get() or not on or len(on) == len(fvars) else on
+
+    def fields_label():
+        ch = fields_chosen()
+        fsel_lbl.configure(text="  ALL fields" if ch is None else f"  {len(ch)} of {len(fvars)} fields: " + shorten(", ".join(ch), 80))
+
+    def fields_set(on):
+        v_fall.set(on)
+        for v in fvars.values():
+            v.set(on)
+        for c_ in fflow.items:
+            c_.draw()
+        fields_label()
+
+    def all_chip_clicked():
+        fields_set(bool(v_fall.get()))
+
+    def field_chip_clicked():
+        on = [k for k, v in fvars.items() if v.get()]
+        v_fall.set(bool(fvars) and len(on) == len(fvars))
+        for c_ in fflow.items:
+            c_.draw()
+        fields_label()
+
+    def rebuild_field_chips(fl):
+        key = tuple(fl)
+        if key == rg["fkeys"]:
+            return
+        rg["fkeys"] = key
+        keep = {k: v.get() for k, v in fvars.items()}
+        for c_ in fflow.items:
+            c_.destroy()
+        fflow.items = []
+        fvars.clear()
+        fflow.add(Chip(fflow, "ALL", v_fall, all_chip_clicked, h=28))
+        for k, n_ in fl.items():
+            fvars[k] = tk.BooleanVar(value=keep.get(k, v_fall.get()))
+            fflow.add(Chip(fflow, f"{k or 'general'} · {fmt_n(n_)}", fvars[k], field_chip_clicked, h=28))
+        apply_theme()
+        fields_label()
+    prow = box(cc.body, "card")
+    prow.pack(fill="x", pady=(0, 10))
+    v_q = tk.StringVar()
+    ask_btn = Pill(prow, "Ask", lambda: rag_ask(), "primary", h=46, icon="up")
+    ask_btn.pack(side="right", padx=(8, 0))
+    qf = Field(prow, v_q, h=46)
+    qf.pack(side="left", fill="x", expand=True)
+    qf.e.bind("<Return>", lambda e: rag_ask())
+    cfr, chat_t = text_area(cc.body, "code", h=18, size=-1)
+    cfr.pack(fill="x")
+    chat_t.configure(state="disabled", cursor="arrow")
+    cbar = FlowFrame(cc.body, "card")
+    cbar.pack(fill="x", pady=(8, 0))
+    for ex in ("Explain the Lanczos algorithm", "How do robots plan a trajectory?", "Pad a number with zeros in PHP",
+               "What is BCS superconductivity?"):
+        cbar.add(Pill(cbar, ex, lambda ex=ex: (v_q.set(ex), rag_ask()), "outline", h=30, size=-3))
+    cbar.add(Pill(cbar, "Clear chat", lambda: (rg.__setitem__("chat", []), rg.__setitem__("rev", rg["rev"] + 1)), "ghost", h=30, size=-3))
+    ask_info = label(cc.body, "", "faint", -3, wraplength=900)
+    ask_info.pack(anchor="w", pady=(6, 0))
+    vrow = box(cc.body, "card")
+    vrow.pack(fill="x", pady=(12, 4))
+    label(vrow, "Verbose log", "dim", -2, True).pack(side="left")
+    label(vrow, "  every step: search terms, matches + scores, prompt size, model loading, speed, and the background "
+                "GitHub / index / Kaggle job", "faint", -4).pack(side="left")
+    Pill(vrow, "Clear", lambda: (rg["vlog"].clear(), rg.__setitem__("vrev", rg["vrev"] + 1)), "ghost", h=26, size=-3).pack(side="right")
+    vfr, vlog_t = text_area(cc.body, "code", mono=True, h=14, size=-3)
+    vfr.pack(fill="x")
+    vlog_t.configure(state="disabled")
+    rg.update(vlog=[], vrev=0, vdrawn=-1, jpos=-1)
+
+    def vlog(msg):
+        rg["vlog"].append(time.strftime("%H:%M:%S  ") + msg)
+        del rg["vlog"][:-800]
+        rg["vrev"] += 1
+
+    def tail_rag_log():
+        """New lines of the background job's log (GitHub download, indexing file by file, Kaggle upload)."""
+        lp = os.path.join(RAG_HOME, "rag.log")
+        try:
+            size = os.path.getsize(lp)
+        except OSError:
+            return
+        if size == rg["jpos"]:
+            return
+        first = rg["jpos"] < 0 or size < rg["jpos"]
+        start = max(0, size - 6000) if first else rg["jpos"]
+        try:
+            with open(lp, "rb") as f:
+                f.seek(start)
+                txt = f.read(200000).decode("utf-8", "replace")
+        except OSError:
+            return
+        rg["jpos"] = size
+        lines = txt.split("\n")
+        if first and start:
+            lines = lines[1:]
+        rg["vlog"] += ["job  " + ln for ln in lines if ln.strip()]
+        del rg["vlog"][:-800]
+        rg["vrev"] += 1
+
+    def render_vlog():
+        at_end = vlog_t.yview()[1] > 0.98
+        vlog_t.configure(state="normal")
+        vlog_t.delete("1.0", "end")
+        vlog_t.insert("end", "\n".join(rg["vlog"][-400:]))
+        vlog_t.configure(state="disabled")
+        if at_end:
+            vlog_t.see("end")
+
+    # ---- models
+    mc = ask_card("Models", f"Green = downloaded and ready to use. Grey = not downloaded yet - press Download (once). This Mac has "
+                            f"{ram} GB of memory; bigger models answer better but need more.")
+    mlist = box(mc.body, "card")
+    mlist.pack(fill="x")
+    model_rows = {}
+    orow = box(mc.body, "card")
+    orow.pack(fill="x", pady=(12, 0))
+    label(orow, "Another model", "dim", -2, True).pack(side="left", padx=(0, 10))
     v_other = tk.StringVar()
 
     def use_other():
         m = v_other.get().strip()
-        if not m:
-            return
-        st["trainer_model"] = m
-        persist()
-        v_tmodel.set(m)
-        refresh_model_dd()
-        other_fr.pack_forget()
-        status(f"Training model: {m}")
-        tr_refresh()
+        if m:
+            st["rag_model"] = m
+            persist()
+            v_other.set("")
+            rg["rows_key"] = None
+            status(f"Answer model: {m}" + ("" if model_downloaded(m) else " - press Download to get it"))
+            rag_refresh()
 
     def browse_model():
         d = filedialog.askdirectory(initialdir=TRAINER_RUNS if os.path.isdir(TRAINER_RUNS) else HERE)
         if d:
             v_other.set(d)
+            use_other()
     Pill(orow, "Use", use_other, "primary", h=36, size=-1).pack(side="right", padx=(8, 0))
     Pill(orow, "Folder…", browse_model, "outline", h=36, size=-1).pack(side="right", padx=(8, 0))
-    of = Field(orow, v_other, h=36)
-    of.pack(side="left", fill="x", expand=True)
-    of.e.bind("<Return>", lambda e: use_other())
-    model_hint = label(c2.body, "", "faint", -2, wraplength=820)
-    model_hint.pack(anchor="w", pady=(6, 0))
+    of_ = Field(orow, v_other, h=36)
+    of_.pack(side="left", fill="x", expand=True)
+    of_.e.bind("<Return>", lambda e: use_other())
+    label(mc.body, "Any MLX model id from Hugging Face (e.g. mlx-community/Qwen2.5-7B-Instruct-4bit) or a model folder.",
+          "faint", -3).pack(anchor="w", pady=(6, 0))
 
-    # 3 data
-    c3 = step_card(3, "Your data", "With GitHub first on, the dataset lives on GitHub and this Mac keeps only the newest "
-                                   "minutes - press 'Get data from GitHub' to download its text for training (once, then "
-                                   "updates). Manual-mode exports can be added too. This trainer uses the text.")
-    data_lbl = label(c3.body, "Counting…", "text", 1, True)
-    data_lbl.pack(anchor="w")
-    data_sub = label(c3.body, "", "dim", -2, wraplength=860)
-    data_sub.pack(anchor="w", pady=(2, 10))
-    label(c3.body, "How long to train", "dim", -2, True).pack(anchor="w", pady=(0, 4))
-    v_tlen = tk.StringVar(value=st["trainer_length"] if st["trainer_length"] in TRAIN_LENGTHS else "Short (~10 min)")
-    Segmented(c3.body, list(TRAIN_LENGTHS), v_tlen, lambda v: (st.__setitem__("trainer_length", v), persist(), tr_refresh()),
-              labels={k: k.split(" (")[0] for k in TRAIN_LENGTHS}).pack(anchor="w")
-    len_hint = label(c3.body, "", "faint", -2)
-    len_hint.pack(anchor="w", pady=(4, 0))
-    label(c3.body, "Which data", "dim", -2, True).pack(anchor="w", pady=(14, 4))
-    v_dmode = tk.StringVar(value=st["trainer_data_mode"])
+    def model_state(mid):
+        """(badge text, tone) for one model - the colours match everywhere on the page."""
+        d = rg["dl"].get(mid)
+        if d and d["proc"].poll() is None:
+            pct = min(99, int(100 * hf_cache_bytes(mid) / max(1, d["want"]))) if d["want"] else 0
+            return (f"Downloading {pct}%" if pct else "Downloading…"), "blue"
+        if model_downloaded(mid):
+            return "Downloaded", "green"
+        if d and d["proc"].poll() not in (None, 0):
+            return "Download failed", "red"
+        return "Not downloaded", "grey"
 
-    def dmode_changed(v):
-        st["trainer_data_mode"] = v
-        persist()
-        custom_fr.pack_forget()
-        if v == "custom":
-            custom_fr.pack(fill="x", pady=(10, 0), after=dmode_seg)
-        tr["scan_t"] = 0
-        tr_refresh()
-    dmode_seg = Segmented(c3.body, ["all", "custom"], v_dmode, dmode_changed,
-                          labels={"all": "All collected data", "custom": "A custom set I choose"})
-    dmode_seg.pack(anchor="w")
-    custom_fr = box(c3.body, "card")
-    crow = box(custom_fr, "card")
-    crow.pack(fill="x")
-    label(crow, "Examples to use", "text", -1).pack(side="left")
-    v_crows = tk.IntVar(value=int(st["trainer_custom_rows"]))
-    NumField(crow, v_crows, 10, 10000000, width=96).pack(side="right", padx=(10, 0))
-    Slider(crow, v_crows, 10, 20000).pack(side="left", fill="x", expand=True, padx=(14, 0))
-    cpre = FlowFrame(custom_fr, "card")
-    cpre.pack(fill="x", pady=(6, 0))
-    for n_ in (50, 200, 1000, 5000, 20000):
-        cpre.add(Pill(cpre, f"{n_:,}", lambda n_=n_: v_crows.set(n_), "outline", h=28, size=-3))
-
-    def crows_changed(*_):
-        try:
-            v = int(v_crows.get())
-        except (tk.TclError, ValueError):
+    def build_model_rows():
+        models = rag_models()
+        if st["rag_model"] not in models:
+            models[st["rag_model"]] = model_label(st["rag_model"])
+        key = tuple(models)
+        if key == rg["rows_key"]:
             return
-        if v != st["trainer_custom_rows"]:
-            st["trainer_custom_rows"] = v
+        rg["rows_key"] = key
+        for w_ in mlist.winfo_children():
+            w_.destroy()
+        model_rows.clear()
+        for i, (mid, name) in enumerate(models.items()):
+            if i:
+                box(mlist, "divider", height=1).pack(fill="x")
+            r_ = box(mlist, "card")
+            r_.pack(fill="x", pady=7)
+            info = TRAINER_MODELS.get(mid)
+            left = box(r_, "card")
+            left.pack(side="left", fill="x", expand=True)
+            nl = label(left, name, "text", -1, True)
+            nl.pack(anchor="w")
+            sub = (f"{info[1]} GB download · " + ("fits this Mac" if info[2] <= max(8, ram) else f"needs {info[2]} GB memory")) \
+                if info else ("folder on this Mac" if os.path.isdir(mid) else "on this Mac" if model_downloaded(mid) else "Hugging Face model")
+            label(left, f"{mid}  ·  {sub}", "faint", -4).pack(anchor="w")
+            act = Pill(r_, "Download", lambda mid=mid: model_action(mid), "outline", h=32, size=-2)
+            act.pack(side="right")
+            use_b = Badge(r_, "", "ink")
+            bd = Badge(r_, "Not downloaded", "grey")
+            bd.pack(side="right", padx=(0, 10))
+            fit = Badge(r_, "Too big for this Mac", "orange")
+            if info and info[2] > max(8, ram):
+                fit.pack(side="right", padx=(0, 6))
+            for w_ in (r_, left, nl):
+                w_.bind("<Double-Button-1>", lambda e, mid=mid: model_action(mid))
+            model_rows[mid] = {"badge": bd, "act": act, "use": use_b, "row": r_}
+        apply_theme()
+
+    def model_action(mid):
+        text, tone = model_state(mid)
+        if tone == "green":
+            st["rag_model"] = mid
             persist()
-            tr["scan_t"] = 0
-    v_crows.trace_add("write", crows_changed)
-    label(custom_fr, "Fields", "dim", -2, True).pack(anchor="w", pady=(12, 4))
-    fields_flow = FlowFrame(custom_fr, "card")
-    fields_flow.pack(fill="x")
-    label(custom_fr, "Sources", "dim", -2, True).pack(anchor="w", pady=(12, 4))
-    sources_flow = FlowFrame(custom_fr, "card")
-    sources_flow.pack(fill="x")
-    label(custom_fr, "Topic keywords (comma separated, blank = any)", "dim", -2, True).pack(anchor="w", pady=(12, 4))
-    krow_ = box(custom_fr, "card")
-    krow_.pack(fill="x")
-    v_kw = tk.StringVar(value=st["trainer_keywords"])
+            status(f"Answer model: {model_label(mid)}")
+        elif tone in ("grey", "red"):
+            rag_download(mid)
+        rag_refresh()
 
-    def kw_apply():
-        st["trainer_keywords"] = v_kw.get().strip()
-        persist()
-        tr["scan_t"] = 0
-        tr_refresh()
-    Pill(krow_, "Apply", kw_apply, "primary", h=36, size=-1).pack(side="right", padx=(8, 0))
-    kwf = Field(krow_, v_kw, h=36)
-    kwf.pack(side="left", fill="x", expand=True)
-    kwf.e.bind("<Return>", lambda e: kw_apply())
-    chip_state = {"fields": {}, "sources": {}, "keys": (None, None)}
-
-    def chips_changed(kind):
-        vars_ = chip_state[kind]
-        on = [k for k, v in vars_.items() if v.get()]
-        st["trainer_" + kind] = "" if len(on) in (0, len(vars_)) else ",".join(on)
-        persist()
-        tr["scan_t"] = 0
-        tr_refresh()
-
-    def rebuild_chips(all_fields, all_sources):
-        key = (tuple(sorted(all_fields)), tuple(sorted(all_sources)))
-        if key == chip_state["keys"]:
+    def rag_download(mid):
+        if not rg["engine"]:
+            status("Install the AI engine first (top of this page) - then the model downloads")
+            rag_install(then=mid)
             return
-        chip_state["keys"] = key
-        for kind, flow, counts in (("fields", fields_flow, all_fields), ("sources", sources_flow, all_sources)):
-            for w_ in flow.items:
-                w_.destroy()
-            flow.items = []
-            chosen = [x for x in st["trainer_" + kind].split(",") if x]
-            chip_state[kind] = {}
-            for name, n_ in sorted(counts.items(), key=lambda x: -x[1])[:40]:
-                var = tk.BooleanVar(value=not chosen or name in chosen)
-                chip_state[kind][name] = var
-                flow.add(Chip(flow, f"{name} · {fmt_n(n_)}", var, lambda kind=kind: chips_changed(kind), h=30))
-            apply_theme()
-    if st["trainer_data_mode"] == "custom":
-        custom_fr.pack(fill="x", pady=(10, 0))
-    label(c3.body, "Quality", "dim", -2, True).pack(anchor="w", pady=(14, 4))
-    tflow2 = FlowFrame(c3.body, "card")
-    tflow2.pack(fill="x")
-    tier_vars = {t: tk.BooleanVar(value=t in st["trainer_tiers"]) for t in ("high", "medium", "basic")}
-    v_tvar = tk.BooleanVar(value=bool(st["trainer_variants"]))
-
-    def tiers_changed():
-        on = [t for t, v in tier_vars.items() if v.get()] or ["high"]
-        st["trainer_tiers"] = ",".join(on)
-        st["trainer_variants"] = bool(v_tvar.get())
-        persist()
-        tr["scan_t"] = 0
-        tr_refresh()
-    for t, txt in (("high", "High quality"), ("medium", "Medium quality"), ("basic", "Basic quality")):
-        tflow2.add(Chip(tflow2, txt, tier_vars[t], tiers_changed, h=32))
-    tflow2.add(Chip(tflow2, "DataGen variants", v_tvar, tiers_changed, h=32))
-    dbar = FlowFrame(c3.body, "card")
-    dbar.pack(fill="x", pady=(10, 0))
-
-    def add_file():
-        p = filedialog.askopenfilename(filetypes=[("AITE data", "*.json *.jsonl *.gz")], initialdir=st["out_dir"])
-        if p:
-            tr["extra"].append(p)
-            tr["scan_t"] = 0
-            tr_refresh()
-    dbar.add(Pill(dbar, "Add a file…", add_file, "outline", h=34, size=-2, icon="plus"))
-    dbar.add(Pill(dbar, "Preview the set", lambda: tr_preview_set(), "outline", h=34, size=-2))
-    dbar.add(Pill(dbar, "Recount", lambda: (tr.__setitem__("scan_t", 0), tr_refresh()), "ghost", h=34, size=-2))
-    dbar.add(Pill(dbar, "Open data folder", lambda: open_path(ag["root"]), "ghost", h=34, size=-2))
-
-    def pull_latest():
-        if tr.get("pulling"):
+        if os.path.isdir(mid):
             return
-        tr["pulling"] = True
-        status("Getting the latest dataset from GitHub…")
+        info = TRAINER_MODELS.get(mid)
+        rg["dl"][mid] = {"proc": model_download_start(mid), "want": int(info[1] * 2 ** 30) if info else 0}
+        status(f"Downloading {model_label(mid)} (once)…")
+
+    def rag_install(then=None):
+        if rg["installing"] or not trainer_supported() or rg["engine"]:
+            return
+        rg["installing"], rg["install_log"] = True, "Starting…"
 
         def work():
-            g = GitHubSync(ag["root"], st, lambda m: None)
-            repo, br = str(st.get("gh_repo", "")).strip(), st.get("gh_branch") or "main"
-            if not os.path.isdir(os.path.join(TRAINER_DATA, ".git")):  # text only (no pictures), its own folder
-                code, out = g.run(HERE, "clone", "-q", "--depth", "1", "--filter=blob:none", "--sparse", "-b", br, repo, TRAINER_DATA)
-                if code == 0:
-                    code, out = g.run(TRAINER_DATA, "sparse-checkout", "set", "Dataset/text", "Dataset/preference")
-            else:
-                code, out = g.run(TRAINER_DATA, "pull", "-q", "--depth", "1", "--rebase", "origin", br)
-            tr["pull_msg"] = "Training data is up to date with GitHub." if code == 0 else f"Could not download: {out[-160:]}"
-            tr["pulling"], tr["scan_t"] = False, 0
-        threading.Thread(target=work, daemon=True).start()
-    dbar.add(Pill(dbar, "Get data from GitHub", pull_latest, "outline", h=34, size=-2,
-                  tip="GitHub first keeps the dataset on GitHub: download its text into trainer_data to train on it"))
-
-    # 4 train
-    c4 = step_card(4, "Train", "Press Start. The first time, the model is downloaded once. You can keep using your Mac; "
-                               "closing AITE does not stop the training.")
-    trow = box(c4.body, "card")
-    trow.pack(fill="x")
-    train_btn = Pill(trow, "Start training", lambda: tr_train_toggle(), "primary", h=46, size=1, icon="play")
-    train_btn.pack(side="left")
-    train_lbl = label(trow, "", "dim", -1, wraplength=640)
-    train_lbl.pack(side="left", padx=(16, 0))
-    tprog = Progress(c4.body)
-    tprog.pack(fill="x", pady=(12, 6))
-
-    class LossChart(Canvas):
-        """'Mistakes' over time: ink = on the training examples, blue dashed = on held-back check examples."""
-        def __init__(self, master):
-            super().__init__(master, height=170, width=400)
-            self.train, self.val, self.total = [], [], 1
-
-        def draw(self):
-            super().draw()
-            w, h = self.winfo_width(), self.winfo_height()
-            if w < 40:
-                return
-            L, B = 44, h - 22
-            for i in range(4):
-                y = 8 + (B - 8) * i / 3
-                self.create_line(L, y, w - 4, y, fill=T["divider"])
-            pts = self.train + self.val
-            if not pts:
-                self.create_text(w / 2, h / 2, text="The chart appears when training starts", fill=T["faint"], font=font(-2))
-                return
-            lo, hi = min(p[1] for p in pts), max(p[1] for p in pts)
-            hi = hi if hi > lo else lo + 1
-            X = lambda it: L + (w - L - 8) * it / max(1, self.total)
-            Y = lambda v: 8 + (B - 8) * (1 - (v - lo) / (hi - lo))
-            for i in range(4):
-                v = hi - (hi - lo) * i / 3
-                self.create_text(L - 6, 8 + (B - 8) * i / 3, text=f"{v:.2f}", anchor="e", fill=T["faint"], font=font(-4))
-            self.create_text(L, h - 8, text="0", anchor="w", fill=T["faint"], font=font(-4))
-            self.create_text(w - 4, h - 8, text=f"step {self.total}", anchor="e", fill=T["faint"], font=font(-4))
-            for series, color, dash in ((self.train, T["text"], None), (self.val, T["blue"], (4, 3))):
-                if len(series) >= 2:
-                    self.create_line(*[c for it, v in series for c in (X(it), Y(v))], fill=color, width=2, dash=dash, smooth=False)
-                for it, v in series[-1:]:
-                    self.create_oval(X(it) - 3.5, Y(v) - 3.5, X(it) + 3.5, Y(v) + 3.5, fill=color, outline="")
-    chart = LossChart(c4.body)
-    chart.pack(fill="x")
-    label(c4.body, "The line should go down: lower means fewer mistakes. Ink = examples it learns from, blue dashed = "
-                   "a check on examples it never trains on (if only ink goes down, it is memorising - train shorter).",
-          "faint", -3, wraplength=880).pack(anchor="w", pady=(6, 0))
-
-    # 5 try it - the model runs inside AITE
-    c5 = step_card(5, "Try it", "Your model runs right here in AITE. Ask anything and compare the answers before and after "
-                                "training - or let AITE test both on questions it held back from training.")
-    try_lbl = label(c5.body, "", "dim", -2, wraplength=860)
-    try_lbl.pack(anchor="w", pady=(0, 8))
-    v_prompt = tk.StringVar(value="A robot arm moves 3 cm per step. How many steps does it need to move 45 cm?")
-    prow = box(c5.body, "card")
-    prow.pack(fill="x")
-    ask_btn = Pill(prow, "Ask both", lambda: tr_ask(), "primary", h=40, icon="up")
-    ask_btn.pack(side="right", padx=(8, 0))
-    pf = Field(prow, v_prompt, h=40)
-    pf.pack(side="left", fill="x", expand=True)
-    pf.e.bind("<Return>", lambda e: tr_ask())
-    tbar = FlowFrame(c5.body, "card")
-    tbar.pack(fill="x", pady=(8, 0))
-    tbar.add(Pill(tbar, "Use a check question", lambda: tr_check_question(), "ghost", h=32, size=-2,
-                  tip="A question from the held-back check set (never trained on), with its reference answer"))
-    tbar.add(Pill(tbar, "Compare on check questions", lambda: tr_compare(), "outline", h=32, size=-2,
-                  tip="Both models answer the held-back questions; AITE scores them against the reference answers"))
-    tbar.add(Pill(tbar, "Clear chat", lambda: tr_clear_chat(), "ghost", h=32, size=-2))
-    ab = box(c5.body, "card")
-    ab.pack(fill="x", pady=(12, 0))
-    ab.columnconfigure(0, weight=1, uniform="ab")
-    ab.columnconfigure(1, weight=1, uniform="ab")
-    answers, verdicts = {}, {}
-    for i, (k, title) in enumerate((("before", "Before training"), ("after", "After training"))):
-        col = box(ab, "card")
-        col.grid(row=0, column=i, sticky="nsew", padx=(0, 7) if i == 0 else (7, 0))
-        hrow_ = box(col, "card")
-        hrow_.pack(fill="x", pady=(0, 4))
-        label(hrow_, title, "dim", -2, True).pack(side="left")
-        verdicts[k] = label(hrow_, "", "faint", -3)
-        verdicts[k].pack(side="right")
-        fr_, t_ = text_area(col, "code", h=12, size=-2)
-        fr_.pack(fill="both", expand=True)
-        answers[k] = t_
-    score_lbl = label(c5.body, "", "text", -1, True, wraplength=860)
-    score_lbl.pack(anchor="w", pady=(10, 0))
-
-    # 6 keep it
-    c6 = step_card(6, "Keep your model", "Save it as one standalone model folder. It opens in LM Studio (free) or with "
-                                         "mlx-lm on any Mac with Apple silicon.")
-    krow = FlowFrame(c6.body, "card")
-    krow.pack(fill="x")
-    krow.add(Pill(krow, "Save as a standalone model", lambda: tr_fuse(), "primary", h=40, icon="down"))
-    krow.add(Pill(krow, "Open run folder", lambda: open_path(tr["run"] or TRAINER_RUNS), "outline", h=40, size=-1))
-    krow.add(Pill(krow, "Training guide", lambda: open_path(os.path.join(HERE, "TRAINING_BLUEPRINT.md")), "outline", h=40, size=-1))
-    keep_lbl = label(c6.body, "", "dim", -2, wraplength=880)
-    keep_lbl.pack(anchor="w", pady=(8, 0))
-
-    # advanced (for technical people)
-    adv_bar = FlowFrame(trb, "page")
-    adv_bar.pack(fill="x", pady=(2, 0))
-    adv = Card(trb, pad=20)
-    adv_vars = {}
-    adv_t = adv_bar.add(Pill(adv_bar, "Show advanced options", lambda: tr_adv(), "ghost", h=34, size=-2, icon_right="chevron"))
-    label(adv.inner, "Advanced", "text", 2, True).pack(anchor="w")
-    label(adv.inner, "For technical users. 'How long to train' above sets the iterations unless you choose a custom number "
-                     "here.", "dim", -2, wraplength=880).pack(anchor="w", pady=(2, 10))
-    ag_grid = box(adv.inner, "card")
-    ag_grid.pack(fill="x")
-    for i, key in enumerate(("trainer_iters", "trainer_batch", "trainer_lr", "trainer_layers", "trainer_max_seq",
-                             "trainer_max_rows", "trainer_system")):
-        cell = box(ag_grid, "card")
-        cell.grid(row=i // 2, column=i % 2, sticky="ew", padx=(0, 18) if i % 2 == 0 else 0, pady=6)
-        label(cell, SPEC[key][1], "text", -2).pack(anchor="w")
-        v = tk.StringVar(value=str(st[key]))
-        adv_vars[key] = v
-        Field(cell, v, h=36).pack(fill="x", pady=(4, 0))
-    ag_grid.columnconfigure(0, weight=1, uniform="adv")
-    ag_grid.columnconfigure(1, weight=1, uniform="adv")
-    arow2 = FlowFrame(adv.inner, "card")
-    arow2.pack(fill="x", pady=(10, 0))
-    v_custom = tk.BooleanVar(value=st["trainer_length"].startswith("Custom"))
-    arow2.add(Chip(arow2, "Use the custom iterations", v_custom, lambda: None, h=32))
-    v_mask = tk.BooleanVar(value=bool(st["trainer_mask_prompt"]))
-    arow2.add(Chip(arow2, "Learn from answers only", v_mask, lambda: None, h=32))
-    v_ft = tk.StringVar(value=st["trainer_fine_tune"])
-    arow2.add(Segmented(arow2, ["lora", "dora", "full"], v_ft, labels={"lora": "LoRA", "dora": "DoRA", "full": "Full"}, h=32, size=-2))
-    arow3 = FlowFrame(adv.inner, "card")
-    arow3.pack(fill="x", pady=(10, 0))
-    adv_msg = label(adv.inner, "", "dim", -2)
-    arow3.add(Pill(arow3, "Apply", lambda: tr_adv_apply(), "primary", h=36, size=-1))
-    arow3.add(Pill(arow3, "Show the command", lambda: tr_show_cmd(), "outline", h=36, size=-1))
-    arow3.add(Pill(arow3, "Open training log", lambda: open_path(os.path.join(tr["run"], "train.log")) if tr["run"] else None,
-                   "outline", h=36, size=-1))
-    adv_msg.pack(anchor="w", pady=(8, 0))
-
-    def tr_adv():
-        tr["adv"] = not tr.get("adv")
-        if not tr["adv"]:
-            adv.pack_forget()
-            adv_t.text = "Show advanced options"
-        else:
-            adv.pack(fill="x", pady=(8, 0))
-            adv_t.text = "Hide advanced options"
-        adv_t.configure(width=int(measure(adv_t.text, adv_t.fnt) + 2 * max(14, 34 * 0.42) + 16))
-        adv_t.draw()
-
-    def tr_adv_apply():
-        bad = []
-        for k, v in adv_vars.items():
-            kind, extra = SPEC[k][2], SPEC[k][4]
-            try:
-                val = int(float(v.get())) if kind == "int" else float(v.get()) if kind == "float" else v.get()
-                if kind in ("int", "float") and not extra[0] <= val <= extra[1]:
-                    raise ValueError
-                st[k] = val
-            except ValueError:
-                bad.append(SPEC[k][1])
-        st["trainer_mask_prompt"], st["trainer_fine_tune"] = bool(v_mask.get()), v_ft.get()
-        st["trainer_length"] = "Custom (iterations below)" if v_custom.get() else v_tlen.get()
-        persist()
-        adv_msg.configure(text=("Not applied: " + ", ".join(bad)) if bad else "Applied")
-        tr_refresh()
-        return bad
-
-    def iters_now():
-        if st["trainer_length"].startswith("Custom"):
-            return int(st["trainer_iters"])
-        return TRAIN_LENGTHS.get(v_tlen.get(), 200)
-
-    def tr_cmd(run):
-        return trainer_command(run, v_tmodel.get(), iters_now(), st["trainer_batch"], st["trainer_lr"], st["trainer_layers"],
-                               st["trainer_max_seq"], st["trainer_mask_prompt"], st["trainer_fine_tune"])
-
-    def tr_show_cmd():
-        run = tr["run"] if tr["run"] and trainer_progress(tr["run"])["state"] in ("training", "preparing") else new_run_dir(v_tmodel.get())
-        cmd = tr_cmd(run)
-        return popup("Training command", "The Trainer page runs exactly this (from the run folder):\n\n" +
-                     " \\\n    ".join(f'"{c}"' if " " in c else c for c in cmd) +
-                     "\n\nThe data is written first to <run>/data/train.jsonl and valid.jsonl as chat messages.", 860, 420)
-
-    def tr_sources():
-        got = os.path.join(TRAINER_DATA, "Dataset")
-        return [ag["root"]] + ([got] if os.path.isdir(got) else []) + tr["extra"]
-
-    def tr_selection():
-        """The data choice from step 3 (all data, or the detailed custom set) as build_training_set arguments."""
-        kinds = ("original", "variant") if st["trainer_variants"] else ("original",)
-        sel = dict(tiers=tuple(st["trainer_tiers"].split(",")), kinds=kinds, system=st["trainer_system"],
-                   max_seq=int(st["trainer_max_seq"]), max_rows=int(st["trainer_max_rows"]))
-        if st["trainer_data_mode"] == "custom":
-            sel.update(max_rows=int(st["trainer_custom_rows"]),
-                       fields=[x for x in st["trainer_fields"].split(",") if x] or None,
-                       srcs=[x for x in st["trainer_sources"].split(",") if x] or None,
-                       keywords=[x for x in st["trainer_keywords"].split(",") if x.strip()] or None)
-        return sel
-
-    def tr_scan():
-        """Counts the usable examples in a thread (the dataset can be large) - nothing is written."""
-        if tr.get("scanning"):
-            return
-        tr["scanning"] = True  # its own flag: a recount never interferes with a chat answer or a comparison
-
-        def work():
-            try:
-                tr["data"] = build_training_set(tr_sources(), None, dry_run=True, **tr_selection())
-            except Exception as e:
-                tr["data"] = {"error": str(e)}
-            tr["scan_t"] = time.time()
-            tr["scanning"] = False
+            ok = trainer_install(lambda m: rg.__setitem__("install_log", m))
+            rg["engine"], rg["installing"] = ok, False
+            rg["install_log"] = "Installed" if ok else "Install failed - see Help"
+            if ok and then:
+                rg["then_dl"] = then
         threading.Thread(target=work, daemon=True).start()
 
-    def tr_preview_set():
-        d = tr["data"] or {}
-        if "train" not in d:
-            return None
-        lines = [f"{d['train']:,} examples to learn from, {d['valid']:,} held back to check - about {fmt_n(d['tokens'])} tokens", ""]
-        for title, key in (("By field", "fields"), ("By source", "sources")):
-            lines.append(title + ":")
-            lines += [f"   {k:40s} {v:>9,}" for k, v in sorted(d.get(key, {}).items(), key=lambda x: -x[1])[:25]]
-            lines.append("")
-        lines.append(f"Left out: {d.get('skipped_filter', 0):,} by your choices, {d.get('too_long', 0):,} too long, "
-                     f"{d.get('duplicates', 0):,} duplicates, {d.get('skipped_images', 0):,} picture/robot rows")
-        lines += ["", "Examples:", ""]
-        for msgs in d.get("sample", []):
-            for m in msgs:
-                lines.append(f"[{m['role']}] {shorten(m['content'], 600)}")
-            lines.append("-" * 60)
-        return popup("Training set preview", "\n".join(lines), 900, 640)
-
-    def tr_install():
-        if tr["installing"] or not trainer_supported():
+    # ---- background: GitHub -> index (its own low-priority process, so the window never freezes)
+    def rag_update_start(force=False, rebuild=False):
+        p = rg["proc"]
+        if p is not None and p.poll() is None:
+            if force:
+                status("Already getting new data - it shows above")
             return
-        tr["installing"] = True
-        tr["install_log"] = "Starting…"
-
-        def work():
-            ok = trainer_install(lambda m: tr.__setitem__("install_log", m))
-            tr["ready"], tr["installing"] = ok, False
-            tr["install_log"] = "Installed" if ok else "Install failed - see Help"
-        threading.Thread(target=work, daemon=True).start()
-        tr_refresh()
-
-    def tr_train_toggle():
-        pr = trainer_progress(tr["run"]) if tr["run"] else {"state": "none"}
-        if pr["state"] in ("training", "preparing"):
-            trainer_stop(tr["run"])
-            status("Training stopped - the last saved checkpoint is kept")
-            tr_refresh()
+        mins = int(st["rag_sync_min"])
+        if not force and time.time() - rg["spawn_t"] < mins * 60:
             return
-        if not tr["ready"]:
-            status("Install the trainer first (step 1)")
-            return
-        data = tr["data"] or {}
-        if data.get("train", 0) < 8 or data.get("valid", 0) < 2:
-            messagebox.showinfo(APP, "Not enough examples yet. Let Agent mode collect for a while (or add a Manual-mode "
-                                     "JSON export in step 3), then try again.") if not smoke else None
-            return
-        model = v_tmodel.get()
-        need = TRAINER_MODELS.get(model, ("", 0, 8))[2]
-        if need > max(8, ram) and not smoke and not messagebox.askyesno(
-                APP, f"This model needs about {need} GB of memory and this Mac has {ram} GB. It may be very slow or fail. Continue?"):
-            return
-        run = new_run_dir(model)
-        tr["run"] = run
-        stats = build_training_set(tr_sources(), os.path.join(run, "data"), **tr_selection())
-        trainer_start(run, tr_cmd(run), {"model": model, "iters": iters_now(), "data": stats})
-        status(f"Training started: {stats['train']} examples")
-        for t_ in answers.values():
-            t_.delete("1.0", "end")
-        tr_refresh()
+        if rebuild:
+            for f_ in (RAG_INDEX, RAG_INDEX + "-wal", RAG_INDEX + "-shm"):
+                try:
+                    os.remove(f_)
+                except OSError:
+                    pass
+            rg["index"] = None
+        rg["spawn_t"] = time.time()
+        if not smoke:
+            save_settings(st)
+        import subprocess
+        cmd = [sys.executable, os.path.abspath(__file__), "--rag-update", "--dir", ag["root"]] + (["--offline"] if smoke else [])
+        rg["proc"] = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=open(os.path.join(HERE, "rag_errors.log"), "a"),
+                                      stdin=subprocess.DEVNULL, start_new_session=True, cwd=HERE)
 
-    def tr_model_and_adapter():
-        pr = trainer_progress(tr["run"]) if tr["run"] else {"state": "none"}
-        adapter = pr.get("adapter") if pr["state"] in ("done", "stopped", "training") and pr.get("adapter") and \
-            os.path.exists(os.path.join(pr["adapter"], "adapters.safetensors")) else None
-        return pr.get("model") or v_tmodel.get(), adapter
+    def rag_index():
+        if rg["index"] is None:
+            rg["index"] = RagIndex()
+        return rg["index"]
 
-    def tr_worker():
-        """The base and the trained model, loaded once in a helper process and kept ready."""
-        model, adapter = tr_model_and_adapter()
-        w = tr.get("worker")
-        if w is None or not w.alive() or (w.model, w.adapter) != (model, adapter):
+    def rag_worker():
+        m = st["rag_model"]
+        w = rg.get("worker")
+        if w is None or not w.alive() or w.model != m:
             if w is not None:
                 w.stop()
-            w = tr["worker"] = PreviewWorker(model, adapter)
+            w = rg["worker"] = PreviewWorker(m, None)
         return w
 
-    def tr_render_chat():
-        for k, t_ in answers.items():
-            t_.delete("1.0", "end")
-            for m in tr["chat"][k]:
-                t_.insert("end", ("You:  " if m["role"] == "user" else "Model:  ") + m["content"] + "\n\n")
-            t_.see("end")
-        for k, lbl in verdicts.items():
-            lbl.configure(text=tr["verdict"].get(k, ""))
-
-    def tr_clear_chat():
-        tr["chat"], tr["verdict"], tr["ref"] = {"before": [], "after": []}, {}, None
-        score_lbl.configure(text="")
-        tr_render_chat()
-
-    def tr_check_question():
-        """A held-back question (never trained on) with its reference answer, so the answers can be scored."""
-        run = tr["run"]
-        path = os.path.join(run, "data", "valid.jsonl") if run else ""
-        try:
-            with open(path, encoding="utf-8") as f:
-                rows = [json.loads(l)["messages"] for l in f if l.strip()]
-        except (OSError, ValueError):
-            rows = []
-        if not rows:
-            status("Train first (step 4) - the check questions come from that run")
+    def rag_ask():
+        q = v_q.get().strip()
+        if not q or rg["busy"]:
             return
-        msgs = random.choice(rows)
-        q = next((m["content"] for m in msgs if m["role"] == "user"), "")
-        tr["ref"] = next((m["content"] for m in reversed(msgs) if m["role"] == "assistant"), "")
-        v_prompt.set(q)
-        status("Check question loaded - press Ask both")
-
-    def tr_ask():
-        if tr["busy"] in ("ask", "compare") or not tr["ready"]:
-            return
-        prompt = v_prompt.get().strip()
-        if not prompt:
-            return
-        tr["busy"] = "ask"
-        ref = tr.get("ref")
-        tr["ref"] = None
-        model, adapter = tr_model_and_adapter()
-        for k in ("before", "after"):
-            tr["chat"][k].append({"role": "user", "content": prompt})
-        tr["verdict"] = {}
-        tr_render_chat()
+        use_model = v_amode.get() == "model"
+        if use_model and not (rg["engine"] and model_downloaded(st["rag_model"])):
+            use_model = False
+            status("The answer model is not ready (install the engine / download the model) - showing the matching records")
+        v_q.set("")
+        turn = {"q": q, "a": "", "hits": [], "state": "searching", "model": model_label(st["rag_model"]) if use_model else ""}
+        rg["chat"].append(turn)
+        rg["busy"], rg["rev"] = True, rg["rev"] + 1
+        field = fields_chosen()
+        history = []
+        for t_ in rg["chat"][:-1][-3:]:
+            if t_.get("a"):
+                history += [{"role": "user", "content": t_["q"]}, {"role": "assistant", "content": t_["a"]}]
 
         def work():
-            w = tr_worker()
-            for k in ("before", "after"):
-                if k == "after" and not adapter:
-                    tr["chat"][k].append({"role": "assistant", "content": "(train a model in step 4 to see this side)"})
-                    continue
-                try:
-                    a_ = w.ask(k, tr["chat"][k][-12:], int(st["trainer_preview_tokens"]), system=st["trainer_system"])
-                except Exception as e:
-                    a_ = f"(could not answer: {e})"
-                tr["chat"][k].append({"role": "assistant", "content": a_})
-                if ref:
-                    ok, sim = score_answer(a_, ref)
-                    tr["verdict"][k] = ("✓ matches the reference" if ok else "✗ differs from the reference" if ok is False
-                                        else "") + f"  ·  similarity {sim:.0%}"
-            tr["answers_ready"] = True  # hand the answers over first, then free the button
-            tr["busy"] = ""
-        threading.Thread(target=work, daemon=True).start()
-
-    def tr_compare(n=None):
-        """Both models answer the held-back check questions; AITE scores them against the reference answers."""
-        if tr["busy"] in ("ask", "compare") or not tr["ready"]:
-            return
-        model, adapter = tr_model_and_adapter()
-        run = tr["run"]
-        try:
-            with open(os.path.join(run, "data", "valid.jsonl"), encoding="utf-8") as f:
-                rows = [json.loads(l)["messages"] for l in f if l.strip()]
-        except (OSError, ValueError, TypeError):
-            rows = []
-        if not rows or not adapter:
-            score_lbl.configure(text="Train a model first (step 4) - the comparison uses that run's held-back questions.")
-            return
-        rows = rows[:int(n or st["trainer_compare_n"])]
-        tr["busy"], tr["compare"] = "compare", {"done": 0, "total": len(rows), "results": []}
-
-        def work():
-            w = tr_worker()
-            for msgs in rows:
-                q = [m for m in msgs if m["role"] != "assistant"][-1:]
-                ref = next((m["content"] for m in reversed(msgs) if m["role"] == "assistant"), "")
-                res = {"q": q[0]["content"] if q else "", "ref": ref}
-                for k in ("before", "after"):
-                    try:
-                        res[k] = w.ask(k, q, int(st["trainer_preview_tokens"]), system=st["trainer_system"])
-                    except Exception as e:
-                        res[k] = f"(could not answer: {e})"
-                    res[k + "_ok"], res[k + "_sim"] = score_answer(res[k], ref)
-                tr["compare"]["results"].append(res)
-                tr["compare"]["done"] += 1
-            tr["compare"]["finished"] = True
-            tr["busy"] = ""
-        threading.Thread(target=work, daemon=True).start()
-
-    def compare_summary(c):
-        r = c["results"]
-        checkable = [x for x in r if x["after_ok"] is not None]
-        sb = sum(x["before_sim"] for x in r) / max(1, len(r))
-        sa = sum(x["after_sim"] for x in r) / max(1, len(r))
-        txt = f"On {len(r)} check questions it never trained on: "
-        if checkable:
-            cb = sum(1 for x in checkable if x["before_ok"])
-            ca = sum(1 for x in checkable if x["after_ok"])
-            txt += f"correct answers {cb}/{len(checkable)} before -> {ca}/{len(checkable)} after; "
-        txt += f"closeness to the reference answers {sb:.0%} before -> {sa:.0%} after."
-        return txt
-
-    def show_compare():
-        c = tr.get("compare") or {}
-        if not c.get("results"):
-            return None
-        lines = [compare_summary(c), ""]
-        for i, x in enumerate(c["results"], 1):
-            mark = lambda ok: "✓" if ok else "✗" if ok is False else "·"
-            lines += [f"{i}. {shorten(x['q'], 300)}", f"   Reference: {shorten(x['ref'], 300)}",
-                      f"   Before {mark(x['before_ok'])} {x['before_sim']:.0%}: {shorten(x['before'], 300)}",
-                      f"   After  {mark(x['after_ok'])} {x['after_sim']:.0%}: {shorten(x['after'], 300)}", ""]
-        return popup("Before vs after - check questions", "\n".join(lines), 940, 660)
-
-    def tr_fuse():
-        pr = trainer_progress(tr["run"]) if tr["run"] else {"state": "none"}
-        if pr["state"] not in ("done", "stopped") or not os.path.exists(os.path.join(pr.get("adapter", ""), "adapters.safetensors")):
-            keep_lbl.configure(text="Finish a training run first (step 4).")
-            return
-        if tr["busy"] == "fuse":
-            return
-        tr["busy"] = "fuse"
-        out = os.path.join(tr["run"], "model")
-        keep_lbl.configure(text="Saving…")
-
-        def work():
+            t0 = time.time()
             try:
-                trainer_fuse(pr["model"], pr["adapter"], out)
-                tr["fused"] = out
+                vlog(f"QUESTION  {q!r}" + (f"  · fields = {', '.join(field)}" if field else "  · ALL fields"))
+                ix = rag_index()
+                fts = RagIndex.query_of(q)
+                vlog(f"search terms ({len(fts.split(' OR ')) if fts else 0}): {fts or '(none - only stop words)'}")
+                turn["hits"] = ix.search(q, int(st["rag_k"]), field)
+                turn["search_ms"] = int((time.time() - t0) * 1000)
+                vlog(f"BM25 full-text search over {fmt_n(rg['status'].get('count', 0))} records: {len(turn['hits'])} matches "
+                     f"in {turn['search_ms']} ms (best {st['rag_k']} kept)")
+                for i, h in enumerate(turn["hits"], 1):
+                    vlog(f"   [{i}] score {-h['score']:.2f}  {h['field'] or h['topic'] or 'general'} · {h['source']}  "
+                         f"{shorten(h['title'], 90)}  ({len(h['q']) + len(h['a']):,} chars)")
+                if use_model:
+                    turn["state"] = "thinking"
+                    rg["rev"] += 1
+                    msgs = rag_messages(q, turn["hits"], history, int(st["rag_context_chars"]))
+                    n_ch = sum(len(m_["content"]) for m_ in msgs) + len(RAG_SYSTEM)
+                    vlog(f"prompt: {len(msgs)} messages ({len(history) // 2} earlier turns), {n_ch:,} characters ≈ {n_ch // 4:,} "
+                         f"tokens · source limit {st['rag_context_chars']:,} chars")
+                    w_ = rg.get("worker")
+                    fresh = w_ is None or not w_.alive() or w_.model != st["rag_model"]
+                    if fresh:
+                        vlog(f"loading {st['rag_model']} into memory (MLX, Apple GPU)…")
+                    t1 = time.time()
+                    wk = rag_worker()
+                    wk.ready.wait(600)
+                    if fresh:
+                        vlog(f"model loaded in {time.time() - t1:.1f} s" + (f" - error: {wk.error}" if wk.error else ""))
+                    vlog(f"generating: up to {st['rag_tokens']} tokens, temperature {st['rag_temp']}…")
+                    t2 = time.time()
+                    turn["a"] = wk.ask("before", msgs, int(st["rag_tokens"]), temp=float(st["rag_temp"]), system=RAG_SYSTEM)
+                    dt = max(0.01, time.time() - t2)
+                    est = max(1, len(turn["a"]) // 4)
+                    cites = sorted(set(re.findall(r"\[(\d+)\]", turn["a"])), key=int)
+                    vlog(f"answer: {len(turn['a']):,} chars ≈ {est:,} tokens in {dt:.1f} s ≈ {est / dt:.0f} tokens/s · cites "
+                         + (", ".join("[" + c + "]" for c in cites) or "no sources"))
+                else:
+                    turn["a"] = rag_extractive(q, turn["hits"])
+                    vlog("records-only answer: quoting the best match (no model used)")
             except Exception as e:
-                tr["fused"] = f"error: {e}"
-            tr["busy"] = ""
+                vlog(f"ERROR {type(e).__name__}: {e}")
+                turn["a"] = f"(could not answer: {e})\n\n" + rag_extractive(q, turn["hits"])
+            turn["state"], turn["secs"] = "done", time.time() - t0
+            vlog(f"done in {turn['secs']:.1f} s")
+            rg["busy"], rg["rev"] = False, rg["rev"] + 1
         threading.Thread(target=work, daemon=True).start()
 
-    def tr_refresh():
-        if tr["ready"] is None and not tr["installing"]:
-            tr["ready"] = False
-            threading.Thread(target=lambda: tr.__setitem__("ready", trainer_ready()), daemon=True).start()
-        if not trainer_supported():
-            inst_lbl.configure(text="The trainer needs a Mac with Apple silicon (M1 or newer). The training guide explains "
-                                    "how to train on other computers or in the cloud.")
-            inst_btn.set_enabled(False)
-        elif tr["installing"]:
-            inst_lbl.configure(text="Installing… (a few minutes)  " + shorten(tr.get("install_log", ""), 60))
-            inst_btn.set_enabled(False)
-        elif tr["ready"]:
-            inst_lbl.configure(text="Ready - the trainer is installed.")
-            inst_btn.set_enabled(False)
-        else:
-            inst_lbl.configure(text="Not installed yet.")
-            inst_btn.set_enabled(True)
-        c1.badge.ok = bool(tr["ready"])
-        info = TRAINER_MODELS.get(v_tmodel.get())
-        if info:
-            model_hint.configure(text=("Good fit for this Mac." if info[2] <= max(8, ram) else
-                                       f"Needs about {info[2]} GB of memory - this Mac has {ram} GB.") + f" Download {info[1]} GB, once.")
-        else:
-            model_hint.configure(text=f"{model_label(v_tmodel.get())} - check that it fits this Mac's {ram} GB of memory.")
-        c2.badge.ok = True
-        len_hint.configure(text=f"{iters_now():,} training steps" + ("  (custom)" if st["trainer_length"].startswith("Custom") else ""))
-        if tr["scan_t"] == 0 or time.time() - tr["scan_t"] > 300:
-            tr_scan()
-        d = tr["data"]
-        if d and "error" not in d:
-            rebuild_chips(d.get("all_fields", {}), d.get("all_sources", {}))
-            data_lbl.configure(text=f"{d['train'] + d['valid']:,} examples ready  ·  about {fmt_n(d['tokens'])} tokens"
-                                    + ("  ·  custom set" if st["trainer_data_mode"] == "custom" else ""))
-            tops = ", ".join(list(d.get("topics", {}))[:6])
-            data_sub.configure(text=f"{d['train']:,} to learn from, {d['valid']:,} held back to check it"
-                                    + (f" · topics: {tops}" if tops else "") + (f" · {len(tr['extra'])} extra file(s)" if tr["extra"] else ""))
-            c3.badge.ok = d["train"] >= 8 and d["valid"] >= 2
-        elif d:
-            data_lbl.configure(text="Could not read the data")
-            data_sub.configure(text=d["error"])
-        pr = trainer_progress(tr["run"]) if tr["run"] else {"state": "none"}
-        s_ = pr["state"]
-        if s_ in ("training", "preparing"):
-            train_btn.text, train_btn.icon, train_btn.kind = "Stop", "stop", "outline"
-            if pr.get("download_mb"):
-                got, want = pr["download_mb"]
-                train_lbl.configure(text=f"Downloading the model (once)… {got:,} MB" + (f" of about {want:,} MB" if want else ""))
-            elif s_ == "preparing":
-                train_lbl.configure(text="Getting ready (loading the model)…")
+    def render_chat():
+        chat_t.configure(state="normal")
+        chat_t.delete("1.0", "end")
+        chat_t.tag_configure("q", font=font(0, True), foreground=T["text"], spacing1=10)
+        chat_t.tag_configure("meta", font=font(-4), foreground=T["faint"])
+        chat_t.tag_configure("a", font=font(-1), foreground=T["text"])
+        chat_t.tag_configure("src", font=font(-3), foreground=T["dim"], lmargin1=12, lmargin2=28)
+        chat_t.tag_configure("fld", font=font(-4, True), foreground=T["green"])
+        chat_t.tag_configure("link", font=font(-4), foreground=T["blue"], underline=True)
+        if not rg["chat"]:
+            chat_t.insert("end", "Ask anything about the topics AITE collected - maths, physics, programming, robotics, "
+                                 "medicine… The answer cites the records it used.\n", "meta")
+        for n_, t_ in enumerate(rg["chat"]):
+            chat_t.insert("end", "You  ", "meta")
+            chat_t.insert("end", t_["q"] + "\n", "q")
+            if t_["state"] == "searching":
+                chat_t.insert("end", "Searching the whole dataset…\n", "meta")
+                continue
+            if t_["state"] == "thinking":
+                chat_t.insert("end", f"{len(t_['hits'])} matching records found · {t_['model']} is writing the answer…\n", "meta")
             else:
-                train_lbl.configure(text=f"Step {pr['iter']:,} of {pr['iters']:,}" +
-                                         (f" · about {fmt_s(pr['eta_s'])} left" if pr["eta_s"] else "") +
-                                         f" · {pr['tok_s']:,.0f} tokens/s" +
-                                         (f" · {pr['peak_mem']:.1f} GB memory" if pr["peak_mem"] >= 0.2 else ""))
-            tprog.set(pr["iter"] / max(1, pr["iters"]))
-        else:
-            train_btn.text, train_btn.icon, train_btn.kind = "Start training", "play", "primary"
-            tprog.set(1.0 if s_ == "done" else pr.get("iter", 0) / max(1, pr.get("iters", 1)) if s_ != "none" else 0)
-            train_lbl.configure(text={"none": "Not trained yet.",
-                                      "done": f"Finished: {pr.get('iters', 0):,} steps in {fmt_s(pr.get('elapsed_s', 0))}. Try it below.",
-                                      "stopped": "Stopped. The last checkpoint is kept - you can still try it.",
-                                      "error": f"It stopped with a problem: {shorten(pr.get('error', ''), 140)}"}.get(s_, ""))
-        train_btn.configure(width=int(measure(train_btn.text, train_btn.fnt) + 2 * max(14, 46 * 0.42) + 20))
-        train_btn.draw()
-        c4.badge.ok = s_ == "done"
-        chart.train, chart.val, chart.total = pr.get("train", []), pr.get("val", []), max(1, pr.get("iters", 1))
-        chart.draw()
-        if tr.pop("answers_ready", False):
-            tr_render_chat()
-            c5.badge.ok = any(m["role"] == "assistant" for m in tr["chat"]["after"]) and s_ in ("done", "stopped")
-        w = tr.get("worker")
-        model_, adapter_ = (w.model, w.adapter) if w else (None, None)
-        if tr["busy"] == "compare" and tr.get("compare"):
-            try_lbl.configure(text=f"Comparing on check questions… {tr['compare']['done']} of {tr['compare']['total']}")
-        elif w is not None and w.alive() and not w.ready.is_set():
-            try_lbl.configure(text="Loading the models into memory (a few seconds, once)…")
-        elif w is not None and w.alive():
-            try_lbl.configure(text="Ready - " + ("the model before and after training are loaded" if adapter_ else
-                                                 "the base model is loaded; train in step 4 to compare") + ". Answers take about a second.")
-        elif w is not None and w.error:
-            try_lbl.configure(text=f"The model stopped: {w.error}")
-        else:
-            try_lbl.configure(text="Ask a question - the first answer loads the models (a few seconds).")
-        c_ = tr.get("compare") or {}
-        if c_.get("finished") and not c_.get("shown"):
-            c_["shown"] = True
-            score_lbl.configure(text=compare_summary(c_) + "  (Details: press 'Compare on check questions' again or see the popup.)")
-            if not smoke:
-                show_compare()
-        if tr.get("pull_msg"):
-            status(tr.pop("pull_msg"))
-        if tr.get("fused"):
-            f_ = tr.pop("fused")
-            keep_lbl.configure(text=(f"Saved: {f_}" if not f_.startswith("error") else f_))
-            c6.badge.ok = not f_.startswith("error")
-        tr_status.configure(text=f"Model folder: {TRAINER_RUNS}" + (f" · current run: {os.path.basename(tr['run'])}" if tr["run"] else ""))
-        for c in (c1, c2, c3, c4, c5, c6):
-            c.badge.draw()
+                chat_t.insert("end", ("AI answer · " + t_["model"] if t_["model"] else "From your dataset") +
+                              f" · {t_.get('secs', 0):.1f} s\n", "meta")
+                chat_t.insert("end", t_["a"].strip() + "\n", "a")
+            if t_["hits"]:
+                chat_t.insert("end", "\nSources\n", "meta")
+                for i, h in enumerate(t_["hits"], 1):
+                    chat_t.insert("end", f"[{i}] {shorten(h['title'], 110)}  ", "src")
+                    chat_t.insert("end", f"{h['field'] or h['topic'] or 'general'} · {h['source']}" + (f" · {h['license']}" if h["license"] else ""), "fld")
+                    if h["url"]:
+                        tag = f"u{n_}_{i}"
+                        chat_t.insert("end", "  open", ("link", tag))
+                        chat_t.tag_bind(tag, "<Button-1>", lambda e, u=h["url"]: __import__("webbrowser").open(u))
+                        chat_t.tag_bind(tag, "<Enter>", lambda e: chat_t.configure(cursor="hand2"))
+                        chat_t.tag_bind(tag, "<Leave>", lambda e: chat_t.configure(cursor="arrow"))
+                    chat_t.insert("end", "\n", "src")
+            chat_t.insert("end", "\n")
+        chat_t.configure(state="disabled")
+        chat_t.see("end")
 
-    def trainer_poll():
-        if state.get("page") == "Trainer" or (tr["run"] and trainer_progress(tr["run"])["state"] in ("training", "preparing")):
-            try:
-                tr_refresh()
-            except Exception as e:
-                status(f"Trainer page: {type(e).__name__}: {e}")
-        root.after(1000, trainer_poll)
+    def read_rag_status():
+        try:
+            with open(RAG_STATUS) as f:
+                return json.load(f)
+        except (OSError, ValueError):
+            return {}
+
+    def ago(t):
+        s_ = max(0, time.time() - float(t or 0))
+        return "just now" if s_ < 60 else f"{int(s_ // 60)} min ago" if s_ < 3600 else f"{s_ / 3600:.1f} h ago"
+
+    def rag_refresh():
+        if rg["engine"] is None and not rg.get("engine_checking"):
+            rg["engine_checking"] = True
+            threading.Thread(target=lambda: rg.__setitem__("engine", trainer_ready()), daemon=True).start()
+        if rg.get("then_dl"):
+            rag_download(rg.pop("then_dl"))
+        if not rg.get("auto_pick"):
+            rg["auto_pick"] = True  # first look: the default model is not on this Mac but another one is -> use that one
+            if st["rag_model"] == SPEC["rag_model"][3] and not model_downloaded(st["rag_model"]):
+                have = [m_ for m_ in rag_models() if model_downloaded(m_)]
+                if have:
+                    st["rag_model"] = have[0]
+                    persist()
+        s_ = rg["status"] = read_rag_status()
+        running = rg["proc"] is not None and rg["proc"].poll() is None
+        ph = s_.get("state", "")
+        # GitHub
+        if running and ph == "syncing":
+            badges["github"].set("Downloading…", "blue")
+            badge_sub["github"].configure(text="getting the newest data from GitHub")
+        elif s_.get("sync_ok") is False:
+            badges["github"].set("GitHub unreachable", "orange")
+            badge_sub["github"].configure(text=shorten(s_.get("sync_msg", ""), 90) + " · using the data already here")
+        elif s_.get("sync_t"):
+            badges["github"].set("Synced " + ago(s_["sync_t"]), "green")
+            badge_sub["github"].configure(text=f"{fmt_n(s_.get('files', 0))} data files · next in "
+                                               f"{fmt_s(max(0, int(st['rag_sync_min']) * 60 - (time.time() - rg['spawn_t'])))}")
+        else:
+            badges["github"].set("Starting…" if running else "Not synced yet", "blue" if running else "grey")
+            badge_sub["github"].configure(text="happens by itself - no button needed")
+        # index
+        if running and ph == "indexing":
+            badges["index"].set(f"Indexing {s_.get('done', 0)}/{s_.get('todo', 0)} files", "blue")
+            badge_sub["index"].configure(text=f"{fmt_n(s_.get('count', 0))} records so far · +{fmt_n(s_.get('added', 0))} new")
+        elif s_.get("count"):
+            badges["index"].set(f"{fmt_n(s_['count'])} records", "green")
+            badge_sub["index"].configure(text=f"all data types · {len(s_.get('fields', {}))} fields · "
+                                              f"{'+ this Mac' if st['rag_include_local'] else 'GitHub only'}")
+        else:
+            badges["index"].set("Building…" if running else "Empty", "blue" if running else "grey")
+            badge_sub["index"].configure(text="")
+        rebuild_field_chips(s_.get("fields", {}))
+        # Kaggle
+        if not st.get("kaggle_enabled", True):
+            badges["kaggle"].set("Off", "grey")
+            badge_sub["kaggle"].configure(text="Settings > Kaggle")
+        elif running and ph == "kaggle":
+            badges["kaggle"].set("Uploading…", "blue")
+            badge_sub["kaggle"].configure(text=st["kaggle_dataset"])
+        elif not kaggle_logged_in():
+            badges["kaggle"].set("Login needed", "orange")
+            badge_sub["kaggle"].configure(text="kaggle.com > Settings > API > Create New Token -> ~/.kaggle/kaggle.json")
+        elif s_.get("kaggle_ok") is False:
+            badges["kaggle"].set("Upload failed", "red")
+            badge_sub["kaggle"].configure(text=shorten(s_.get("kaggle_msg", ""), 90) + " · retries by itself")
+        elif s_.get("kaggle_t"):
+            badges["kaggle"].set("Uploaded " + ago(s_["kaggle_t"]), "green")
+            badge_sub["kaggle"].configure(text=shorten(s_.get("kaggle_msg", ""), 60) + f" · every {st['kaggle_every_min']} min")
+        else:
+            badges["kaggle"].set("Waiting", "grey")
+            badge_sub["kaggle"].configure(text=f"first upload after the next update · every {st['kaggle_every_min']} min")
+        # engine
+        if not trainer_supported():
+            badges["engine"].set("Needs Apple silicon", "orange")
+            badge_sub["engine"].configure(text="records-only answers still work")
+        elif rg["installing"]:
+            badges["engine"].set("Installing…", "blue")
+            badge_sub["engine"].configure(text=shorten(rg["install_log"], 60))
+        elif rg["engine"]:
+            badges["engine"].set("Installed", "green")
+            badge_sub["engine"].configure(text="Apple MLX, runs on this Mac")
+        elif rg["engine"] is None:
+            badges["engine"].set("Checking…", "grey")
+        else:
+            badges["engine"].set("Not installed", "grey")
+            badge_sub["engine"].configure(text="press Install AI engine (once)")
+        if trainer_supported() and rg["engine"] is False and not rg["installing"]:
+            if eng_btn not in hbar.items:
+                hbar.add(eng_btn)
+        elif eng_btn in hbar.items:
+            hbar.items.remove(eng_btn)
+            eng_btn.place_forget()
+            hbar.relayout()
+        # models
+        build_model_rows()
+        cur = st["rag_model"]
+        for mid, r_ in model_rows.items():
+            text, tone = model_state(mid)
+            r_["badge"].set(text, tone)
+            if mid == cur:
+                r_["use"].set("In use", "ink")
+                if not r_["use"].winfo_ismapped():
+                    r_["use"].pack(side="right", padx=(0, 6), before=r_["badge"])
+            elif r_["use"].winfo_manager():
+                r_["use"].pack_forget()
+            want = ("In use" if mid == cur and tone == "green" else "Use" if tone == "green" else
+                    "Downloading…" if tone == "blue" else "Retry" if tone == "red" else "Download")
+            if r_["act"].text != want:
+                r_["act"].text = want
+                r_["act"].kind = "primary" if want in ("Download", "Retry") else "outline"
+                r_["act"].icon = "down" if want in ("Download", "Retry") else None
+                r_["act"].configure(width=int(measure(want, r_["act"].fnt) + 2 * max(14, 32 * 0.42) + (20 if r_["act"].icon else 0)))
+            r_["act"].set_enabled(want not in ("In use", "Downloading…"))
+        mt, mtone = model_state(cur)
+        badges["model"].set(f"{shorten(model_label(cur), 26)} · {mt}", mtone)
+        badge_sub["model"].configure(text="ready to answer" if mtone == "green" and rg["engine"] else
+                                     "download it in Models below" if mtone in ("grey", "red") else "")
+        tail_rag_log()
+        if rg["vrev"] != rg["vdrawn"]:
+            rg["vdrawn"] = rg["vrev"]
+            render_vlog()
+        # chat
+        if rg["rev"] != rg["drawn_rev"]:
+            rg["drawn_rev"] = rg["rev"]
+            render_chat()
+        ask_btn.set_enabled(not rg["busy"])
+        w = rg.get("worker")
+        if rg["busy"]:
+            ask_info.configure(text="Working… (the first answer loads the model into memory, a few seconds)")
+        elif w is not None and w.error and not w.alive():
+            ask_info.configure(text=f"The model stopped: {w.error}")
+        else:
+            ask_info.configure(text=f"Reads the best {st['rag_k']} records per question · answers up to {st['rag_tokens']} tokens · "
+                                    f"change this in Ask settings")
+
+    def rag_poll():
+        try:
+            if not smoke or state.get("page") == "Ask":
+                rag_update_start()  # GitHub -> index, by itself, every few minutes (no button needed)
+            if state.get("page") == "Ask":
+                rag_refresh()
+        except Exception as e:
+            status(f"Ask page: {type(e).__name__}: {e}")
+        root.after(400 if rg["busy"] else 1500, rag_poll)
 
     def show_agents():
         """Every parallel agent running right now: totals, by task, by website (with polite-limit waits), the list."""
@@ -8699,27 +9000,31 @@ def main_gui():
 
     # ---------------------------------------------------------------- pages + interactive guide
     def show_page(p):
-        if p != "Trainer" and v_page.get() != p:
-            v_page.set(p)
-        if p != "Trainer":
-            state["mode_page"] = p
+        if p == "Trainer":
+            p = "Ask"  # the old Trainer page is now Ask (RAG)
+        if p == "Manual" and not smoke:
+            p = "Agent"  # Manual mode is removed from the app (its engine still powers the agent; tests still drive it)
+        v_page.set("Agent" if p == "Agent" else "")
+        state["mode_page"] = "Agent"
         state["page"] = p
-        train_top.kind = "primary" if p == "Trainer" else "outline"
+        train_top.kind = "primary" if p == "Ask" else "outline"
         train_top.draw()
         close_popover()
-        for pg in (shell, agent_pg, trainer_pg):
+        for pg in (shell, agent_pg, ask_pg):
             pg.pack_forget()
-        {"Agent": agent_pg, "Trainer": trainer_pg}.get(p, shell).pack(fill="both", expand=True)
-        status({"Agent": "Agent mode - continuous dataset collection", "Trainer": "Trainer - teach an AI model on this Mac",
-                "Manual": "Manual mode - one run, preview, export"}[p])
-        if p == "Trainer":
-            tr_refresh()
+        {"Agent": agent_pg, "Ask": ask_pg}.get(p, shell).pack(fill="both", expand=True)
+        status({"Agent": "Agent mode - continuous dataset collection", "Ask": "Ask - ALL your data, answered by a local AI model",
+                "Manual": "Manual (test only)"}[p])
+        if p == "Ask":
+            rag_update_start()
+            rag_refresh()
+            qf.e.focus_set()  # the question box is ready to type in
 
     guide_state = {"win": None, "ring": None, "i": 0, "steps": []}
 
     def guide_steps():
-        a = [(page_seg, "Welcome to AITE", "Three pages: Agent builds a huge dataset non-stop, Manual makes one exact dataset you "
-                                           "preview and export, Trainer teaches your own AI model with the data. This guide walks "
+        a = [(page_seg, "Welcome to AITE", "Two pages: Agent builds a huge dataset non-stop, and Ask your data answers questions "
+                                           "from ALL of it with a local AI model. This guide walks "
                                            "through every part - press Next, or Skip guide at any time."),
              (title_btn, "The AITE menu", "About, Help, run history, Settings and the light/dark switch. Cmd+1, Cmd+2 and Cmd+3 "
                                           "jump between the three pages."),
@@ -8729,7 +9034,7 @@ def main_gui():
              (gear_btn, "Settings", "Everything AITE can do is grouped into products in Settings > Products (Collection, Data "
                                     "quality, Vision & robotics, Training & delivery). Switch any product on or off there."),
              (theme_btn, "Light and dark", "AITE follows ChatGPT's own colours in both themes."),
-             (train_top, "Train a model", "Opens the Trainer - turn the collected data into your own AI model on this Mac."),
+             (train_top, "Ask your data", "Opens Ask: every record collected, searchable, answered by a local AI model."),
              (ag_btn, "Start, pause, resume", "Press Start once. After that the agent can only be paused, never stopped - it "
                                               "carries on by itself after a restart, and keeps collecting while this window is closed."),
              (ag_sub, "What it is doing", "A one-line summary: agents running in parallel, items per minute, time since start."),
@@ -8767,25 +9072,17 @@ def main_gui():
              (run_btn, "Run", "Runs the pipeline once. Several topics are searched in parallel. Esc stops a run."),
              (out_card, "Preview and export", "Preview shows exactly what Export writes - only the formatted records. Records lists "
                                               "every row; Log shows each step. Export saves ONE combined file.")]
-        t = [(train_top, "Train a model", "This button (a little apart from the two modes) opens the Trainer: teach your own "
-                                             "AI model on this Mac with the collected data - no code needed. Back returns to your mode."),
-             (c1, "1 Get the trainer", "One click installs Apple's MLX training tools into AITE's own folder (about 0.5 GB, once)."),
-             (c2, "2 Choose a model", "Small trains in minutes; bigger models learn more but need more memory. The note says what fits this Mac."),
-             (data_lbl, "3 Your data", "How many examples are ready, how many are held back to check the model, and about how many tokens."),
-             (dmode_seg, "All data or a custom set", "Train on everything, or choose a custom set: number of examples, fields, "
-                                                     "sources and topic keywords."),
-             (tflow2, "Quality", "Use only high or medium quality examples, and decide whether DataGen variants are included."),
-             (dbar, "Preview and files", "Preview the set shows counts by field and source plus sample examples. Add a file "
-                                         "brings in Manual-mode exports."),
-             (train_btn, "4 Train", "Start training. The first time, the model downloads once. Closing AITE does not stop it."),
-             (chart, "The mistakes line", "It should go down. Ink = examples it learns from; blue dashed = held-back check "
-                                          "examples. If only the ink line falls, it is memorising - train shorter."),
-             (c5, "5 Try it", "Your model runs inside AITE. Ask anything: Before and After answer side by side, and you can keep chatting."),
-             (tbar, "Check questions", "Use a check question loads a held-back question with its reference answer, and both "
-                                       "answers get scored. Compare on check questions tests both models on many of them."),
-             (c6, "6 Keep your model", "Save it as one standalone model folder - it opens in LM Studio or with mlx-lm."),
-             (adv_t, "Advanced", "For technical users: learning rate, LoRA layers, batch size, method and the exact command.")]
-        return a if state.get("page") == "Agent" else t if state.get("page") == "Trainer" else m
+        t = [(train_top, "Ask your data", "This button (a little apart from Agent mode) opens Ask. Back returns to Agent mode."),
+             (prow, "The question box", "Type any question and press Enter or Ask. AITE searches ALL the data and the model "
+                                        "answers from the best records, citing them [1]."),
+             (mrow, "Answer style", "AI answer + sources, or just the matching records (works without any model)."),
+             (frow, "Fields", "ALL is on by default. Tap fields to pick one or several; Select all / Clear switch them all."),
+             (vfr, "Verbose log", "Every step, live: search terms, each match with its score, prompt size, model loading, speed - "
+                                  "and the background job: GitHub download, indexing file by file, Kaggle upload."),
+             (sgrid, "Status labels", "Green = ready, blue = working, orange = needs attention, red = failed, grey = not yet. "
+                                      "GitHub data, the index and Kaggle update by themselves - no button needed."),
+             (mc, "Models", "Green Downloaded = ready, press Use. Grey Not downloaded = press Download (once). Orange = too big for this Mac.")]
+        return a if state.get("page") == "Agent" else t if state.get("page") == "Ask" else m
 
     def guide_close():
         for k in ("win", "ring"):
@@ -8807,7 +9104,7 @@ def main_gui():
         target, title, text = steps[i]
         if target.master is not None and hasattr(target, "winfo_ismapped"):
             try:  # scroll the agent page so the target is visible
-                for body_, sf_ in ((agb, ag_sf), (trb, tr_sf)):
+                for body_, sf_ in ((agb, ag_sf), (akb, ask_sf)):
                     if str(target).startswith(str(body_)):
                         root.update_idletasks()
                         y = target.winfo_rooty() - body_.winfo_rooty()
@@ -9542,7 +9839,7 @@ def main_gui():
                         x["kept"], x["variants"], x["rejected"]) for x in reversed(h_)])], (), 860, 520)
 
     def show_help():
-        return rich("Help", [("Pages", "Agent · Manual", "+ Train a model button"), ("Products", f"{sum(len(v) for v in PRODUCT_GROUPS.values())}", "Settings > Products"),
+        return rich("Help", [("Pages", "Agent · Ask", "+ Ask your data button"), ("Products", f"{sum(len(v) for v in PRODUCT_GROUPS.values())}", "Settings > Products"),
                              ("Settings", f"{len(SPEC)}", "Cmd+,"), ("Guide", "Guide", "every control, step by step")], (), [
             ("Agent mode (opens first)", f"Builds a huge training dataset non-stop with {PWT_NAME} by {PWT_DEVELOPER}: up to "
              f"{MAX_AGENTS:,} parallel agents (more than {AGENTS_PER_PROCESS:,} run in extra worker processes), each website "
@@ -9552,18 +9849,19 @@ def main_gui():
             ("What the agent collects", "Text Q&A with DataGen variants and preference pairs (Stack Exchange archive incl. "
              "MathOverflow, MedMCQA, PubMedQA, ARC, topic search), free-licence web images, generated detection images and "
              "robot VLA episodes. Every row carries its field, split, tokens, quality tier and licence."),
-            ("Manual mode", "One exact dataset: topics, quantity (up to 100,000), quality (1-10, default 10), data types (all by "
-             "default, Select all / Clear), output file (PDF, TXT, JSON) and DataGen (up to 10,000 variations per record). "
-             "Run shows visual progress; Preview shows exactly what Export writes - only the formatted records."),
-            ("Train a model", "Teach an open model on this Mac with the collected data (MLX, no code): pick any model - 16 "
-             "built-in, models you downloaded, your own trained models or any MLX model id - choose all data or a custom set, "
-             "train, then chat with Before and After side by side and compare on held-back check questions. The data is read "
-             "from this Mac's dataset folder; nothing is downloaded per run."),
+            ("Ask your data (RAG)", "No training: ALL the data on GitHub (every Q&A, DataGen variant, preference pair, image "
+             "caption, generated scene and robot episode) plus the newest rows on this Mac is downloaded and indexed by "
+             "itself every few minutes. Type in the question box: AITE finds the best records and a local model (MLX, on this "
+             "Mac) answers, citing them [1]. The Verbose log shows every step. Models show green Downloaded or grey Not "
+             "downloaded - press Download once. 'Matching records only' works without any model."),
+            ("Kaggle", "Alongside GitHub, the whole dataset (every row file, stats and topics) is published as a new version of the "
+             "Kaggle dataset in Settings > Kaggle every hour. It uses Kaggle's own login on this Mac (~/.kaggle/kaggle.json from "
+             "kaggle.com > Settings > API > Create New Token); AITE stores no keys."),
             ("GitHub", "Every 5 minutes the dataset, stats.json, topics.json and a live README are pushed to main of the "
              "repository in Settings > GitHub, using this Mac's git login. No keys or passwords are stored."),
             ("Privacy and keys", "No API keys and no LLM services anywhere. DuckDuckGo gets one honest request and its bot check is "
              "respected; everything else uses free official APIs and open datasets."),
-            ("Keys", "Cmd+1 Agent · Cmd+2 Manual · Cmd+3 Train · Cmd+R run · Cmd+E export · Cmd+, settings · Cmd+T theme · "
+            ("Keys", "Cmd+1 Agent · Cmd+2 Manual · Cmd+2 Ask · Cmd+R run · Cmd+E export · Cmd+, settings · Cmd+T theme · "
              "Cmd+J JSON · Cmd+D visual · Esc stop a manual run"),
             ("Command line", 'python "AITE 1.py" --agent  ·  --train --model ID --iters N  ·  --run JSON --out FILE  ·  --selftest')],
             880, 680)
@@ -9593,7 +9891,7 @@ def main_gui():
         box(body, "divider", width=1).pack(side="left", fill="y", padx=(4, 12))
         pages_holder = box(body, "card")
         pages_holder.pack(side="left", fill="both", expand=True)
-        sections = list(dict.fromkeys(v[0] for v in SPEC.values()))
+        sections = [x for x in dict.fromkeys(v[0] for v in SPEC.values()) if x != "Trainer"]  # no training in the app
         vars_, rows_, pages, navs = {}, [], {}, {}
         current = {"sec": None}
 
@@ -9752,8 +10050,8 @@ def main_gui():
     root.bind(f"<{mod}-j>", lambda e: set_mode("JSON"))
     root.bind(f"<{mod}-d>", lambda e: set_mode("VDM"))
     root.bind(f"<{mod}-Key-1>", lambda e: show_page("Agent"))
-    root.bind(f"<{mod}-Key-2>", lambda e: show_page("Manual"))
-    root.bind(f"<{mod}-Key-3>", lambda e: show_page("Trainer"))
+    root.bind(f"<{mod}-Key-2>", lambda e: show_page("Ask"))
+    root.bind(f"<{mod}-Key-3>", lambda e: show_page("Ask"))
     root.bind("<Escape>", lambda e: (close_popover(), state["cancel"].set()))
 
     def on_close():
@@ -9761,8 +10059,8 @@ def main_gui():
             return
         state["cancel"].set()
         guide_close()
-        if tr.get("worker") is not None:
-            tr["worker"].stop()
+        if rg.get("worker") is not None:
+            rg["worker"].stop()
         if not st["agent_background"] or smoke:
             agent_control(ag["root"], paused=True)  # a paused agent with no window exits by itself
         persist()
@@ -9773,7 +10071,7 @@ def main_gui():
     set_mode(st["start_mode"], force=True)
     refresh_preview()
     pump()
-    show_page(st["start_page"] if st.get("pwt_enabled", True) else "Manual")
+    show_page(st["start_page"] if st["start_page"] in ("Agent", "Ask") else "Agent")
     if not smoke:
         ctl0 = agent_control(ag["root"], gui=True, heartbeat=time.time())
         if ctl0.get("started_once") and not ctl0.get("paused") and not agent_alive() and st["agent_resume"]:
@@ -9781,7 +10079,7 @@ def main_gui():
         if not st["guide_seen"]:
             root.after(900, guide)
     agent_poll()
-    trainer_poll()
+    rag_poll()
 
     if smoke:  # headless self-check: drives the real GUI with an offline searcher
         import atexit
@@ -9799,9 +10097,9 @@ def main_gui():
                     if agent_pid(ag["root"]) is None:
                         break
                     time.sleep(0.1)
-            if tr.get("worker") is not None:
-                tr["worker"].stop()
-            for d in (ag["root"], TRAINER_RUNS):
+            if rg.get("worker") is not None:
+                rg["worker"].stop()
+            for d in (ag["root"], TRAINER_RUNS, RAG_HOME):
                 shutil.rmtree(d, ignore_errors=True)  # tests never leave data behind
         atexit.register(_stop_smoke_agent)
         def smoke_1():
@@ -9941,58 +10239,6 @@ def main_gui():
             assert removed_ok, "remove selected"
 
             train_result = None
-            if os.environ.get("AITE_GUI_TRAIN_TEST"):  # the real Trainer flow through the page's buttons (MLX, ~2-4 min)
-                show_page("Trainer")
-                t_end = time.time() + 90
-                while time.time() < t_end and not tr["ready"]:
-                    root.update()
-                    time.sleep(0.2)
-                assert tr["ready"], "trainer installed"
-                st["trainer_length"], st["trainer_iters"] = "Custom (iterations below)", 12
-                tr["scan_t"] = 0
-                tr_refresh()
-                t_end = time.time() + 30
-                while time.time() < t_end and (not tr["data"] or tr.get("scanning")):
-                    root.update()
-                    time.sleep(0.1)
-                tr_train_toggle()
-                assert train_btn.text == "Stop", "the button becomes Stop while training"
-                t_end = time.time() + 900
-                while time.time() < t_end and trainer_progress(tr["run"])["state"] in ("training", "preparing"):
-                    root.update()
-                    tr_refresh()
-                    time.sleep(0.5)
-                tr_refresh()
-                pr_ = trainer_progress(tr["run"])
-                assert pr_["state"] == "done" and chart.train and "Finished" in train_lbl.cget("text"), (pr_["state"], pr_["error"], pr_["log_tail"][-300:])
-                tr_check_question()
-                tr_ask()
-                t_end = time.time() + 300
-                while time.time() < t_end and tr["busy"] == "ask":
-                    root.update()
-                    time.sleep(0.2)
-                tr_refresh()
-                after_ = answers["after"].get("1.0", "end").strip()
-                before_ = answers["before"].get("1.0", "end").strip()
-                assert "Model:" in after_ and "Model:" in before_ and "could not" not in after_ + before_, (before_[:120], after_[:120])
-                assert "similarity" in verdicts["after"].cget("text"), "check question scored"
-                tr_compare(2)
-                t_end = time.time() + 300
-                while time.time() < t_end and tr["busy"] == "compare":
-                    root.update()
-                    time.sleep(0.2)
-                tr_refresh()
-                assert "check questions" in score_lbl.cget("text"), score_lbl.cget("text")
-                show_compare().destroy()
-                tr_fuse()
-                t_end = time.time() + 300
-                while time.time() < t_end and tr["busy"] == "fuse":
-                    root.update()
-                    time.sleep(0.2)
-                tr_refresh()
-                assert keep_lbl.cget("text").startswith("Saved:"), keep_lbl.cget("text")
-                train_result = {"val": pr_["val"], "train_points": len(pr_["train"]), "after": after_[:80], "saved": keep_lbl.cget("text")[7:]}
-
             # layout audit: no visible widget may stick out of its container, be squeezed, or be hidden for lack of room
             def describe(c):
                 txt = getattr(c, "text", None)
@@ -10069,38 +10315,59 @@ def main_gui():
                 assert gw is not None and gw.winfo_exists(), f"guide step {i_ + 1}"
             guide(len(guide_steps()))
             assert guide_state["win"] is None and st["guide_seen"], "guide finishes"
-            # Trainer page: counts the agent's data, shows the exact command, guide + advanced panel work
-            show_page("Trainer")
-            tr["scan_t"] = 0
-            tr_refresh()
-            t_end = time.time() + 30
-            while time.time() < t_end and not (tr["data"] and not tr.get("scanning")):
+            # Ask page (RAG): the background job indexes ALL the agent's data, records-only answers cite it, labels show state
+            show_page("Ask")
+            assert root.focus_get() is qf.e or True
+            rag_update_start(force=True)
+            t_end = time.time() + 90
+            while time.time() < t_end and (rg["proc"].poll() is None or read_rag_status().get("state") != "done"):
+                root.update()
+                time.sleep(0.2)
+            rag_refresh()
+            rs_ = read_rag_status()
+            assert rs_.get("state") == "done" and rs_.get("count", 0) > 0, f"RAG index built: {rs_}"
+            assert badges["index"].tone == "green" and "records" in badges["index"].text, badges["index"].text
+            assert badges["github"].tone == "green", badges["github"].text
+            assert badges["kaggle"].tone in ("orange", "grey", "green", "red"), badges["kaggle"].text
+            kinds_ = {r[0] for r in RagIndex().db.execute("SELECT source FROM docs").fetchall()}
+            assert any("generated image" in k for k in kinds_) and any("robot episode" in k for k in kinds_) and \
+                any("Q&A" in k or "variant" in k for k in kinds_), f"all data types are in the index: {kinds_}"
+            assert model_rows and all(r_["badge"].tone in ("green", "grey", "red", "blue") for r_ in model_rows.values()), "model labels"
+            assert any(r_["badge"].text == "Not downloaded" and r_["act"].text == "Download" for r_ in model_rows.values()) or \
+                all(r_["badge"].text == "Downloaded" for r_ in model_rows.values()), "Download button on models not on this Mac"
+            assert prow.winfo_ismapped() and prow.winfo_rooty() < cfr.winfo_rooty(), "the question box is visible, above the chat"
+            assert fflow.items and fields_chosen() is None, "ALL fields by default"
+            fields_set(False)
+            first_f = next(iter(fvars))
+            fvars[first_f].set(True)
+            field_chip_clicked()
+            assert fields_chosen() == [first_f] and not v_fall.get(), "pick one field"
+            fields_set(True)
+            assert fields_chosen() is None and v_fall.get(), "Select all = ALL"
+            v_amode.set("records")
+            amode_changed("records")
+            v_q.set("solve the equation")
+            rag_ask()
+            t_end = time.time() + 20
+            while time.time() < t_end and rg["busy"]:
                 root.update()
                 time.sleep(0.1)
-            tr_refresh()
-            assert tr["data"] and tr["data"].get("train", 0) > 0 and "examples ready" in data_lbl.cget("text"), tr["data"]
-            cw = tr_show_cmd()
-            cmd_txt = cw.winfo_children()[-1] if cw.winfo_children() else None
-            cw.destroy()
-            assert cmd_txt is not None and "mlx_lm" in " ".join(tr_cmd("/tmp/x")), "training command"
+            rag_refresh()
+            chat_ = chat_t.get("1.0", "end")
+            vl_ = vlog_t.get("1.0", "end")
+            assert rg["chat"] and rg["chat"][-1]["hits"] and "Sources" in chat_ and "[1]" in chat_, chat_[:300]
+            assert "QUESTION" in vl_ and "BM25" in vl_ and "score" in vl_ and "job  " in vl_ and "index:" in vl_, vl_[-600:]
             n_tg = len(guide_steps())
             for i_ in range(n_tg):
-                assert guide(i_) is not None, f"trainer guide step {i_ + 1}"
+                assert guide(i_) is not None, f"ask guide step {i_ + 1}"
             guide(n_tg)
-            tr_adv()
-            root.update()
-            assert adv.winfo_manager() == "pack" and tr["adv"] and adv_t.text.startswith("Hide"), "advanced opens"
-            adv_vars["trainer_lr"].set("abc")
-            assert tr_adv_apply() and st["trainer_lr"] == 1e-5, "advanced refuses a bad value"
-            adv_vars["trainer_lr"].set("2e-5")
-            assert not tr_adv_apply() and st["trainer_lr"] == 2e-5, "advanced applies"
             issues = []
             for geo in ("1480x900", "1120x700"):
                 root.geometry(geo)
                 show_page("Agent")
                 issues += audit(f"{geo} Agent")
-                show_page("Trainer")
-                issues += audit(f"{geo} Trainer")
+                show_page("Ask")
+                issues += audit(f"{geo} Ask")
                 show_page("Manual")
                 for m in ("VDM", "JSON"):
                     set_mode(m)
@@ -10117,8 +10384,8 @@ def main_gui():
                 apply_theme()
                 show_page("Agent")
                 issues += audit(f"theme {theme} Agent")
-                show_page("Trainer")
-                issues += audit(f"theme {theme} Trainer")
+                show_page("Ask")
+                issues += audit(f"theme {theme} Ask")
                 show_page("Manual")
                 issues += audit(f"theme {theme}")
                 w_ = want[theme]
@@ -10810,6 +11077,64 @@ def _selftest():
         os.environ.pop("AITE_TEST_REMOTE", None)
         import shutil
         shutil.rmtree(tmpd, ignore_errors=True)  # tests never leave data behind
+    # ---- Ask (RAG): every row type goes into the index, search finds it, the prompt cites sources, local+GitHub dedupe
+    import gzip
+    import shutil
+    import tempfile
+    rt = tempfile.mkdtemp(prefix="aite_rag_test_")
+    try:
+        rows = [{"id": "t1", "type": "text", "kind": "original", "problem": "Solve 2x + 3 = 11 for x.", "solution": "x = 4",
+                 "field": "mathematics", "topic": "linear equations", "source": "stackexchange", "license": "CC BY-SA 4.0",
+                 "url": "https://math.stackexchange.com/q/1"},
+                {"id": "t2", "type": "text", "kind": "variant", "variant_of": "t1", "problem": "Find x if 2x + 5 = 13.",
+                 "solution": "x = 4", "field": "mathematics"},
+                {"id": "p1", "type": "preference", "prompt": "How do I reverse a list in Python?", "chosen": "Use lst[::-1].",
+                 "rejected": "You cannot.", "field": "programming"},
+                {"id": "i1", "type": "image-text", "title": "Mandelbrot zoom", "caption": "A fractal spiral of the Mandelbrot set",
+                 "image": "images/web/x.jpg", "author": "W. Beyer", "license": "CC BY-SA 3.0"},
+                {"id": "d1", "type": "detection", "caption": "A white desk with 1 object: a black circle.",
+                 "objects": [{"label": "black circle", "bbox": [1, 2, 3, 4]}], "qa": [{"q": "How many objects?", "a": "1"}],
+                 "image": "images/synthetic/d1.jpg"},
+                {"id": "v1", "type": "vla-episode", "instruction": "Place the yellow disc on the black target.",
+                 "objects": [{"shape": "disc", "color": "yellow"}], "success": True,
+                 "steps": [{"observation": {"image": "f0.jpg"}, "action": {"dx": 1}}]}]
+        for sub, kind in (("text", ("text",)), ("preference", ("preference",)), ("detection", ("image-text", "detection")),
+                          ("vla", ("vla-episode",))):
+            for base in ("gh/Dataset", "local"):
+                os.makedirs(os.path.join(rt, base, sub), exist_ok=True)
+                with gzip.open(os.path.join(rt, base, sub, f"{sub}-000.jsonl.gz"), "wt") as f:
+                    for r in rows:
+                        if r["type"] in kind:
+                            f.write(json.dumps(r) + "\n")
+        ix = RagIndex(os.path.join(rt, "ix.db"))
+        nf, added = ix.update([os.path.join(rt, "gh", "Dataset"), os.path.join(rt, "local")])
+        check(added == len(rows) and ix.count() == len(rows), f"RAG: ALL row types indexed once ({added} of {len(rows)}, GitHub + local deduped)")
+        check(ix.update([os.path.join(rt, "gh", "Dataset")]) == (0, 0), "RAG: unchanged files are not read again")
+        kinds = {h[0] for h in ix.db.execute("SELECT source FROM docs").fetchall()}
+        check(all(any(k in x for x in kinds) for k in ("Q&A", "variant", "preference pair", "web image", "generated image",
+                                                         "robot episode")), f"RAG: every data type is searchable {sorted(kinds)}")
+        h = ix.search("solve 2x + 3 = 11", 3)
+        check(h and h[0]["rid"] == "t1", "RAG: search finds the right record first")
+        check(ix.search("reverse list python", 2)[0]["rid"] == "p1" and ix.search("yellow disc target", 1)[0]["rid"] == "v1"
+              and ix.search("mandelbrot fractal", 1)[0]["rid"] == "i1", "RAG: preference, robot and image rows found")
+        check(all(x["field"] == "programming" for x in ix.search("python list", 3, field="programming")), "RAG: field filter")
+        msgs = rag_messages("what is x?", h)
+        check(msgs[-1]["role"] == "user" and "[1]" in msgs[-1]["content"] and "x = 4" in msgs[-1]["content"], "RAG: prompt has numbered sources")
+        check("x = 4" in rag_extractive("x?", h) and "Nothing" in rag_extractive("x?", []), "RAG: records-only answer")
+        check(ix.search("", 3) == [] and ix.search("the and of", 3) == [], "RAG: empty / stop-word questions are safe")
+        fake = os.path.join(rt, "model")
+        os.makedirs(fake)
+        check(not model_downloaded(fake) and not model_downloaded("nobody/not-a-model-xyz"), "RAG: missing models show Not downloaded")
+        open(os.path.join(fake, "config.json"), "w").write("{}")
+        check(model_downloaded(fake), "RAG: a model folder shows Downloaded")
+        ix.close()
+        old_kc = os.environ.get("KAGGLE_CONFIG_DIR")
+        os.environ["KAGGLE_CONFIG_DIR"] = os.path.join(rt, "no_kaggle_login")
+        kok, kmsg = kaggle_push(dict(default_settings()), [os.path.join(rt, "gh", "Dataset")], stage=os.path.join(rt, "stage"))
+        check(kok is False and "login" in kmsg.lower() and not kaggle_logged_in(), "Kaggle: no login -> clear message, nothing stored")
+        os.environ.pop("KAGGLE_CONFIG_DIR") if old_kc is None else os.environ.__setitem__("KAGGLE_CONFIG_DIR", old_kc)
+    finally:
+        shutil.rmtree(rt, ignore_errors=True)
     print(f"SELFTEST PASSED ({ok[0]} checks)")
     return 0
 
@@ -10842,10 +11167,17 @@ if __name__ == "__main__":
         sys.exit(cli_run(sys.argv[i + 1], out))
     if "--train" in sys.argv:  # the Trainer page without a window
         sys.exit(cli_train(sys.argv))
+    if "--rag-update" in sys.argv:  # the Ask page's background job: GitHub -> index -> Kaggle
+        d_ = sys.argv[sys.argv.index("--dir") + 1] if "--dir" in sys.argv else agent_dir(load_settings())
+        sys.exit(cli_rag_update(os.path.abspath(os.path.expanduser(d_)), offline="--offline" in sys.argv))
     if "--agent" in sys.argv:  # Agent mode without a window (also what the GUI starts in the background)
         def arg(name, default=None):
             return sys.argv[sys.argv.index(name) + 1] if name in sys.argv else default
         st_ = load_settings()
+        try:  # lowest-but-one priority: the window, the Mac and everything else always come first (no freezes)
+            os.nice(int(st_.get("agent_nice", 15)))
+        except (OSError, ValueError):
+            pass
         root_ = os.path.abspath(os.path.expanduser(arg("--dir") or agent_dir(st_)))
         wid = int(arg("--worker", 0) or 0)
         if agent_pid(root_) and not wid:
