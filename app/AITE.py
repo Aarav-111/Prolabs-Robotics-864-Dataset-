@@ -41,7 +41,7 @@ from fractions import Fraction
 logging.getLogger("pypdf").setLevel(logging.ERROR)
 
 APP = "Prolabs Robotics AITE"
-APP_SHORT = "Prolabs AITE"
+APP_SHORT = "Prolabs Robotics AITE"
 GITHUB_REPO = "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git"  # Settings > GitHub can change it
 PWT_NAME = "Parallel Web Technologies"  # product in Settings > Product
 PWT_DEVELOPER = "Prolabs Robotics"
@@ -424,11 +424,14 @@ def _settings_spec():
     add("Ask (RAG)", "rag_model", "Model that answers (any MLX model id from Hugging Face, or a folder)", "str",
         "mlx-community/Qwen2.5-1.5B-Instruct-4bit")
     add("Ask (RAG)", "rag_use_model", "Answer with the AI model (off = show the best matching records only)", "bool", True)
+    add("Ask (RAG)", "rag_answer_mode", "How to answer: compare (model alone vs with your data), with (your data), plain (model only), records", "str", "compare")
     add("Ask (RAG)", "rag_k", "Records the model reads per question", "int", 6, (1, 30))
     add("Ask (RAG)", "rag_tokens", "Longest answer (tokens)", "int", 600, (32, 8192))
     add("Ask (RAG)", "rag_context_chars", "Most source text given to the model (characters)", "int", 6000, (500, 60000))
     add("Ask (RAG)", "rag_sync_min", "Get new data from GitHub every (minutes)", "int", 10, (1, 1440))
     add("Ask (RAG)", "rag_include_local", "Also the newest rows on this Mac not pushed yet (so ALL data is in)", "bool", True)
+    add("Ask (RAG)", "rag_semantic", "Check every record by MEANING (not just shared words) before it is used", "bool", True)
+    add("Ask (RAG)", "rag_sim_min", "Meaning score a record needs (0-1, higher = stricter)", "float", 0.62, (0.0, 1.0))
     add("Ask (RAG)", "rag_temp", "Creativity (temperature)", "float", 0.2, (0.0, 2.0))
     # Kaggle: the whole dataset also goes to a Kaggle dataset (alongside GitHub), as a new version every so often
     add("Kaggle", "kaggle_enabled", "Upload the dataset to Kaggle too (alongside GitHub)", "bool", True)
@@ -480,7 +483,7 @@ def default_settings():
 # value saved by an older AITE that was only ever the old default -> today's default (choices the user made are kept)
 SETTINGS_MIGRATE = {"gh_repo": [""], "agent_dir": [os.path.join(HERE, "dataset")], "pwt_workers": [32], "agent_quality": [5],
                     "agent_batch": [8], "agent_variations": [3], "agent_task_timeout": [180], "dg_max_total": [20000],
-                    "gh_max_repo_mb": [900.0, 900], "agent_cpu_cap": [85], "trainer_custom_rows": [500], "trainer_compare_n": [10]}
+                    "gh_max_repo_mb": [900.0, 900], "rag_answer_mode": ["with"], "agent_cpu_cap": [85], "trainer_custom_rows": [500], "trainer_compare_n": [10]}
 
 
 def load_settings():
@@ -3652,6 +3655,7 @@ class ShardWriter:
     def write(self, recs):
         with self.lock:
             for r in recs:
+                r = stamp_question(r)
                 if self.f is None:
                     self._open()
                 line = json.dumps(r, ensure_ascii=False)
@@ -3679,6 +3683,41 @@ def _rid(*parts):
     return hashlib.sha1("|".join(str(p) for p in parts).encode("utf-8", "replace")).hexdigest()[:16]
 
 
+def stamp_question(r):
+    """Every row collected from now on is a question plus the expected answer.
+    problem/solution, prompt/chosen, captions and instructions stay, so older readers still work."""
+    if not isinstance(r, dict):
+        return r
+    t = r.get("type")
+    if t == "preference":
+        q = r.get("question") or r.get("prompt") or ""
+        a = r.get("expected_answer") or r.get("chosen") or ""
+    elif t == "image-text":
+        q = r.get("question") or "Describe this image."
+        a = r.get("expected_answer") or r.get("caption") or r.get("title") or ""
+    elif t == "detection":
+        q = r.get("question") or "Describe the scene."
+        a = r.get("expected_answer") or r.get("caption") or ""
+    elif t == "vla-episode":
+        q = r.get("question") or r.get("instruction") or ""
+        if r.get("expected_answer"):
+            a = r["expected_answer"]
+        else:
+            n = len(r.get("steps") or [])
+            a = f"The task succeeds in {n} steps." if r.get("success") else f"The task does not succeed ({n} steps)."
+    else:
+        q = r.get("question") or r.get("problem") or ""
+        a = r["expected_answer"] if r.get("expected_answer") not in (None, "") else (r.get("solution") or "")
+    r["question"] = q
+    r["expected_answer"] = a
+    if t in (None, "text"):
+        body = f"Question:\n{q}" + (f"\n\nExpected answer:\n{a}" if a else "")
+        if r.get("text") != body:
+            r["text"] = body
+            r["tokens"] = max(1, len(body) // 4)
+    return r
+
+
 def agent_text_record(r, st):
     """One training row: chat messages (SFT) + the plain fields + provenance."""
     meta = r.get("meta", {})
@@ -3686,6 +3725,7 @@ def agent_text_record(r, st):
         [{"role": "assistant", "content": r["solution"]}] if r.get("solution") else [])
     d = {"id": _rid(r.get("uid"), r["problem"][:200]), "type": "text", "kind": r.get("kind", "original"),
          "topic": r["topic"], "title": r.get("title", ""), "problem": r["problem"], "solution": r.get("solution", ""),
+         "question": r["problem"], "expected_answer": r.get("solution", ""),
          "messages": msgs, "source": r.get("source"), "url": r.get("url"), "license": meta.get("license", ""),
          "quality_score": r.get("score"), "created": datetime.now().isoformat(timespec="seconds")}
     if r.get("kind") == "variant":
@@ -3693,7 +3733,7 @@ def agent_text_record(r, st):
                  methods=r.get("methods", []), answer=r.get("answer"), numbers_changed=bool(r.get("numbers_changed")))
     # ready for training: 'text' for continued pre-training, 'messages' for SFT, a stable train/validation split
     # (by the ORIGINAL record, so a record and its variants never land in different splits), size and quality tier
-    d["text"] = f"Problem:\n{d['problem']}" + (f"\n\nSolution:\n{d['solution']}" if d["solution"] else "")
+    d["text"] = f"Question:\n{d['question']}" + (f"\n\nExpected answer:\n{d['expected_answer']}" if d["expected_answer"] else "")
     d["tokens"] = max(1, len(d["text"]) // 4)
     fam = r.get("variant_of") or r.get("uid") or d["id"]
     d["split"] = "validation" if int(hashlib.sha1(str(fam).encode()).hexdigest(), 16) % 50 == 0 else "train"
@@ -4027,6 +4067,17 @@ class GitHubSync:
         r = subprocess.run(["git"] + list(args), cwd=cwd, capture_output=True, text=True, timeout=timeout, env=env)
         return r.returncode, (r.stdout + r.stderr).strip()
 
+    @staticmethod
+    def push_failed_transient(out):
+        """GitHub closed the upload (HTTP 408 / RPC) or the connection dropped. The batch is still here."""
+        s = (out or "").lower()
+        return any(k in s for k in (
+            "rpc failed", "http 408", "http 502", "http 503", "http 504",
+            "curl 22", "curl 55", "curl 56", "curl 18", "curl 28",
+            "unexpected disconnect", "hung up unexpectedly", "early eof",
+            "connection reset", "operation timed out", "timed out",
+            "could not resolve host", "the remote end hung up"))
+
     def stream(self, push_data=True):
         """GitHub first: upload new data through a tiny private clone (no file contents kept, nothing checked out), verify
         GitHub has the commit, then delete the local copies - this Mac only ever holds a few minutes of data."""
@@ -4073,9 +4124,12 @@ class GitHubSync:
                                 data.append((os.path.getmtime(fp), os.path.getsize(fp), os.path.relpath(fp, self.root)))
                             except OSError:
                                 pass
-            cap, used = float(self.st.get("gh_batch_mb", 25)) * 2 ** 20, 0
+            ceiling = float(self.st.get("gh_batch_mb", 25)) * 2 ** 20
+            # A push GitHub already refused (HTTP 408) stays smaller for the rest of this run.
+            cap = min(ceiling, float(getattr(self, "_batch_cap", ceiling) or ceiling))
             prio = {"text": 0, "preference": 1, "detection": 2, "vla": 3, "images": 4}
             data.sort(key=lambda x: (prio.get(x[2].split("/")[0], 9), x[0]))
+            used = 0
             for _t, size, rel in data:  # most valuable first, one batch at a time (big pushes time out on slow uploads)
                 if used and used + size > cap:
                     break
@@ -4108,24 +4162,39 @@ class GitHubSync:
                 raise RuntimeError(out_[-300:])
             return added_, True
 
-        added, changed = stage_and_commit()
-        if not changed:
-            self.cleanup_pushed(files)
-            return True
-        for attempt in range(3):
-            code, out = self.run(up, "push", "-q", "origin", f"HEAD:{branch}")
-            if code == 0 or not ("rejected" in out or "fetch first" in out or "non-fast-forward" in out):
-                break
-            # GitHub moved on (another commit, e.g. the app): start again from GitHub's newest commit and redo this
-            # batch on top. A shallow copy cannot rebase, and old failed commits are simply dropped - their files are
-            # still here (local copies are only deleted after GitHub confirms them).
-            if self.run(up, "fetch", "-q", "--depth", "1", "origin", branch)[0] != 0:
-                break
-            self.run(up, "reset", "-q", "--hard", "FETCH_HEAD")
+        code, out, added = 1, "", 0
+        for attempt in range(6):
             added, changed = stage_and_commit()
             if not changed:
                 self.cleanup_pushed(files)
                 return True
+            code, out = self.run(up, "push", "-q", "origin", f"HEAD:{branch}")
+            if code == 0:
+                break
+            # Drop the failed commit. Local data files stay until ls-remote confirms this batch.
+            if self.run(up, "fetch", "-q", "--depth", "1", "origin", branch)[0] != 0:
+                break
+            self.run(up, "reset", "-q", "--hard", "FETCH_HEAD")
+            rejected = any(k in out for k in ("rejected", "fetch first", "non-fast-forward"))
+            if rejected:
+                # GitHub moved on (another commit, e.g. the app): redo this same batch on top.
+                continue
+            if not self.push_failed_transient(out) or attempt >= 5:
+                break
+            # HTTP 408 / RPC failed: the pack was too big or the connection blinked. Halve the
+            # data files and try again. One file is retried as-is (a 408 is often brief).
+            data_files = [rel for rel in files if rel.split("/")[0] in self.DATA_DIRS]
+            if len(data_files) > 1:
+                keep = set(data_files[:max(1, len(data_files) // 2)])
+                files[:] = [rel for rel in files if rel.split("/")[0] not in self.DATA_DIRS or rel in keep]
+                kept = 0
+                for rel in files:
+                    if rel.split("/")[0] in self.DATA_DIRS:
+                        try:
+                            kept += os.path.getsize(os.path.join(self.root, rel))
+                        except OSError:
+                            pass
+                self._batch_cap = max(1, kept)
         if code != 0:
             self.run(up, "fetch", "-q", "--depth", "1", "origin", branch)
             self.run(up, "reset", "-q", "--hard", "FETCH_HEAD")  # never let failed commits pile up into one huge push
@@ -4258,10 +4327,11 @@ This file and `stats.json` are rewritten on every sync.
 | Updated | {stats.get('updated_iso', '')} |
 
 ## Layout
-- `text/*.jsonl.gz` - one JSON object per line: `messages` (chat SFT), `problem`, `solution`, `topic`, `source`, `url`, `license`, `quality_score`, DataGen fields.
-- `detection/*.jsonl.gz` + `images/synthetic/` - generated scenes: `objects[].bbox` (x, y, w, h px), `polygon`, `caption`, `qa`.
-- `images/web/` + `text`-style rows in `detection/` with `type: "image-text"` - Wikimedia Commons images, licence + author kept.
-- `vla/*.jsonl.gz` + `images/vla/` - pick-and-place episodes: `instruction`, `steps[].observation`, `steps[].action`.
+- `text/*.jsonl.gz` - one JSON object per line: `question`, `expected_answer`, `messages` (chat SFT), `problem`, `solution`, `topic`, `source`, `url`, `license`, `quality_score`, DataGen fields. The `text` field is `Question:` then `Expected answer:`.
+- `detection/*.jsonl.gz` + `images/synthetic/` - generated scenes: `question`, `expected_answer`, `objects[].bbox` (x, y, w, h px), `polygon`, `caption`, `qa`.
+- `images/web/` + rows in `detection/` with `type: "image-text"` - Wikimedia Commons images, licence + author kept. `question` is "Describe this image." and `expected_answer` is the caption.
+- `preference/*.jsonl.gz` - `question` is the prompt, `expected_answer` is the chosen answer.
+- `vla/*.jsonl.gz` + `images/vla/` - pick-and-place episodes: `question` (the instruction), `expected_answer`, `steps[].observation`, `steps[].action`.
 
 Licences differ per row (see the `license` field) - some sources are non-commercial (e.g. CC-BY-NC). Filter before commercial use.
 """
@@ -4646,6 +4716,7 @@ class Agent:
                     if len(rej.split()) >= 15 and len(solution.split()) >= 15:
                         prefs.append({"id": _rid("pref", url), "type": "preference", "field": field, "site": host,
                                       "prompt": problem, "chosen": solution, "rejected": rej,
+                                      "question": problem, "expected_answer": solution,
                                       "chosen_score": int(best.get("pm_score") or 0), "rejected_score": int(w.get("pm_score") or 0),
                                       "messages": [{"role": "user", "content": problem}],
                                       "url": url, "license": "CC BY-SA 4.0", "source": "stackexchange",
@@ -4745,6 +4816,7 @@ class Agent:
             rows.append({"id": iid, "type": "image-text", "image": rel, "width": im.width, "height": im.height, "topic": topic,
                          "caption": it["caption"], "title": it["title"], "source": "wikimedia commons", "url": it["page"],
                          "license": it["license"], "license_url": it["license_url"], "author": it["author"],
+                         "question": "Describe this image.", "expected_answer": it["caption"],
                          "messages": [{"role": "user", "content": "<image>\nDescribe this image."},
                                       {"role": "assistant", "content": it["caption"]}],
                          "created": datetime.now().isoformat(timespec="seconds")})
@@ -4772,6 +4844,7 @@ class Agent:
             for x in qa:
                 msgs += [{"role": "user", "content": x["q"]}, {"role": "assistant", "content": x["a"]}]
             rows.append(dict(ann, id=iid, type="detection", image=os.path.relpath(path, self.root), seed=seed, qa=qa,
+                             question="Describe the scene.", expected_answer=ann["caption"],
                              messages=msgs, source="AITE generator", license="CC0-1.0",
                              created=datetime.now().isoformat(timespec="seconds")))
             self.last_image = path
@@ -4798,6 +4871,9 @@ class Agent:
             for s in ep["steps"]:
                 s["observation"]["image"] = os.path.relpath(os.path.join(d, f"{s['observation']['image']:03d}.jpg"), self.root)
             rows.append(dict(ep, id=eid, type="vla-episode", seed=seed, source="AITE generator", license="CC0-1.0",
+                             question=ep["instruction"],
+                             expected_answer=(f"The task succeeds in {len(ep['steps'])} steps." if ep.get("success")
+                                              else f"The task does not succeed ({len(ep['steps'])} steps)."),
                              created=datetime.now().isoformat(timespec="seconds")))
             self.counts["vla_frames"] += len(frames)
             self.last_image = os.path.join(d, f"{len(frames) // 2:03d}.jpg")
@@ -5699,15 +5775,55 @@ def trainer_generate(model, prompt, adapter=None, max_tokens=256, system="", tim
 PREVIEW_SCRIPT = r"""
 import sys, json
 from mlx_lm import load, generate
-from mlx_lm.sample_utils import make_sampler
+from mlx_lm.sample_utils import make_sampler, make_logits_processors
 cfg = json.loads(sys.argv[1])
 models = {"before": load(cfg["model"])}
 if cfg.get("adapter"):
     models["after"] = load(cfg["model"], adapter_path=cfg["adapter"])
+EMB = {"name": None, "cache": {}}
+def embed_many(texts, dim):
+    # one batch for all texts. Padding goes on the RIGHT and each text is read at its own last token, so with the
+    # model's left-to-right attention the padding cannot change any result.
+    import mlx.core as mx
+    out = []
+    for i0 in range(0, len(texts), 16):
+        rows = []
+        for t in texts[i0:i0 + 16]:
+            ids = list(EMB["t"].encode(t))[:144]
+            if not ids or ids[-1] != 151643:
+                ids.append(151643)  # <|endoftext|>: the embedding model reads the meaning at this last token
+            rows.append(ids)
+        width = max(len(r) for r in rows)
+        h = EMB["m"].model(mx.array([r + [151643] * (width - len(r)) for r in rows]))
+        for j, r in enumerate(rows):
+            v = h[j, len(r) - 1, :].astype(mx.float32)
+            if dim:
+                v = v[:dim]
+            v = v / mx.maximum(mx.sqrt((v * v).sum()), 1e-9)
+            out.append(v)
+        mx.eval(out)
+    return out
 print(json.dumps({"ready": True, "have": list(models)}), flush=True)
 for line in sys.stdin:
     try:
         req = json.loads(line)
+        if req.get("op") == "rerank":
+            import mlx.core as mx
+            if EMB["name"] != req["embed"]:
+                EMB["m"], EMB["t"] = load(req["embed"])
+                EMB["name"], EMB["cache"] = req["embed"], {}
+            dim = int(req.get("dim", 0) or 0)
+            if len(EMB["cache"]) > 4000:
+                EMB["cache"].clear()
+            new = [d for d in dict.fromkeys(req["docs"]) if d not in EMB["cache"]]
+            got = embed_many([req["query"]] + new, dim)
+            qv = got[0]
+            for d, v in zip(new, got[1:]):
+                EMB["cache"][d] = v
+            vs = [EMB["cache"][d] for d in req["docs"]]
+            sims = (mx.stack(vs) @ qv).tolist() if vs else []
+            print(json.dumps({"id": req["id"], "scores": [round(float(x), 4) for x in sims]}), flush=True)
+            continue
         model, tok = models[req["which"]]
         msgs = ([{"role": "system", "content": req["system"]}] if req.get("system") else []) + req["messages"]
         try:
@@ -5715,7 +5831,8 @@ for line in sys.stdin:
         except Exception:
             prompt = (chr(10) * 2).join(m["content"] for m in msgs)
         out = generate(model, tok, prompt=prompt, max_tokens=int(req.get("max_tokens", 300)),
-                       sampler=make_sampler(temp=float(req.get("temp", 0.2))))
+                       sampler=make_sampler(temp=float(req.get("temp", 0.2))),
+                       logits_processors=make_logits_processors(repetition_penalty=1.18, repetition_context_size=256))
         print(json.dumps({"id": req["id"], "text": out.strip()}), flush=True)
     except Exception as e:
         print(json.dumps({"id": req.get("id") if isinstance(req, dict) else None, "error": f"{type(e).__name__}: {e}"}), flush=True)
@@ -5729,7 +5846,8 @@ class PreviewWorker:
     def __init__(self, model, adapter=None):
         import subprocess
         self.model, self.adapter = model, adapter
-        self.p = subprocess.Popen([trainer_python(), "-c", PREVIEW_SCRIPT, json.dumps({"model": model, "adapter": adapter})],
+        self.p = subprocess.Popen([trainer_python(), "-c", PREVIEW_SCRIPT,
+                                   json.dumps({"model": model_path(model), "adapter": adapter})],
                                   stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=open(self.errlog(), "w"), text=True,
                                   env=trainer_env(), start_new_session=True)
         self.lock, self.n, self.replies, self.have, self.error = threading.Lock(), 0, {}, [], ""
@@ -5767,6 +5885,27 @@ class PreviewWorker:
 
     def alive(self):
         return self.p.poll() is None
+
+    def rerank(self, embed_model, query, docs, dim=512, timeout=180):
+        """How close each text is in MEANING to the query (cosine, about 0 to 1), from the small embedding model."""
+        if not docs:
+            return []
+        if not self.ready.wait(timeout) or not self.alive():
+            raise RuntimeError(self.error or "the model is still loading")
+        with self.lock:
+            self.n += 1
+            rid = self.n
+            self.p.stdin.write(json.dumps({"id": rid, "op": "rerank", "embed": embed_model, "query": query, "docs": docs,
+                                           "dim": dim}) + "\n")
+            self.p.stdin.flush()
+        end = time.time() + timeout
+        with self.cv:
+            while rid not in self.replies and self.alive() and time.time() < end:
+                self.cv.wait(0.5)
+            msg = self.replies.pop(rid, None)
+        if msg is None or msg.get("error"):
+            raise RuntimeError((msg or {}).get("error") or self.error or "no meaning scores in time")
+        return msg["scores"]
 
     def ask(self, which, messages, max_tokens=300, temp=0.2, system="", timeout=300):
         if not self.ready.wait(timeout):
@@ -5892,16 +6031,40 @@ RAG_STOP = set("a an the and or of to in on for with by is are was were be been 
                "whom how why when where do does did can could should would will shall may might must i you he she we they "
                "me my your our their its as at from into about than then so if not no yes please explain tell give show "
                "find solve use using there here have has had any some all each".split())
+# Words that ask for a kind of answer ("definition of mathematics", "explain simply") but are not the subject.
+# They still get a score, a small one, on every question. Words that are often the subject themselves (list, type,
+# mean, step, work) are scored like any other word, so "reverse a list" is about lists, not about the word reverse.
+RAG_INTENT = set("definition define defined defining meaning meanings meant simple simpler simplest simply "
+                 "basic basics example examples explained explaining explanation explanations describe described "
+                 "description overview introduction intro summary summarize briefly detail details detailed difference "
+                 "differences differ compare comparison versus vs tell write "
+                 "something anything thing things just very really also much many more most good best better easy easier "
+                 "easiest hard harder clearly correct correctly short long quick quickly understand understanding "
+                 "general generally specific specifically important main called know known like help "
+                 "need want look make makes based between among without within again still only even well "
+                 "bigger biggest larger largest smaller smallest greater greatest higher highest lower lowest "
+                 "fewer lesser less".split())
+# Ordinary words that are rarely the subject. They score below a real subject, above a question-word.
+RAG_SOFT = set("number numbers value values data problem problems question questions answer answers method methods "
+               "system systems time people person world case cases part parts result results info information".split())
+RAG_MIN_REL = 4.5  # word-relevance (0-10) a record needs before it may be shown as a source
 RAG_SYSTEM = ("You are AITE's helpful assistant. Answer the user's question in your own words, clearly and correctly, "
               "formatted in Markdown: start with a one-sentence direct answer, then use short paragraphs, '## ' headings or "
               "'- ' bullet points where they help, numbered steps for maths, and fenced code blocks (```language) for code. "
               "Combine two things: the numbered sources from the user's dataset AND your own knowledge. Use the sources that "
-              "are really about the question and cite them like [1]; add everything useful you know yourself that they miss "
+              "are really about the question and cite them like [1]. Sources are in relevance order, highest first: prefer a "
+              "higher score, and ignore a source under 4/10 (it is probably a different subject). Add everything useful you "
+              "know yourself that the sources miss "
               "(definitions, background, examples, better methods). Never copy a source word for word and never start with "
-              "'A:' or 'Answer:'. If no source is about the question, ignore them all and answer fully from your own knowledge.")
+              "'A:' or 'Answer:'. Say each fact once: never repeat a sentence, a paragraph, or your opening line, and stop "
+              "when the answer is complete. If no source is about the question, ignore them all and answer fully from your "
+              "own knowledge.")
 RAG_CHAT_SYSTEM = ("You are AITE's friendly assistant for a large dataset of questions and answers about maths, science, "
                    "programming, robotics, medicine and more. Reply briefly and warmly in Markdown, and invite the user to ask "
-                   "a question about any of those topics.")
+                   "a question about any of those topics. Never repeat a sentence.")
+RAG_PLAIN_SYSTEM = ("You are AITE's helpful assistant. Answer from your own knowledge only. Do not mention a dataset, sources, "
+                    "or citations. Format the answer in Markdown, start with a one-sentence direct answer, and say each fact "
+                    "once. Never repeat a sentence or a paragraph. Stop when the answer is complete.")
 RAG_SMALLTALK = re.compile(r"^\s*(hi+|hello+|hey+|yo|hiya|howdy|sup|thanks?( you)?|thank u|thx|ok(ay)?|cool|nice|great|bye|"
                            r"good (morning|afternoon|evening|night)|how are you( doing)?|who are you|what are you|"
                            r"what can you do|help)\s*[!.?]*\s*$", re.I)
@@ -5971,7 +6134,8 @@ def _rag_row(r, variants=True):
     t = r.get("type")
     img = r.get("image") or ""
     if t == "preference":
-        q, a = r.get("prompt") or "", r.get("chosen") or ""
+        q = r.get("question") or r.get("prompt") or ""
+        a = r.get("expected_answer") or r.get("chosen") or ""
     elif t == "image-text":
         q = f"Image: {r.get('title') or ''}\n{r.get('caption') or ''}"
         a = f"{r.get('caption') or r.get('title') or ''}\n\nImage file: {img} · by {r.get('author') or 'unknown'}"
@@ -5992,7 +6156,12 @@ def _rag_row(r, variants=True):
     else:
         if r.get("kind") == "variant" and not variants:
             return None
-        q, a = r.get("problem") or "", r.get("solution") or ""
+        # question / expected_answer is the collected pair. Older shards only have problem / solution.
+        # Image, detection and robot rows keep their caption and instruction text above: "Describe this image."
+        # is the prompt, not the subject a search should match.
+        q = r.get("question") or r.get("problem") or ""
+        ea = r.get("expected_answer")
+        a = ea if ea not in (None, "") else (r.get("solution") or "")
         if not (q and a):
             m = r.get("messages") or []
             m = [x for x in m if isinstance(x, dict)]
@@ -6007,6 +6176,196 @@ def _rag_row(r, variants=True):
             "preference": "preference pair"}.get(t, "variant" if r.get("kind") == "variant" else "Q&A")
     return (rid, title, q[:6000], a[:8000], str(r.get("topic") or ""), str(r.get("field") or ""),
             row_source(r) + " · " + kind, str(r.get("url") or ""), str(r.get("license") or ""), str(r.get("quality_tier") or ""))
+
+
+def rag_stem(term):
+    """A light stem so mathematics matches mathematical, and robots matches robot."""
+    for suf in ("ization", "isation", "ational", "ations", "ation", "ments", "ment", "ings", "ing", "ness", "ities",
+                "ity", "ies", "ied", "ers", "er", "ors", "or", "ics", "ical", "ally", "al", "es", "s"):
+        if len(term) > len(suf) + 3 and term.endswith(suf):
+            return term[:-len(suf)]
+    return term
+
+
+def term_in(term, text):
+    """True when the word (or its stem) is actually in the text, not just a substring of a longer word."""
+    if not term or not text:
+        return False
+    if re.search(r"\b" + re.escape(term) + r"\b", text):
+        return True
+    stem = rag_stem(term)
+    return len(stem) >= 4 and re.search(r"\b" + re.escape(stem), text) is not None
+
+
+def rag_words(text):
+    """The question's words, stop-words removed, in the order they were asked. These are what gets scored.
+    9.9 and 9.11 stay whole. Splitting them into 9 and 11 would call a 9/11 paper the same subject."""
+    out, seen = [], set()
+    for t in re.findall(r"\d+\.\d+|[^\W_]+", (text or "").lower()):
+        if t in seen or t in RAG_STOP:
+            continue
+        if len(t) == 1 and not t.isdigit():
+            continue
+        seen.add(t)
+        out.append(t)
+        if len(out) >= 16:
+            break
+    return out
+
+
+def rag_prior(term):
+    """How much this word is the subject, before the dataset says how rare it is.
+    'definition' and 'bigger' ask for a kind of answer. '9.9' and 'lanczos' are the subject."""
+    if term in RAG_INTENT:
+        return 0.12
+    if term in RAG_SOFT:
+        return 0.35
+    if re.fullmatch(r"\d+\.\d+", term or ""):
+        return 1.55
+    if term.isdigit():
+        return 0.45 if len(term) <= 2 else 0.8
+    if len(term) <= 2:
+        return 0.4
+    if len(term) >= 10:
+        return 1.45
+    if len(term) >= 7:
+        return 1.2
+    return 1.0
+
+
+def rag_idf(df, n):
+    """Rare words in this dataset score higher. A word in almost every record scores low."""
+    return math.log((max(1, n) + 1) / (max(0, df) + 1)) + 1.0
+
+
+def rag_weights(words, df_of, n_docs):
+    """(word, score, records containing it), highest score first.
+    The score is 10 for the word that matters most in THIS question, and less for the others, in proportion.
+    A question-word stays low even when the dataset is small, because its prior is low."""
+    raw = []
+    for t in words:
+        try:
+            df = int(df_of(t) or 0)
+        except Exception:
+            df = 0
+        raw.append((t, rag_prior(t) * rag_idf(df, n_docs), max(0, df)))
+    if not raw:
+        return []
+    top = max(w for _, w, _ in raw) or 1.0
+    out = [(t, round(10.0 * w / top, 2), df) for t, w, df in raw]
+    out.sort(key=lambda x: -x[1])
+    return out
+
+
+def _word_at(term, text):
+    """1 exact word, 0.78 the same stem (mathematical counts for mathematics, a bit less), 0 absent.
+    A decimal matches only that decimal: 9.11 is not 9/11, and 9.9 is not 9.90 or 19.9."""
+    if not term or not text:
+        return 0.0
+    if re.fullmatch(r"\d+\.\d+", term):
+        return 1.0 if re.search(r"(?<![\d.])" + re.escape(term) + r"(?![\d.])", text) else 0.0
+    if re.search(r"\b" + re.escape(term) + r"\b", text):
+        return 1.0
+    stem = rag_stem(term)
+    if len(stem) >= 4 and re.search(r"\b" + re.escape(stem), text):
+        return 0.78
+    return 0.0
+
+
+def rag_place(term, title, topic, question, answer, field):
+    """Where a word shows up. The exact word in the title is the record's subject.
+    A stem in the title counts less. The field name is only a bucket."""
+    for text, scale in ((title, 1.0), (topic, 0.72), (question, 0.55), (answer, 0.16), (field, 0.1)):
+        hit = _word_at(term, text)
+        if hit:
+            return scale * (1.0 if hit == 1.0 else 0.78)
+    return 0.0
+
+
+def rag_hit_score(hit, weights):
+    """0 to 10. 10 means every scored word of the question is in the title. A record that only shares
+    a low-scoring word (definition, simple, explain) stays near 0."""
+    if not weights:
+        return 0.0
+    title = (hit.get("title") or "").lower()
+    topic = (hit.get("topic") or "").lower()
+    question = (hit.get("q") or "")[:1800].lower()
+    answer = (hit.get("a") or "")[:1200].lower()
+    field = (hit.get("field") or "").lower()
+    total = sum(w for _, w, *_ in weights) or 1.0
+    got = 0.0
+    for item in weights:
+        got += item[1] * rag_place(item[0], title, topic, question, answer, field)
+    score = 10.0 * got / total
+    # Two subject words asked side by side ("black hole", "second law", "neural network") should be side by side in
+    # the record too. Apart, they are usually two other subjects ("red and blue quasars ... all-sky").
+    strong = [t for t, w, *_ in weights if w >= 5]
+    order = hit.get("_order") or []
+    pairs = [(a, b) for a, b in zip(order, order[1:]) if a in strong and b in strong]
+    if pairs:
+        head = title + " . " + question[:600]
+        near = sum(1 for a, b in pairs
+                   if re.search(r"\b" + re.escape(rag_stem(a)) + r"\w*\W+(?:\w+\W+){0,2}" + re.escape(rag_stem(b)), head)
+                   or re.search(r"\b" + re.escape(rag_stem(b)) + r"\w*\W+(?:\w+\W+){0,2}" + re.escape(rag_stem(a)), head))
+        score *= 0.62 + 0.38 * near / len(pairs)
+    # How much of the title is the question's subject: "What is mathematics?" is about mathematics,
+    # "Mathematics building, Stony Brook University" is about a building.
+    twords = [w for w in rag_words(title) if w not in RAG_INTENT]
+    if twords:
+        qset = {rag_stem(t) for t, w, *_ in weights if w >= 2}
+        focus = sum(1 for w in twords if rag_stem(w) in qset) / len(twords)
+        score *= 0.72 + 0.28 * min(1.0, focus * 1.6)
+    # A photo caption or a generated scene is rarely the answer to a question; a real Q&A is.
+    src = (hit.get("source") or "").lower()
+    if "web image" in src:
+        score *= 0.75
+    return round(min(10.0, score), 2)
+
+
+def rag_relevant(question, hits, weights=None, min_rel=None):
+    """Re-ranks records by word relevance and drops the ones that missed the subject."""
+    if weights is None:
+        weights = rag_weights(rag_words(question), lambda t: 0, 1000)
+    if not weights:
+        return []
+    scored = []
+    order = [w for w in rag_words(question)]
+    for h in hits:
+        h = dict(h)
+        h["_order"] = order
+        h["rel"] = rag_hit_score(h, weights)
+        h.pop("_order", None)
+        scored.append(h)
+    # A word at 6 or more is the subject of this question. A record that does not contain any
+    # such word is a different subject, however many low-scoring words it shares.
+    # A 1- or 2-digit integer is not a subject: "1" is in almost every page, so "1 + 1" would
+    # otherwise rank a random note that happens to mention 1.
+    strong = [t for t, w, *_ in weights if w >= 6 and not (str(t).isdigit() and len(str(t)) <= 2)]
+    num_strong = [t for t, w, *_ in weights if w >= 6 and re.fullmatch(r"\d+\.\d+|\d{3,}", str(t))]
+    if strong:
+        def covers(h, terms):
+            blob = " ".join((h.get(k) or "") for k in ("title", "topic", "q", "a")).lower()
+            if len(terms) >= 2 and all(re.fullmatch(r"\d+\.\d+|\d+", t) for t in terms):
+                return all(_word_at(t, blob) for t in terms)
+            # every subject word has to be there: "sky" AND "blue", "capital" AND "france". With many subject
+            # words, most of them (a long question rarely repeats word for word in a record).
+            n_have = sum(1 for t in terms if _word_at(t, blob))
+            return n_have == len(terms) if len(terms) <= 3 else n_have >= math.ceil(len(terms) * 0.7)
+        scored = [h for h in scored if covers(h, num_strong if len(num_strong) >= 2 else strong)]
+    elif any(w >= 6 and str(t).isdigit() and len(str(t)) <= 2 for t, w, *_ in weights):
+        return []
+    if not scored:
+        return []
+    scored.sort(key=lambda h: (-h["rel"], h.get("score", 0)))
+    best = scored[0]["rel"]
+    if best <= 0:
+        return []
+    # under this the record only shares words with the question (a lower bar when the meaning model checks them next)
+    floor = max(RAG_MIN_REL, best * 0.6) if min_rel is None else float(min_rel)
+    kept = [h for h in scored if h["rel"] >= floor]
+    for i, h in enumerate(kept, 1):
+        h["rank"] = i  # 1 is the closest record, for every question, same formula
+    return kept
 
 
 class RagIndex:
@@ -6074,34 +6433,112 @@ class RagIndex:
                 progress(i + 1, len(todo), added)
         return len(todo), added
 
-    @staticmethod
-    def query_of(text):
-        toks = [t for t in re.findall(r"[^\W_]+", text.lower()) if t not in RAG_STOP and (len(t) > 1 or t.isdigit())]
-        toks = list(dict.fromkeys(toks))[:24]
-        return " OR ".join('"' + t.replace('"', "") + '"' for t in toks)
+    def term_df(self, term):
+        """How many records contain this word in the title, the question or the topic. Cached.
+        The field name is not counted: every mathematics row would look like it is about the word."""
+        cache = self.__dict__.setdefault("_df", {})
+        if term in cache:
+            return cache[term]
+        q = '{title q topic} : "' + str(term).replace('"', "") + '"'
+        with self.lock:
+            try:
+                n = self.db.execute("SELECT count(*) FROM docs WHERE docs MATCH ?", (q,)).fetchone()[0]
+            except Exception:
+                n = 0
+        cache[term] = n
+        return n
 
-    def search(self, text, k=6, field=None):
-        """The k best DIFFERENT records: DataGen variants of one question count once (the best-scoring one)."""
-        q = self.query_of(text)
-        if not q:
+    def word_scores(self, text):
+        """Each word of the question, scored by how much it matters here. 10 is the subject."""
+        words = rag_words(text)
+        if not words:
             return []
+        return rag_weights(words, self.term_df, max(1, self.count()))
+
+    def _fts(self, match, limit, field):
         sql = ("SELECT rid, title, q, a, topic, field, source, url, license, tier, "
                "bm25(docs, 0, 4.0, 2.0, 1.0, 3.0, 1.5, 0, 0, 0, 0) AS s FROM docs WHERE docs MATCH ?")
-        args = [q]
+        args = [match]
         fl = [field] if isinstance(field, str) and field else list(field or [])
-        if fl:  # one field, several fields, or none (= ALL)
+        if fl:
             sql += " AND field IN (" + ",".join("?" * len(fl)) + ")"
             args += fl
         sql += " ORDER BY s LIMIT ?"
-        args.append(int(k) * 8)
+        args.append(int(limit))
         with self.lock:
             try:
-                rows = self.db.execute(sql, args).fetchall()
+                return self.db.execute(sql, args).fetchall()
             except Exception:
                 return []
-        out, seen = [], set()
-        for r in rows:
+
+    @staticmethod
+    def _match(terms, op):
+        parts = ['"' + t.replace('"', "") + '"' for t in terms if t]
+        if not parts:
+            return ""
+        return "{title q topic} : (" + f" {op} ".join(parts) + ")"
+
+    def loose(self, text, n=8, field=None, skip=()):
+        """Plain best-match candidates for the MEANING check to judge (never shown unjudged): it catches what the
+        word rank cannot hold on to - a formula as the question, or a record that says it in other words."""
+        toks = [t for t in dict.fromkeys(re.findall(r"[^\W_]{2,}", (text or "").lower())) if t not in RAG_STOP][:14]
+        if not toks:
+            return []
+        weights = self.word_scores(text)
+        out, seen = [], set(skip)
+        every = re.findall(r"[^\W_]+", (text or "").lower())[:10]  # all tokens in order, single letters too: a formula
+        exact = self._fts('title : "' + " ".join(every) + '"', 4, field) if len(every) >= 3 else []
+        for r in exact + self._fts(self._match(toks, "OR"), n * 6, field):
             h = dict(zip(self.COLS + ("score",), r))
+            key = re.sub(r"\W+", " ", h["title"].lower()).strip()[:90] or h["rid"]
+            if key in seen:
+                continue
+            seen.add(key)
+            h["rel"] = rag_hit_score(h, weights) if weights else 0.0
+            out.append(h)
+            if len(out) >= n:
+                break
+        return out
+
+    def candidates(self, text, field=None):
+        """What the meaning check gets to judge: the word rank's best plus loose best-matches."""
+        c = self.search(text, 10, field, min_rel=2.5) if not rag_arithmetic(text) else []
+        keys = {re.sub(r"\W+", " ", h["title"].lower()).strip()[:90] for h in c}
+        return c + self.loose(text, 8, field, keys)
+
+    def search(self, text, k=6, field=None, min_rel=None):
+        """The k best DIFFERENT records for any question, ordered by one relevance rank.
+        Each important word brings in its own records (so the rank is not 'whichever word was searched').
+        The rank then orders them: a record that covers the high-scoring words in its title comes first.
+        BM25 only decides which records are worth scoring. DataGen variants of one question count once."""
+        if rag_arithmetic(text):
+            return []  # 1 + 1 is the sum, not whichever page mentions the digit 1
+        weights = self.word_scores(text)
+        if not weights:
+            return []
+        rows, seen_ids = [], set()
+
+        def take(match, limit):
+            if not match:
+                return
+            for r in self._fts(match, limit, field):
+                if r[0] not in seen_ids:
+                    seen_ids.add(r[0])
+                    rows.append(r)
+
+        # Words scoring under 2 are question-shape or very common. They still change the rank of a
+        # record, but they do not go and fetch their own pile of unrelated pages.
+        # Every remaining word brings its own records. Stopping after the first word would make the
+        # rank "whatever that one word found", which is a different answer for every question.
+        useful = [(t, w) for t, w, *_ in weights if w >= 2.0] or [(weights[0][0], weights[0][1])]
+        if len(useful) > 1:
+            take(self._match([t for t, _ in useful[:4]], "AND"), 200)
+        for t, _w in useful[:6]:
+            take(self._match([t], "OR"), 80)
+        hits = [dict(zip(self.COLS + ("score",), r)) for r in rows]
+        ranked = rag_relevant(text, hits, weights, min_rel)
+        out, seen = [], set()
+        for h in ranked:
             key = re.sub(r"\W+", " ", h["title"].lower()).strip()[:90] or h["rid"]
             akey = re.sub(r"\W+", " ", h["a"].lower()).strip()[:160]
             if key in seen or akey in seen:
@@ -6110,6 +6547,8 @@ class RagIndex:
             out.append(h)
             if len(out) >= int(k):
                 break
+        for i, h in enumerate(out, 1):
+            h["rank"] = i
         return out
 
     def close(self):
@@ -6123,20 +6562,6 @@ def clip(s, n):
     """Like shorten, but keeps line breaks (code and steps stay readable)."""
     s = re.sub(r"\n{3,}", "\n\n", str(s or "").strip())
     return s if len(s) <= n else s[:n].rsplit(" ", 1)[0] + "…"
-
-
-def rag_relevant(question, hits):
-    """Keeps only sources that share enough real words with the question (a greeting must not pull in a code sample)."""
-    terms = [t for t in re.findall(r"[^\W_]+", question.lower()) if t not in RAG_STOP and len(t) > 2]
-    if not terms:
-        return []
-    need = 1 if len(terms) <= 2 else 2
-    out = []
-    for h in hits:
-        head = (h["title"] + " " + h["q"][:600] + " " + h["topic"] + " " + h["field"]).lower()
-        if sum(1 for t in terms if t in head) >= need:
-            out.append(h)
-    return out
 
 
 _TEX_SYM = {"cdot": "·", "times": "×", "div": "÷", "pm": "±", "mp": "∓", "le": "≤", "leq": "≤", "ge": "≥", "geq": "≥",
@@ -6173,16 +6598,60 @@ def tex_pretty(s):
     return re.sub(r"[ \t]{2,}", " ", s)
 
 
+def cut_repetition(text):
+    """Cuts a model that loops. The second copy of a sentence or a paragraph is the end of the answer."""
+    text = str(text or "").strip()
+    if len(text) < 80:
+        return text
+    paras = re.split(r"\n\s*\n", text)
+    kept, seen = [], []
+    for p in paras:
+        key = re.sub(r"\W+", " ", p.lower()).strip()
+        if len(key) >= 40 and any(key == s or (len(key) >= 70 and key[:70] == s[:70]) for s in seen):
+            break
+        if len(key) >= 40:
+            seen.append(key)
+        kept.append(p)
+    text = "\n\n".join(kept).strip()
+    parts = re.split(r"(?<=[.!?])\s+", text)
+    kept, seen = [], []
+    for s in parts:
+        key = re.sub(r"\W+", " ", s.lower()).strip()
+        if len(key) >= 35 and key in seen:
+            break
+        if len(key) >= 35:
+            seen.append(key)
+        kept.append(s)
+    text = " ".join(kept).strip()
+    first = re.split(r"(?<=[.!?])\s+", text, maxsplit=1)[0]
+    if len(first) >= 40:
+        again = text.find(first, len(first))
+        if again > 0:
+            text = text[:again].rstrip()
+    return text
+
+
 def tidy_model_answer(a):
-    a = re.sub(r"^\s*(A|Answer|Response)\s*:\s*", "", str(a or "").strip())
-    return a.strip()
+    a = re.sub(r"^\s*(A|Answer|Response|Explanation|Summary)\s*:\s*", "", str(a or "").strip())
+    # a small model sometimes copies the source list it was given into its answer: cut it off there
+    m_ = re.search(r"(\n\s*-{3,}\s*)?\n?\s*\[\d+\]\s+relevance\s+[\d.]+\s*/\s*10|\n\s*Sources from my dataset\s*:", a)
+    if m_ and m_.start() > 40:
+        a = a[:m_.start()].rstrip(" -\n")
+    return cut_repetition(a).strip()
+
+
+def rag_plain_messages(question, history=()):
+    """The same question with no dataset, so the model answers from what it already knows."""
+    msgs = [m for m in list(history)[-4:] if m.get("role") in ("user", "assistant")]
+    return msgs + [{"role": "user", "content": question}]
 
 
 def rag_messages(question, hits, history=(), max_chars=6000):
     """The question with its numbered sources, as chat messages for the model."""
     parts, used = [], 0
     for i, h in enumerate(hits, 1):
-        block = (f"[{i}] {h['title']}  ({h['field'] or h['topic']} · {h['source'].split(' · ')[0]})\n"
+        block = (f"[{i}] relevance {h.get('rel', 0):.1f}/10  {h['title']}  "
+                 f"({h['field'] or h['topic']} · {h['source'].split(' · ')[0]})\n"
                  f"Question: {clip(h['q'], 900)}\nAnswer: {clip(h['a'], 1600)}")
         if used + len(block) > max_chars and parts:
             break
@@ -6193,12 +6662,304 @@ def rag_messages(question, hits, history=(), max_chars=6000):
     return msgs + [{"role": "user", "content": f"Sources from my dataset:\n\n{ctx}\n\nQuestion: {question}"}]
 
 
+def _fmt_num(n):
+    if isinstance(n, float) and abs(n - round(n)) < 1e-9:
+        return str(int(round(n)))
+    return f"{float(n):.10g}"
+
+
+def _safe_num(expr):
+    """A number from + - * / ** only. No names, no calls."""
+    import ast
+    tree = ast.parse(expr, mode="eval")
+    ok = (ast.Expression, ast.BinOp, ast.UnaryOp, ast.Constant, ast.Add, ast.Sub, ast.Mult, ast.Div,
+          ast.Pow, ast.USub, ast.UAdd, ast.Mod, ast.FloorDiv)
+    for n in ast.walk(tree):
+        if not isinstance(n, ok):
+            raise ValueError("not arithmetic")
+        if isinstance(n, ast.Constant) and not isinstance(n.value, (int, float)):
+            raise ValueError("not a number")
+        if isinstance(n, ast.BinOp) and isinstance(n.op, ast.Pow):
+            exp = n.right
+            if not isinstance(exp, ast.Constant) or not isinstance(exp.value, (int, float)) or abs(exp.value) > 12:
+                raise ValueError("exponent")
+    return eval(compile(tree, "<arith>", "eval"), {"__builtins__": {}}, {})
+
+
+def rag_arithmetic(question):
+    """1 + 1 is 2. A sum is not a comparison, and it is not 'whichever page mentions 1'."""
+    raw = (question or "").strip().lower().replace("’", "'")
+    if re.search(r"\b(bigger|biggest|smaller|smallest|larger|largest|greater|greatest|higher|highest|"
+                 r"lower|lowest|fewer|lesser|less|versus|vs)\b", raw):
+        return None
+    s = raw.replace("×", "*").replace("÷", "/").replace("^", "**").replace("'", "")
+    s = re.sub(r"\bplus\b", "+", s)
+    s = re.sub(r"\bminus\b", "-", s)
+    s = re.sub(r"\btimes\b", "*", s)
+    s = re.sub(r"\bmultiplied by\b", "*", s)
+    s = re.sub(r"\bdivided by\b", "/", s)
+    s = re.sub(r"\b(what|whats|calculate|compute|evaluate|find|solve|please|is|are|the|of|a|an|answer|equals|equal|value)\b", " ", s)
+    s = s.replace("?", " ").strip()
+    s = re.sub(r"\s+", " ", s)
+    if not s or not re.fullmatch(r"[0-9.\s+\-*/()]+", s) or not re.search(r"[+\-*/]", s):
+        return None
+    try:
+        value = _safe_num(s)
+    except ZeroDivisionError:
+        return "You cannot divide by zero."
+    except Exception:
+        return None
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or value != value or abs(value) > 1e15:
+        return None
+    shown = re.sub(r"\s+", " ", s).replace("**", "^")
+    return f"{shown} = {_fmt_num(value)}."
+
+
+def rag_compare_numbers(question):
+    """When the question asks which of two numbers is bigger or smaller.
+    9.9 is 9.90, which is more than 9.11. '1 + 1' is a sum, not this."""
+    low = (question or "").lower()
+    if not re.search(r"\b(bigger|biggest|smaller|smallest|larger|largest|greater|greatest|higher|highest|"
+                     r"lower|lowest|fewer|lesser|less|versus|vs)\b", low):
+        return None
+    nums = re.findall(r"\d+\.\d+|\d+", question or "")
+    if len(nums) != 2:
+        return None
+    words = rag_words(question)
+    if any(w not in set(nums) | RAG_INTENT | RAG_SOFT for w in words):
+        return None
+    a, b = float(nums[0]), float(nums[1])
+    left, right = nums[0], nums[1]
+    small = ("smaller", "smallest", "lower", "lowest", "fewer", "lesser", "less")
+    big = ("bigger", "biggest", "larger", "largest", "greater", "greatest", "higher", "highest")
+    want_small = any(re.search(r"\b" + w + r"\b", low) for w in small)
+    want_big = any(re.search(r"\b" + w + r"\b", low) for w in big)
+    if a == b:
+        return f"{left} and {right} are equal."
+    hi, lo = (left, right) if a > b else (right, left)
+    places = max(len(n.split(".")[1]) if "." in n else 0 for n in (left, right))
+    shown = f"{float(hi):.{places}f} is more than {float(lo):.{places}f}" if places else ""
+    if want_small and not want_big:
+        line = f"{lo} is smaller than {hi}."
+    else:
+        line = f"{hi} is bigger than {lo}."
+    return line + (" " + shown + "." if shown and line.split()[0] != shown.split()[0] else "")
+
+
+def rag_comparison_sources(question, hits):
+    """Sources for a comparison only when they are actually about both numbers.
+    A matrix that happens to print 0.50 and 0.5 is not a source for 'which is greater'."""
+    nums = re.findall(r"\d+\.\d+|\d+", question or "")
+    distinctive = [n for n in nums if "." in n or len(n) >= 3]
+    if not distinctive:
+        return []
+    kept = []
+    for h in hits or []:
+        blob = " ".join((h.get(k) or "") for k in ("title", "topic", "q", "a")).lower()
+        if h.get("rel", 0) >= 6 and all(_word_at(n, blob) for n in distinctive):
+            kept.append(h)
+    for i, h in enumerate(kept, 1):
+        h["rank"] = i
+    return kept
+
+
+RAG_EMBED_TASK = "Given a question, retrieve a question-and-answer record that answers this same question"
+RAG_SIM_MIN = 0.62  # meaning score (cosine) a record needs to count as being about the question
+RAG_REFER = re.compile(r"\b(it|its|this|that|these|those|they|them|their|same|above|previous|more|another|again|also|else|"
+                       r"one|ones|he|she|his|her)\b", re.I)
+RAG_STYLE = re.compile(r"\b(do\s*n[';]?t use (big|hard|difficult|fancy|complex|complicated|long)( big)* words|"
+                       r"in (very )?(simple|easy|plain|basic|short|few|layman'?s?) (words|terms|language|english)|"
+                       r"(explain|say|tell me)( it)? (simply|briefly|like i'?m (5|five|a (kid|child|beginner)))|eli5|"
+                       r"no jargon|without jargon|keep it (short|simple|brief)|step[- ]by[- ]step|please|pls)\b", re.I)
+
+
+def rag_standalone(question, prev_search=""):
+    """The text that is searched for a message. Instructions about HOW to answer ('don't use big words') are taken
+    out, and a short or referring follow-up ('definitions', 'why?', 'and for 3D?') is joined with the previous
+    question - the context of the conversation decides what it is about. Returns (search text, is follow-up)."""
+    core = re.sub(r"\s+", " ", RAG_STYLE.sub(" ", question or "")).strip(" ,.;:!-") or (question or "").strip()
+    words = [w for w in rag_words(core) if w not in RAG_INTENT]
+    follow = bool(prev_search) and (len(words) == 0 or (len(rag_words(core)) <= 2 and len(words) <= 1)
+                                    or (len(words) <= 3 and bool(RAG_REFER.search(core))))
+    if follow:
+        core = f"{prev_search[-160:]} - {core}"
+    return core, follow
+
+
+def rag_doc_text(h):
+    return f"{h.get('title') or ''}\n{(h.get('q') or '')[:300]}"
+
+
+def rag_semantic(scores, cands, k, sim_min=None):
+    """Keeps the records whose MEANING is close to the question, closest first. 'rel' becomes that meaning score
+    on the 0-10 scale shown everywhere; the word score stays in 'wrel'."""
+    sim_min = RAG_SIM_MIN if sim_min is None else float(sim_min)
+    out = []
+    for h, sc in zip(cands, scores):
+        h = dict(h)
+        h["sim"], h["wrel"] = float(sc), h.get("rel", 0)
+        h["rel"] = round(max(0.0, min(10.0, (float(sc) - 0.15) / 0.65 * 10)), 1)
+        out.append(h)
+    out.sort(key=lambda h: -h["sim"])
+    kept = [h for h in out if h["sim"] >= sim_min][:int(k)]
+    for i, h in enumerate(kept, 1):
+        h["rank"] = i
+    return kept, out
+
+
+def rag_retrieve(ix, question, k=4, field=None, worker=None, sim_min=None, prev_search="", log=None):
+    """The whole retrieval for one message, the same for the Ask page and the tests:
+    small talk / a sum / a number comparison need no records; otherwise word rank -> meaning check.
+    Returns {kind, direct, search, hits, weights}."""
+    log = log or (lambda m: None)
+    out = {"kind": "search", "direct": None, "search": question, "hits": [], "weights": []}
+    if RAG_SMALLTALK.match(question or ""):
+        out["kind"] = "chat"
+        return out
+    ar = rag_arithmetic(question)
+    if ar:
+        out.update(kind="arithmetic", direct=ar)
+        return out
+    sq, follow = rag_standalone(question, prev_search)
+    out["search"], out["follow"] = sq, follow
+    out["weights"] = ix.word_scores(sq)
+    hits = None
+    if worker is not None:
+        cands = ix.candidates(sq, field)
+        try:
+            sc = worker.rerank(model_path(EMBED_MODEL), f"Instruct: {RAG_EMBED_TASK}\nQuery: {sq}",
+                               [rag_doc_text(h) for h in cands]) if cands else []
+            hits, allr = rag_semantic(sc, cands, k, sim_min)
+            out["scored"] = allr
+        except Exception as e:
+            log(f"meaning check not available ({e}) - word rank only")
+    if hits is None:
+        hits = ix.search(sq, k, field)
+    cmp_ = rag_compare_numbers(question)
+    if cmp_:
+        out.update(kind="comparison", direct=cmp_)
+        hits = rag_comparison_sources(question, hits)
+    out["hits"] = hits
+    return out
+
+
+def cli_ragtest(n=200, seed=None):
+    """Live test of the Ask retrieval on THIS Mac's index: n different tasks, each with a checkable outcome.
+    Every run draws NEW questions (a new seed) unless a seed is given to repeat one."""
+    seed = int(time.time()) % 100000 if seed is None else int(seed)
+    print(f"seed {seed} (run with: --ragtest {n} {seed} to repeat exactly these questions)")
+    rnd = random.Random(seed)
+    ix = RagIndex()
+    total = ix.count()
+    print(f"RAG live test: {n} tasks on {total:,} records")
+    worker = None
+    st = load_settings()
+    if trainer_ready() and model_downloaded(st["rag_model"]) and os.path.exists(os.path.join(model_dir(EMBED_MODEL), ".complete")):
+        worker = PreviewWorker(st["rag_model"], None)
+        worker.ready.wait(300)
+        print(f"meaning check: on ({EMBED_MODEL.split('/')[-1]}), bar {RAG_SIM_MIN}")
+    else:
+        print("meaning check: OFF (engine or meaning model missing) - word rank only")
+    n_known = int(n * 0.30)
+    n_para = int(n * 0.15)
+    n_neg, n_ar, n_cmp, n_chat = int(n * 0.15), int(n * 0.15), int(n * 0.10), int(n * 0.05)
+    n_follow = n - n_known - n_para - n_neg - n_ar - n_cmp - n_chat
+    # real records: original Q&A with a proper question as the title
+    rows = ix.db.execute("SELECT rid, title, q, field FROM docs WHERE source LIKE '%Q&A' AND length(title) BETWEEN 25 AND 140 "
+                         "AND rowid IN (SELECT rowid FROM docs ORDER BY random() LIMIT 60000)").fetchall()
+    rows = [r for r in rows if len(rag_words(r[1])) >= 3 and not r[1].lstrip().startswith(("`", "I ", "I'm", "So ", "Hi", "Hello"))]
+    rnd.shuffle(rows)
+    seen_t, picked = set(), []
+    for r in rows:
+        key = re.sub(r"\W+", " ", r[1].lower()).strip()
+        if key not in seen_t:
+            seen_t.add(key)
+            picked.append(r)
+        if len(picked) >= n_known + n_para + n_follow:
+            break
+    res = {"pass": 0, "fail": 0}
+    by = {}
+    fails = []
+
+    def note(kind, ok, q, why=""):
+        by.setdefault(kind, [0, 0])
+        by[kind][0 if ok else 1] += 1
+        res["pass" if ok else "fail"] += 1
+        if not ok:
+            fails.append(f"  FAIL [{kind}] {q[:90]!r}  {why}")
+
+    def same(h, r):  # the same record, also when it is stored twice with a tiny wording difference ("of" / "of the")
+        key = lambda t: " ".join(w for w in re.findall(r"[^\W_]+", t.lower()) if w not in RAG_STOP)
+        return key(h["title"]) == key(r[1])
+    t0 = time.time()
+    for r in picked[:n_known]:  # 1) the exact question of a record must come back first
+        o = rag_retrieve(ix, r[1], 4, None, worker)
+        ok = bool(o["hits"]) and same(o["hits"][0], r)
+        note("known question -> its record is rank 1", ok, r[1], "got: " + (o["hits"][0]["title"][:70] if o["hits"] else "nothing"))
+    lead = ["Can you explain this: ", "I have a question. ", "Help me with this - ", "Quick question: ", "In simple words, "]
+    for r in picked[n_known:n_known + n_para]:  # 2) the same question said differently
+        q = rnd.choice(lead) + r[1][0].lower() + r[1][1:].rstrip("?.") + rnd.choice(["?", " please?", " - can you help?"])
+        o = rag_retrieve(ix, q, 4, None, worker)
+        ok = any(same(h, r) for h in o["hits"][:3])
+        note("reworded question -> its record in the top 3", ok, q, "got: " + (o["hits"][0]["title"][:70] if o["hits"] else "nothing"))
+    made = ["zorblax", "quintravel", "flimbaxo", "drennikov", "yuppletron", "skavindor", "mervaquil", "brixolene", "tandrivex",
+            "ophquinar", "glemmerdine", "pruvastic", "wendlorium", "kazzimuth", "feltronax", "jundavere", "morplexin"]
+    shapes = ["what is the capital of {}", "who invented the {} machine", "how do I cook {} soup", "what is the definition of {}",
+              "explain the {} theorem simply", "why is {} bigger than {}2", "history of the {} kingdom", "is {} a good pet"]
+    for i in range(n_neg):  # 3) a subject that is not in the data must return NO source
+        w = rnd.choice(made) + rnd.choice(["", "a", "is", "on"])
+        q = shapes[i % len(shapes)].format(w, w)
+        o = rag_retrieve(ix, q, 4, None, worker)
+        note("subject not in the data -> no source", not o["hits"], q, "wrongly used: " + (o["hits"][0]["title"][:70] if o["hits"] else ""))
+    for i in range(n_ar):  # 4) sums are computed
+        a, b = rnd.randint(1, 999), rnd.randint(1, 99)
+        op, val = rnd.choice([("+", a + b), ("-", a - b), ("*", a * b), ("plus", a + b), ("times", a * b)])
+        q = rnd.choice(["what is {} {} {}", "{} {} {}", "calculate {} {} {}", "what's {} {} {}?"]).format(a, op, b)
+        o = rag_retrieve(ix, q, 4, None, worker)
+        ok = o["kind"] == "arithmetic" and o["direct"].rstrip(".").endswith("= " + str(val)) and not o["hits"]
+        note("sum -> the value, no source", ok, q, f"got {o['direct']!r}, want {val}")
+    for i in range(n_cmp):  # 5) number comparisons
+        a = round(rnd.uniform(0.1, 99), rnd.choice([1, 2]))
+        b = round(rnd.uniform(0.1, 99), rnd.choice([1, 2]))
+        if a == b:
+            b += 1
+        small = i % 2 == 1
+        q = rnd.choice(["which is {w}, {} or {}", "what is {w} {} or {}", "{} or {} - which is {w}?"]).format(
+            a, b, w="smaller" if small else "bigger")
+        o = rag_retrieve(ix, q, 4, None, worker)
+        want = str(min(a, b) if small else max(a, b))
+        ok = o["kind"] == "comparison" and (o["direct"] or "").startswith(want + " is")
+        note("comparison -> the right number", ok, q, f"got {o['direct']!r}, want {want}")
+    for q in (["hi", "hello", "hey", "thanks", "thank you", "good morning", "how are you", "ok", "bye", "who are you"] * 3)[:n_chat]:
+        o = rag_retrieve(ix, q, 4, None, worker)  # 6) greetings never search
+        note("greeting -> no search", o["kind"] == "chat" and not o["hits"], q)
+    follow_qs = ["why?", "explain it more simply", "and how does that work?", "give an example of it", "tell me more about this"]
+    for i, r in enumerate(picked[n_known + n_para:n_known + n_para + n_follow]):  # 7) a follow-up keeps the context
+        first = rag_retrieve(ix, r[1], 4, None, worker)
+        q = follow_qs[i % len(follow_qs)]
+        o = rag_retrieve(ix, q, 4, None, worker, prev_search=first["search"])
+        ok = o.get("follow") and any(same(h, r) for h in o["hits"][:3])
+        note("follow-up -> still about the previous question", bool(ok), f"{r[1][:50]} -> {q}",
+             "got: " + (o["hits"][0]["title"][:60] if o["hits"] else "nothing"))
+    if worker is not None:
+        worker.stop()
+    print()
+    for kind, (ok, bad) in by.items():
+        print(f"  {ok:3d} / {ok + bad:<3d}  {kind}")
+    for f in fails[:40]:
+        print(f)
+    print(f"\nRAGTEST {'PASSED' if not res['fail'] else 'FAILED'}: {res['pass']} of {res['pass'] + res['fail']} tasks "
+          f"in {time.time() - t0:.0f} s")
+    return 0 if not res["fail"] else 1
+
+
 def rag_extractive(question, hits):
     """An answer without any model: the best matching record, quoted with its source."""
     if not hits:
         return "Nothing in the dataset matches this yet - Agent mode keeps collecting, so try again later or rephrase."
     h = hits[0]
-    return f"## {h['title']}\n\nClosest record in your dataset [1]:\n\n{clip(h['a'], 3000)}"
+    return (f"## {h['title']}\n\nClosest record in your dataset [1], relevance {h.get('rel', 0):.1f}/10:\n\n"
+            f"{clip(h['a'], 3000)}")
 
 
 def model_downloaded(mid):
@@ -6284,12 +7045,42 @@ def kaggle_push(st, dirs, agent_root=None, stage=None):
                 for f in fn:
                     best[(os.path.join("images", os.path.relpath(dp, ip)), f)] = os.path.join(dp, f)
     try:
-        for (sub, name), f in best.items():
-            os.makedirs(os.path.join(stage, sub), exist_ok=True)
+        # Clean files for Kaggle: plain .jsonl (Kaggle previews it; it unpacks .gz into odd folders), one file per data
+        # type per day, every row once (GitHub copy + local copy of the same shard are merged).
+        import gzip
+        seen, outs, n_rows = set(), {}, 0
+        for (sub, name), f in sorted(best.items(), key=lambda kv: kv[0][1]):
+            if sub.startswith("images"):
+                os.makedirs(os.path.join(stage, sub), exist_ok=True)
+                try:
+                    os.link(f, os.path.join(stage, sub, name))
+                except OSError:
+                    shutil.copy2(f, os.path.join(stage, sub, name))
+                continue
+            day = (re.search(r"(\d{8})", name) or [None, "misc"])[1]
+            out_name = f"{sub}-{day}.jsonl"
             try:
-                os.link(f, os.path.join(stage, sub, name))
-            except OSError:
-                shutil.copy2(f, os.path.join(stage, sub, name))
+                fh = gzip.open(f, "rt", encoding="utf-8") if f.endswith(".gz") else open(f, encoding="utf-8")
+                with fh:
+                    for line in fh:
+                        line = line.strip()
+                        if not line:
+                            continue
+                        try:
+                            rid = json.loads(line).get("id") or hashlib.sha1(line.encode()).hexdigest()
+                        except ValueError:
+                            continue
+                        if rid in seen:
+                            continue
+                        seen.add(rid)
+                        if out_name not in outs:
+                            outs[out_name] = open(os.path.join(stage, out_name), "w", encoding="utf-8")
+                        outs[out_name].write(line + "\n")
+                        n_rows += 1
+            except (OSError, EOFError):
+                continue
+        for fh in outs.values():
+            fh.close()
         for extra in ("stats.json", "topics.json", "README.md"):
             for d in ([agent_root] if agent_root else []) + list(dirs):
                 if os.path.exists(os.path.join(d, extra)):
@@ -6297,18 +7088,19 @@ def kaggle_push(st, dirs, agent_root=None, stage=None):
                     break
         with open(os.path.join(stage, "dataset-metadata.json"), "w") as f:
             json.dump({"id": ds, "title": "Prolabs Robotics 864", "licenses": [{"name": "CC-BY-SA-4.0"}]}, f)
-        msg = f"AITE update {time.strftime('%Y-%m-%d %H:%M')} - {len(best):,} files"
-        r = subprocess.run(kaggle_cli() + ["datasets", "version", "-p", stage, "-m", msg, "-r", "zip", "-q"],
+        msg = f"AITE update {time.strftime('%Y-%m-%d %H:%M')} - {n_rows:,} rows in {len(outs)} files"
+        r = subprocess.run(kaggle_cli() + ["datasets", "version", "-p", stage, "-m", msg, "-r",
+                                           "zip" if st.get("kaggle_images") else "skip", "-q"],
                            capture_output=True, text=True, timeout=6 * 3600, env=kaggle_env())
         out = (r.stdout + r.stderr).strip()
         if r.returncode == 0 and "error" not in out.lower():
-            return True, f"new version with {len(best):,} files"
+            return True, f"new version: {n_rows:,} rows in {len(outs)} clean .jsonl files"
         if "404" in out or "not found" in out.lower():
-            r = subprocess.run(kaggle_cli() + ["datasets", "create", "-p", stage, "-r", "zip", "-q"],
+            r = subprocess.run(kaggle_cli() + ["datasets", "create", "-p", stage, "-r", "skip", "-q"],
                                capture_output=True, text=True, timeout=6 * 3600, env=kaggle_env())
             out = (r.stdout + r.stderr).strip()
             if r.returncode == 0:
-                return True, f"dataset created with {len(best):,} files"
+                return True, f"dataset created: {n_rows:,} rows in {len(outs)} files"
         return False, "upload failed: " + out[-220:]
     except Exception as e:
         return False, f"upload failed: {type(e).__name__}: {e}"
@@ -6403,6 +7195,146 @@ def cli_rag_update(root, offline=False):
     except OSError:
         pass
     return 0
+
+
+# ----------------------------------------------------------------------------- models: resumable downloads
+MODELS_DIR = os.path.join(HERE, "models")  # models AITE downloads itself - every file resumes, so a bad connection still finishes
+EMBED_MODEL = "mlx-community/Qwen3-Embedding-0.6B-4bit-DWQ"  # small "meaning" model (0.27 GB): scores what a record is ABOUT
+
+
+def model_dir(mid):
+    return os.path.join(MODELS_DIR, mid.strip("/").replace("/", "--"))
+
+
+def model_path(mid):
+    """Where a model is loaded from: a folder as it is, AITE's models folder once complete, else the Hugging Face cache."""
+    if os.path.isdir(mid):
+        return mid
+    d = model_dir(mid)
+    return d if os.path.exists(os.path.join(d, ".complete")) else mid
+
+
+def download_status(mid):
+    """Progress of AITE's own download of this model: {} if none. 'alive' = its process is still running."""
+    try:
+        with open(os.path.join(model_dir(mid), ".download.json")) as f:
+            d = json.load(f)
+    except (OSError, ValueError):
+        return {}
+    d["alive"] = d.get("state") == "downloading" and _alive(int(d.get("pid", 0) or 0)) and time.time() - d.get("t", 0) < 180
+    return d
+
+
+def download_model(mid, log=print, cancel=None, max_hours=24.0):
+    """Downloads a Hugging Face model into models/, built for slow and dropping connections: every file continues from
+    the byte where it stopped (HTTP Range) and every error is retried. Progress goes to .download.json."""
+    import ssl
+    dest = model_dir(mid)
+    os.makedirs(dest, exist_ok=True)
+    stat_p = os.path.join(dest, ".download.json")
+    try:
+        import certifi
+        ctx = ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        ctx = ssl.create_default_context()
+    opener = urllib.request.build_opener(urllib.request.HTTPSHandler(context=ctx))
+    ua = {"User-Agent": "AITE-model-download/1.0"}
+    state = {"state": "downloading", "done": 0, "total": 0, "file": "", "error": "", "pid": os.getpid(), "t": time.time(),
+             "started": time.time(), "retries": 0}
+
+    def put(**kw):
+        state.update(kw, t=time.time())
+        try:
+            with open(stat_p + ".tmp", "w") as f:
+                json.dump(state, f)
+            os.replace(stat_p + ".tmp", stat_p)
+        except OSError:
+            pass
+
+    def stop():
+        return bool(cancel and cancel()) or os.path.exists(os.path.join(dest, ".cancel")) or \
+            time.time() - state["started"] > max_hours * 3600
+    try:
+        os.remove(os.path.join(dest, ".cancel"))
+    except OSError:
+        pass
+    put()
+    info, attempt = None, 0
+    while info is None and not stop():
+        try:
+            req = urllib.request.Request(f"https://huggingface.co/api/models/{mid}?blobs=true", headers=ua)
+            with opener.open(req, timeout=30) as r:
+                info = json.loads(r.read().decode("utf-8", "replace"))
+        except urllib.error.HTTPError as e:
+            if e.code in (401, 403, 404):
+                put(state="error", error=f"model not found or not open (HTTP {e.code})")
+                log(f"{mid}: not found or not open (HTTP {e.code})")
+                return False
+            attempt += 1
+        except Exception as e:
+            attempt += 1
+            put(error=f"waiting for the connection ({type(e).__name__})", retries=state["retries"] + 1)
+        if info is None:
+            time.sleep(min(30, 2 + attempt * 2))
+    if info is None:
+        put(state="stopped")
+        return False
+    rev = info.get("sha") or "main"
+    skip = re.compile(r"(^|/)(README\.md|\.gitattributes|.*\.(png|jpe?g|gif|md))$", re.I)
+    files = [(x["rfilename"], x.get("size")) for x in info.get("siblings", []) if not skip.search(x["rfilename"])]
+    files.sort(key=lambda x: x[1] or 0)
+    total = sum(sz or 0 for _n, sz in files)
+
+    def have():
+        return sum(os.path.getsize(os.path.join(dest, n + sfx)) for n, _s in files for sfx in ("", ".part")
+                   if os.path.exists(os.path.join(dest, n + sfx)))
+    put(total=total, done=have(), error="")
+    log(f"{mid}: {len(files)} files, {total / 2 ** 20:,.0f} MB -> {dest}")
+    last = [0.0]
+    for name, size in files:
+        final = os.path.join(dest, name)
+        part = final + ".part"
+        os.makedirs(os.path.dirname(final), exist_ok=True)
+        if os.path.exists(final) and (size is None or os.path.getsize(final) == size):
+            continue
+        url = f"https://huggingface.co/{mid}/resolve/{rev}/{urllib.parse.quote(name)}"
+        attempt = 0
+        while not stop():
+            pos = os.path.getsize(part) if os.path.exists(part) else 0
+            if size is not None and pos >= size:
+                break
+            try:
+                req = urllib.request.Request(url, headers=dict(ua, **({"Range": f"bytes={pos}-"} if pos else {})))
+                with opener.open(req, timeout=45) as r:
+                    if pos and r.status != 206:  # the server sent the whole file again: start this file over
+                        pos = 0
+                    with open(part, "ab" if pos else "wb") as f:
+                        while not stop():
+                            chunk = r.read(262144)
+                            if not chunk:
+                                break
+                            f.write(chunk)
+                            attempt = 0
+                            if time.time() - last[0] > 1:
+                                last[0] = time.time()
+                                put(done=have(), file=name, error="")
+                if size is None:
+                    break
+            except Exception as e:  # dropped connection, DNS gap, timeout: wait a little and continue from this byte
+                attempt += 1
+                put(done=have(), file=name, error=f"connection dropped, continuing ({type(e).__name__})",
+                    retries=state["retries"] + 1)
+                time.sleep(min(30, 2 + attempt * 2))
+        if stop() and not (size is not None and os.path.exists(part) and os.path.getsize(part) >= size):
+            put(state="stopped", done=have())
+            log(f"{mid}: stopped at {have() / 2 ** 20:,.0f} of {total / 2 ** 20:,.0f} MB - it continues from here next time")
+            return False
+        os.replace(part, final)
+    with open(os.path.join(dest, ".complete"), "w") as f:
+        f.write(rev)
+    put(state="done", done=have(), error="", file="")
+    log(f"{mid}: downloaded ({total / 2 ** 20:,.0f} MB, {state['retries']} reconnects)")
+    return True
 
 
 def rag_models():
@@ -8460,13 +9392,18 @@ def main_gui():
     cc.pack(fill="x", pady=(4, 14), before=hc)  # the question box is the first thing on the page
     mrow = box(cc.body, "card")
     mrow.pack(fill="x", pady=(0, 10))
-    v_amode = tk.StringVar(value="model" if st["rag_use_model"] else "records")
+    _mode0 = st.get("rag_answer_mode") or ("records" if not st.get("rag_use_model", True) else "compare")
+    if _mode0 not in ("with", "plain", "compare", "records"):
+        _mode0 = "compare"
+    v_amode = tk.StringVar(value=_mode0)
 
     def amode_changed(v):
-        st["rag_use_model"] = v == "model"
+        st["rag_answer_mode"] = v
+        st["rag_use_model"] = v != "records"
         persist()
-    Segmented(mrow, ["model", "records"], v_amode, amode_changed,
-              labels={"model": "AI answer + sources", "records": "Matching records only"}).pack(side="left")
+    Segmented(mrow, ["compare", "with", "plain", "records"], v_amode, amode_changed,
+              labels={"compare": "Compare: without vs with data", "with": "With data", "plain": "Model only",
+                      "records": "Records"}).pack(side="left")
     frow = box(cc.body, "card")
     frow.pack(fill="x", pady=(0, 10))
     fhead = box(frow, "card")
@@ -8547,7 +9484,7 @@ def main_gui():
     vrow = box(cc.body, "card")
     vrow.pack(fill="x", pady=(12, 4))
     label(vrow, "Verbose log", "dim", -2, True).pack(side="left")
-    label(vrow, "  every step: search terms, matches + scores, prompt size, model loading, speed, and the background "
+    label(vrow, "  every step: word relevance scores, ranked matches, prompt size, model loading, speed, and the background "
                 "GitHub / index / Kaggle job", "faint", -4).pack(side="left")
     Pill(vrow, "Clear", lambda: (rg["vlog"].clear(), rg.__setitem__("vrev", rg["vrev"] + 1)), "ghost", h=26, size=-3).pack(side="right")
     vfr, vlog_t = text_area(cc.body, "code", mono=True, h=14, size=-3)
@@ -8754,15 +9691,24 @@ def main_gui():
         q = v_q.get().strip()
         if not q or rg["busy"]:
             return
-        use_model = v_amode.get() == "model"
+        mode = v_amode.get()
+        if mode == "model":
+            mode = "with"
+        if mode not in ("with", "plain", "compare", "records"):
+            mode = "with"
+        use_model = mode != "records"
         if use_model and not (rg["engine"] and model_downloaded(st["rag_model"])):
             use_model = False
+            mode = "records"
             status("The answer model is not ready (install the engine / download the model) - showing the matching records")
         v_q.set("")
-        turn = {"q": q, "a": "", "hits": [], "state": "searching", "model": model_label(st["rag_model"]) if use_model else ""}
+        turn = {"q": q, "a": "", "a_plain": "", "hits": [], "weights": [], "state": "searching", "mode": mode,
+                "model": model_label(st["rag_model"]) if use_model else ""}
         rg["chat"].append(turn)
         rg["busy"], rg["rev"] = True, rg["rev"] + 1
         field = fields_chosen()
+        prev_search = next((t_.get("search") or t_["q"] for t_ in reversed(rg["chat"][:-1])
+                            if not RAG_SMALLTALK.match(t_["q"])), "")
         history = []
         for t_ in rg["chat"][:-1][-3:]:
             if t_.get("a"):
@@ -8771,35 +9717,76 @@ def main_gui():
         def work():
             t0 = time.time()
             try:
-                vlog(f"QUESTION  {q!r}" + (f"  · fields = {', '.join(field)}" if field else "  · ALL fields"))
+                vlog(f"QUESTION  {q!r}  · {mode}" + (f"  · fields = {', '.join(field)}" if field else "  · ALL fields"))
                 chat = bool(RAG_SMALLTALK.match(q))
+                arith = None if chat else rag_arithmetic(q)
                 if chat:
                     vlog("small talk (greeting / thanks): no dataset search, the model just replies")
+                elif arith:
+                    turn["weights"] = []
+                    turn["hits"] = []
+                    turn["search_ms"] = int((time.time() - t0) * 1000)
+                    vlog("arithmetic: the answer is the value, so there is no word rank and there are no sources")
                 else:
                     ix = rag_index()
-                    fts = RagIndex.query_of(q)
-                    vlog(f"search terms ({len(fts.split(' OR ')) if fts else 0}): {fts or '(none - only stop words)'}")
-                    raw = ix.search(q, int(st["rag_k"]), field)
+                    sq, follow = rag_standalone(q, prev_search)
+                    turn["search"] = sq
+                    if sq != q:
+                        vlog(("follow-up: the previous question gives the context - " if follow else
+                              "how-to-answer words removed - ") + f"searching for {sq!r}")
+                    weights = ix.word_scores(sq)
+                    turn["weights"] = weights
+                    if weights:
+                        vlog("word relevance (10 = the subject of this question): " + " · ".join(
+                            f"{t} {w:g}" + (" question-word" if t in RAG_INTENT else f" in {df:,} records")
+                            for t, w, df in weights))
+                    else:
+                        vlog("word relevance: none (only stop words)")
+                    sem_on = bool(st["rag_semantic"] and rg["engine"] and model_downloaded(st["rag_model"])
+                                  and os.path.exists(os.path.join(model_dir(EMBED_MODEL), ".complete")))
+                    raw = None
+                    if sem_on:
+                        cands = ix.candidates(sq, field)
+                        t_l = time.time()
+                        vlog(f"step 1 - word rank over {fmt_n(rg['status'].get('count', 0))} records: {len(cands)} candidates "
+                             f"in {int((t_l - t0) * 1000)} ms")
+                        try:
+                            wk_ = rag_worker()
+                            if not wk_.ready.is_set():
+                                vlog("loading the models into memory (once)…")
+                            sc = wk_.rerank(model_path(EMBED_MODEL), f"Instruct: {RAG_EMBED_TASK}\nQuery: {sq}",
+                                            [rag_doc_text(h) for h in cands]) if cands else []
+                            raw, allr = rag_semantic(sc, cands, int(st["rag_k"]), float(st["rag_sim_min"]))
+                            vlog(f"step 2 - meaning check ({int((time.time() - t_l) * 1000)} ms): {len(raw)} of {len(cands)} are "
+                                 f"really about the question (meaning score ≥ {float(st['rag_sim_min']):.2f})")
+                            for h in allr[:8]:
+                                vlog(f"   {'KEEP' if h['sim'] >= float(st['rag_sim_min']) else 'drop'}  meaning {h['sim']:.2f}  "
+                                     f"words {h['wrel']:.1f}/10  {h['field'] or h['topic'] or 'general'} · {h['source']}  "
+                                     f"{shorten(h['title'], 76)}")
+                        except Exception as e:
+                            vlog(f"meaning check not available ({e}) - using the word rank only")
+                            raw = None
+                    if raw is None:
+                        raw = ix.search(sq, int(st["rag_k"]), field)
+                        vlog(f"word rank over {fmt_n(rg['status'].get('count', 0))} records: {len(raw)} kept")
+                        for h in raw:
+                            vlog(f"   #{h.get('rank', 0)}  relevance {h.get('rel', 0):.1f}/10  "
+                                 f"{h['field'] or h['topic'] or 'general'} · {h['source']}  {shorten(h['title'], 80)}")
                     turn["search_ms"] = int((time.time() - t0) * 1000)
-                    vlog(f"BM25 full-text search over {fmt_n(rg['status'].get('count', 0))} records: {len(raw)} different "
-                         f"records in {turn['search_ms']} ms (DataGen variants of one question count once)")
-                    turn["hits"] = rag_relevant(q, raw)
-                    for i, h in enumerate(raw, 1):
-                        vlog(f"   {'KEEP' if h in turn['hits'] else 'drop'}  score {-h['score']:.2f}  {h['field'] or h['topic'] or 'general'}"
-                             f" · {h['source']}  {shorten(h['title'], 80)}  ({len(h['q']) + len(h['a']):,} chars)")
-                    vlog(f"relevance check: {len(turn['hits'])} of {len(raw)} records are about the question"
-                         + ("" if turn["hits"] else " - the model answers from its own knowledge"))
-                if use_model:
+                    turn["hits"] = raw
+                    if not raw:
+                        vlog("no record scored high enough - the model answers from its own knowledge")
+                direct = arith or (None if chat else rag_compare_numbers(q))
+                if direct:
+                    turn["a"] = direct
+                    if arith:
+                        vlog("the question is arithmetic, so the answer is the value: " + direct)
+                    else:
+                        turn["hits"] = rag_comparison_sources(q, turn.get("hits"))
+                        vlog("the question compares two numbers, so the answer is the comparison: " + direct)
+                if use_model and not direct:
                     turn["state"] = "thinking"
                     rg["rev"] += 1
-                    if chat:
-                        msgs = [m_ for m_ in history[-4:]] + [{"role": "user", "content": q}]
-                    else:
-                        msgs = rag_messages(q, turn["hits"], history, int(st["rag_context_chars"]))
-                    sysmsg = RAG_CHAT_SYSTEM if chat else RAG_SYSTEM
-                    n_ch = sum(len(m_["content"]) for m_ in msgs) + len(sysmsg)
-                    vlog(f"prompt: {len(msgs)} messages ({len(history) // 2} earlier turns), {n_ch:,} characters ≈ {n_ch // 4:,} "
-                         f"tokens · source limit {st['rag_context_chars']:,} chars")
                     w_ = rg.get("worker")
                     fresh = w_ is None or not w_.alive() or w_.model != st["rag_model"]
                     if fresh:
@@ -8810,15 +9797,35 @@ def main_gui():
                     if fresh:
                         vlog(f"model loaded in {time.time() - t1:.1f} s" + (f" - error: {wk.error}" if wk.error else ""))
                     vlog(f"generating: up to {st['rag_tokens']} tokens, temperature {st['rag_temp']}…")
-                    t2 = time.time()
-                    turn["a"] = tidy_model_answer(wk.ask("before", msgs, int(st["rag_tokens"]), temp=float(st["rag_temp"]),
-                                                         system=sysmsg))
-                    dt = max(0.01, time.time() - t2)
-                    est = max(1, len(turn["a"]) // 4)
-                    cites = sorted(set(re.findall(r"\[(\d+)\]", turn["a"])), key=int)
-                    vlog(f"answer: {len(turn['a']):,} chars ≈ {est:,} tokens in {dt:.1f} s ≈ {est / dt:.0f} tokens/s · cites "
-                         + (", ".join("[" + c + "]" for c in cites) or "no sources"))
-                else:
+
+                    def gen(msgs, sysmsg, label):
+                        n_ch = sum(len(m_["content"]) for m_ in msgs) + len(sysmsg)
+                        vlog(f"{label}: {len(msgs)} messages, {n_ch:,} characters ≈ {n_ch // 4:,} tokens")
+                        t2 = time.time()
+                        ans = tidy_model_answer(wk.ask("before", msgs, int(st["rag_tokens"]), temp=float(st["rag_temp"]),
+                                                       system=sysmsg))
+                        dt = max(0.01, time.time() - t2)
+                        est = max(1, len(ans) // 4)
+                        vlog(f"{label} answer: {len(ans):,} chars ≈ {est:,} tokens in {dt:.1f} s ≈ {est / dt:.0f} tokens/s")
+                        return ans
+
+                    if chat:
+                        turn["a"] = gen([m_ for m_ in history[-4:]] + [{"role": "user", "content": q}], RAG_CHAT_SYSTEM, "chat")
+                    elif mode == "plain":
+                        turn["a"] = gen(rag_plain_messages(q), RAG_PLAIN_SYSTEM, "model only")
+                    elif mode == "compare":  # the same question twice: the model alone, then the model with your records
+                        turn["a_plain"] = gen(rag_plain_messages(q, history), RAG_PLAIN_SYSTEM, "without your data")
+                        rg["rev"] += 1
+                        if turn["hits"]:
+                            turn["a"] = gen(rag_messages(q, turn["hits"], history, int(st["rag_context_chars"])),
+                                            RAG_SYSTEM, "with your data")
+                        else:
+                            turn["a"], turn["same"] = turn["a_plain"], True
+                            vlog("nothing in your data is about this question, so 'with your data' is the same answer")
+                    else:
+                        turn["a"] = gen(rag_messages(q, turn["hits"], history, int(st["rag_context_chars"])),
+                                        RAG_SYSTEM, "with your data")
+                elif not direct:
                     turn["a"] = ("Hi! Ask me anything about maths, science, programming, robotics, medicine and more - "
                                  "I search ALL your data." if chat else rag_extractive(q, turn["hits"]))
                     vlog("records-only answer: quoting the best match (no model used)")
@@ -8909,33 +9916,67 @@ def main_gui():
         chat_t.tag_configure("link", font=font(-4), foreground=T["blue"], underline=True)
         if not rg["chat"]:
             chat_t.insert("end", "Ask anything about the topics AITE collected - maths, physics, programming, robotics, "
-                                 "medicine… The answer cites the records it used.\n", "meta")
+                                 "medicine… Each word of the question is scored, and the best records come first.\n"
+                                 "Compare shows the same model answering with your data and without it.\n", "meta")
+
+        def paint_weights(t_):
+            ws = t_.get("weights") or []
+            if ws:
+                bits = [f"{term} {w:g}" + (" question-word" if term in RAG_INTENT else "") for term, w, *_ in ws[:8]]
+                chat_t.insert("end", "Word relevance  " + "    ".join(bits) + "\n", "meta")
+
+        def paint_sources(t_, n_):
+            if not t_.get("hits"):
+                return
+            chat_t.insert("end", "\nSources by relevance rank\n", "meta")
+            for i, h in enumerate(t_["hits"], 1):
+                chat_t.insert("end", f"[{h.get('rank', i)}]  {h.get('rel', 0):.1f}/10  {shorten(h['title'], 96)}  ", "src")
+                chat_t.insert("end", f"{h['field'] or h['topic'] or 'general'} · {h['source']}" + (f" · {h['license']}" if h["license"] else ""), "fld")
+                if h["url"]:
+                    tag = f"u{n_}_{i}"
+                    chat_t.insert("end", "  open", ("link", tag))
+                    chat_t.tag_bind(tag, "<Button-1>", lambda e, u=h["url"]: __import__("webbrowser").open(u))
+                    chat_t.tag_bind(tag, "<Enter>", lambda e: chat_t.configure(cursor="hand2"))
+                    chat_t.tag_bind(tag, "<Leave>", lambda e: chat_t.configure(cursor="arrow"))
+                chat_t.insert("end", "\n", "src")
+
         for n_, t_ in enumerate(rg["chat"]):
             chat_t.insert("end", "You  ", "meta")
             chat_t.insert("end", t_["q"] + "\n", "q")
+            mode_ = t_.get("mode") or "with"
             if t_["state"] == "searching":
-                chat_t.insert("end", "Searching the whole dataset…\n", "meta")
+                chat_t.insert("end", "Scoring the words in your question, then ranking the dataset…\n", "meta")
                 continue
+            paint_weights(t_)
             if t_["state"] == "thinking":
-                chat_t.insert("end", f"{len(t_['hits'])} matching records found · {t_['model']} is writing the answer…\n", "meta")
+                if mode_ == "compare" and t_.get("a_plain"):
+                    chat_t.insert("end", f"WITHOUT your data · {t_['model']} alone\n", "meta")
+                    md_insert(chat_t, t_["a_plain"].strip())
+                    chat_t.insert("end", f"\nWITH your data · {len(t_['hits'])} records — writing…\n", "meta")
+                else:
+                    chat_t.insert("end", f"{len(t_['hits'])} records ranked · {t_['model']} is writing the answer…\n", "meta")
+                continue
+            if mode_ == "compare" and t_.get("model") and (t_.get("a_plain") or t_.get("same")):
+                chat_t.insert("end", f"WITHOUT your data · {t_['model']} alone · same question, no records\n", "meta")
+                md_insert(chat_t, (t_.get("a_plain") or "").strip())
+                if t_.get("same"):
+                    chat_t.insert("end", "\nWITH your data · no record in your dataset is about this question, so the answer "
+                                         "is the same as above\n", "meta")
+                else:
+                    chat_t.insert("end", f"\nWITH your data · {t_['model']} + {len(t_['hits'])} records · "
+                                         f"{t_.get('secs', 0):.1f} s\n", "meta")
+                    md_insert(chat_t, t_["a"].strip())
+                    paint_sources(t_, n_)
+            elif mode_ == "plain" and t_.get("model"):
+                chat_t.insert("end", f"Model only · {t_['model']} · no dataset · {t_.get('secs', 0):.1f} s\n", "meta")
+                md_insert(chat_t, t_["a"].strip())
             else:
                 how = ("dataset + the model's own knowledge" if t_["hits"] else "the model's own knowledge (nothing in the dataset "
                        "was about this)") if t_["model"] else "from your dataset"
-                chat_t.insert("end", (f"AI answer · {t_['model']} · " if t_["model"] else "") + how +
+                chat_t.insert("end", (f"With your data · {t_['model']} · " if t_["model"] else "") + how +
                               f" · {t_.get('secs', 0):.1f} s\n", "meta")
                 md_insert(chat_t, t_["a"].strip())
-            if t_["hits"]:
-                chat_t.insert("end", "\nSources from your dataset\n", "meta")
-                for i, h in enumerate(t_["hits"], 1):
-                    chat_t.insert("end", f"[{i}] {shorten(h['title'], 110)}  ", "src")
-                    chat_t.insert("end", f"{h['field'] or h['topic'] or 'general'} · {h['source']}" + (f" · {h['license']}" if h["license"] else ""), "fld")
-                    if h["url"]:
-                        tag = f"u{n_}_{i}"
-                        chat_t.insert("end", "  open", ("link", tag))
-                        chat_t.tag_bind(tag, "<Button-1>", lambda e, u=h["url"]: __import__("webbrowser").open(u))
-                        chat_t.tag_bind(tag, "<Enter>", lambda e: chat_t.configure(cursor="hand2"))
-                        chat_t.tag_bind(tag, "<Leave>", lambda e: chat_t.configure(cursor="arrow"))
-                    chat_t.insert("end", "\n", "src")
+                paint_sources(t_, n_)
             chat_t.insert("end", "\n")
         chat_t.configure(state="disabled")
         chat_t.see("end")
@@ -9259,12 +10300,14 @@ def main_gui():
              (out_card, "Preview and export", "Preview shows exactly what Export writes - only the formatted records. Records lists "
                                               "every row; Log shows each step. Export saves ONE combined file.")]
         t = [(train_top, "Ask your data", "This button (a little apart from Agent mode) opens Ask. Back returns to Agent mode."),
-             (prow, "The question box", "Type any question and press Enter or Ask. AITE searches ALL the data and the model "
-                                        "answers from the best records, citing them [1]."),
-             (mrow, "Answer style", "AI answer + sources, or just the matching records (works without any model)."),
+             (prow, "The question box", "Type any question and press Enter or Ask. Each word is scored by how much it is the "
+                                        "subject (mathematics scores high, definition scores low). The best records come first."),
+             (mrow, "With data, model only, Compare, records", "With data answers from your dataset. Model only ignores it. "
+                                                               "Compare shows both, one under the other, from the same model. "
+                                                               "Records quotes the best match with no model."),
              (frow, "Fields", "ALL is on by default. Tap fields to pick one or several; Select all / Clear switch them all."),
-             (vfr, "Verbose log", "Every step, live: search terms, each match with its score, prompt size, model loading, speed - "
-                                  "and the background job: GitHub download, indexing file by file, Kaggle upload."),
+             (vfr, "Verbose log", "Every step, live: each word's relevance score, each record's relevance, prompt size, model "
+                                  "loading, speed - and the background job: GitHub download, indexing file by file, Kaggle upload."),
              (sgrid, "Status labels", "Green = ready, blue = working, orange = needs attention, red = failed, grey = not yet. "
                                       "GitHub data, the index and Kaggle update by themselves - no button needed."),
              (mc, "Models", "Green Downloaded = ready, press Use. Grey Not downloaded = press Download (once). Orange = too big for this Mac.")]
@@ -10542,7 +11585,7 @@ def main_gui():
             chat_ = chat_t.get("1.0", "end")
             vl_ = vlog_t.get("1.0", "end")
             assert rg["chat"] and rg["chat"][-1]["hits"] and "Sources" in chat_ and "[1]" in chat_, chat_[:300]
-            assert "QUESTION" in vl_ and "BM25" in vl_ and "score" in vl_ and "job  " in vl_ and "index:" in vl_, vl_[-600:]
+            assert "QUESTION" in vl_ and "word rank" in vl_ and "relevance" in vl_ and "job  " in vl_ and "index:" in vl_, vl_[-600:]
             n_tg = len(guide_steps())
             for i_ in range(n_tg):
                 assert guide(i_) is not None, f"ask guide step {i_ + 1}"
@@ -11190,8 +12233,13 @@ def _selftest():
         check(c["synthetic_images"] <= max(c["text"], 100) / 6 + 12 and c["vla_episodes"] <= max(c["text"], 100) / 6 + 4,
               "generated data stays within its share of the text")
         rows = [json.loads(l) for f in glob.glob(os.path.join(root_a, "text", "*.jsonl.gz")) for l in gzip.open(f, "rt")]
-        need = {"text", "messages", "split", "tokens", "quality_tier", "license", "source", "topic"}
+        need = {"text", "messages", "split", "tokens", "quality_tier", "license", "source", "topic",
+                "question", "expected_answer"}
         check(rows and all(need <= set(r) for r in rows), "text rows carry text / messages / split / tokens / tier / licence")
+        check(all(r["question"] == r.get("problem") and r["expected_answer"] == r.get("solution")
+                  and r["text"].startswith("Question:\n") and "\n\nExpected answer:\n" in r["text"]
+                  and r["expected_answer"] for r in rows),
+              "every new text row is a question and an expected answer")
         check(all([m["role"] for m in r["messages"]][:2] in (["user", "assistant"], ["system", "user"]) for r in rows), "chat messages")
         fam = {}
         for r in rows:
@@ -11201,9 +12249,13 @@ def _selftest():
         check(det and all(os.path.exists(os.path.join(root_a, d["image"])) and all(
             0 <= o["bbox"][0] and o["bbox"][0] + o["bbox"][2] <= d["width"] + 0.5 for o in d["objects"]) for d in det),
             "detection images exist, boxes inside the image")
+        check(det and all(d.get("question") and d.get("expected_answer") for d in det),
+              "detection rows are a question and an expected answer")
         vla = [json.loads(l) for f in glob.glob(os.path.join(root_a, "vla", "*.jsonl.gz")) for l in gzip.open(f, "rt")]
         check(vla and all(v["steps"][-1]["action"]["terminate"] == 1 and all(os.path.exists(os.path.join(root_a, s_["observation"]["image"]))
                                                                             for s_ in v["steps"]) for v in vla), "VLA episodes: frames + actions")
+        check(vla and all(v.get("question") == v.get("instruction") and v.get("expected_answer") for v in vla),
+              "VLA rows are a question and an expected answer")
         check(not glob.glob(os.path.join(root_a, "*", "*.open")), "every shard closed on exit")
         check(ag_.st["agent_quality"] == 6 and ag_.store.db.execute(
             "SELECT depth FROM topics WHERE name='lagrangian mechanics'").fetchone() == (-1,), "settings + focus topics applied live")
@@ -11221,6 +12273,8 @@ def _selftest():
         prefs_ = [json.loads(l) for f in glob.glob(os.path.join(root_a, "preference", "*.jsonl.gz")) for l in gzip.open(f, "rt")]
         check(prefs_ and all(p["chosen_score"] - p["rejected_score"] >= 2 and p["chosen"] != p["rejected"] for p in prefs_),
               "preference pairs: chosen beats rejected by 2+ votes")
+        check(prefs_ and all(p.get("question") == p.get("prompt") and p.get("expected_answer") == p.get("chosen") for p in prefs_),
+              "preference rows are a question and an expected answer")
         tj = json.load(open(os.path.join(root_a, "topics.json")))
         done_t = [t for t in tj["topics"] if t["done"]]
         check(tj["total"] == tj["done"] + tj["left"] + tj["in_progress"] and done_t and all(t["check"] == "✓" for t in done_t)
@@ -11284,6 +12338,30 @@ def _selftest():
         check(moved and ok_race and "Dataset/text/text-race-000.jsonl.gz" in files4 and "app/AITE.py" in files4
               and not os.path.exists(os.path.join(root3, "text", "text-race-000.jsonl.gz")),
               "GitHub moved ahead during a push: batch redone on top, both kept, local copy removed")
+        for name in ("text-408a-000.jsonl.gz", "text-408b-000.jsonl.gz"):
+            with gzip.open(os.path.join(root3, "text", name), "wt") as f:
+                f.write(json.dumps({"id": name, "type": "text", "problem": name, "solution": "ok"}) + "\n")
+        fails, real_run = [], ag3.github.run
+
+        def flaky_run(cwd, *args, **kw):
+            if args[:1] == ("push",) and len(fails) < 1:
+                fails.append(1)
+                return 1, ("error: RPC failed; HTTP 408 curl 22 The requested URL returned error: 408\n"
+                           "send-pack: unexpected disconnect while reading sideband packet\n"
+                           "fatal: the remote end hung up unexpectedly")
+            return real_run(cwd, *args, **kw)
+        ag3.github.run = flaky_run
+        ok408 = ag3.github.stream(True)
+        ag3.github.run = real_run
+        files5 = subprocess.run(["git", "--git-dir", bare2, "ls-tree", "-r", "--name-only", "main"],
+                                capture_output=True, text=True).stdout
+        names408 = ("text-408a-000.jsonl.gz", "text-408b-000.jsonl.gz")
+        local408 = [n for n in names408 if os.path.exists(os.path.join(root3, "text", n))]
+        remote408 = [n for n in names408 if f"Dataset/text/{n}" in files5]
+        check(len(fails) == 1 and ok408 and len(remote408) == 1 and len(local408) == 1
+              and set(remote408).isdisjoint(local408),
+              "GitHub HTTP 408: retry a smaller batch, delete a file only after it is on the remote "
+              f"(remote {remote408}, still local {local408})")
     finally:
         SETTINGS_FILE = old_sf
         os.environ.pop("AITE_TEST_REMOTE", None)
@@ -11309,7 +12387,26 @@ def _selftest():
                  "image": "images/synthetic/d1.jpg"},
                 {"id": "v1", "type": "vla-episode", "instruction": "Place the yellow disc on the black target.",
                  "objects": [{"shape": "disc", "color": "yellow"}], "success": True,
-                 "steps": [{"observation": {"image": "f0.jpg"}, "action": {"dx": 1}}]}]
+                 "steps": [{"observation": {"image": "f0.jpg"}, "action": {"dx": 1}}]},
+                {"id": "set1", "type": "text", "kind": "original", "problem": "What is the definition of a set?",
+                 "solution": "A set is a collection of distinct objects.", "field": "mathematics", "topic": "set theory"},
+                {"id": "math1", "type": "text", "kind": "original", "problem": "What is mathematics?",
+                 "solution": "Mathematics is the study of number, structure, space and change.",
+                 "field": "mathematics", "topic": "mathematics"},
+                {"id": "revcar", "type": "text", "kind": "original", "problem": "How do I reverse a car out of a driveway?",
+                 "solution": "Check the mirrors and reverse slowly.", "field": "engineering", "topic": "driving"},
+                {"id": "pylist", "type": "text", "kind": "original", "problem": "What is a Python list comprehension?",
+                 "solution": "A list comprehension builds a list in one expression.", "field": "programming",
+                 "topic": "python"},
+                {"id": "n99", "type": "text", "kind": "original", "problem": "Is 9.9 bigger than 9.11?",
+                 "solution": "9.9 is the same as 9.90, and 9.90 is more than 9.11.", "field": "mathematics",
+                 "topic": "decimals"},
+                {"id": "n911", "type": "text", "kind": "original",
+                 "problem": "The Impact of Post-9/11 Airport Security Measures",
+                 "solution": "Air travel fell after 9/11.", "field": "economics", "topic": "air travel"},
+                {"id": "biggernn", "type": "text", "kind": "original",
+                 "problem": "Does a bigger neural network learn worse representations?",
+                 "solution": "Not always.", "field": "machine learning", "topic": "neural networks"}]
         for sub, kind in (("text", ("text",)), ("preference", ("preference",)), ("detection", ("image-text", "detection")),
                           ("vla", ("vla-episode",))):
             for base in ("gh/Dataset", "local"):
@@ -11334,6 +12431,148 @@ def _selftest():
         check(msgs[-1]["role"] == "user" and "[1]" in msgs[-1]["content"] and "x = 4" in msgs[-1]["content"], "RAG: prompt has numbered sources")
         check("x = 4" in rag_extractive("x?", h) and "Nothing" in rag_extractive("x?", []), "RAG: records-only answer")
         check(ix.search("", 3) == [] and ix.search("the and of", 3) == [], "RAG: empty / stop-word questions are safe")
+        wmap = {t: w for t, w, *_ in ix.word_scores("what is the definition of mathematics")}
+        check(wmap.get("mathematics", 0) >= 9 and wmap.get("definition", 99) <= 3,
+              f"RAG: word relevance scores the subject above the question-word {wmap}")
+        wany = ix.word_scores("how do robots plan a trajectory")
+        check(wany and wany[0][1] == 10 and all(wany[i][1] >= wany[i + 1][1] for i in range(len(wany) - 1))
+              and {t for t, *_ in wany} == {"robots", "plan", "trajectory"},
+              "RAG: every question gets word relevance scores, top is 10 "
+              + str([(t, w) for t, w, *_ in wany]))
+        hm = ix.search("what is the definition of mathematics", 4)
+        check(hm and hm[0]["rid"] == "math1" and all(x["rid"] != "set1" for x in hm),
+              "RAG: 'definition of mathematics' ranks mathematics, not the definition of a set "
+              + str([(x["rid"], x.get("rel")) for x in hm]))
+        hp = ix.search("how do I reverse a list in python", 4)
+        check(hp and hp[0]["rid"] == "p1" and hp[0]["rank"] == 1
+              and all(hp[i]["rel"] >= hp[i + 1]["rel"] and hp[i + 1]["rank"] == i + 2 for i in range(len(hp) - 1))
+              and all(x["rid"] != "revcar" for x in hp),  # a record must hold EVERY subject word (reverse, python, list)
+              "RAG: any question gets a relevance rank (list-in-python above reversing a car) "
+              + str([(x["rid"], x["rank"], x["rel"]) for x in hp]))
+        two_ = [dict(hp[0], rank=1), dict(hp[0], rank=2, title="second", rel=5.0)]
+        check("relevance" in rag_messages("reverse a list in python", two_)[-1]["content"]
+              and rag_messages("reverse a list in python", two_)[-1]["content"].index("relevance")
+              < rag_messages("reverse a list in python", two_)[-1]["content"].index("[2]"),
+              "RAG: the prompt lists sources by relevance rank")
+        sq_, fol_ = rag_standalone("definitions", "what is maths")
+        check(fol_ and "maths" in sq_ and "definitions" in sq_, f"RAG context: a short follow-up is searched with the previous question ({sq_!r})")
+        sq_, fol_ = rag_standalone("don;t use big big words, what is maths? what is the simple definition of maths?", "")
+        check(not fol_ and "big" not in sq_ and "maths" in sq_, f"RAG context: how-to-answer words are not searched ({sq_!r})")
+        check(rag_standalone("how does a transformer model work", "what is maths") == ("how does a transformer model work", False),
+              "RAG context: a full new question is not mixed with the previous one")
+        kept_, all_ = rag_semantic([0.30, 0.81, 0.64, 0.55], [{"title": t, "rel": 5.0} for t in "abcd"], 4, 0.62)
+        check([h["title"] for h in kept_] == ["b", "c"] and kept_[0]["rank"] == 1 and kept_[0]["rel"] > kept_[1]["rel"]
+              and len(all_) == 4, "RAG meaning check: only records close in meaning are kept, closest first")
+        check(rag_semantic([0.4, 0.5], [{"title": "a"}, {"title": "b"}], 4, 0.62)[0] == [],
+              "RAG meaning check: same words but another subject -> no source at all")
+        check(any(h["rid"] == "t1" for h in ix.candidates("2x + 3 = 11")), "RAG: a formula as the question still finds its record")
+        o_ = rag_retrieve(ix, "what is 12 * 12", 4)
+        check(o_["kind"] == "arithmetic" and o_["direct"].endswith("= 144.") and not o_["hits"], "RAG pipeline: a sum is computed")
+        check(tidy_model_answer("Summary: Transformers handle long inputs with attention over every position. ---\n\n[4] relevance 7/10  "
+                                "How does it work? (ml)") == "Transformers handle long inputs with attention over every position.",
+              "RAG answer: a copied source list is cut out of the answer")
+        check(rag_retrieve(ix, "hello", 4)["kind"] == "chat" and default_settings()["rag_answer_mode"] == "compare",
+              "RAG pipeline: greetings do not search; Compare (without vs with data) is the default mode")
+        hv = ix.search("place the yellow disc on the black target", 3)
+        check(hv and hv[0]["rid"] == "v1" and hv[0]["rank"] == 1
+              and all(hv[i]["rank"] == i + 1 and hv[i]["rel"] >= hv[i + 1]["rel"] for i in range(len(hv) - 1)),
+              "RAG: a robotics question uses the same relevance rank "
+              + str([(x["rid"], x["rank"], x["rel"]) for x in hv]))
+        wb = {t: w for t, w, *_ in ix.word_scores("what is bigger 9.9 or 9.11")}
+        check(wb.get("9.9", 0) >= 9 and wb.get("9.11", 0) >= 6 and wb.get("bigger", 99) <= 2
+              and "9" not in wb and "11" not in wb,
+              f"RAG: 9.9 and 9.11 are the subject, not the word bigger or the digits 9 and 11 {wb}")
+        hb = ix.search("what is bigger 9.9 or 9.11", 4)
+        check(hb and hb[0]["rid"] == "n99" and all(x["rid"] not in ("n911", "biggernn") for x in hb),
+              "RAG: 9.9 versus 9.11 ranks the decimal record, not 9/11 or a bigger network "
+              + str([(x["rid"], x["rank"], x["rel"]) for x in hb]))
+        check(rag_compare_numbers("what is bigger 9.9 or 9.11").startswith("9.9 is bigger than 9.11"),
+              "RAG: 9.9 is bigger than 9.11 " + str(rag_compare_numbers("what is bigger 9.9 or 9.11")))
+        check(rag_compare_numbers("how do robots plan a trajectory") is None, "RAG: a normal question is not a number comparison")
+        check(rag_arithmetic("what is 1 + 1") == "1 + 1 = 2." and rag_compare_numbers("what is 1 + 1") is None
+              and ix.search("what is 1 + 1") == [],
+              "RAG: 1 + 1 is 2, not '1 and 1 are equal', and it fetches no pages")
+        check(rag_compare_numbers("is 9.9 or 9.1 bigger").startswith("9.9 is bigger than 9.1")
+              and rag_arithmetic("is 9.9 or 9.1 bigger") is None,
+              "RAG: 9.9 is bigger than 9.1 " + str(rag_compare_numbers("is 9.9 or 9.1 bigger")))
+        check(rag_compare_numbers("which number is greater 0.5 or 0.50") == "0.5 and 0.50 are equal."
+              and ix.search("which number is greater 0.5 or 0.50") == [],
+              "RAG: 0.5 and 0.50 are equal, and a page that mentions only one of them is not a source")
+        matrix = {"title": "Why not cache the Q matrix?", "topic": "", "q": "see [0.50  0.83] and | 0.5  0.2|",
+                  "a": "a worked matrix", "rel": 5.3}
+        about = {"title": "Is 0.5 bigger than 0.50?", "topic": "decimals", "q": "Compare 0.5 and 0.50.",
+                 "a": "They are equal.", "rel": 9.1}
+        kept_src = rag_comparison_sources("which number is greater 0.5 or 0.50", [matrix, about])
+        check(len(kept_src) == 1 and kept_src[0]["title"].startswith("Is 0.5") and kept_src[0]["rank"] == 1,
+              "RAG: a comparison source must be about both numbers, not a matrix that prints them")
+        check(rag_arithmetic("what is 2 plus 2") == "2 + 2 = 4."
+              and rag_arithmetic("what is 8 divided by 2") == "8 / 2 = 4."
+              and rag_arithmetic("what is 3 times 5") == "3 * 5 = 15."
+              and rag_arithmetic("what is 9 minus 4") == "9 - 4 = 5."
+              and rag_arithmetic("what's 1+1") == "1+1 = 2."
+              and rag_arithmetic("what is 1 divided by 0") == "You cannot divide by zero.",
+              "RAG: plus, minus, times, divided by, and division by zero")
+        cases, bad, rng200 = [], [], random.Random(7)
+        for _i in range(80):
+            a, b = rng200.randint(0, 40), rng200.randint(0, 40)
+            op = rng200.choice(["+", "-", "*", "/"])
+            if op == "/" and b == 0:
+                b = rng200.randint(1, 40)
+            if op == "+":
+                val = a + b
+            elif op == "-":
+                val = a - b
+            elif op == "*":
+                val = a * b
+            else:
+                val = a / b
+            cases.append((f"what is {a} {op} {b}", f"{a} {op} {b} = {_fmt_num(val)}.", None))
+        for _i in range(70):
+            sa, sb = f"{rng200.randint(0, 200) / 10:.1f}", f"{rng200.randint(0, 2000) / 100:.2f}"
+            fa, fb = float(sa), float(sb)
+            if fa == fb:
+                prefix = f"{sa} and {sb} are equal."
+            elif fa > fb:
+                prefix = f"{sa} is bigger than {sb}."
+            else:
+                prefix = f"{sb} is bigger than {sa}."
+            cases.append((f"what is bigger {sa} or {sb}", None, prefix))
+        for _i in range(30):
+            a, b = rng200.randint(0, 50), rng200.randint(0, 50)
+            word = "smaller" if rng200.random() < 0.5 else "bigger"
+            if a == b:
+                prefix = f"{a} and {b} are equal."
+            elif word == "smaller":
+                lo, hi = (a, b) if a < b else (b, a)
+                prefix = f"{lo} is smaller than {hi}."
+            else:
+                hi, lo = (a, b) if a > b else (b, a)
+                prefix = f"{hi} is bigger than {lo}."
+            cases.append((f"what is {word} {a} or {b}", None, prefix))
+        for q in ("how do robots plan a trajectory", "what is the definition of mathematics", "who is aarav jaisingh",
+                  "how do I reverse a list in python", "pad a number with zeros in php", "integral of x squared",
+                  "what is a set", "explain eigenvalues", "why is the sky blue", "translate hello to french",
+                  "what year was the moon landing", "name three prime numbers", "is water wet",
+                  "how does a transistor work", "what is the capital of france", "sort a list of names",
+                  "define photosynthesis", "1 is a number", "tell me about 9/11",
+                  "the sum of the angles in a triangle"):
+            cases.append((q, None, None))
+        for q, arith_exact, cmp_prefix in cases:
+            got_a, got_c = rag_arithmetic(q), rag_compare_numbers(q)
+            if arith_exact is None and cmp_prefix is None:
+                ok_case = got_a is None and got_c is None
+            elif arith_exact is not None:
+                ok_case = got_a == arith_exact and got_c is None
+            else:
+                ok_case = got_a is None and (got_c or "").startswith(cmp_prefix)
+            if not ok_case:
+                bad.append((q, got_a, got_c, arith_exact, cmp_prefix))
+        check(len(cases) == 200 and not bad, "RAG: 200 questions match their expected answers " + str(bad[:2]))
+        rep = tidy_model_answer(("Mathematics is the study of number, structure and change. " * 3).strip())
+        check(rep.lower().count("mathematics is the study of number") == 1, "RAG: a repeating answer is cut after one copy")
+        plain = rag_plain_messages("What is mathematics?")
+        check(plain[-1]["content"] == "What is mathematics?" and "Sources" not in plain[-1]["content"],
+              "RAG: the without-data prompt carries the question only")
         fake = os.path.join(rt, "model")
         os.makedirs(fake)
         check(not model_downloaded(fake) and not model_downloaded("nobody/not-a-model-xyz"), "RAG: missing models show Not downloaded")
@@ -11379,6 +12618,13 @@ if __name__ == "__main__":
         sys.exit(cli_run(sys.argv[i + 1], out))
     if "--train" in sys.argv:  # the Trainer page without a window
         sys.exit(cli_train(sys.argv))
+    if "--ragtest" in sys.argv:  # live test of the Ask retrieval on this Mac's own index
+        i_ = sys.argv.index("--ragtest")
+        nums_ = [int(x) for x in sys.argv[i_ + 1:i_ + 3] if x.isdigit()]
+        sys.exit(cli_ragtest(nums_[0] if nums_ else 200, nums_[1] if len(nums_) > 1 else None))
+    if "--download-model" in sys.argv:  # resumable model download (the Ask page starts this in the background)
+        sys.exit(0 if download_model(sys.argv[sys.argv.index("--download-model") + 1],
+                                     log=lambda m: print(time.strftime("%H:%M:%S"), m, flush=True)) else 1)
     if "--rag-update" in sys.argv:  # the Ask page's background job: GitHub -> index -> Kaggle
         d_ = sys.argv[sys.argv.index("--dir") + 1] if "--dir" in sys.argv else agent_dir(load_settings())
         sys.exit(cli_rag_update(os.path.abspath(os.path.expanduser(d_)), offline="--offline" in sys.argv))
