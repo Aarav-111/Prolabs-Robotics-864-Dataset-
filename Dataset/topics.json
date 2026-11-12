@@ -1,104 +1,19 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-12T17:52:30",
+"updated": "2026-11-12T21:04:37",
 "total": 109914,
-"done": 11707,
-"in_progress": 16,
+"done": 11723,
+"in_progress": 0,
 "left": 98191,
 "parallel_agents": {
-"running": 21,
-"topics": [
-{
-"agent": 1,
-"topic": "team diversity"
-},
-{
-"agent": 2,
-"topic": "single-molecule force spectroscopy"
-},
-{
-"agent": 3,
-"topic": "high-entropy materials"
-},
-{
-"agent": 4,
-"topic": "forage production"
-},
-{
-"agent": 5,
-"topic": "european monetary and fiscal policies"
-},
-{
-"agent": 6,
-"topic": "needs assessment"
-},
-{
-"agent": 7,
-"topic": "digital repositories"
-},
-{
-"agent": 8,
-"topic": "doors"
-},
-{
-"agent": 9,
-"topic": "relativity and gravitational theory"
-},
-{
-"agent": 10,
-"topic": "technology portfolio management"
-},
-{
-"agent": 11,
-"topic": "expandable graphite"
-},
-{
-"agent": 12,
-"topic": "landform"
-},
-{
-"agent": 13,
-"topic": "physical system modeling"
-},
-{
-"agent": 14,
-"topic": "colonisation"
-},
-{
-"agent": 15,
-"topic": "coordination games"
-},
-{
-"agent": 16,
-"topic": "seriousness"
-},
-{
-"agent": 18,
-"topic": "system usability scale"
-},
-{
-"agent": 19,
-"topic": "mass flow measurement"
-},
-{
-"agent": 20,
-"topic": "lebesgue measure"
-},
-{
-"agent": 21,
-"topic": "artificial intelligence in industry"
-},
-{
-"agent": 22,
-"topic": "formal verification"
-}
-]
+"running": 0,
+"topics": []
 },
 "fields": {
 "humanities": {
-"done": 475,
+"done": 476,
 "left": 22563,
-"in_progress": 1
+"in_progress": 0
 },
 "medicine": {
 "done": 799,
@@ -106,29 +21,29 @@
 "in_progress": 0
 },
 "biology": {
-"done": 941,
+"done": 942,
 "left": 12701,
-"in_progress": 1
+"in_progress": 0
 },
 "engineering": {
-"done": 936,
+"done": 937,
 "left": 11638,
-"in_progress": 1
+"in_progress": 0
 },
 "general": {
-"done": 665,
+"done": 669,
 "left": 6928,
-"in_progress": 4
+"in_progress": 0
 },
 "computer science": {
-"done": 1283,
+"done": 1285,
 "left": 4434,
-"in_progress": 2
+"in_progress": 0
 },
 "economics and finance": {
-"done": 644,
+"done": 645,
 "left": 5044,
-"in_progress": 1
+"in_progress": 0
 },
 "earth and space": {
 "done": 453,
@@ -136,9 +51,9 @@
 "in_progress": 0
 },
 "materials science": {
-"done": 458,
+"done": 459,
 "left": 2987,
-"in_progress": 1
+"in_progress": 0
 },
 "chemistry": {
 "done": 948,
@@ -146,24 +61,24 @@
 "in_progress": 0
 },
 "physics": {
-"done": 1267,
+"done": 1269,
 "left": 1576,
-"in_progress": 2
+"in_progress": 0
 },
 "psychology": {
-"done": 302,
+"done": 303,
 "left": 2512,
-"in_progress": 1
+"in_progress": 0
 },
 "mathematics": {
-"done": 1542,
+"done": 1543,
 "left": 621,
-"in_progress": 1
+"in_progress": 0
 },
 "statistics": {
-"done": 747,
+"done": 748,
 "left": 214,
-"in_progress": 1
+"in_progress": 0
 },
 "robotics": {
 "done": 88,
@@ -182,6 +97,198 @@
 }
 },
 "topics": [
+{
+"topic": "single-molecule force spectroscopy",
+"field": "physics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 6077,
+"images": 0,
+"completed": "2026-11-12T17:56:34"
+},
+{
+"topic": "relativity and gravitational theory",
+"field": "physics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 3004,
+"images": 0,
+"completed": "2026-11-12T17:56:33"
+},
+{
+"topic": "needs assessment",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 6208,
+"images": 0,
+"completed": "2026-11-12T17:56:32"
+},
+{
+"topic": "doors",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 1885,
+"images": 0,
+"completed": "2026-11-12T17:56:32"
+},
+{
+"topic": "team diversity",
+"field": "psychology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 4806,
+"images": 0,
+"completed": "2026-11-12T17:56:32"
+},
+{
+"topic": "expandable graphite",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 763,
+"images": 0,
+"completed": "2026-11-12T17:56:32"
+},
+{
+"topic": "forage production",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 200,
+"images": 0,
+"completed": "2026-11-12T17:56:32"
+},
+{
+"topic": "high-entropy materials",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 2185,
+"images": 0,
+"completed": "2026-11-12T17:56:32"
+},
+{
+"topic": "landform",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 1862,
+"images": 0,
+"completed": "2026-11-12T17:56:31"
+},
+{
+"topic": "european monetary and fiscal policies",
+"field": "economics and finance",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-12T17:53:02"
+},
+{
+"topic": "artificial intelligence in industry",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-12T17:52:55"
+},
+{
+"topic": "digital repositories",
+"field": "humanities",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-12T17:52:54"
+},
+{
+"topic": "formal verification",
+"field": "computer science",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-12T17:52:54"
+},
+{
+"topic": "colonisation",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-12T17:52:53"
+},
+{
+"topic": "physical system modeling",
+"field": "mathematics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-12T17:52:53"
+},
+{
+"topic": "coordination games",
+"field": "statistics",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-12T17:52:53"
+},
 {
 "topic": "metallicity",
 "field": "physics",
@@ -1413,7 +1520,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 18,
+"agent": null,
 "records": 7204,
 "images": 2,
 "completed": "2026-11-12T17:43:37"
@@ -1509,7 +1616,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 20,
+"agent": null,
 "records": 2593,
 "images": 2,
 "completed": "2026-11-12T17:43:32"
@@ -1533,7 +1640,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 10,
+"agent": null,
 "records": 2101,
 "images": 2,
 "completed": "2026-11-12T17:43:32"
@@ -1713,7 +1820,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 19,
+"agent": null,
 "records": 2726,
 "images": 2,
 "completed": "2026-11-12T17:43:32"
@@ -1857,7 +1964,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 16,
+"agent": null,
 "records": 1983,
 "images": 2,
 "completed": "2026-11-12T17:43:32"
@@ -154503,18 +154610,6 @@
 "completed": ""
 },
 {
-"topic": "colonisation",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 14,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "colonization",
 "field": "general",
 "level": "research concept",
@@ -162730,18 +162825,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "doors",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 8,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -181755,18 +181838,6 @@
 "completed": ""
 },
 {
-"topic": "landform",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 12,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "landmark",
 "field": "general",
 "level": "research concept",
@@ -190522,18 +190593,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "needs assessment",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 6,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -279430,18 +279489,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "forage production",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 4,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -401019,18 +401066,6 @@
 "completed": ""
 },
 {
-"topic": "formal verification",
-"field": "computer science",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 22,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "garbage collection",
 "field": "computer science",
 "level": "advanced",
@@ -404650,18 +404685,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "artificial intelligence in industry",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 21,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -535419,18 +535442,6 @@
 "completed": ""
 },
 {
-"topic": "european monetary and fiscal policies",
-"field": "economics and finance",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 5,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "european monetary integration",
 "field": "economics and finance",
 "level": "specialist",
@@ -631114,18 +631125,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "high-entropy materials",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 3,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -777430,18 +777429,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "digital repositories",
-"field": "humanities",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 7,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -996387,18 +996374,6 @@
 "completed": ""
 },
 {
-"topic": "expandable graphite",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 11,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "explosives",
 "field": "materials science",
 "level": "specialist",
@@ -1026826,18 +1026801,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "physical system modeling",
-"field": "mathematics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 13,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1282299,18 +1282262,6 @@
 "completed": ""
 },
 {
-"topic": "relativity and gravitational theory",
-"field": "physics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 9,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "relic density",
 "field": "physics",
 "level": "specialist",
@@ -1283086,18 +1283037,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "single-molecule force spectroscopy",
-"field": "physics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 2,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1313991,18 +1313930,6 @@
 "completed": ""
 },
 {
-"topic": "team diversity",
-"field": "psychology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 1,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "team dynamics",
 "field": "psychology",
 "level": "specialist",
@@ -1316938,18 +1316865,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "coordination games",
-"field": "statistics",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 15,
 "records": 0,
 "images": 0,
 "completed": ""

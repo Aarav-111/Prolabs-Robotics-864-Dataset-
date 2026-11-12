@@ -2,38 +2,35 @@
   "state": "running",
   "offline": false,
   "disk_low": true,
-  "disk_free_gb": 3.3,
+  "disk_free_gb": 3.8,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794486203.5245252,
-  "updated_iso": "2026-11-12T17:53:25",
-  "uptime_s": 1703,
+  "updated": 1794497679.373039,
+  "updated_iso": "2026-11-12T21:04:39",
+  "uptime_s": 13179,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 15,
-  "busy_by_kind": {
-    "text": 9,
-    "web_images": 6
-  },
-  "waiting": 12,
+  "in_flight": 0,
+  "busy_by_kind": {},
+  "waiting": 0,
   "processes": 1,
   "fields": {
     "mathematics": 499654,
+    "general": 221231,
     "computer science": 219012,
-    "general": 211276,
-    "physics": 188495,
-    "engineering": 173394,
+    "physics": 197576,
+    "engineering": 175579,
     "statistics": 94518,
-    "biology": 73291,
+    "biology": 73491,
     "earth and space": 65189,
     "medicine": 64169,
     "chemistry": 58674,
     "economics and finance": 54466,
     "humanities": 32118,
-    "materials science": 28482,
-    "psychology": 20961,
+    "materials science": 29245,
+    "psychology": 25767,
     "machine learning": 20661,
     "programming": 13067,
     "robotics": 3515,
@@ -65,35 +62,35 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 1817780,
-    "originals": 10089,
-    "variants": 1807691,
-    "web_images": 1662,
+    "text": 1844770,
+    "originals": 10239,
+    "variants": 1834531,
+    "web_images": 1670,
     "synthetic_images": 14064,
-    "images": 15726,
+    "images": 15734,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 961612761,
-    "tasks_done": 47152,
+    "tokens": 972056871,
+    "tasks_done": 47167,
     "tasks_failed": 5,
     "topics_added": 108651,
     "preference": 2327
   },
   "by_kind": {
     "archive": 235,
-    "text": 233,
-    "web_images": 228,
+    "text": 242,
+    "web_images": 234,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 961612761,
-  "per_min": 4.2,
+  "tokens": 972056871,
+  "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 11714,
+    "explored": 11723,
     "queued": 98191,
     "space": 6594840,
     "next": [
@@ -148,6 +145,51 @@
     ],
     "recent": [
       [
+        "single-molecule force spectroscopy",
+        "physics",
+        6077
+      ],
+      [
+        "relativity and gravitational theory",
+        "physics",
+        3004
+      ],
+      [
+        "needs assessment",
+        "",
+        6208
+      ],
+      [
+        "doors",
+        "",
+        1885
+      ],
+      [
+        "team diversity",
+        "psychology",
+        4806
+      ],
+      [
+        "expandable graphite",
+        "materials science",
+        763
+      ],
+      [
+        "forage production",
+        "biology",
+        200
+      ],
+      [
+        "high-entropy materials",
+        "engineering",
+        2185
+      ],
+      [
+        "landform",
+        "",
+        1862
+      ],
+      [
         "european monetary and fiscal policies",
         "economics and finance",
         0
@@ -161,101 +203,56 @@
         "digital repositories",
         "humanities",
         0
-      ],
-      [
-        "formal verification",
-        "computer science",
-        0
-      ],
-      [
-        "colonisation",
-        "",
-        0
-      ],
-      [
-        "physical system modeling",
-        "mathematics",
-        0
-      ],
-      [
-        "coordination games",
-        "statistics",
-        0
-      ],
-      [
-        "metallicity",
-        "physics",
-        6194
-      ],
-      [
-        "diabetes risk prediction",
-        "medicine",
-        4184
-      ],
-      [
-        "mars exploration",
-        "earth and space",
-        3963
-      ],
-      [
-        "software development",
-        "computer science",
-        4381
-      ],
-      [
-        "social life",
-        "",
-        4683
       ]
     ],
-    "in_progress": 9,
+    "in_progress": 0,
     "focus_left": 0
   },
   "system": {
-    "time": 1794486203.463291,
-    "cpu": 45.5,
+    "time": 1794497679.3718941,
+    "cpu": 22.3,
     "cpu_cores": [
-      33.3,
-      28.5,
-      25.1,
-      21.7,
-      65.6,
-      68.0,
-      63.5,
-      57.5
+      13.5,
+      10.5,
+      8.6,
+      6.2,
+      46.6,
+      44.0,
+      28.6,
+      20.6
     ],
-    "mem": 80.5,
-    "mem_used_gb": 3.01,
+    "mem": 57.6,
+    "mem_used_gb": 3.47,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 67.5,
+    "proc_mem_mb": 100.7,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 5891695616,
-    "net_tx": 5731028992,
-    "down_kbps": 841.3,
-    "up_kbps": 1606.2,
-    "disk_free_gb": 3.3,
+    "net_rx": 6088767488,
+    "net_tx": 6142331904,
+    "down_kbps": 108.4,
+    "up_kbps": 351.8,
+    "disk_free_gb": 3.8,
     "load": [
-      4.29,
-      6.11,
-      7.34
+      3.06,
+      8.83,
+      8.84
     ],
     "cores": 8
   },
-  "disk_mb": 342.1,
+  "disk_mb": 342.5,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "No internet connection right now - it retries by itself, your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794486201.484305,
-    "next_sync_s": 242,
-    "commits": 10
+    "last_push": 1794486321.1044962,
+    "next_sync_s": 298,
+    "commits": 11
   },
   "last_sample": {
     "type": "web image",
-    "topic": "mass flow measurement",
-    "problem": "Luftmassenmesser",
-    "solution": "CC BY 4.0",
+    "topic": "lebesgue measure",
+    "problem": "A graphic illustration of Lebesgue's Density Theorem, created by Microsoft CoPilot, with much prompting from me",
+    "solution": "Public domain",
     "source": "wikimedia commons"
   }
 }
