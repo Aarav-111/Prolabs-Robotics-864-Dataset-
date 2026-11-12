@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 19.2,
+  "disk_free_gb": 15.7,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794484613.160318,
-  "updated_iso": "2026-11-12T17:26:53",
-  "uptime_s": 112,
+  "updated": 1794484654.88195,
+  "updated_iso": "2026-11-12T17:27:39",
+  "uptime_s": 154,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 251,
   "busy_by_kind": {
     "archive": 116,
-    "text": 116,
+    "text": 111,
     "web_images": 24
   },
-  "waiting": 244,
+  "waiting": 204,
   "processes": 1,
   "fields": {
     "mathematics": 467352,
@@ -75,15 +75,15 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 899754550,
-    "tasks_done": 46573,
+    "tasks_done": 46599,
     "tasks_failed": 5,
     "topics_added": 108651,
     "preference": 2302
   },
   "by_kind": {
     "archive": 0,
-    "text": 0,
-    "web_images": 117,
+    "text": 10,
+    "web_images": 135,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 899754550,
-  "per_min": 19.8,
+  "per_min": 14.4,
   "topics": {
     "known": 109914,
-    "explored": 11481,
-    "queued": 98317,
+    "explored": 11493,
+    "queued": 98312,
     "space": 6594840,
     "next": [
       [
@@ -149,108 +149,108 @@
     ],
     "recent": [
       [
-        "stellar atmospheres",
-        "physics",
-        603
+        "plant water status",
+        "earth and space",
+        0
       ],
       [
-        "art and the city",
+        "rochelle salt",
+        "materials science",
+        0
+      ],
+      [
+        "power means",
+        "mathematics",
+        0
+      ],
+      [
+        "valle de los ca\u00eddos",
         "humanities",
-        201
+        0
       ],
       [
-        "organocuprates",
-        "chemistry",
-        402
+        "tree selection",
+        "earth and space",
+        0
       ],
       [
-        "pseudo-thermal light",
+        "nonlocal nonlinear media",
         "physics",
-        2250
+        0
       ],
       [
-        "instructional communication",
-        "psychology",
-        771
+        "new physics searches",
+        "physics",
+        0
       ],
       [
-        "network management system",
-        "computer science",
-        1584
+        "pharmacognosy",
+        "",
+        0
       ],
       [
-        "recursive filtering",
-        "computer science",
-        2360
-      ],
-      [
-        "older people living with hiv",
+        "led therapy",
         "medicine",
         0
       ],
       [
-        "irat",
+        "recurrent acute respiratory infections",
+        "medicine",
+        0
+      ],
+      [
+        "ythdf1",
         "biology",
         0
       ],
       [
-        "binary liquid mixtures",
-        "engineering",
-        0
-      ],
-      [
-        "generalized estimating equations",
-        "mathematics",
-        941
-      ],
-      [
-        "odor discrimination",
-        "biology",
+        "uncertainty budget",
+        "physics",
         0
       ]
     ],
-    "in_progress": 116,
+    "in_progress": 109,
     "focus_left": 0
   },
   "system": {
-    "time": 1794484613.15873,
-    "cpu": 56.8,
+    "time": 1794484654.342439,
+    "cpu": 92.9,
     "cpu_cores": [
-      45.9,
-      37.7,
-      32.5,
-      30.0,
-      77.8,
-      77.1,
-      75.5,
-      77.4
+      91.9,
+      90.6,
+      89.8,
+      89.4,
+      95.3,
+      95.9,
+      93.5,
+      96.4
     ],
-    "mem": 83.1,
-    "mem_used_gb": 2.66,
+    "mem": 83.6,
+    "mem_used_gb": 2.59,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 74.4,
+    "proc_mem_mb": 62.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 4180706304,
-    "net_tx": 3898881024,
-    "down_kbps": 3411.6,
-    "up_kbps": 2875.7,
-    "disk_free_gb": 19.0,
+    "net_rx": 4245585920,
+    "net_tx": 3950923776,
+    "down_kbps": 1366.8,
+    "up_kbps": 1123.5,
+    "disk_free_gb": 15.6,
     "load": [
-      6.94,
-      9.71,
-      9.5
+      12.71,
+      10.7,
+      9.87
     ],
     "cores": 8
   },
-  "disk_mb": 336.1,
+  "disk_mb": 332.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794484611.664694,
-    "next_sync_s": 197,
-    "commits": 3
+    "last_push": 1794484631.9527638,
+    "next_sync_s": 155,
+    "commits": 4
   },
   "last_sample": {
     "type": "web image",
