@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794497692.051954,
-  "updated_iso": "2026-11-12T21:04:52",
-  "uptime_s": 13191,
+  "updated": 1794497700.406729,
+  "updated_iso": "2026-11-12T21:05:00",
+  "uptime_s": 13200,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "web_images": 24,
     "archive": 116
   },
-  "waiting": 247,
+  "waiting": 236,
   "processes": 1,
   "fields": {
     "mathematics": 499654,
@@ -29,7 +29,7 @@
     "statistics": 94518,
     "biology": 73491,
     "earth and space": 65189,
-    "medicine": 64169,
+    "medicine": 64592,
     "chemistry": 58674,
     "economics and finance": 54466,
     "humanities": 32118,
@@ -61,27 +61,27 @@
   },
   "by_source": {
     "stack exchange dump": 15607,
-    "openlifescienceai/medmcqa": 3750,
+    "openlifescienceai/medmcqa": 4173,
     "qiaojin/PubMedQA": 96,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 1844770,
-    "originals": 10239,
-    "variants": 1834531,
+    "text": 1845193,
+    "originals": 10240,
+    "variants": 1834953,
     "web_images": 1670,
     "synthetic_images": 14064,
     "images": 15734,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 972056871,
-    "tasks_done": 47171,
+    "tokens": 972128943,
+    "tasks_done": 47183,
     "tasks_failed": 5,
     "topics_added": 108651,
-    "preference": 2359
+    "preference": 2402
   },
   "by_kind": {
-    "archive": 238,
+    "archive": 250,
     "text": 242,
     "web_images": 235,
     "synthetic_images": 0,
@@ -90,8 +90,8 @@
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 972056871,
-  "per_min": 0.0,
+  "tokens": 972128943,
+  "per_min": 85.1,
   "topics": {
     "known": 109914,
     "explored": 11723,
@@ -213,33 +213,33 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794497692.051232,
-    "cpu": 28.8,
+    "time": 1794497700.406129,
+    "cpu": 20.8,
     "cpu_cores": [
-      19.6,
-      16.7,
-      13.5,
-      10.7,
-      54.8,
-      50.1,
-      37.7,
-      27.1
+      20.5,
+      18.0,
+      15.4,
+      12.9,
+      46.5,
+      26.2,
+      20.7,
+      5.9
     ],
-    "mem": 62.2,
-    "mem_used_gb": 3.73,
+    "mem": 62.8,
+    "mem_used_gb": 3.76,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 309.7,
+    "proc_mem_mb": 391.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 6096180224,
-    "net_tx": 6154813440,
-    "down_kbps": 719.9,
-    "up_kbps": 1054.2,
+    "net_rx": 6112712704,
+    "net_tx": 6171906048,
+    "down_kbps": 2678.5,
+    "up_kbps": 2527.8,
     "disk_free_gb": 5.3,
     "load": [
-      2.9,
-      8.6,
-      8.76
+      2.91,
+      8.42,
+      8.69
     ],
     "cores": 8
   },
@@ -248,15 +248,15 @@
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794497690.893291,
-    "next_sync_s": 285,
-    "commits": 12
+    "last_push": 1794497699.0439072,
+    "next_sync_s": 277,
+    "commits": 13
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "lebesgue measure",
-    "problem": "A graphic illustration of Lebesgue's Density Theorem, created by Microsoft CoPilot, with much prompting from me",
-    "solution": "Public domain",
-    "source": "wikimedia commons"
+    "type": "archive Q&A",
+    "topic": "openlifescienceai/medmcqa",
+    "problem": "Q: Consider the following problem. The sensation of creeping bugs over the body is a feature of which of the following poison? A) Cocaine B) Diazepam C) Barbiturates D) Brown sugar",
+    "solution": "A: Answer: A) Cocaine Explanation: Magnan's symptom or cocaine bugs is a characteristic feature of cocaine poisoning. In this patient's feels as if grains of sand are lying under the skin or small insects (cocaine bugs) are creeping on the skin (formication) giving rise to itching sensation, with resultant excoriation leading to irregular scratches and ulcers. Ref: Essentials of Forensic\u2026",
+    "source": "huggingface"
   }
 }
