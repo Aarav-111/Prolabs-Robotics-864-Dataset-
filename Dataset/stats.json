@@ -1,38 +1,37 @@
 {
   "state": "running",
   "offline": false,
-  "disk_low": false,
-  "disk_free_gb": 9.3,
+  "disk_low": true,
+  "disk_free_gb": 3.3,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794485766.344214,
-  "updated_iso": "2026-11-12T17:46:11",
-  "uptime_s": 1266,
+  "updated": 1794486154.1633978,
+  "updated_iso": "2026-11-12T17:52:34",
+  "uptime_s": 1653,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 252,
+  "in_flight": 22,
   "busy_by_kind": {
-    "archive": 116,
-    "text": 114,
-    "web_images": 22
+    "text": 16,
+    "web_images": 6
   },
-  "waiting": 191,
+  "waiting": 22,
   "processes": 1,
   "fields": {
-    "mathematics": 492506,
-    "computer science": 214631,
-    "general": 206593,
-    "physics": 173549,
+    "mathematics": 499654,
+    "computer science": 219012,
+    "general": 211276,
+    "physics": 188495,
     "engineering": 173394,
-    "statistics": 94116,
+    "statistics": 94518,
     "biology": 73291,
-    "earth and space": 61226,
-    "medicine": 59234,
+    "earth and space": 65189,
+    "medicine": 64169,
     "chemistry": 58674,
-    "economics and finance": 51575,
-    "humanities": 31364,
+    "economics and finance": 54466,
+    "humanities": 32118,
     "materials science": 28482,
     "psychology": 20961,
     "machine learning": 20661,
@@ -66,35 +65,35 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 1773677,
-    "originals": 9842,
-    "variants": 1763835,
-    "web_images": 1639,
+    "text": 1817780,
+    "originals": 10089,
+    "variants": 1807691,
+    "web_images": 1662,
     "synthetic_images": 14064,
-    "images": 15703,
+    "images": 15726,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 945143128,
-    "tasks_done": 46910,
+    "tokens": 961612761,
+    "tasks_done": 47145,
     "tasks_failed": 5,
     "topics_added": 108651,
     "preference": 2327
   },
   "by_kind": {
-    "archive": 119,
-    "text": 128,
-    "web_images": 207,
+    "archive": 235,
+    "text": 226,
+    "web_images": 228,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 945143128,
-  "per_min": 21.9,
+  "tokens": 961612761,
+  "per_min": 29.2,
   "topics": {
     "known": 109914,
-    "explored": 11609,
+    "explored": 11707,
     "queued": 98191,
     "space": 6594840,
     "next": [
@@ -149,114 +148,114 @@
     ],
     "recent": [
       [
-        "construction planning",
-        "engineering",
+        "metallicity",
+        "physics",
+        6194
+      ],
+      [
+        "diabetes risk prediction",
+        "medicine",
+        4184
+      ],
+      [
+        "mars exploration",
+        "earth and space",
+        3963
+      ],
+      [
+        "software development",
+        "computer science",
+        4381
+      ],
+      [
+        "social life",
+        "",
+        4683
+      ],
+      [
+        "scattering scanning near-field optical microscopy",
+        "physics",
+        3064
+      ],
+      [
+        "mib",
+        "computer science",
         0
       ],
       [
-        "sisal fiber",
+        "night sky",
+        "physics",
+        3172
+      ],
+      [
+        "cation distribution",
         "materials science",
         0
       ],
       [
-        "pexider functional equation",
-        "mathematics",
+        "computational pathology",
+        "computer science",
         0
       ],
       [
-        "netosis",
-        "biology",
+        "correlation coefficient comparison",
+        "statistics",
         0
       ],
       [
-        "system usability scale",
-        "computer science",
-        7204
-      ],
-      [
-        "zebra finch",
-        "biology",
-        4332
-      ],
-      [
-        "descriptive statistics",
+        "differential geometry of curves",
         "mathematics",
-        11182
-      ],
-      [
-        "yap nuclear translocation",
-        "biology",
-        5105
-      ],
-      [
-        "binary outcomes",
-        "mathematics",
-        5564
-      ],
-      [
-        "leakage current detection",
-        "engineering",
-        5491
-      ],
-      [
-        "systemc",
-        "computer science",
-        3097
-      ],
-      [
-        "simple random sampling",
-        "mathematics",
-        3557
+        0
       ]
     ],
-    "in_progress": 114,
+    "in_progress": 16,
     "focus_left": 0
   },
   "system": {
-    "time": 1794485766.3302479,
-    "cpu": 71.3,
+    "time": 1794486154.1624398,
+    "cpu": 33.9,
     "cpu_cores": [
-      69.1,
-      66.8,
-      64.3,
-      63.4,
-      75.8,
-      77.7,
-      74.4,
-      79.0
+      45.2,
+      41.9,
+      37.0,
+      33.3,
+      46.7,
+      32.5,
+      23.2,
+      11.8
     ],
-    "mem": 81.0,
-    "mem_used_gb": 2.92,
+    "mem": 54.0,
+    "mem_used_gb": 3.3,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 93.3,
+    "proc_mem_mb": 740.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 5667043328,
-    "net_tx": 5298437120,
-    "down_kbps": 502.0,
-    "up_kbps": 1077.6,
-    "disk_free_gb": 9.1,
+    "net_rx": 5857241088,
+    "net_tx": 5662400512,
+    "down_kbps": 821.9,
+    "up_kbps": 1508.2,
+    "disk_free_gb": 3.3,
     "load": [
-      6.29,
-      6.11,
-      7.87
+      5.45,
+      6.63,
+      7.6
     ],
     "cores": 8
   },
-  "disk_mb": 341.5,
+  "disk_mb": 345.9,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794485726.8508642,
-    "next_sync_s": 152,
-    "commits": 7
+    "last_push": 1794485951.006475,
+    "next_sync_s": 292,
+    "commits": 8
   },
   "last_sample": {
     "type": "web image",
-    "topic": "pile groups",
-    "problem": "Pile Driver",
-    "solution": "Public domain",
+    "topic": "mass flow measurement",
+    "problem": "Luftmassenmesser",
+    "solution": "CC BY 4.0",
     "source": "wikimedia commons"
   }
 }
