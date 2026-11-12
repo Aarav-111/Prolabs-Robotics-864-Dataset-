@@ -7,17 +7,17 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794486154.1633978,
-  "updated_iso": "2026-11-12T17:52:34",
-  "uptime_s": 1653,
+  "updated": 1794486175.2874072,
+  "updated_iso": "2026-11-12T17:52:55",
+  "uptime_s": 1674,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 22,
+  "in_flight": 16,
   "busy_by_kind": {
-    "text": 16,
+    "text": 10,
     "web_images": 6
   },
-  "waiting": 22,
+  "waiting": 16,
   "processes": 1,
   "fields": {
     "mathematics": 499654,
@@ -74,14 +74,14 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 961612761,
-    "tasks_done": 47145,
+    "tasks_done": 47151,
     "tasks_failed": 5,
     "topics_added": 108651,
     "preference": 2327
   },
   "by_kind": {
     "archive": 235,
-    "text": 226,
+    "text": 232,
     "web_images": 228,
     "synthetic_images": 0,
     "vla": 0,
@@ -90,10 +90,10 @@
     "seed_concepts": 0
   },
   "tokens": 961612761,
-  "per_min": 29.2,
+  "per_min": 8.2,
   "topics": {
     "known": 109914,
-    "explored": 11707,
+    "explored": 11713,
     "queued": 98191,
     "space": 6594840,
     "next": [
@@ -148,6 +148,36 @@
     ],
     "recent": [
       [
+        "artificial intelligence in industry",
+        "computer science",
+        0
+      ],
+      [
+        "digital repositories",
+        "humanities",
+        0
+      ],
+      [
+        "formal verification",
+        "computer science",
+        0
+      ],
+      [
+        "colonisation",
+        "",
+        0
+      ],
+      [
+        "physical system modeling",
+        "mathematics",
+        0
+      ],
+      [
+        "coordination games",
+        "statistics",
+        0
+      ],
+      [
         "metallicity",
         "physics",
         6194
@@ -176,69 +206,39 @@
         "scattering scanning near-field optical microscopy",
         "physics",
         3064
-      ],
-      [
-        "mib",
-        "computer science",
-        0
-      ],
-      [
-        "night sky",
-        "physics",
-        3172
-      ],
-      [
-        "cation distribution",
-        "materials science",
-        0
-      ],
-      [
-        "computational pathology",
-        "computer science",
-        0
-      ],
-      [
-        "correlation coefficient comparison",
-        "statistics",
-        0
-      ],
-      [
-        "differential geometry of curves",
-        "mathematics",
-        0
       ]
     ],
-    "in_progress": 16,
+    "in_progress": 10,
     "focus_left": 0
   },
   "system": {
-    "time": 1794486154.1624398,
-    "cpu": 33.9,
+    "time": 1794486175.286636,
+    "cpu": 32.6,
     "cpu_cores": [
-      45.2,
-      41.9,
-      37.0,
-      33.3,
-      46.7,
-      32.5,
-      23.2,
-      11.8
+      27.5,
+      25.0,
+      20.2,
+      18.2,
+      51.2,
+      50.2,
+      39.2,
+      29.4
     ],
-    "mem": 54.0,
-    "mem_used_gb": 3.3,
+    "mem": 62.9,
+    "mem_used_gb": 4.0,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 740.5,
+    "proc_mem_mb": 737.3,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 5857241088,
-    "net_tx": 5662400512,
-    "down_kbps": 821.9,
-    "up_kbps": 1508.2,
+    "net_rx": 5871374336,
+    "net_tx": 5692789760,
+    "down_kbps": 873.8,
+    "up_kbps": 1550.2,
     "disk_free_gb": 3.3,
     "load": [
-      5.45,
-      6.63,
-      7.6
+      4.54,
+      6.32,
+      7.46
     ],
     "cores": 8
   },
@@ -247,9 +247,9 @@
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794485951.006475,
-    "next_sync_s": 292,
-    "commits": 8
+    "last_push": 1794486173.5036721,
+    "next_sync_s": 271,
+    "commits": 9
   },
   "last_sample": {
     "type": "web image",
