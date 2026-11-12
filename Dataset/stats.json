@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794484546.2634869,
-  "updated_iso": "2026-11-12T17:25:46",
-  "uptime_s": 45,
+  "updated": 1794484563.424364,
+  "updated_iso": "2026-11-12T17:26:03",
+  "uptime_s": 63,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "web_images": 24
   },
-  "waiting": 233,
+  "waiting": 240,
   "processes": 1,
   "fields": {
     "mathematics": 467352,
@@ -91,7 +91,7 @@
     "seed_concepts": 0
   },
   "tokens": 899754550,
-  "per_min": 30.6,
+  "per_min": 22.2,
   "topics": {
     "known": 109914,
     "explored": 11481,
@@ -213,44 +213,44 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794484546.2625742,
-    "cpu": 36.5,
+    "time": 1794484563.4232268,
+    "cpu": 58.7,
     "cpu_cores": [
-      22.2,
-      20.6,
-      14.0,
-      11.7,
-      65.2,
-      59.5,
-      55.9,
-      44.1
+      38.9,
+      33.5,
+      29.2,
+      25.9,
+      90.3,
+      86.1,
+      83.1,
+      82.2
     ],
-    "mem": 81.0,
-    "mem_used_gb": 2.87,
+    "mem": 81.4,
+    "mem_used_gb": 2.68,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 71.8,
+    "proc_mem_mb": 96.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 3951509504,
-    "net_tx": 3742617600,
-    "down_kbps": 176.8,
-    "up_kbps": 135.5,
+    "net_rx": 4017466368,
+    "net_tx": 3787398144,
+    "down_kbps": 3245.6,
+    "up_kbps": 1972.3,
     "disk_free_gb": 8.9,
     "load": [
-      6.98,
-      10.42,
-      9.72
+      6.17,
+      10.07,
+      9.61
     ],
     "cores": 8
   },
-  "disk_mb": 332.1,
+  "disk_mb": 336.1,
   "github": {
-    "state": "off",
+    "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 0.0,
-    "next_sync_s": 264,
-    "commits": 0
+    "last_push": 1794484560.888224,
+    "next_sync_s": 246,
+    "commits": 1
   },
   "last_sample": {
     "type": "web image",
