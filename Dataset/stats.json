@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 15.3,
+  "disk_free_gb": 9.3,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794485670.6174679,
-  "updated_iso": "2026-11-12T17:44:30",
-  "uptime_s": 1170,
+  "updated": 1794485766.344214,
+  "updated_iso": "2026-11-12T17:46:11",
+  "uptime_s": 1266,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 252,
   "busy_by_kind": {
     "archive": 116,
-    "text": 116,
-    "web_images": 24
+    "text": 114,
+    "web_images": 22
   },
-  "waiting": 250,
+  "waiting": 191,
   "processes": 1,
   "fields": {
     "mathematics": 492506,
@@ -75,15 +75,15 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 945143128,
-    "tasks_done": 46886,
+    "tasks_done": 46910,
     "tasks_failed": 5,
     "topics_added": 108651,
     "preference": 2327
   },
   "by_kind": {
     "archive": 119,
-    "text": 124,
-    "web_images": 187,
+    "text": 128,
+    "web_images": 207,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 945143128,
-  "per_min": 64.6,
+  "per_min": 21.9,
   "topics": {
     "known": 109914,
-    "explored": 11605,
-    "queued": 98193,
+    "explored": 11609,
+    "queued": 98191,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,26 @@
     ],
     "recent": [
       [
+        "construction planning",
+        "engineering",
+        0
+      ],
+      [
+        "sisal fiber",
+        "materials science",
+        0
+      ],
+      [
+        "pexider functional equation",
+        "mathematics",
+        0
+      ],
+      [
+        "netosis",
+        "biology",
+        0
+      ],
+      [
         "system usability scale",
         "computer science",
         7204
@@ -187,70 +207,50 @@
         "simple random sampling",
         "mathematics",
         3557
-      ],
-      [
-        "lebesgue measure",
-        "mathematics",
-        2593
-      ],
-      [
-        "neurodegeneration with brain iron accumulation",
-        "biology",
-        2224
-      ],
-      [
-        "technology portfolio management",
-        "economics and finance",
-        2101
-      ],
-      [
-        "agrilus planipennis",
-        "earth and space",
-        2959
       ]
     ],
-    "in_progress": 116,
+    "in_progress": 114,
     "focus_left": 0
   },
   "system": {
-    "time": 1794485670.616298,
-    "cpu": 36.3,
+    "time": 1794485766.3302479,
+    "cpu": 71.3,
     "cpu_cores": [
-      32.1,
-      28.0,
-      23.9,
-      22.9,
-      52.1,
-      56.1,
-      45.5,
-      30.1
+      69.1,
+      66.8,
+      64.3,
+      63.4,
+      75.8,
+      77.7,
+      74.4,
+      79.0
     ],
-    "mem": 84.3,
-    "mem_used_gb": 2.64,
+    "mem": 81.0,
+    "mem_used_gb": 2.92,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 78.5,
+    "proc_mem_mb": 93.3,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 5609886720,
-    "net_tx": 5203867648,
-    "down_kbps": 759.0,
-    "up_kbps": 1251.1,
-    "disk_free_gb": 15.3,
+    "net_rx": 5667043328,
+    "net_tx": 5298437120,
+    "down_kbps": 502.0,
+    "up_kbps": 1077.6,
+    "disk_free_gb": 9.1,
     "load": [
-      4.49,
+      6.29,
       6.11,
-      8.09
+      7.87
     ],
     "cores": 8
   },
-  "disk_mb": 344.2,
+  "disk_mb": 341.5,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794485668.689551,
-    "next_sync_s": 247,
-    "commits": 6
+    "last_push": 1794485726.8508642,
+    "next_sync_s": 152,
+    "commits": 7
   },
   "last_sample": {
     "type": "web image",
