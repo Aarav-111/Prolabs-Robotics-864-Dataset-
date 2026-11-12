@@ -2,37 +2,37 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 15.7,
+  "disk_free_gb": 16.6,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794484654.88195,
-  "updated_iso": "2026-11-12T17:27:39",
-  "uptime_s": 154,
+  "updated": 1794485629.783455,
+  "updated_iso": "2026-11-12T17:43:49",
+  "uptime_s": 1129,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 251,
+  "in_flight": 256,
   "busy_by_kind": {
+    "web_images": 24,
     "archive": 116,
-    "text": 111,
-    "web_images": 24
+    "text": 116
   },
-  "waiting": 204,
+  "waiting": 214,
   "processes": 1,
   "fields": {
-    "mathematics": 467352,
-    "general": 204409,
-    "computer science": 200999,
-    "physics": 166425,
-    "engineering": 161078,
+    "mathematics": 492506,
+    "computer science": 214631,
+    "general": 206593,
+    "physics": 173549,
+    "engineering": 173394,
     "statistics": 94116,
-    "earth and space": 57722,
-    "chemistry": 55724,
-    "biology": 54657,
-    "medicine": 54655,
-    "economics and finance": 46901,
-    "humanities": 28904,
+    "biology": 73291,
+    "earth and space": 61226,
+    "medicine": 59234,
+    "chemistry": 58674,
+    "economics and finance": 51575,
+    "humanities": 31364,
     "materials science": 28482,
     "psychology": 20961,
     "machine learning": 20661,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 1676466,
-    "originals": 9280,
-    "variants": 1667186,
-    "web_images": 1581,
+    "text": 1773677,
+    "originals": 9842,
+    "variants": 1763835,
+    "web_images": 1586,
     "synthetic_images": 14064,
-    "images": 15645,
+    "images": 15650,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 899754550,
-    "tasks_done": 46599,
+    "tokens": 945143128,
+    "tasks_done": 46860,
     "tasks_failed": 5,
     "topics_added": 108651,
     "preference": 2302
   },
   "by_kind": {
-    "archive": 0,
-    "text": 10,
-    "web_images": 135,
+    "archive": 116,
+    "text": 124,
+    "web_images": 164,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 899754550,
-  "per_min": 14.4,
+  "tokens": 945143128,
+  "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 11493,
-    "queued": 98312,
+    "explored": 11605,
+    "queued": 98193,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "plant water status",
-        "earth and space",
-        0
+        "system usability scale",
+        "computer science",
+        7204
       ],
       [
-        "rochelle salt",
-        "materials science",
-        0
-      ],
-      [
-        "power means",
-        "mathematics",
-        0
-      ],
-      [
-        "valle de los ca\u00eddos",
-        "humanities",
-        0
-      ],
-      [
-        "tree selection",
-        "earth and space",
-        0
-      ],
-      [
-        "nonlocal nonlinear media",
-        "physics",
-        0
-      ],
-      [
-        "new physics searches",
-        "physics",
-        0
-      ],
-      [
-        "pharmacognosy",
-        "",
-        0
-      ],
-      [
-        "led therapy",
-        "medicine",
-        0
-      ],
-      [
-        "recurrent acute respiratory infections",
-        "medicine",
-        0
-      ],
-      [
-        "ythdf1",
+        "zebra finch",
         "biology",
-        0
+        4332
       ],
       [
-        "uncertainty budget",
-        "physics",
-        0
+        "descriptive statistics",
+        "mathematics",
+        11182
+      ],
+      [
+        "yap nuclear translocation",
+        "biology",
+        5105
+      ],
+      [
+        "binary outcomes",
+        "mathematics",
+        5564
+      ],
+      [
+        "leakage current detection",
+        "engineering",
+        5491
+      ],
+      [
+        "systemc",
+        "computer science",
+        3097
+      ],
+      [
+        "simple random sampling",
+        "mathematics",
+        3557
+      ],
+      [
+        "lebesgue measure",
+        "mathematics",
+        2593
+      ],
+      [
+        "neurodegeneration with brain iron accumulation",
+        "biology",
+        2224
+      ],
+      [
+        "technology portfolio management",
+        "economics and finance",
+        2101
+      ],
+      [
+        "agrilus planipennis",
+        "earth and space",
+        2959
       ]
     ],
-    "in_progress": 109,
+    "in_progress": 116,
     "focus_left": 0
   },
   "system": {
-    "time": 1794484654.342439,
-    "cpu": 92.9,
+    "time": 1794485629.781185,
+    "cpu": 47.7,
     "cpu_cores": [
-      91.9,
-      90.6,
-      89.8,
-      89.4,
-      95.3,
-      95.9,
-      93.5,
-      96.4
+      46.8,
+      43.2,
+      40.3,
+      36.0,
+      59.5,
+      59.0,
+      51.8,
+      45.3
     ],
-    "mem": 83.6,
-    "mem_used_gb": 2.59,
+    "mem": 86.9,
+    "mem_used_gb": 3.4,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 62.5,
+    "proc_mem_mb": 147.0,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 4245585920,
-    "net_tx": 3950923776,
-    "down_kbps": 1366.8,
-    "up_kbps": 1123.5,
-    "disk_free_gb": 15.6,
+    "net_rx": 5553673216,
+    "net_tx": 5142112256,
+    "down_kbps": 1772.9,
+    "up_kbps": 1563.0,
+    "disk_free_gb": 16.6,
     "load": [
-      12.71,
-      10.7,
-      9.87
+      4.72,
+      6.37,
+      8.28
     ],
     "cores": 8
   },
-  "disk_mb": 332.4,
+  "disk_mb": 344.2,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794484631.9527638,
-    "next_sync_s": 155,
-    "commits": 4
+    "last_push": 1794484936.212268,
+    "next_sync_s": 288,
+    "commits": 5
   },
   "last_sample": {
     "type": "web image",
-    "topic": "organocuprates",
-    "problem": "Reaction pathway of 1,4 conjugate addition of organocuprate",
-    "solution": "CC BY-SA 3.0",
+    "topic": "thigh",
+    "problem": "Black and white photograph of an adult female hips, thigh and knees",
+    "solution": "CC BY 2.0",
     "source": "wikimedia commons"
   }
 }
