@@ -7,17 +7,17 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794486175.2874072,
-  "updated_iso": "2026-11-12T17:52:55",
-  "uptime_s": 1674,
+  "updated": 1794486203.5245252,
+  "updated_iso": "2026-11-12T17:53:25",
+  "uptime_s": 1703,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 16,
+  "in_flight": 15,
   "busy_by_kind": {
-    "text": 10,
+    "text": 9,
     "web_images": 6
   },
-  "waiting": 16,
+  "waiting": 12,
   "processes": 1,
   "fields": {
     "mathematics": 499654,
@@ -74,14 +74,14 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 961612761,
-    "tasks_done": 47151,
+    "tasks_done": 47152,
     "tasks_failed": 5,
     "topics_added": 108651,
     "preference": 2327
   },
   "by_kind": {
     "archive": 235,
-    "text": 232,
+    "text": 233,
     "web_images": 228,
     "synthetic_images": 0,
     "vla": 0,
@@ -90,10 +90,10 @@
     "seed_concepts": 0
   },
   "tokens": 961612761,
-  "per_min": 8.2,
+  "per_min": 4.2,
   "topics": {
     "known": 109914,
-    "explored": 11713,
+    "explored": 11714,
     "queued": 98191,
     "space": 6594840,
     "next": [
@@ -148,6 +148,11 @@
     ],
     "recent": [
       [
+        "european monetary and fiscal policies",
+        "economics and finance",
+        0
+      ],
+      [
         "artificial intelligence in industry",
         "computer science",
         0
@@ -201,55 +206,50 @@
         "social life",
         "",
         4683
-      ],
-      [
-        "scattering scanning near-field optical microscopy",
-        "physics",
-        3064
       ]
     ],
-    "in_progress": 10,
+    "in_progress": 9,
     "focus_left": 0
   },
   "system": {
-    "time": 1794486175.286636,
-    "cpu": 32.6,
+    "time": 1794486203.463291,
+    "cpu": 45.5,
     "cpu_cores": [
-      27.5,
-      25.0,
-      20.2,
-      18.2,
-      51.2,
-      50.2,
-      39.2,
-      29.4
+      33.3,
+      28.5,
+      25.1,
+      21.7,
+      65.6,
+      68.0,
+      63.5,
+      57.5
     ],
-    "mem": 62.9,
-    "mem_used_gb": 4.0,
+    "mem": 80.5,
+    "mem_used_gb": 3.01,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 737.3,
+    "proc_mem_mb": 67.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 5871374336,
-    "net_tx": 5692789760,
-    "down_kbps": 873.8,
-    "up_kbps": 1550.2,
+    "net_rx": 5891695616,
+    "net_tx": 5731028992,
+    "down_kbps": 841.3,
+    "up_kbps": 1606.2,
     "disk_free_gb": 3.3,
     "load": [
-      4.54,
-      6.32,
-      7.46
+      4.29,
+      6.11,
+      7.34
     ],
     "cores": 8
   },
-  "disk_mb": 345.9,
+  "disk_mb": 342.1,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794486173.5036721,
-    "next_sync_s": 271,
-    "commits": 9
+    "last_push": 1794486201.484305,
+    "next_sync_s": 242,
+    "commits": 10
   },
   "last_sample": {
     "type": "web image",
