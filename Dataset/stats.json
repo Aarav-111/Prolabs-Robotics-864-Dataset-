@@ -2,41 +2,41 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.1,
+  "disk_free_gb": 14.9,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794538016.285575,
-  "updated_iso": "2026-11-13T08:17:06",
-  "uptime_s": 53515,
+  "updated": 1794539694.299296,
+  "updated_iso": "2026-11-13T08:44:54",
+  "uptime_s": 55193,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 249,
+  "in_flight": 256,
   "busy_by_kind": {
-    "text": 110,
-    "web_images": 23,
-    "archive": 116
+    "archive": 116,
+    "text": 116,
+    "web_images": 24
   },
-  "waiting": 144,
+  "waiting": 222,
   "processes": 1,
   "fields": {
-    "mathematics": 603183,
-    "general": 295549,
-    "physics": 247582,
-    "computer science": 247350,
-    "engineering": 207446,
-    "statistics": 102325,
-    "biology": 97247,
-    "chemistry": 91793,
-    "medicine": 85124,
-    "earth and space": 76210,
-    "economics and finance": 67737,
+    "mathematics": 758924,
+    "computer science": 307297,
+    "general": 305209,
+    "physics": 280180,
+    "engineering": 215264,
+    "statistics": 110972,
+    "chemistry": 108973,
+    "biology": 105209,
+    "medicine": 87324,
+    "earth and space": 79524,
+    "economics and finance": 72859,
+    "psychology": 41692,
+    "humanities": 40534,
     "materials science": 39498,
-    "humanities": 38404,
-    "psychology": 25767,
     "machine learning": 20661,
-    "programming": 15129,
+    "programming": 15541,
     "robotics": 3515,
     "general knowledge": 1778
   },
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 20780,
+    "stack exchange dump": 21192,
     "openlifescienceai/medmcqa": 5786,
     "qiaojin/PubMedQA": 96,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 2262181,
-    "originals": 12423,
-    "variants": 2249758,
-    "web_images": 1840,
+    "text": 2590837,
+    "originals": 14152,
+    "variants": 2576685,
+    "web_images": 1875,
     "synthetic_images": 14064,
-    "images": 15904,
+    "images": 15939,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1209037763,
-    "tasks_done": 52003,
+    "tokens": 1427503882,
+    "tasks_done": 52255,
     "tasks_failed": 9,
     "topics_added": 108651,
     "preference": 2923
   },
   "by_kind": {
-    "archive": 1449,
-    "text": 2490,
-    "web_images": 1614,
+    "archive": 1565,
+    "text": 2600,
+    "web_images": 1638,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1209037763,
-  "per_min": 21757.4,
+  "tokens": 1427503882,
+  "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 13973,
-    "queued": 95833,
+    "explored": 14077,
+    "queued": 95717,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "multi-criteria decision making",
-        "statistics",
-        0
+        "group representations",
+        "mathematics",
+        39250
       ],
       [
-        "fr\u00e9chet inception distance",
+        "geometry problems",
+        "mathematics",
+        32826
+      ],
+      [
+        "s-plus",
+        "mathematics",
+        39852
+      ],
+      [
+        "automata",
         "computer science",
-        0
+        24362
       ],
       [
-        "iberian plate",
-        "earth and space",
-        0
+        "conic sections",
+        "mathematics",
+        25183
       ],
       [
-        "suramin",
-        "biology",
-        0
-      ],
-      [
-        "hemangiosarcoma",
-        "medicine",
-        0
-      ],
-      [
-        "chilean popular unity government",
-        "humanities",
-        0
-      ],
-      [
-        "cryogenic propellant tanks",
-        "engineering",
-        0
-      ],
-      [
-        "fpso",
-        "engineering",
-        0
-      ],
-      [
-        "architectural design software",
-        "engineering",
-        0
-      ],
-      [
-        "advanced vision and imaging",
-        "computer science",
-        0
-      ],
-      [
-        "kretschmann configuration",
+        "nuclear physics",
         "physics",
-        0
+        16064
       ],
       [
-        "mixed strategy equilibrium",
+        "computational theory and mathematics",
+        "computer science",
+        6815
+      ],
+      [
+        "co2 fertilization",
+        "biology",
+        4013
+      ],
+      [
+        "student achievement",
+        "",
+        3648
+      ],
+      [
+        "facility location model",
         "statistics",
-        0
+        4156
+      ],
+      [
+        "public policy",
+        "",
+        5336
+      ],
+      [
+        "vhf propagation",
+        "earth and space",
+        3314
       ]
     ],
-    "in_progress": 107,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794538016.284686,
-    "cpu": 40.1,
+    "time": 1794539694.2985542,
+    "cpu": 16.4,
     "cpu_cores": [
-      23.3,
-      20.4,
-      15.8,
-      13.5,
-      77.1,
-      66.7,
-      58.0,
-      45.5
+      27.3,
+      24.1,
+      19.4,
+      18.9,
+      19.4,
+      11.9,
+      7.8,
+      2.8
     ],
-    "mem": 76.5,
-    "mem_used_gb": 3.26,
+    "mem": 80.1,
+    "mem_used_gb": 2.8,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 243.0,
+    "proc_mem_mb": 569.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 8338524160,
-    "net_tx": 8551298048,
-    "down_kbps": 84.2,
-    "up_kbps": 63.9,
-    "disk_free_gb": 11.6,
+    "net_rx": 9507603456,
+    "net_tx": 9072835584,
+    "down_kbps": 3291.3,
+    "up_kbps": 1740.9,
+    "disk_free_gb": 14.9,
     "load": [
-      3.74,
-      4.05,
-      4.24
+      2.65,
+      3.35,
+      3.62
     ],
     "cores": 8
   },
-  "disk_mb": 430.3,
+  "disk_mb": 498.2,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794538008.499661,
-    "next_sync_s": 119,
-    "commits": 20
+    "last_push": 1794539007.961847,
+    "next_sync_s": 290,
+    "commits": 21
   },
   "last_sample": {
     "type": "text",
-    "topic": "concrete carbonation",
-    "problem": "Bury LED in concrete outside, how to protect I am wanting to place a 3mm LED and carbon resistor, outside between two paving stones. There is about a 4mm gap between pavers where the parts will be. The top of the Led will be flush with the top of the pavers and there will be wires running under the paving stones to remotely power it. There will be one led every 40cm for around 6m, where they are\u2026",
-    "solution": "The heatSHRINK tubing idea is not so bad except for the rear lead exposure which you can pre-coat with adhesive ( Epoxy or PU or silicone ) I think the heatshrink will give a buffer to shrinkage of concrete for stresses on gold whisker wirebond but also might make it easy to poke thru the morter unless flush YOu can always cut excess heatshrink after while protecting the lens in the process. But\u2026",
+    "topic": "group representations",
+    "problem": "Why aren't representations of monoids studied so much? It seems to me like every book on representation theory leaps into groups right away, even though the underlying ideas, such as representations, convolution algebras, etc. don't really make explicit use of inverses. This leads to the fairly natural question of how much of representation theory still works for monoids (or even semigroups)? I\u2026",
+    "solution": "Certainly irreducible representations exist; one can still construct the monoid algebra of a monoid and consider modules over the algebra. But Maschke's theorem is false in general for finite monoids. Indeed, consider the monoid $M = \\langle x | x^3 = x^2 \\rangle$. Complex (for the sake of argument) representations of $M$ are the same as representations of the monoid algebra $\\mathbb{C}[x]/(x^3\u2026",
     "source": "stackexchange"
   }
 }
