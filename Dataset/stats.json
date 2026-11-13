@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 9.9,
+  "disk_free_gb": 9.7,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794553367.618997,
-  "updated_iso": "2026-11-13T12:32:47",
-  "uptime_s": 68867,
+  "updated": 1794553388.2879622,
+  "updated_iso": "2026-11-13T12:33:08",
+  "uptime_s": 68887,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "web_images": 24,
     "archive": 116
   },
-  "waiting": 237,
+  "waiting": 229,
   "processes": 1,
   "fields": {
     "mathematics": 923969,
@@ -75,7 +75,7 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1899172677,
-    "tasks_done": 61086,
+    "tasks_done": 61096,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 4300
@@ -83,7 +83,7 @@
   "by_kind": {
     "archive": 3968,
     "text": 5134,
-    "web_images": 5533,
+    "web_images": 5543,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,7 +91,7 @@
     "seed_concepts": 0
   },
   "tokens": 1899172677,
-  "per_min": 47683.4,
+  "per_min": 38616.8,
   "topics": {
     "known": 109914,
     "explored": 16611,
@@ -213,33 +213,33 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794553367.617514,
-    "cpu": 82.5,
+    "time": 1794553388.287126,
+    "cpu": 61.3,
     "cpu_cores": [
-      99.5,
-      99.5,
-      99.5,
-      99.1,
-      67.0,
-      75.1,
-      64.4,
-      55.3
+      78.0,
+      73.5,
+      73.3,
+      71.2,
+      56.9,
+      63.3,
+      48.6,
+      25.2
     ],
     "mem": 78.9,
-    "mem_used_gb": 2.96,
+    "mem_used_gb": 3.01,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 83.8,
+    "proc_mem_mb": 129.2,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 16977694720,
-    "net_tx": 15104985088,
-    "down_kbps": 489.6,
-    "up_kbps": 366.8,
-    "disk_free_gb": 9.9,
+    "net_rx": 16990724096,
+    "net_tx": 15120090112,
+    "down_kbps": 1334.7,
+    "up_kbps": 735.3,
+    "disk_free_gb": 9.7,
     "load": [
-      7.47,
-      6.28,
-      7.06
+      8.46,
+      6.62,
+      7.16
     ],
     "cores": 8
   },
@@ -249,7 +249,7 @@
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 1794553366.990716,
-    "next_sync_s": 238,
+    "next_sync_s": 218,
     "commits": 86
   },
   "last_sample": {
