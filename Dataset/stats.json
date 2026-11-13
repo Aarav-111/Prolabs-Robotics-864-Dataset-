@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.4,
+  "disk_free_gb": 10.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794553327.037071,
-  "updated_iso": "2026-11-13T12:32:07",
-  "uptime_s": 68826,
+  "updated": 1794553350.365483,
+  "updated_iso": "2026-11-13T12:32:30",
+  "uptime_s": 68850,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "web_images": 24,
     "archive": 116
   },
-  "waiting": 220,
+  "waiting": 221,
   "processes": 1,
   "fields": {
     "mathematics": 923969,
@@ -69,21 +69,21 @@
     "text": 3497740,
     "originals": 19143,
     "variants": 3478597,
-    "web_images": 2959,
+    "web_images": 2969,
     "synthetic_images": 14064,
-    "images": 17023,
+    "images": 17033,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1899172677,
-    "tasks_done": 61073,
+    "tasks_done": 61086,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 4300
   },
   "by_kind": {
     "archive": 3968,
-    "text": 5133,
-    "web_images": 5521,
+    "text": 5134,
+    "web_images": 5533,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1899172677,
-  "per_min": 88450.0,
+  "per_min": 59306.6,
   "topics": {
     "known": 109914,
-    "explored": 16610,
-    "queued": 93184,
+    "explored": 16611,
+    "queued": 93183,
     "space": 6594840,
     "next": [
       [
@@ -148,6 +148,11 @@
       ]
     ],
     "recent": [
+      [
+        "csi photocathode",
+        "physics",
+        0
+      ],
       [
         "generalized entropy",
         "physics",
@@ -202,61 +207,56 @@
         "intelligent life",
         "physics",
         2985
-      ],
-      [
-        "sacrificial dilemmas",
-        "biology",
-        3619
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794553327.0360692,
-    "cpu": 69.7,
+    "time": 1794553350.3645928,
+    "cpu": 57.9,
     "cpu_cores": [
-      92.5,
-      93.1,
-      91.6,
-      92.0,
-      55.3,
-      55.8,
-      41.5,
-      35.3
+      63.2,
+      59.0,
+      58.4,
+      55.7,
+      60.0,
+      71.6,
+      53.8,
+      41.7
     ],
-    "mem": 77.1,
-    "mem_used_gb": 3.1,
+    "mem": 77.8,
+    "mem_used_gb": 3.05,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 158.6,
+    "proc_mem_mb": 132.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 16951158784,
-    "net_tx": 15077986304,
-    "down_kbps": 1557.8,
-    "up_kbps": 866.1,
-    "disk_free_gb": 10.3,
+    "net_rx": 16967540736,
+    "net_tx": 15091893248,
+    "down_kbps": 248.4,
+    "up_kbps": 153.8,
+    "disk_free_gb": 10.1,
     "load": [
-      5.58,
-      5.92,
-      6.98
+      5.46,
+      5.89,
+      6.94
     ],
     "cores": 8
   },
-  "disk_mb": 48.9,
+  "disk_mb": 71.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794553325.66621,
-    "next_sync_s": 279,
-    "commits": 84
+    "last_push": 1794553349.3233979,
+    "next_sync_s": 255,
+    "commits": 85
   },
   "last_sample": {
     "type": "web image",
-    "topic": "delta variant",
-    "problem": "Eurovision Song Contest 2026 Vienna, Second Semi Final, Picture shows: Delta Goodrem from Australia",
-    "solution": "CC BY-SA 4.0",
+    "topic": "cartilage defects",
+    "problem": "Figure 6. Shelf and groove osteochondrosis manifesta and reparative intramembranous ossification. (a) Third tarsal bone, dorso-lateral quarter, horse. There is a large, dorsal shelf defect (arrow) that is connected by a narrow stalk to a distal groove defect (arrowhead). Case 13. Micro-computed tomographic image reprinted with permission from Sigurdsson et al.28 (b) Third tarsal bone, dorso-lateral quarter, horse. In sections, it was possible to follow horizontally oriented remnants of a necrotic canal from the periosteum into the dorsal shelf in the same section as remnants coursing\u2026",
+    "solution": "CC BY 4.0",
     "source": "wikimedia commons"
   }
 }
