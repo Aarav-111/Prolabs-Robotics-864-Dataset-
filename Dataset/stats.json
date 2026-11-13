@@ -1,24 +1,24 @@
 {
   "state": "running",
   "offline": false,
-  "disk_low": true,
-  "disk_free_gb": 1.1,
+  "disk_low": false,
+  "disk_free_gb": 15.4,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794541302.302269,
-  "updated_iso": "2026-11-13T09:11:42",
-  "uptime_s": 56802,
+  "updated": 1794541403.626987,
+  "updated_iso": "2026-11-13T09:13:23",
+  "uptime_s": 56903,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 234,
+  "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 15,
-    "text": 103,
+    "web_images": 24,
+    "text": 116,
     "archive": 116
   },
-  "waiting": 229,
+  "waiting": 235,
   "processes": 1,
   "fields": {
     "mathematics": 775625,
@@ -69,21 +69,21 @@
     "text": 2682844,
     "originals": 14666,
     "variants": 2668178,
-    "web_images": 2168,
+    "web_images": 2185,
     "synthetic_images": 14064,
-    "images": 16232,
+    "images": 16249,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1462200826,
-    "tasks_done": 53334,
+    "tasks_done": 53411,
     "tasks_failed": 9,
     "topics_added": 108651,
     "preference": 3159
   },
   "by_kind": {
     "archive": 1964,
-    "text": 3043,
-    "web_images": 1875,
+    "text": 3065,
+    "web_images": 1930,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1462200826,
-  "per_min": 456.9,
+  "per_min": 453.5,
   "topics": {
     "known": 109914,
-    "explored": 14520,
-    "queued": 95287,
+    "explored": 14542,
+    "queued": 95252,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "metric measure spaces",
-        "mathematics",
-        1266
-      ],
-      [
-        "eigenvalue asymptotics",
-        "mathematics",
-        909
-      ],
-      [
-        "battlefield",
-        "",
+        "phosphorus-sulfur compounds",
+        "chemistry",
         0
       ],
       [
-        "consumer perception and purchasing behavior",
-        "economics and finance",
+        "metabolism and genetic disorders",
+        "biology",
         0
       ],
       [
-        "sustainable building certification",
-        "engineering",
+        "membrane bioreactor",
+        "earth and space",
         0
       ],
       [
-        "task resumption",
-        "statistics",
-        0
-      ],
-      [
-        "actuation strain",
-        "materials science",
-        0
-      ],
-      [
-        "radiochemistry terminology",
-        "physics",
-        0
-      ],
-      [
-        "unreinforced masonry",
-        "engineering",
-        0
-      ],
-      [
-        "baire category theorem",
-        "mathematics",
-        0
-      ],
-      [
-        "ldpc decoding",
+        "high-resolution image reconstruction",
         "computer science",
         0
       ],
       [
-        "star formation rate",
+        "homotopy perturbation method",
+        "mathematics",
+        0
+      ],
+      [
+        "ponto-caspian region",
+        "earth and space",
+        0
+      ],
+      [
+        "polymer banknotes",
+        "computer science",
+        0
+      ],
+      [
+        "personal experience of depression",
+        "psychology",
+        0
+      ],
+      [
+        "rogue waves",
         "physics",
+        0
+      ],
+      [
+        "information technology for development",
+        "computer science",
+        0
+      ],
+      [
+        "voice user interface",
+        "computer science",
+        0
+      ],
+      [
+        "fredholm integral equations",
+        "mathematics",
         0
       ]
     ],
-    "in_progress": 107,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794541302.3009868,
-    "cpu": 42.7,
+    "time": 1794541403.626395,
+    "cpu": 15.2,
     "cpu_cores": [
-      35.7,
-      32.2,
-      24.5,
-      22.0,
-      77.1,
-      61.2,
-      50.7,
-      37.4
+      30.7,
+      29.5,
+      27.7,
+      23.6,
+      7.7,
+      2.3,
+      0.9,
+      0.0
     ],
-    "mem": 80.3,
-    "mem_used_gb": 2.83,
+    "mem": 76.8,
+    "mem_used_gb": 3.27,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 86.6,
+    "proc_mem_mb": 392.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 12134398976,
-    "net_tx": 10985088000,
-    "down_kbps": 119.2,
-    "up_kbps": 73.8,
-    "disk_free_gb": 0.9,
+    "net_rx": 12199122944,
+    "net_tx": 11063132160,
+    "down_kbps": 523.1,
+    "up_kbps": 1191.2,
+    "disk_free_gb": 15.4,
     "load": [
-      6.78,
-      5.48,
-      5.12
+      4.01,
+      4.86,
+      4.91
     ],
     "cores": 8
   },
-  "disk_mb": 282.0,
+  "disk_mb": 273.8,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794541300.147723,
-    "next_sync_s": 195,
-    "commits": 37
+    "last_push": 1794541386.9051678,
+    "next_sync_s": 94,
+    "commits": 38
   },
   "last_sample": {
     "type": "web image",
-    "topic": "tax base erosion",
-    "problem": "The ratio of gross national income (GNI) to gross domestic product (GDP) from 2020 World Bank data (constant US$) indicates a profound disproportionality in some notable corporate havens as Ireland and Luxembourg.",
-    "solution": "CC0",
+    "topic": "metric measure spaces",
+    "problem": "iss070e100775 (2/25/2024) --- NASA astronaut Jasmin Moghbeli runs on the T2 treadmill system on space station. Daily exercise is an important component of staying healthy in space. Without Earth\u2019s gravity, bone and muscle atrophy or become smaller and weaker. On her left wrist, Moghbeli wears Actiwatch, a monitor that measures body metrics like sleep and heart rate.",
+    "solution": "Public domain",
     "source": "wikimedia commons"
   }
 }
