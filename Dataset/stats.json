@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 15.1,
+  "disk_free_gb": 15.6,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794540899.981931,
-  "updated_iso": "2026-11-13T09:04:59",
-  "uptime_s": 56399,
+  "updated": 1794541025.782466,
+  "updated_iso": "2026-11-13T09:07:05",
+  "uptime_s": 56525,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 255,
   "busy_by_kind": {
     "web_images": 24,
-    "text": 116,
+    "text": 115,
     "archive": 116
   },
-  "waiting": 216,
+  "waiting": 237,
   "processes": 1,
   "fields": {
     "mathematics": 773450,
@@ -69,21 +69,21 @@
     "text": 2680669,
     "originals": 14654,
     "variants": 2666015,
-    "web_images": 2051,
+    "web_images": 2082,
     "synthetic_images": 14064,
-    "images": 16115,
+    "images": 16146,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1461523809,
-    "tasks_done": 52995,
+    "tasks_done": 53045,
     "tasks_failed": 9,
     "topics_added": 108651,
     "preference": 3159
   },
   "by_kind": {
     "archive": 1848,
-    "text": 2897,
-    "web_images": 1798,
+    "text": 2933,
+    "web_images": 1812,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1461523809,
-  "per_min": 1478.2,
+  "per_min": 908.7,
   "topics": {
     "known": 109914,
-    "explored": 14374,
-    "queued": 95420,
+    "explored": 14410,
+    "queued": 95385,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "fuzzy algebra",
-        "statistics",
-        0
-      ],
-      [
-        "illumination estimation",
-        "physics",
-        0
-      ],
-      [
-        "gauge theory",
-        "",
-        0
-      ],
-      [
-        "spark ablation",
-        "materials science",
-        0
-      ],
-      [
-        "nondestructive testing",
-        "",
-        0
-      ],
-      [
-        "accretion disc",
-        "",
-        0
-      ],
-      [
-        "probabilistic routing",
+        "quantum cellular automata",
         "computer science",
         0
       ],
       [
-        "sundial",
-        "physics",
+        "short grit scale",
+        "psychology",
         0
       ],
       [
-        "cp decomposition",
+        "permanence",
         "mathematics",
-        4437
+        0
       ],
       [
-        "enterobacter cloacae subsp. cloacae",
+        "molecular electrostatic potential",
+        "materials science",
+        0
+      ],
+      [
+        "weevils",
         "biology",
         0
       ],
       [
-        "historical stock data",
-        "statistics",
+        "inverse source problem",
+        "mathematics",
         0
       ],
       [
-        "antimicrobial resistance surveillance",
-        "medicine",
+        "few-cycle pulses",
+        "physics",
+        0
+      ],
+      [
+        "schizoid personality disorder",
+        "psychology",
+        0
+      ],
+      [
+        "computational ghost imaging",
+        "physics",
+        0
+      ],
+      [
+        "airline competition",
+        "economics and finance",
+        0
+      ],
+      [
+        "berry weight",
+        "biology",
+        0
+      ],
+      [
+        "enzyme kinetics",
+        "chemistry",
         0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 119,
     "focus_left": 0
   },
   "system": {
-    "time": 1794540899.981148,
-    "cpu": 29.6,
+    "time": 1794541025.781733,
+    "cpu": 21.5,
     "cpu_cores": [
+      28.9,
       26.7,
-      23.4,
-      16.8,
-      15.2,
-      57.4,
-      45.5,
-      30.8,
-      21.1
+      23.9,
+      22.0,
+      29.4,
+      23.3,
+      12.7,
+      5.5
     ],
-    "mem": 76.1,
-    "mem_used_gb": 3.06,
+    "mem": 75.0,
+    "mem_used_gb": 3.14,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 235.0,
+    "proc_mem_mb": 290.8,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 11544203264,
-    "net_tx": 10507730944,
-    "down_kbps": 644.6,
-    "up_kbps": 383.1,
-    "disk_free_gb": 15.2,
+    "net_rx": 11963023360,
+    "net_tx": 10783587328,
+    "down_kbps": 3167.4,
+    "up_kbps": 1633.1,
+    "disk_free_gb": 15.6,
     "load": [
-      3.61,
-      4.88,
-      5.05
+      3.54,
+      4.34,
+      4.8
     ],
     "cores": 8
   },
-  "disk_mb": 331.2,
+  "disk_mb": 312.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794540854.6342452,
-    "next_sync_s": 296,
-    "commits": 31
+    "last_push": 1794540954.000577,
+    "next_sync_s": 170,
+    "commits": 32
   },
   "last_sample": {
     "type": "web image",
-    "topic": "microwave energy",
-    "problem": "The energy injector is like 4000 microwave ovens, another innovative design element of this reactor. They use a process called radio-frequency heating to ignite the nuclear fuel. These antennae outside the tokamak reactor use a specific frequency of radio waves to excite the particles. The radio waves are calibrated to target just the less abundant material, in this case hydrogen ions. Because the hydrogen accounts for a small fraction of the fuel's total density, focusing the radio-frequency heating on the minority ions allows them to reach extreme energy levels. The excited hydrogen ions\u2026",
-    "solution": "CC BY 2.0",
+    "topic": "coherent risk measures",
+    "problem": "On Saturday 25 February 2023, Jeremy Corbyn suddenly appeared amid a Peace Now demonstration, and gave an unscheduled speech to hundreds of anti-war demonstrators at the junction of Riding House Street and Langham Place in central London. This photo was taken at the very last moment as he concluded, demanding the United States and the United Kingdom at least consider the possibility of a peaceful resolution to the conflict through negotiation. PEACE TALKS NOW. Almost all the protesters agreed that their main demand was for a greater effort to end the horrific conflict in Ukraine, in which\u2026",
+    "solution": "CC BY-SA 2.0",
     "source": "wikimedia commons"
   }
 }
