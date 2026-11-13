@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 5.3,
+  "disk_free_gb": 19.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794497706.88886,
-  "updated_iso": "2026-11-12T21:05:06",
-  "uptime_s": 13206,
+  "updated": 1794537845.780854,
+  "updated_iso": "2026-11-13T08:14:06",
+  "uptime_s": 53345,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,27 +18,27 @@
     "web_images": 24,
     "archive": 116
   },
-  "waiting": 239,
+  "waiting": 221,
   "processes": 1,
   "fields": {
-    "mathematics": 499654,
-    "general": 221231,
-    "computer science": 219012,
-    "physics": 197576,
-    "engineering": 175579,
-    "statistics": 94518,
-    "biology": 73491,
-    "earth and space": 65189,
-    "medicine": 64671,
-    "chemistry": 58674,
-    "economics and finance": 54466,
-    "humanities": 32118,
-    "materials science": 29245,
+    "mathematics": 603183,
+    "general": 295549,
+    "physics": 247582,
+    "computer science": 247350,
+    "engineering": 207446,
+    "statistics": 102325,
+    "biology": 97247,
+    "chemistry": 91793,
+    "medicine": 85124,
+    "earth and space": 76210,
+    "economics and finance": 67737,
+    "materials science": 39498,
+    "humanities": 38404,
     "psychology": 25767,
     "machine learning": 20661,
-    "programming": 13067,
+    "programming": 14568,
     "robotics": 3515,
-    "general knowledge": 1156
+    "general knowledge": 1778
   },
   "topic_fields": {
     "": 7597,
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 15808,
-    "openlifescienceai/medmcqa": 4252,
+    "stack exchange dump": 20219,
+    "openlifescienceai/medmcqa": 5786,
     "qiaojin/PubMedQA": 96,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 1845473,
-    "originals": 10241,
-    "variants": 1835232,
-    "web_images": 1670,
+    "text": 2261620,
+    "originals": 12421,
+    "variants": 2249199,
+    "web_images": 1816,
     "synthetic_images": 14064,
-    "images": 15734,
+    "images": 15880,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 972260278,
-    "tasks_done": 47199,
-    "tasks_failed": 5,
+    "tokens": 1208469662,
+    "tasks_done": 51953,
+    "tasks_failed": 9,
     "topics_added": 108651,
-    "preference": 2419
+    "preference": 2868
   },
   "by_kind": {
-    "archive": 257,
-    "text": 242,
-    "web_images": 244,
+    "archive": 1441,
+    "text": 2476,
+    "web_images": 1584,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 972260278,
-  "per_min": 141.4,
+  "tokens": 1208469662,
+  "per_min": 162123.1,
   "topics": {
     "known": 109914,
-    "explored": 11723,
-    "queued": 98075,
+    "explored": 13953,
+    "queued": 95841,
     "space": 6594840,
     "next": [
       [
@@ -123,10 +123,6 @@
         "medicine"
       ],
       [
-        "phase diagrams",
-        "materials science"
-      ],
-      [
         "photosynthesis",
         "biology"
       ],
@@ -139,124 +135,128 @@
         "biology"
       ],
       [
-        "ceramics",
-        "materials science"
-      ],
-      [
         "civil engineering",
         "engineering"
+      ],
+      [
+        "clinical psychology",
+        "psychology"
+      ],
+      [
+        "macroeconomics",
+        "economics and finance"
       ]
     ],
     "recent": [
       [
-        "single-molecule force spectroscopy",
+        "real numbers",
+        "mathematics",
+        39097
+      ],
+      [
+        "quantum yield",
+        "",
+        14198
+      ],
+      [
+        "chemical abbreviations",
+        "chemistry",
+        1206
+      ],
+      [
+        "spherical trigonometry",
+        "mathematics",
+        402
+      ],
+      [
+        "ac power",
+        "",
+        14094
+      ],
+      [
+        "scattering length",
         "physics",
-        6077
+        7274
       ],
       [
-        "relativity and gravitational theory",
-        "physics",
-        3004
-      ],
-      [
-        "needs assessment",
-        "",
-        6208
-      ],
-      [
-        "doors",
-        "",
-        1885
-      ],
-      [
-        "team diversity",
-        "psychology",
-        4806
-      ],
-      [
-        "expandable graphite",
-        "materials science",
-        763
-      ],
-      [
-        "forage production",
-        "biology",
-        200
-      ],
-      [
-        "high-entropy materials",
-        "engineering",
-        2185
-      ],
-      [
-        "landform",
-        "",
-        1862
-      ],
-      [
-        "european monetary and fiscal policies",
-        "economics and finance",
-        0
-      ],
-      [
-        "artificial intelligence in industry",
+        "hybrid quantum-classical algorithms",
         "computer science",
         0
       ],
       [
-        "digital repositories",
+        "transient electromagnetic method",
+        "earth and space",
+        0
+      ],
+      [
+        "particle-fluid interaction",
+        "engineering",
+        0
+      ],
+      [
+        "electromagnetic diffraction",
+        "physics",
+        0
+      ],
+      [
+        "information literacy education",
         "humanities",
+        2450
+      ],
+      [
+        "all-optical neural networks",
+        "computer science",
         0
       ]
     ],
-    "in_progress": 116,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794497706.887786,
-    "cpu": 21.5,
+    "time": 1794537845.7653491,
+    "cpu": 58.3,
     "cpu_cores": [
-      16.8,
-      14.3,
-      15.8,
-      10.4,
-      48.3,
-      32.0,
-      20.0,
-      14.1
+      69.7,
+      67.6,
+      65.6,
+      64.1,
+      51.8,
+      56.3,
+      44.8,
+      45.9
     ],
-    "mem": 63.2,
-    "mem_used_gb": 3.79,
+    "mem": 79.7,
+    "mem_used_gb": 3.01,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 414.7,
+    "proc_mem_mb": 325.7,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 6127858688,
-    "net_tx": 6186772480,
-    "down_kbps": 1887.0,
-    "up_kbps": 1856.7,
-    "disk_free_gb": 5.3,
+    "net_rx": 8179508224,
+    "net_tx": 8426961920,
+    "down_kbps": 3259.5,
+    "up_kbps": 1775.3,
+    "disk_free_gb": 19.0,
     "load": [
-      2.76,
-      8.29,
-      8.65
+      4.25,
+      4.26,
+      4.34
     ],
     "cores": 8
   },
-  "disk_mb": 342.5,
+  "disk_mb": 429.9,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "No internet connection right now - it retries by itself, your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 1794497705.873916,
-    "next_sync_s": 270,
+    "next_sync_s": 290,
     "commits": 14
   },
   "last_sample": {
-    "type": "archive Q&A",
-    "topic": "stack exchange dump",
-    "problem": "While checking the etymology of the English word corpse, wikitionary says it had been l\u012b\u010b in Old English. Wikitionary also gives /li\u02d0t\u0361\u0283/ as its pronunciation, which apparently is completely different from \"corpse\". Wikitionary says From earlier corse, from Old French cors, from Latin corpus (\u201cbody\u201d). Displaced native Old English l\u012b\u010b I can't seem to find anything else about this word on Google.\u2026",
-    "solution": "What Happened? Lich in Old and Middle English referred to bodies in general. In the OED's two definitions for lich, that body could be alive (\"lich, n.,\" def. 1) or dead (\"lich, n.,\" def. 2). That's important to understand because corpse could also refer to a living or dead body (\"corpse, n.,\" def. 1 and 2). Between Middle English and Early Modern English, two changes occurred: - Lich dropped\u2026",
-    "source": "stackexchange"
+    "type": "web image",
+    "topic": "extraterrestrial life",
+    "problem": "This is a 2024 artist's imagining of alleged extraterrestrial being, Ashtar Sheran. Ashtar is captain of the Star Command, first \"described\" by George Van Tassel in 1952. Sheran purportedly was keeping humans safe from the hydrogen bomb and sought to prevent the Earth's destruction from nuclear war. This was painted digitally in Photoshop by Vitaliy Shtapura based on other illustrations of Ashtar. He can be categorized as a Nordic Alien. The art incorporates a few symbols. On the left chest, the Star of Ishtar can be seen: this ancient Sumerian symbol represents the ancient Mesopotamian\u2026",
+    "solution": "Public domain",
+    "source": "wikimedia commons"
   }
 }
