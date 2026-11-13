@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 13.2,
+  "disk_free_gb": 12.2,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794542671.30425,
-  "updated_iso": "2026-11-13T09:34:31",
-  "uptime_s": 58171,
+  "updated": 1794542759.177321,
+  "updated_iso": "2026-11-13T09:35:59",
+  "uptime_s": 58258,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 244,
+  "waiting": 246,
   "processes": 1,
   "fields": {
     "mathematics": 796837,
@@ -75,15 +75,15 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1511922466,
-    "tasks_done": 54031,
+    "tasks_done": 54033,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 3387
   },
   "by_kind": {
     "archive": 2261,
-    "text": 3305,
-    "web_images": 2014,
+    "text": 3306,
+    "web_images": 2015,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1511922466,
-  "per_min": 844.8,
+  "per_min": 540.5,
   "topics": {
     "known": 109914,
-    "explored": 14782,
-    "queued": 95012,
+    "explored": 14783,
+    "queued": 95011,
     "space": 6594840,
     "next": [
       [
@@ -148,6 +148,11 @@
       ]
     ],
     "recent": [
+      [
+        "silicon nanocrystals",
+        "materials science",
+        0
+      ],
       [
         "substantia nigra",
         "medicine",
@@ -202,55 +207,50 @@
         "variance",
         "mathematics",
         4703
-      ],
-      [
-        "content-based video retrieval",
-        "computer science",
-        4415
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794542671.302985,
-    "cpu": 22.7,
+    "time": 1794542759.176214,
+    "cpu": 30.0,
     "cpu_cores": [
-      31.6,
-      29.3,
-      27.3,
-      22.2,
-      31.0,
-      23.1,
-      11.5,
-      6.0
+      32.0,
+      27.9,
+      23.8,
+      22.8,
+      51.7,
+      36.6,
+      24.6,
+      20.8
     ],
-    "mem": 77.3,
-    "mem_used_gb": 3.15,
+    "mem": 83.3,
+    "mem_used_gb": 2.67,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 256.9,
+    "proc_mem_mb": 179.0,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 12731895808,
-    "net_tx": 11614488576,
-    "down_kbps": 270.7,
-    "up_kbps": 174.7,
-    "disk_free_gb": 13.2,
+    "net_rx": 12771761152,
+    "net_tx": 11679277056,
+    "down_kbps": 246.7,
+    "up_kbps": 590.1,
+    "disk_free_gb": 12.2,
     "load": [
-      4.36,
-      5.92,
-      5.93
+      3.88,
+      5.31,
+      5.69
     ],
     "cores": 8
   },
-  "disk_mb": 188.0,
+  "disk_mb": 192.3,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794542622.678875,
-    "next_sync_s": 141,
-    "commits": 44
+    "last_push": 1794542720.371376,
+    "next_sync_s": 53,
+    "commits": 45
   },
   "last_sample": {
     "type": "web image",
