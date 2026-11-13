@@ -2,29 +2,29 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 15.4,
+  "disk_free_gb": 16.4,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794540650.659065,
-  "updated_iso": "2026-11-13T09:00:52",
-  "uptime_s": 56150,
+  "updated": 1794540700.797962,
+  "updated_iso": "2026-11-13T09:01:40",
+  "uptime_s": 56200,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 253,
+  "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 22,
+    "web_images": 24,
     "archive": 116,
-    "text": 115
+    "text": 116
   },
-  "waiting": 210,
+  "waiting": 247,
   "processes": 1,
   "fields": {
     "mathematics": 769013,
     "computer science": 322577,
     "general": 313981,
-    "physics": 291433,
+    "physics": 294155,
     "engineering": 228360,
     "chemistry": 117110,
     "statistics": 111487,
@@ -33,7 +33,7 @@
     "earth and space": 79524,
     "economics and finance": 73455,
     "psychology": 44351,
-    "humanities": 40534,
+    "humanities": 40651,
     "materials science": 39498,
     "machine learning": 20661,
     "programming": 17465,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 2673393,
-    "originals": 14616,
-    "variants": 2658777,
+    "text": 2676232,
+    "originals": 14631,
+    "variants": 2661601,
     "web_images": 1991,
     "synthetic_images": 14064,
     "images": 16055,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1459008546,
-    "tasks_done": 52778,
+    "tokens": 1460025811,
+    "tasks_done": 52857,
     "tasks_failed": 9,
     "topics_added": 108651,
     "preference": 3159
   },
   "by_kind": {
-    "archive": 1732,
-    "text": 2828,
-    "web_images": 1768,
+    "archive": 1779,
+    "text": 2855,
+    "web_images": 1771,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1459008546,
-  "per_min": 5943.2,
+  "tokens": 1460025811,
+  "per_min": 4419.3,
   "topics": {
     "known": 109914,
-    "explored": 14305,
-    "queued": 95490,
+    "explored": 14332,
+    "queued": 95462,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "branch and bound",
-        "computer science",
-        0
+        "sic doping",
+        "physics",
+        2722
       ],
       [
-        "juvenile sea turtles",
-        "earth and space",
-        0
-      ],
-      [
-        "digital aerial photography",
-        "computer science",
-        0
-      ],
-      [
-        "bidding behavior",
-        "statistics",
-        0
-      ],
-      [
-        "legume intercropping",
-        "biology",
-        0
-      ],
-      [
-        "wool dyeing",
-        "materials science",
-        0
-      ],
-      [
-        "explicit runge-kutta methods",
-        "mathematics",
-        0
-      ],
-      [
-        "quasar",
-        "",
-        0
-      ],
-      [
-        "sand tiger sharks",
-        "earth and space",
-        0
-      ],
-      [
-        "powder compaction",
+        "carla simulator",
         "engineering",
         0
       ],
       [
-        "stakeholder",
-        "",
+        "watershed morphometry",
+        "earth and space",
         0
       ],
       [
-        "network automation",
-        "computer science",
+        "adolescent idiopathic scoliosis",
+        "medicine",
+        0
+      ],
+      [
+        "zeros of entire functions",
+        "mathematics",
+        0
+      ],
+      [
+        "antarctic atmosphere",
+        "earth and space",
+        0
+      ],
+      [
+        "spintronics",
+        "physics",
+        0
+      ],
+      [
+        "political theory and influence",
+        "humanities",
+        0
+      ],
+      [
+        "e8 lattice",
+        "physics",
+        0
+      ],
+      [
+        "sulfenyl chlorides",
+        "chemistry",
+        0
+      ],
+      [
+        "human rabies",
+        "biology",
+        0
+      ],
+      [
+        "private school fees",
+        "humanities",
         0
       ]
     ],
-    "in_progress": 119,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794540650.641797,
-    "cpu": 79.7,
+    "time": 1794540700.797237,
+    "cpu": 57.2,
     "cpu_cores": [
-      65.6,
-      64.2,
-      61.8,
-      61.0,
-      95.0,
-      95.4,
-      96.8,
-      96.8
+      52.6,
+      50.7,
+      47.0,
+      44.9,
+      71.4,
+      73.3,
+      57.6,
+      60.2
     ],
-    "mem": 67.8,
-    "mem_used_gb": 3.93,
+    "mem": 73.5,
+    "mem_used_gb": 3.52,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 428.9,
+    "proc_mem_mb": 232.8,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 10980597760,
-    "net_tx": 10069059584,
-    "down_kbps": 1351.4,
-    "up_kbps": 682.5,
-    "disk_free_gb": 15.5,
+    "net_rx": 11104860160,
+    "net_tx": 10168302592,
+    "down_kbps": 2099.4,
+    "up_kbps": 1086.0,
+    "disk_free_gb": 16.4,
     "load": [
-      4.1,
-      5.48,
-      5.25
+      3.78,
+      5.2,
+      5.16
     ],
     "cores": 8
   },
-  "disk_mb": 437.6,
+  "disk_mb": 418.1,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794540646.724412,
-    "next_sync_s": 243,
-    "commits": 27
+    "last_push": 1794540699.317378,
+    "next_sync_s": 193,
+    "commits": 28
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "dark matter halos",
-    "problem": "A scaled side view of the Milky Way, with labeled satellite galaxies, streams, and a representation of the surrounding dark matter halo. Galactic north is upward, and galactic longitude 0 degrees is towards the right.",
-    "solution": "CC BY 4.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "sic doping",
+    "problem": "The influence of nitrogen doping and annealing on the silicon vacancy in 4H-SiC The silicon vacancy ($V_{Si}$) in 4H-SiC at its cubic site (V2-center) has shown significant promise for quantum technologies, due to coherent spin states, the mature material system, and stable optical emission. In these SiC-based applications, doping plays a crucial role. It can be used to control the charge state\u2026",
+    "solution": "Despite its importance, there has been little research on the effects of doping. In this work, we perform a study of the effects of nitrogen doping and annealing on the photoluminescence (PL), optically-detected magnetic resonance (ODMR) contrast, and dephasing times of ensembles of V2 in epilayers of 4H-SiC. The results show an enhancement of PL that depends on the electron irradiation dose for\u2026",
+    "source": "arxiv"
   }
 }
