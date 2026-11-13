@@ -1,24 +1,24 @@
 {
   "state": "running",
   "offline": false,
-  "disk_low": true,
-  "disk_free_gb": 1.9,
+  "disk_low": false,
+  "disk_free_gb": 9.0,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794543298.000284,
-  "updated_iso": "2026-11-13T09:44:58",
-  "uptime_s": 58797,
+  "updated": 1794543362.295785,
+  "updated_iso": "2026-11-13T09:46:02",
+  "uptime_s": 58861,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 250,
+  "in_flight": 256,
   "busy_by_kind": {
     "web_images": 24,
     "archive": 116,
-    "text": 110
+    "text": 116
   },
-  "waiting": 210,
+  "waiting": 247,
   "processes": 1,
   "fields": {
     "mathematics": 807143,
@@ -69,21 +69,21 @@
     "text": 2867435,
     "originals": 15633,
     "variants": 2851802,
-    "web_images": 2437,
+    "web_images": 2462,
     "synthetic_images": 14064,
-    "images": 16501,
+    "images": 16526,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1531869196,
-    "tasks_done": 54347,
+    "tasks_done": 54370,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 3387
   },
   "by_kind": {
     "archive": 2377,
-    "text": 3458,
-    "web_images": 2061,
+    "text": 3460,
+    "web_images": 2082,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1531869196,
-  "per_min": 5.6,
+  "per_min": 8.4,
   "topics": {
     "known": 109914,
-    "explored": 14935,
-    "queued": 94865,
+    "explored": 14937,
+    "queued": 94857,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,16 @@
     ],
     "recent": [
       [
+        "organic nomenclature",
+        "chemistry",
+        0
+      ],
+      [
+        "integral equation solvers",
+        "physics",
+        0
+      ],
+      [
         "uncalibrated cameras",
         "computer science",
         0
@@ -197,66 +207,56 @@
         "betacoronavirus",
         "",
         0
-      ],
-      [
-        "forest regeneration",
-        "biology",
-        0
-      ],
-      [
-        "alcohol marketing",
-        "medicine",
-        0
       ]
     ],
-    "in_progress": 114,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794543297.999149,
-    "cpu": 70.1,
+    "time": 1794543362.295006,
+    "cpu": 51.1,
     "cpu_cores": [
-      93.6,
-      93.6,
-      93.2,
-      91.8,
-      31.2,
-      77.0,
-      16.1,
-      64.2
+      62.4,
+      57.6,
+      56.1,
+      56.0,
+      44.4,
+      59.7,
+      28.8,
+      43.7
     ],
-    "mem": 85.3,
-    "mem_used_gb": 2.89,
+    "mem": 77.4,
+    "mem_used_gb": 3.16,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 79.9,
+    "proc_mem_mb": 157.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 12996800512,
-    "net_tx": 11937993728,
-    "down_kbps": 367.7,
-    "up_kbps": 414.1,
-    "disk_free_gb": 1.9,
+    "net_rx": 13043057664,
+    "net_tx": 12007711744,
+    "down_kbps": 694.1,
+    "up_kbps": 1250.6,
+    "disk_free_gb": 9.0,
     "load": [
-      11.75,
-      10.4,
-      7.89
+      6.25,
+      9.04,
+      7.56
     ],
     "cores": 8
   },
-  "disk_mb": 173.3,
+  "disk_mb": 171.8,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794543296.519835,
-    "next_sync_s": 59,
-    "commits": 48
+    "last_push": 1794543332.61501,
+    "next_sync_s": 296,
+    "commits": 49
   },
   "last_sample": {
     "type": "web image",
-    "topic": "quantum spin systems",
-    "problem": "A magnetic tunnel junction (MTJ) without the top electrode (pillar exposed). Rendered in Blender using an Nvidia RTX 4070 Ti Super GPU.",
-    "solution": "CC BY 4.0",
+    "topic": "p-laplacian",
+    "problem": "N2 2D Electron Density Laplacian Contour generated with Multiwfn. Wavefunction generated with ORCA using CCSD(T) functional and aug-cc-pVQZ basis set.",
+    "solution": "CC0",
     "source": "wikimedia commons"
   }
 }
