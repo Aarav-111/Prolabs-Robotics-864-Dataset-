@@ -2,41 +2,41 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 12.3,
+  "disk_free_gb": 12.2,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794549427.924047,
-  "updated_iso": "2026-11-13T11:27:09",
-  "uptime_s": 64927,
+  "updated": 1794550542.7153962,
+  "updated_iso": "2026-11-13T11:45:42",
+  "uptime_s": 66042,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 247,
+  "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 19,
-    "text": 112,
+    "web_images": 24,
+    "text": 116,
     "archive": 116
   },
-  "waiting": 217,
+  "waiting": 246,
   "processes": 1,
   "fields": {
-    "mathematics": 904267,
-    "computer science": 407346,
-    "physics": 343212,
-    "general": 330180,
+    "mathematics": 922079,
+    "computer science": 417660,
+    "physics": 377888,
+    "general": 344534,
     "engineering": 241024,
-    "chemistry": 137661,
+    "chemistry": 145668,
+    "biology": 135383,
     "statistics": 126739,
-    "biology": 125058,
-    "medicine": 103843,
-    "earth and space": 85339,
-    "economics and finance": 79611,
+    "medicine": 111133,
+    "economics and finance": 92046,
+    "earth and space": 91945,
+    "psychology": 54801,
     "materials science": 51971,
-    "humanities": 47219,
-    "psychology": 44351,
+    "humanities": 48269,
+    "programming": 21014,
     "machine learning": 20661,
-    "programming": 19614,
     "robotics": 3515,
     "general knowledge": 2180
   },
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 31472,
-    "openlifescienceai/medmcqa": 8972,
+    "stack exchange dump": 34637,
+    "openlifescienceai/medmcqa": 9826,
     "qiaojin/PubMedQA": 445,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3069674,
-    "originals": 16703,
-    "variants": 3052971,
-    "web_images": 2802,
+    "text": 3204393,
+    "originals": 17473,
+    "variants": 3186920,
+    "web_images": 2832,
     "synthetic_images": 14064,
-    "images": 16866,
+    "images": 16896,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1681134871,
-    "tasks_done": 60082,
+    "tokens": 1736445381,
+    "tasks_done": 60398,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 3634
+    "preference": 3770
   },
   "by_kind": {
-    "archive": 3459,
-    "text": 4783,
-    "web_images": 5390,
+    "archive": 3621,
+    "text": 4897,
+    "web_images": 5429,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1681134871,
-  "per_min": 42583.2,
+  "tokens": 1736445381,
+  "per_min": 2152.2,
   "topics": {
     "known": 109914,
-    "explored": 16260,
-    "queued": 93538,
+    "explored": 16374,
+    "queued": 93420,
     "space": 6594840,
     "next": [
       [
@@ -135,128 +135,128 @@
         "engineering"
       ],
       [
-        "clinical psychology",
-        "psychology"
-      ],
-      [
         "macroeconomics",
         "economics and finance"
       ],
       [
         "thermodynamic cycles",
         "engineering"
+      ],
+      [
+        "formal logic",
+        "humanities"
       ]
     ],
     "recent": [
       [
-        "stimuli-responsive gels",
-        "materials science",
-        0
+        "matched case-control studies",
+        "mathematics",
+        6945
       ],
       [
-        "values-based leadership",
+        "marine conservation",
+        "earth and space",
+        6606
+      ],
+      [
+        "plasma surface modification",
+        "physics",
+        6080
+      ],
+      [
+        "composite endpoints",
+        "mathematics",
+        6939
+      ],
+      [
+        "employee performance and management",
         "economics and finance",
-        0
+        5649
       ],
       [
-        "agricultural development trends",
-        "economics and finance",
-        0
+        "psychological well-being and life satisfaction",
+        "psychology",
+        3115
       ],
       [
-        "weighted extreme learning machine",
+        "x-ray emission",
+        "physics",
+        10689
+      ],
+      [
+        "antioxidant activity assay",
+        "chemistry",
+        4308
+      ],
+      [
+        "variational method quantum",
+        "physics",
+        11999
+      ],
+      [
+        "action prediction",
+        "psychology",
+        7335
+      ],
+      [
+        "augmented reality applications",
+        "computer science",
+        4744
+      ],
+      [
+        "ground control points",
         "computer science",
         0
-      ],
-      [
-        "module theory",
-        "mathematics",
-        39671
-      ],
-      [
-        "channel coding",
-        "computer science",
-        20425
-      ],
-      [
-        "mapk/erk pathway",
-        "",
-        5402
-      ],
-      [
-        "feature attribution",
-        "computer science",
-        8958
-      ],
-      [
-        "computational mathematics",
-        "mathematics",
-        12785
-      ],
-      [
-        "canonical analysis",
-        "mathematics",
-        6173
-      ],
-      [
-        "geriatric care and nursing homes",
-        "medicine",
-        3189
-      ],
-      [
-        "mathematical and computational methods",
-        "mathematics",
-        2374
       ]
     ],
-    "in_progress": 116,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794549427.8995578,
-    "cpu": 66.1,
+    "time": 1794550542.7145731,
+    "cpu": 57.6,
     "cpu_cores": [
-      61.7,
-      57.8,
-      52.3,
-      50.2,
-      80.6,
-      78.8,
-      77.4,
-      69.9
+      92.2,
+      89.9,
+      89.9,
+      89.9,
+      50.5,
+      26.5,
+      14.8,
+      6.0
     ],
-    "mem": 79.6,
-    "mem_used_gb": 2.94,
+    "mem": 81.0,
+    "mem_used_gb": 2.96,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 155.3,
+    "proc_mem_mb": 167.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 15246424064,
-    "net_tx": 13476428800,
-    "down_kbps": 621.8,
-    "up_kbps": 807.9,
-    "disk_free_gb": 12.3,
+    "net_rx": 15454943232,
+    "net_tx": 13650739200,
+    "down_kbps": 117.5,
+    "up_kbps": 85.4,
+    "disk_free_gb": 12.2,
     "load": [
-      5.67,
-      5.73,
-      5.02
+      4.7,
+      5.91,
+      5.91
     ],
     "cores": 8
   },
-  "disk_mb": 59.1,
+  "disk_mb": 47.6,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794549420.240083,
-    "next_sync_s": 174,
-    "commits": 76
+    "last_push": 1794549642.610015,
+    "next_sync_s": 200,
+    "commits": 78
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "program-related investments",
-    "problem": "Ms. Melinda Payne explains to NAVSUP HQ leadership the shipping and receiving process at FLCSI Site Rota. Transportation warehousing was one of the key areas identified for IT System improvements and infrastructure capacity increases. (U.S. Navy photos by MC2 Drace Wilson/Released)",
-    "solution": "Public domain",
-    "source": "wikimedia commons"
+    "type": "archive Q&A",
+    "topic": "openlifescienceai/medmcqa",
+    "problem": "Q: A patient presented with fever, jaundice & some neuro- logical symptoms in the rainy season, most probable diagnosis is A) Leptospirosis B) Dengue fever C) Brucellosis D) Lyme disease",
+    "solution": "A: Answer: A) Leptospirosis Explanation: Ans a. (Leptospirosis). (Ref. Harrison, Medicine, 18th/Ch. 171)LeptospirosisCausative organism isLeptospira interrogans.Exposure to water contaminated with animal urine.# Maculopapular eruption; conjunctivitis; scleral hemorrhage in some cases.# Fever, haemorrhages, jaundice, renal failure, conjunctival congestion, purpura, big bruising, hematemesis,\u2026",
+    "source": "huggingface"
   }
 }
