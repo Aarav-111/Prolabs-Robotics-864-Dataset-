@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 14.9,
+  "disk_free_gb": 11.5,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794539694.299296,
-  "updated_iso": "2026-11-13T08:44:54",
-  "uptime_s": 55193,
+  "updated": 1794539835.0569751,
+  "updated_iso": "2026-11-13T08:47:15",
+  "uptime_s": 55334,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "web_images": 24
   },
-  "waiting": 222,
+  "waiting": 233,
   "processes": 1,
   "fields": {
     "mathematics": 758924,
@@ -27,7 +27,7 @@
     "physics": 280180,
     "engineering": 215264,
     "statistics": 110972,
-    "chemistry": 108973,
+    "chemistry": 109777,
     "biology": 105209,
     "medicine": 87324,
     "earth and space": 79524,
@@ -36,7 +36,7 @@
     "humanities": 40534,
     "materials science": 39498,
     "machine learning": 20661,
-    "programming": 15541,
+    "programming": 16141,
     "robotics": 3515,
     "general knowledge": 1778
   },
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 21192,
+    "stack exchange dump": 22596,
     "openlifescienceai/medmcqa": 5786,
     "qiaojin/PubMedQA": 96,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 2590837,
-    "originals": 14152,
-    "variants": 2576685,
-    "web_images": 1875,
+    "text": 2592241,
+    "originals": 14158,
+    "variants": 2578083,
+    "web_images": 1911,
     "synthetic_images": 14064,
-    "images": 15939,
+    "images": 15975,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1427503882,
-    "tasks_done": 52255,
+    "tokens": 1428275468,
+    "tasks_done": 52348,
     "tasks_failed": 9,
     "topics_added": 108651,
-    "preference": 2923
+    "preference": 3035
   },
   "by_kind": {
-    "archive": 1565,
-    "text": 2600,
-    "web_images": 1638,
+    "archive": 1593,
+    "text": 2610,
+    "web_images": 1693,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1427503882,
-  "per_min": 0.0,
+  "tokens": 1428275468,
+  "per_min": 588.0,
   "topics": {
     "known": 109914,
-    "explored": 14077,
-    "queued": 95717,
+    "explored": 14087,
+    "queued": 95707,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,56 @@
     ],
     "recent": [
       [
+        "preventive health check-ups",
+        "medicine",
+        0
+      ],
+      [
+        "psycinfo",
+        "",
+        0
+      ],
+      [
+        "hydrogen bond dynamics",
+        "physics",
+        0
+      ],
+      [
+        "movida",
+        "humanities",
+        0
+      ],
+      [
+        "fgfr4 inhibitor",
+        "biology",
+        0
+      ],
+      [
+        "sugarcane diseases",
+        "biology",
+        0
+      ],
+      [
+        "pdf viewer",
+        "economics and finance",
+        0
+      ],
+      [
+        "magnetic phase diagram",
+        "physics",
+        0
+      ],
+      [
+        "academic anxiety",
+        "psychology",
+        0
+      ],
+      [
+        "bonus-malus system",
+        "statistics",
+        0
+      ],
+      [
         "group representations",
         "mathematics",
         39250
@@ -157,106 +207,56 @@
         "geometry problems",
         "mathematics",
         32826
-      ],
-      [
-        "s-plus",
-        "mathematics",
-        39852
-      ],
-      [
-        "automata",
-        "computer science",
-        24362
-      ],
-      [
-        "conic sections",
-        "mathematics",
-        25183
-      ],
-      [
-        "nuclear physics",
-        "physics",
-        16064
-      ],
-      [
-        "computational theory and mathematics",
-        "computer science",
-        6815
-      ],
-      [
-        "co2 fertilization",
-        "biology",
-        4013
-      ],
-      [
-        "student achievement",
-        "",
-        3648
-      ],
-      [
-        "facility location model",
-        "statistics",
-        4156
-      ],
-      [
-        "public policy",
-        "",
-        5336
-      ],
-      [
-        "vhf propagation",
-        "earth and space",
-        3314
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794539694.2985542,
-    "cpu": 16.4,
+    "time": 1794539835.056032,
+    "cpu": 46.0,
     "cpu_cores": [
-      27.3,
-      24.1,
-      19.4,
-      18.9,
-      19.4,
-      11.9,
-      7.8,
-      2.8
+      75.2,
+      73.9,
+      69.5,
+      69.2,
+      28.1,
+      30.6,
+      13.3,
+      7.5
     ],
-    "mem": 80.1,
-    "mem_used_gb": 2.8,
+    "mem": 84.2,
+    "mem_used_gb": 2.52,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 569.9,
+    "proc_mem_mb": 101.0,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 9507603456,
-    "net_tx": 9072835584,
-    "down_kbps": 3291.3,
-    "up_kbps": 1740.9,
-    "disk_free_gb": 14.9,
+    "net_rx": 9629547520,
+    "net_tx": 9182557184,
+    "down_kbps": 507.9,
+    "up_kbps": 281.6,
+    "disk_free_gb": 11.5,
     "load": [
-      2.65,
-      3.35,
-      3.62
+      3.78,
+      3.26,
+      3.52
     ],
     "cores": 8
   },
-  "disk_mb": 498.2,
+  "disk_mb": 491.8,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794539007.961847,
-    "next_sync_s": 290,
-    "commits": 21
+    "last_push": 1794539768.2312891,
+    "next_sync_s": 149,
+    "commits": 22
   },
   "last_sample": {
-    "type": "text",
-    "topic": "group representations",
-    "problem": "Why aren't representations of monoids studied so much? It seems to me like every book on representation theory leaps into groups right away, even though the underlying ideas, such as representations, convolution algebras, etc. don't really make explicit use of inverses. This leads to the fairly natural question of how much of representation theory still works for monoids (or even semigroups)? I\u2026",
-    "solution": "Certainly irreducible representations exist; one can still construct the monoid algebra of a monoid and consider modules over the algebra. But Maschke's theorem is false in general for finite monoids. Indeed, consider the monoid $M = \\langle x | x^3 = x^2 \\rangle$. Complex (for the sake of argument) representations of $M$ are the same as representations of the monoid algebra $\\mathbb{C}[x]/(x^3\u2026",
-    "source": "stackexchange"
+    "type": "web image",
+    "topic": "vehicle dynamics",
+    "problem": "Un itin\u00e9raire, du latin itinerarius qui a le m\u00eame sens, lui-m\u00eame de iter, itineris qui signifie en fran\u00e7ais \u00ab chemin \u00bb, est un parcours, en chemins, sentiers, rues et autres passages habituels, \u00e0 suivre pour se rendre d'un endroit \u00e0 un autre.",
+    "solution": "CC0",
+    "source": "wikimedia commons"
   }
 }
