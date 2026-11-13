@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 13.6,
+  "disk_free_gb": 13.4,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794546373.084725,
-  "updated_iso": "2026-11-13T10:36:13",
-  "uptime_s": 61872,
+  "updated": 1794546673.002068,
+  "updated_iso": "2026-11-13T10:41:13",
+  "uptime_s": 62172,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
     "web_images": 24,
-    "archive": 116,
-    "text": 116
+    "text": 116,
+    "archive": 116
   },
-  "waiting": 249,
+  "waiting": 248,
   "processes": 1,
   "fields": {
     "mathematics": 807998,
@@ -69,21 +69,21 @@
     "text": 2875416,
     "originals": 15679,
     "variants": 2859737,
-    "web_images": 2746,
+    "web_images": 2748,
     "synthetic_images": 14064,
-    "images": 16810,
+    "images": 16812,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1534832257,
-    "tasks_done": 58579,
+    "tasks_done": 59157,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 3387
   },
   "by_kind": {
-    "archive": 3100,
-    "text": 4475,
-    "web_images": 4553,
+    "archive": 3189,
+    "text": 4571,
+    "web_images": 4946,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1534832257,
-  "per_min": 5.8,
+  "per_min": 0.4,
   "topics": {
     "known": 109914,
-    "explored": 15952,
-    "queued": 93842,
+    "explored": 16048,
+    "queued": 93746,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "gaze-based interaction",
-        "computer science",
-        0
-      ],
-      [
-        "left ventricular reconstruction",
-        "medicine",
-        0
-      ],
-      [
-        "cauchy integral formula",
-        "mathematics",
-        0
-      ],
-      [
-        "identity achievement",
-        "psychology",
-        0
-      ],
-      [
-        "unemployment-growth relationship",
-        "economics and finance",
-        0
-      ],
-      [
-        "scutellarein",
-        "medicine",
-        0
-      ],
-      [
-        "ascorbic acid interference",
-        "chemistry",
-        0
-      ],
-      [
-        "ablation",
-        "",
-        0
-      ],
-      [
-        "lego robots",
-        "humanities",
-        0
-      ],
-      [
-        "bees",
+        "neuronbrowser",
         "biology",
         0
       ],
       [
-        "mid-ocean ridge",
-        "earth and space",
+        "organizational manual",
+        "economics and finance",
         0
       ],
       [
-        "amphiphilic block copolymers",
+        "introductory programming",
+        "computer science",
+        0
+      ],
+      [
+        "tensor rank",
+        "mathematics",
+        0
+      ],
+      [
+        "exhaust heat recovery",
+        "engineering",
+        0
+      ],
+      [
+        "x-ray phase-contrast tomography",
+        "physics",
+        0
+      ],
+      [
+        "molecular constants",
         "chemistry",
+        0
+      ],
+      [
+        "toll-like receptor signaling",
+        "biology",
+        0
+      ],
+      [
+        "hot work tool steel",
+        "materials science",
+        0
+      ],
+      [
+        "color calibration",
+        "physics",
+        0
+      ],
+      [
+        "light extraction efficiency",
+        "physics",
+        0
+      ],
+      [
+        "dopo",
+        "materials science",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794546373.084084,
-    "cpu": 26.4,
+    "time": 1794546673.001426,
+    "cpu": 29.1,
     "cpu_cores": [
-      22.4,
-      21.9,
-      17.7,
-      15.3,
-      54.8,
-      50.0,
-      18.5,
-      10.1
+      25.4,
+      21.4,
+      19.5,
+      14.2,
+      59.3,
+      49.8,
+      29.4,
+      14.6
     ],
-    "mem": 54.5,
-    "mem_used_gb": 3.24,
+    "mem": 68.2,
+    "mem_used_gb": 3.89,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 395.2,
+    "proc_mem_mb": 333.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 13940830208,
-    "net_tx": 13074134016,
-    "down_kbps": 113.5,
-    "up_kbps": 76.3,
-    "disk_free_gb": 13.6,
+    "net_rx": 13983280128,
+    "net_tx": 13107917824,
+    "down_kbps": 65.1,
+    "up_kbps": 46.7,
+    "disk_free_gb": 13.4,
     "load": [
-      4.6,
-      5.5,
-      5.48
+      7.94,
+      5.56,
+      5.36
     ],
     "cores": 8
   },
-  "disk_mb": 20.5,
+  "disk_mb": 20.3,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794546148.9514759,
+    "last_push": 1794546382.7544792,
     "next_sync_s": 298,
-    "commits": 72
+    "commits": 73
   },
   "last_sample": {
     "type": "web image",
-    "topic": "optical filter design",
-    "problem": "A spiral galaxy with a secret The NASA/ESA Hubble Space Telescope \u2013 with a little help from an amateur astronomer \u2013 has produced one of the best views yet of nearby spiral galaxy Messier 106. Located a little over 20 million light-years away, practically a neighbour by cosmic standards, Messier 106 is one of the brightest and nearest spiral galaxies to our own. Despite its appearance, which looks much like countless other galaxies, Messier 106 hides a number of secrets. Thanks to this image, which combines data from Hubble with observations by amateur astronomers Robert Gendler and Jay\u2026",
-    "solution": "Public domain",
+    "topic": "queueing models",
+    "problem": "a simple black box diagram",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
