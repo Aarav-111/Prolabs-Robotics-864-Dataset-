@@ -1,15 +1,15 @@
 {
   "state": "running",
   "offline": false,
-  "disk_low": true,
-  "disk_free_gb": 2.7,
+  "disk_low": false,
+  "disk_free_gb": 10.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794554671.480248,
-  "updated_iso": "2026-11-13T12:54:31",
-  "uptime_s": 70171,
+  "updated": 1794555467.5728261,
+  "updated_iso": "2026-11-13T13:07:47",
+  "uptime_s": 70967,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,24 +18,24 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 235,
+  "waiting": 223,
   "processes": 1,
   "fields": {
     "mathematics": 924338,
-    "physics": 502295,
-    "computer science": 449948,
-    "general": 372768,
-    "engineering": 252648,
-    "medicine": 194381,
-    "biology": 183830,
-    "chemistry": 167182,
+    "physics": 502898,
+    "computer science": 454029,
+    "general": 376661,
+    "engineering": 256614,
+    "medicine": 209915,
+    "biology": 184835,
+    "chemistry": 171343,
     "statistics": 126739,
-    "economics and finance": 107489,
+    "economics and finance": 110473,
     "earth and space": 99992,
     "materials science": 71820,
+    "psychology": 67074,
     "humanities": 62280,
-    "psychology": 60932,
-    "programming": 25872,
+    "programming": 26073,
     "machine learning": 20661,
     "robotics": 3515,
     "general knowledge": 2708
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 43580,
+    "stack exchange dump": 43781,
     "openlifescienceai/medmcqa": 12868,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3625281,
-    "originals": 19880,
-    "variants": 3605401,
-    "web_images": 3074,
+    "text": 3667851,
+    "originals": 20145,
+    "variants": 3647706,
+    "web_images": 3156,
     "synthetic_images": 14064,
-    "images": 17138,
+    "images": 17220,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1973209026,
-    "tasks_done": 61470,
+    "tokens": 1991952018,
+    "tasks_done": 62054,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 4439
+    "preference": 4581
   },
   "by_kind": {
-    "archive": 4127,
-    "text": 5266,
-    "web_images": 5626,
+    "archive": 4397,
+    "text": 5496,
+    "web_images": 5710,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1973209026,
-  "per_min": 1471.8,
+  "tokens": 1991952018,
+  "per_min": 381.3,
   "topics": {
     "known": 109914,
-    "explored": 16743,
-    "queued": 93051,
+    "explored": 16973,
+    "queued": 92821,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "dental laboratory workers",
-        "medicine",
-        3814
-      ],
-      [
-        "conducting liquid",
-        "engineering",
+        "cycloadducts",
+        "chemistry",
         0
       ],
       [
-        "x-ray absorption fine structure",
-        "physics",
-        0
-      ],
-      [
-        "locum doctors",
-        "medicine",
-        0
-      ],
-      [
-        "public opinion",
+        "multiplex",
         "",
         0
       ],
       [
-        "phonological adaptation",
-        "humanities",
+        "surviving sepsis campaign",
+        "medicine",
         0
       ],
       [
-        "operationalization",
+        "pre-exposure prophylaxis",
+        "medicine",
+        5504
+      ],
+      [
+        "one-carbon metabolism",
+        "medicine",
+        4507
+      ],
+      [
+        "adrenocorticotropic hormone",
         "",
-        0
+        3541
       ],
       [
-        "quantum critical point",
+        "infant sleep training",
+        "medicine",
+        3734
+      ],
+      [
+        "workplace hiv prevention",
+        "economics and finance",
+        2984
+      ],
+      [
+        "error correcting code techniques",
+        "computer science",
+        4081
+      ],
+      [
+        "optical torque",
         "physics",
         0
       ],
       [
-        "painted turtle",
-        "earth and space",
-        0
+        "bereaved families",
+        "psychology",
+        2262
       ],
       [
-        "mics band",
-        "engineering",
-        0
-      ],
-      [
-        "good manufacturing practices",
-        "biology",
-        0
-      ],
-      [
-        "greenhouse gas monitoring",
-        "earth and space",
+        "rainfall shocks",
+        "economics and finance",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794554671.4772549,
-    "cpu": 96.7,
+    "time": 1794555467.571619,
+    "cpu": 27.9,
     "cpu_cores": [
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      92.6,
-      94.4,
-      89.4,
-      96.8
+      39.3,
+      32.7,
+      33.2,
+      29.2,
+      32.7,
+      30.1,
+      17.6,
+      8.8
     ],
-    "mem": 81.7,
-    "mem_used_gb": 2.86,
+    "mem": 77.3,
+    "mem_used_gb": 3.18,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 62.8,
+    "proc_mem_mb": 201.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 17382728704,
-    "net_tx": 15477193728,
-    "down_kbps": 119.0,
-    "up_kbps": 371.4,
-    "disk_free_gb": 2.6,
+    "net_rx": 19166005248,
+    "net_tx": 16605313024,
+    "down_kbps": 354.6,
+    "up_kbps": 261.2,
+    "disk_free_gb": 10.1,
     "load": [
-      13.44,
-      7.26,
-      6.48
+      6.24,
+      7.34,
+      7.28
     ],
     "cores": 8
   },
-  "disk_mb": 73.1,
+  "disk_mb": 78.8,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (6 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794554559.4264371,
-    "next_sync_s": 18,
-    "commits": 92
+    "last_push": 1794554732.932401,
+    "next_sync_s": 263,
+    "commits": 93
   },
   "last_sample": {
     "type": "web image",
-    "topic": "osteoprotegerin",
-    "problem": "Figure 1. Schematic graph illustrates the mechanisms of DF/DFPCs in regulating osteoclast formation and osteoblast differentiation during tooth eruption. Colony-stimulating factor-one (CSF-1), monocyte chemotactic protein-1 (MCP-1), endothelial monocyte-activating polypeptide-2 (EMAP-2), receptor activator of nuclear factor kappa ligand (RANKL), osteoprotegerin (OPG), parathyroid hormone related peptide (PTHrP), vascular endothelial growth factor (VEGF), collagen type 1 (Col1), alkaline phosphatase (ALP), bone morphogenetic protein 6 (BMP6) and parathyroid hormone 1 receptor (PTH1R).",
-    "solution": "CC BY 4.0",
+    "topic": "pre-exposure prophylaxis",
+    "problem": "A bottle of Descovy for PrEP (pre-exposure prophylaxis) from Gilead Sciences, a pharmaceutical company. Descovy is a combination of emtricitabine and tenofovir alafenamide and is used to prevent an HIV infection. Descovy is an alternative to Truvada.",
+    "solution": "CC BY 2.0",
     "source": "wikimedia commons"
   }
 }
