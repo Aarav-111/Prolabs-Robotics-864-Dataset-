@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 12.7,
+  "disk_free_gb": 12.3,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794549374.191149,
-  "updated_iso": "2026-11-13T11:26:14",
-  "uptime_s": 64873,
+  "updated": 1794549420.689852,
+  "updated_iso": "2026-11-13T11:27:00",
+  "uptime_s": 64920,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 188,
+  "waiting": 254,
   "processes": 1,
   "fields": {
     "mathematics": 904267,
@@ -69,13 +69,13 @@
     "text": 3069674,
     "originals": 16703,
     "variants": 3052971,
-    "web_images": 2790,
+    "web_images": 2802,
     "synthetic_images": 14064,
-    "images": 16854,
+    "images": 16866,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1681134871,
-    "tasks_done": 60066,
+    "tasks_done": 60068,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 3634
@@ -83,7 +83,7 @@
   "by_kind": {
     "archive": 3459,
     "text": 4779,
-    "web_images": 5377,
+    "web_images": 5379,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,7 +91,7 @@
     "seed_concepts": 0
   },
   "tokens": 1681134871,
-  "per_min": 65599.6,
+  "per_min": 44694.9,
   "topics": {
     "known": 109914,
     "explored": 16256,
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794549374.184334,
-    "cpu": 70.7,
+    "time": 1794549420.6888041,
+    "cpu": 32.8,
     "cpu_cores": [
-      81.5,
-      78.7,
-      77.3,
-      75.2,
-      61.4,
-      64.7,
-      55.1,
-      72.0
+      50.5,
+      48.1,
+      42.8,
+      29.4,
+      27.6,
+      36.3,
+      18.0,
+      10.1
     ],
-    "mem": 84.9,
-    "mem_used_gb": 3.64,
+    "mem": 78.2,
+    "mem_used_gb": 3.0,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 380.8,
+    "proc_mem_mb": 78.3,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 15206514688,
-    "net_tx": 13418358784,
-    "down_kbps": 716.8,
-    "up_kbps": 379.3,
-    "disk_free_gb": 12.7,
+    "net_rx": 15243972608,
+    "net_tx": 13473603584,
+    "down_kbps": 44.3,
+    "up_kbps": 32.0,
+    "disk_free_gb": 12.3,
     "load": [
-      6.74,
       5.81,
-      4.99
+      5.76,
+      5.02
     ],
     "cores": 8
   },
-  "disk_mb": 81.0,
+  "disk_mb": 59.1,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794549368.129162,
-    "next_sync_s": 227,
-    "commits": 75
+    "last_push": 1794549420.240083,
+    "next_sync_s": 181,
+    "commits": 76
   },
   "last_sample": {
     "type": "web image",
-    "topic": "environmental impact of oil production",
-    "problem": "The N'Kossa site off the coast of Congo was the subject of environmental monitoring to determine the evolution of the impacts of oil production activities on the natural environment. In these images, the crew is collecting sediments using a grab.",
-    "solution": "CC BY 4.0",
+    "topic": "program-related investments",
+    "problem": "Ms. Melinda Payne explains to NAVSUP HQ leadership the shipping and receiving process at FLCSI Site Rota. Transportation warehousing was one of the key areas identified for IT System improvements and infrastructure capacity increases. (U.S. Navy photos by MC2 Drace Wilson/Released)",
+    "solution": "Public domain",
     "source": "wikimedia commons"
   }
 }
