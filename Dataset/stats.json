@@ -1,15 +1,15 @@
 {
   "state": "running",
   "offline": false,
-  "disk_low": false,
-  "disk_free_gb": 10.5,
+  "disk_low": true,
+  "disk_free_gb": 4.9,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794551776.287075,
-  "updated_iso": "2026-11-13T12:06:16",
-  "uptime_s": 67275,
+  "updated": 1794551897.675061,
+  "updated_iso": "2026-11-13T12:08:17",
+  "uptime_s": 67397,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,16 +18,16 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 248,
+  "waiting": 251,
   "processes": 1,
   "fields": {
-    "mathematics": 923607,
+    "mathematics": 923969,
     "computer science": 434959,
     "physics": 404702,
     "general": 344534,
     "engineering": 246930,
-    "chemistry": 153173,
-    "medicine": 142458,
+    "chemistry": 155720,
+    "medicine": 143271,
     "biology": 141763,
     "statistics": 126739,
     "economics and finance": 92046,
@@ -35,7 +35,7 @@
     "psychology": 59726,
     "materials science": 53915,
     "humanities": 49644,
-    "programming": 23574,
+    "programming": 24454,
     "machine learning": 20661,
     "robotics": 3515,
     "general knowledge": 2180
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 37691,
-    "openlifescienceai/medmcqa": 11883,
-    "qiaojin/PubMedQA": 1530,
+    "stack exchange dump": 39287,
+    "openlifescienceai/medmcqa": 12303,
+    "qiaojin/PubMedQA": 1923,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3311954,
-    "originals": 18105,
-    "variants": 3293849,
-    "web_images": 2873,
+    "text": 3316556,
+    "originals": 18120,
+    "variants": 3298436,
+    "web_images": 2899,
     "synthetic_images": 14064,
-    "images": 16937,
+    "images": 16963,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1784445615,
-    "tasks_done": 60710,
+    "tokens": 1786564898,
+    "tasks_done": 60771,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 4053
+    "preference": 4154
   },
   "by_kind": {
-    "archive": 3783,
-    "text": 5013,
-    "web_images": 5463,
+    "archive": 3820,
+    "text": 5017,
+    "web_images": 5483,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1784445615,
-  "per_min": 1494.2,
+  "tokens": 1786564898,
+  "per_min": 1953.7,
   "topics": {
     "known": 109914,
-    "explored": 16490,
-    "queued": 93304,
+    "explored": 16494,
+    "queued": 93300,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,26 @@
     ],
     "recent": [
       [
+        "thermal diffusion coefficient",
+        "chemistry",
+        2193
+      ],
+      [
+        "antibody titer",
+        "",
+        0
+      ],
+      [
+        "continental drift",
+        "earth and space",
+        0
+      ],
+      [
+        "flow-electrode capacitive deionization",
+        "engineering",
+        0
+      ],
+      [
         "presence",
         "computer science",
         5193
@@ -187,76 +207,56 @@
         "scientific research and discoveries",
         "physics",
         2246
-      ],
-      [
-        "photons",
-        "physics",
-        2748
-      ],
-      [
-        "stellar, planetary, and galactic studies",
-        "physics",
-        5732
-      ],
-      [
-        "elastic contact problems",
-        "engineering",
-        3192
-      ],
-      [
-        "hemoglobin-based oxygen carriers",
-        "biology",
-        3649
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794551776.285012,
-    "cpu": 100.0,
+    "time": 1794551897.6729531,
+    "cpu": 72.6,
     "cpu_cores": [
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      100.0
+      56.5,
+      52.6,
+      46.9,
+      45.9,
+      95.3,
+      95.2,
+      94.7,
+      92.9
     ],
-    "mem": 73.9,
-    "mem_used_gb": 3.52,
+    "mem": 78.7,
+    "mem_used_gb": 3.08,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 63.2,
+    "proc_mem_mb": 77.7,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 17048379392,
-    "net_tx": 14584992768,
-    "down_kbps": 125.4,
-    "up_kbps": 78.1,
-    "disk_free_gb": 10.5,
+    "net_rx": 16409143296,
+    "net_tx": 14654912512,
+    "down_kbps": 64.1,
+    "up_kbps": 46.2,
+    "disk_free_gb": 4.7,
     "load": [
-      20.75,
-      11.58,
-      8.1
+      18.54,
+      13.85,
+      9.46
     ],
     "cores": 8
   },
-  "disk_mb": 49.6,
+  "disk_mb": 24.2,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794551771.9633589,
-    "next_sync_s": 135,
-    "commits": 80
+    "last_push": 1794551812.7920902,
+    "next_sync_s": 13,
+    "commits": 81
   },
   "last_sample": {
-    "type": "archive Q&A",
-    "topic": "stack exchange dump",
-    "problem": "Q: Let's practise this one: I programmed a lot in java and know the basics of python and sometimes I play with c++... And those are all High Level Programming Languages and they're great and all but I was curious about how things worked at a deeper level in this case assembly language... I started to learn assembly for the x86 processor and chose NASM as my assembler. I spent some time learning\u2026",
-    "solution": "A: Let's walk through it together. First off, you cannot... I repeat, you cannot compare Assembly to any High Level Language! How they store and interact with data is totally different. They do it their way to make the programmers life easier. If you want to store the ASCII code of a char as a DWORD, go ahead. In Assembly, there is absolutely no hand holding. The CPU has no idea what you want to\u2026",
-    "source": "stackexchange"
+    "type": "web image",
+    "topic": "operator ideals",
+    "problem": "View of the temporary exhibition Changing ideals - re-thinking the house in NAi Maastricht (re-named Bureau Europa) in Maastricht, Netherlands.",
+    "solution": "CC BY-SA 2.0",
+    "source": "wikimedia commons"
   }
 }
