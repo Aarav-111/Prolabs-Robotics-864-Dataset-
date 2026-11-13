@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794549420.689852,
-  "updated_iso": "2026-11-13T11:27:00",
-  "uptime_s": 64920,
+  "updated": 1794549427.924047,
+  "updated_iso": "2026-11-13T11:27:09",
+  "uptime_s": 64927,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 247,
   "busy_by_kind": {
-    "web_images": 24,
-    "text": 116,
+    "web_images": 19,
+    "text": 112,
     "archive": 116
   },
-  "waiting": 254,
+  "waiting": 217,
   "processes": 1,
   "fields": {
     "mathematics": 904267,
@@ -75,15 +75,15 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1681134871,
-    "tasks_done": 60068,
+    "tasks_done": 60082,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 3634
   },
   "by_kind": {
     "archive": 3459,
-    "text": 4779,
-    "web_images": 5379,
+    "text": 4783,
+    "web_images": 5390,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,10 +91,10 @@
     "seed_concepts": 0
   },
   "tokens": 1681134871,
-  "per_min": 44694.9,
+  "per_min": 42583.2,
   "topics": {
     "known": 109914,
-    "explored": 16256,
+    "explored": 16260,
     "queued": 93538,
     "space": 6594840,
     "next": [
@@ -149,6 +149,26 @@
     ],
     "recent": [
       [
+        "stimuli-responsive gels",
+        "materials science",
+        0
+      ],
+      [
+        "values-based leadership",
+        "economics and finance",
+        0
+      ],
+      [
+        "agricultural development trends",
+        "economics and finance",
+        0
+      ],
+      [
+        "weighted extreme learning machine",
+        "computer science",
+        0
+      ],
+      [
         "module theory",
         "mathematics",
         39671
@@ -187,58 +207,38 @@
         "mathematical and computational methods",
         "mathematics",
         2374
-      ],
-      [
-        "nonlinear operators",
-        "mathematics",
-        6210
-      ],
-      [
-        "incompressible fluid",
-        "mathematics",
-        9771
-      ],
-      [
-        "topological data analysis",
-        "computer science",
-        3017
-      ],
-      [
-        "ebola virus disease",
-        "medicine",
-        4960
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 116,
     "focus_left": 0
   },
   "system": {
-    "time": 1794549420.6888041,
-    "cpu": 32.8,
+    "time": 1794549427.8995578,
+    "cpu": 66.1,
     "cpu_cores": [
-      50.5,
-      48.1,
-      42.8,
-      29.4,
-      27.6,
-      36.3,
-      18.0,
-      10.1
+      61.7,
+      57.8,
+      52.3,
+      50.2,
+      80.6,
+      78.8,
+      77.4,
+      69.9
     ],
-    "mem": 78.2,
-    "mem_used_gb": 3.0,
+    "mem": 79.6,
+    "mem_used_gb": 2.94,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 78.3,
+    "proc_mem_mb": 155.3,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 15243972608,
-    "net_tx": 13473603584,
-    "down_kbps": 44.3,
-    "up_kbps": 32.0,
+    "net_rx": 15246424064,
+    "net_tx": 13476428800,
+    "down_kbps": 621.8,
+    "up_kbps": 807.9,
     "disk_free_gb": 12.3,
     "load": [
-      5.81,
-      5.76,
+      5.67,
+      5.73,
       5.02
     ],
     "cores": 8
@@ -249,7 +249,7 @@
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 1794549420.240083,
-    "next_sync_s": 181,
+    "next_sync_s": 174,
     "commits": 76
   },
   "last_sample": {
