@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 15.6,
+  "disk_free_gb": 15.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794541025.782466,
-  "updated_iso": "2026-11-13T09:07:05",
-  "uptime_s": 56525,
+  "updated": 1794541051.240253,
+  "updated_iso": "2026-11-13T09:07:31",
+  "uptime_s": 56550,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 255,
+  "in_flight": 256,
   "busy_by_kind": {
     "web_images": 24,
-    "text": 115,
+    "text": 116,
     "archive": 116
   },
-  "waiting": 237,
+  "waiting": 233,
   "processes": 1,
   "fields": {
     "mathematics": 773450,
@@ -69,21 +69,21 @@
     "text": 2680669,
     "originals": 14654,
     "variants": 2666015,
-    "web_images": 2082,
+    "web_images": 2089,
     "synthetic_images": 14064,
-    "images": 16146,
+    "images": 16153,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1461523809,
-    "tasks_done": 53045,
+    "tasks_done": 53054,
     "tasks_failed": 9,
     "topics_added": 108651,
     "preference": 3159
   },
   "by_kind": {
     "archive": 1848,
-    "text": 2933,
-    "web_images": 1812,
+    "text": 2939,
+    "web_images": 1815,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1461523809,
-  "per_min": 908.7,
+  "per_min": 905.8,
   "topics": {
     "known": 109914,
-    "explored": 14410,
-    "queued": 95385,
+    "explored": 14416,
+    "queued": 95378,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,36 @@
     ],
     "recent": [
       [
+        "camac",
+        "engineering",
+        0
+      ],
+      [
+        "perceived security",
+        "statistics",
+        0
+      ],
+      [
+        "agreement measures",
+        "statistics",
+        0
+      ],
+      [
+        "video watermarking",
+        "computer science",
+        0
+      ],
+      [
+        "graph exploration",
+        "mathematics",
+        0
+      ],
+      [
+        "aquatic plants",
+        "biology",
+        0
+      ],
+      [
         "quantum cellular automata",
         "computer science",
         0
@@ -177,86 +207,56 @@
         "inverse source problem",
         "mathematics",
         0
-      ],
-      [
-        "few-cycle pulses",
-        "physics",
-        0
-      ],
-      [
-        "schizoid personality disorder",
-        "psychology",
-        0
-      ],
-      [
-        "computational ghost imaging",
-        "physics",
-        0
-      ],
-      [
-        "airline competition",
-        "economics and finance",
-        0
-      ],
-      [
-        "berry weight",
-        "biology",
-        0
-      ],
-      [
-        "enzyme kinetics",
-        "chemistry",
-        0
       ]
     ],
-    "in_progress": 119,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794541025.781733,
-    "cpu": 21.5,
+    "time": 1794541051.23947,
+    "cpu": 31.1,
     "cpu_cores": [
-      28.9,
-      26.7,
-      23.9,
-      22.0,
-      29.4,
-      23.3,
-      12.7,
-      5.5
+      18.2,
+      16.7,
+      12.3,
+      9.4,
+      64.2,
+      54.2,
+      46.2,
+      27.4
     ],
-    "mem": 75.0,
-    "mem_used_gb": 3.14,
+    "mem": 76.9,
+    "mem_used_gb": 2.99,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 290.8,
+    "proc_mem_mb": 176.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 11963023360,
-    "net_tx": 10783587328,
-    "down_kbps": 3167.4,
-    "up_kbps": 1633.1,
-    "disk_free_gb": 15.6,
+    "net_rx": 11999286272,
+    "net_tx": 10811368448,
+    "down_kbps": 172.8,
+    "up_kbps": 107.7,
+    "disk_free_gb": 15.1,
     "load": [
-      3.54,
-      4.34,
-      4.8
+      3.67,
+      4.3,
+      4.77
     ],
     "cores": 8
   },
-  "disk_mb": 312.4,
+  "disk_mb": 314.5,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794540954.000577,
-    "next_sync_s": 170,
-    "commits": 32
+    "last_push": 1794541049.916171,
+    "next_sync_s": 145,
+    "commits": 33
   },
   "last_sample": {
     "type": "web image",
-    "topic": "coherent risk measures",
-    "problem": "On Saturday 25 February 2023, Jeremy Corbyn suddenly appeared amid a Peace Now demonstration, and gave an unscheduled speech to hundreds of anti-war demonstrators at the junction of Riding House Street and Langham Place in central London. This photo was taken at the very last moment as he concluded, demanding the United States and the United Kingdom at least consider the possibility of a peaceful resolution to the conflict through negotiation. PEACE TALKS NOW. Almost all the protesters agreed that their main demand was for a greater effort to end the horrific conflict in Ukraine, in which\u2026",
-    "solution": "CC BY-SA 2.0",
+    "topic": "plasmons",
+    "problem": "Metal box of Plasmon biscuits (1kg) early '60s",
+    "solution": "CC BY-SA 3.0",
     "source": "wikimedia commons"
   }
 }
