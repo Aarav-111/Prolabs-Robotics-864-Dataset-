@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794540274.293157,
-  "updated_iso": "2026-11-13T08:54:34",
-  "uptime_s": 55773,
+  "updated": 1794540284.833996,
+  "updated_iso": "2026-11-13T08:54:44",
+  "uptime_s": 55784,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 255,
+  "in_flight": 256,
   "busy_by_kind": {
     "text": 116,
-    "web_images": 23,
+    "web_images": 24,
     "archive": 116
   },
-  "waiting": 232,
+  "waiting": 252,
   "processes": 1,
   "fields": {
     "mathematics": 766599,
@@ -36,9 +36,9 @@
     "humanities": 40534,
     "materials science": 39498,
     "machine learning": 20661,
-    "programming": 16429,
+    "programming": 16831,
     "robotics": 3515,
-    "general knowledge": 1778
+    "general knowledge": 1979
   },
   "topic_fields": {
     "": 7597,
@@ -60,38 +60,38 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 22884,
+    "stack exchange dump": 23487,
     "openlifescienceai/medmcqa": 5786,
     "qiaojin/PubMedQA": 96,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 2636967,
-    "originals": 14411,
-    "variants": 2622556,
-    "web_images": 1941,
+    "text": 2637570,
+    "originals": 14414,
+    "variants": 2623156,
+    "web_images": 1945,
     "synthetic_images": 14064,
-    "images": 16005,
+    "images": 16009,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1444511660,
-    "tasks_done": 52611,
+    "tokens": 1444814173,
+    "tasks_done": 52623,
     "tasks_failed": 9,
     "topics_added": 108651,
-    "preference": 3076
+    "preference": 3130
   },
   "by_kind": {
-    "archive": 1714,
+    "archive": 1725,
     "text": 2722,
-    "web_images": 1723,
+    "web_images": 1724,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1444511660,
-  "per_min": 8486.3,
+  "tokens": 1444814173,
+  "per_min": 8616.7,
   "topics": {
     "known": 109914,
     "explored": 14199,
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794540274.260677,
-    "cpu": 82.7,
+    "time": 1794540284.830679,
+    "cpu": 46.4,
     "cpu_cores": [
-      83.2,
-      81.4,
-      78.9,
-      76.9,
-      84.6,
-      89.4,
-      82.9,
-      84.6
+      44.2,
+      41.1,
+      36.1,
+      31.8,
+      54.5,
+      65.3,
+      57.3,
+      41.1
     ],
-    "mem": 84.0,
-    "mem_used_gb": 2.45,
+    "mem": 84.1,
+    "mem_used_gb": 2.49,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 315.6,
+    "proc_mem_mb": 116.8,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 10182275072,
-    "net_tx": 9494121472,
-    "down_kbps": 1206.4,
-    "up_kbps": 645.5,
+    "net_rx": 10205433856,
+    "net_tx": 9506490368,
+    "down_kbps": 3062.9,
+    "up_kbps": 1578.4,
     "disk_free_gb": 12.2,
     "load": [
-      6.98,
-      6.28,
-      5.19
+      7.72,
+      6.47,
+      5.27
     ],
     "cores": 8
   },
   "disk_mb": 503.0,
   "github": {
-    "state": "error",
-    "error": "RuntimeError: GitHub does not show the new commit yet - local copies kept, retrying next sync",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794539768.2312891,
-    "next_sync_s": 10,
-    "commits": 22
+    "last_push": 1794540284.111236,
+    "next_sync_s": 0,
+    "commits": 23
   },
   "last_sample": {
     "type": "archive Q&A",
     "topic": "stack exchange dump",
-    "problem": "I found this in the book The Red Badge of Courage by Stephen Crane: - A folded tent was serving as a roof. The sunlight, without, beating upon it, made it glow a light yellow shade. Maybe the expression glow with (something) is used here, but omitting with?",
-    "solution": "Collins Cobuild English Grammar [\u00a73.156] lists different semantic classes of verbs that may be used in a depictive 'verb with complement' construction. A classic example of a 'link-like' (ie copular/linking, but also having semantic content, unlike 'be') depictive construction is - She stood motionless for several seconds. In the 'have a particular appearance' [my term] semantic subcategory,\u2026",
+    "problem": "As the title asks, why did the Django guys decide to implement the request.POST object with a querydict (which, of course, in turn, makes the whole thing immutable?) I know you can mutify it by making a copy of the post data ``` post = request.POST.copy() ``` but why do this? Surely it would be simpler just to allow the thing to be mutable anyway? Or is it being used for some other reason too\u2026",
+    "solution": "It's a bit of a mystery, isn't it? Several superficially plausible theories turn out to be wrong on investigation: - So that the `POST` object doesn't have to implement mutation methods? No: the `POST` object belongs to the `django.http.QueryDict` class, which implements a full set of mutation methods including `__setitem__`, `__delitem__`, `pop` and `clear`. It implements immutability by\u2026",
     "source": "stackexchange"
   }
 }
