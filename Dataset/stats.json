@@ -1,27 +1,27 @@
 {
   "state": "running",
   "offline": false,
-  "disk_low": false,
-  "disk_free_gb": 5.5,
+  "disk_low": true,
+  "disk_free_gb": 1.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794541253.223707,
-  "updated_iso": "2026-11-13T09:10:53",
-  "uptime_s": 56752,
+  "updated": 1794541302.302269,
+  "updated_iso": "2026-11-13T09:11:42",
+  "uptime_s": 56802,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 234,
   "busy_by_kind": {
-    "web_images": 24,
-    "text": 116,
+    "web_images": 15,
+    "text": 103,
     "archive": 116
   },
-  "waiting": 243,
+  "waiting": 229,
   "processes": 1,
   "fields": {
-    "mathematics": 773450,
+    "mathematics": 775625,
     "computer science": 322577,
     "general": 313981,
     "physics": 294155,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 2680669,
-    "originals": 14654,
-    "variants": 2666015,
-    "web_images": 2150,
+    "text": 2682844,
+    "originals": 14666,
+    "variants": 2668178,
+    "web_images": 2168,
     "synthetic_images": 14064,
-    "images": 16214,
+    "images": 16232,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1461523809,
-    "tasks_done": 53308,
+    "tokens": 1462200826,
+    "tasks_done": 53334,
     "tasks_failed": 9,
     "topics_added": 108651,
     "preference": 3159
   },
   "by_kind": {
     "archive": 1964,
-    "text": 3026,
-    "web_images": 1866,
+    "text": 3043,
+    "web_images": 1875,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1461523809,
-  "per_min": 16.5,
+  "tokens": 1462200826,
+  "per_min": 456.9,
   "topics": {
     "known": 109914,
-    "explored": 14503,
-    "queued": 95291,
+    "explored": 14520,
+    "queued": 95287,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "random undersampling",
-        "computer science",
-        0
-      ],
-      [
-        "vanadium coordination compounds",
-        "chemistry",
-        0
-      ],
-      [
-        "animal disease management and epidemiology",
-        "biology",
-        0
-      ],
-      [
-        "submanifolds",
+        "metric measure spaces",
         "mathematics",
-        0
+        1266
       ],
       [
-        "cold box process",
-        "engineering",
-        0
-      ],
-      [
-        "hypercomplex analysis",
+        "eigenvalue asymptotics",
         "mathematics",
-        0
+        909
       ],
       [
-        "sentence scoring",
-        "computer science",
-        0
-      ],
-      [
-        "swan wave model",
-        "earth and space",
-        0
-      ],
-      [
-        "bose-einstein condensate",
-        "physics",
-        0
-      ],
-      [
-        "defect layer",
-        "physics",
-        0
-      ],
-      [
-        "head injury",
+        "battlefield",
         "",
         0
       ],
       [
-        "group actions on c*-algebras",
+        "consumer perception and purchasing behavior",
+        "economics and finance",
+        0
+      ],
+      [
+        "sustainable building certification",
+        "engineering",
+        0
+      ],
+      [
+        "task resumption",
+        "statistics",
+        0
+      ],
+      [
+        "actuation strain",
+        "materials science",
+        0
+      ],
+      [
+        "radiochemistry terminology",
+        "physics",
+        0
+      ],
+      [
+        "unreinforced masonry",
+        "engineering",
+        0
+      ],
+      [
+        "baire category theorem",
         "mathematics",
+        0
+      ],
+      [
+        "ldpc decoding",
+        "computer science",
+        0
+      ],
+      [
+        "star formation rate",
+        "physics",
         0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 107,
     "focus_left": 0
   },
   "system": {
-    "time": 1794541253.2227972,
-    "cpu": 59.5,
+    "time": 1794541302.3009868,
+    "cpu": 42.7,
     "cpu_cores": [
-      34.7,
-      32.8,
-      26.7,
-      24.6,
-      88.9,
-      87.9,
-      90.9,
-      87.9
+      35.7,
+      32.2,
+      24.5,
+      22.0,
+      77.1,
+      61.2,
+      50.7,
+      37.4
     ],
-    "mem": 76.6,
-    "mem_used_gb": 3.12,
+    "mem": 80.3,
+    "mem_used_gb": 2.83,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 115.6,
+    "proc_mem_mb": 86.6,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 12106870784,
-    "net_tx": 10947864576,
-    "down_kbps": 329.3,
-    "up_kbps": 617.4,
-    "disk_free_gb": 5.1,
+    "net_rx": 12134398976,
+    "net_tx": 10985088000,
+    "down_kbps": 119.2,
+    "up_kbps": 73.8,
+    "disk_free_gb": 0.9,
     "load": [
-      8.29,
-      5.55,
+      6.78,
+      5.48,
       5.12
     ],
     "cores": 8
   },
-  "disk_mb": 279.7,
+  "disk_mb": 282.0,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794541163.250148,
-    "next_sync_s": 244,
-    "commits": 36
+    "last_push": 1794541300.147723,
+    "next_sync_s": 195,
+    "commits": 37
   },
   "last_sample": {
     "type": "web image",
-    "topic": "european labour market",
-    "problem": "Working nine to five, it\u2019s not a way to make a living. At least, if you\u2019re a woman, your terms and conditions in Europe may not be as good as your male counterparts. The Euranet Plus radio network brought you a live studio debate from the European Parliament to discuss EU labour markets. Get the guest list, the audio and video recordings of the debate and all other details at euranetplus-inside.eu/citizens-corner-debate-on-gender-eq... Part 1/2 | Croatian | moderator Barbara Perani\u0107 | guests: - Biljana BORZAN, MEP, Croatia, Group of the Progressive Alliance of Socialists and Democrats in the\u2026",
-    "solution": "CC BY-SA 2.0",
+    "topic": "tax base erosion",
+    "problem": "The ratio of gross national income (GNI) to gross domestic product (GDP) from 2020 World Bank data (constant US$) indicates a profound disproportionality in some notable corporate havens as Ireland and Luxembourg.",
+    "solution": "CC0",
     "source": "wikimedia commons"
   }
 }
