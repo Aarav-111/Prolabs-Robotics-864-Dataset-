@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.6,
+  "disk_free_gb": 10.5,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794551688.107413,
-  "updated_iso": "2026-11-13T12:04:48",
-  "uptime_s": 67187,
+  "updated": 1794551776.287075,
+  "updated_iso": "2026-11-13T12:06:16",
+  "uptime_s": 67275,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 53,
+  "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 10,
-    "archive": 22,
-    "text": 21
+    "web_images": 24,
+    "text": 116,
+    "archive": 116
   },
-  "waiting": 43,
+  "waiting": 248,
   "processes": 1,
   "fields": {
     "mathematics": 923607,
@@ -27,15 +27,15 @@
     "general": 344534,
     "engineering": 246930,
     "chemistry": 153173,
+    "medicine": 142458,
     "biology": 141763,
-    "medicine": 141681,
     "statistics": 126739,
     "economics and finance": 92046,
     "earth and space": 91945,
     "psychology": 59726,
     "materials science": 53915,
     "humanities": 49644,
-    "programming": 22168,
+    "programming": 23574,
     "machine learning": 20661,
     "robotics": 3515,
     "general knowledge": 2180
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 36285,
-    "openlifescienceai/medmcqa": 11106,
+    "stack exchange dump": 37691,
+    "openlifescienceai/medmcqa": 11883,
     "qiaojin/PubMedQA": 1530,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3309771,
-    "originals": 18098,
-    "variants": 3291673,
-    "web_images": 2860,
+    "text": 3311954,
+    "originals": 18105,
+    "variants": 3293849,
+    "web_images": 2873,
     "synthetic_images": 14064,
-    "images": 16924,
+    "images": 16937,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1783535209,
-    "tasks_done": 60645,
+    "tokens": 1784445615,
+    "tasks_done": 60710,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 3900
+    "preference": 4053
   },
   "by_kind": {
-    "archive": 3737,
+    "archive": 3783,
     "text": 5013,
-    "web_images": 5444,
+    "web_images": 5463,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1783535209,
-  "per_min": 0.0,
+  "tokens": 1784445615,
+  "per_min": 1494.2,
   "topics": {
     "known": 109914,
     "explored": 16490,
-    "queued": 93399,
+    "queued": 93304,
     "space": 6594840,
     "next": [
       [
@@ -209,54 +209,54 @@
         3649
       ]
     ],
-    "in_progress": 25,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794551688.095834,
-    "cpu": 45.5,
+    "time": 1794551776.285012,
+    "cpu": 100.0,
     "cpu_cores": [
-      38.8,
-      36.3,
-      32.6,
-      30.5,
-      63.7,
-      61.0,
-      52.1,
-      48.5
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0
     ],
-    "mem": 80.2,
-    "mem_used_gb": 2.9,
+    "mem": 73.9,
+    "mem_used_gb": 3.52,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 540.2,
-    "threads": 259,
+    "proc_mem_mb": 63.2,
+    "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 16880030720,
-    "net_tx": 14459703296,
-    "down_kbps": 1225.5,
-    "up_kbps": 679.9,
-    "disk_free_gb": 10.6,
+    "net_rx": 17048379392,
+    "net_tx": 14584992768,
+    "down_kbps": 125.4,
+    "up_kbps": 78.1,
+    "disk_free_gb": 10.5,
     "load": [
-      8.73,
-      8.33,
-      6.75
+      20.75,
+      11.58,
+      8.1
     ],
     "cores": 8
   },
-  "disk_mb": 47.1,
+  "disk_mb": 49.6,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794550812.600836,
-    "next_sync_s": 0,
-    "commits": 79
+    "last_push": 1794551771.9633589,
+    "next_sync_s": 135,
+    "commits": 80
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "nonlinear operators",
-    "problem": "Just for the heck of it. This image was composited from the Icicle Atlas using a general python code which can make any N-tych of this kind. Run 111212 of the Icicle Atlas. See <a href=\"http://www.physics.utoronto.ca/nonlinear/papers_icicles.html\" rel=\"noreferrer nofollow\">www.physics.utoronto.ca/nonlinear/papers_icicles.html</a> and <a href=\"http://www.physics.utoronto.ca/Icicle_Atlas\" rel=\"noreferrer nofollow\">www.physics.utoronto.ca/Icicle_Atlas</a>",
-    "solution": "CC BY 2.0",
-    "source": "wikimedia commons"
+    "type": "archive Q&A",
+    "topic": "stack exchange dump",
+    "problem": "Q: Let's practise this one: I programmed a lot in java and know the basics of python and sometimes I play with c++... And those are all High Level Programming Languages and they're great and all but I was curious about how things worked at a deeper level in this case assembly language... I started to learn assembly for the x86 processor and chose NASM as my assembler. I spent some time learning\u2026",
+    "solution": "A: Let's walk through it together. First off, you cannot... I repeat, you cannot compare Assembly to any High Level Language! How they store and interact with data is totally different. They do it their way to make the programmers life easier. If you want to store the ASCII code of a char as a DWORD, go ahead. In Assembly, there is absolutely no hand holding. The CPU has no idea what you want to\u2026",
+    "source": "stackexchange"
   }
 }
