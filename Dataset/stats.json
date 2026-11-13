@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 8.0,
+  "disk_free_gb": 8.9,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794545489.687528,
-  "updated_iso": "2026-11-13T10:21:29",
-  "uptime_s": 60989,
+  "updated": 1794545773.540093,
+  "updated_iso": "2026-11-13T10:26:13",
+  "uptime_s": 61273,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 250,
+  "waiting": 247,
   "processes": 1,
   "fields": {
     "mathematics": 807998,
@@ -69,21 +69,21 @@
     "text": 2874443,
     "originals": 15674,
     "variants": 2858769,
-    "web_images": 2646,
+    "web_images": 2671,
     "synthetic_images": 14064,
-    "images": 16710,
+    "images": 16735,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1534413801,
-    "tasks_done": 57641,
+    "tasks_done": 57841,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 3387
   },
   "by_kind": {
     "archive": 2957,
-    "text": 4181,
-    "web_images": 4052,
+    "text": 4269,
+    "web_images": 4164,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1534413801,
-  "per_min": 9.3,
+  "per_min": 5.2,
   "topics": {
     "known": 109914,
-    "explored": 15658,
-    "queued": 94136,
+    "explored": 15746,
+    "queued": 94048,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "forward secrecy",
+        "cahn-hilliard equation",
+        "materials science",
+        0
+      ],
+      [
+        "data structures",
         "computer science",
         0
       ],
       [
-        "price per square meter",
-        "economics and finance",
-        0
-      ],
-      [
-        "ocean literacy",
-        "humanities",
-        0
-      ],
-      [
-        "watermark embedding",
-        "computer science",
-        0
-      ],
-      [
-        "islamic astronomy",
-        "physics",
-        0
-      ],
-      [
-        "vocal learning",
-        "biology",
-        0
-      ],
-      [
-        "homotopy type",
+        "geometric probability",
         "mathematics",
         0
       ],
       [
-        "projection (relational algebra)",
-        "",
+        "shishkin mesh",
+        "mathematics",
         0
       ],
       [
-        "streak artifacts",
+        "classifier diversity",
+        "computer science",
+        0
+      ],
+      [
+        "ice shedding",
         "engineering",
         0
       ],
       [
-        "optical polarization and ellipsometry",
-        "physics",
+        "practical agriculture",
+        "biology",
         0
       ],
       [
-        "n-heterocyclic carbene palladium complexes",
-        "chemistry",
+        "occupational calling",
+        "economics and finance",
         0
       ],
       [
-        "learning rate scheduling",
+        "machine learning attacks",
         "computer science",
+        0
+      ],
+      [
+        "vector (molecular biology)",
+        "",
+        0
+      ],
+      [
+        "ion exchange materials",
+        "earth and space",
+        0
+      ],
+      [
+        "sn2 mechanism",
+        "chemistry",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794545489.686715,
-    "cpu": 30.6,
+    "time": 1794545773.5391831,
+    "cpu": 23.2,
     "cpu_cores": [
-      50.0,
-      47.9,
-      45.0,
-      41.0,
-      33.6,
-      15.5,
-      8.6,
-      3.6
+      31.1,
+      29.3,
+      23.2,
+      23.6,
+      30.8,
+      34.0,
+      10.5,
+      3.3
     ],
-    "mem": 84.1,
-    "mem_used_gb": 2.58,
+    "mem": 85.2,
+    "mem_used_gb": 2.95,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 237.7,
+    "proc_mem_mb": 170.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 13771634688,
-    "net_tx": 12937428992,
-    "down_kbps": 63.7,
-    "up_kbps": 43.4,
-    "disk_free_gb": 8.0,
+    "net_rx": 13817791488,
+    "net_tx": 12969042944,
+    "down_kbps": 267.4,
+    "up_kbps": 164.5,
+    "disk_free_gb": 9.9,
     "load": [
-      4.0,
-      5.63,
-      6.32
+      2.65,
+      3.87,
+      5.32
     ],
     "cores": 8
   },
-  "disk_mb": 24.4,
+  "disk_mb": 24.9,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794545489.046763,
-    "next_sync_s": 278,
-    "commits": 65
+    "last_push": 1794545499.996809,
+    "next_sync_s": 296,
+    "commits": 66
   },
   "last_sample": {
     "type": "web image",
-    "topic": "lofar",
-    "problem": "Artist\u2019s impression of a large satellite constellation in low Earth orbit circling above the LOFAR telescope.",
-    "solution": "CC BY 4.0",
+    "topic": "religious competence",
+    "problem": "M\u00e9moire de l'Avenir- Memory of the Future (MOF), [www.memoire-a-venir.org] founded by the artist Margalit BERRIET, incorporates multi-disciplinary competences of artists and educators (fine arts, visual and performing arts, music, words\u2026) working towards a greater knowledge of cultures, promoting intercultural understanding and exchange, via the tools of the arts, patrimonies and education. An international workshop network in cultural places, schools and social centers, in France, Germany, Turkey, Israel Palestine and Senegal\u2026 connecting citizens, who both learn to appreciate and attest to\u2026",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
