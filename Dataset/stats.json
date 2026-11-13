@@ -2,40 +2,40 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 12.2,
+  "disk_free_gb": 10.6,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794550542.7153962,
-  "updated_iso": "2026-11-13T11:45:42",
-  "uptime_s": 66042,
+  "updated": 1794551688.107413,
+  "updated_iso": "2026-11-13T12:04:48",
+  "uptime_s": 67187,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 53,
   "busy_by_kind": {
-    "web_images": 24,
-    "text": 116,
-    "archive": 116
+    "web_images": 10,
+    "archive": 22,
+    "text": 21
   },
-  "waiting": 246,
+  "waiting": 43,
   "processes": 1,
   "fields": {
-    "mathematics": 922079,
-    "computer science": 417660,
-    "physics": 377888,
+    "mathematics": 923607,
+    "computer science": 434959,
+    "physics": 404702,
     "general": 344534,
-    "engineering": 241024,
-    "chemistry": 145668,
-    "biology": 135383,
+    "engineering": 246930,
+    "chemistry": 153173,
+    "biology": 141763,
+    "medicine": 141681,
     "statistics": 126739,
-    "medicine": 111133,
     "economics and finance": 92046,
     "earth and space": 91945,
-    "psychology": 54801,
-    "materials science": 51971,
-    "humanities": 48269,
-    "programming": 21014,
+    "psychology": 59726,
+    "materials science": 53915,
+    "humanities": 49644,
+    "programming": 22168,
     "machine learning": 20661,
     "robotics": 3515,
     "general knowledge": 2180
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 34637,
-    "openlifescienceai/medmcqa": 9826,
-    "qiaojin/PubMedQA": 445,
+    "stack exchange dump": 36285,
+    "openlifescienceai/medmcqa": 11106,
+    "qiaojin/PubMedQA": 1530,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3204393,
-    "originals": 17473,
-    "variants": 3186920,
-    "web_images": 2832,
+    "text": 3309771,
+    "originals": 18098,
+    "variants": 3291673,
+    "web_images": 2860,
     "synthetic_images": 14064,
-    "images": 16896,
+    "images": 16924,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1736445381,
-    "tasks_done": 60398,
+    "tokens": 1783535209,
+    "tasks_done": 60645,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 3770
+    "preference": 3900
   },
   "by_kind": {
-    "archive": 3621,
-    "text": 4897,
-    "web_images": 5429,
+    "archive": 3737,
+    "text": 5013,
+    "web_images": 5444,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1736445381,
-  "per_min": 2152.2,
+  "tokens": 1783535209,
+  "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 16374,
-    "queued": 93420,
+    "explored": 16490,
+    "queued": 93399,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "matched case-control studies",
-        "mathematics",
-        6945
-      ],
-      [
-        "marine conservation",
-        "earth and space",
-        6606
-      ],
-      [
-        "plasma surface modification",
-        "physics",
-        6080
-      ],
-      [
-        "composite endpoints",
-        "mathematics",
-        6939
-      ],
-      [
-        "employee performance and management",
-        "economics and finance",
-        5649
-      ],
-      [
-        "psychological well-being and life satisfaction",
-        "psychology",
-        3115
-      ],
-      [
-        "x-ray emission",
-        "physics",
-        10689
-      ],
-      [
-        "antioxidant activity assay",
-        "chemistry",
-        4308
-      ],
-      [
-        "variational method quantum",
-        "physics",
-        11999
-      ],
-      [
-        "action prediction",
-        "psychology",
-        7335
-      ],
-      [
-        "augmented reality applications",
+        "presence",
         "computer science",
-        4744
+        5193
       ],
       [
-        "ground control points",
-        "computer science",
-        0
+        "revision total knee arthroplasty",
+        "medicine",
+        4972
+      ],
+      [
+        "excess heat",
+        "physics",
+        4389
+      ],
+      [
+        "post-transplant mortality",
+        "medicine",
+        7514
+      ],
+      [
+        "over-the-counter drugs",
+        "medicine",
+        1599
+      ],
+      [
+        "coronary artery ligation",
+        "medicine",
+        3134
+      ],
+      [
+        "value priorities",
+        "psychology",
+        4335
+      ],
+      [
+        "scientific research and discoveries",
+        "physics",
+        2246
+      ],
+      [
+        "photons",
+        "physics",
+        2748
+      ],
+      [
+        "stellar, planetary, and galactic studies",
+        "physics",
+        5732
+      ],
+      [
+        "elastic contact problems",
+        "engineering",
+        3192
+      ],
+      [
+        "hemoglobin-based oxygen carriers",
+        "biology",
+        3649
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 25,
     "focus_left": 0
   },
   "system": {
-    "time": 1794550542.7145731,
-    "cpu": 57.6,
+    "time": 1794551688.095834,
+    "cpu": 45.5,
     "cpu_cores": [
-      92.2,
-      89.9,
-      89.9,
-      89.9,
-      50.5,
-      26.5,
-      14.8,
-      6.0
+      38.8,
+      36.3,
+      32.6,
+      30.5,
+      63.7,
+      61.0,
+      52.1,
+      48.5
     ],
-    "mem": 81.0,
-    "mem_used_gb": 2.96,
+    "mem": 80.2,
+    "mem_used_gb": 2.9,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 167.4,
-    "threads": 260,
+    "proc_mem_mb": 540.2,
+    "threads": 259,
     "proc_cpu": 0.0,
-    "net_rx": 15454943232,
-    "net_tx": 13650739200,
-    "down_kbps": 117.5,
-    "up_kbps": 85.4,
-    "disk_free_gb": 12.2,
+    "net_rx": 16880030720,
+    "net_tx": 14459703296,
+    "down_kbps": 1225.5,
+    "up_kbps": 679.9,
+    "disk_free_gb": 10.6,
     "load": [
-      4.7,
-      5.91,
-      5.91
+      8.73,
+      8.33,
+      6.75
     ],
     "cores": 8
   },
-  "disk_mb": 47.6,
+  "disk_mb": 47.1,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794549642.610015,
-    "next_sync_s": 200,
-    "commits": 78
+    "last_push": 1794550812.600836,
+    "next_sync_s": 0,
+    "commits": 79
   },
   "last_sample": {
-    "type": "archive Q&A",
-    "topic": "openlifescienceai/medmcqa",
-    "problem": "Q: A patient presented with fever, jaundice & some neuro- logical symptoms in the rainy season, most probable diagnosis is A) Leptospirosis B) Dengue fever C) Brucellosis D) Lyme disease",
-    "solution": "A: Answer: A) Leptospirosis Explanation: Ans a. (Leptospirosis). (Ref. Harrison, Medicine, 18th/Ch. 171)LeptospirosisCausative organism isLeptospira interrogans.Exposure to water contaminated with animal urine.# Maculopapular eruption; conjunctivitis; scleral hemorrhage in some cases.# Fever, haemorrhages, jaundice, renal failure, conjunctival congestion, purpura, big bruising, hematemesis,\u2026",
-    "source": "huggingface"
+    "type": "web image",
+    "topic": "nonlinear operators",
+    "problem": "Just for the heck of it. This image was composited from the Icicle Atlas using a general python code which can make any N-tych of this kind. Run 111212 of the Icicle Atlas. See <a href=\"http://www.physics.utoronto.ca/nonlinear/papers_icicles.html\" rel=\"noreferrer nofollow\">www.physics.utoronto.ca/nonlinear/papers_icicles.html</a> and <a href=\"http://www.physics.utoronto.ca/Icicle_Atlas\" rel=\"noreferrer nofollow\">www.physics.utoronto.ca/Icicle_Atlas</a>",
+    "solution": "CC BY 2.0",
+    "source": "wikimedia commons"
   }
 }
