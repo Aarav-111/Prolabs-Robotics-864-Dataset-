@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794545472.218658,
-  "updated_iso": "2026-11-13T10:21:12",
-  "uptime_s": 60971,
+  "updated": 1794545489.687528,
+  "updated_iso": "2026-11-13T10:21:29",
+  "uptime_s": 60989,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
     "web_images": 24,
-    "archive": 116,
-    "text": 116
+    "text": 116,
+    "archive": 116
   },
-  "waiting": 241,
+  "waiting": 250,
   "processes": 1,
   "fields": {
     "mathematics": 807998,
@@ -69,21 +69,21 @@
     "text": 2874443,
     "originals": 15674,
     "variants": 2858769,
-    "web_images": 2645,
+    "web_images": 2646,
     "synthetic_images": 14064,
-    "images": 16709,
+    "images": 16710,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1534413801,
-    "tasks_done": 57626,
+    "tasks_done": 57641,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 3387
   },
   "by_kind": {
-    "archive": 2945,
+    "archive": 2957,
     "text": 4181,
-    "web_images": 4049,
+    "web_images": 4052,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,7 +91,7 @@
     "seed_concepts": 0
   },
   "tokens": 1534413801,
-  "per_min": 9.0,
+  "per_min": 9.3,
   "topics": {
     "known": 109914,
     "explored": 15658,
@@ -213,33 +213,33 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794545472.217736,
-    "cpu": 29.0,
+    "time": 1794545489.686715,
+    "cpu": 30.6,
     "cpu_cores": [
-      32.5,
-      31.0,
-      23.9,
-      23.1,
-      44.7,
-      34.5,
-      27.1,
-      15.1
+      50.0,
+      47.9,
+      45.0,
+      41.0,
+      33.6,
+      15.5,
+      8.6,
+      3.6
     ],
-    "mem": 82.9,
-    "mem_used_gb": 2.8,
+    "mem": 84.1,
+    "mem_used_gb": 2.58,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 173.5,
+    "proc_mem_mb": 237.7,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 13765807104,
-    "net_tx": 12927816704,
-    "down_kbps": 292.5,
-    "up_kbps": 174.7,
+    "net_rx": 13771634688,
+    "net_tx": 12937428992,
+    "down_kbps": 63.7,
+    "up_kbps": 43.4,
     "disk_free_gb": 8.0,
     "load": [
-      4.3,
-      5.77,
-      6.38
+      4.0,
+      5.63,
+      6.32
     ],
     "cores": 8
   },
@@ -248,15 +248,15 @@
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794545203.520468,
-    "next_sync_s": 296,
-    "commits": 64
+    "last_push": 1794545489.046763,
+    "next_sync_s": 278,
+    "commits": 65
   },
   "last_sample": {
     "type": "web image",
-    "topic": "r package",
-    "problem": "A photograph showing a man sealing a slightly misshapen cardboard box ready to ship it out. He is using tape to secure the lid. A pink and white pair of scissors are sitting next to him on the table alongside another cardboard box. There is a plant in the background. This picture if free to use under the Creative Commons Attribution Licence. If you use this image, please link back to us at meanwell-packaging.co.uk/",
-    "solution": "CC BY 2.0",
+    "topic": "lofar",
+    "problem": "Artist\u2019s impression of a large satellite constellation in low Earth orbit circling above the LOFAR telescope.",
+    "solution": "CC BY 4.0",
     "source": "wikimedia commons"
   }
 }
