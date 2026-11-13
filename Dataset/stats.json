@@ -2,41 +2,41 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 7.8,
+  "disk_free_gb": 13.3,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794541983.481482,
-  "updated_iso": "2026-11-13T09:23:03",
-  "uptime_s": 57483,
+  "updated": 1794542559.752486,
+  "updated_iso": "2026-11-13T09:32:39",
+  "uptime_s": 58059,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
     "web_images": 24,
-    "archive": 116,
-    "text": 116
+    "text": 116,
+    "archive": 116
   },
-  "waiting": 244,
+  "waiting": 247,
   "processes": 1,
   "fields": {
-    "mathematics": 786339,
-    "computer science": 338578,
-    "general": 322258,
-    "physics": 299122,
-    "engineering": 228471,
-    "statistics": 122169,
-    "chemistry": 118799,
-    "biology": 118528,
-    "medicine": 91514,
+    "mathematics": 796837,
+    "computer science": 364791,
+    "general": 324175,
+    "physics": 313037,
+    "engineering": 233361,
+    "statistics": 126739,
+    "chemistry": 125033,
+    "biology": 119137,
+    "medicine": 92095,
     "earth and space": 80285,
     "economics and finance": 73455,
+    "humanities": 44933,
     "psychology": 44351,
-    "humanities": 40651,
     "materials science": 39724,
     "machine learning": 20661,
-    "programming": 17465,
+    "programming": 18059,
     "robotics": 3515,
     "general knowledge": 2180
   },
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 25352,
-    "openlifescienceai/medmcqa": 5786,
+    "stack exchange dump": 26147,
+    "openlifescienceai/medmcqa": 6367,
     "qiaojin/PubMedQA": 96,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 2743948,
-    "originals": 15012,
-    "variants": 2728936,
-    "web_images": 2298,
+    "text": 2818251,
+    "originals": 15424,
+    "variants": 2802827,
+    "web_images": 2356,
     "synthetic_images": 14064,
-    "images": 16362,
+    "images": 16420,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1484249474,
-    "tasks_done": 53710,
-    "tasks_failed": 9,
+    "tokens": 1511683301,
+    "tasks_done": 54012,
+    "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 3251
+    "preference": 3387
   },
   "by_kind": {
-    "archive": 2104,
-    "text": 3183,
-    "web_images": 1971,
+    "archive": 2261,
+    "text": 3302,
+    "web_images": 1998,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1484249474,
-  "per_min": 751.7,
+  "tokens": 1511683301,
+  "per_min": 1893.5,
   "topics": {
     "known": 109914,
-    "explored": 14660,
-    "queued": 95134,
+    "explored": 14779,
+    "queued": 95015,
     "space": 6594840,
     "next": [
       [
@@ -149,113 +149,113 @@
     ],
     "recent": [
       [
-        "analytic number theory research",
-        "mathematics",
-        1636
+        "spectral preprocessing",
+        "chemistry",
+        5676
       ],
       [
-        "surface modeling",
-        "engineering",
-        0
+        "reporting quality",
+        "statistics",
+        4570
       ],
       [
-        "homogenization theory",
-        "mathematics",
-        0
+        "student performance data",
+        "humanities",
+        4282
       ],
       [
-        "noise barriers",
-        "physics",
-        0
-      ],
-      [
-        "agglomeration",
-        "economics and finance",
-        0
-      ],
-      [
-        "whorl pattern",
-        "biology",
-        0
-      ],
-      [
-        "ore reserve estimation",
-        "engineering",
-        0
-      ],
-      [
-        "programming language design",
+        "task quality",
         "computer science",
-        0
+        5133
       ],
       [
-        "grass-endophyte symbiosis",
-        "biology",
-        0
+        "galaxies: formation, evolution, phenomena",
+        "physics",
+        4345
       ],
       [
-        "social epistemology",
+        "nested case-control design",
+        "mathematics",
+        3103
+      ],
+      [
+        "tor",
+        "computer science",
+        4406
+      ],
+      [
+        "variance",
+        "mathematics",
+        4703
+      ],
+      [
+        "content-based video retrieval",
+        "computer science",
+        4415
+      ],
+      [
+        "competition distortion",
         "humanities",
         0
       ],
       [
-        "language change",
-        "",
+        "hydrogen solubility",
+        "materials science",
         0
       ],
       [
-        "transformation temperature",
-        "materials science",
-        0
+        "hypervolume indicator",
+        "computer science",
+        4152
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794541983.4804559,
-    "cpu": 32.6,
+    "time": 1794542559.751456,
+    "cpu": 24.8,
     "cpu_cores": [
-      24.2,
-      19.4,
-      17.9,
-      16.7,
-      67.1,
-      50.7,
-      39.9,
-      24.8
+      30.0,
+      27.6,
+      22.8,
+      20.9,
+      34.0,
+      37.3,
+      16.8,
+      9.7
     ],
-    "mem": 84.0,
-    "mem_used_gb": 2.47,
+    "mem": 81.6,
+    "mem_used_gb": 2.79,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 78.7,
+    "proc_mem_mb": 124.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 12536229888,
-    "net_tx": 11395312640,
-    "down_kbps": 144.6,
-    "up_kbps": 93.0,
-    "disk_free_gb": 7.1,
+    "net_rx": 12655545344,
+    "net_tx": 11522419712,
+    "down_kbps": 439.9,
+    "up_kbps": 662.4,
+    "disk_free_gb": 13.3,
     "load": [
-      5.39,
-      6.08,
-      5.47
+      5.55,
+      6.65,
+      6.16
     ],
     "cores": 8
   },
-  "disk_mb": 226.5,
+  "disk_mb": 196.6,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794541980.197461,
-    "next_sync_s": 63,
-    "commits": 42
+    "last_push": 1794542153.6977432,
+    "next_sync_s": 252,
+    "commits": 43
   },
   "last_sample": {
     "type": "web image",
-    "topic": "group (periodic table)",
-    "problem": "Category names and colours are different from the Wikipedia standard. The accompanying notes summarise the properties of each category.",
+    "topic": "student performance data",
+    "problem": "From The Trustees of Phillips Academy.",
     "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
