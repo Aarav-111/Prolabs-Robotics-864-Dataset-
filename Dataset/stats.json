@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794555467.5728261,
-  "updated_iso": "2026-11-13T13:07:47",
-  "uptime_s": 70967,
+  "updated": 1794555499.82158,
+  "updated_iso": "2026-11-13T13:08:19",
+  "uptime_s": 70999,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 223,
+  "waiting": 238,
   "processes": 1,
   "fields": {
     "mathematics": 924338,
@@ -75,7 +75,7 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1991952018,
-    "tasks_done": 62054,
+    "tasks_done": 62055,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 4581
@@ -83,7 +83,7 @@
   "by_kind": {
     "archive": 4397,
     "text": 5496,
-    "web_images": 5710,
+    "web_images": 5711,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,7 +91,7 @@
     "seed_concepts": 0
   },
   "tokens": 1991952018,
-  "per_min": 381.3,
+  "per_min": 196.5,
   "topics": {
     "known": 109914,
     "explored": 16973,
@@ -213,44 +213,44 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794555467.571619,
-    "cpu": 27.9,
+    "time": 1794555499.820744,
+    "cpu": 30.1,
     "cpu_cores": [
-      39.3,
-      32.7,
-      33.2,
-      29.2,
-      32.7,
-      30.1,
-      17.6,
-      8.8
+      43.0,
+      38.8,
+      32.2,
+      29.3,
+      46.7,
+      27.9,
+      14.0,
+      9.2
     ],
-    "mem": 77.3,
-    "mem_used_gb": 3.18,
+    "mem": 79.7,
+    "mem_used_gb": 2.98,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 201.4,
+    "proc_mem_mb": 172.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 19166005248,
-    "net_tx": 16605313024,
-    "down_kbps": 354.6,
-    "up_kbps": 261.2,
+    "net_rx": 19196334080,
+    "net_tx": 16654190592,
+    "down_kbps": 210.9,
+    "up_kbps": 529.8,
     "disk_free_gb": 10.1,
     "load": [
-      6.24,
-      7.34,
-      7.28
+      5.48,
+      7.04,
+      7.17
     ],
     "cores": 8
   },
-  "disk_mb": 78.8,
+  "disk_mb": 82.2,
   "github": {
-    "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (6 MB), your data is kept here",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794554732.932401,
-    "next_sync_s": 263,
-    "commits": 93
+    "last_push": 1794555493.934717,
+    "next_sync_s": 231,
+    "commits": 94
   },
   "last_sample": {
     "type": "web image",
