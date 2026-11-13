@@ -1,44 +1,44 @@
 {
   "state": "running",
   "offline": false,
-  "disk_low": true,
-  "disk_free_gb": 2.7,
+  "disk_low": false,
+  "disk_free_gb": 10.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794551918.8649821,
-  "updated_iso": "2026-11-13T12:08:38",
-  "uptime_s": 67418,
+  "updated": 1794553311.9441679,
+  "updated_iso": "2026-11-13T12:31:51",
+  "uptime_s": 68811,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 255,
+  "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 23,
     "text": 116,
+    "web_images": 24,
     "archive": 116
   },
-  "waiting": 249,
+  "waiting": 230,
   "processes": 1,
   "fields": {
     "mathematics": 923969,
-    "computer science": 434959,
-    "physics": 404702,
-    "general": 344534,
-    "engineering": 246930,
-    "chemistry": 155720,
-    "medicine": 143271,
-    "biology": 141763,
+    "physics": 462883,
+    "computer science": 449948,
+    "general": 370251,
+    "engineering": 251179,
+    "medicine": 166205,
+    "chemistry": 163288,
+    "biology": 155157,
     "statistics": 126739,
-    "economics and finance": 92046,
+    "economics and finance": 102514,
     "earth and space": 91945,
-    "psychology": 59726,
-    "materials science": 53915,
-    "humanities": 49644,
-    "programming": 24454,
+    "materials science": 65616,
+    "psychology": 60731,
+    "humanities": 59844,
+    "programming": 25031,
     "machine learning": 20661,
     "robotics": 3515,
-    "general knowledge": 2180
+    "general knowledge": 2381
   },
   "topic_fields": {
     "": 7597,
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 39287,
+    "stack exchange dump": 41079,
     "openlifescienceai/medmcqa": 12303,
-    "qiaojin/PubMedQA": 1923,
+    "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3316556,
-    "originals": 18120,
-    "variants": 3298436,
-    "web_images": 2899,
+    "text": 3497740,
+    "originals": 19143,
+    "variants": 3478597,
+    "web_images": 2959,
     "synthetic_images": 14064,
-    "images": 16963,
+    "images": 17023,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1786564898,
-    "tasks_done": 60772,
+    "tokens": 1899172677,
+    "tasks_done": 61065,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 4154
+    "preference": 4300
   },
   "by_kind": {
-    "archive": 3820,
-    "text": 5017,
-    "web_images": 5484,
+    "archive": 3968,
+    "text": 5133,
+    "web_images": 5513,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1786564898,
-  "per_min": 1774.3,
+  "tokens": 1899172677,
+  "per_min": 129704.2,
   "topics": {
     "known": 109914,
-    "explored": 16494,
-    "queued": 93300,
+    "explored": 16610,
+    "queued": 93184,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "thermal diffusion coefficient",
-        "chemistry",
-        2193
+        "generalized entropy",
+        "physics",
+        30457
       ],
       [
-        "antibody titer",
+        "breast cancer",
         "",
-        0
+        8191
       ],
       [
-        "continental drift",
-        "earth and space",
-        0
+        "neutron source",
+        "physics",
+        10170
       ],
       [
-        "flow-electrode capacitive deionization",
-        "engineering",
-        0
+        "angptl3",
+        "medicine",
+        5183
       ],
       [
-        "presence",
+        "cartilage defects",
+        "medicine",
+        5834
+      ],
+      [
+        "expert search",
         "computer science",
-        5193
+        7787
       ],
       [
-        "revision total knee arthroplasty",
+        "nestin",
+        "biology",
+        5527
+      ],
+      [
+        "administrative law",
+        "humanities",
+        5266
+      ],
+      [
+        "brucellosis",
         "medicine",
-        4972
+        4254
       ],
       [
-        "excess heat",
+        "external knowledge",
+        "economics and finance",
+        7858
+      ],
+      [
+        "intelligent life",
         "physics",
-        4389
+        2985
       ],
       [
-        "post-transplant mortality",
-        "medicine",
-        7514
-      ],
-      [
-        "over-the-counter drugs",
-        "medicine",
-        1599
-      ],
-      [
-        "coronary artery ligation",
-        "medicine",
-        3134
-      ],
-      [
-        "value priorities",
-        "psychology",
-        4335
-      ],
-      [
-        "scientific research and discoveries",
-        "physics",
-        2246
+        "sacrificial dilemmas",
+        "biology",
+        3619
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794551918.86349,
-    "cpu": 86.2,
+    "time": 1794553311.943274,
+    "cpu": 47.8,
     "cpu_cores": [
-      85.4,
-      84.5,
-      81.8,
-      81.3,
-      93.2,
-      91.0,
-      88.2,
-      84.5
+      51.5,
+      47.3,
+      47.3,
+      41.8,
+      52.4,
+      49.7,
+      52.7,
+      39.4
     ],
-    "mem": 78.9,
-    "mem_used_gb": 2.97,
+    "mem": 76.7,
+    "mem_used_gb": 3.19,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 75.4,
+    "proc_mem_mb": 690.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 16463621120,
-    "net_tx": 14687635456,
-    "down_kbps": 2806.6,
-    "up_kbps": 1444.6,
-    "disk_free_gb": 2.4,
+    "net_rx": 16937872384,
+    "net_tx": 15068982272,
+    "down_kbps": 734.9,
+    "up_kbps": 769.0,
+    "disk_free_gb": 10.1,
     "load": [
-      15.4,
-      13.43,
-      9.41
+      5.29,
+      5.88,
+      6.99
     ],
     "cores": 8
   },
-  "disk_mb": 24.2,
+  "disk_mb": 48.9,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "No internet connection right now - it retries by itself, your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794551918.000855,
+    "last_push": 1794551934.830612,
     "next_sync_s": 294,
-    "commits": 82
+    "commits": 83
   },
   "last_sample": {
     "type": "web image",
-    "topic": "operator ideals",
-    "problem": "View of the temporary exhibition Changing ideals - re-thinking the house in NAi Maastricht (re-named Bureau Europa) in Maastricht, Netherlands.",
-    "solution": "CC BY-SA 2.0",
+    "topic": "delta variant",
+    "problem": "Eurovision Song Contest 2026 Vienna, Second Semi Final, Picture shows: Delta Goodrem from Australia",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
