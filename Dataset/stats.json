@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 18.3,
+  "disk_free_gb": 11.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794537950.055839,
-  "updated_iso": "2026-11-13T08:15:50",
-  "uptime_s": 53449,
+  "updated": 1794538016.285575,
+  "updated_iso": "2026-11-13T08:17:06",
+  "uptime_s": 53515,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 249,
   "busy_by_kind": {
-    "text": 116,
-    "web_images": 24,
+    "text": 110,
+    "web_images": 23,
     "archive": 116
   },
-  "waiting": 252,
+  "waiting": 144,
   "processes": 1,
   "fields": {
     "mathematics": 603183,
@@ -69,21 +69,21 @@
     "text": 2262181,
     "originals": 12423,
     "variants": 2249758,
-    "web_images": 1828,
+    "web_images": 1840,
     "synthetic_images": 14064,
-    "images": 15892,
+    "images": 15904,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1209037763,
-    "tasks_done": 51978,
+    "tasks_done": 52003,
     "tasks_failed": 9,
     "topics_added": 108651,
     "preference": 2923
   },
   "by_kind": {
     "archive": 1449,
-    "text": 2476,
-    "web_images": 1601,
+    "text": 2490,
+    "web_images": 1614,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1209037763,
-  "per_min": 32797.8,
+  "per_min": 21757.4,
   "topics": {
     "known": 109914,
-    "explored": 13953,
-    "queued": 95841,
+    "explored": 13973,
+    "queued": 95833,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "real numbers",
-        "mathematics",
-        39097
+        "multi-criteria decision making",
+        "statistics",
+        0
       ],
       [
-        "quantum yield",
-        "",
-        14198
-      ],
-      [
-        "chemical abbreviations",
-        "chemistry",
-        1206
-      ],
-      [
-        "spherical trigonometry",
-        "mathematics",
-        402
-      ],
-      [
-        "ac power",
-        "",
-        14094
-      ],
-      [
-        "scattering length",
-        "physics",
-        7274
-      ],
-      [
-        "hybrid quantum-classical algorithms",
+        "fr\u00e9chet inception distance",
         "computer science",
         0
       ],
       [
-        "transient electromagnetic method",
+        "iberian plate",
         "earth and space",
         0
       ],
       [
-        "particle-fluid interaction",
+        "suramin",
+        "biology",
+        0
+      ],
+      [
+        "hemangiosarcoma",
+        "medicine",
+        0
+      ],
+      [
+        "chilean popular unity government",
+        "humanities",
+        0
+      ],
+      [
+        "cryogenic propellant tanks",
         "engineering",
         0
       ],
       [
-        "electromagnetic diffraction",
+        "fpso",
+        "engineering",
+        0
+      ],
+      [
+        "architectural design software",
+        "engineering",
+        0
+      ],
+      [
+        "advanced vision and imaging",
+        "computer science",
+        0
+      ],
+      [
+        "kretschmann configuration",
         "physics",
         0
       ],
       [
-        "information literacy education",
-        "humanities",
-        2450
-      ],
-      [
-        "all-optical neural networks",
-        "computer science",
+        "mixed strategy equilibrium",
+        "statistics",
         0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 107,
     "focus_left": 0
   },
   "system": {
-    "time": 1794537950.054968,
-    "cpu": 27.9,
+    "time": 1794538016.284686,
+    "cpu": 40.1,
     "cpu_cores": [
-      26.3,
-      23.5,
-      20.0,
-      17.3,
-      50.9,
-      45.5,
-      28.6,
-      12.0
+      23.3,
+      20.4,
+      15.8,
+      13.5,
+      77.1,
+      66.7,
+      58.0,
+      45.5
     ],
-    "mem": 76.4,
-    "mem_used_gb": 3.25,
+    "mem": 76.5,
+    "mem_used_gb": 3.26,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 309.5,
+    "proc_mem_mb": 243.0,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 8320543744,
-    "net_tx": 8530498560,
-    "down_kbps": 117.5,
-    "up_kbps": 76.5,
-    "disk_free_gb": 18.3,
+    "net_rx": 8338524160,
+    "net_tx": 8551298048,
+    "down_kbps": 84.2,
+    "up_kbps": 63.9,
+    "disk_free_gb": 11.6,
     "load": [
-      3.97,
-      4.19,
-      4.3
+      3.74,
+      4.05,
+      4.24
     ],
     "cores": 8
   },
-  "disk_mb": 438.1,
+  "disk_mb": 430.3,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794537949.6171699,
-    "next_sync_s": 186,
-    "commits": 19
+    "last_push": 1794538008.499661,
+    "next_sync_s": 119,
+    "commits": 20
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "nuclear arms control",
-    "problem": "Mk.57 (BDU-11A/E) Nuclear Depth Bomb on display in Royal Air Force Museum, London, England, United Kingdom. This bomb was suitable for nuclear capable aircrafts like P-3 Orion, F-4, F-111, F-16, F-104, B-52, S-3 and SH-3 and others. Production started in 1963 and about 3,100 of these bombs were made. The bomb in the picture is a practice device used for B57 nuclear bomb training.",
-    "solution": "CC BY-SA 4.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "concrete carbonation",
+    "problem": "Bury LED in concrete outside, how to protect I am wanting to place a 3mm LED and carbon resistor, outside between two paving stones. There is about a 4mm gap between pavers where the parts will be. The top of the Led will be flush with the top of the pavers and there will be wires running under the paving stones to remotely power it. There will be one led every 40cm for around 6m, where they are\u2026",
+    "solution": "The heatSHRINK tubing idea is not so bad except for the rear lead exposure which you can pre-coat with adhesive ( Epoxy or PU or silicone ) I think the heatshrink will give a buffer to shrinkage of concrete for stresses on gold whisker wirebond but also might make it easy to poke thru the morter unless flush YOu can always cut excess heatshrink after while protecting the lens in the process. But\u2026",
+    "source": "stackexchange"
   }
 }
