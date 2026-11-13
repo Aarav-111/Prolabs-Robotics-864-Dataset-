@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 9.9,
+  "disk_free_gb": 7.8,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794541910.3829749,
-  "updated_iso": "2026-11-13T09:21:50",
-  "uptime_s": 57410,
+  "updated": 1794541983.481482,
+  "updated_iso": "2026-11-13T09:23:03",
+  "uptime_s": 57483,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "archive": 116,
     "text": 116
   },
-  "waiting": 242,
+  "waiting": 244,
   "processes": 1,
   "fields": {
     "mathematics": 786339,
@@ -69,13 +69,13 @@
     "text": 2743948,
     "originals": 15012,
     "variants": 2728936,
-    "web_images": 2287,
+    "web_images": 2298,
     "synthetic_images": 14064,
-    "images": 16351,
+    "images": 16362,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1484249474,
-    "tasks_done": 53703,
+    "tasks_done": 53710,
     "tasks_failed": 9,
     "topics_added": 108651,
     "preference": 3251
@@ -83,7 +83,7 @@
   "by_kind": {
     "archive": 2104,
     "text": 3183,
-    "web_images": 1964,
+    "web_images": 1971,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,7 +91,7 @@
     "seed_concepts": 0
   },
   "tokens": 1484249474,
-  "per_min": 1086.3,
+  "per_min": 751.7,
   "topics": {
     "known": 109914,
     "explored": 14660,
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794541910.3823202,
-    "cpu": 55.6,
+    "time": 1794541983.4804559,
+    "cpu": 32.6,
     "cpu_cores": [
-      43.3,
-      35.5,
-      30.8,
-      28.9,
-      82.1,
-      80.5,
-      74.5,
-      69.2
+      24.2,
+      19.4,
+      17.9,
+      16.7,
+      67.1,
+      50.7,
+      39.9,
+      24.8
     ],
-    "mem": 80.6,
-    "mem_used_gb": 2.69,
+    "mem": 84.0,
+    "mem_used_gb": 2.47,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 227.6,
+    "proc_mem_mb": 78.7,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 12499641344,
-    "net_tx": 11344332800,
-    "down_kbps": 1577.2,
-    "up_kbps": 807.2,
-    "disk_free_gb": 9.9,
+    "net_rx": 12536229888,
+    "net_tx": 11395312640,
+    "down_kbps": 144.6,
+    "up_kbps": 93.0,
+    "disk_free_gb": 7.1,
     "load": [
-      6.09,
-      6.31,
-      5.49
+      5.39,
+      6.08,
+      5.47
     ],
     "cores": 8
   },
-  "disk_mb": 235.3,
+  "disk_mb": 226.5,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794541900.330658,
-    "next_sync_s": 136,
-    "commits": 41
+    "last_push": 1794541980.197461,
+    "next_sync_s": 63,
+    "commits": 42
   },
   "last_sample": {
     "type": "web image",
-    "topic": "direct simulation monte carlo",
-    "problem": "Monte Carlo simulation of runaway relativistic electron avalanche (RREA) in air. Electrons are shown in black, photons in blue, and positrons in red. The electric field is directed downwards and is only nonzero in the 100-meter thick plane between the two lines.",
-    "solution": "CC BY-SA 3.0",
+    "topic": "group (periodic table)",
+    "problem": "Category names and colours are different from the Wikipedia standard. The accompanying notes summarise the properties of each category.",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
