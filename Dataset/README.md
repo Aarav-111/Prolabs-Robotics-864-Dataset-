@@ -5,14 +5,14 @@ This file and `stats.json` are rewritten on every sync.
 
 | | |
 |---|---|
-| Text records (originals + DataGen variants) | **2,868,461** (15,639 originals, 2,852,822 variants) |
-| Web images (free licences, with attribution) | **2,556** |
+| Text records (originals + DataGen variants) | **2,874,443** (15,674 originals, 2,858,769 variants) |
+| Web images (free licences, with attribution) | **2,598** |
 | Generated detection images (boxes, polygons, captions, VQA) | **14,064** |
 | Robot VLA episodes (frames + actions + instruction) | **14,064** (173,566 frames) |
-| Topics explored / known | 15,438 / 109,914 |
-| Approx. text tokens | 1,532,236,513 |
+| Topics explored / known | 15,542 / 109,914 |
+| Approx. text tokens | 1,534,413,801 |
 | Running since | 2026-11-12T17:25:00 |
-| Updated | 2026-11-13T10:11:06 |
+| Updated | 2026-11-13T10:16:06 |
 
 ## Layout
 - `text/*.jsonl.gz` - one JSON object per line: `question`, `expected_answer`, `messages` (chat SFT), `problem`, `solution`, `topic`, `source`, `url`, `license`, `quality_score`, DataGen fields. The `text` field is `Question:` then `Expected answer:`.
