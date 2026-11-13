@@ -1,15 +1,15 @@
 {
   "state": "running",
   "offline": false,
-  "disk_low": false,
-  "disk_free_gb": 11.1,
+  "disk_low": true,
+  "disk_free_gb": 2.7,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794554494.941521,
-  "updated_iso": "2026-11-13T12:51:34",
-  "uptime_s": 69994,
+  "updated": 1794554671.480248,
+  "updated_iso": "2026-11-13T12:54:31",
+  "uptime_s": 70171,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 243,
+  "waiting": 235,
   "processes": 1,
   "fields": {
     "mathematics": 924338,
@@ -26,7 +26,7 @@
     "computer science": 449948,
     "general": 372768,
     "engineering": 252648,
-    "medicine": 190567,
+    "medicine": 194381,
     "biology": 183830,
     "chemistry": 167182,
     "statistics": 126739,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3621467,
-    "originals": 19858,
-    "variants": 3601609,
-    "web_images": 3037,
+    "text": 3625281,
+    "originals": 19880,
+    "variants": 3605401,
+    "web_images": 3074,
     "synthetic_images": 14064,
-    "images": 17101,
+    "images": 17138,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1971195761,
-    "tasks_done": 61426,
+    "tokens": 1973209026,
+    "tasks_done": 61470,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 4439
   },
   "by_kind": {
     "archive": 4127,
-    "text": 5250,
-    "web_images": 5598,
+    "text": 5266,
+    "web_images": 5626,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1971195761,
-  "per_min": 1751.0,
+  "tokens": 1973209026,
+  "per_min": 1471.8,
   "topics": {
     "known": 109914,
-    "explored": 16727,
-    "queued": 93067,
+    "explored": 16743,
+    "queued": 93051,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "spacetime",
-        "physics",
-        39412
-      ],
-      [
-        "liquid biopsy",
-        "biology",
-        16427
-      ],
-      [
-        "osteoprotegerin",
-        "biology",
-        5112
-      ],
-      [
-        "soil and water conservation forest",
-        "biology",
-        3948
-      ],
-      [
-        "greek economy",
-        "humanities",
-        1037
-      ],
-      [
-        "plague epidemiology",
+        "dental laboratory workers",
         "medicine",
-        6310
+        3814
       ],
       [
-        "prenatal cocaine exposure",
-        "medicine",
-        4566
-      ],
-      [
-        "open research",
-        "humanities",
-        1399
-      ],
-      [
-        "music licensing",
-        "economics and finance",
-        4975
-      ],
-      [
-        "boswellia",
-        "medicine",
-        0
-      ],
-      [
-        "auxiliary differential equation",
+        "conducting liquid",
         "engineering",
         0
       ],
       [
-        "primary sj\u00f6gren's syndrome",
+        "x-ray absorption fine structure",
+        "physics",
+        0
+      ],
+      [
+        "locum doctors",
         "medicine",
-        3790
+        0
+      ],
+      [
+        "public opinion",
+        "",
+        0
+      ],
+      [
+        "phonological adaptation",
+        "humanities",
+        0
+      ],
+      [
+        "operationalization",
+        "",
+        0
+      ],
+      [
+        "quantum critical point",
+        "physics",
+        0
+      ],
+      [
+        "painted turtle",
+        "earth and space",
+        0
+      ],
+      [
+        "mics band",
+        "engineering",
+        0
+      ],
+      [
+        "good manufacturing practices",
+        "biology",
+        0
+      ],
+      [
+        "greenhouse gas monitoring",
+        "earth and space",
+        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794554494.940553,
-    "cpu": 35.2,
+    "time": 1794554671.4772549,
+    "cpu": 96.7,
     "cpu_cores": [
-      39.9,
-      37.1,
-      33.6,
-      29.4,
-      44.4,
-      55.6,
-      32.1,
-      9.8
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      92.6,
+      94.4,
+      89.4,
+      96.8
     ],
-    "mem": 82.5,
-    "mem_used_gb": 2.7,
+    "mem": 81.7,
+    "mem_used_gb": 2.86,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 89.5,
+    "proc_mem_mb": 62.8,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 17268919296,
-    "net_tx": 15351077888,
-    "down_kbps": 505.1,
-    "up_kbps": 444.8,
-    "disk_free_gb": 11.1,
+    "net_rx": 17382728704,
+    "net_tx": 15477193728,
+    "down_kbps": 119.0,
+    "up_kbps": 371.4,
+    "disk_free_gb": 2.6,
     "load": [
-      4.62,
-      5.02,
-      5.79
+      13.44,
+      7.26,
+      6.48
     ],
     "cores": 8
   },
-  "disk_mb": 89.6,
+  "disk_mb": 73.1,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794554493.681579,
-    "next_sync_s": 195,
-    "commits": 91
+    "last_push": 1794554559.4264371,
+    "next_sync_s": 18,
+    "commits": 92
   },
   "last_sample": {
     "type": "web image",
-    "topic": "angptl3",
-    "problem": "Visualisation de la prot\u00e9ine Cristallis\u00e9e ANGPTL3 \u00e0 partir de l'identifiant PDB 6EUA sur le logiciel UCSF Chimera",
-    "solution": "CC BY-SA 4.0",
+    "topic": "osteoprotegerin",
+    "problem": "Figure 1. Schematic graph illustrates the mechanisms of DF/DFPCs in regulating osteoclast formation and osteoblast differentiation during tooth eruption. Colony-stimulating factor-one (CSF-1), monocyte chemotactic protein-1 (MCP-1), endothelial monocyte-activating polypeptide-2 (EMAP-2), receptor activator of nuclear factor kappa ligand (RANKL), osteoprotegerin (OPG), parathyroid hormone related peptide (PTHrP), vascular endothelial growth factor (VEGF), collagen type 1 (Col1), alkaline phosphatase (ALP), bone morphogenetic protein 6 (BMP6) and parathyroid hormone 1 receptor (PTH1R).",
+    "solution": "CC BY 4.0",
     "source": "wikimedia commons"
   }
 }
