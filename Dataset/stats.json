@@ -2,43 +2,43 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 9.7,
+  "disk_free_gb": 11.0,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794553388.2879622,
-  "updated_iso": "2026-11-13T12:33:08",
-  "uptime_s": 68887,
+  "updated": 1794554401.081852,
+  "updated_iso": "2026-11-13T12:50:01",
+  "uptime_s": 69900,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "text": 116,
     "web_images": 24,
+    "text": 116,
     "archive": 116
   },
-  "waiting": 229,
+  "waiting": 209,
   "processes": 1,
   "fields": {
-    "mathematics": 923969,
-    "physics": 462883,
+    "mathematics": 924170,
+    "physics": 502295,
     "computer science": 449948,
-    "general": 370251,
-    "engineering": 251179,
-    "medicine": 166205,
-    "chemistry": 163288,
-    "biology": 155157,
+    "general": 372768,
+    "engineering": 252648,
+    "medicine": 190360,
+    "biology": 183830,
+    "chemistry": 166620,
     "statistics": 126739,
-    "economics and finance": 102514,
-    "earth and space": 91945,
-    "materials science": 65616,
-    "psychology": 60731,
-    "humanities": 59844,
-    "programming": 25031,
+    "economics and finance": 107489,
+    "earth and space": 99992,
+    "materials science": 71820,
+    "humanities": 62280,
+    "psychology": 60932,
+    "programming": 25327,
     "machine learning": 20661,
     "robotics": 3515,
-    "general knowledge": 2381
+    "general knowledge": 2582
   },
   "topic_fields": {
     "": 7597,
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 41079,
-    "openlifescienceai/medmcqa": 12303,
+    "stack exchange dump": 42179,
+    "openlifescienceai/medmcqa": 12661,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3497740,
-    "originals": 19143,
-    "variants": 3478597,
-    "web_images": 2969,
+    "text": 3619859,
+    "originals": 19856,
+    "variants": 3600003,
+    "web_images": 2988,
     "synthetic_images": 14064,
-    "images": 17033,
+    "images": 17052,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1899172677,
-    "tasks_done": 61096,
+    "tokens": 1970081210,
+    "tasks_done": 61374,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 4300
+    "preference": 4379
   },
   "by_kind": {
-    "archive": 3968,
-    "text": 5134,
-    "web_images": 5543,
+    "archive": 4098,
+    "text": 5250,
+    "web_images": 5575,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1899172677,
-  "per_min": 38616.8,
+  "tokens": 1970081210,
+  "per_min": 8825.4,
   "topics": {
     "known": 109914,
-    "explored": 16611,
-    "queued": 93183,
+    "explored": 16727,
+    "queued": 93067,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "csi photocathode",
+        "spacetime",
         "physics",
+        39412
+      ],
+      [
+        "liquid biopsy",
+        "biology",
+        16427
+      ],
+      [
+        "osteoprotegerin",
+        "biology",
+        5112
+      ],
+      [
+        "soil and water conservation forest",
+        "biology",
+        3948
+      ],
+      [
+        "greek economy",
+        "humanities",
+        1037
+      ],
+      [
+        "plague epidemiology",
+        "medicine",
+        6310
+      ],
+      [
+        "prenatal cocaine exposure",
+        "medicine",
+        4566
+      ],
+      [
+        "open research",
+        "humanities",
+        1399
+      ],
+      [
+        "music licensing",
+        "economics and finance",
+        4975
+      ],
+      [
+        "boswellia",
+        "medicine",
         0
       ],
       [
-        "generalized entropy",
-        "physics",
-        30457
+        "auxiliary differential equation",
+        "engineering",
+        0
       ],
       [
-        "breast cancer",
-        "",
-        8191
-      ],
-      [
-        "neutron source",
-        "physics",
-        10170
-      ],
-      [
-        "angptl3",
+        "primary sj\u00f6gren's syndrome",
         "medicine",
-        5183
-      ],
-      [
-        "cartilage defects",
-        "medicine",
-        5834
-      ],
-      [
-        "expert search",
-        "computer science",
-        7787
-      ],
-      [
-        "nestin",
-        "biology",
-        5527
-      ],
-      [
-        "administrative law",
-        "humanities",
-        5266
-      ],
-      [
-        "brucellosis",
-        "medicine",
-        4254
-      ],
-      [
-        "external knowledge",
-        "economics and finance",
-        7858
-      ],
-      [
-        "intelligent life",
-        "physics",
-        2985
+        3790
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794553388.287126,
-    "cpu": 61.3,
+    "time": 1794554401.080278,
+    "cpu": 29.3,
     "cpu_cores": [
-      78.0,
-      73.5,
-      73.3,
-      71.2,
-      56.9,
-      63.3,
-      48.6,
-      25.2
+      24.5,
+      22.0,
+      19.0,
+      17.3,
+      53.2,
+      44.9,
+      32.8,
+      20.9
     ],
-    "mem": 78.9,
-    "mem_used_gb": 3.01,
+    "mem": 78.8,
+    "mem_used_gb": 2.97,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 129.2,
+    "proc_mem_mb": 625.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 16990724096,
-    "net_tx": 15120090112,
-    "down_kbps": 1334.7,
-    "up_kbps": 735.3,
-    "disk_free_gb": 9.7,
+    "net_rx": 17169476608,
+    "net_tx": 15275145216,
+    "down_kbps": 2147.8,
+    "up_kbps": 1171.7,
+    "disk_free_gb": 11.0,
     "load": [
-      8.46,
-      6.62,
-      7.16
+      5.52,
+      5.14,
+      5.91
     ],
     "cores": 8
   },
-  "disk_mb": 71.4,
+  "disk_mb": 70.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794553366.990716,
-    "next_sync_s": 218,
-    "commits": 86
+    "last_push": 1794553737.961984,
+    "next_sync_s": 289,
+    "commits": 89
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "cartilage defects",
-    "problem": "Figure 6. Shelf and groove osteochondrosis manifesta and reparative intramembranous ossification. (a) Third tarsal bone, dorso-lateral quarter, horse. There is a large, dorsal shelf defect (arrow) that is connected by a narrow stalk to a distal groove defect (arrowhead). Case 13. Micro-computed tomographic image reprinted with permission from Sigurdsson et al.28 (b) Third tarsal bone, dorso-lateral quarter, horse. In sections, it was possible to follow horizontally oriented remnants of a necrotic canal from the periosteum into the dorsal shelf in the same section as remnants coursing\u2026",
-    "solution": "CC BY 4.0",
-    "source": "wikimedia commons"
+    "type": "archive Q&A",
+    "topic": "stack exchange dump",
+    "problem": "Here in Brazil we call people like this \"puxa-saco\" (bag dragger?), meaning someone who invariably sides with and supports their bosses, often going against co-workers or employees in general, in an attempt to get recognition, be promoted, whatever. Often the boss doesn't trust them, but keeps them around as a self-maintained policing agent. Often they are quickly fired too. Today I had an\u2026",
+    "solution": "I discount the too-obvious sycophant because it does not necessarily have the overtones of being a servant. Sycophant = someone who praises powerful or rich people in a way that is not sincere, usually in order to get some advantage from them Cambridge dictionary Minion is relevant but does not give the complete feel of your description. minion = a person who is not important and who has to do\u2026",
+    "source": "stackexchange"
   }
 }
