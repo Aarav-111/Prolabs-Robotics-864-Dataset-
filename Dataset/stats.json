@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.4,
+  "disk_free_gb": 6.5,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794543068.892701,
-  "updated_iso": "2026-11-13T09:41:08",
-  "uptime_s": 58568,
+  "updated": 1794543250.8829892,
+  "updated_iso": "2026-11-13T09:44:10",
+  "uptime_s": 58750,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
     "web_images": 24,
-    "text": 116,
-    "archive": 116
+    "archive": 116,
+    "text": 116
   },
-  "waiting": 238,
+  "waiting": 246,
   "processes": 1,
   "fields": {
     "mathematics": 807143,
@@ -69,21 +69,21 @@
     "text": 2867435,
     "originals": 15633,
     "variants": 2851802,
-    "web_images": 2425,
+    "web_images": 2437,
     "synthetic_images": 14064,
-    "images": 16489,
+    "images": 16501,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1531869196,
-    "tasks_done": 54283,
+    "tasks_done": 54335,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 3387
   },
   "by_kind": {
     "archive": 2377,
-    "text": 3420,
-    "web_images": 2035,
+    "text": 3446,
+    "web_images": 2061,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1531869196,
-  "per_min": 69.7,
+  "per_min": 6.9,
   "topics": {
     "known": 109914,
-    "explored": 14897,
-    "queued": 94897,
+    "explored": 14923,
+    "queued": 94871,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "quantum spin systems",
-        "physics",
-        15778
-      ],
-      [
-        "multimodal retrieval",
-        "computer science",
-        4775
-      ],
-      [
-        "neutron time-of-flight",
-        "physics",
-        0
-      ],
-      [
-        "derived categories",
-        "mathematics",
-        0
-      ],
-      [
-        "fintech adoption",
-        "economics and finance",
-        0
-      ],
-      [
-        "4,4'-bipyridine",
-        "chemistry",
-        0
-      ],
-      [
-        "three-component reaction",
-        "chemistry",
-        0
-      ],
-      [
-        "vehicle image processing",
-        "computer science",
-        0
-      ],
-      [
-        "cayley-dickson construction",
-        "mathematics",
-        0
-      ],
-      [
-        "nandrolone decanoate",
+        "fetal hemoglobin",
         "medicine",
         0
       ],
       [
-        "stability-indicating assay",
+        "network evolution",
+        "physics",
+        0
+      ],
+      [
+        "unitary representations",
+        "mathematics",
+        0
+      ],
+      [
+        "career recommendation system",
+        "computer science",
+        0
+      ],
+      [
+        "combustion and detonation processes",
+        "engineering",
+        0
+      ],
+      [
+        "public procurement",
+        "economics and finance",
+        0
+      ],
+      [
+        "telepressure",
+        "psychology",
+        0
+      ],
+      [
+        "automotive lidar",
+        "physics",
+        0
+      ],
+      [
+        "olefin production",
+        "engineering",
+        0
+      ],
+      [
+        "xenotransplantation and immune response",
+        "medicine",
+        0
+      ],
+      [
+        "n-h\u22efo hydrogen bonds",
         "chemistry",
         0
       ],
       [
-        "european financial markets",
-        "economics and finance",
+        "kullenberg corer",
+        "earth and space",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794543068.892006,
-    "cpu": 51.8,
+    "time": 1794543250.8810391,
+    "cpu": 34.6,
     "cpu_cores": [
-      80.8,
-      80.9,
-      85.3,
-      83.0,
-      31.5,
-      32.1,
-      12.5,
-      7.1
+      29.7,
+      24.9,
+      21.1,
+      16.5,
+      75.3,
+      49.1,
+      31.4,
+      29.1
     ],
-    "mem": 81.2,
-    "mem_used_gb": 2.86,
+    "mem": 84.3,
+    "mem_used_gb": 2.53,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 188.6,
+    "proc_mem_mb": 77.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 12832280576,
-    "net_tx": 11732498432,
-    "down_kbps": 854.3,
-    "up_kbps": 483.8,
-    "disk_free_gb": 10.4,
+    "net_rx": 12975886336,
+    "net_tx": 11907268608,
+    "down_kbps": 718.4,
+    "up_kbps": 2012.7,
+    "disk_free_gb": 5.2,
     "load": [
-      21.8,
-      9.06,
-      6.84
+      13.85,
+      10.68,
+      7.85
     ],
     "cores": 8
   },
-  "disk_mb": 182.3,
+  "disk_mb": 173.3,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794542826.449943,
-    "next_sync_s": 288,
-    "commits": 46
+    "last_push": 1794543112.1634188,
+    "next_sync_s": 106,
+    "commits": 47
   },
   "last_sample": {
     "type": "web image",
-    "topic": "welsh",
-    "problem": "Welsh \u201cstill here\u201d mural depicting footballer Gareth Bale, Bangor, 2023",
-    "solution": "CC0",
+    "topic": "quantum spin systems",
+    "problem": "A magnetic tunnel junction (MTJ) without the top electrode (pillar exposed). Rendered in Blender using an Nvidia RTX 4070 Ti Super GPU.",
+    "solution": "CC BY 4.0",
     "source": "wikimedia commons"
   }
 }
