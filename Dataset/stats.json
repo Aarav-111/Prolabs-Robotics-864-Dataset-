@@ -1,24 +1,24 @@
 {
   "state": "running",
   "offline": false,
-  "disk_low": true,
-  "disk_free_gb": 4.6,
+  "disk_low": false,
+  "disk_free_gb": 8.0,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794545170.6042209,
-  "updated_iso": "2026-11-13T10:16:10",
-  "uptime_s": 60670,
+  "updated": 1794545472.218658,
+  "updated_iso": "2026-11-13T10:21:12",
+  "uptime_s": 60971,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 252,
+  "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 20,
-    "text": 116,
-    "archive": 116
+    "web_images": 24,
+    "archive": 116,
+    "text": 116
   },
-  "waiting": 242,
+  "waiting": 241,
   "processes": 1,
   "fields": {
     "mathematics": 807998,
@@ -69,21 +69,21 @@
     "text": 2874443,
     "originals": 15674,
     "variants": 2858769,
-    "web_images": 2600,
+    "web_images": 2645,
     "synthetic_images": 14064,
-    "images": 16664,
+    "images": 16709,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1534413801,
-    "tasks_done": 57271,
+    "tasks_done": 57626,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 3387
   },
   "by_kind": {
-    "archive": 2841,
-    "text": 4066,
-    "web_images": 3913,
+    "archive": 2945,
+    "text": 4181,
+    "web_images": 4049,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1534413801,
-  "per_min": 1212.9,
+  "per_min": 9.0,
   "topics": {
     "known": 109914,
-    "explored": 15543,
-    "queued": 94251,
+    "explored": 15658,
+    "queued": 94136,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "quantum optomechanics",
-        "physics",
-        0
-      ],
-      [
-        "extensive air showers",
-        "physics",
-        0
-      ],
-      [
-        "cochinchina",
-        "humanities",
-        0
-      ],
-      [
-        "owl ontologies",
+        "forward secrecy",
         "computer science",
         0
       ],
       [
-        "frame theory",
-        "mathematics",
+        "price per square meter",
+        "economics and finance",
         0
       ],
       [
-        "periodically perforated domains",
-        "mathematics",
-        0
-      ],
-      [
-        "rotational spectroscopy",
-        "chemistry",
-        0
-      ],
-      [
-        "early modern history",
+        "ocean literacy",
         "humanities",
         0
       ],
       [
-        "multi-target-directed ligands",
-        "medicine",
+        "watermark embedding",
+        "computer science",
         0
       ],
       [
-        "near-rings",
+        "islamic astronomy",
+        "physics",
+        0
+      ],
+      [
+        "vocal learning",
+        "biology",
+        0
+      ],
+      [
+        "homotopy type",
         "mathematics",
         0
       ],
       [
-        "pressure ratio",
+        "projection (relational algebra)",
+        "",
+        0
+      ],
+      [
+        "streak artifacts",
         "engineering",
         0
       ],
       [
-        "psychiatric hospitalization",
-        "psychology",
+        "optical polarization and ellipsometry",
+        "physics",
+        0
+      ],
+      [
+        "n-heterocyclic carbene palladium complexes",
+        "chemistry",
+        0
+      ],
+      [
+        "learning rate scheduling",
+        "computer science",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794545170.6034188,
-    "cpu": 42.8,
+    "time": 1794545472.217736,
+    "cpu": 29.0,
     "cpu_cores": [
-      28.1,
-      27.4,
-      24.3,
-      20.3,
-      78.3,
-      68.0,
-      52.5,
-      43.1
+      32.5,
+      31.0,
+      23.9,
+      23.1,
+      44.7,
+      34.5,
+      27.1,
+      15.1
     ],
-    "mem": 83.8,
-    "mem_used_gb": 2.5,
+    "mem": 82.9,
+    "mem_used_gb": 2.8,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 177.1,
+    "proc_mem_mb": 173.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 13713292288,
-    "net_tx": 12879086592,
-    "down_kbps": 359.4,
-    "up_kbps": 207.9,
-    "disk_free_gb": 4.6,
+    "net_rx": 13765807104,
+    "net_tx": 12927816704,
+    "down_kbps": 292.5,
+    "up_kbps": 174.7,
+    "disk_free_gb": 8.0,
     "load": [
-      9.85,
-      8.87,
-      7.43
+      4.3,
+      5.77,
+      6.38
     ],
     "cores": 8
   },
-  "disk_mb": 28.6,
+  "disk_mb": 24.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794544975.259232,
+    "last_push": 1794545203.520468,
     "next_sync_s": 296,
-    "commits": 63
+    "commits": 64
   },
   "last_sample": {
     "type": "web image",
-    "topic": "31p nmr",
-    "problem": "31P NMR spectra of two allyl-palladium complexes",
-    "solution": "CC BY 4.0",
+    "topic": "r package",
+    "problem": "A photograph showing a man sealing a slightly misshapen cardboard box ready to ship it out. He is using tape to secure the lid. A pink and white pair of scissors are sitting next to him on the table alongside another cardboard box. There is a plant in the background. This picture if free to use under the Creative Commons Attribution Licence. If you use this image, please link back to us at meanwell-packaging.co.uk/",
+    "solution": "CC BY 2.0",
     "source": "wikimedia commons"
   }
 }
