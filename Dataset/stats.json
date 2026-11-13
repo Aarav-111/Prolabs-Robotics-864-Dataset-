@@ -2,33 +2,33 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.1,
+  "disk_free_gb": 15.4,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794540376.417293,
-  "updated_iso": "2026-11-13T08:56:19",
-  "uptime_s": 55876,
+  "updated": 1794540601.6133618,
+  "updated_iso": "2026-11-13T09:00:01",
+  "uptime_s": 56101,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 255,
+  "in_flight": 256,
   "busy_by_kind": {
-    "text": 116,
-    "web_images": 23,
-    "archive": 116
+    "web_images": 24,
+    "archive": 116,
+    "text": 116
   },
-  "waiting": 238,
+  "waiting": 232,
   "processes": 1,
   "fields": {
-    "mathematics": 766599,
-    "computer science": 315202,
+    "mathematics": 769013,
+    "computer science": 322577,
     "general": 313981,
-    "physics": 288444,
-    "engineering": 221553,
-    "chemistry": 113527,
-    "statistics": 110972,
-    "biology": 105209,
+    "physics": 291433,
+    "engineering": 228360,
+    "chemistry": 117110,
+    "statistics": 111487,
+    "biology": 111053,
     "medicine": 91514,
     "earth and space": 79524,
     "economics and finance": 73455,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 2643866,
-    "originals": 14450,
-    "variants": 2629416,
-    "web_images": 1946,
+    "text": 2673393,
+    "originals": 14616,
+    "variants": 2658777,
+    "web_images": 1976,
     "synthetic_images": 14064,
-    "images": 16010,
+    "images": 16040,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 1447744198,
-    "tasks_done": 52679,
+    "tokens": 1459008546,
+    "tasks_done": 52739,
     "tasks_failed": 9,
     "topics_added": 108651,
     "preference": 3159
   },
   "by_kind": {
     "archive": 1732,
-    "text": 2753,
-    "web_images": 1742,
+    "text": 2791,
+    "web_images": 1764,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 1447744198,
-  "per_min": 3834.7,
+  "tokens": 1459008546,
+  "per_min": 7051.2,
   "topics": {
     "known": 109914,
-    "explored": 14230,
-    "queued": 95564,
+    "explored": 14268,
+    "queued": 95526,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "pyrrolizidines",
-        "chemistry",
-        0
-      ],
-      [
-        "kinetic resolution",
-        "chemistry",
-        3750
-      ],
-      [
-        "future of general practice",
-        "medicine",
-        1912
-      ],
-      [
-        "acausal modeling",
-        "mathematics",
-        0
-      ],
-      [
-        "monocular depth estimation",
+        "machine learning and data classification",
         "computer science",
-        0
+        2960
       ],
       [
-        "trade fairs",
-        "economics and finance",
-        0
+        "adaptive user interfaces",
+        "computer science",
+        2426
       ],
       [
-        "synoptic scale meteorology",
-        "",
-        0
-      ],
-      [
-        "disinfectant formulation",
+        "extended mind",
         "biology",
-        0
+        2219
       ],
       [
-        "physcion",
-        "biology",
-        0
+        "ontology integration",
+        "computer science",
+        1587
       ],
       [
-        "best proximity point",
+        "differential equations and boundary problems",
         "mathematics",
-        0
+        1136
       ],
       [
-        "delone and mclean model",
+        "global regularity",
+        "mathematics",
+        1077
+      ],
+      [
+        "project duration reduction",
         "statistics",
+        515
+      ],
+      [
+        "bialgebras",
+        "mathematics",
         0
       ],
       [
-        "biometric identification",
+        "compact k\u00e4hler manifolds",
+        "mathematics",
+        201
+      ],
+      [
+        "erasure coding",
         "computer science",
+        0
+      ],
+      [
+        "blood smear examination",
+        "computer science",
+        402
+      ],
+      [
+        "mathematical physics",
+        "mathematics",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794540376.337441,
-    "cpu": 53.2,
+    "time": 1794540601.61271,
+    "cpu": 40.4,
     "cpu_cores": [
-      43.1,
-      39.5,
-      36.4,
-      32.8,
-      73.1,
-      71.7,
-      68.1,
-      60.8
+      60.9,
+      56.6,
+      56.6,
+      53.8,
+      36.0,
+      29.4,
+      19.7,
+      10.8
     ],
-    "mem": 83.9,
-    "mem_used_gb": 2.47,
+    "mem": 66.5,
+    "mem_used_gb": 4.06,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 101.0,
+    "proc_mem_mb": 462.8,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 10428616704,
-    "net_tx": 9668236288,
-    "down_kbps": 2417.8,
-    "up_kbps": 1679.4,
-    "disk_free_gb": 11.1,
+    "net_rx": 10843729920,
+    "net_tx": 9961899008,
+    "down_kbps": 1203.6,
+    "up_kbps": 628.3,
+    "disk_free_gb": 15.4,
     "load": [
-      8.17,
-      6.67,
-      5.45
+      5.3,
+      5.86,
+      5.36
     ],
     "cores": 8
   },
-  "disk_mb": 475.5,
+  "disk_mb": 437.6,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794540325.382281,
-    "next_sync_s": 208,
-    "commits": 24
+    "last_push": 1794540548.639454,
+    "next_sync_s": 292,
+    "commits": 26
   },
   "last_sample": {
     "type": "web image",
-    "topic": "transtibial amputation",
-    "problem": "Man with a below-the-knee amputation walking on stones with a prosthesis",
-    "solution": "CC BY-SA 2.0",
+    "topic": "mac layer",
+    "problem": "The MAT Table on a Layer 2 device",
+    "solution": "CC BY-SA 3.0",
     "source": "wikimedia commons"
   }
 }
