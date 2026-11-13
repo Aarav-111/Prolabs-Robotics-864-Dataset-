@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 9.0,
+  "disk_free_gb": 10.0,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794544870.4763799,
-  "updated_iso": "2026-11-13T10:11:10",
-  "uptime_s": 60370,
+  "updated": 1794544920.735221,
+  "updated_iso": "2026-11-13T10:12:00",
+  "uptime_s": 60420,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "web_images": 24
   },
-  "waiting": 247,
+  "waiting": 239,
   "processes": 1,
   "fields": {
     "mathematics": 807143,
@@ -75,15 +75,15 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1532236513,
-    "tasks_done": 56925,
+    "tasks_done": 56951,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 3387
   },
   "by_kind": {
-    "archive": 2725,
-    "text": 3962,
-    "web_images": 3787,
+    "archive": 2727,
+    "text": 3985,
+    "web_images": 3788,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -94,8 +94,8 @@
   "per_min": 7.6,
   "topics": {
     "known": 109914,
-    "explored": 15439,
-    "queued": 94355,
+    "explored": 15462,
+    "queued": 94332,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "computational geometry",
+        "young tableaux",
+        "mathematics",
+        0
+      ],
+      [
+        "fluorescent nanomaterials",
+        "materials science",
+        0
+      ],
+      [
+        "yahoo! answers",
         "computer science",
         0
       ],
       [
-        "swimming biomechanics",
+        "degree of approximation",
+        "mathematics",
+        0
+      ],
+      [
+        "monochrome pottery",
+        "computer science",
+        0
+      ],
+      [
+        "low-power high-performance vlsi design",
         "engineering",
         0
       ],
       [
-        "business, education, mathematics research",
-        "economics and finance",
+        "chlorinated polyvinyl chloride",
+        "materials science",
         0
       ],
       [
-        "state support for innovation",
-        "economics and finance",
+        "furnace technology",
+        "engineering",
         0
       ],
       [
-        "microcavity polaritons",
-        "physics",
-        0
-      ],
-      [
-        "reusable components",
+        "jpeg compression",
         "computer science",
         0
       ],
       [
-        "circle",
-        "mathematics",
-        0
-      ],
-      [
-        "basic emotions",
-        "computer science",
-        0
-      ],
-      [
-        "tetrazine synthesis",
-        "chemistry",
-        0
-      ],
-      [
-        "insect behavior and control techniques",
+        "caulobacter crescentus",
         "biology",
         0
       ],
       [
-        "numerical differentiation",
-        "mathematics",
+        "\u03b1-carbolines",
+        "chemistry",
         0
       ],
       [
-        "offspring obesity",
-        "medicine",
+        "fluorine chemistry",
+        "chemistry",
         0
       ]
     ],
@@ -213,43 +213,43 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794544870.474758,
-    "cpu": 45.4,
+    "time": 1794544920.7343612,
+    "cpu": 51.6,
     "cpu_cores": [
-      44.6,
-      41.7,
-      37.7,
-      35.4,
-      58.8,
-      58.3,
-      44.4,
-      42.9
+      53.5,
+      50.7,
+      48.4,
+      47.5,
+      61.5,
+      61.0,
+      52.1,
+      38.4
     ],
-    "mem": 86.5,
-    "mem_used_gb": 3.23,
+    "mem": 84.5,
+    "mem_used_gb": 2.61,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 103.8,
+    "proc_mem_mb": 99.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 13623884800,
-    "net_tx": 12785213440,
-    "down_kbps": 791.8,
-    "up_kbps": 1202.9,
-    "disk_free_gb": 10.0,
+    "net_rx": 13651414016,
+    "net_tx": 12828008448,
+    "down_kbps": 1045.8,
+    "up_kbps": 551.1,
+    "disk_free_gb": 9.1,
     "load": [
-      5.99,
-      6.35,
-      6.28
+      9.87,
+      7.38,
+      6.66
     ],
     "cores": 8
   },
-  "disk_mb": 34.7,
+  "disk_mb": 36.3,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 1794544566.776309,
-    "next_sync_s": 296,
+    "next_sync_s": 245,
     "commits": 60
   },
   "last_sample": {
