@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794546112.173606,
-  "updated_iso": "2026-11-13T10:31:52",
-  "uptime_s": 61611,
+  "updated": 1794546127.2965288,
+  "updated_iso": "2026-11-13T10:32:07",
+  "uptime_s": 61626,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 255,
   "busy_by_kind": {
     "web_images": 24,
-    "text": 116,
+    "text": 115,
     "archive": 116
   },
-  "waiting": 240,
+  "waiting": 231,
   "processes": 1,
   "fields": {
     "mathematics": 807998,
@@ -69,21 +69,21 @@
     "text": 2875416,
     "originals": 15679,
     "variants": 2859737,
-    "web_images": 2727,
+    "web_images": 2730,
     "synthetic_images": 14064,
-    "images": 16791,
+    "images": 16794,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 1534832257,
-    "tasks_done": 58253,
+    "tasks_done": 58269,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 3387
   },
   "by_kind": {
     "archive": 3073,
-    "text": 4383,
-    "web_images": 4346,
+    "text": 4391,
+    "web_images": 4354,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 1534832257,
-  "per_min": 205.1,
+  "per_min": 205.9,
   "topics": {
     "known": 109914,
-    "explored": 15860,
-    "queued": 93934,
+    "explored": 15868,
+    "queued": 93927,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,46 @@
     ],
     "recent": [
       [
+        "lewis acid sites",
+        "chemistry",
+        0
+      ],
+      [
+        "absorbing-emitting media",
+        "engineering",
+        0
+      ],
+      [
+        "photonic crystals",
+        "physics",
+        0
+      ],
+      [
+        "epistemological development",
+        "psychology",
+        0
+      ],
+      [
+        "waste rock piles",
+        "earth and space",
+        0
+      ],
+      [
+        "wheel-rail interaction",
+        "engineering",
+        0
+      ],
+      [
+        "radio frequency fingerprint",
+        "computer science",
+        0
+      ],
+      [
+        "myxosporean parasites",
+        "biology",
+        0
+      ],
+      [
         "immune algorithm",
         "computer science",
         0
@@ -167,79 +207,39 @@
         "building height estimation",
         "computer science",
         0
-      ],
-      [
-        "noise reduction",
-        "",
-        0
-      ],
-      [
-        "excitable systems",
-        "physics",
-        0
-      ],
-      [
-        "radical precursors",
-        "chemistry",
-        973
-      ],
-      [
-        "shiny",
-        "mathematics",
-        0
-      ],
-      [
-        "ntu rgb+d",
-        "computer science",
-        0
-      ],
-      [
-        "electroweak interaction",
-        "",
-        0
-      ],
-      [
-        "quantum criticality",
-        "physics",
-        0
-      ],
-      [
-        "counterspeech",
-        "computer science",
-        0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 119,
     "focus_left": 0
   },
   "system": {
-    "time": 1794546112.172645,
-    "cpu": 21.8,
+    "time": 1794546127.2931788,
+    "cpu": 46.3,
     "cpu_cores": [
-      35.0,
-      32.3,
-      28.3,
-      26.7,
-      26.1,
-      17.5,
-      5.8,
-      3.6
+      40.1,
+      34.6,
+      29.9,
+      27.3,
+      67.3,
+      65.9,
+      52.1,
+      53.0
     ],
-    "mem": 84.2,
-    "mem_used_gb": 2.6,
+    "mem": 86.9,
+    "mem_used_gb": 3.34,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 216.5,
+    "proc_mem_mb": 106.8,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 13887967232,
-    "net_tx": 13029041152,
-    "down_kbps": 495.9,
-    "up_kbps": 287.2,
+    "net_rx": 13897761792,
+    "net_tx": 13036837888,
+    "down_kbps": 992.5,
+    "up_kbps": 584.5,
     "disk_free_gb": 9.5,
     "load": [
-      4.61,
-      4.4,
-      5.12
+      4.76,
+      4.46,
+      5.13
     ],
     "cores": 8
   },
@@ -248,15 +248,15 @@
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794546112.098937,
-    "next_sync_s": 258,
-    "commits": 69
+    "last_push": 1794546126.3660312,
+    "next_sync_s": 243,
+    "commits": 70
   },
   "last_sample": {
     "type": "web image",
-    "topic": "go/no-go task",
-    "problem": "U.S. Soldiers assigned to Task Force Raider with Battle Group Poland, sends a shout out back home to the Nashville Predators. Task Force Raider is a deployed element of the Tennessee Army National Guard\u2019s 2nd Squadron, 278th Armored Cavalry Regiment headquartered in Knoxville, Tenn. Battle Group Poland is a unique, multinational coalition of U.S., U.K., Croatian and Romanian Soldiers who serve with the Polish 15th Mechanized Brigade as a defense and deterrence to Russian aggression in support of NATO\u2019s Enhanced Forward Presence. (Photo by U.S. Army Sgt. Sarah Kirby)",
-    "solution": "Public domain",
+    "topic": "radical precursors",
+    "problem": "Built in 1896, this house was heavily renovated to its present Organic Modern design under the direction of Bruce Goff in 1947-1948 for Myron Bachman, a recording engineer. The house was designed during Goff\u2019s time living and working in Chicago between the late 1930s and late 1940s, where Goff designed multiple houses, with the completed works becoming increasingly radical before World War II, with Goff\u2019s aesthetics and unique approach to design becoming firmly established in the aesthetics his work by the end of World War II. The house is one of Goff\u2019s first postwar commissions, a departure\u2026",
+    "solution": "CC BY-SA 2.0",
     "source": "wikimedia commons"
   }
 }
