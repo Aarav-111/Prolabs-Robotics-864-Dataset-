@@ -7,37 +7,37 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794638560.916702,
-  "updated_iso": "2026-11-14T12:12:43",
-  "uptime_s": 154060,
+  "updated": 1794639468.154002,
+  "updated_iso": "2026-11-14T12:27:48",
+  "uptime_s": 154967,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 253,
+  "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 24,
-    "text": 113,
-    "archive": 116
+    "text": 116,
+    "archive": 116,
+    "web_images": 24
   },
-  "waiting": 209,
+  "waiting": 239,
   "processes": 1,
   "fields": {
     "mathematics": 926955,
-    "computer science": 651902,
+    "computer science": 681168,
+    "general": 544779,
     "physics": 502898,
-    "general": 492481,
-    "engineering": 390635,
-    "medicine": 283548,
-    "biology": 264152,
-    "chemistry": 242214,
-    "economics and finance": 161794,
-    "earth and space": 157433,
-    "materials science": 148800,
+    "engineering": 401680,
+    "medicine": 292357,
+    "biology": 267365,
+    "chemistry": 252958,
+    "economics and finance": 167852,
+    "earth and space": 161816,
+    "materials science": 153354,
     "statistics": 126739,
-    "psychology": 90966,
-    "humanities": 87074,
-    "programming": 38398,
+    "psychology": 94008,
+    "humanities": 90536,
+    "programming": 38995,
     "machine learning": 20661,
-    "general knowledge": 8001,
+    "general knowledge": 8738,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 80785,
+    "stack exchange dump": 83058,
     "openlifescienceai/medmcqa": 22118,
-    "qiaojin/PubMedQA": 2431,
+    "qiaojin/PubMedQA": 3030,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4594049,
-    "originals": 25374,
-    "variants": 4568675,
-    "web_images": 4369,
+    "text": 4732257,
+    "originals": 26088,
+    "variants": 4706169,
+    "web_images": 4471,
     "synthetic_images": 14064,
-    "images": 18433,
+    "images": 18535,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2369290469,
-    "tasks_done": 84155,
+    "tokens": 2447763910,
+    "tasks_done": 84602,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 6979
+    "preference": 7092
   },
   "by_kind": {
-    "archive": 9581,
-    "text": 14563,
-    "web_images": 13560,
+    "archive": 9738,
+    "text": 14794,
+    "web_images": 13619,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2369290469,
-  "per_min": 2796.7,
+  "tokens": 2447763910,
+  "per_min": 5686.2,
   "topics": {
     "known": 109914,
-    "explored": 26041,
-    "queued": 83757,
+    "explored": 26271,
+    "queued": 83523,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "cyanide biodegradation",
-        "biology",
+        "physical design",
+        "engineering",
         0
       ],
       [
-        "tibial tuberosity advancement",
-        "medicine",
+        "p3ht:pcbm",
+        "engineering",
         0
       ],
       [
-        "phosphorus-nitrogen heterocycles",
+        "steroidal saponins",
         "chemistry",
         0
       ],
       [
-        "lymphatic development",
-        "medicine",
+        "msme development",
+        "economics and finance",
         0
       ],
       [
-        "readmission prediction",
+        "brain informatics",
         "computer science",
         0
       ],
       [
-        "type 1 diabetes prevention",
-        "biology",
-        0
-      ],
-      [
-        "driver-vehicle interaction",
+        "translation theory",
         "humanities",
         0
       ],
       [
-        "recycled glass",
-        "engineering",
-        0
-      ],
-      [
-        "subdomain iia",
-        "biology",
-        0
-      ],
-      [
-        "reactor safety analysis",
-        "engineering",
-        0
-      ],
-      [
-        "flood myth",
-        "",
-        0
-      ],
-      [
-        "school counseling programs",
+        "sexual infidelity",
         "psychology",
+        0
+      ],
+      [
+        "radical education",
+        "humanities",
+        0
+      ],
+      [
+        "ai-driven personalization",
+        "economics and finance",
+        0
+      ],
+      [
+        "asteroid discovery",
+        "earth and space",
+        0
+      ],
+      [
+        "hospital quality assurance",
+        "medicine",
+        0
+      ],
+      [
+        "international cooperation in science",
+        "humanities",
         0
       ]
     ],
-    "in_progress": 116,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794638560.888462,
-    "cpu": 24.1,
+    "time": 1794639468.15211,
+    "cpu": 18.9,
     "cpu_cores": [
-      12.4,
-      10.8,
-      7.3,
-      5.7,
-      46.8,
-      49.5,
-      40.9,
-      20.0
+      26.5,
+      24.2,
+      20.0,
+      17.6,
+      23.6,
+      27.1,
+      9.1,
+      3.6
     ],
-    "mem": 79.3,
-    "mem_used_gb": 2.86,
+    "mem": 78.7,
+    "mem_used_gb": 2.93,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 231.4,
+    "proc_mem_mb": 118.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 24679981056,
-    "net_tx": 23511907328,
-    "down_kbps": 182.8,
-    "up_kbps": 309.5,
+    "net_rx": 25097689088,
+    "net_tx": 24164132864,
+    "down_kbps": 576.8,
+    "up_kbps": 371.2,
     "disk_free_gb": 10.4,
     "load": [
-      2.16,
-      2.73,
-      2.97
+      3.22,
+      3.43,
+      3.26
     ],
     "cores": 8
   },
-  "disk_mb": 294.8,
+  "disk_mb": 329.8,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (4 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794638546.262955,
-    "next_sync_s": 219,
-    "commits": 133
+    "last_push": 1794638947.2931561,
+    "next_sync_s": 269,
+    "commits": 135
   },
   "last_sample": {
     "type": "web image",
-    "topic": "tourism marketing",
-    "problem": "29 Nov 2012 North America and Mainland Europe hold the key to tourism growth next year, according to Tourism Ireland, as it launched its marketing plans for 2013 today. The plans will see visitor numbers to the island of Ireland increase by +5% to 7.6 million in 2013, contributing \u20ac3.7 billion (+6%) to the economies, north and south. 2012 looks set to be one of the strongest years ever for visitors from North America to Ireland (since the previous high of 2007, when we welcomed over one million visitors). And, with the number of airline seats from the United States to Ireland set to grow by\u2026",
-    "solution": "CC BY-SA 2.0",
+    "topic": "food irradiation regulation",
+    "problem": "Lithographic caricature magazine of four pages on two leaves, in the form of a (monthly) newspaper; illustrations as follows. 1 October 1830 Page 1. A REFORM. (16268) Queen Adelaide, wearing a crown, turns the handle of a mill whose body resembles a huge bandbox decorated with the Royal Arms; she says: 'No Silk gowns, no french curls and I'll have you all wear aprons'. A fashionably dressed woman wearing a big hat, fur boa (see No. 16526), and inflated sleeves is about to step from a ladder into the hopper, where the head and sleeves of another terrified girl are seen. A third, with hair in\u2026",
+    "solution": "Public domain",
     "source": "wikimedia commons"
   }
 }
