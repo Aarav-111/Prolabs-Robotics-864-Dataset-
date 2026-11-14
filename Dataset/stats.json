@@ -7,30 +7,30 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794662387.139622,
-  "updated_iso": "2026-11-14T18:49:50",
-  "uptime_s": 177886,
+  "updated": 1794663613.2877162,
+  "updated_iso": "2026-11-14T19:10:13",
+  "uptime_s": 179112,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 249,
+  "in_flight": 256,
   "busy_by_kind": {
-    "text": 110,
-    "archive": 115,
-    "web_images": 24
+    "web_images": 24,
+    "archive": 116,
+    "text": 116
   },
-  "waiting": 212,
+  "waiting": 146,
   "processes": 1,
   "fields": {
-    "computer science": 1125379,
+    "computer science": 1134042,
     "mathematics": 928130,
-    "general": 708666,
+    "general": 716318,
     "engineering": 567099,
     "physics": 502898,
-    "medicine": 354502,
-    "chemistry": 314471,
-    "biology": 313109,
+    "medicine": 358846,
+    "chemistry": 315561,
+    "biology": 313424,
     "economics and finance": 234393,
-    "earth and space": 219994,
+    "earth and space": 220780,
     "materials science": 205462,
     "humanities": 136769,
     "psychology": 136195,
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 114254,
-    "openlifescienceai/medmcqa": 35298,
+    "stack exchange dump": 115344,
+    "openlifescienceai/medmcqa": 36141,
     "qiaojin/PubMedQA": 5725,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5958891,
-    "originals": 32612,
-    "variants": 5926279,
-    "web_images": 6937,
+    "text": 5981741,
+    "originals": 32728,
+    "variants": 5949013,
+    "web_images": 6957,
     "synthetic_images": 14064,
-    "images": 21001,
+    "images": 21021,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2913636233,
-    "tasks_done": 103254,
+    "tokens": 2922329518,
+    "tasks_done": 103462,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 10019
+    "preference": 10102
   },
   "by_kind": {
-    "archive": 15117,
-    "text": 20888,
-    "web_images": 20802,
+    "archive": 15169,
+    "text": 20963,
+    "web_images": 20879,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2913636233,
-  "per_min": 1194.6,
+  "tokens": 2922329518,
+  "per_min": 1088.0,
   "topics": {
     "known": 109914,
-    "explored": 32367,
-    "queued": 77435,
+    "explored": 32440,
+    "queued": 77354,
     "space": 6594840,
     "next": [
       [
@@ -149,113 +149,113 @@
     ],
     "recent": [
       [
-        "laser resurfacing",
-        "medicine",
-        0
-      ],
-      [
-        "taurine",
-        "biology",
-        0
-      ],
-      [
-        "linguistic variation and morphology",
-        "humanities",
-        0
-      ],
-      [
-        "neural network training",
+        "model-based testing",
         "computer science",
         0
       ],
       [
-        "psychoanalytic listening",
-        "psychology",
-        0
-      ],
-      [
-        "vascular biomechanics",
+        "bearing fault detection",
         "engineering",
         0
       ],
       [
-        "listeriosis",
+        "rhizobial inoculants",
         "biology",
         0
       ],
       [
-        "environmental health planning",
+        "toronto alexithymia scale",
+        "medicine",
+        0
+      ],
+      [
+        "eavesdropper",
+        "engineering",
+        0
+      ],
+      [
+        "rice breeding",
+        "biology",
+        0
+      ],
+      [
+        "mine reclamation",
         "earth and space",
         0
       ],
       [
-        "hybrid system",
-        "",
+        "enterprise rehabilitation",
+        "economics and finance",
         0
       ],
       [
-        "fault tree analysis",
-        "engineering",
+        "campus network security",
+        "computer science",
         0
       ],
       [
-        "flexible strain sensors",
-        "engineering",
+        "school environmental management",
+        "earth and space",
         0
       ],
       [
-        "seneca",
-        "humanities",
+        "chemokine gradients",
+        "medicine",
         0
+      ],
+      [
+        "speech outcomes",
+        "medicine",
+        2898
       ]
     ],
-    "in_progress": 111,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794662387.089067,
-    "cpu": 45.3,
+    "time": 1794663613.286614,
+    "cpu": 38.8,
     "cpu_cores": [
-      45.7,
-      47.6,
-      42.2,
-      35.8,
-      54.8,
       55.6,
-      49.0,
-      31.8
+      52.0,
+      38.7,
+      39.3,
+      42.8,
+      42.4,
+      24.1,
+      15.7
     ],
-    "mem": 82.1,
-    "mem_used_gb": 2.63,
+    "mem": 82.4,
+    "mem_used_gb": 2.64,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 162.8,
+    "proc_mem_mb": 99.3,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32438390784,
-    "net_tx": 31981834240,
-    "down_kbps": 349.0,
-    "up_kbps": 453.2,
-    "disk_free_gb": 6.8,
+    "net_rx": 32521415680,
+    "net_tx": 32083550208,
+    "down_kbps": 31.1,
+    "up_kbps": 47.7,
+    "disk_free_gb": 6.7,
     "load": [
-      3.22,
-      3.14,
-      3.24
+      5.57,
+      3.8,
+      3.46
     ],
     "cores": 8
   },
-  "disk_mb": 696.3,
+  "disk_mb": 699.4,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (2 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794662384.08217,
-    "next_sync_s": 260,
-    "commits": 200
+    "last_push": 1794662455.6640692,
+    "next_sync_s": 282,
+    "commits": 201
   },
   "last_sample": {
     "type": "web image",
-    "topic": "scramjet",
-    "problem": "Riscramjet Engine High Subsonic / Transonic Phase",
+    "topic": "missing data",
+    "problem": "Scholia's missing page for the topic of Q1757694 (data quality), as of 18 January 2019, highlighting curation needs.",
     "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
