@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 6.1,
+  "disk_free_gb": 6.0,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794664283.241212,
-  "updated_iso": "2026-11-14T19:21:23",
-  "uptime_s": 179782,
+  "updated": 1794664340.112739,
+  "updated_iso": "2026-11-14T19:22:20",
+  "uptime_s": 179839,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "archive": 116,
     "text": 116,
+    "archive": 116,
     "web_images": 24
   },
-  "waiting": 245,
+  "waiting": 234,
   "processes": 1,
   "fields": {
     "computer science": 1156552,
@@ -69,21 +69,21 @@
     "text": 6031476,
     "originals": 32987,
     "variants": 5998489,
-    "web_images": 7023,
+    "web_images": 7040,
     "synthetic_images": 14064,
-    "images": 21087,
+    "images": 21104,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2940536668,
-    "tasks_done": 104073,
+    "tasks_done": 104111,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
-    "archive": 15391,
-    "text": 21182,
-    "web_images": 21049,
+    "archive": 15393,
+    "text": 21187,
+    "web_images": 21080,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2940536668,
-  "per_min": 8756.1,
+  "per_min": 6633.3,
   "topics": {
     "known": 109914,
-    "explored": 32659,
-    "queued": 77135,
+    "explored": 32664,
+    "queued": 77130,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,31 @@
     ],
     "recent": [
       [
+        "drainage network extraction",
+        "earth and space",
+        0
+      ],
+      [
+        "stilling basin",
+        "engineering",
+        0
+      ],
+      [
+        "thermal denaturation",
+        "biology",
+        0
+      ],
+      [
+        "resilience scale",
+        "psychology",
+        0
+      ],
+      [
+        "aluminum foam",
+        "engineering",
+        0
+      ],
+      [
         "epilepsy diagnosis",
         "biology",
         3871
@@ -182,81 +207,56 @@
         "local food",
         "biology",
         0
-      ],
-      [
-        "wild rice",
-        "biology",
-        0
-      ],
-      [
-        "cloudlets",
-        "computer science",
-        0
-      ],
-      [
-        "porous organic frameworks",
-        "materials science",
-        0
-      ],
-      [
-        "protein\u2013protein interaction",
-        "",
-        2027
-      ],
-      [
-        "kofi annan",
-        "humanities",
-        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794664283.239074,
-    "cpu": 58.5,
+    "time": 1794664340.111888,
+    "cpu": 23.8,
     "cpu_cores": [
-      79.3,
-      76.9,
-      76.7,
-      76.3,
-      49.5,
-      51.0,
-      36.5,
-      21.2
+      23.7,
+      22.8,
+      18.1,
+      14.3,
+      46.6,
+      39.8,
+      20.3,
+      5.4
     ],
-    "mem": 83.1,
-    "mem_used_gb": 2.55,
+    "mem": 80.7,
+    "mem_used_gb": 2.75,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 287.3,
+    "proc_mem_mb": 194.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32890255360,
-    "net_tx": 32646944768,
-    "down_kbps": 1475.3,
-    "up_kbps": 1295.0,
-    "disk_free_gb": 6.1,
+    "net_rx": 32928855040,
+    "net_tx": 32700420096,
+    "down_kbps": 460.5,
+    "up_kbps": 378.3,
+    "disk_free_gb": 6.0,
     "load": [
-      3.91,
-      3.8,
-      3.57
+      3.17,
+      3.7,
+      3.55
     ],
     "cores": 8
   },
-  "disk_mb": 705.0,
+  "disk_mb": 705.1,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794664202.731264,
-    "next_sync_s": 294,
-    "commits": 207
+    "last_push": 1794664315.429591,
+    "next_sync_s": 237,
+    "commits": 208
   },
   "last_sample": {
-    "type": "text",
-    "topic": "epilepsy diagnosis",
-    "problem": "Shorter duration of slow wave sleep is related to symptoms of depression in patients with epilepsy Slow wave sleep duration and spectral abnormalities are related to both epilepsy and depression, but it is unclear how depressive symptoms in patients with epilepsy are affected by slow wave sleep duration and clinical factors, and how the spectral characteristics of slow wave sleep reflect a\u2026",
-    "solution": "Depressive symptoms were documented with the Beck Depression Inventory (BDI). At least mild depressive symptoms (BDI>9) were found among 23 patients with focal epilepsy, 5 patients with generalised epilepsy, and 6 patients who had no epilepsy diagnosis. Slow wave sleep duration was shorter for patients with at least mild depressive symptoms (p=.004), independently from epilepsy diagnosis,\u2026",
-    "source": "arxiv"
+    "type": "web image",
+    "topic": "binder jetting",
+    "problem": "3D printer using the Binder Jetting technology; an inkjet spit bar injects colored binding agent into a powder bed building up a colorful object (here: flowers) layer by layer",
+    "solution": "CC BY-SA 4.0",
+    "source": "wikimedia commons"
   }
 }

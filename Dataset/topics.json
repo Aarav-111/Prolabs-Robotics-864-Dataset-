@@ -1,544 +1,516 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-14T19:21:21",
+"updated": "2026-11-14T19:22:18",
 "total": 109914,
-"done": 32659,
+"done": 32660,
 "in_progress": 119,
-"left": 77136,
+"left": 77135,
 "parallel_agents": {
-"running": 133,
+"running": 126,
 "topics": [
 {
-"agent": 2,
-"topic": "aluminum foam"
-},
-{
-"agent": 3,
+"agent": 1,
 "topic": "resilience scale"
 },
 {
-"agent": 4,
+"agent": 2,
 "topic": "stilling basin"
 },
 {
-"agent": 5,
+"agent": 3,
 "topic": "thermal denaturation"
 },
 {
-"agent": 6,
+"agent": 4,
 "topic": "drainage network extraction"
 },
 {
-"agent": 7,
+"agent": 5,
 "topic": "vehicular edge computing"
 },
 {
-"agent": 9,
+"agent": 6,
 "topic": "glass fiber"
 },
 {
-"agent": 10,
+"agent": 7,
 "topic": "seismometer installation"
 },
 {
-"agent": 11,
+"agent": 8,
 "topic": "electrical discharge machining"
 },
 {
-"agent": 12,
+"agent": 9,
 "topic": "hot corrosion"
 },
 {
-"agent": 21,
-"topic": "nocebo effect"
-},
-{
-"agent": 22,
-"topic": "service management"
-},
-{
-"agent": 23,
-"topic": "non-classical logic"
-},
-{
-"agent": 40,
+"agent": 32,
 "topic": "incidence (geometry)"
 },
 {
-"agent": 42,
+"agent": 34,
 "topic": "salt rejection"
 },
 {
-"agent": 44,
+"agent": 36,
 "topic": "autopsy"
 },
 {
-"agent": 46,
+"agent": 38,
 "topic": "therapeutic architecture"
 },
 {
-"agent": 48,
+"agent": 40,
 "topic": "uhv transmission lines"
 },
 {
-"agent": 50,
+"agent": 42,
 "topic": "mentoring skills"
 },
 {
-"agent": 52,
+"agent": 44,
 "topic": "communications system"
 },
 {
-"agent": 54,
+"agent": 46,
 "topic": "port policy"
 },
 {
-"agent": 56,
+"agent": 48,
 "topic": "immune-inspired control"
 },
 {
-"agent": 58,
+"agent": 50,
 "topic": "plastination"
 },
 {
-"agent": 60,
+"agent": 52,
 "topic": "role of educational psychologists"
 },
 {
-"agent": 63,
+"agent": 55,
 "topic": "facial width-to-height ratio"
 },
 {
-"agent": 65,
+"agent": 57,
 "topic": "petroleum industry"
 },
 {
-"agent": 67,
+"agent": 59,
 "topic": "fcc spectral mask"
 },
 {
-"agent": 69,
+"agent": 61,
 "topic": "genomic distance"
 },
 {
-"agent": 71,
+"agent": 63,
 "topic": "ukrainian food market"
 },
 {
-"agent": 73,
+"agent": 65,
 "topic": "npcr"
 },
 {
-"agent": 75,
+"agent": 67,
 "topic": "persuasive design"
 },
 {
-"agent": 78,
+"agent": 70,
 "topic": "propositional satisfiability"
 },
 {
-"agent": 81,
+"agent": 73,
 "topic": "youth suicide"
 },
 {
-"agent": 83,
+"agent": 75,
 "topic": "natural gas field"
 },
 {
-"agent": 85,
+"agent": 77,
 "topic": "muslim employees"
 },
 {
-"agent": 87,
+"agent": 79,
 "topic": "adipogenesis"
 },
 {
-"agent": 89,
+"agent": 81,
 "topic": "cannabis legalization"
 },
 {
-"agent": 92,
+"agent": 84,
 "topic": "inorganic mercury"
 },
 {
-"agent": 94,
+"agent": 86,
 "topic": "office buildings"
 },
 {
-"agent": 98,
+"agent": 90,
 "topic": "image processing pipeline"
 },
 {
-"agent": 101,
+"agent": 93,
 "topic": "stable diffusion"
 },
 {
-"agent": 114,
-"topic": "homeostasis"
-},
-{
-"agent": 117,
-"topic": "defuzzification"
-},
-{
-"agent": 125,
+"agent": 111,
 "topic": "educational robotics"
 },
 {
-"agent": 126,
+"agent": 112,
 "topic": "plasticity"
 },
 {
-"agent": 127,
+"agent": 113,
 "topic": "brain tumor survivors"
 },
 {
-"agent": 128,
+"agent": 114,
 "topic": "adult neuropsychology"
 },
 {
-"agent": 129,
+"agent": 115,
 "topic": "collective litigation"
 },
 {
-"agent": 130,
+"agent": 116,
 "topic": "smart appliances"
 },
 {
-"agent": 131,
+"agent": 117,
 "topic": "food drying and modeling"
 },
 {
-"agent": 132,
+"agent": 118,
 "topic": "shapelets"
 },
 {
-"agent": 133,
+"agent": 119,
 "topic": "metastatic spinal tumors"
 },
 {
-"agent": 134,
+"agent": 120,
 "topic": "constrained optimization"
 },
 {
-"agent": 135,
+"agent": 121,
 "topic": "tangible interaction"
 },
 {
-"agent": 136,
+"agent": 122,
 "topic": "electroconvulsive shock"
 },
 {
-"agent": 137,
+"agent": 123,
 "topic": "social security disability insurance"
 },
 {
-"agent": 138,
+"agent": 124,
 "topic": "postharvest storage"
 },
 {
-"agent": 139,
+"agent": 125,
 "topic": "epilepsy diagnosis"
 },
 {
-"agent": 140,
+"agent": 126,
 "topic": "sentence embeddings"
 },
 {
-"agent": 141,
+"agent": 127,
 "topic": "shock (circulatory)"
 },
 {
-"agent": 142,
+"agent": 128,
 "topic": "binder jetting"
 },
 {
-"agent": 143,
+"agent": 129,
 "topic": "cleaner production"
 },
 {
-"agent": 144,
+"agent": 130,
 "topic": "electron energy loss spectroscopy"
 },
 {
-"agent": 145,
-"topic": "cognitive bias"
-},
-{
-"agent": 146,
+"agent": 131,
 "topic": "body orifice"
 },
 {
-"agent": 147,
+"agent": 132,
 "topic": "water contact angle"
 },
 {
-"agent": 148,
+"agent": 133,
 "topic": "protein–protein interaction"
 },
 {
-"agent": 149,
+"agent": 134,
 "topic": "uranium dioxide"
 },
 {
-"agent": 150,
+"agent": 135,
 "topic": "shortest path problem"
 },
 {
-"agent": 151,
+"agent": 136,
 "topic": "v3 loop"
 },
 {
-"agent": 152,
+"agent": 137,
 "topic": "cpa exam preparation"
 },
 {
-"agent": 153,
+"agent": 138,
 "topic": "cubic zirconia"
 },
 {
-"agent": 154,
+"agent": 139,
 "topic": "vowels"
 },
 {
-"agent": 155,
+"agent": 140,
 "topic": "solid-state lighting"
 },
 {
-"agent": 156,
-"topic": "pelagic zone"
-},
-{
-"agent": 157,
+"agent": 141,
 "topic": "sparse arrays"
 },
 {
-"agent": 158,
+"agent": 142,
 "topic": "research data repositories"
 },
 {
-"agent": 159,
+"agent": 143,
 "topic": "small business innovation"
 },
 {
-"agent": 160,
+"agent": 144,
 "topic": "video saliency detection"
 },
 {
-"agent": 161,
+"agent": 145,
 "topic": "human-computer interaction"
 },
 {
-"agent": 162,
+"agent": 146,
 "topic": "greenhouse gas emissions from shipping"
 },
 {
-"agent": 163,
+"agent": 147,
 "topic": "stem technologies"
 },
 {
-"agent": 164,
-"topic": "strongly convex optimization"
-},
-{
-"agent": 165,
+"agent": 148,
 "topic": "cattle reproduction"
 },
 {
-"agent": 166,
+"agent": 149,
 "topic": "prostaglandin e2"
 },
 {
-"agent": 167,
-"topic": "distributed arithmetic"
-},
-{
-"agent": 168,
+"agent": 150,
 "topic": "transport and logistics innovations"
 },
 {
-"agent": 169,
+"agent": 151,
 "topic": "halal standards"
 },
 {
-"agent": 170,
-"topic": "unsupervised classification"
-},
-{
-"agent": 171,
+"agent": 152,
 "topic": "species checklist"
 },
 {
-"agent": 172,
+"agent": 153,
 "topic": "farnesyl diphosphate synthase"
 },
 {
-"agent": 173,
+"agent": 154,
 "topic": "dental photography"
 },
 {
-"agent": 175,
+"agent": 156,
 "topic": "popular unity"
 },
 {
-"agent": 177,
+"agent": 158,
 "topic": "triptonide"
 },
 {
-"agent": 179,
+"agent": 160,
 "topic": "gstm1"
 },
 {
-"agent": 181,
+"agent": 162,
 "topic": "turkish vocabulary"
 },
 {
-"agent": 183,
+"agent": 164,
 "topic": "cds nanoparticles"
 },
 {
-"agent": 185,
+"agent": 166,
 "topic": "performance measurement"
 },
 {
-"agent": 187,
+"agent": 168,
 "topic": "trenbolone acetate"
 },
 {
-"agent": 189,
+"agent": 170,
 "topic": "sorption refrigeration"
 },
 {
-"agent": 191,
+"agent": 172,
 "topic": "self-aware ai"
 },
 {
-"agent": 193,
+"agent": 174,
 "topic": "cartels"
 },
 {
-"agent": 195,
+"agent": 176,
 "topic": "green supply chain management"
 },
 {
-"agent": 197,
+"agent": 178,
 "topic": "information technology curriculum"
 },
 {
-"agent": 199,
+"agent": 180,
 "topic": "medium frequency induction heating"
 },
 {
-"agent": 201,
+"agent": 182,
 "topic": "randomized hough transform"
 },
 {
-"agent": 203,
+"agent": 184,
 "topic": "egf receptor"
 },
 {
-"agent": 205,
+"agent": 186,
 "topic": "β-type titanium alloys"
 },
 {
-"agent": 207,
+"agent": 188,
 "topic": "mobile cloud computing"
 },
 {
-"agent": 209,
+"agent": 190,
 "topic": "monolayer ws2"
 },
 {
-"agent": 211,
+"agent": 192,
 "topic": "bone matrix proteins"
 },
 {
-"agent": 213,
+"agent": 194,
 "topic": "cyberball task"
 },
 {
-"agent": 215,
+"agent": 196,
 "topic": "belief propagation"
 },
 {
-"agent": 217,
+"agent": 198,
 "topic": "clarity"
 },
 {
-"agent": 219,
+"agent": 200,
 "topic": "archery coaching"
 },
 {
-"agent": 221,
+"agent": 202,
 "topic": "constitutional court"
 },
 {
-"agent": 223,
+"agent": 204,
 "topic": "jujube cultivars"
 },
 {
-"agent": 225,
+"agent": 206,
 "topic": "service-oriented architecture"
 },
 {
-"agent": 227,
+"agent": 208,
 "topic": "personnel performance appraisal"
 },
 {
-"agent": 229,
+"agent": 210,
 "topic": "children with intellectual disabilities"
 },
 {
-"agent": 230,
-"topic": "nerve root monitoring"
-},
-{
-"agent": 232,
+"agent": 212,
 "topic": "music therapy and health"
 },
 {
-"agent": 234,
+"agent": 214,
 "topic": "tropocollagen"
 },
 {
-"agent": 236,
+"agent": 216,
 "topic": "academic stress"
 },
 {
-"agent": 238,
+"agent": 218,
 "topic": "healthcare systems and public health"
 },
 {
-"agent": 240,
+"agent": 220,
 "topic": "pericardial disease"
 },
 {
-"agent": 242,
+"agent": 222,
 "topic": "thermally grown oxide"
 },
 {
-"agent": 244,
+"agent": 224,
 "topic": "indicaxanthin"
 },
 {
-"agent": 246,
+"agent": 226,
 "topic": "anharmonicity"
 },
 {
-"agent": 248,
+"agent": 228,
 "topic": "boiler operation"
 },
 {
-"agent": 250,
+"agent": 230,
 "topic": "pulp oil"
 },
 {
-"agent": 252,
+"agent": 232,
 "topic": "infrastructure reliability"
 },
 {
-"agent": 254,
+"agent": 234,
 "topic": "recreational use"
+},
+{
+"agent": 236,
+"topic": "morphofunctional indicators"
+},
+{
+"agent": 242,
+"topic": "strongly convex optimization"
+},
+{
+"agent": 246,
+"topic": "cognitive bias"
+},
+{
+"agent": 251,
+"topic": "pelagic zone"
+},
+{
+"agent": 255,
+"topic": "distributed arithmetic"
 }
 ]
 },
@@ -550,8 +522,8 @@
 },
 "medicine": {
 "done": 2695,
-"left": 17973,
-"in_progress": 13
+"left": 17972,
+"in_progress": 14
 },
 "biology": {
 "done": 3113,
@@ -559,9 +531,9 @@
 "in_progress": 13
 },
 "engineering": {
-"done": 3181,
+"done": 3182,
 "left": 9378,
-"in_progress": 16
+"in_progress": 15
 },
 "general": {
 "done": 2224,
@@ -631,15 +603,27 @@
 },
 "topics": [
 {
+"topic": "aluminum foam",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T19:22:17"
+},
+{
 "topic": "epilepsy diagnosis",
 "field": "biology",
 "level": "specialist",
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 139,
+"agent": 125,
 "records": 3871,
-"images": 1,
+"images": 3,
 "completed": "2026-11-14T19:21:16"
 },
 {
@@ -649,9 +633,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 150,
+"agent": 135,
 "records": 5823,
-"images": 1,
+"images": 3,
 "completed": "2026-11-14T19:21:16"
 },
 {
@@ -661,9 +645,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 145,
+"agent": 246,
 "records": 4283,
-"images": 1,
+"images": 3,
 "completed": "2026-11-14T19:21:16"
 },
 {
@@ -673,9 +657,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 156,
+"agent": 251,
 "records": 374,
-"images": 1,
+"images": 3,
 "completed": "2026-11-14T19:21:16"
 },
 {
@@ -685,9 +669,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 170,
+"agent": null,
 "records": 3306,
-"images": 1,
+"images": 2,
 "completed": "2026-11-14T19:21:16"
 },
 {
@@ -757,9 +741,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 148,
+"agent": 133,
 "records": 2027,
-"images": 1,
+"images": 3,
 "completed": "2026-11-14T19:21:16"
 },
 {
@@ -997,9 +981,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 161,
+"agent": 145,
 "records": 1867,
-"images": 1,
+"images": 3,
 "completed": "2026-11-14T19:21:16"
 },
 {
@@ -1081,9 +1065,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 164,
+"agent": 242,
 "records": 2988,
-"images": 1,
+"images": 3,
 "completed": "2026-11-14T19:21:16"
 },
 {
@@ -1141,9 +1125,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 159,
+"agent": 143,
 "records": 894,
-"images": 1,
+"images": 3,
 "completed": "2026-11-14T19:21:16"
 },
 {
@@ -1261,9 +1245,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 153,
+"agent": 138,
 "records": 629,
-"images": 1,
+"images": 3,
 "completed": "2026-11-14T19:21:16"
 },
 {
@@ -1417,9 +1401,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 167,
+"agent": 255,
 "records": 779,
-"images": 1,
+"images": 3,
 "completed": "2026-11-14T19:21:16"
 },
 {
@@ -1453,9 +1437,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 142,
+"agent": 128,
 "records": 511,
-"images": 1,
+"images": 3,
 "completed": "2026-11-14T19:21:14"
 },
 {
@@ -1465,9 +1449,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 230,
+"agent": null,
 "records": 201,
-"images": 2,
+"images": 3,
 "completed": "2026-11-14T19:21:11"
 },
 {
@@ -1585,7 +1569,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 23,
+"agent": null,
 "records": 2160,
 "images": 5,
 "completed": "2026-11-14T19:18:08"
@@ -1609,7 +1593,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 114,
+"agent": null,
 "records": 3145,
 "images": 5,
 "completed": "2026-11-14T19:18:08"
@@ -1777,7 +1761,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 22,
+"agent": null,
 "records": 1603,
 "images": 6,
 "completed": "2026-11-14T19:18:08"
@@ -1849,7 +1833,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 21,
+"agent": null,
 "records": 113,
 "images": 6,
 "completed": "2026-11-14T19:18:08"
@@ -1861,7 +1845,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 117,
+"agent": null,
 "records": 1079,
 "images": 5,
 "completed": "2026-11-14T19:18:08"
@@ -393373,7 +393357,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 87,
+"agent": 79,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -394849,7 +394833,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 246,
+"agent": 226,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -398701,7 +398685,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 146,
+"agent": 131,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -402301,7 +402285,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 217,
+"agent": 198,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -402385,7 +402369,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 143,
+"agent": 129,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -403453,7 +403437,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 52,
+"agent": 44,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -404617,7 +404601,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 221,
+"agent": 202,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -404653,7 +404637,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 134,
+"agent": 120,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -417481,7 +417465,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 9,
+"agent": 6,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -421333,7 +421317,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 40,
+"agent": 32,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -430885,7 +430869,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 83,
+"agent": 75,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -435553,7 +435537,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 65,
+"agent": 57,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -439093,7 +439077,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 166,
+"agent": 149,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -444997,7 +444981,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 141,
+"agent": 127,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -473365,7 +473349,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 211,
+"agent": 192,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -478285,7 +478269,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 165,
+"agent": 148,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -498733,7 +498717,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 172,
+"agent": 153,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -502177,7 +502161,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 131,
+"agent": 117,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -506941,7 +506925,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 69,
+"agent": 61,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -509833,7 +509817,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 179,
+"agent": 160,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -515989,7 +515973,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 98,
+"agent": 90,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -516613,7 +516597,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 244,
+"agent": 224,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -519853,7 +519837,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 223,
+"agent": 204,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -550765,7 +550749,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 138,
+"agent": 124,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -573433,7 +573417,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 5,
+"agent": 3,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -575905,7 +575889,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 187,
+"agent": 168,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -578125,7 +578109,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 151,
+"agent": 136,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -584749,7 +584733,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 215,
+"agent": 196,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -589873,7 +589857,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 56,
+"agent": 48,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -590101,7 +590085,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 197,
+"agent": 178,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -591793,7 +591777,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 207,
+"agent": 188,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -592945,7 +592929,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 73,
+"agent": 65,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -593773,7 +593757,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 75,
+"agent": 67,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -594313,7 +594297,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 78,
+"agent": 70,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -594769,7 +594753,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 201,
+"agent": 182,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -595117,7 +595101,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 158,
+"agent": 142,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -595897,7 +595881,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 191,
+"agent": 172,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -596029,7 +596013,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 140,
+"agent": 126,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -596149,7 +596133,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 225,
+"agent": 206,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -596197,7 +596181,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 132,
+"agent": 118,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -596725,7 +596709,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 157,
+"agent": 141,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -597001,7 +596985,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 101,
+"agent": 93,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -597517,7 +597501,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 135,
+"agent": 121,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -598585,7 +598569,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 7,
+"agent": 5,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -598741,7 +598725,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 160,
+"agent": 144,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -610813,7 +610797,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 6,
+"agent": 4,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -618013,7 +617997,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 162,
+"agent": 146,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -620953,7 +620937,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 92,
+"agent": 84,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -635497,7 +635481,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 42,
+"agent": 34,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -636769,7 +636753,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 10,
+"agent": 7,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -638485,7 +638469,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 171,
+"agent": 152,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -651769,7 +651753,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 193,
+"agent": 174,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -655441,7 +655425,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 152,
+"agent": 137,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -665233,7 +665217,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 195,
+"agent": 176,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -665473,7 +665457,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 169,
+"agent": 151,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -673909,7 +673893,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 85,
+"agent": 77,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -676909,7 +676893,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 185,
+"agent": 166,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -677017,7 +677001,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 227,
+"agent": 208,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -679729,7 +679713,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 254,
+"agent": 234,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -687193,7 +687177,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 71,
+"agent": 63,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -693787,18 +693771,6 @@
 "completed": ""
 },
 {
-"topic": "aluminum foam",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 2,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "aluminum matrix composites",
 "field": "engineering",
 "level": "specialist",
@@ -695197,7 +695169,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 219,
+"agent": 200,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -699961,7 +699933,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 248,
+"agent": 228,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -718333,7 +718305,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 11,
+"agent": 8,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -724033,7 +724005,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 67,
+"agent": 59,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -740341,7 +740313,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 252,
+"agent": 232,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -750157,7 +750129,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 199,
+"agent": 180,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -758689,7 +758661,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 94,
+"agent": 86,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -765565,7 +765537,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 58,
+"agent": 50,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -766477,7 +766449,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 54,
+"agent": 46,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -780757,7 +780729,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 130,
+"agent": 116,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -782701,7 +782673,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 189,
+"agent": 170,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -785245,7 +785217,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 4,
+"agent": 2,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -789949,7 +789921,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 46,
+"agent": 38,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -793417,7 +793389,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 168,
+"agent": 150,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -795121,7 +795093,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 48,
+"agent": 40,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -841873,7 +841845,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 129,
+"agent": 115,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -870301,7 +870273,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 125,
+"agent": 111,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -948349,7 +948321,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 50,
+"agent": 42,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -981733,7 +981705,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 175,
+"agent": 156,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1017493,7 +1017465,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 137,
+"agent": 123,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1025389,7 +1025361,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 163,
+"agent": 147,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1042609,7 +1042581,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 181,
+"agent": 162,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1059937,7 +1059909,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 126,
+"agent": 112,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1062889,7 +1062861,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 183,
+"agent": 164,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1066237,7 +1066209,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 144,
+"agent": 130,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1068793,7 +1068765,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 12,
+"agent": 9,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1072321,7 +1072293,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 209,
+"agent": 190,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1078885,7 +1078857,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 155,
+"agent": 140,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1080385,7 +1080357,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 242,
+"agent": 222,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1081045,7 +1081017,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 234,
+"agent": 214,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1081369,7 +1081341,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 149,
+"agent": 134,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1081609,7 +1081581,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 147,
+"agent": 132,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1082329,7 +1082301,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 205,
+"agent": 186,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1101877,7 +1101849,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 44,
+"agent": 36,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1109041,7 +1109013,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 127,
+"agent": 113,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1113217,7 +1113189,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 89,
+"agent": 81,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1120417,7 +1120389,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 229,
+"agent": 210,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1136401,7 +1136373,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 173,
+"agent": 154,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1145893,7 +1145865,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 203,
+"agent": 184,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1146601,7 +1146573,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 136,
+"agent": 122,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1170757,7 +1170729,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 238,
+"agent": 218,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1205929,7 +1205901,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 133,
+"agent": 119,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1208928,8 +1208900,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 236,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1234921,7 +1234893,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 240,
+"agent": 220,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1250089,7 +1250061,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 250,
+"agent": 230,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1285837,7 +1285809,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 177,
+"agent": 158,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1298545,7 +1298517,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 236,
+"agent": 216,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1298821,7 +1298793,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 128,
+"agent": 114,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1303165,7 +1303137,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 213,
+"agent": 194,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1305097,7 +1305069,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 63,
+"agent": 55,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1310329,7 +1310301,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 232,
+"agent": 212,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1314673,7 +1314645,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 3,
+"agent": 1,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1314817,7 +1314789,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 60,
+"agent": 52,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1319053,7 +1319025,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 154,
+"agent": 139,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1319581,7 +1319553,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 81,
+"agent": 73,
 "records": 0,
 "images": 0,
 "completed": ""
