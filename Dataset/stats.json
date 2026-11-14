@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 6.8,
+  "disk_free_gb": 6.2,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794663953.284666,
-  "updated_iso": "2026-11-14T19:15:53",
-  "uptime_s": 179452,
+  "updated": 1794663970.915679,
+  "updated_iso": "2026-11-14T19:16:10",
+  "uptime_s": 179470,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 239,
+  "waiting": 238,
   "processes": 1,
   "fields": {
     "computer science": 1136525,
@@ -69,21 +69,21 @@
     "text": 5987860,
     "originals": 32755,
     "variants": 5955105,
-    "web_images": 6991,
+    "web_images": 6999,
     "synthetic_images": 14064,
-    "images": 21055,
+    "images": 21063,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2924425873,
-    "tasks_done": 103777,
+    "tasks_done": 103796,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
-    "archive": 15279,
-    "text": 21071,
-    "web_images": 20976,
+    "archive": 15285,
+    "text": 21073,
+    "web_images": 20987,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2924425873,
-  "per_min": 747.8,
+  "per_min": 747.0,
   "topics": {
     "known": 109914,
-    "explored": 32548,
-    "queued": 77246,
+    "explored": 32550,
+    "queued": 77244,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,16 @@
     ],
     "recent": [
       [
+        "system-on-chip testing",
+        "computer science",
+        0
+      ],
+      [
+        "fisheries regulation",
+        "biology",
+        0
+      ],
+      [
         "computerized accounting",
         "economics and finance",
         0
@@ -197,66 +207,56 @@
         "hippo/yap signaling",
         "biology",
         0
-      ],
-      [
-        "sanctions effectiveness",
-        "economics and finance",
-        0
-      ],
-      [
-        "weight management interventions",
-        "medicine",
-        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794663953.282766,
-    "cpu": 19.8,
+    "time": 1794663970.914411,
+    "cpu": 31.8,
     "cpu_cores": [
-      21.0,
-      20.5,
-      16.8,
-      12.7,
-      31.2,
+      40.4,
       34.4,
-      14.6,
-      7.7
+      29.4,
+      25.1,
+      39.4,
+      47.8,
+      25.2,
+      13.2
     ],
-    "mem": 81.1,
-    "mem_used_gb": 2.71,
+    "mem": 80.5,
+    "mem_used_gb": 2.77,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 99.0,
+    "proc_mem_mb": 180.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32696969216,
-    "net_tx": 32340467712,
-    "down_kbps": 143.6,
-    "up_kbps": 97.7,
-    "disk_free_gb": 6.8,
+    "net_rx": 32714975232,
+    "net_tx": 32365676544,
+    "down_kbps": 1258.2,
+    "up_kbps": 1260.6,
+    "disk_free_gb": 6.2,
     "load": [
-      3.9,
-      3.56,
-      3.43
+      3.27,
+      3.44,
+      3.39
     ],
     "cores": 8
   },
-  "disk_mb": 702.2,
+  "disk_mb": 699.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794663929.8081532,
-    "next_sync_s": 243,
-    "commits": 204
+    "last_push": 1794663970.60154,
+    "next_sync_s": 225,
+    "commits": 205
   },
   "last_sample": {
     "type": "web image",
-    "topic": "lantibiotics",
-    "problem": "Festival of Economics 2012 - Trento",
-    "solution": "CC BY-SA 3.0",
+    "topic": "course improvement",
+    "problem": "Print in album Photographs MWW Marlborough Brook, Pegan Filters, improvement of Lake Cochituate, Vol. 1. Massachusetts Metropolitan District Commission; Massachusetts Department of Conservation and Recreation; Massachusetts Water Resources Authority",
+    "solution": "Public domain",
     "source": "wikimedia commons"
   }
 }
