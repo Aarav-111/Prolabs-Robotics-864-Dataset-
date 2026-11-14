@@ -2,42 +2,42 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.3,
+  "disk_free_gb": 11.4,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794641182.926856,
-  "updated_iso": "2026-11-14T12:56:22",
-  "uptime_s": 156682,
+  "updated": 1794643091.262696,
+  "updated_iso": "2026-11-14T13:28:11",
+  "uptime_s": 158590,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
+    "web_images": 24,
     "text": 116,
-    "archive": 116,
-    "web_images": 24
+    "archive": 116
   },
-  "waiting": 227,
+  "waiting": 219,
   "processes": 1,
   "fields": {
     "mathematics": 926955,
-    "computer science": 710910,
-    "general": 560243,
+    "computer science": 775189,
+    "general": 571920,
     "physics": 502898,
-    "engineering": 422032,
-    "medicine": 298503,
-    "biology": 277491,
-    "chemistry": 263644,
-    "economics and finance": 171211,
-    "earth and space": 162782,
-    "materials science": 162484,
+    "engineering": 446781,
+    "medicine": 305651,
+    "biology": 279759,
+    "chemistry": 270299,
+    "economics and finance": 177730,
+    "earth and space": 170992,
+    "materials science": 165093,
     "statistics": 126739,
-    "psychology": 94515,
-    "humanities": 93706,
-    "programming": 41253,
+    "humanities": 102570,
+    "psychology": 94992,
+    "programming": 41554,
     "machine learning": 20661,
-    "general knowledge": 8939,
+    "general knowledge": 9086,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 86179,
-    "openlifescienceai/medmcqa": 22736,
+    "stack exchange dump": 87000,
+    "openlifescienceai/medmcqa": 23593,
     "qiaojin/PubMedQA": 3231,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4844364,
-    "originals": 26704,
-    "variants": 4817660,
-    "web_images": 4652,
+    "text": 4988267,
+    "originals": 27474,
+    "variants": 4960793,
+    "web_images": 4903,
     "synthetic_images": 14064,
-    "images": 18716,
+    "images": 18967,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2490089755,
-    "tasks_done": 86291,
+    "tokens": 2543036406,
+    "tasks_done": 87892,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 7409
+    "preference": 7562
   },
   "by_kind": {
-    "archive": 10253,
-    "text": 15366,
-    "web_images": 14221,
+    "archive": 10760,
+    "text": 15962,
+    "web_images": 14719,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2490089755,
-  "per_min": 4275.9,
+  "tokens": 2543036406,
+  "per_min": 8248.9,
   "topics": {
     "known": 109914,
-    "explored": 26844,
-    "queued": 82951,
+    "explored": 27439,
+    "queued": 82355,
     "space": 6594840,
     "next": [
       [
@@ -123,16 +123,8 @@
         "humanities"
       ],
       [
-        "control systems",
-        "engineering"
-      ],
-      [
         "analog circuits",
         "engineering"
-      ],
-      [
-        "planetary science",
-        "earth and space"
       ],
       [
         "physiology",
@@ -145,118 +137,126 @@
       [
         "antennas",
         "engineering"
+      ],
+      [
+        "cell biology",
+        "biology"
+      ],
+      [
+        "microbiology",
+        "biology"
       ]
     ],
     "recent": [
       [
-        "fluorescence-guided surgery",
+        "loop (graph theory)",
+        "",
+        1494
+      ],
+      [
+        "working fluid",
+        "engineering",
+        115
+      ],
+      [
+        "human mobility patterns",
+        "humanities",
+        3900
+      ],
+      [
+        "spectrum allocation",
+        "computer science",
+        3183
+      ],
+      [
+        "erp",
+        "economics and finance",
+        2366
+      ],
+      [
+        "electromagnetic field effects on plants",
+        "biology",
+        0
+      ],
+      [
+        "mxene quantum dots",
+        "materials science",
+        0
+      ],
+      [
+        "chiral aziridines",
+        "chemistry",
+        0
+      ],
+      [
+        "mobile sensor networks",
+        "computer science",
+        0
+      ],
+      [
+        "rehabilitation professionals",
         "medicine",
         0
       ],
       [
-        "network virtualization",
-        "computer science",
+        "plasma paraquat concentration",
+        "medicine",
         0
       ],
       [
-        "fisheries monitoring",
-        "biology",
-        0
-      ],
-      [
-        "photothermal materials",
-        "engineering",
-        0
-      ],
-      [
-        "residual",
-        "",
-        0
-      ],
-      [
-        "tributary",
-        "",
-        0
-      ],
-      [
-        "tgfbr2",
-        "biology",
-        0
-      ],
-      [
-        "ecotourism",
+        "enterprise economic management",
         "economics and finance",
-        0
-      ],
-      [
-        "2,5-disubstituted oxazoles",
-        "chemistry",
-        0
-      ],
-      [
-        "two-dimensional bin packing",
-        "engineering",
-        0
-      ],
-      [
-        "thioether synthesis",
-        "chemistry",
-        0
-      ],
-      [
-        "online learning behavior",
-        "computer science",
         0
       ]
     ],
-    "in_progress": 119,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794641182.924549,
-    "cpu": 31.3,
+    "time": 1794643091.261672,
+    "cpu": 28.6,
     "cpu_cores": [
-      47.9,
-      50.7,
-      44.3,
-      38.4,
-      20.8,
-      31.5,
-      11.0,
-      5.5
+      42.3,
+      37.7,
+      35.9,
+      32.9,
+      29.2,
+      31.0,
+      13.4,
+      6.0
     ],
-    "mem": 78.1,
-    "mem_used_gb": 2.97,
+    "mem": 78.8,
+    "mem_used_gb": 2.91,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 216.1,
+    "proc_mem_mb": 143.8,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 25607877632,
-    "net_tx": 24924092416,
-    "down_kbps": 638.3,
-    "up_kbps": 818.3,
-    "disk_free_gb": 11.3,
+    "net_rx": 26181229568,
+    "net_tx": 25649567744,
+    "down_kbps": 1170.9,
+    "up_kbps": 822.4,
+    "disk_free_gb": 11.4,
     "load": [
-      3.55,
-      2.72,
-      2.59
+      3.65,
+      2.89,
+      2.66
     ],
     "cores": 8
   },
-  "disk_mb": 368.5,
+  "disk_mb": 424.5,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794641181.69938,
-    "next_sync_s": 99,
-    "commits": 141
+    "last_push": 1794641219.716776,
+    "next_sync_s": 40,
+    "commits": 142
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "working environment",
-    "problem": "Mapbox Uncharted ERG created these images to encourage and enable everyone in tech to represent LGBTQIA+ people at work, including collaboration and teamwork, leadership, design, engineering, and mobile development. We invite anyone to use them for blog posts, slide decks, billboards, digital ads, event promotion, or any other purpose. These photos are licensed CC BY 3.0 US and they\u2019re free for anyone to use, as long as the use contains attribution. For an example of attribution, see photos in our blog post: bit.ly/QueerTechPhotosAnnounce - * * The mission of the Uncharted ERG is to support\u2026",
-    "solution": "CC BY 2.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "loop (graph theory)",
+    "problem": "Integrating three-loop modular graph functions and transcendentality of string amplitudes Modular graph functions (MGFs) are $\\mathrm{SL}(2,\\mathbb{Z})$-invariant functions on the Poincar\u00e9 upper half-plane associated with Feynman graphs of a conformal scalar field on a torus. The low-energy expansion of genus-one superstring amplitudes involves suitably regularized integrals of MGFs over the\u2026",
+    "solution": "These results led to the conjectured uniform transcendentality of the genus-one four-graviton amplitude in Type II superstring theory. In this paper, we explicitly evaluate the integrals of several infinite families of three-loop MGFs and investigate their transcendental structure. Up to weight seven, the structure of the integral of each individual MGF is consistent with the uniform\u2026",
+    "source": "arxiv"
   }
 }
