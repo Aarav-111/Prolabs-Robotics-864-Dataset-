@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794638418.168551,
-  "updated_iso": "2026-11-14T12:10:18",
-  "uptime_s": 153917,
+  "updated": 1794638514.571811,
+  "updated_iso": "2026-11-14T12:11:54",
+  "uptime_s": 154014,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,24 +18,24 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 242,
+  "waiting": 246,
   "processes": 1,
   "fields": {
     "mathematics": 926955,
-    "computer science": 651476,
+    "computer science": 651701,
     "physics": 502898,
     "general": 491878,
     "engineering": 390635,
     "medicine": 283548,
     "biology": 264152,
     "chemistry": 242214,
-    "economics and finance": 161212,
+    "economics and finance": 161794,
     "earth and space": 157433,
     "materials science": 148800,
     "statistics": 126739,
     "psychology": 90966,
     "humanities": 87074,
-    "programming": 37853,
+    "programming": 38398,
     "machine learning": 20661,
     "general knowledge": 8001,
     "robotics": 3515
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 80240,
+    "stack exchange dump": 80785,
     "openlifescienceai/medmcqa": 22118,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4591893,
-    "originals": 25363,
-    "variants": 4566530,
-    "web_images": 4314,
+    "text": 4593245,
+    "originals": 25370,
+    "variants": 4567875,
+    "web_images": 4363,
     "synthetic_images": 14064,
-    "images": 18378,
+    "images": 18427,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2368126820,
-    "tasks_done": 84052,
+    "tokens": 2368850789,
+    "tasks_done": 84093,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 6971
+    "preference": 6979
   },
   "by_kind": {
-    "archive": 9562,
-    "text": 14502,
-    "web_images": 13537,
+    "archive": 9581,
+    "text": 14507,
+    "web_images": 13554,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2368126820,
-  "per_min": 9494.8,
+  "tokens": 2368850789,
+  "per_min": 3506.3,
   "topics": {
     "known": 109914,
-    "explored": 25979,
-    "queued": 83815,
+    "explored": 25984,
+    "queued": 83810,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,31 @@
     ],
     "recent": [
       [
+        "pediatric ethics",
+        "medicine",
+        0
+      ],
+      [
+        "electric vehicles and infrastructure",
+        "engineering",
+        0
+      ],
+      [
+        "tourism marketing",
+        "economics and finance",
+        582
+      ],
+      [
+        "rights management",
+        "computer science",
+        225
+      ],
+      [
+        "feynman gate",
+        "computer science",
+        0
+      ],
+      [
         "sea ice concentration",
         "earth and space",
         4307
@@ -182,81 +207,56 @@
         "indentation",
         "",
         1865
-      ],
-      [
-        "gneiss",
-        "",
-        0
-      ],
-      [
-        "unsw-nb15",
-        "computer science",
-        0
-      ],
-      [
-        "lubricant",
-        "",
-        0
-      ],
-      [
-        "antibiotic resistance",
-        "",
-        0
-      ],
-      [
-        "atropisomerism",
-        "chemistry",
-        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794638418.167448,
-    "cpu": 23.4,
+    "time": 1794638514.5701818,
+    "cpu": 25.6,
     "cpu_cores": [
-      25.4,
-      21.6,
-      16.7,
-      14.0,
-      41.0,
-      33.5,
-      24.7,
-      10.5
+      26.9,
+      20.5,
+      15.9,
+      17.6,
+      40.6,
+      42.9,
+      25.6,
+      15.4
     ],
-    "mem": 78.0,
-    "mem_used_gb": 2.95,
+    "mem": 79.2,
+    "mem_used_gb": 2.86,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 402.1,
+    "proc_mem_mb": 140.6,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 24590374912,
-    "net_tx": 23402570752,
-    "down_kbps": 1149.8,
-    "up_kbps": 1234.1,
+    "net_rx": 24648787968,
+    "net_tx": 23469587456,
+    "down_kbps": 239.6,
+    "up_kbps": 197.4,
     "disk_free_gb": 10.4,
     "load": [
+      2.58,
       2.9,
-      3.01,
-      3.1
+      3.05
     ],
     "cores": 8
   },
-  "disk_mb": 289.1,
+  "disk_mb": 290.0,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794638416.986092,
-    "next_sync_s": 59,
-    "commits": 131
+    "last_push": 1794638443.098872,
+    "next_sync_s": 265,
+    "commits": 132
   },
   "last_sample": {
     "type": "web image",
-    "topic": "child and family policy",
-    "problem": "\"For the sake of the country's prosperity and families' happiness, please implement family planning --declared by Tangshan Township People's Government (\u4e3a\u4e86\u56fd\u5bb6\u5bcc\u5f3a\u5bb6\u5ead\u5e78\u798f\u8bf7\u60a8\u5b9e\u884c\u8ba1\u5212\u751f\u80b2\u2014\u2014\u5858\u5c71\u4e61\u4eba\u6c11\u653f\u5e9c\u5ba3)\" Sign put up by the local government. Found in the entry to the alley slums in (Tangshan Village (\u5858\u5c71\u4e61), De'an County, Jiujiang, Jiangxi Province), China. Pregnant women from these rural area are more likely to hide from the government officials enforcing the one-child policy.",
-    "solution": "CC BY 2.0",
+    "topic": "mental state attribution",
+    "problem": "In 2014, webcomic creator Ellipsis Hana Stephens (known as Tarol Hunt \"Thunt\" Stephens at the time)[1], best known for creating Goblins, suffered a nervous breakdown and went on hiatus. After two months, her wife persuaded her to draw what she was feeling; she produced this image. She subsequently described it as follows:[2] \"So a lot of you have already seen the picture. The thing I drew when my brain had more shaky cam than Man of Steel. Drawing this was a huge help at the time, since communicating just\u2026 wasn\u2019t something I could do and I needed to express myself in some way. I honestly\u2026",
+    "solution": "CC BY 4.0",
     "source": "wikimedia commons"
   }
 }
