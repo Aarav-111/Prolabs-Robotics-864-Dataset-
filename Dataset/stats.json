@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 6.6,
+  "disk_free_gb": 6.8,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794663913.355031,
-  "updated_iso": "2026-11-14T19:15:13",
-  "uptime_s": 179413,
+  "updated": 1794663953.284666,
+  "updated_iso": "2026-11-14T19:15:53",
+  "uptime_s": 179452,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 231,
+  "waiting": 239,
   "processes": 1,
   "fields": {
     "computer science": 1136525,
@@ -75,14 +75,14 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2924425873,
-    "tasks_done": 103760,
+    "tasks_done": 103777,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
-    "archive": 15276,
-    "text": 21057,
+    "archive": 15279,
+    "text": 21071,
     "web_images": 20976,
     "synthetic_images": 0,
     "vla": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2924425873,
-  "per_min": 1238.3,
+  "per_min": 747.8,
   "topics": {
     "known": 109914,
-    "explored": 32534,
-    "queued": 77260,
+    "explored": 32548,
+    "queued": 77246,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "system a",
-        "biology",
+        "computerized accounting",
+        "economics and finance",
         0
       ],
       [
-        "science museums",
-        "humanities",
-        0
-      ],
-      [
-        "vehicle platooning",
+        "meteotsunamis",
         "engineering",
         0
       ],
       [
-        "white matter rarefaction",
-        "biology",
+        "low-cost diagnostic device",
+        "engineering",
         0
       ],
       [
-        "skin preparation",
+        "carprofen",
         "medicine",
         0
       ],
       [
-        "cern director-general",
-        "humanities",
+        "railway signaling",
+        "engineering",
         0
       ],
       [
-        "energy literacy",
-        "earth and space",
+        "driving fitness",
+        "medicine",
         0
       ],
       [
-        "glorious revolution",
-        "humanities",
-        0
-      ],
-      [
-        "spatio-temporal queries",
+        "radar tracking",
         "computer science",
         0
       ],
       [
-        "hormone residues",
+        "government research funding",
+        "economics and finance",
+        0
+      ],
+      [
+        "corpus luteum",
         "biology",
         0
       ],
       [
-        "catchment hydrology",
-        "earth and space",
+        "hippo/yap signaling",
+        "biology",
         0
       ],
       [
-        "corrosion mechanism",
-        "materials science",
+        "sanctions effectiveness",
+        "economics and finance",
+        0
+      ],
+      [
+        "weight management interventions",
+        "medicine",
         0
       ]
     ],
@@ -213,33 +213,33 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794663913.353857,
-    "cpu": 28.4,
+    "time": 1794663953.282766,
+    "cpu": 19.8,
     "cpu_cores": [
-      27.6,
-      23.4,
-      18.4,
-      16.1,
-      49.3,
-      47.0,
-      27.3,
-      18.8
+      21.0,
+      20.5,
+      16.8,
+      12.7,
+      31.2,
+      34.4,
+      14.6,
+      7.7
     ],
-    "mem": 80.3,
-    "mem_used_gb": 2.76,
+    "mem": 81.1,
+    "mem_used_gb": 2.71,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 234.1,
+    "proc_mem_mb": 99.0,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32673732608,
-    "net_tx": 32305816576,
-    "down_kbps": 696.9,
-    "up_kbps": 950.5,
-    "disk_free_gb": 6.6,
+    "net_rx": 32696969216,
+    "net_tx": 32340467712,
+    "down_kbps": 143.6,
+    "up_kbps": 97.7,
+    "disk_free_gb": 6.8,
     "load": [
-      2.96,
-      3.39,
-      3.36
+      3.9,
+      3.56,
+      3.43
     ],
     "cores": 8
   },
@@ -248,9 +248,9 @@
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794663913.0304341,
-    "next_sync_s": 282,
-    "commits": 203
+    "last_push": 1794663929.8081532,
+    "next_sync_s": 243,
+    "commits": 204
   },
   "last_sample": {
     "type": "web image",
