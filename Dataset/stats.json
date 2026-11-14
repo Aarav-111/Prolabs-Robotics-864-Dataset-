@@ -2,35 +2,35 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 12.1,
+  "disk_free_gb": 11.8,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794649293.759764,
-  "updated_iso": "2026-11-14T15:11:33",
-  "uptime_s": 164793,
+  "updated": 1794649336.5543702,
+  "updated_iso": "2026-11-14T15:12:16",
+  "uptime_s": 164836,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "text": 116,
     "web_images": 24,
+    "text": 116,
     "archive": 116
   },
-  "waiting": 240,
+  "waiting": 236,
   "processes": 1,
   "fields": {
-    "computer science": 958936,
+    "computer science": 961460,
     "mathematics": 927156,
-    "general": 631656,
+    "general": 634121,
     "physics": 502898,
     "engineering": 491147,
     "medicine": 326758,
     "chemistry": 300607,
     "biology": 291150,
     "economics and finance": 209036,
-    "earth and space": 188392,
+    "earth and space": 189296,
     "materials science": 180045,
     "statistics": 126739,
     "humanities": 117686,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5430576,
-    "originals": 29844,
-    "variants": 5400732,
+    "text": 5436469,
+    "originals": 29878,
+    "variants": 5406591,
     "web_images": 5705,
     "synthetic_images": 14064,
     "images": 19769,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2709515792,
-    "tasks_done": 92296,
+    "tokens": 2711632382,
+    "tasks_done": 92322,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 8398
   },
   "by_kind": {
     "archive": 12105,
-    "text": 17390,
-    "web_images": 16350,
+    "text": 17401,
+    "web_images": 16365,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2709515792,
-  "per_min": 4476.8,
+  "tokens": 2711632382,
+  "per_min": 5678.4,
   "topics": {
     "known": 109914,
-    "explored": 28867,
-    "queued": 80927,
+    "explored": 28878,
+    "queued": 80916,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
+        "supervisor",
+        "",
+        2465
+      ],
+      [
+        "automated negotiation",
+        "computer science",
+        2524
+      ],
+      [
+        "cranial anatomy",
+        "earth and space",
+        721
+      ],
+      [
+        "canto general",
+        "humanities",
+        0
+      ],
+      [
+        "industrial wastewater discharge",
+        "earth and space",
+        183
+      ],
+      [
+        "ebselen",
+        "chemistry",
+        0
+      ],
+      [
+        "ensemble diversity",
+        "computer science",
+        0
+      ],
+      [
+        "entity resolution",
+        "computer science",
+        0
+      ],
+      [
+        "patent expiry",
+        "economics and finance",
+        0
+      ],
+      [
+        "price discrimination",
+        "economics and finance",
+        0
+      ],
+      [
+        "ecclesiastical art",
+        "humanities",
+        0
+      ],
+      [
         "porcine islets",
         "medicine",
         0
-      ],
-      [
-        "music classification",
-        "computer science",
-        0
-      ],
-      [
-        "double pulse test",
-        "engineering",
-        0
-      ],
-      [
-        "quinone detoxification",
-        "medicine",
-        0
-      ],
-      [
-        "interplanetary networks",
-        "computer science",
-        0
-      ],
-      [
-        "oxygen evolution",
-        "",
-        0
-      ],
-      [
-        "bacterial nanocellulose",
-        "materials science",
-        0
-      ],
-      [
-        "plasticizer",
-        "",
-        0
-      ],
-      [
-        "modulation type identification",
-        "computer science",
-        0
-      ],
-      [
-        "agricultural development",
-        "",
-        2379
-      ],
-      [
-        "silicon accumulation",
-        "biology",
-        1462
-      ],
-      [
-        "al-doped zno",
-        "materials science",
-        1156
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794649293.75764,
-    "cpu": 12.9,
+    "time": 1794649336.552684,
+    "cpu": 30.7,
     "cpu_cores": [
-      18.9,
-      17.1,
-      11.7,
-      11.3,
-      14.7,
-      24.3,
-      3.2,
-      2.2
+      44.0,
+      47.0,
+      37.8,
+      37.2,
+      29.9,
+      32.2,
+      13.3,
+      4.6
     ],
-    "mem": 79.2,
-    "mem_used_gb": 2.87,
+    "mem": 79.8,
+    "mem_used_gb": 2.78,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 286.4,
+    "proc_mem_mb": 235.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 27706580992,
-    "net_tx": 27421415424,
-    "down_kbps": 296.3,
-    "up_kbps": 286.9,
-    "disk_free_gb": 12.1,
+    "net_rx": 27716595712,
+    "net_tx": 27434580992,
+    "down_kbps": 203.7,
+    "up_kbps": 344.4,
+    "disk_free_gb": 11.8,
     "load": [
-      2.59,
-      3.19,
-      3.56
+      2.69,
+      3.13,
+      3.51
     ],
     "cores": 8
   },
-  "disk_mb": 593.2,
+  "disk_mb": 594.0,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794649086.412054,
-    "next_sync_s": 150,
-    "commits": 152
+    "last_push": 1794649335.146306,
+    "next_sync_s": 108,
+    "commits": 153
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "agricultural development",
-    "problem": "The Development Threat Index is part of the Land Use Land Cover collection. The cumulative development threat index is a terrestrial global, future development threat map based on combining these resources: agricultural expansion, urban expansion, conventional oil and gas, unconventional oil and gas, coal, mining, biofuels, solar, and wind. Each threat ranked potential development from 0\u2013100 with 100 indicating the highest potential for future development of the resource and were produced at a 50 square kilometer (km2) grid cell resolution, excluding all cells overlapping Antarctica and\u2026",
-    "solution": "CC BY 2.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "supervisor",
+    "problem": "What Information Really Matters in Supervisor Reduction? To make a supervisor comprehensible to a layman has been a long-lasting goal in the supervisory control community. One strategy is to reduce the size of a supervisor to generate a control equivalent version, whose size is hopefully much smaller than the original one so that a user or control designer can easily check whether a designed\u2026",
+    "solution": "After the first journal paper on this topic appeared in 1986 by Vaz and Wonham, which relied on the concept of control covers, in 2004 Su and Wonham proposed to use control congruences to ensure computational viability. This work is later adopted in the supervisor localization theory, which aims for a control equivalent distributed implementation of a given centralized supervisor. But after so\u2026",
+    "source": "arxiv"
   }
 }
