@@ -1,597 +1,621 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-14T15:31:00",
+"updated": "2026-11-14T15:36:54",
 "total": 109914,
-"done": 29206,
+"done": 29300,
 "in_progress": 120,
-"left": 80588,
+"left": 80494,
 "parallel_agents": {
-"running": 133,
+"running": 139,
 "topics": [
 {
 "agent": 1,
-"topic": "antifungal agents"
-},
-{
-"agent": 2,
-"topic": "sers substrates"
-},
-{
-"agent": 3,
-"topic": "intellectual and developmental disabilities"
-},
-{
-"agent": 4,
-"topic": "alkaloid analogues"
-},
-{
-"agent": 5,
-"topic": "kangaroo rats"
-},
-{
-"agent": 6,
-"topic": "aziridines"
-},
-{
-"agent": 7,
-"topic": "tailings dumps"
-},
-{
-"agent": 8,
-"topic": "cabin noise"
-},
-{
-"agent": 9,
-"topic": "boundary scan"
-},
-{
-"agent": 11,
-"topic": "damping injection"
-},
-{
-"agent": 12,
-"topic": "pulsed light"
-},
-{
-"agent": 13,
-"topic": "human activity patterns"
-},
-{
-"agent": 14,
-"topic": "pancreatic fibrosis"
-},
-{
-"agent": 16,
-"topic": "water electrolysis"
-},
-{
-"agent": 17,
-"topic": "hydroxylysine"
-},
-{
-"agent": 18,
-"topic": "forest industry"
-},
-{
-"agent": 20,
-"topic": "schema (genetic algorithms)"
-},
-{
-"agent": 22,
-"topic": "akt inhibitors"
-},
-{
-"agent": 24,
-"topic": "conduction"
-},
-{
-"agent": 25,
-"topic": "elderly people"
-},
-{
-"agent": 27,
-"topic": "maintenance strategy"
-},
-{
-"agent": 28,
-"topic": "agricultural research capacity"
-},
-{
-"agent": 30,
-"topic": "zno nanorods"
-},
-{
-"agent": 31,
-"topic": "circle detection"
-},
-{
-"agent": 32,
-"topic": "surface residual stress"
-},
-{
-"agent": 33,
-"topic": "color trails test"
-},
-{
-"agent": 34,
-"topic": "head morphology"
-},
-{
-"agent": 35,
-"topic": "positive temperature coefficient of resistivity"
-},
-{
-"agent": 36,
-"topic": "color barcode"
-},
-{
-"agent": 45,
-"topic": "adrenal function testing"
-},
-{
-"agent": 47,
-"topic": "burden of proof"
-},
-{
-"agent": 48,
-"topic": "responsible gambling"
-},
-{
-"agent": 49,
-"topic": "exclusive franchise"
-},
-{
-"agent": 50,
-"topic": "vocal communication"
-},
-{
-"agent": 51,
-"topic": "mercury(ii) complexes"
-},
-{
-"agent": 88,
-"topic": "rda"
-},
-{
-"agent": 91,
-"topic": "leuctridae"
-},
-{
-"agent": 93,
-"topic": "braking efficiency"
-},
-{
-"agent": 94,
-"topic": "women's political participation"
-},
-{
-"agent": 98,
-"topic": "color additives"
-},
-{
-"agent": 99,
-"topic": "ultrafast lasers"
-},
-{
-"agent": 100,
-"topic": "pumps and turbines"
-},
-{
-"agent": 101,
-"topic": "speech recognition and synthesis"
-},
-{
-"agent": 102,
-"topic": "sas/or"
-},
-{
-"agent": 103,
-"topic": "geochemical anomalies"
-},
-{
-"agent": 104,
-"topic": "operational risk management"
-},
-{
-"agent": 105,
-"topic": "standing genetic variation"
-},
-{
-"agent": 106,
-"topic": "mushroom cultivation substrate"
-},
-{
-"agent": 107,
-"topic": "launched"
-},
-{
-"agent": 108,
-"topic": "adsorptive stripping voltammetry"
-},
-{
-"agent": 109,
-"topic": "language families"
-},
-{
-"agent": 110,
-"topic": "decitabine"
-},
-{
-"agent": 111,
-"topic": "pollen viability"
-},
-{
-"agent": 112,
-"topic": "metal oxide semiconductor sensors"
-},
-{
-"agent": 113,
-"topic": "josephson effect"
-},
-{
-"agent": 114,
-"topic": "fundamental rights"
-},
-{
-"agent": 115,
-"topic": "nuclear magnetic resonance"
-},
-{
-"agent": 116,
-"topic": "peptide"
-},
-{
-"agent": 117,
-"topic": "storage area networks"
-},
-{
-"agent": 118,
-"topic": "acid halides"
-},
-{
-"agent": 119,
-"topic": "quarantine monitoring"
-},
-{
-"agent": 120,
-"topic": "graph indexing"
-},
-{
-"agent": 121,
-"topic": "aspidospermidine"
-},
-{
-"agent": 122,
-"topic": "national football league"
-},
-{
-"agent": 123,
-"topic": "sensor fault detection"
-},
-{
-"agent": 124,
-"topic": "remote desktop access"
-},
-{
-"agent": 125,
-"topic": "behavioral health and interventions"
-},
-{
-"agent": 126,
 "topic": "bimetallic strip"
 },
 {
-"agent": 127,
-"topic": "soret coefficient"
-},
-{
-"agent": 128,
-"topic": "organogels"
-},
-{
-"agent": 129,
+"agent": 2,
 "topic": "microbial inactivation methods"
 },
 {
-"agent": 130,
-"topic": "morphotropic phase boundary"
-},
-{
-"agent": 131,
+"agent": 3,
 "topic": "hyaline vascular type"
 },
 {
-"agent": 132,
-"topic": "cellulitis"
-},
-{
-"agent": 133,
-"topic": "devitrification"
-},
-{
-"agent": 134,
+"agent": 4,
 "topic": "email filtering"
 },
 {
-"agent": 135,
-"topic": "work discipline"
-},
-{
-"agent": 136,
+"agent": 5,
 "topic": "binary alloy phase diagrams"
 },
 {
-"agent": 137,
+"agent": 6,
 "topic": "rice"
 },
 {
-"agent": 138,
+"agent": 7,
 "topic": "edge preservation"
 },
 {
-"agent": 140,
-"topic": "chloroplast genome"
-},
-{
-"agent": 142,
-"topic": "bayesian filtering"
-},
-{
-"agent": 144,
-"topic": "enterprise ai adoption"
-},
-{
-"agent": 146,
-"topic": "air quality changes"
-},
-{
-"agent": 148,
-"topic": "sumoylation"
-},
-{
-"agent": 150,
-"topic": "perchlorate contamination"
-},
-{
-"agent": 152,
+"agent": 15,
 "topic": "adolescent suicide"
 },
 {
-"agent": 154,
-"topic": "hardware trojan detection"
-},
-{
-"agent": 156,
-"topic": "eutectic carbides"
-},
-{
-"agent": 158,
-"topic": "interval linear systems"
-},
-{
-"agent": 160,
+"agent": 20,
 "topic": "eri silkworm"
 },
 {
-"agent": 162,
-"topic": "breast-conserving therapy"
-},
-{
-"agent": 164,
-"topic": "youth clubs"
-},
-{
-"agent": 166,
-"topic": "families of the disappeared"
-},
-{
-"agent": 168,
-"topic": "plant-microbe interactions"
-},
-{
-"agent": 170,
-"topic": "energy detection"
-},
-{
-"agent": 172,
+"agent": 26,
 "topic": "patient safety education"
 },
 {
-"agent": 174,
-"topic": "k-struvite"
-},
-{
-"agent": 176,
-"topic": "graphene transfer"
-},
-{
-"agent": 178,
-"topic": "reaction rate"
-},
-{
-"agent": 180,
-"topic": "polythiophene"
-},
-{
-"agent": 182,
-"topic": "it outsourcing"
-},
-{
-"agent": 184,
+"agent": 31,
 "topic": "concept classes"
 },
 {
-"agent": 186,
-"topic": "construct 2"
-},
-{
-"agent": 188,
-"topic": "displacement cascades"
-},
-{
-"agent": 190,
-"topic": "co2/n2 separation"
-},
-{
-"agent": 192,
-"topic": "fuzzy rules"
-},
-{
-"agent": 194,
+"agent": 33,
 "topic": "health impact assessment"
 },
 {
-"agent": 196,
+"agent": 35,
 "topic": "heat-related health risks"
 },
 {
-"agent": 198,
+"agent": 37,
 "topic": "drill"
 },
 {
-"agent": 200,
+"agent": 39,
 "topic": "pareto optimal solutions"
 },
 {
-"agent": 202,
+"agent": 41,
 "topic": "aerodynamic flow control"
 },
 {
-"agent": 204,
-"topic": "computability, logic, ai algorithms"
-},
-{
-"agent": 206,
+"agent": 44,
 "topic": "iris segmentation"
 },
 {
-"agent": 208,
+"agent": 46,
 "topic": "video quality assessment"
 },
 {
-"agent": 210,
+"agent": 48,
 "topic": "heterogeneous graphs"
 },
 {
-"agent": 212,
+"agent": 50,
 "topic": "nhs test and trace"
 },
 {
-"agent": 214,
+"agent": 52,
 "topic": "liquation"
 },
 {
-"agent": 216,
+"agent": 54,
 "topic": "state aid prohibition"
 },
 {
-"agent": 218,
+"agent": 56,
 "topic": "protein structure"
 },
 {
-"agent": 220,
-"topic": "biomedical and engineering education"
-},
-{
-"agent": 222,
+"agent": 58,
 "topic": "hydrogenation selectivity"
 },
 {
-"agent": 224,
+"agent": 60,
 "topic": "perceptual quality"
 },
 {
-"agent": 226,
-"topic": "isoquinoline synthesis"
-},
-{
-"agent": 228,
+"agent": 63,
 "topic": "information systems theory"
 },
 {
-"agent": 230,
+"agent": 65,
 "topic": "marine ecosystem"
 },
 {
-"agent": 231,
+"agent": 66,
 "topic": "fluoride effects and removal"
 },
 {
-"agent": 232,
+"agent": 67,
 "topic": "complex variable method"
 },
 {
+"agent": 82,
+"topic": "c4isr"
+},
+{
+"agent": 83,
+"topic": "cost-sensitive learning"
+},
+{
+"agent": 84,
+"topic": "texas senate"
+},
+{
+"agent": 85,
+"topic": "precious metals"
+},
+{
+"agent": 86,
+"topic": "religious education teachers"
+},
+{
+"agent": 87,
+"topic": "larger-ring heterocycles"
+},
+{
+"agent": 88,
+"topic": "β-pinene"
+},
+{
+"agent": 89,
+"topic": "credit card fraud detection"
+},
+{
+"agent": 90,
+"topic": "quaternary stereocenters"
+},
+{
+"agent": 91,
+"topic": "carlism"
+},
+{
+"agent": 92,
+"topic": "pitzer model"
+},
+{
+"agent": 93,
+"topic": "gambling"
+},
+{
+"agent": 94,
+"topic": "roll-to-roll printing"
+},
+{
+"agent": 95,
+"topic": "legislative support"
+},
+{
+"agent": 96,
+"topic": "software piracy"
+},
+{
+"agent": 97,
+"topic": "nitrogen matrix"
+},
+{
+"agent": 98,
+"topic": "malicious url detection"
+},
+{
+"agent": 99,
+"topic": "educational psychology services"
+},
+{
+"agent": 100,
+"topic": "pigment use"
+},
+{
+"agent": 101,
+"topic": "methane seepage"
+},
+{
+"agent": 102,
+"topic": "gender, sexuality, and education"
+},
+{
+"agent": 103,
+"topic": "compromised sensors"
+},
+{
+"agent": 104,
+"topic": "coffee beverages"
+},
+{
+"agent": 107,
+"topic": "intraperitoneal injection"
+},
+{
+"agent": 108,
+"topic": "agricultural investment"
+},
+{
+"agent": 109,
+"topic": "burnout symptoms"
+},
+{
+"agent": 110,
+"topic": "motion generation"
+},
+{
+"agent": 112,
+"topic": "unsupervised summarization"
+},
+{
+"agent": 114,
+"topic": "managed care"
+},
+{
+"agent": 115,
+"topic": "aluminum ion detection"
+},
+{
+"agent": 116,
+"topic": "continental breakup"
+},
+{
+"agent": 117,
+"topic": "modern architecture"
+},
+{
+"agent": 118,
+"topic": "useful field of view"
+},
+{
+"agent": 119,
+"topic": "lenticels"
+},
+{
+"agent": 120,
+"topic": "oxytocin receptor"
+},
+{
+"agent": 123,
+"topic": "phasenet"
+},
+{
+"agent": 124,
+"topic": "ecosystem health"
+},
+{
+"agent": 125,
+"topic": "1,5-benzothiazepine derivatives"
+},
+{
+"agent": 126,
+"topic": "malignant peritoneal mesothelioma"
+},
+{
+"agent": 127,
+"topic": "tgf-β signaling in diseases"
+},
+{
+"agent": 128,
+"topic": "honey production"
+},
+{
+"agent": 129,
+"topic": "bone fracture detection"
+},
+{
+"agent": 130,
+"topic": "antioxidant synthesis"
+},
+{
+"agent": 131,
+"topic": "edible oils"
+},
+{
+"agent": 132,
+"topic": "organoselenium synthesis"
+},
+{
+"agent": 133,
+"topic": "mancozeb"
+},
+{
+"agent": 134,
+"topic": "intersystem crossing"
+},
+{
+"agent": 135,
+"topic": "gout, hyperuricemia, uric acid"
+},
+{
+"agent": 136,
+"topic": "idiopathic femoral head necrosis"
+},
+{
+"agent": 137,
+"topic": "morphine alkaloids"
+},
+{
+"agent": 138,
+"topic": "bisphenol a"
+},
+{
+"agent": 139,
+"topic": "imperfect information games"
+},
+{
+"agent": 140,
+"topic": "public economics"
+},
+{
+"agent": 141,
+"topic": "polytetrafluoroethylene composites"
+},
+{
+"agent": 142,
+"topic": "hydrocarbon degradation"
+},
+{
+"agent": 143,
+"topic": "disability activism"
+},
+{
+"agent": 144,
+"topic": "plant-microbe interactions"
+},
+{
+"agent": 145,
+"topic": "isoquinoline synthesis"
+},
+{
+"agent": 166,
+"topic": "digital signage"
+},
+{
+"agent": 167,
+"topic": "wireless power transfer systems"
+},
+{
+"agent": 168,
+"topic": "admissible heuristics"
+},
+{
+"agent": 170,
+"topic": "flexural strength"
+},
+{
+"agent": 171,
+"topic": "micro, small and medium enterprises"
+},
+{
+"agent": 172,
+"topic": "thermistor materials"
+},
+{
+"agent": 173,
+"topic": "pyeloplasty"
+},
+{
+"agent": 179,
+"topic": "gender pay gap"
+},
+{
+"agent": 213,
+"topic": "operating room monitoring"
+},
+{
+"agent": 214,
+"topic": "fuzzy c-means clustering"
+},
+{
+"agent": 215,
+"topic": "longwall panels"
+},
+{
+"agent": 216,
+"topic": "role-based access control"
+},
+{
+"agent": 217,
+"topic": "peer support services"
+},
+{
+"agent": 218,
+"topic": "women's medicine"
+},
+{
+"agent": 219,
+"topic": "carbon tetrachloride"
+},
+{
+"agent": 220,
+"topic": "modular production systems"
+},
+{
+"agent": 221,
+"topic": "leisure satisfaction"
+},
+{
+"agent": 222,
+"topic": "strategic management process"
+},
+{
+"agent": 223,
+"topic": "balanced scorecard"
+},
+{
+"agent": 224,
+"topic": "erp"
+},
+{
+"agent": 225,
+"topic": "halal food"
+},
+{
+"agent": 226,
+"topic": "customer profitability"
+},
+{
+"agent": 227,
+"topic": "retail formats"
+},
+{
+"agent": 228,
+"topic": "employee attrition prediction"
+},
+{
+"agent": 229,
+"topic": "corporate taxation and avoidance"
+},
+{
+"agent": 230,
+"topic": "growth theory"
+},
+{
+"agent": 231,
+"topic": "corporate social responsibility"
+},
+{
+"agent": 232,
+"topic": "hospitalization stress"
+},
+{
 "agent": 233,
-"topic": "seismic signal classification"
+"topic": "mrp ii"
 },
 {
 "agent": 234,
-"topic": "americium"
+"topic": "organizational culture types"
+},
+{
+"agent": 235,
+"topic": "spelling instruction"
+},
+{
+"agent": 236,
+"topic": "german economic growth"
+},
+{
+"agent": 237,
+"topic": "etl"
 },
 {
 "agent": 238,
-"topic": "diesel fuel"
+"topic": "euro"
+},
+{
+"agent": 239,
+"topic": "study activity"
+},
+{
+"agent": 240,
+"topic": "business analytics"
+},
+{
+"agent": 241,
+"topic": "chenopodium pallidicaule"
 },
 {
 "agent": 242,
-"topic": "regional innovation systems"
+"topic": "1,4-diazepines"
 },
 {
 "agent": 243,
-"topic": "state regional policy"
+"topic": "uml"
+},
+{
+"agent": 244,
+"topic": "overuse of diagnostic tests"
+},
+{
+"agent": 245,
+"topic": "kuru"
+},
+{
+"agent": 246,
+"topic": "human security"
+},
+{
+"agent": 247,
+"topic": "beach litter"
+},
+{
+"agent": 248,
+"topic": "conflict prediction"
+},
+{
+"agent": 249,
+"topic": "acute lower respiratory tract infection"
+},
+{
+"agent": 250,
+"topic": "shear connectors"
+},
+{
+"agent": 251,
+"topic": "napoleon hill"
+},
+{
+"agent": 252,
+"topic": "transition (genetics)"
+},
+{
+"agent": 253,
+"topic": "superparamagnetic iron oxide nanoparticles"
+},
+{
+"agent": 254,
+"topic": "terminology teaching"
+},
+{
+"agent": 255,
+"topic": "zanu"
+},
+{
+"agent": 256,
+"topic": "indicator approach"
 }
 ]
 },
 "fields": {
 "humanities": {
-"done": 1363,
-"left": 21670,
-"in_progress": 6
+"done": 1369,
+"left": 21659,
+"in_progress": 11
 },
 "medicine": {
-"done": 2313,
-"left": 18359,
-"in_progress": 9
+"done": 2319,
+"left": 18349,
+"in_progress": 13
 },
 "biology": {
-"done": 2684,
-"left": 10944,
-"in_progress": 15
+"done": 2697,
+"left": 10935,
+"in_progress": 11
 },
 "engineering": {
-"done": 2751,
-"left": 9808,
-"in_progress": 16
+"done": 2765,
+"left": 9796,
+"in_progress": 14
 },
 "general": {
-"done": 1907,
-"left": 5680,
-"in_progress": 10
+"done": 1911,
+"left": 5674,
+"in_progress": 12
 },
 "computer science": {
-"done": 3800,
-"left": 1891,
-"in_progress": 28
+"done": 3818,
+"left": 1878,
+"in_progress": 23
 },
 "economics and finance": {
-"done": 1799,
-"left": 3885,
-"in_progress": 5
+"done": 1803,
+"left": 3877,
+"in_progress": 9
 },
 "earth and space": {
-"done": 1379,
-"left": 4122,
-"in_progress": 7
-},
-"materials science": {
-"done": 1352,
-"left": 2086,
+"done": 1385,
+"left": 4115,
 "in_progress": 8
 },
+"materials science": {
+"done": 1361,
+"left": 2085,
+"in_progress": 0
+},
 "chemistry": {
-"done": 2754,
-"left": 218,
-"in_progress": 12
+"done": 2765,
+"left": 205,
+"in_progress": 14
 },
 "physics": {
 "done": 2845,
@@ -599,9 +623,9 @@
 "in_progress": 0
 },
 "psychology": {
-"done": 886,
-"left": 1925,
-"in_progress": 4
+"done": 889,
+"left": 1921,
+"in_progress": 5
 },
 "mathematics": {
 "done": 2164,
@@ -630,6 +654,1134 @@
 }
 },
 "topics": [
+{
+"topic": "fuzzy rules",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:52"
+},
+{
+"topic": "co2/n2 separation",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:52"
+},
+{
+"topic": "construct 2",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:51"
+},
+{
+"topic": "polythiophene",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:51"
+},
+{
+"topic": "cellulitis",
+"field": "medicine",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:50"
+},
+{
+"topic": "graphene transfer",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:49"
+},
+{
+"topic": "k-struvite",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:49"
+},
+{
+"topic": "interval linear systems",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:48"
+},
+{
+"topic": "perchlorate contamination",
+"field": "earth and space",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:47"
+},
+{
+"topic": "enterprise ai adoption",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:47"
+},
+{
+"topic": "quarantine monitoring",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:46"
+},
+{
+"topic": "work discipline",
+"field": "economics and finance",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:45"
+},
+{
+"topic": "soret coefficient",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:44"
+},
+{
+"topic": "sensor fault detection",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:44"
+},
+{
+"topic": "graph indexing",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:43"
+},
+{
+"topic": "storage area networks",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:36:42"
+},
+{
+"topic": "labour government",
+"field": "humanities",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:34:50"
+},
+{
+"topic": "ratoon cane",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:34:50"
+},
+{
+"topic": "neutron attenuation",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:34:49"
+},
+{
+"topic": "freshwater molluscs",
+"field": "earth and space",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:34:49"
+},
+{
+"topic": "friedel-crafts condensation",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:34:49"
+},
+{
+"topic": "cave conservation",
+"field": "earth and space",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:34:49"
+},
+{
+"topic": "computability, logic, ai algorithms",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:34:34"
+},
+{
+"topic": "nuclear magnetic resonance",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:34:27"
+},
+{
+"topic": "launched",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:33:43"
+},
+{
+"topic": "adsorptive stripping voltammetry",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:33:42"
+},
+{
+"topic": "geochemical anomalies",
+"field": "earth and space",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:33:42"
+},
+{
+"topic": "operational risk management",
+"field": "economics and finance",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:33:42"
+},
+{
+"topic": "mushroom cultivation substrate",
+"field": "medicine",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:33:42"
+},
+{
+"topic": "sas/or",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:33:37"
+},
+{
+"topic": "speech recognition and synthesis",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:33:37"
+},
+{
+"topic": "pumps and turbines",
+"field": "engineering",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:33:31"
+},
+{
+"topic": "plant-microbe interactions",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": 144,
+"records": 110,
+"images": 6,
+"completed": "2026-11-14T15:32:12"
+},
+{
+"topic": "youth clubs",
+"field": "psychology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 112,
+"images": 5,
+"completed": "2026-11-14T15:32:12"
+},
+{
+"topic": "isoquinoline synthesis",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": 145,
+"records": 201,
+"images": 5,
+"completed": "2026-11-14T15:32:12"
+},
+{
+"topic": "it outsourcing",
+"field": "economics and finance",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:11"
+},
+{
+"topic": "families of the disappeared",
+"field": "humanities",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:11"
+},
+{
+"topic": "hardware trojan detection",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:08"
+},
+{
+"topic": "sumoylation",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:08"
+},
+{
+"topic": "breast-conserving therapy",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:07"
+},
+{
+"topic": "eutectic carbides",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:07"
+},
+{
+"topic": "air quality changes",
+"field": "earth and space",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:07"
+},
+{
+"topic": "bayesian filtering",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:07"
+},
+{
+"topic": "chloroplast genome",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:07"
+},
+{
+"topic": "remote desktop access",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:06"
+},
+{
+"topic": "aspidospermidine",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:06"
+},
+{
+"topic": "acid halides",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:32:06"
+},
+{
+"topic": "standing genetic variation",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:58"
+},
+{
+"topic": "language families",
+"field": "humanities",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:58"
+},
+{
+"topic": "energy detection",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:58"
+},
+{
+"topic": "displacement cascades",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:54"
+},
+{
+"topic": "reaction rate",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:53"
+},
+{
+"topic": "biomedical and engineering education",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:53"
+},
+{
+"topic": "ultrafast lasers",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:50"
+},
+{
+"topic": "color additives",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:49"
+},
+{
+"topic": "mercury(ii) complexes",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:48"
+},
+{
+"topic": "leuctridae",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:48"
+},
+{
+"topic": "women's political participation",
+"field": "humanities",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:47"
+},
+{
+"topic": "braking efficiency",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:47"
+},
+{
+"topic": "circle detection",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:46"
+},
+{
+"topic": "rda",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:46"
+},
+{
+"topic": "vocal communication",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:46"
+},
+{
+"topic": "exclusive franchise",
+"field": "economics and finance",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:45"
+},
+{
+"topic": "head morphology",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:44"
+},
+{
+"topic": "responsible gambling",
+"field": "psychology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:44"
+},
+{
+"topic": "burden of proof",
+"field": "humanities",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:39"
+},
+{
+"topic": "adrenal function testing",
+"field": "medicine",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:38"
+},
+{
+"topic": "elderly people",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:38"
+},
+{
+"topic": "akt inhibitors",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:37"
+},
+{
+"topic": "color barcode",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:36"
+},
+{
+"topic": "tailings dumps",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:35"
+},
+{
+"topic": "zno nanorods",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:34"
+},
+{
+"topic": "positive temperature coefficient of resistivity",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:34"
+},
+{
+"topic": "color trails test",
+"field": "psychology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:33"
+},
+{
+"topic": "conduction",
+"field": "engineering",
+"level": "advanced",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:32"
+},
+{
+"topic": "maintenance strategy",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:32"
+},
+{
+"topic": "agricultural research capacity",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:31"
+},
+{
+"topic": "surface residual stress",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:31"
+},
+{
+"topic": "intellectual and developmental disabilities",
+"field": "medicine",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:30"
+},
+{
+"topic": "schema (genetic algorithms)",
+"field": "general",
+"level": "research concept",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:29"
+},
+{
+"topic": "antifungal agents",
+"field": "medicine",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:29"
+},
+{
+"topic": "pancreatic fibrosis",
+"field": "medicine",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:29"
+},
+{
+"topic": "hydroxylysine",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:28"
+},
+{
+"topic": "forest industry",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:28"
+},
+{
+"topic": "water electrolysis",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:27"
+},
+{
+"topic": "human activity patterns",
+"field": "humanities",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:27"
+},
+{
+"topic": "damping injection",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:25"
+},
+{
+"topic": "pulsed light",
+"field": "biology",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:24"
+},
+{
+"topic": "kangaroo rats",
+"field": "earth and space",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:24"
+},
+{
+"topic": "cabin noise",
+"field": "engineering",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:23"
+},
+{
+"topic": "boundary scan",
+"field": "computer science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:23"
+},
+{
+"topic": "alkaloid analogues",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:22"
+},
+{
+"topic": "sers substrates",
+"field": "materials science",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:21"
+},
+{
+"topic": "aziridines",
+"field": "chemistry",
+"level": "specialist",
+"done": true,
+"check": "✓",
+"status": "done",
+"agent": null,
+"records": 0,
+"images": 0,
+"completed": "2026-11-14T15:31:21"
+},
 {
 "topic": "shift-share analysis",
 "field": "economics and finance",
@@ -661,9 +1813,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 125,
+"agent": null,
 "records": 2276,
-"images": 1,
+"images": 5,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -673,9 +1825,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 112,
+"agent": null,
 "records": 3507,
-"images": 2,
+"images": 6,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -685,9 +1837,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 238,
+"agent": null,
 "records": 3276,
-"images": 2,
+"images": 6,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -697,9 +1849,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 116,
+"agent": null,
 "records": 201,
-"images": 2,
+"images": 6,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -709,9 +1861,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 136,
+"agent": 5,
 "records": 2349,
-"images": 1,
+"images": 5,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -793,9 +1945,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 130,
+"agent": null,
 "records": 2001,
-"images": 1,
+"images": 5,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -805,9 +1957,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 113,
+"agent": null,
 "records": 1789,
-"images": 2,
+"images": 6,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -1021,9 +2173,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 114,
+"agent": null,
 "records": 1087,
-"images": 2,
+"images": 6,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -1045,9 +2197,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 122,
+"agent": null,
 "records": 1229,
-"images": 2,
+"images": 5,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -1105,9 +2257,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 233,
+"agent": null,
 "records": 1632,
-"images": 1,
+"images": 5,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -1117,9 +2269,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 243,
+"agent": null,
 "records": 885,
-"images": 2,
+"images": 5,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -1129,9 +2281,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 242,
+"agent": null,
 "records": 1010,
-"images": 2,
+"images": 5,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -1237,9 +2389,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 111,
+"agent": null,
 "records": 182,
-"images": 2,
+"images": 6,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -1249,9 +2401,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 234,
+"agent": null,
 "records": 786,
-"images": 1,
+"images": 5,
 "completed": "2026-11-14T15:29:45"
 },
 {
@@ -1261,9 +2413,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 133,
+"agent": null,
 "records": 758,
-"images": 1,
+"images": 5,
 "completed": "2026-11-14T15:29:44"
 },
 {
@@ -1273,9 +2425,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 110,
+"agent": null,
 "records": 115,
-"images": 2,
+"images": 6,
 "completed": "2026-11-14T15:29:39"
 },
 {
@@ -1323,7 +2475,7 @@
 "status": "done",
 "agent": null,
 "records": 169,
-"images": 1,
+"images": 5,
 "completed": "2026-11-14T15:29:38"
 },
 {
@@ -1345,9 +2497,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 128,
+"agent": null,
 "records": 108,
-"images": 1,
+"images": 5,
 "completed": "2026-11-14T15:29:34"
 },
 {
@@ -1599,7 +2751,7 @@
 "status": "done",
 "agent": null,
 "records": 8977,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:26:01"
 },
 {
@@ -1611,7 +2763,7 @@
 "status": "done",
 "agent": null,
 "records": 167,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:25:19"
 },
 {
@@ -1647,7 +2799,7 @@
 "status": "done",
 "agent": null,
 "records": 196,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:25:14"
 },
 {
@@ -1995,7 +3147,7 @@
 "status": "done",
 "agent": null,
 "records": 3442,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:24:05"
 },
 {
@@ -2031,7 +3183,7 @@
 "status": "done",
 "agent": null,
 "records": 2374,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:24:05"
 },
 {
@@ -3783,7 +4935,7 @@
 "status": "done",
 "agent": null,
 "records": 4121,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:15:47"
 },
 {
@@ -3831,7 +4983,7 @@
 "status": "done",
 "agent": null,
 "records": 1703,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:15:47"
 },
 {
@@ -4311,7 +5463,7 @@
 "status": "done",
 "agent": null,
 "records": 306,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:15:44"
 },
 {
@@ -4575,7 +5727,7 @@
 "status": "done",
 "agent": null,
 "records": 2465,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:12:09"
 },
 {
@@ -4623,7 +5775,7 @@
 "status": "done",
 "agent": null,
 "records": 183,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:12:08"
 },
 {
@@ -4815,7 +5967,7 @@
 "status": "done",
 "agent": null,
 "records": 2379,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:10:05"
 },
 {
@@ -5331,7 +6483,7 @@
 "status": "done",
 "agent": null,
 "records": 3209,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:09:03"
 },
 {
@@ -6111,7 +7263,7 @@
 "status": "done",
 "agent": null,
 "records": 595,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:06:26"
 },
 {
@@ -6579,7 +7731,7 @@
 "status": "done",
 "agent": null,
 "records": 4366,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T15:01:46"
 },
 {
@@ -8655,7 +9807,7 @@
 "status": "done",
 "agent": null,
 "records": 714,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:38:50"
 },
 {
@@ -9375,7 +10527,7 @@
 "status": "done",
 "agent": null,
 "records": 7656,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:36:20"
 },
 {
@@ -9435,7 +10587,7 @@
 "status": "done",
 "agent": null,
 "records": 2524,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:36:20"
 },
 {
@@ -10059,7 +11211,7 @@
 "status": "done",
 "agent": null,
 "records": 3528,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:31:29"
 },
 {
@@ -10191,7 +11343,7 @@
 "status": "done",
 "agent": null,
 "records": 2838,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:31:29"
 },
 {
@@ -10803,7 +11955,7 @@
 "status": "done",
 "agent": null,
 "records": 2255,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:31:29"
 },
 {
@@ -10815,7 +11967,7 @@
 "status": "done",
 "agent": null,
 "records": 2971,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:31:29"
 },
 {
@@ -11247,7 +12399,7 @@
 "status": "done",
 "agent": null,
 "records": 169,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:31:26"
 },
 {
@@ -11259,7 +12411,7 @@
 "status": "done",
 "agent": null,
 "records": 166,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:31:26"
 },
 {
@@ -11283,7 +12435,7 @@
 "status": "done",
 "agent": null,
 "records": 108,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:29:35"
 },
 {
@@ -11463,7 +12615,7 @@
 "status": "done",
 "agent": null,
 "records": 2758,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:24:30"
 },
 {
@@ -11703,7 +12855,7 @@
 "status": "done",
 "agent": null,
 "records": 4095,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:21:03"
 },
 {
@@ -12037,9 +13189,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 240,
 "records": 2363,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:21:03"
 },
 {
@@ -12051,7 +13203,7 @@
 "status": "done",
 "agent": null,
 "records": 2802,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:21:03"
 },
 {
@@ -12771,7 +13923,7 @@
 "status": "done",
 "agent": null,
 "records": 900,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:21:02"
 },
 {
@@ -13731,7 +14883,7 @@
 "status": "done",
 "agent": null,
 "records": 1961,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:12:44"
 },
 {
@@ -14283,7 +15435,7 @@
 "status": "done",
 "agent": null,
 "records": 741,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:12:44"
 },
 {
@@ -14581,9 +15733,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 238,
 "records": 1322,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:07:55"
 },
 {
@@ -15217,9 +16369,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 237,
 "records": 3304,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:04:41"
 },
 {
@@ -15243,7 +16395,7 @@
 "status": "done",
 "agent": null,
 "records": 2071,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T14:04:41"
 },
 {
@@ -16525,9 +17677,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 236,
 "records": 193,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:59:15"
 },
 {
@@ -16789,9 +17941,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 234,
 "records": 394,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:57:32"
 },
 {
@@ -16815,7 +17967,7 @@
 "status": "done",
 "agent": null,
 "records": 312,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:57:30"
 },
 {
@@ -17893,9 +19045,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 233,
 "records": 603,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:52:18"
 },
 {
@@ -18637,9 +19789,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 239,
 "records": 2696,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:49:51"
 },
 {
@@ -19203,7 +20355,7 @@
 "status": "done",
 "agent": null,
 "records": 4018,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:47:11"
 },
 {
@@ -19225,9 +20377,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 231,
 "records": 1832,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:47:11"
 },
 {
@@ -19261,9 +20413,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 230,
 "records": 1896,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:47:11"
 },
 {
@@ -19381,9 +20533,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 229,
 "records": 165,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:46:22"
 },
 {
@@ -19681,9 +20833,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 226,
 "records": 1063,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:43:54"
 },
 {
@@ -19717,9 +20869,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 228,
 "records": 516,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:43:54"
 },
 {
@@ -19729,9 +20881,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 227,
 "records": 112,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:43:54"
 },
 {
@@ -20007,7 +21159,7 @@
 "status": "done",
 "agent": null,
 "records": 2078,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:42:08"
 },
 {
@@ -20031,7 +21183,7 @@
 "status": "done",
 "agent": null,
 "records": 1505,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:42:08"
 },
 {
@@ -20665,9 +21817,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 235,
 "records": 1133,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:42:07"
 },
 {
@@ -20713,9 +21865,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 225,
 "records": 194,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:42:03"
 },
 {
@@ -20907,7 +22059,7 @@
 "status": "done",
 "agent": null,
 "records": 2987,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:39:08"
 },
 {
@@ -21889,9 +23041,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 224,
 "records": 2366,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:27:23"
 },
 {
@@ -22585,9 +23737,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 232,
 "records": 477,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:27:22"
 },
 {
@@ -22669,9 +23821,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 223,
 "records": 293,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:27:19"
 },
 {
@@ -24469,9 +25621,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 222,
 "records": 1415,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:15:36"
 },
 {
@@ -26619,7 +27771,7 @@
 "status": "done",
 "agent": null,
 "records": 2244,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:07:00"
 },
 {
@@ -28095,7 +29247,7 @@
 "status": "done",
 "agent": null,
 "records": 201,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T13:01:25"
 },
 {
@@ -33687,7 +34839,7 @@
 "status": "done",
 "agent": null,
 "records": 507,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:42:04"
 },
 {
@@ -33927,7 +35079,7 @@
 "status": "done",
 "agent": null,
 "records": 201,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:41:59"
 },
 {
@@ -35199,7 +36351,7 @@
 "status": "done",
 "agent": null,
 "records": 1287,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:32:46"
 },
 {
@@ -35247,7 +36399,7 @@
 "status": "done",
 "agent": null,
 "records": 201,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:32:46"
 },
 {
@@ -36303,7 +37455,7 @@
 "status": "done",
 "agent": null,
 "records": 201,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:27:17"
 },
 {
@@ -36483,7 +37635,7 @@
 "status": "done",
 "agent": null,
 "records": 201,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:27:16"
 },
 {
@@ -37263,7 +38415,7 @@
 "status": "done",
 "agent": null,
 "records": 313,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:23:02"
 },
 {
@@ -37491,7 +38643,7 @@
 "status": "done",
 "agent": null,
 "records": 2439,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:20:39"
 },
 {
@@ -37575,7 +38727,7 @@
 "status": "done",
 "agent": null,
 "records": 201,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:20:39"
 },
 {
@@ -38007,7 +39159,7 @@
 "status": "done",
 "agent": null,
 "records": 5142,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:20:38"
 },
 {
@@ -38065,9 +39217,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 221,
 "records": 201,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:20:38"
 },
 {
@@ -38295,7 +39447,7 @@
 "status": "done",
 "agent": null,
 "records": 201,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:20:35"
 },
 {
@@ -38391,7 +39543,7 @@
 "status": "done",
 "agent": null,
 "records": 201,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:20:31"
 },
 {
@@ -39327,7 +40479,7 @@
 "status": "done",
 "agent": null,
 "records": 582,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:10:41"
 },
 {
@@ -40023,7 +41175,7 @@
 "status": "done",
 "agent": null,
 "records": 902,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:10:00"
 },
 {
@@ -40035,7 +41187,7 @@
 "status": "done",
 "agent": null,
 "records": 916,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T12:10:00"
 },
 {
@@ -43275,7 +44427,7 @@
 "status": "done",
 "agent": null,
 "records": 562,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:40:53"
 },
 {
@@ -43647,7 +44799,7 @@
 "status": "done",
 "agent": null,
 "records": 3134,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:34:16"
 },
 {
@@ -43695,7 +44847,7 @@
 "status": "done",
 "agent": null,
 "records": 2505,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:31:22"
 },
 {
@@ -43815,7 +44967,7 @@
 "status": "done",
 "agent": null,
 "records": 3711,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:31:22"
 },
 {
@@ -44367,7 +45519,7 @@
 "status": "done",
 "agent": null,
 "records": 3065,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:31:22"
 },
 {
@@ -44859,7 +46011,7 @@
 "status": "done",
 "agent": null,
 "records": 3795,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:31:22"
 },
 {
@@ -44931,7 +46083,7 @@
 "status": "done",
 "agent": null,
 "records": 1764,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:31:22"
 },
 {
@@ -44979,7 +46131,7 @@
 "status": "done",
 "agent": null,
 "records": 1812,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:31:22"
 },
 {
@@ -45063,7 +46215,7 @@
 "status": "done",
 "agent": null,
 "records": 536,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:31:13"
 },
 {
@@ -45099,7 +46251,7 @@
 "status": "done",
 "agent": null,
 "records": 2326,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:18:18"
 },
 {
@@ -45183,7 +46335,7 @@
 "status": "done",
 "agent": null,
 "records": 3659,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:18:18"
 },
 {
@@ -46251,7 +47403,7 @@
 "status": "done",
 "agent": null,
 "records": 117,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:18:17"
 },
 {
@@ -46479,7 +47631,7 @@
 "status": "done",
 "agent": null,
 "records": 3033,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:12:00"
 },
 {
@@ -46491,7 +47643,7 @@
 "status": "done",
 "agent": null,
 "records": 1239,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:12:00"
 },
 {
@@ -46827,7 +47979,7 @@
 "status": "done",
 "agent": null,
 "records": 2534,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:08:45"
 },
 {
@@ -46839,7 +47991,7 @@
 "status": "done",
 "agent": null,
 "records": 1194,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:08:45"
 },
 {
@@ -47739,7 +48891,7 @@
 "status": "done",
 "agent": null,
 "records": 201,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:08:42"
 },
 {
@@ -47787,7 +48939,7 @@
 "status": "done",
 "agent": null,
 "records": 361,
-"images": 5,
+"images": 6,
 "completed": "2026-11-14T11:08:40"
 },
 {
@@ -356569,7 +357721,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 126,
+"agent": 1,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -359388,8 +360540,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 219,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -369529,7 +370681,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 198,
+"agent": 37,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -370296,8 +371448,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 124,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -370586,18 +371738,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "elderly people",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 25,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -374796,8 +375936,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 170,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -380568,8 +381708,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 246,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -383520,8 +384660,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 107,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -385075,18 +386215,6 @@
 "completed": ""
 },
 {
-"topic": "launched",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 107,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "lauraceae",
 "field": "general",
 "level": "research concept",
@@ -386209,7 +387337,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 214,
+"agent": 52,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -387733,7 +388861,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 230,
+"agent": 65,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -400561,7 +401689,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 218,
+"agent": 56,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -402506,18 +403634,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "reaction rate",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 178,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -405506,18 +406622,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "schema (genetic algorithms)",
-"field": "general",
-"level": "research concept",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 20,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -414972,8 +416076,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 252,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -423247,18 +424351,6 @@
 "completed": ""
 },
 {
-"topic": "agricultural research capacity",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 28,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "agricultural research capacity building",
 "field": "biology",
 "level": "specialist",
@@ -424034,18 +425126,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "akt inhibitors",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 22,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -437563,18 +438643,6 @@
 "completed": ""
 },
 {
-"topic": "breast-conserving therapy",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 162,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "breeding value",
 "field": "biology",
 "level": "specialist",
@@ -443652,8 +444720,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 241,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -444122,18 +445190,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "chloroplast genome",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 140,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -460513,7 +461569,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 160,
+"agent": 20,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -467378,18 +468434,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "forest industry",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 18,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -475303,18 +476347,6 @@
 "completed": ""
 },
 {
-"topic": "head morphology",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 34,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "head regeneration",
 "field": "biology",
 "level": "specialist",
@@ -477960,8 +478992,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 128,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -485628,8 +486660,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 245,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -487680,8 +488712,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 119,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -487898,18 +488930,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "leuctridae",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 91,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -491592,8 +492612,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 133,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -495097,7 +496117,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 129,
+"agent": 2,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -507432,8 +508452,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 120,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -514843,18 +515863,6 @@
 "completed": ""
 },
 {
-"topic": "plant-microbe interactions",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 168,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "plant-microbe interactions and immunity",
 "field": "biology",
 "level": "specialist",
@@ -520423,18 +521431,6 @@
 "completed": ""
 },
 {
-"topic": "pulsed light",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 12,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "pulvinus",
 "field": "biology",
 "level": "specialist",
@@ -522224,18 +523220,6 @@
 },
 {
 "topic": "rational use of medicinal plants",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "ratoon cane",
 "field": "biology",
 "level": "specialist",
 "done": false,
@@ -524521,7 +525505,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 137,
+"agent": 6,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -535651,18 +536635,6 @@
 "completed": ""
 },
 {
-"topic": "standing genetic variation",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 105,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "staphylinidae",
 "field": "biology",
 "level": "specialist",
@@ -537782,18 +538754,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "sumoylation",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 148,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -540396,8 +541356,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 127,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -547483,18 +548443,6 @@
 "completed": ""
 },
 {
-"topic": "vocal communication",
-"field": "biology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 50,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "vocal repertoire",
 "field": "biology",
 "level": "specialist",
@@ -550812,8 +551760,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 88,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -550956,8 +551904,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 242,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -550980,8 +551928,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 125,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -551071,18 +552019,6 @@
 "completed": ""
 },
 {
-"topic": "acid halides",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 118,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "adsorption entropy",
 "field": "chemistry",
 "level": "specialist",
@@ -551107,18 +552043,6 @@
 "completed": ""
 },
 {
-"topic": "adsorptive stripping voltammetry",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 108,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "air-acetylene flame",
 "field": "chemistry",
 "level": "specialist",
@@ -551126,18 +552050,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "alkaloid analogues",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 4,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -551172,8 +552084,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 115,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -551232,8 +552144,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 130,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -551258,18 +552170,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "aspidospermidine",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 121,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -551330,18 +552230,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "aziridines",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 6,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -551582,18 +552470,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "color additives",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 98,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -551868,8 +552744,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 131,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -552008,18 +552884,6 @@
 },
 {
 "topic": "fluorinated compounds",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "friedel-crafts condensation",
 "field": "chemistry",
 "level": "specialist",
 "done": false,
@@ -552241,7 +553105,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 222,
+"agent": 58,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -552276,8 +553140,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 134,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -552290,18 +553154,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "isoquinoline synthesis",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 226,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -552348,8 +553200,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 87,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -552434,18 +553286,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "mercury(ii) complexes",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 51,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -552612,8 +553452,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 137,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -552684,20 +553524,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "nuclear magnetic resonance",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
 "status": "in progress",
-"agent": 115,
+"agent": 97,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -552780,8 +553608,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 132,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -552936,8 +553764,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 100,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -553092,8 +553920,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 90,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -553250,18 +554078,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "soret coefficient",
-"field": "chemistry",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 127,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -554280,8 +555096,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 168,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -555835,18 +556651,6 @@
 "completed": ""
 },
 {
-"topic": "bayesian filtering",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 142,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "bayesian methods and mixture models",
 "field": "computer science",
 "level": "specialist",
@@ -556394,18 +557198,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "boundary scan",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 9,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -556999,18 +557791,6 @@
 "completed": ""
 },
 {
-"topic": "circle detection",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 31,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "cisco certification",
 "field": "computer science",
 "level": "specialist",
@@ -557455,18 +558235,6 @@
 "completed": ""
 },
 {
-"topic": "color barcode",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 36,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "color distortion",
 "field": "computer science",
 "level": "specialist",
@@ -557568,20 +558336,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "computability, logic, ai algorithms",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
 "status": "in progress",
-"agent": 204,
+"agent": 103,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -557713,7 +558469,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 184,
+"agent": 31,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -557786,18 +558542,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "construct 2",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 186,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -558132,8 +558876,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 83,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -558204,8 +558948,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 89,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -559380,8 +560124,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 166,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -560125,7 +560869,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 138,
+"agent": 7,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -560365,7 +561109,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 134,
+"agent": 4,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -560503,18 +561247,6 @@
 "completed": ""
 },
 {
-"topic": "energy detection",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 170,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "energy efficiency in computing",
 "field": "computer science",
 "level": "specialist",
@@ -560546,18 +561278,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "enterprise ai adoption",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 144,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -561732,8 +562452,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 214,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -561842,18 +562562,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "fuzzy rules",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 192,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -562291,18 +562999,6 @@
 "completed": ""
 },
 {
-"topic": "graph indexing",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 120,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "graph labeling",
 "field": "computer science",
 "level": "specialist",
@@ -562531,18 +563227,6 @@
 "completed": ""
 },
 {
-"topic": "hardware trojan detection",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 154,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "harmful content detection",
 "field": "computer science",
 "level": "specialist",
@@ -562609,7 +563293,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 210,
+"agent": 48,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -563532,8 +564216,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 139,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -564163,18 +564847,6 @@
 "completed": ""
 },
 {
-"topic": "interval linear systems",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 158,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "intruder alarm systems",
 "field": "computer science",
 "level": "specialist",
@@ -564337,7 +565009,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 206,
+"agent": 44,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -565452,8 +566124,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 98,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -566580,8 +567252,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 110,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -567529,7 +568201,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 212,
+"agent": 50,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -568609,7 +569281,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 200,
+"agent": 39,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -568825,7 +569497,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 224,
+"agent": 60,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -569064,8 +569736,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 123,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -570103,18 +570775,6 @@
 "completed": ""
 },
 {
-"topic": "quarantine monitoring",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 119,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "query expansion",
 "field": "computer science",
 "level": "specialist",
@@ -570451,18 +571111,6 @@
 "completed": ""
 },
 {
-"topic": "rda",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 88,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "react native",
 "field": "computer science",
 "level": "specialist",
@@ -570770,18 +571418,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "remote desktop access",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 124,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -571152,8 +571788,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 216,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -571454,18 +572090,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "sas/or",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 102,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -573175,18 +573799,6 @@
 "completed": ""
 },
 {
-"topic": "speech recognition and synthesis",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 101,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "speech-to-text",
 "field": "computer science",
 "level": "specialist",
@@ -573470,18 +574082,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "storage area networks",
-"field": "computer science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 117,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -575052,8 +575652,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 243,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -575256,8 +575856,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 112,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -575641,7 +576241,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 208,
+"agent": 46,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -578162,18 +578762,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "air quality changes",
-"field": "earth and space",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 146,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -581256,8 +581844,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 247,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -582324,8 +582912,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 138,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -583580,18 +584168,6 @@
 },
 {
 "topic": "caulerpa taxifolia",
-"field": "earth and space",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "cave conservation",
 "field": "earth and space",
 "level": "specialist",
 "done": false,
@@ -586656,8 +587232,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 116,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -593797,7 +594373,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 231,
+"agent": 66,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -594511,18 +595087,6 @@
 "completed": ""
 },
 {
-"topic": "freshwater molluscs",
-"field": "earth and space",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "freshwater pearl mussel",
 "field": "earth and space",
 "level": "specialist",
@@ -594926,18 +595490,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "geochemical anomalies",
-"field": "earth and space",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 103,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -597241,7 +597793,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 194,
+"agent": 33,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -597325,7 +597877,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 196,
+"agent": 35,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -598392,8 +598944,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 142,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -600482,18 +601034,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "kangaroo rats",
-"field": "earth and space",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 5,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -605040,8 +605580,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 101,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -609782,18 +610322,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "perchlorate contamination",
-"field": "earth and space",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 150,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -626280,8 +626808,8 @@
 "level": "core",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 140,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -627720,8 +628248,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 108,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -642559,18 +643087,6 @@
 "completed": ""
 },
 {
-"topic": "exclusive franchise",
-"field": "economics and finance",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 49,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "exclusive franchise license",
 "field": "economics and finance",
 "level": "specialist",
@@ -645672,8 +646188,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 179,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -648972,8 +649488,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 256,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -649549,7 +650065,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 228,
+"agent": 63,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -651590,18 +652106,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "it outsourcing",
-"field": "economics and finance",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 182,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -654144,8 +654648,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 114,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -655080,8 +655584,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 171,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -657350,18 +657854,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "operational risk management",
-"field": "economics and finance",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 104,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -660072,8 +660564,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 85,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -666132,8 +666624,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 96,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -672247,18 +672739,6 @@
 "completed": ""
 },
 {
-"topic": "work discipline",
-"field": "economics and finance",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 135,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "work engagement",
 "field": "economics and finance",
 "level": "specialist",
@@ -673099,18 +673579,6 @@
 "completed": ""
 },
 {
-"topic": "conduction",
-"field": "engineering",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 24,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "control of aircraft",
 "field": "engineering",
 "level": "advanced",
@@ -673298,18 +673766,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "pumps and turbines",
-"field": "engineering",
-"level": "advanced",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 100,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -675865,7 +676321,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 202,
+"agent": 41,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -682843,18 +683299,6 @@
 "completed": ""
 },
 {
-"topic": "biomedical and engineering education",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 220,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "biomedical engineering",
 "field": "engineering",
 "level": "specialist",
@@ -683988,8 +684432,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 129,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -684386,18 +684830,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "braking efficiency",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 93,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -685524,20 +685956,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "cabin noise",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
 "status": "in progress",
-"agent": 8,
+"agent": 82,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -689659,18 +690079,6 @@
 "completed": ""
 },
 {
-"topic": "co2/n2 separation",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 190,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "coal analysis",
 "field": "engineering",
 "level": "specialist",
@@ -691633,7 +692041,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 232,
+"agent": 67,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -696362,18 +696770,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "damping injection",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 11,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -732528,8 +732924,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 215,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -734498,18 +734894,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "maintenance strategy",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 27,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -739944,8 +740328,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 117,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -740016,8 +740400,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 220,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -751824,8 +752208,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 92,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -753012,8 +753396,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 141,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -753326,18 +753710,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "positive temperature coefficient of resistivity",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 35,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -762504,8 +762876,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 94,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -765187,18 +765559,6 @@
 "completed": ""
 },
 {
-"topic": "sensor fault detection",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 123,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "sensor fault diagnosis",
 "field": "engineering",
 "level": "specialist",
@@ -765852,8 +766212,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 250,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -774864,8 +775224,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 253,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -775322,18 +775682,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "surface residual stress",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 32,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -776510,18 +776858,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "tailings dumps",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 7,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -778320,8 +778656,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 172,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -783343,18 +783679,6 @@
 "completed": ""
 },
 {
-"topic": "ultrafast lasers",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 99,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "ultrafine grinding",
 "field": "engineering",
 "level": "specialist",
@@ -787951,18 +788275,6 @@
 "completed": ""
 },
 {
-"topic": "water electrolysis",
-"field": "engineering",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 16,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "water entry",
 "field": "engineering",
 "level": "specialist",
@@ -789756,8 +790068,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 167,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -817627,18 +817939,6 @@
 "completed": ""
 },
 {
-"topic": "burden of proof",
-"field": "humanities",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 47,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "bureau of indian affairs",
 "field": "humanities",
 "level": "specialist",
@@ -820104,8 +820404,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 91,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -835824,8 +836124,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 248,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -851928,8 +852228,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 143,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -871603,18 +871903,6 @@
 "completed": ""
 },
 {
-"topic": "families of the disappeared",
-"field": "humanities",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 166,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "family agricultural schools",
 "field": "humanities",
 "level": "specialist",
@@ -883020,8 +883308,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 102,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -896942,18 +897230,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "human activity patterns",
-"field": "humanities",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 13,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -919399,18 +919675,6 @@
 "completed": ""
 },
 {
-"topic": "labour government",
-"field": "humanities",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "labour market integration",
 "field": "humanities",
 "level": "specialist",
@@ -920642,18 +920906,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "language families",
-"field": "humanities",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 109,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -924708,8 +924960,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 95,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -987984,8 +988236,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 86,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1015129,7 +1015381,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 216,
+"agent": 54,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1023924,8 +1024176,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 254,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1024488,8 +1024740,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 84,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1047240,8 +1047492,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 218,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1047362,18 +1047614,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "women's political participation",
-"field": "humanities",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 94,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1050336,8 +1050576,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 255,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1057411,18 +1057651,6 @@
 "completed": ""
 },
 {
-"topic": "displacement cascades",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 188,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "displacive phase transition",
 "field": "materials science",
 "level": "specialist",
@@ -1058546,18 +1058774,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "eutectic carbides",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 156,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1060231,18 +1060447,6 @@
 "completed": ""
 },
 {
-"topic": "graphene transfer",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 176,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "graphene transistors",
 "field": "materials science",
 "level": "specialist",
@@ -1061335,18 +1061539,6 @@
 "completed": ""
 },
 {
-"topic": "hydroxylysine",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 17,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "hyper-rayleigh scattering",
 "field": "materials science",
 "level": "specialist",
@@ -1062362,18 +1062554,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "k-struvite",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 174,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1066243,18 +1066423,6 @@
 "completed": ""
 },
 {
-"topic": "neutron attenuation",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "left",
-"agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "ni-mn-ga",
 "field": "materials science",
 "level": "specialist",
@@ -1069183,18 +1069351,6 @@
 "completed": ""
 },
 {
-"topic": "polythiophene",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 180,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "polyvinyl chloride",
 "field": "materials science",
 "level": "specialist",
@@ -1071230,18 +1071386,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "sers substrates",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 2,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1075747,18 +1075891,6 @@
 "completed": ""
 },
 {
-"topic": "zno nanorods",
-"field": "materials science",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 30,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "zno nanostructures",
 "field": "materials science",
 "level": "specialist",
@@ -1080084,8 +1080216,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 249,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1081934,18 +1082066,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "adrenal function testing",
-"field": "medicine",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 45,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1090742,18 +1090862,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "antifungal agents",
-"field": "medicine",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 1,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1111399,18 +1111507,6 @@
 "completed": ""
 },
 {
-"topic": "cellulitis",
-"field": "medicine",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 132,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
 "topic": "cement leakage",
 "field": "medicine",
 "level": "specialist",
@@ -1119900,8 +1119996,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 104,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1161540,8 +1161636,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 135,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1174249,7 +1174345,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 131,
+"agent": 3,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1176204,8 +1176300,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 136,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1180826,18 +1180922,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "intellectual and developmental disabilities",
-"field": "medicine",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 3,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1195956,8 +1196040,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 126,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1207394,18 +1207478,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "mushroom cultivation substrate",
-"field": "medicine",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 106,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1220064,8 +1220136,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 213,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1223676,8 +1223748,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 244,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1225094,18 +1225166,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "pancreatic fibrosis",
-"field": "medicine",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 14,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1227793,7 +1227853,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 172,
+"agent": 26,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1230348,8 +1230408,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 217,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1247544,8 +1247604,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 173,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1287888,8 +1287948,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 118,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1297093,7 +1297153,7 @@
 "done": false,
 "check": "",
 "status": "in progress",
-"agent": 152,
+"agent": 15,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1298892,8 +1298952,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 109,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1300442,18 +1300502,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "color trails test",
-"field": "psychology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 33,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1302924,8 +1302972,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 99,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1304664,8 +1304712,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 93,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1309728,8 +1309776,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 251,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1314350,18 +1314398,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "responsible gambling",
-"field": "psychology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 48,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1319426,18 +1319462,6 @@
 "check": "",
 "status": "left",
 "agent": null,
-"records": 0,
-"images": 0,
-"completed": ""
-},
-{
-"topic": "youth clubs",
-"field": "psychology",
-"level": "specialist",
-"done": false,
-"check": "",
-"status": "in progress",
-"agent": 164,
 "records": 0,
 "images": 0,
 "completed": ""

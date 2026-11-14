@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.7,
+  "disk_free_gb": 11.6,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794650463.8841732,
-  "updated_iso": "2026-11-14T15:31:03",
-  "uptime_s": 165963,
+  "updated": 1794650820.5493262,
+  "updated_iso": "2026-11-14T15:37:00",
+  "uptime_s": 166320,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 245,
+  "waiting": 209,
   "processes": 1,
   "fields": {
     "computer science": 967952,
@@ -26,18 +26,18 @@
     "general": 651154,
     "engineering": 503828,
     "physics": 502898,
-    "medicine": 331513,
-    "chemistry": 303035,
-    "biology": 291332,
+    "medicine": 332587,
+    "chemistry": 303236,
+    "biology": 291442,
     "economics and finance": 214175,
     "earth and space": 194086,
     "materials science": 185604,
     "statistics": 126739,
     "humanities": 125384,
-    "psychology": 103714,
-    "programming": 46040,
+    "psychology": 103826,
+    "programming": 46583,
     "machine learning": 20661,
-    "general knowledge": 12479,
+    "general knowledge": 13010,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 102092,
-    "openlifescienceai/medmcqa": 26825,
+    "stack exchange dump": 103166,
+    "openlifescienceai/medmcqa": 27899,
     "qiaojin/PubMedQA": 4633,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5507740,
-    "originals": 30255,
-    "variants": 5477485,
-    "web_images": 5812,
+    "text": 5510311,
+    "originals": 30264,
+    "variants": 5480047,
+    "web_images": 5882,
     "synthetic_images": 14064,
-    "images": 19876,
+    "images": 19946,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2740141010,
-    "tasks_done": 93242,
+    "tokens": 2741323119,
+    "tasks_done": 93616,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 8852
+    "preference": 8986
   },
   "by_kind": {
-    "archive": 12422,
-    "text": 17729,
-    "web_images": 16640,
+    "archive": 12519,
+    "text": 17828,
+    "web_images": 16818,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2740141010,
-  "per_min": 4937.4,
+  "tokens": 2741323119,
+  "per_min": 527.0,
   "topics": {
     "known": 109914,
-    "explored": 29206,
-    "queued": 80588,
+    "explored": 29305,
+    "queued": 80489,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "shift-share analysis",
-        "economics and finance",
+        "iris segmentation",
+        "computer science",
         0
       ],
       [
-        "water leakage detection",
+        "heterogeneous graphs",
+        "computer science",
+        0
+      ],
+      [
+        "pareto optimal solutions",
+        "computer science",
+        0
+      ],
+      [
+        "aerodynamic flow control",
         "engineering",
         0
       ],
       [
-        "behavioral health and interventions",
-        "psychology",
-        2276
+        "drill",
+        "",
+        0
       ],
       [
-        "metal oxide semiconductor sensors",
+        "fuzzy rules",
+        "computer science",
+        0
+      ],
+      [
+        "co2/n2 separation",
         "engineering",
-        3507
+        0
       ],
       [
-        "diesel fuel",
-        "",
-        3276
+        "construct 2",
+        "computer science",
+        0
       ],
       [
-        "peptide",
-        "",
-        201
-      ],
-      [
-        "binary alloy phase diagrams",
+        "polythiophene",
         "materials science",
-        2349
-      ],
-      [
-        "halorhodopsin",
-        "biology",
         0
       ],
       [
-        "on-machine measurement",
-        "engineering",
+        "cellulitis",
+        "medicine",
         0
       ],
       [
-        "advanced encryption standard",
-        "computer science",
+        "graphene transfer",
+        "materials science",
         0
       ],
       [
-        "subspace clustering",
-        "computer science",
-        0
-      ],
-      [
-        "community satisfaction",
-        "humanities",
+        "k-struvite",
+        "materials science",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794650463.883457,
-    "cpu": 35.0,
+    "time": 1794650820.548119,
+    "cpu": 29.0,
     "cpu_cores": [
-      56.0,
-      48.0,
-      58.0,
-      49.5,
-      20.9,
-      32.8,
-      10.5,
-      4.0
+      38.6,
+      51.3,
+      36.9,
+      39.6,
+      20.2,
+      33.5,
+      8.6,
+      3.0
     ],
-    "mem": 80.2,
-    "mem_used_gb": 2.8,
+    "mem": 80.5,
+    "mem_used_gb": 2.76,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 164.5,
+    "proc_mem_mb": 145.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 27970600960,
-    "net_tx": 27699511296,
-    "down_kbps": 452.6,
-    "up_kbps": 370.7,
-    "disk_free_gb": 11.7,
+    "net_rx": 28055530496,
+    "net_tx": 27782344704,
+    "down_kbps": 27.2,
+    "up_kbps": 26.2,
+    "disk_free_gb": 11.6,
     "load": [
-      4.9,
-      3.96,
-      3.42
+      2.72,
+      2.95,
+      3.09
     ],
     "cores": 8
   },
-  "disk_mb": 613.5,
+  "disk_mb": 622.4,
   "github": {
     "state": "error",
-    "error": "RuntimeError: GitHub does not show the new commit yet - local copies kept, retrying next sync",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794649352.971495,
-    "next_sync_s": 296,
-    "commits": 155
+    "last_push": 1794650472.935524,
+    "next_sync_s": 240,
+    "commits": 156
   },
   "last_sample": {
     "type": "web image",
-    "topic": "cross-border e-commerce",
-    "problem": "Side window of the house \u201cPrinzipalmarkt 48\u201d in M\u00fcnster, North Rhine-Westphalia, Germany Prinzipalmarkt is a street in M\u00fcnster\u2019s old town. The name means \u201cmain market\u201d, in contrast to the nearby streets Roggenmarkt and Fischmarkt. With its layout and buildings, Prinzipalmarkt documents the historical and architectural development of M\u00fcnster\u2019s economic and political center. Its development as a bourgeois market street on the edge of the cathedral precinct and on the eastern border of the cathedral began in the 12th century. A closed development probably existed around 1280. At the turn of the\u2026",
-    "solution": "CC BY-SA 4.0",
+    "topic": "binary alloy phase diagrams",
+    "problem": "Binary phase diagram of AlCu. Attention: Diagram have illustrative and educational value. Some of the points and temperatures \u200b\u200bover time may change due to the use better equipment and get much more pure alloys. Diagram made \u200b\u200bon the basis of numerous dates from the literature in Polish and English language.",
+    "solution": "CC BY-SA 3.0",
     "source": "wikimedia commons"
   }
 }
