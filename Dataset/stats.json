@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 13.1,
+  "disk_free_gb": 13.0,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794655450.219718,
-  "updated_iso": "2026-11-14T16:54:10",
-  "uptime_s": 170949,
+  "updated": 1794655542.6945322,
+  "updated_iso": "2026-11-14T16:55:42",
+  "uptime_s": 171042,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "archive": 116,
     "text": 116,
+    "archive": 116,
     "web_images": 24
   },
-  "waiting": 229,
+  "waiting": 243,
   "processes": 1,
   "fields": {
     "computer science": 1041027,
@@ -69,21 +69,21 @@
     "text": 5712195,
     "originals": 31304,
     "variants": 5680891,
-    "web_images": 6285,
+    "web_images": 6290,
     "synthetic_images": 14064,
-    "images": 20349,
+    "images": 20354,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2820626338,
-    "tasks_done": 97250,
+    "tasks_done": 97315,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 9610
   },
   "by_kind": {
-    "archive": 13602,
-    "text": 18980,
-    "web_images": 18217,
+    "archive": 13607,
+    "text": 19010,
+    "web_images": 18247,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2820626338,
-  "per_min": 2859.8,
+  "per_min": 2340.1,
   "topics": {
     "known": 109914,
-    "explored": 30457,
-    "queued": 79337,
+    "explored": 30487,
+    "queued": 79307,
     "space": 6594840,
     "next": [
       [
@@ -149,62 +149,62 @@
     ],
     "recent": [
       [
-        "hindlimb unloading",
-        "medicine",
-        0
-      ],
-      [
-        "skeletal muscle atrophy",
-        "biology",
-        0
-      ],
-      [
-        "vehicle wake",
-        "engineering",
-        0
-      ],
-      [
-        "membrane skeleton",
-        "medicine",
-        0
-      ],
-      [
-        "selective estrogen receptor degrader",
-        "medicine",
-        0
-      ],
-      [
-        "zirconium metal-organic frameworks",
-        "chemistry",
-        0
-      ],
-      [
-        "cantharidin",
-        "biology",
-        0
-      ],
-      [
-        "oxide scale",
+        "azobenzene",
         "materials science",
         0
       ],
       [
-        "herpetology",
+        "crude oil production",
+        "engineering",
+        0
+      ],
+      [
+        "biomass burning",
+        "earth and space",
+        0
+      ],
+      [
+        "historical tsunamis",
+        "engineering",
+        0
+      ],
+      [
+        "dissection (medical)",
+        "",
+        0
+      ],
+      [
+        "artificial intelligence inventions",
+        "computer science",
+        0
+      ],
+      [
+        "alpha-helix",
         "biology",
         0
       ],
       [
-        "unifac",
+        "champion",
+        "",
+        0
+      ],
+      [
+        "myxozoan parasites",
+        "biology",
+        0
+      ],
+      [
+        "livestock movement",
+        "earth and space",
+        0
+      ],
+      [
+        "heat release measurement",
         "chemistry",
         0
       ],
       [
-        "battered women",
-        "humanities",
-        0
-      ],
-      [
-        "single-page applications",
+        "api security",
         "computer science",
         0
       ]
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794655450.21857,
-    "cpu": 36.3,
+    "time": 1794655542.692074,
+    "cpu": 44.5,
     "cpu_cores": [
-      35.5,
-      45.8,
-      39.7,
-      30.4,
-      54.9,
-      44.3,
-      28.2,
-      12.1
+      47.3,
+      49.5,
+      47.8,
+      36.9,
+      62.6,
+      52.0,
+      41.0,
+      19.3
     ],
-    "mem": 81.5,
-    "mem_used_gb": 2.65,
+    "mem": 81.2,
+    "mem_used_gb": 2.7,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 174.1,
+    "proc_mem_mb": 146.2,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 29069553664,
-    "net_tx": 28924812288,
-    "down_kbps": 95.6,
-    "up_kbps": 68.4,
+    "net_rx": 29083836416,
+    "net_tx": 28943100928,
+    "down_kbps": 65.2,
+    "up_kbps": 49.0,
     "disk_free_gb": 13.0,
     "load": [
-      3.01,
+      3.38,
       3.39,
-      3.35
+      3.34
     ],
     "cores": 8
   },
-  "disk_mb": 681.4,
+  "disk_mb": 672.3,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794655450.140658,
-    "next_sync_s": 90,
-    "commits": 171
+    "last_push": 1794655507.08982,
+    "next_sync_s": 298,
+    "commits": 172
   },
   "last_sample": {
     "type": "web image",
-    "topic": "color-emotion associations",
-    "problem": "Booklet corresponding to a radio broadcast program created by the National Paint, Varnish, and Lacquer Association. The booklet describes how colors may be emotional or physical stimuli. The booklet lists emotions associated with several colors then encourages readers to assess the colors of their home and paint their walls to maximize cheer. Includes small stylized illustrations throughout, and decorated covers. The National Paint, Oil and Varnish Association, Inc., formed in 1933, was the national professional association representing all branches of the paint, oil, and varnish industries.",
-    "solution": "Public domain",
+    "topic": "acetylcholine receptor",
+    "problem": "Three conformation states of acetylcholine receptor",
+    "solution": "CC BY-SA 3.0",
     "source": "wikimedia commons"
   }
 }
