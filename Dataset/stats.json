@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794661042.394697,
-  "updated_iso": "2026-11-14T18:27:22",
-  "uptime_s": 176542,
+  "updated": 1794661121.5524218,
+  "updated_iso": "2026-11-14T18:28:45",
+  "uptime_s": 176621,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 243,
   "busy_by_kind": {
     "archive": 116,
-    "text": 116,
+    "text": 103,
     "web_images": 24
   },
-  "waiting": 230,
+  "waiting": 211,
   "processes": 1,
   "fields": {
     "computer science": 1119177,
@@ -69,21 +69,21 @@
     "text": 5926302,
     "originals": 32436,
     "variants": 5893866,
-    "web_images": 6803,
+    "web_images": 6837,
     "synthetic_images": 14064,
-    "images": 20867,
+    "images": 20901,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2901463176,
-    "tasks_done": 101896,
+    "tasks_done": 101993,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
-    "archive": 14791,
-    "text": 20445,
-    "web_images": 20209,
+    "archive": 14793,
+    "text": 20466,
+    "web_images": 20284,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2901463176,
-  "per_min": 1987.0,
+  "per_min": 1822.7,
   "topics": {
     "known": 109914,
-    "explored": 31922,
-    "queued": 77872,
+    "explored": 31943,
+    "queued": 77864,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "silica gel",
-        "",
-        1967
-      ],
-      [
-        "complication",
-        "",
-        1923
-      ],
-      [
-        "magnetic anomaly detection",
+        "mobile ipv6",
         "engineering",
-        1895
+        0
       ],
       [
-        "trigger voltage",
+        "iron pnictide superconductors",
+        "materials science",
+        0
+      ],
+      [
+        "thin blood smear",
+        "computer science",
+        0
+      ],
+      [
+        "reconfigurable robots",
         "engineering",
-        1426
+        0
       ],
       [
-        "small bowel resection",
+        "tax culture",
+        "economics and finance",
+        0
+      ],
+      [
+        "pseudaulacaspis pentagona",
+        "biology",
+        0
+      ],
+      [
+        "protein-ligand interactions",
         "medicine",
         0
       ],
       [
-        "fuel cell durability",
-        "engineering",
+        "time series databases",
+        "computer science",
         0
       ],
       [
-        "blue food",
+        "development (topology)",
+        "",
+        0
+      ],
+      [
+        "software",
+        "computer science",
+        0
+      ],
+      [
+        "biological control of invasive species",
         "biology",
         0
       ],
       [
-        "adhesion measurement",
-        "engineering",
+        "beamline",
+        "",
         0
-      ],
-      [
-        "weak solution existence and uniqueness",
-        "engineering",
-        227
-      ],
-      [
-        "electricity market liberalization",
-        "engineering",
-        0
-      ],
-      [
-        "honey bee pests",
-        "biology",
-        111
-      ],
-      [
-        "solar collectors",
-        "engineering",
-        688
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 107,
     "focus_left": 0
   },
   "system": {
-    "time": 1794661042.393451,
-    "cpu": 40.0,
+    "time": 1794661121.4906628,
+    "cpu": 39.7,
     "cpu_cores": [
-      65.5,
-      66.2,
-      62.8,
-      66.5,
-      18.0,
-      26.5,
-      10.3,
-      3.9
+      44.1,
+      41.0,
+      37.6,
+      33.3,
+      47.8,
+      51.3,
+      39.9,
+      23.2
     ],
-    "mem": 82.1,
-    "mem_used_gb": 2.62,
+    "mem": 83.0,
+    "mem_used_gb": 2.56,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 247.1,
+    "proc_mem_mb": 135.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 31948270592,
-    "net_tx": 31331823616,
-    "down_kbps": 325.8,
-    "up_kbps": 263.8,
+    "net_rx": 32002912256,
+    "net_tx": 31385964544,
+    "down_kbps": 337.0,
+    "up_kbps": 404.3,
     "disk_free_gb": 7.0,
     "load": [
-      3.48,
-      3.4,
-      3.46
+      4.6,
+      3.75,
+      3.58
     ],
     "cores": 8
   },
-  "disk_mb": 686.9,
+  "disk_mb": 691.3,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794660940.7240262,
-    "next_sync_s": 56,
-    "commits": 190
+    "last_push": 1794661089.634919,
+    "next_sync_s": 279,
+    "commits": 191
   },
   "last_sample": {
-    "type": "text",
-    "topic": "silica gel",
-    "problem": "Imprinting Macroscopic Fracture during Gelation: A Mechanism for Tuning Colloidal Gels Colloidal gels form through the sol-gel transition of attractive particle suspensions, where local aggregation leads to a space-spanning network with solid-like properties. Their microstructure and mechanical properties are highly sensitive to external perturbations, which can substantially alter the pathway\u2026",
-    "solution": "Using large-amplitude oscillatory shear (LAOS), we vary both the strain amplitude and the duration of oscillatory forcing, varying between one and two times the gelation time. We find that sufficiently large strain amplitudes, or prolonged exposure to oscillations in the nonlinear regime, alter irreversibly the gel properties: the storage modulus $G'$ decreases while its frequency dependence\u2026",
-    "source": "arxiv"
+    "type": "web image",
+    "topic": "environmental review",
+    "problem": "A public meeting on June 6, 2017, kicked off the scoping process for an environmental review of the only red wolf population that exists in the wild",
+    "solution": "Public domain",
+    "source": "wikimedia commons"
   }
 }
