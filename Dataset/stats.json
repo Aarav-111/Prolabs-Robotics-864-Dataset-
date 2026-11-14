@@ -2,39 +2,39 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.9,
+  "disk_free_gb": 10.7,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794633795.753176,
-  "updated_iso": "2026-11-14T10:53:18",
-  "uptime_s": 149295,
+  "updated": 1794634030.530751,
+  "updated_iso": "2026-11-14T10:57:10",
+  "uptime_s": 149530,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 255,
+  "in_flight": 256,
   "busy_by_kind": {
-    "text": 116,
     "archive": 116,
-    "web_images": 23
+    "text": 116,
+    "web_images": 24
   },
-  "waiting": 225,
+  "waiting": 245,
   "processes": 1,
   "fields": {
     "mathematics": 926585,
-    "computer science": 567223,
+    "computer science": 579995,
     "physics": 502898,
-    "general": 436311,
-    "engineering": 333371,
+    "general": 436784,
+    "engineering": 339932,
     "medicine": 269500,
     "biology": 234497,
-    "chemistry": 215759,
+    "chemistry": 216327,
     "economics and finance": 135507,
-    "earth and space": 129933,
+    "earth and space": 131163,
     "statistics": 126739,
-    "materials science": 120598,
+    "materials science": 120711,
+    "humanities": 83435,
     "psychology": 79305,
-    "humanities": 78978,
     "programming": 34414,
     "machine learning": 20661,
     "general knowledge": 6600,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4218277,
-    "originals": 23241,
-    "variants": 4195036,
-    "web_images": 3807,
+    "text": 4244451,
+    "originals": 23390,
+    "variants": 4221061,
+    "web_images": 3836,
     "synthetic_images": 14064,
-    "images": 17871,
+    "images": 17900,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2222781423,
-    "tasks_done": 81632,
+    "tokens": 2232152148,
+    "tasks_done": 81769,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 6139
   },
   "by_kind": {
-    "archive": 8568,
-    "text": 13644,
-    "web_images": 12969,
+    "archive": 8577,
+    "text": 13717,
+    "web_images": 13024,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2222781423,
-  "per_min": 2642.2,
+  "tokens": 2232152148,
+  "per_min": 5878.9,
   "topics": {
     "known": 109914,
-    "explored": 25121,
-    "queued": 84673,
+    "explored": 25194,
+    "queued": 84600,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "network security technology",
-        "computer science",
-        0
-      ],
-      [
-        "flame atomic absorption spectrometry",
-        "chemistry",
-        0
-      ],
-      [
-        "ontology modeling",
-        "computer science",
-        0
-      ],
-      [
-        "radiant heat transfer",
+        "high-temperature high-pressure water",
         "engineering",
+        4073
+      ],
+      [
+        "uml diagrams",
+        "computer science",
+        3038
+      ],
+      [
+        "private libraries",
+        "humanities",
+        2038
+      ],
+      [
+        "vegetation history",
+        "earth and space",
+        1029
+      ],
+      [
+        "sports video analysis",
+        "computer science",
         0
       ],
       [
-        "financial data exchange",
+        "ipsec",
+        "computer science",
+        0
+      ],
+      [
+        "ie matrix",
         "economics and finance",
         0
       ],
       [
-        "tumor progression",
-        "",
-        0
+        "phase equilibria and thermodynamics",
+        "chemistry",
+        568
       ],
       [
-        "web application design",
+        "educational technology and assessment",
         "computer science",
         0
       ],
       [
-        "miltefosine",
-        "medicine",
-        0
-      ],
-      [
-        "mda-9/syntenin",
-        "biology",
-        0
-      ],
-      [
-        "organic superconductors",
-        "materials science",
-        0
-      ],
-      [
-        "electron-hole recombination",
-        "engineering",
-        0
-      ],
-      [
-        "korean americans",
+        "dangun myth",
         "humanities",
+        0
+      ],
+      [
+        "sequencing batch reactor",
+        "earth and space",
+        0
+      ],
+      [
+        "stimulation",
+        "",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794633795.638623,
-    "cpu": 41.5,
+    "time": 1794634030.5291169,
+    "cpu": 40.4,
     "cpu_cores": [
-      42.7,
-      39.6,
-      36.9,
-      34.3,
-      55.9,
-      51.6,
-      45.0,
-      26.2
+      51.2,
+      47.3,
+      48.5,
+      37.1,
+      55.8,
+      43.9,
+      30.5,
+      9.5
     ],
-    "mem": 84.1,
-    "mem_used_gb": 2.48,
+    "mem": 84.0,
+    "mem_used_gb": 2.47,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 101.6,
+    "proc_mem_mb": 301.0,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 23254950912,
-    "net_tx": 21561932800,
-    "down_kbps": 241.4,
-    "up_kbps": 150.4,
-    "disk_free_gb": 10.9,
+    "net_rx": 23304350720,
+    "net_tx": 21609286656,
+    "down_kbps": 232.5,
+    "up_kbps": 150.7,
+    "disk_free_gb": 10.7,
     "load": [
-      3.67,
-      7.33,
-      7.46
+      4.78,
+      5.67,
+      6.67
     ],
     "cores": 8
   },
-  "disk_mb": 191.6,
+  "disk_mb": 185.3,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794633785.400682,
-    "next_sync_s": 159,
-    "commits": 119
+    "last_push": 1794633984.076085,
+    "next_sync_s": 295,
+    "commits": 121
   },
   "last_sample": {
     "type": "text",
-    "topic": "surface reflectance",
-    "problem": "Determining Reflectance Spectra of Surfaces and Clouds on Exoplanets Planned missions will spatially resolve temperate terrestrial planets from their host star. Although reflected light from such a planet encodes information about its surface, it has not been shown how to establish surface characteristics of a planet without assuming known surfaces to begin with. We present a re-analysis of\u2026",
-    "solution": "We show that the inverse problem of extracting surface spectra from such data is a novel and extreme instance of spectral unmixing, a well-studied problem in remote sensing. Principal component analysis is used to determine an appropriate number of model surfaces with which to interpret the data. Shrink-wrapping a simplex to the color excursions of the planet yields a conservative estimate of\u2026",
+    "topic": "high-temperature high-pressure water",
+    "problem": "Copper passivation procedure for water-filled copper cells for applications in metrology In the framework of the European research project MeteoMet, the LNE-CNAM and the LNE-CETIAT are developing novel copper cells for the determination of the water vapour pressure equation and the measurement of the triple point of water temperature at the highest degree of accuracy. The Water Vapour Pressure\u2026",
+    "solution": "The Triple Point of Water (TPW, temperature 273,16 K) plays a key role in thermometry, because of its threefold function. On one side, it defines the temperature unit, the kelvin. On the other side, it is the reference point in Standard Platinum Resistance Thermometer (SPRT) calibrations, according to the International Temperature Scale of 1990 (ITS-90). Finally, it is the connection point\u2026",
     "source": "arxiv"
   }
 }
