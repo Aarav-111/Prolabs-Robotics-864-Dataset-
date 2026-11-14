@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 14.9,
+  "disk_free_gb": 14.8,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794624858.759119,
-  "updated_iso": "2026-11-14T08:24:18",
-  "uptime_s": 140358,
+  "updated": 1794624898.176246,
+  "updated_iso": "2026-11-14T08:25:00",
+  "uptime_s": 140397,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 252,
   "busy_by_kind": {
-    "text": 116,
+    "text": 112,
     "web_images": 24,
     "archive": 116
   },
-  "waiting": 228,
+  "waiting": 227,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
@@ -26,7 +26,7 @@
     "physics": 502898,
     "general": 402167,
     "engineering": 300264,
-    "medicine": 232140,
+    "medicine": 232341,
     "biology": 211222,
     "chemistry": 202156,
     "statistics": 126739,
@@ -66,23 +66,23 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3921450,
-    "originals": 21641,
-    "variants": 3899809,
+    "text": 3921651,
+    "originals": 21642,
+    "variants": 3900009,
     "web_images": 3306,
     "synthetic_images": 14064,
     "images": 17370,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2100071839,
-    "tasks_done": 78977,
+    "tokens": 2100158427,
+    "tasks_done": 78983,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 5153
   },
   "by_kind": {
     "archive": 7690,
-    "text": 12671,
+    "text": 12677,
     "web_images": 12165,
     "synthetic_images": 0,
     "vla": 0,
@@ -90,12 +90,12 @@
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2100071839,
-  "per_min": 1458.9,
+  "tokens": 2100158427,
+  "per_min": 1164.9,
   "topics": {
     "known": 109914,
-    "explored": 24148,
-    "queued": 85646,
+    "explored": 24154,
+    "queued": 85644,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,36 @@
     ],
     "recent": [
       [
+        "exploratory analysis",
+        "",
+        0
+      ],
+      [
+        "environmental dynamism",
+        "economics and finance",
+        0
+      ],
+      [
+        "cell encapsulation",
+        "materials science",
+        0
+      ],
+      [
+        "trace element analysis",
+        "chemistry",
+        0
+      ],
+      [
+        "outcome harmonization",
+        "humanities",
+        0
+      ],
+      [
+        "standardized incidence ratio",
+        "medicine",
+        201
+      ],
+      [
         "automated verification",
         "computer science",
         14563
@@ -177,86 +207,56 @@
         "cultivar",
         "",
         7270
-      ],
-      [
-        "solvent polarity",
-        "chemistry",
-        5686
-      ],
-      [
-        "affective touch",
-        "biology",
-        5151
-      ],
-      [
-        "surface nuclear magnetic resonance",
-        "chemistry",
-        7047
-      ],
-      [
-        "loop diuretics",
-        "medicine",
-        4068
-      ],
-      [
-        "vehicle fuel economy",
-        "engineering",
-        7534
-      ],
-      [
-        "2d animation",
-        "computer science",
-        5812
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 116,
     "focus_left": 0
   },
   "system": {
-    "time": 1794624858.758373,
-    "cpu": 63.6,
+    "time": 1794624898.039019,
+    "cpu": 51.0,
     "cpu_cores": [
-      89.3,
-      90.2,
-      88.8,
-      87.4,
-      71.2,
-      37.6,
-      26.8,
-      17.5
+      63.9,
+      61.8,
+      59.5,
+      56.1,
+      38.8,
+      55.4,
+      22.3,
+      50.4
     ],
-    "mem": 82.6,
-    "mem_used_gb": 2.85,
+    "mem": 74.8,
+    "mem_used_gb": 3.92,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 98.0,
+    "proc_mem_mb": 102.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 20956587008,
-    "net_tx": 18278580224,
-    "down_kbps": 3079.6,
-    "up_kbps": 1703.1,
-    "disk_free_gb": 14.9,
+    "net_rx": 21031031808,
+    "net_tx": 18347112448,
+    "down_kbps": 953.4,
+    "up_kbps": 854.6,
+    "disk_free_gb": 14.8,
     "load": [
-      5.53,
-      11.62,
-      10.16
+      5.47,
+      10.94,
+      9.96
     ],
     "cores": 8
   },
-  "disk_mb": 125.3,
+  "disk_mb": 125.6,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794624805.725198,
-    "next_sync_s": 96,
-    "commits": 100
+    "last_push": 1794624890.7660851,
+    "next_sync_s": 56,
+    "commits": 101
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "loop diuretics",
-    "problem": "Space-filling model of the ozolinone molecule, a loop diuretic which was never marketed. Colour code: Carbon, C: black Hydrogen, H: white Oxygen, O: red Nitrogen, N: blue Sulfur, S: yellow",
-    "solution": "CC0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "standardized incidence ratio",
+    "problem": "A causal inference framework for cancer cluster investigations using publicly available data Often, a community becomes alarmed when high rates of cancer are noticed, and residents suspect that the cancer cases could be caused by a known source of hazard. In response, the CDC recommends that departments of health perform a standardized incidence ratio (SIR) analysis to determine whether the\u2026",
+    "solution": "In this paper we propose a novel causal inference approach to cancer cluster investigations, rooted in the potential outcomes framework. Assuming that a source of hazard representing a potential cause of increased cancer rates in the community is identified a priori, we introduce a new estimand called the causal SIR (cSIR). The cSIR is a ratio defined as the expected cancer incidence in the\u2026",
+    "source": "arxiv"
   }
 }
