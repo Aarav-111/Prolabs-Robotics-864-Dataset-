@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.7,
+  "disk_free_gb": 10.6,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794636091.253103,
-  "updated_iso": "2026-11-14T11:31:31",
-  "uptime_s": 151590,
+  "updated": 1794636659.99355,
+  "updated_iso": "2026-11-14T11:41:00",
+  "uptime_s": 152159,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,26 +18,26 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 231,
+  "waiting": 225,
   "processes": 1,
   "fields": {
     "mathematics": 926585,
-    "computer science": 617809,
+    "computer science": 641536,
     "physics": 502898,
-    "general": 458996,
-    "engineering": 369741,
-    "medicine": 279436,
-    "biology": 251397,
-    "chemistry": 230974,
-    "economics and finance": 159748,
-    "earth and space": 151495,
-    "materials science": 134415,
+    "general": 479065,
+    "engineering": 376347,
+    "medicine": 280149,
+    "biology": 254608,
+    "chemistry": 231739,
+    "economics and finance": 160310,
+    "earth and space": 151696,
+    "materials science": 140804,
     "statistics": 126739,
-    "psychology": 86916,
+    "psychology": 90050,
     "humanities": 86694,
-    "programming": 34947,
+    "programming": 35145,
     "machine learning": 20661,
-    "general knowledge": 7232,
+    "general knowledge": 7863,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 73866,
-    "openlifescienceai/medmcqa": 20008,
+    "stack exchange dump": 75298,
+    "openlifescienceai/medmcqa": 20253,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4446081,
-    "originals": 24559,
-    "variants": 4421522,
-    "web_images": 4045,
+    "text": 4512287,
+    "originals": 24926,
+    "variants": 4487361,
+    "web_images": 4163,
     "synthetic_images": 14064,
-    "images": 18109,
+    "images": 18227,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2311586506,
-    "tasks_done": 83030,
+    "tokens": 2336167457,
+    "tasks_done": 83407,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 6454
+    "preference": 6536
   },
   "by_kind": {
-    "archive": 9122,
-    "text": 14142,
-    "web_images": 13315,
+    "archive": 9266,
+    "text": 14261,
+    "web_images": 13429,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2311586506,
+  "tokens": 2336167457,
   "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 25619,
-    "queued": 84175,
+    "explored": 25738,
+    "queued": 84056,
     "space": 6594840,
     "next": [
       [
@@ -127,10 +127,6 @@
         "humanities"
       ],
       [
-        "exoplanets",
-        "earth and space"
-      ],
-      [
         "control systems",
         "engineering"
       ],
@@ -145,118 +141,122 @@
       [
         "physiology",
         "biology"
+      ],
+      [
+        "meteorology",
+        "earth and space"
       ]
     ],
     "recent": [
       [
-        "oral dysplasia",
-        "medicine",
-        4788
-      ],
-      [
-        "anomalous experiences",
-        "psychology",
-        2505
-      ],
-      [
-        "pesticide",
+        "testbed",
         "",
-        6044
+        2809
       ],
       [
-        "digital geometry",
+        "patient data",
+        "",
+        5352
+      ],
+      [
+        "planet",
+        "",
+        4926
+      ],
+      [
+        "frequent itemsets",
         "computer science",
-        5580
+        0
       ],
       [
-        "global illumination",
+        "fluctuational electrodynamics",
+        "engineering",
+        760
+      ],
+      [
+        "sign language dataset",
         "computer science",
-        7187
+        3523
       ],
       [
-        "smoke suppression",
-        "materials science",
-        4101
+        "robot navigation",
+        "computer science",
+        3704
       ],
       [
-        "topoisomerase poisons",
-        "biology",
-        3613
+        "digital carbon footprint",
+        "engineering",
+        3161
       ],
       [
-        "agricultural emissions",
-        "earth and space",
-        3967
+        "quora",
+        "computer science",
+        0
       ],
       [
-        "serine protease inhibitors",
-        "biology",
-        2865
-      ],
-      [
-        "cystinosis",
+        "urinary sodium-to-potassium ratio",
         "medicine",
-        3398
+        0
       ],
       [
-        "electroless copper plating",
+        "glass properties",
         "materials science",
-        1502
+        3901
       ],
       [
-        "team flow",
-        "psychology",
-        3711
+        "surgical bleeding control",
+        "medicine",
+        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794636091.25185,
-    "cpu": 55.0,
+    "time": 1794636659.991145,
+    "cpu": 23.7,
     "cpu_cores": [
-      57.0,
-      51.7,
-      51.7,
-      52.5,
-      69.4,
-      62.0,
-      53.6,
-      42.0
+      22.1,
+      20.5,
+      16.2,
+      12.6,
+      52.1,
+      38.5,
+      21.7,
+      6.2
     ],
-    "mem": 77.1,
-    "mem_used_gb": 3.02,
+    "mem": 74.2,
+    "mem_used_gb": 3.24,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 692.6,
+    "proc_mem_mb": 710.7,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 24004245504,
-    "net_tx": 22647257088,
-    "down_kbps": 1003.9,
-    "up_kbps": 892.0,
+    "net_rx": 24240503808,
+    "net_tx": 22952557568,
+    "down_kbps": 453.6,
+    "up_kbps": 584.3,
     "disk_free_gb": 10.7,
     "load": [
-      3.3,
-      3.43,
-      3.61
+      4.08,
+      3.5,
+      3.54
     ],
     "cores": 8
   },
-  "disk_mb": 232.0,
+  "disk_mb": 259.2,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (3 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794636075.347828,
-    "next_sync_s": 293,
-    "commits": 126
+    "last_push": 1794636124.187619,
+    "next_sync_s": 294,
+    "commits": 127
   },
   "last_sample": {
-    "type": "archive Q&A",
-    "topic": "openlifescienceai/medmcqa",
-    "problem": "Q: Here is a problem to solve. Which of the following will cause an increase in the prevalence of disease? A) Immigration of healthy persons B) Increased cure rate of disease C) Longer duration of disease D) Increased death rate in disease",
-    "solution": "A: Answer: C) Longer duration of disease Explanation: Prevalence depends upon 2 factors, the incidence (I) and duration of illness (D). Given the assumption that the population is stable, and incidence and duration are unchanging, the relationship between incidence and prevalence is, P = I* D = Incidence * mean duration Thus when duration increases prevalence also increases. Ref: Park's Textbook\u2026",
-    "source": "huggingface"
+    "type": "text",
+    "topic": "testbed",
+    "problem": "Federated Cybersecurity Testbed as a Service (FCTaaS): A framework to federate cybersecurity testbeds Rapid technological change is reshaping society through emerging domains such as autonomous vehicles and smart manufacturing, creating new research challenges in system design, operation, security, and training. Researchers often rely on testbeds to reproduce experimental scenarios, collect and\u2026",
+    "solution": "Moreover, access to specialized testbeds is often limited to a small group of researchers, leaving valuable infrastructure underutilized during its operational lifetime. This paper presents FCTaaS, a Federated Cybersecurity Testbed as a Service framework that enables heterogeneous cybersecurity testbeds to participate in a single experiment across geographical boundaries. By connecting\u2026",
+    "source": "arxiv"
   }
 }
