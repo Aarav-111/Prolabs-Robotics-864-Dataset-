@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 13.0,
+  "disk_free_gb": 11.6,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794655542.6945322,
-  "updated_iso": "2026-11-14T16:55:42",
-  "uptime_s": 171042,
+  "updated": 1794655756.56775,
+  "updated_iso": "2026-11-14T16:59:16",
+  "uptime_s": 171256,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 243,
+  "waiting": 209,
   "processes": 1,
   "fields": {
     "computer science": 1041027,
@@ -69,21 +69,21 @@
     "text": 5712195,
     "originals": 31304,
     "variants": 5680891,
-    "web_images": 6290,
+    "web_images": 6296,
     "synthetic_images": 14064,
-    "images": 20354,
+    "images": 20360,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2820626338,
-    "tasks_done": 97315,
+    "tasks_done": 97469,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 9610
   },
   "by_kind": {
     "archive": 13607,
-    "text": 19010,
-    "web_images": 18247,
+    "text": 19080,
+    "web_images": 18331,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2820626338,
-  "per_min": 2340.1,
+  "per_min": 2.2,
   "topics": {
     "known": 109914,
-    "explored": 30487,
-    "queued": 79307,
+    "explored": 30557,
+    "queued": 79237,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "azobenzene",
+        "machine tool industry",
+        "engineering",
+        0
+      ],
+      [
+        "plant bioreactors",
+        "biology",
+        0
+      ],
+      [
+        "nerve conduction studies",
+        "medicine",
+        0
+      ],
+      [
+        "disordered alloys",
         "materials science",
         0
       ],
       [
-        "crude oil production",
-        "engineering",
-        0
-      ],
-      [
-        "biomass burning",
-        "earth and space",
-        0
-      ],
-      [
-        "historical tsunamis",
-        "engineering",
-        0
-      ],
-      [
-        "dissection (medical)",
-        "",
-        0
-      ],
-      [
-        "artificial intelligence inventions",
+        "imbalanced data classification techniques",
         "computer science",
         0
       ],
       [
-        "alpha-helix",
+        "programming questions",
+        "computer science",
+        0
+      ],
+      [
+        "helmuth plessner",
+        "humanities",
+        0
+      ],
+      [
+        "discretionary access control",
+        "computer science",
+        0
+      ],
+      [
+        "date by-products",
         "biology",
         0
       ],
       [
-        "champion",
-        "",
-        0
-      ],
-      [
-        "myxozoan parasites",
-        "biology",
-        0
-      ],
-      [
-        "livestock movement",
-        "earth and space",
-        0
-      ],
-      [
-        "heat release measurement",
+        "oxovanadium(iv) complexes",
         "chemistry",
         0
       ],
       [
-        "api security",
-        "computer science",
+        "regional environmental quality",
+        "earth and space",
+        0
+      ],
+      [
+        "high abilities",
+        "psychology",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794655542.692074,
-    "cpu": 44.5,
+    "time": 1794655756.566626,
+    "cpu": 43.7,
     "cpu_cores": [
-      47.3,
-      49.5,
-      47.8,
-      36.9,
-      62.6,
-      52.0,
-      41.0,
-      19.3
+      46.8,
+      42.7,
+      37.4,
+      33.0,
+      54.6,
+      50.5,
+      48.4,
+      36.1
     ],
-    "mem": 81.2,
-    "mem_used_gb": 2.7,
+    "mem": 81.3,
+    "mem_used_gb": 2.72,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 146.2,
+    "proc_mem_mb": 145.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 29083836416,
-    "net_tx": 28943100928,
-    "down_kbps": 65.2,
-    "up_kbps": 49.0,
-    "disk_free_gb": 13.0,
+    "net_rx": 29710488576,
+    "net_tx": 29294214144,
+    "down_kbps": 5154.0,
+    "up_kbps": 2837.8,
+    "disk_free_gb": 11.8,
     "load": [
-      3.38,
-      3.39,
-      3.34
+      4.55,
+      3.75,
+      3.5
     ],
     "cores": 8
   },
-  "disk_mb": 672.3,
+  "disk_mb": 663.6,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794655507.08982,
-    "next_sync_s": 298,
-    "commits": 172
+    "last_push": 1794655617.6571672,
+    "next_sync_s": 84,
+    "commits": 173
   },
   "last_sample": {
     "type": "web image",
-    "topic": "acetylcholine receptor",
-    "problem": "Three conformation states of acetylcholine receptor",
-    "solution": "CC BY-SA 3.0",
+    "topic": "span (engineering)",
+    "problem": "General Rafael Urdaneta Bridge over Lake Maracaibo, view from the lake to the Cabimas side, designed by Italian engineer Riccardo Morandi, Maracaibo, Venezuela",
+    "solution": "CC0",
     "source": "wikimedia commons"
   }
 }
