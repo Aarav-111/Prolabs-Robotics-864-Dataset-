@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794664718.9487538,
-  "updated_iso": "2026-11-14T19:28:38",
-  "uptime_s": 180218,
+  "updated": 1794664758.4298759,
+  "updated_iso": "2026-11-14T19:29:18",
+  "uptime_s": 180258,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 234,
+  "waiting": 242,
   "processes": 1,
   "fields": {
     "computer science": 1175329,
@@ -27,12 +27,12 @@
     "engineering": 569372,
     "physics": 502898,
     "medicine": 360118,
-    "biology": 317690,
+    "biology": 319218,
     "chemistry": 315561,
     "economics and finance": 235287,
-    "earth and space": 223332,
+    "earth and space": 223533,
     "materials science": 207787,
-    "humanities": 141304,
+    "humanities": 141505,
     "psychology": 138859,
     "statistics": 126739,
     "programming": 51833,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 6073601,
-    "originals": 33206,
-    "variants": 6040395,
+    "text": 6075531,
+    "originals": 33217,
+    "variants": 6042314,
     "web_images": 7131,
     "synthetic_images": 14064,
     "images": 21195,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2955634348,
-    "tasks_done": 104507,
+    "tokens": 2956415382,
+    "tasks_done": 104554,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
-    "archive": 15506,
-    "text": 21307,
-    "web_images": 21243,
+    "archive": 15509,
+    "text": 21312,
+    "web_images": 21282,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2955634348,
-  "per_min": 3354.4,
+  "tokens": 2956415382,
+  "per_min": 3260.2,
   "topics": {
     "known": 109914,
-    "explored": 32784,
-    "queued": 77010,
+    "explored": 32789,
+    "queued": 77005,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,31 @@
     ],
     "recent": [
       [
+        "cancer research trends",
+        "biology",
+        1528
+      ],
+      [
+        "18th-century german literature",
+        "humanities",
+        201
+      ],
+      [
+        "alum",
+        "earth and space",
+        201
+      ],
+      [
+        "authoritative parenting",
+        "psychology",
+        0
+      ],
+      [
+        "orac",
+        "medicine",
+        0
+      ],
+      [
         "synchronous primary tumors",
         "medicine",
         0
@@ -182,62 +207,37 @@
         "tropocollagen",
         "materials science",
         0
-      ],
-      [
-        "gstm1",
-        "biology",
-        0
-      ],
-      [
-        "pericardial disease",
-        "medicine",
-        0
-      ],
-      [
-        "information technology curriculum",
-        "computer science",
-        0
-      ],
-      [
-        "plant pathogenic phytoplasma",
-        "biology",
-        0
-      ],
-      [
-        "micromonospora",
-        "biology",
-        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794664718.947467,
-    "cpu": 29.5,
+    "time": 1794664758.427541,
+    "cpu": 42.2,
     "cpu_cores": [
-      55.9,
-      46.7,
-      40.6,
+      46.9,
+      47.5,
       39.0,
-      18.6,
-      23.9,
-      8.2,
-      3.0
+      39.6,
+      49.5,
+      52.0,
+      36.4,
+      27.3
     ],
-    "mem": 83.4,
-    "mem_used_gb": 2.53,
+    "mem": 82.5,
+    "mem_used_gb": 2.58,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 96.2,
+    "proc_mem_mb": 127.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 33208717312,
-    "net_tx": 33101777920,
-    "down_kbps": 28.9,
-    "up_kbps": 22.0,
+    "net_rx": 33229203456,
+    "net_tx": 33138834432,
+    "down_kbps": 724.1,
+    "up_kbps": 1186.6,
     "disk_free_gb": 5.9,
     "load": [
-      3.43,
+      3.5,
       3.61,
       3.55
     ],
@@ -248,15 +248,15 @@
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794664697.166804,
-    "next_sync_s": 161,
-    "commits": 212
+    "last_push": 1794664757.488561,
+    "next_sync_s": 121,
+    "commits": 213
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "propositional satisfiability",
-    "problem": "Crossover gadget as shown in D. Lichtenstein's Planar Formulae and Their Uses (1982) used to prove the NP-completeness of Planar SAT. The left side shows a crossing and the right side shows the crossover gadget. Small dots denote clauses, black and red edges denote non-inverted and inverted edges respectively.",
-    "solution": "CC BY-SA 4.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "cancer research trends",
+    "problem": "From Data to Insights: A Comprehensive Survey on Advanced Applications in Thyroid Cancer Research Thyroid cancer, the most prevalent endocrine cancer, has gained significant global attention due to its impact on public health. Extensive research efforts have been dedicated to leveraging artificial intelligence (AI) methods for the early detection of this disease, aiming to reduce its morbidity\u2026",
+    "solution": "To address this knowledge gap, we conducted a systematic review and developed a comprehensive taxonomy of machine learning-based applications in thyroid cancer pathogenesis, diagnosis, and prognosis. Our primary objective was to facilitate the research community's ability to stay abreast of technological advancements and potentially lead the emerging trends in this field. This survey presents a\u2026",
+    "source": "arxiv"
   }
 }
