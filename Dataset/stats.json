@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794659145.3547788,
-  "updated_iso": "2026-11-14T17:55:45",
-  "uptime_s": 174645,
+  "updated": 1794659180.074271,
+  "updated_iso": "2026-11-14T17:56:20",
+  "uptime_s": 174679,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "archive": 116,
     "text": 116,
+    "archive": 116,
     "web_images": 24
   },
-  "waiting": 244,
+  "waiting": 239,
   "processes": 1,
   "fields": {
     "computer science": 1087965,
@@ -75,15 +75,15 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2865320672,
-    "tasks_done": 99988,
+    "tasks_done": 100026,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
-    "archive": 14324,
-    "text": 19858,
-    "web_images": 19355,
+    "archive": 14327,
+    "text": 19882,
+    "web_images": 19366,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2865320672,
-  "per_min": 1032.2,
+  "per_min": 842.5,
   "topics": {
     "known": 109914,
-    "explored": 31335,
-    "queued": 78459,
+    "explored": 31359,
+    "queued": 78435,
     "space": 6594840,
     "next": [
       [
@@ -149,62 +149,62 @@
     ],
     "recent": [
       [
-        "accounting textbooks",
-        "economics and finance",
-        201
-      ],
-      [
-        "insertion loss",
-        "engineering",
-        0
-      ],
-      [
-        "resistivity survey",
-        "earth and space",
-        0
-      ],
-      [
-        "traditional knowledge",
-        "biology",
-        0
-      ],
-      [
-        "state regulation of commerce",
-        "economics and finance",
-        0
-      ],
-      [
-        "asset-based community development",
-        "humanities",
-        0
-      ],
-      [
-        "germ cell",
+        "field of view",
         "",
         0
       ],
       [
-        "nitrate reductase",
-        "biology",
-        0
-      ],
-      [
-        "phubbing",
-        "humanities",
-        0
-      ],
-      [
-        "free-base porphyrin",
-        "materials science",
-        0
-      ],
-      [
-        "building certification",
+        "phased array ultrasonic testing",
         "engineering",
         0
       ],
       [
-        "antiangiogenic activity",
+        "negligence rule",
+        "economics and finance",
+        0
+      ],
+      [
+        "nursing ethics",
+        "medicine",
+        0
+      ],
+      [
+        "health spending efficiency",
+        "economics and finance",
+        0
+      ],
+      [
+        "carbon aerogels",
+        "materials science",
+        0
+      ],
+      [
+        "re-aim framework",
+        "medicine",
+        0
+      ],
+      [
+        "modified apelblat equation",
+        "materials science",
+        0
+      ],
+      [
+        "pressure ulcer prevention",
+        "medicine",
+        0
+      ],
+      [
+        "wind energy",
+        "engineering",
+        0
+      ],
+      [
+        "hydrogen aircraft",
+        "engineering",
+        0
+      ],
+      [
+        "tunicamycin",
         "biology",
         0
       ]
@@ -213,44 +213,44 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794659145.353716,
-    "cpu": 33.5,
+    "time": 1794659180.07259,
+    "cpu": 43.3,
     "cpu_cores": [
+      52.1,
       45.0,
-      44.6,
-      42.1,
-      42.4,
-      32.0,
-      33.5,
-      17.0,
-      10.8
+      45.2,
+      42.5,
+      47.9,
+      47.5,
+      36.8,
+      29.5
     ],
-    "mem": 82.5,
-    "mem_used_gb": 2.59,
+    "mem": 82.7,
+    "mem_used_gb": 2.57,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 85.9,
+    "proc_mem_mb": 286.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 31327207424,
-    "net_tx": 30623340544,
-    "down_kbps": 139.4,
-    "up_kbps": 93.4,
+    "net_rx": 31338502144,
+    "net_tx": 30637185024,
+    "down_kbps": 194.4,
+    "up_kbps": 106.2,
     "disk_free_gb": 7.5,
     "load": [
-      3.82,
-      4.54,
-      3.98
+      3.46,
+      4.37,
+      3.94
     ],
     "cores": 8
   },
-  "disk_mb": 703.4,
+  "disk_mb": 699.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794659143.800202,
-    "next_sync_s": 145,
-    "commits": 182
+    "last_push": 1794659178.903969,
+    "next_sync_s": 111,
+    "commits": 183
   },
   "last_sample": {
     "type": "text",
