@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.3,
+  "disk_free_gb": 11.4,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794641124.1443388,
-  "updated_iso": "2026-11-14T12:55:24",
-  "uptime_s": 156623,
+  "updated": 1794641163.382762,
+  "updated_iso": "2026-11-14T12:56:03",
+  "uptime_s": 156663,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 243,
+  "in_flight": 256,
   "busy_by_kind": {
     "text": 116,
-    "archive": 104,
-    "web_images": 23
+    "archive": 116,
+    "web_images": 24
   },
-  "waiting": 217,
+  "waiting": 230,
   "processes": 1,
   "fields": {
     "mathematics": 926955,
@@ -28,16 +28,16 @@
     "engineering": 422032,
     "medicine": 298503,
     "biology": 277491,
-    "chemistry": 263097,
+    "chemistry": 263644,
     "economics and finance": 171211,
     "earth and space": 162782,
     "materials science": 162484,
     "statistics": 126739,
     "psychology": 94515,
     "humanities": 93706,
-    "programming": 40466,
+    "programming": 41253,
     "machine learning": 20661,
-    "general knowledge": 8738,
+    "general knowledge": 8939,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 84644,
+    "stack exchange dump": 86179,
     "openlifescienceai/medmcqa": 22736,
     "qiaojin/PubMedQA": 3231,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4842829,
-    "originals": 26699,
-    "variants": 4816130,
-    "web_images": 4616,
+    "text": 4844364,
+    "originals": 26704,
+    "variants": 4817660,
+    "web_images": 4646,
     "synthetic_images": 14064,
-    "images": 18680,
+    "images": 18710,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2488937771,
-    "tasks_done": 86199,
+    "tokens": 2490089755,
+    "tasks_done": 86258,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 7293
+    "preference": 7409
   },
   "by_kind": {
-    "archive": 10224,
-    "text": 15342,
-    "web_images": 14182,
+    "archive": 10253,
+    "text": 15349,
+    "web_images": 14205,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2488937771,
-  "per_min": 3948.7,
+  "tokens": 2490089755,
+  "per_min": 4273.0,
   "topics": {
     "known": 109914,
-    "explored": 26819,
-    "queued": 82975,
+    "explored": 26826,
+    "queued": 82968,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,41 @@
     ],
     "recent": [
       [
+        "forgiveness therapy",
+        "psychology",
+        0
+      ],
+      [
+        "hazardous chemicals",
+        "engineering",
+        0
+      ],
+      [
+        "evidence-based design",
+        "engineering",
+        0
+      ],
+      [
+        "gestalt play therapy",
+        "psychology",
+        0
+      ],
+      [
+        "deap dataset",
+        "computer science",
+        0
+      ],
+      [
+        "cost-effectiveness analysis",
+        "economics and finance",
+        0
+      ],
+      [
+        "ferroelasticity",
+        "materials science",
+        0
+      ],
+      [
         "bug detection",
         "computer science",
         6383
@@ -172,91 +207,56 @@
         "vulcanized rubber",
         "materials science",
         0
-      ],
-      [
-        "planetary atmospheres",
-        "earth and space",
-        0
-      ],
-      [
-        "ordered mesoporous materials",
-        "materials science",
-        0
-      ],
-      [
-        "standard gibbs energy of formation",
-        "chemistry",
-        0
-      ],
-      [
-        "building moisture",
-        "engineering",
-        0
-      ],
-      [
-        "agricultural economics and policies",
-        "economics and finance",
-        0
-      ],
-      [
-        "tumor origin identification",
-        "medicine",
-        0
-      ],
-      [
-        "adsorption geometry",
-        "chemistry",
-        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794641124.143418,
-    "cpu": 26.7,
+    "time": 1794641163.381946,
+    "cpu": 31.0,
     "cpu_cores": [
-      25.7,
-      23.1,
-      18.5,
-      16.6,
-      41.3,
-      44.9,
-      28.7,
-      15.1
+      35.3,
+      30.9,
+      24.2,
+      20.2,
+      48.0,
+      44.1,
+      26.7,
+      19.2
     ],
-    "mem": 77.5,
-    "mem_used_gb": 3.01,
+    "mem": 77.6,
+    "mem_used_gb": 3.0,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 237.5,
+    "proc_mem_mb": 179.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 25574660096,
-    "net_tx": 24893572096,
-    "down_kbps": 720.2,
-    "up_kbps": 414.3,
-    "disk_free_gb": 11.3,
+    "net_rx": 25592832000,
+    "net_tx": 24909766656,
+    "down_kbps": 252.8,
+    "up_kbps": 158.5,
+    "disk_free_gb": 11.4,
     "load": [
-      3.17,
-      2.51,
-      2.51
+      3.2,
+      2.6,
+      2.54
     ],
     "cores": 8
   },
   "disk_mb": 366.2,
   "github": {
-    "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794639823.292462,
-    "next_sync_s": 158,
-    "commits": 139
+    "last_push": 1794641162.504426,
+    "next_sync_s": 118,
+    "commits": 140
   },
   "last_sample": {
-    "type": "archive Q&A",
-    "topic": "stack exchange dump",
-    "problem": "User: Quick one: I have a `createEditText` function that creates an `EditText` and adds it to the view. My issue is that once it's added to the view, the user has to tap the `EditText` in order for the keyboard to be called and editing to work. What I'm trying to do is to have it so that once the `EditText` is created, the user is automatically taken to the edit mode. In IOS programming, there's\u2026",
-    "solution": "Assistant: Easy - let's go. Unfortunately it is not enough to call only `EditText#requestFocus`. In addition to this you also have to call the `InputMethodManager#showSoftInput`. Following utility method should work: ``` fun openSoftKeyboard(context: Context, view: View) { view.requestFocus() // open the soft keyboard val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as\u2026",
-    "source": "stackexchange"
+    "type": "web image",
+    "topic": "bug detection",
+    "problem": "Perturbated Basilica Julia set f ( z ) = z 2 \u2212 1 \u2212 0.001 z 2 using LSM/J = Level Sets ( Method) of escape time. \"The most obvious feature is that it's full of holes! The fractal is homemorphic to (topologically the same as) the Sierpinski carpet\"[1]",
+    "solution": "CC BY-SA 4.0",
+    "source": "wikimedia commons"
   }
 }
