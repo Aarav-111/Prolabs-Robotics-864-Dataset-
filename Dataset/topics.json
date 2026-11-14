@@ -1,12 +1,12 @@
 {
 "app": "Prolabs Robotics AITE",
-"updated": "2026-11-14T09:35:53",
+"updated": "2026-11-14T09:36:00",
 "total": 109914,
 "done": 24495,
-"in_progress": 4,
-"left": 85415,
+"in_progress": 114,
+"left": 85305,
 "parallel_agents": {
-"running": 9,
+"running": 134,
 "topics": [
 {
 "agent": 1,
@@ -26,76 +26,576 @@
 },
 {
 "agent": 5,
-"topic": "epitope"
-},
-{
-"agent": 6,
 "topic": "memory management"
 },
 {
-"agent": 7,
-"topic": "cord-cutting"
-},
-{
-"agent": 8,
+"agent": 6,
 "topic": "nanotechnology governance"
 },
 {
-"agent": 9,
+"agent": 7,
 "topic": "plan generation"
+},
+{
+"agent": 8,
+"topic": "hemoglobin electrophoresis"
+},
+{
+"agent": 9,
+"topic": "capacity building"
+},
+{
+"agent": 10,
+"topic": "multimedia retrieval"
+},
+{
+"agent": 11,
+"topic": "diaryl disulfides"
+},
+{
+"agent": 12,
+"topic": "high-angle grain boundaries"
+},
+{
+"agent": 13,
+"topic": "node classification"
+},
+{
+"agent": 14,
+"topic": "ai use cases"
+},
+{
+"agent": 16,
+"topic": "parenchyma"
+},
+{
+"agent": 18,
+"topic": "extended finite element method"
+},
+{
+"agent": 20,
+"topic": "ship design"
+},
+{
+"agent": 22,
+"topic": "cognitive diagnosis"
+},
+{
+"agent": 24,
+"topic": "stress hormones"
+},
+{
+"agent": 26,
+"topic": "land use classification"
+},
+{
+"agent": 28,
+"topic": "islamic reform"
+},
+{
+"agent": 30,
+"topic": "art gallery problem"
+},
+{
+"agent": 32,
+"topic": "inverse gas chromatography"
+},
+{
+"agent": 34,
+"topic": "hinokiflavone"
+},
+{
+"agent": 36,
+"topic": "bleak house"
+},
+{
+"agent": 38,
+"topic": "group psychodrama"
+},
+{
+"agent": 40,
+"topic": "rotation (mathematics)"
+},
+{
+"agent": 42,
+"topic": "dugesiidae"
+},
+{
+"agent": 44,
+"topic": "photopolymerization techniques and applications"
+},
+{
+"agent": 46,
+"topic": "pressurized gasification"
+},
+{
+"agent": 48,
+"topic": "reaction mechanism"
+},
+{
+"agent": 50,
+"topic": "revision arthroplasty"
+},
+{
+"agent": 52,
+"topic": "supply chain management"
+},
+{
+"agent": 54,
+"topic": "process analytical technology"
+},
+{
+"agent": 56,
+"topic": "nov"
+},
+{
+"agent": 57,
+"topic": "misconceptions"
+},
+{
+"agent": 59,
+"topic": "acid dissociation"
+},
+{
+"agent": 63,
+"topic": "carbon credits"
+},
+{
+"agent": 65,
+"topic": "digital engineering"
+},
+{
+"agent": 66,
+"topic": "esoteric medicine"
+},
+{
+"agent": 68,
+"topic": "dielectric energy storage"
+},
+{
+"agent": 70,
+"topic": "organic oxidation"
+},
+{
+"agent": 72,
+"topic": "social cognitive career theory"
+},
+{
+"agent": 73,
+"topic": "pharmacodynamic interactions"
+},
+{
+"agent": 76,
+"topic": "bacterial plant disease"
+},
+{
+"agent": 78,
+"topic": "decellularization"
+},
+{
+"agent": 80,
+"topic": "vba"
+},
+{
+"agent": 82,
+"topic": "nutrient composition"
+},
+{
+"agent": 83,
+"topic": "standing dead trees"
+},
+{
+"agent": 85,
+"topic": "definition of globalization"
+},
+{
+"agent": 87,
+"topic": "asymmetric transfer hydrogenation"
+},
+{
+"agent": 89,
+"topic": "vitamin a metabolism"
+},
+{
+"agent": 91,
+"topic": "plant resources"
+},
+{
+"agent": 93,
+"topic": "positivity effect"
+},
+{
+"agent": 95,
+"topic": "cross-site scripting"
+},
+{
+"agent": 97,
+"topic": "anthracycline synthesis"
+},
+{
+"agent": 98,
+"topic": "civil and structural engineering research"
+},
+{
+"agent": 100,
+"topic": "xanthomonas oryzae pv. oryzae"
+},
+{
+"agent": 102,
+"topic": "electron wind force"
+},
+{
+"agent": 104,
+"topic": "3d model retrieval"
+},
+{
+"agent": 105,
+"topic": "handover"
+},
+{
+"agent": 107,
+"topic": "learning classifier systems"
+},
+{
+"agent": 109,
+"topic": "argumentation theory"
+},
+{
+"agent": 111,
+"topic": "enteric fever"
+},
+{
+"agent": 112,
+"topic": "diffusion-based molecular communication"
+},
+{
+"agent": 114,
+"topic": "military training simulation"
+},
+{
+"agent": 115,
+"topic": "bunch compression"
+},
+{
+"agent": 117,
+"topic": "polyethylene"
+},
+{
+"agent": 119,
+"topic": "dichotic listening"
+},
+{
+"agent": 120,
+"topic": "urban ecological security"
+},
+{
+"agent": 123,
+"topic": "student model"
+},
+{
+"agent": 125,
+"topic": "α-zirconium phosphate"
+},
+{
+"agent": 127,
+"topic": "fish nutrition"
+},
+{
+"agent": 128,
+"topic": "postal service"
+},
+{
+"agent": 130,
+"topic": "transition metal fluorides"
+},
+{
+"agent": 132,
+"topic": "aortic stiffness"
+},
+{
+"agent": 134,
+"topic": "association of zoos and aquariums"
+},
+{
+"agent": 135,
+"topic": "security council"
+},
+{
+"agent": 137,
+"topic": "medicare reimbursement"
+},
+{
+"agent": 139,
+"topic": "lightweight neural networks"
+},
+{
+"agent": 141,
+"topic": "dna sequence classification"
+},
+{
+"agent": 142,
+"topic": "acoustic emission"
+},
+{
+"agent": 144,
+"topic": "polymer self-assembly"
+},
+{
+"agent": 146,
+"topic": "fault-tolerant quantum computing"
+},
+{
+"agent": 148,
+"topic": "wormhole attack"
+},
+{
+"agent": 149,
+"topic": "bone tissue"
+},
+{
+"agent": 151,
+"topic": "soviet economic planning"
+},
+{
+"agent": 153,
+"topic": "montgomery multiplication"
+},
+{
+"agent": 155,
+"topic": "multicenter study"
+},
+{
+"agent": 156,
+"topic": "psychoanalytic diagnosis"
+},
+{
+"agent": 158,
+"topic": "implementation science"
+},
+{
+"agent": 160,
+"topic": "sustainability measurement"
+},
+{
+"agent": 162,
+"topic": "case-control study"
+},
+{
+"agent": 163,
+"topic": "blood-contacting devices"
+},
+{
+"agent": 165,
+"topic": "image processing and 3d reconstruction"
+},
+{
+"agent": 167,
+"topic": "computing curriculum"
+},
+{
+"agent": 169,
+"topic": "mars exploration program"
+},
+{
+"agent": 171,
+"topic": "default logic"
+},
+{
+"agent": 173,
+"topic": "second temple judaism"
+},
+{
+"agent": 175,
+"topic": "airborne bacteria"
+},
+{
+"agent": 177,
+"topic": "aethionema saxatile"
+},
+{
+"agent": 179,
+"topic": "workplace learning"
+},
+{
+"agent": 181,
+"topic": "blind image deblurring"
+},
+{
+"agent": 183,
+"topic": "early-stage financing"
+},
+{
+"agent": 185,
+"topic": "linear economy"
+},
+{
+"agent": 187,
+"topic": "anticancer drug design"
+},
+{
+"agent": 189,
+"topic": "bayesian clustering"
+},
+{
+"agent": 191,
+"topic": "quality of democracy"
+},
+{
+"agent": 193,
+"topic": "relationship marketing"
+},
+{
+"agent": 195,
+"topic": "science stereotypes"
+},
+{
+"agent": 197,
+"topic": "unforgiveness"
+},
+{
+"agent": 199,
+"topic": "6-aminopenicillanic acid"
+},
+{
+"agent": 201,
+"topic": "real-time rendering"
+},
+{
+"agent": 203,
+"topic": "[3]ferrocenophane"
+},
+{
+"agent": 205,
+"topic": "cloud radio access network"
+},
+{
+"agent": 207,
+"topic": "computer graphics and visualization techniques"
+},
+{
+"agent": 209,
+"topic": "detonation performance"
+},
+{
+"agent": 211,
+"topic": "cable fault detection"
+},
+{
+"agent": 213,
+"topic": "model aggregation"
+},
+{
+"agent": 215,
+"topic": "pvc membrane"
+},
+{
+"agent": 217,
+"topic": "surface mass balance"
+},
+{
+"agent": 219,
+"topic": "service-oriented architecture and web services"
+},
+{
+"agent": 221,
+"topic": "isoflurane"
+},
+{
+"agent": 223,
+"topic": "mongolic languages"
+},
+{
+"agent": 225,
+"topic": "aerogels"
+},
+{
+"agent": 227,
+"topic": "polymer-coated urea"
+},
+{
+"agent": 229,
+"topic": "hypercalcemia"
+},
+{
+"agent": 231,
+"topic": "2-acetyl-1-pyrroline"
+},
+{
+"agent": 234,
+"topic": "digital media forensic detection"
+},
+{
+"agent": 236,
+"topic": "gold catalysis"
+},
+{
+"agent": 238,
+"topic": "longwave radiation"
+},
+{
+"agent": 240,
+"topic": "latency reduction"
+},
+{
+"agent": 242,
+"topic": "chromium(iii) complexes"
+},
+{
+"agent": 244,
+"topic": "édouard glissant"
 }
 ]
 },
 "fields": {
 "humanities": {
 "done": 1073,
-"left": 21966,
-"in_progress": 0
+"left": 21957,
+"in_progress": 9
 },
 "medicine": {
 "done": 1832,
-"left": 18848,
-"in_progress": 1
+"left": 18841,
+"in_progress": 8
 },
 "biology": {
 "done": 2154,
-"left": 11489,
-"in_progress": 0
+"left": 11476,
+"in_progress": 13
 },
 "engineering": {
 "done": 2187,
-"left": 10388,
-"in_progress": 0
+"left": 10380,
+"in_progress": 8
 },
 "general": {
 "done": 1518,
-"left": 6078,
-"in_progress": 1
+"left": 6069,
+"in_progress": 10
 },
 "computer science": {
 "done": 2993,
-"left": 2725,
-"in_progress": 1
+"left": 2699,
+"in_progress": 27
 },
 "economics and finance": {
 "done": 1447,
-"left": 4242,
-"in_progress": 0
+"left": 4236,
+"in_progress": 6
 },
 "earth and space": {
 "done": 1075,
-"left": 4433,
-"in_progress": 0
+"left": 4428,
+"in_progress": 5
 },
 "materials science": {
 "done": 1094,
-"left": 2352,
-"in_progress": 0
+"left": 2346,
+"in_progress": 6
 },
 "chemistry": {
 "done": 2188,
-"left": 795,
-"in_progress": 1
+"left": 779,
+"in_progress": 17
 },
 "physics": {
 "done": 2845,
@@ -104,8 +604,8 @@
 },
 "psychology": {
 "done": 716,
-"left": 2099,
-"in_progress": 0
+"left": 2094,
+"in_progress": 5
 },
 "mathematics": {
 "done": 2164,
@@ -153,9 +653,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 120,
 "records": 5290,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:50"
 },
 {
@@ -165,9 +665,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 149,
 "records": 5843,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:50"
 },
 {
@@ -189,9 +689,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 73,
 "records": 3606,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:49"
 },
 {
@@ -213,9 +713,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 83,
 "records": 5050,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:49"
 },
 {
@@ -225,9 +725,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 57,
 "records": 4959,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:49"
 },
 {
@@ -237,9 +737,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 163,
 "records": 3729,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:49"
 },
 {
@@ -285,9 +785,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 91,
 "records": 1522,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:49"
 },
 {
@@ -297,9 +797,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 105,
 "records": 2900,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:49"
 },
 {
@@ -453,9 +953,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 76,
 "records": 2151,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:49"
 },
 {
@@ -765,9 +1265,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 112,
 "records": 2249,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:49"
 },
 {
@@ -1125,9 +1625,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 142,
 "records": 2230,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:48"
 },
 {
@@ -1209,9 +1709,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 128,
 "records": 1145,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:48"
 },
 {
@@ -1245,9 +1745,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 115,
 "records": 1283,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:48"
 },
 {
@@ -1259,7 +1759,7 @@
 "status": "done",
 "agent": null,
 "records": 478,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:48"
 },
 {
@@ -1269,9 +1769,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 135,
 "records": 1057,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:48"
 },
 {
@@ -1305,9 +1805,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 156,
 "records": 201,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:48"
 },
 {
@@ -1437,9 +1937,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 66,
 "records": 201,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:45"
 },
 {
@@ -1485,9 +1985,9 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": null,
+"agent": 98,
 "records": 1035,
-"images": 0,
+"images": 1,
 "completed": "2026-11-14T09:35:45"
 },
 {
@@ -1977,7 +2477,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 6,
+"agent": 5,
 "records": 3660,
 "images": 1,
 "completed": "2026-11-14T09:03:06"
@@ -2001,7 +2501,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 9,
+"agent": 7,
 "records": 3241,
 "images": 1,
 "completed": "2026-11-14T09:03:06"
@@ -2013,7 +2513,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 5,
+"agent": null,
 "records": 4688,
 "images": 1,
 "completed": "2026-11-14T09:03:06"
@@ -2313,7 +2813,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 7,
+"agent": null,
 "records": 167,
 "images": 1,
 "completed": "2026-11-14T09:03:06"
@@ -2757,7 +3257,7 @@
 "done": true,
 "check": "✓",
 "status": "done",
-"agent": 8,
+"agent": 6,
 "records": 166,
 "images": 1,
 "completed": "2026-11-14T09:03:03"
@@ -302564,8 +303064,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 9,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -303224,8 +303724,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 162,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -333356,8 +333856,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 169,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -336524,8 +337024,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 155,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -341444,8 +341944,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 16,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -344540,8 +345040,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 117,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -349004,8 +349504,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 48,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -351476,8 +351976,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 40,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -358808,8 +359308,8 @@
 "level": "research concept",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 52,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -367808,8 +368308,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 231,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -370136,8 +370636,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 177,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -403184,8 +403684,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 119,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -404456,8 +404956,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 141,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -405848,8 +406348,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 42,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -408860,8 +409360,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 111,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -414776,8 +415276,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 127,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -455660,8 +456160,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 56,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -456356,8 +456856,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 82,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -468464,8 +468964,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 227,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -489716,8 +490216,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 24,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -501164,8 +501664,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 89,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -503492,8 +503992,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 100,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -505304,8 +505804,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 199,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -505364,8 +505864,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 203,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -505400,8 +505900,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 59,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -505796,8 +506296,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 97,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -505832,8 +506332,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 187,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -506024,8 +506524,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 87,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -507104,8 +507604,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 242,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -507656,8 +508156,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 11,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -508880,8 +509380,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 236,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -509144,8 +509644,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 34,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -509480,8 +509980,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 32,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -511040,8 +511540,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 70,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -511664,8 +512164,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 44,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -511892,8 +512392,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 54,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -511976,8 +512476,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 215,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -513872,8 +514372,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 130,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -514832,8 +515332,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 104,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -515900,8 +516400,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 14,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -516632,8 +517132,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 30,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -517580,8 +518080,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 189,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -518084,8 +518584,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 181,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -519668,8 +520168,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 22,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -520208,8 +520708,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 207,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -520268,8 +520768,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 167,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -521144,8 +521644,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 95,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -522116,8 +522616,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 171,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -522620,8 +523120,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 234,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -525104,8 +525604,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 146,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -528020,8 +528520,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 165,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -530156,8 +530656,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 26,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -530252,8 +530752,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 240,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -530336,8 +530836,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 107,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -530576,8 +531076,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 139,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -532508,8 +533008,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 213,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -532760,8 +533260,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 153,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -533336,8 +533836,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 10,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -534380,8 +534880,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 13,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -538436,8 +538936,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 201,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -540968,8 +541468,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 219,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -542984,8 +543484,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 123,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -545372,8 +545872,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 80,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -546992,8 +547492,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 148,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -548936,8 +549436,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 175,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -551168,8 +551668,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 134,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -592904,8 +593404,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 217,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -593204,8 +593704,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 160,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -600320,8 +600820,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 125,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -606752,8 +607252,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 63,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -612932,8 +613432,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 85,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -614624,8 +615124,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 183,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -629900,8 +630400,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 185,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -631640,8 +632140,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 137,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -640484,8 +640984,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 193,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -664652,8 +665152,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 211,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -668384,8 +668884,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 205,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -678476,8 +678976,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 65,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -688388,8 +688888,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 18,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -714284,8 +714784,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 238,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -720464,8 +720964,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 114,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -738188,8 +738688,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 46,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -749900,8 +750400,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 20,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -791444,8 +791944,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 109,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -799544,8 +800044,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 36,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -898112,8 +898612,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 28,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -930308,8 +930808,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 223,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -969224,8 +969724,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 191,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -989048,8 +989548,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 173,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -999188,8 +999688,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 151,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1036868,8 +1037368,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 179,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1039400,8 +1039900,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 244,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1040180,8 +1040680,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 225,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1046180,8 +1046680,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 209,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1046372,8 +1046872,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 68,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1047536,8 +1048036,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 102,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1050692,8 +1051192,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 12,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1059884,8 +1060384,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 144,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1083836,8 +1084336,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 132,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1122164,8 +1122664,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 78,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1161668,8 +1162168,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 8,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1168808,8 +1169308,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 229,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1171772,8 +1172272,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 158,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1179044,8 +1179544,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 221,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1251272,8 +1251772,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 50,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1303568,8 +1304068,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 38,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1311056,8 +1311556,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 93,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1313984,8 +1314484,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 195,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1315052,8 +1315552,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 72,
 "records": 0,
 "images": 0,
 "completed": ""
@@ -1318052,8 +1318552,8 @@
 "level": "specialist",
 "done": false,
 "check": "",
-"status": "left",
-"agent": null,
+"status": "in progress",
+"agent": 197,
 "records": 0,
 "images": 0,
 "completed": ""
