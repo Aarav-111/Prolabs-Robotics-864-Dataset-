@@ -2,40 +2,40 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.4,
+  "disk_free_gb": 11.3,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794639785.799741,
-  "updated_iso": "2026-11-14T12:33:05",
-  "uptime_s": 155285,
+  "updated": 1794641124.1443388,
+  "updated_iso": "2026-11-14T12:55:24",
+  "uptime_s": 156623,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 243,
   "busy_by_kind": {
-    "web_images": 24,
     "text": 116,
-    "archive": 116
+    "archive": 104,
+    "web_images": 23
   },
-  "waiting": 220,
+  "waiting": 217,
   "processes": 1,
   "fields": {
     "mathematics": 926955,
-    "computer science": 693667,
-    "general": 556271,
+    "computer science": 710910,
+    "general": 560243,
     "physics": 502898,
-    "engineering": 401898,
-    "medicine": 292748,
-    "biology": 273343,
-    "chemistry": 252958,
-    "economics and finance": 169340,
-    "earth and space": 161816,
-    "materials science": 155148,
+    "engineering": 422032,
+    "medicine": 298503,
+    "biology": 277491,
+    "chemistry": 263097,
+    "economics and finance": 171211,
+    "earth and space": 162782,
+    "materials science": 162484,
     "statistics": 126739,
-    "psychology": 94008,
-    "humanities": 90536,
-    "programming": 38995,
+    "psychology": 94515,
+    "humanities": 93706,
+    "programming": 40466,
     "machine learning": 20661,
     "general knowledge": 8738,
     "robotics": 3515
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 83058,
-    "openlifescienceai/medmcqa": 22118,
-    "qiaojin/PubMedQA": 3030,
+    "stack exchange dump": 84644,
+    "openlifescienceai/medmcqa": 22736,
+    "qiaojin/PubMedQA": 3231,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4766117,
-    "originals": 26275,
-    "variants": 4739842,
-    "web_images": 4523,
+    "text": 4842829,
+    "originals": 26699,
+    "variants": 4816130,
+    "web_images": 4616,
     "synthetic_images": 14064,
-    "images": 18587,
+    "images": 18680,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2460264550,
-    "tasks_done": 84797,
+    "tokens": 2488937771,
+    "tasks_done": 86199,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 7092
+    "preference": 7293
   },
   "by_kind": {
-    "archive": 9854,
-    "text": 14859,
-    "web_images": 13633,
+    "archive": 10224,
+    "text": 15342,
+    "web_images": 14182,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2460264550,
-  "per_min": 6783.0,
+  "tokens": 2488937771,
+  "per_min": 3948.7,
   "topics": {
     "known": 109914,
-    "explored": 26336,
-    "queued": 83458,
+    "explored": 26819,
+    "queued": 82975,
     "space": 6594840,
     "next": [
       [
@@ -105,10 +105,6 @@
       [
         "semantics",
         "humanities"
-      ],
-      [
-        "neurology",
-        "medicine"
       ],
       [
         "radiology",
@@ -145,118 +141,122 @@
       [
         "meteorology",
         "earth and space"
+      ],
+      [
+        "antennas",
+        "engineering"
       ]
     ],
     "recent": [
       [
-        "enhancer",
-        "",
-        6808
+        "bug detection",
+        "computer science",
+        6383
       ],
       [
-        "hardware trojans",
-        "computer science",
-        3860
+        "ground vibration",
+        "engineering",
+        1319
       ],
       [
-        "llava",
-        "computer science",
+        "solarization",
+        "biology",
         0
       ],
       [
-        "neon",
-        "biology",
-        3833
+        "peripheral intravenous catheters",
+        "medicine",
+        0
       ],
       [
-        "case-based reasoning",
-        "computer science",
-        3356
+        "vulcanized rubber",
+        "materials science",
+        0
       ],
       [
-        "l1-norm minimization",
-        "computer science",
-        3479
+        "planetary atmospheres",
+        "earth and space",
+        0
       ],
       [
-        "east coast",
-        "",
-        4684
+        "ordered mesoporous materials",
+        "materials science",
+        0
       ],
       [
-        "chinese stock market",
+        "standard gibbs energy of formation",
+        "chemistry",
+        0
+      ],
+      [
+        "building moisture",
+        "engineering",
+        0
+      ],
+      [
+        "agricultural economics and policies",
         "economics and finance",
         0
       ],
       [
-        "passive rfid",
-        "computer science",
-        1804
-      ],
-      [
-        "biota",
-        "",
+        "tumor origin identification",
+        "medicine",
         0
       ],
       [
-        "enterprise management and information systems",
-        "economics and finance",
-        1287
-      ],
-      [
-        "congenital blindness",
-        "biology",
-        428
+        "adsorption geometry",
+        "chemistry",
+        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794639785.7975821,
-    "cpu": 11.8,
+    "time": 1794641124.143418,
+    "cpu": 26.7,
     "cpu_cores": [
+      25.7,
+      23.1,
       18.5,
-      13.1,
-      12.1,
-      8.5,
-      11.9,
-      25.0,
-      4.0,
-      1.8
+      16.6,
+      41.3,
+      44.9,
+      28.7,
+      15.1
     ],
-    "mem": 77.2,
-    "mem_used_gb": 3.03,
+    "mem": 77.5,
+    "mem_used_gb": 3.01,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 414.4,
+    "proc_mem_mb": 237.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 25261746176,
-    "net_tx": 24401655808,
-    "down_kbps": 30.8,
-    "up_kbps": 16.5,
-    "disk_free_gb": 10.4,
+    "net_rx": 25574660096,
+    "net_tx": 24893572096,
+    "down_kbps": 720.2,
+    "up_kbps": 414.3,
+    "disk_free_gb": 11.3,
     "load": [
-      2.33,
-      2.7,
-      2.94
+      3.17,
+      2.51,
+      2.51
     ],
     "cores": 8
   },
-  "disk_mb": 346.4,
+  "disk_mb": 366.2,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794639633.4502,
-    "next_sync_s": 282,
-    "commits": 138
+    "last_push": 1794639823.292462,
+    "next_sync_s": 158,
+    "commits": 139
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "iot challenges",
-    "problem": "Shamrock starting for New York Medium includes graphite.; Heightened with white.; Signed by artist.",
-    "solution": "Public domain",
-    "source": "wikimedia commons"
+    "type": "archive Q&A",
+    "topic": "stack exchange dump",
+    "problem": "User: Quick one: I have a `createEditText` function that creates an `EditText` and adds it to the view. My issue is that once it's added to the view, the user has to tap the `EditText` in order for the keyboard to be called and editing to work. What I'm trying to do is to have it so that once the `EditText` is created, the user is automatically taken to the edit mode. In IOS programming, there's\u2026",
+    "solution": "Assistant: Easy - let's go. Unfortunately it is not enough to call only `EditText#requestFocus`. In addition to this you also have to call the `InputMethodManager#showSoftInput`. Following utility method should work: ``` fun openSoftKeyboard(context: Context, view: View) { view.requestFocus() // open the soft keyboard val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as\u2026",
+    "source": "stackexchange"
   }
 }
