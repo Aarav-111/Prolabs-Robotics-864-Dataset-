@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 13.0,
+  "disk_free_gb": 13.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794655353.407246,
-  "updated_iso": "2026-11-14T16:52:33",
-  "uptime_s": 170853,
+  "updated": 1794655384.428388,
+  "updated_iso": "2026-11-14T16:53:04",
+  "uptime_s": 170884,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "web_images": 24
   },
-  "waiting": 246,
+  "waiting": 229,
   "processes": 1,
   "fields": {
     "computer science": 1041027,
@@ -75,15 +75,15 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2820626338,
-    "tasks_done": 97185,
+    "tasks_done": 97193,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 9610
   },
   "by_kind": {
     "archive": 13593,
-    "text": 18948,
-    "web_images": 18193,
+    "text": 18953,
+    "web_images": 18196,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2820626338,
-  "per_min": 4548.0,
+  "per_min": 4546.8,
   "topics": {
     "known": 109914,
-    "explored": 30425,
-    "queued": 79369,
+    "explored": 30430,
+    "queued": 79364,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,31 @@
     ],
     "recent": [
       [
+        "1,2,3-thiadiazoles",
+        "chemistry",
+        0
+      ],
+      [
+        "blood banking",
+        "medicine",
+        0
+      ],
+      [
+        "minor salivary glands",
+        "medicine",
+        0
+      ],
+      [
+        "precipitation chemistry",
+        "earth and space",
+        0
+      ],
+      [
+        "free drug fraction",
+        "biology",
+        0
+      ],
+      [
         "online mental health communities",
         "psychology",
         4049
@@ -182,75 +207,50 @@
         "topsoil",
         "",
         0
-      ],
-      [
-        "ion-selective membranes",
-        "chemistry",
-        0
-      ],
-      [
-        "multidisciplinary team",
-        "",
-        0
-      ],
-      [
-        "color-emotion associations",
-        "psychology",
-        677
-      ],
-      [
-        "seismology and earthquake studies",
-        "computer science",
-        0
-      ],
-      [
-        "group b",
-        "",
-        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794655353.405081,
-    "cpu": 32.3,
+    "time": 1794655384.427149,
+    "cpu": 45.1,
     "cpu_cores": [
-      45.5,
-      43.5,
-      38.1,
-      32.7,
-      33.0,
-      37.2,
-      19.3,
-      9.9
+      55.4,
+      55.0,
+      51.1,
+      46.1,
+      54.0,
+      48.9,
+      34.3,
+      16.0
     ],
-    "mem": 81.7,
-    "mem_used_gb": 2.65,
+    "mem": 81.5,
+    "mem_used_gb": 2.67,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 198.5,
+    "proc_mem_mb": 99.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 29051235328,
-    "net_tx": 28901399552,
-    "down_kbps": 51.2,
-    "up_kbps": 33.4,
-    "disk_free_gb": 13.0,
+    "net_rx": 29056897024,
+    "net_tx": 28909106176,
+    "down_kbps": 153.1,
+    "up_kbps": 106.4,
+    "disk_free_gb": 13.1,
     "load": [
-      3.89,
-      3.61,
-      3.42
+      3.43,
+      3.52,
+      3.39
     ],
     "cores": 8
   },
-  "disk_mb": 683.1,
+  "disk_mb": 683.9,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794655304.745246,
-    "next_sync_s": 186,
-    "commits": 168
+    "last_push": 1794655382.56383,
+    "next_sync_s": 155,
+    "commits": 169
   },
   "last_sample": {
     "type": "web image",
