@@ -2,39 +2,39 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.5,
+  "disk_free_gb": 10.4,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794629505.7310789,
-  "updated_iso": "2026-11-14T09:41:46",
-  "uptime_s": 145005,
+  "updated": 1794629795.370989,
+  "updated_iso": "2026-11-14T09:46:35",
+  "uptime_s": 145295,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 252,
+  "in_flight": 256,
   "busy_by_kind": {
-    "text": 112,
     "web_images": 24,
+    "text": 116,
     "archive": 116
   },
-  "waiting": 208,
+  "waiting": 207,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
     "computer science": 564210,
     "physics": 502898,
-    "general": 430887,
+    "general": 432432,
     "engineering": 327283,
-    "medicine": 257176,
-    "biology": 231829,
-    "chemistry": 210461,
-    "economics and finance": 131929,
+    "medicine": 262835,
+    "biology": 234497,
+    "chemistry": 212369,
+    "economics and finance": 133041,
+    "earth and space": 126777,
     "statistics": 126739,
-    "earth and space": 122677,
     "materials science": 108184,
-    "psychology": 78495,
-    "humanities": 76365,
+    "psychology": 79305,
+    "humanities": 78978,
     "programming": 31605,
     "machine learning": 20661,
     "general knowledge": 6600,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4153059,
-    "originals": 22960,
-    "variants": 4130099,
-    "web_images": 3580,
+    "text": 4173474,
+    "originals": 23090,
+    "variants": 4150384,
+    "web_images": 3623,
     "synthetic_images": 14064,
-    "images": 17644,
+    "images": 17687,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2194252286,
-    "tasks_done": 79954,
+    "tokens": 2202880571,
+    "tasks_done": 80172,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 5641
   },
   "by_kind": {
-    "archive": 8074,
-    "text": 13108,
-    "web_images": 12321,
+    "archive": 8190,
+    "text": 13185,
+    "web_images": 12346,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2194252286,
-  "per_min": 19.3,
+  "tokens": 2202880571,
+  "per_min": 4106.0,
   "topics": {
     "known": 109914,
-    "explored": 24586,
-    "queued": 85213,
+    "explored": 24662,
+    "queued": 85132,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "electro-optical systems",
-        "engineering",
-        0
-      ],
-      [
-        "volume visualization",
-        "computer science",
-        0
-      ],
-      [
-        "digital media forensic detection",
-        "computer science",
-        0
-      ],
-      [
-        "basque poetry",
+        "poetry criticism",
         "humanities",
         0
       ],
       [
-        "gold catalysis",
+        "supercritical water",
+        "engineering",
+        0
+      ],
+      [
+        "random microstructure",
+        "engineering",
+        0
+      ],
+      [
+        "fermi level",
+        "",
+        0
+      ],
+      [
+        "extraintestinal manifestations",
+        "medicine",
+        0
+      ],
+      [
+        "cyclopropenes",
         "chemistry",
         0
       ],
       [
-        "polymer-coated urea",
-        "biology",
+        "brucella: diagnosis, epidemiology, treatment",
+        "medicine",
         0
       ],
       [
-        "real-time rendering",
-        "computer science",
+        "diversity gain",
+        "engineering",
         0
       ],
       [
-        "unforgiveness",
+        "articulation disorders",
         "psychology",
         0
       ],
       [
-        "6-aminopenicillanic acid",
-        "chemistry",
+        "tortoises",
+        "earth and space",
         0
       ],
       [
-        "science stereotypes",
-        "psychology",
+        "security token",
+        "",
         0
       ],
       [
-        "relationship marketing",
-        "economics and finance",
-        0
-      ],
-      [
-        "fish nutrition",
-        "biology",
+        "monochloramine",
+        "earth and space",
         0
       ]
     ],
-    "in_progress": 115,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794629505.716747,
-    "cpu": 31.9,
+    "time": 1794629795.369846,
+    "cpu": 34.8,
     "cpu_cores": [
-      28.1,
-      24.3,
-      18.2,
-      15.8,
-      61.8,
-      51.1,
-      33.6,
-      22.5
+      54.7,
+      57.1,
+      51.0,
+      50.7,
+      23.1,
+      29.4,
+      9.3,
+      2.9
     ],
-    "mem": 72.2,
-    "mem_used_gb": 3.92,
+    "mem": 84.2,
+    "mem_used_gb": 2.5,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 129.4,
+    "proc_mem_mb": 85.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 22396496896,
-    "net_tx": 20356848640,
-    "down_kbps": 27.3,
-    "up_kbps": 260.0,
-    "disk_free_gb": 10.5,
+    "net_rx": 22727504896,
+    "net_tx": 20803030016,
+    "down_kbps": 396.3,
+    "up_kbps": 268.6,
+    "disk_free_gb": 10.4,
     "load": [
-      2.55,
-      3.27,
-      5.08
+      7.55,
+      4.97,
+      5.32
     ],
     "cores": 8
   },
-  "disk_mb": 178.2,
+  "disk_mb": 168.5,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794629415.8031108,
-    "next_sync_s": 247,
-    "commits": 111
+    "last_push": 1794629724.117985,
+    "next_sync_s": 259,
+    "commits": 114
   },
   "last_sample": {
     "type": "web image",
-    "topic": "rural health",
-    "problem": "U.S. Army Maj. Patricia Poindexter, Las Vegas native and officer in charge of civil military operation center, reviews a list of potential improvements to the Kama District Hospital, July 11. The list was provided by Dr. Ahmad (left), a doctor at the hospital. The hospital is currently under renovations, which include a 400-meter stone masonry boundary wall, two separate waiting areas for males and females, a parking lot and a three-kilowatt solar package. (Photo by U.S. Air Force Senior Airman Gul Crockett)",
-    "solution": "Public domain",
+    "topic": "aquatic environment",
+    "problem": "Covered passage beneath the laboratory block; the Food, Nutrition and Health Building courtyard is visible through the opening. Aquatic Ecosystems Research Laboratory (AERL), 2202 Main Mall, University of British Columbia, Vancouver. Designed by Patkau Architects, completed 2006.",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
