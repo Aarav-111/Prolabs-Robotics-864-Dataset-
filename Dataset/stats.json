@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.3,
+  "disk_free_gb": 10.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794622679.410669,
-  "updated_iso": "2026-11-14T07:47:59",
-  "uptime_s": 138179,
+  "updated": 1794622710.231041,
+  "updated_iso": "2026-11-14T07:48:48",
+  "uptime_s": 138209,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
     "text": 116,
-    "web_images": 24,
-    "archive": 116
+    "archive": 116,
+    "web_images": 24
   },
-  "waiting": 252,
+  "waiting": 232,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
@@ -35,7 +35,7 @@
     "materials science": 76514,
     "psychology": 71310,
     "humanities": 62280,
-    "programming": 27424,
+    "programming": 27635,
     "machine learning": 20661,
     "robotics": 3515,
     "general knowledge": 3476
@@ -60,38 +60,38 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 49254,
+    "stack exchange dump": 49465,
     "openlifescienceai/medmcqa": 13359,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3737449,
-    "originals": 20549,
-    "variants": 3716900,
-    "web_images": 3269,
+    "text": 3737660,
+    "originals": 20550,
+    "variants": 3717110,
+    "web_images": 3280,
     "synthetic_images": 14064,
-    "images": 17333,
+    "images": 17344,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2020863101,
-    "tasks_done": 78631,
+    "tokens": 2021024348,
+    "tasks_done": 78658,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 4976
+    "preference": 4991
   },
   "by_kind": {
-    "archive": 7520,
+    "archive": 7535,
     "text": 12555,
-    "web_images": 12105,
+    "web_images": 12117,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2020863101,
-  "per_min": 918.5,
+  "tokens": 2021024348,
+  "per_min": 528.8,
   "topics": {
     "known": 109914,
     "explored": 24032,
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794622679.40959,
-    "cpu": 35.5,
+    "time": 1794622710.210034,
+    "cpu": 62.4,
     "cpu_cores": [
-      41.3,
-      37.9,
-      33.5,
-      31.9,
-      54.4,
-      41.6,
-      27.4,
-      16.2
+      53.1,
+      50.6,
+      46.6,
+      45.1,
+      83.8,
+      79.6,
+      69.5,
+      70.9
     ],
-    "mem": 87.2,
-    "mem_used_gb": 3.47,
+    "mem": 84.6,
+    "mem_used_gb": 2.68,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 259.4,
+    "proc_mem_mb": 92.0,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 19634150400,
-    "net_tx": 17082592256,
-    "down_kbps": 1645.6,
-    "up_kbps": 869.4,
-    "disk_free_gb": 11.4,
+    "net_rx": 19655943168,
+    "net_tx": 17098160128,
+    "down_kbps": 203.0,
+    "up_kbps": 115.8,
+    "disk_free_gb": 10.0,
     "load": [
-      7.99,
-      5.88,
-      5.75
+      7.39,
+      5.94,
+      5.78
     ],
     "cores": 8
   },
   "disk_mb": 100.0,
   "github": {
-    "state": "error",
-    "error": "No internet connection right now - it retries by itself, your data is kept here",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794555526.390932,
-    "next_sync_s": 281,
-    "commits": 95
+    "last_push": 1794622707.935494,
+    "next_sync_s": 250,
+    "commits": 96
   },
   "last_sample": {
-    "type": "archive Q&A",
-    "topic": "stack exchange dump",
-    "problem": "I'm doing some socket programming lately and starting to code in C++. As the program I'm trying to write will have several components that have to communicate via sockets I decided to wrap up socket communication in a class. Since there are several errors that can happen I decided to create a class for socket exceptions, I defined it like this: ``` class SocketException: public std::exception {\u2026",
-    "solution": "You are returning a pointer to a variable that is local to your `what` function, thus leaving the caller with a dangling pointer: ``` const char * SocketException::what() const throw() { std::stringstream stream; // this stringstream will die on exiting this scope stream << msg + \" Error number: \"; stream << WSAGetLastError(); return stream.str().c_str(); } ``` That is undefined behaviour. It\u2026",
-    "source": "stackexchange"
+    "type": "web image",
+    "topic": "pearl formation",
+    "problem": "Pearl Harbor, Hawaii (Aug. 18, 2006) - Chief petty officer (CPO) selectees stationed in Pearl Harbor, run in formation during the initial phase of CPO training. The newly selected, but not yet promoted CPO selects will endure six weeks of arduous physical fitness and team building exercises as they begin their transition from first class petty officers to Navy chiefs. U.S. Navy photo by Mass Communication Specialist 1st Class Dennis C. Cantrell (RELEASED)",
+    "solution": "Public domain",
+    "source": "wikimedia commons"
   }
 }
