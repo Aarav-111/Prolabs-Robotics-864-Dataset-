@@ -7,31 +7,31 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794639577.759347,
-  "updated_iso": "2026-11-14T12:29:40",
-  "uptime_s": 155077,
+  "updated": 1794639785.799741,
+  "updated_iso": "2026-11-14T12:33:05",
+  "uptime_s": 155285,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 254,
+  "in_flight": 256,
   "busy_by_kind": {
-    "text": 114,
     "web_images": 24,
+    "text": 116,
     "archive": 116
   },
-  "waiting": 240,
+  "waiting": 220,
   "processes": 1,
   "fields": {
     "mathematics": 926955,
-    "computer science": 681168,
-    "general": 544779,
+    "computer science": 693667,
+    "general": 556271,
     "physics": 502898,
-    "engineering": 401680,
-    "medicine": 292357,
-    "biology": 267365,
+    "engineering": 401898,
+    "medicine": 292748,
+    "biology": 273343,
     "chemistry": 252958,
-    "economics and finance": 167852,
+    "economics and finance": 169340,
     "earth and space": 161816,
-    "materials science": 153354,
+    "materials science": 155148,
     "statistics": 126739,
     "psychology": 94008,
     "humanities": 90536,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4732257,
-    "originals": 26088,
-    "variants": 4706169,
-    "web_images": 4501,
+    "text": 4766117,
+    "originals": 26275,
+    "variants": 4739842,
+    "web_images": 4523,
     "synthetic_images": 14064,
-    "images": 18565,
+    "images": 18587,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2447763910,
-    "tasks_done": 84762,
+    "tokens": 2460264550,
+    "tasks_done": 84797,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 7092
   },
   "by_kind": {
     "archive": 9854,
-    "text": 14830,
-    "web_images": 13627,
+    "text": 14859,
+    "web_images": 13633,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2447763910,
-  "per_min": 4471.0,
+  "tokens": 2460264550,
+  "per_min": 6783.0,
   "topics": {
     "known": 109914,
-    "explored": 26307,
-    "queued": 83489,
+    "explored": 26336,
+    "queued": 83458,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "chaetotaxy",
-        "biology",
-        0
+        "enhancer",
+        "",
+        6808
       ],
       [
-        "peak-to-average power ratio reduction",
-        "engineering",
-        0
+        "hardware trojans",
+        "computer science",
+        3860
       ],
       [
-        "fluorine in organic chemistry",
-        "chemistry",
-        0
-      ],
-      [
-        "women in geography",
-        "humanities",
-        0
-      ],
-      [
-        "hygrothermal properties of building materials",
-        "engineering",
-        0
-      ],
-      [
-        "keratin intermediate filaments",
-        "biology",
-        0
-      ],
-      [
-        "nvh",
-        "engineering",
-        0
-      ],
-      [
-        "voicexml",
+        "llava",
         "computer science",
         0
       ],
       [
-        "anthropological method",
-        "humanities",
-        0
+        "neon",
+        "biology",
+        3833
       ],
       [
-        "stock market dynamics",
+        "case-based reasoning",
+        "computer science",
+        3356
+      ],
+      [
+        "l1-norm minimization",
+        "computer science",
+        3479
+      ],
+      [
+        "east coast",
+        "",
+        4684
+      ],
+      [
+        "chinese stock market",
         "economics and finance",
         0
       ],
       [
-        "coercion resistance",
+        "passive rfid",
         "computer science",
+        1804
+      ],
+      [
+        "biota",
+        "",
         0
       ],
       [
-        "cannabis policy",
-        "medicine",
-        0
+        "enterprise management and information systems",
+        "economics and finance",
+        1287
+      ],
+      [
+        "congenital blindness",
+        "biology",
+        428
       ]
     ],
-    "in_progress": 118,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794639577.737939,
-    "cpu": 27.4,
+    "time": 1794639785.7975821,
+    "cpu": 11.8,
     "cpu_cores": [
-      14.3,
-      11.8,
-      7.2,
-      5.6,
-      57.3,
-      50.6,
-      43.5,
-      29.0
+      18.5,
+      13.1,
+      12.1,
+      8.5,
+      11.9,
+      25.0,
+      4.0,
+      1.8
     ],
-    "mem": 77.1,
-    "mem_used_gb": 3.05,
+    "mem": 77.2,
+    "mem_used_gb": 3.03,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 352.6,
+    "proc_mem_mb": 414.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 25168932864,
-    "net_tx": 24257670144,
-    "down_kbps": 111.2,
-    "up_kbps": 103.2,
+    "net_rx": 25261746176,
+    "net_tx": 24401655808,
+    "down_kbps": 30.8,
+    "up_kbps": 16.5,
     "disk_free_gb": 10.4,
     "load": [
-      1.88,
-      2.85,
-      3.04
+      2.33,
+      2.7,
+      2.94
     ],
     "cores": 8
   },
-  "disk_mb": 340.8,
+  "disk_mb": 346.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794639557.092182,
-    "next_sync_s": 160,
-    "commits": 137
+    "last_push": 1794639633.4502,
+    "next_sync_s": 282,
+    "commits": 138
   },
   "last_sample": {
     "type": "web image",
-    "topic": "fuel cladding",
-    "problem": "INL's High-Performance Computing Center and Visualization Lab allows detailed modeling and simulation of nuclear fuel performance.",
-    "solution": "CC BY 2.0",
+    "topic": "iot challenges",
+    "problem": "Shamrock starting for New York Medium includes graphite.; Heightened with white.; Signed by artist.",
+    "solution": "Public domain",
     "source": "wikimedia commons"
   }
 }
