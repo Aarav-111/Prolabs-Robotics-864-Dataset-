@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.6,
+  "disk_free_gb": 10.4,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794638180.812945,
-  "updated_iso": "2026-11-14T12:06:20",
-  "uptime_s": 153680,
+  "updated": 1794638418.168551,
+  "updated_iso": "2026-11-14T12:10:18",
+  "uptime_s": 153917,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,24 +18,24 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 0,
+  "waiting": 242,
   "processes": 1,
   "fields": {
-    "mathematics": 926585,
-    "computer science": 648669,
+    "mathematics": 926955,
+    "computer science": 651476,
     "physics": 502898,
-    "general": 485429,
-    "engineering": 386298,
-    "medicine": 280992,
-    "biology": 259323,
-    "chemistry": 237451,
-    "economics and finance": 160310,
-    "earth and space": 151696,
-    "materials science": 147145,
+    "general": 491878,
+    "engineering": 390635,
+    "medicine": 283548,
+    "biology": 264152,
+    "chemistry": 242214,
+    "economics and finance": 161212,
+    "earth and space": 157433,
+    "materials science": 148800,
     "statistics": 126739,
-    "psychology": 90050,
-    "humanities": 86694,
-    "programming": 35596,
+    "psychology": 90966,
+    "humanities": 87074,
+    "programming": 37853,
     "machine learning": 20661,
     "general knowledge": 8001,
     "robotics": 3515
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 76221,
-    "openlifescienceai/medmcqa": 21096,
+    "stack exchange dump": 80240,
+    "openlifescienceai/medmcqa": 22118,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4553935,
-    "originals": 25163,
-    "variants": 4528772,
-    "web_images": 4279,
+    "text": 4591893,
+    "originals": 25363,
+    "variants": 4566530,
+    "web_images": 4314,
     "synthetic_images": 14064,
-    "images": 18343,
+    "images": 18378,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2353896311,
-    "tasks_done": 83769,
+    "tokens": 2368126820,
+    "tasks_done": 84052,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 6693
+    "preference": 6971
   },
   "by_kind": {
-    "archive": 9421,
-    "text": 14387,
-    "web_images": 13510,
+    "archive": 9562,
+    "text": 14502,
+    "web_images": 13537,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2353896311,
-  "per_min": 0.0,
+  "tokens": 2368126820,
+  "per_min": 9494.8,
   "topics": {
     "known": 109914,
-    "explored": 25864,
-    "queued": 83930,
+    "explored": 25979,
+    "queued": 83815,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "structural engineering and vibration analysis",
+        "sea ice concentration",
+        "earth and space",
+        4307
+      ],
+      [
+        "experimental aesthetics",
+        "biology",
+        3843
+      ],
+      [
+        "sub-pixel edge detection",
+        "computer science",
+        1467
+      ],
+      [
+        "ant colony optimization algorithms",
+        "",
+        3622
+      ],
+      [
+        "air traffic control",
         "engineering",
+        2566
+      ],
+      [
+        "binary diffusion",
+        "chemistry",
+        3259
+      ],
+      [
+        "indentation",
+        "",
+        1865
+      ],
+      [
+        "gneiss",
+        "",
         0
       ],
       [
-        "indian copyright law",
+        "unsw-nb15",
         "computer science",
         0
       ],
       [
-        "bod removal",
-        "earth and space",
+        "lubricant",
+        "",
         0
       ],
       [
-        "reef-building corals",
-        "earth and space",
+        "antibiotic resistance",
+        "",
         0
       ],
       [
-        "gradient elasticity",
-        "engineering",
-        2029
-      ],
-      [
-        "brats dataset",
-        "computer science",
-        0
-      ],
-      [
-        "attachment avoidance",
-        "psychology",
-        0
-      ],
-      [
-        "cesium immobilization",
-        "materials science",
-        0
-      ],
-      [
-        "process mining",
-        "economics and finance",
-        0
-      ],
-      [
-        "community health screening",
-        "medicine",
-        0
-      ],
-      [
-        "physarum",
-        "biology",
-        0
-      ],
-      [
-        "red pigment production",
-        "biology",
+        "atropisomerism",
+        "chemistry",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794638180.804338,
-    "cpu": 86.0,
+    "time": 1794638418.167448,
+    "cpu": 23.4,
     "cpu_cores": [
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      83.2,
-      72.8,
-      70.0,
-      60.7
+      25.4,
+      21.6,
+      16.7,
+      14.0,
+      41.0,
+      33.5,
+      24.7,
+      10.5
     ],
-    "mem": 78.3,
+    "mem": 78.0,
     "mem_used_gb": 2.95,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 127.0,
+    "proc_mem_mb": 402.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 24489062400,
-    "net_tx": 23253295104,
-    "down_kbps": 38.5,
-    "up_kbps": 38.9,
-    "disk_free_gb": 10.6,
+    "net_rx": 24590374912,
+    "net_tx": 23402570752,
+    "down_kbps": 1149.8,
+    "up_kbps": 1234.1,
+    "disk_free_gb": 10.4,
     "load": [
-      3.52,
-      2.84,
-      3.07
+      2.9,
+      3.01,
+      3.1
     ],
     "cores": 8
   },
-  "disk_mb": 282.8,
+  "disk_mb": 289.1,
   "github": {
-    "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794637174.244618,
-    "next_sync_s": 297,
-    "commits": 130
+    "last_push": 1794638416.986092,
+    "next_sync_s": 59,
+    "commits": 131
   },
   "last_sample": {
-    "type": "text",
-    "topic": "gradient elasticity",
-    "problem": "The Boussinesq Problem in Dipolar Gradient Elasticity The three-dimensional axisymmetric Boussinesq problem of an isotropic half-space subjected to a concentrated normal quasi-static load is studied within the framework of linear dipolar gradient elasticity. Our main concern is to determine possible deviations from the predictions of classical linear elastostatics when a more refined theory is\u2026",
-    "solution": "The use of the theory of gradient elasticity is intended here to model the response of materials with microstructure in a manner that the classical theory cannot afford. A linear version of this theory results by considering a linear isotropic expression for the strain-energy density that depends on strain-gradient terms, in addition to the standard strain terms appearing in classical\u2026",
-    "source": "arxiv"
+    "type": "web image",
+    "topic": "child and family policy",
+    "problem": "\"For the sake of the country's prosperity and families' happiness, please implement family planning --declared by Tangshan Township People's Government (\u4e3a\u4e86\u56fd\u5bb6\u5bcc\u5f3a\u5bb6\u5ead\u5e78\u798f\u8bf7\u60a8\u5b9e\u884c\u8ba1\u5212\u751f\u80b2\u2014\u2014\u5858\u5c71\u4e61\u4eba\u6c11\u653f\u5e9c\u5ba3)\" Sign put up by the local government. Found in the entry to the alley slums in (Tangshan Village (\u5858\u5c71\u4e61), De'an County, Jiujiang, Jiangxi Province), China. Pregnant women from these rural area are more likely to hide from the government officials enforcing the one-child policy.",
+    "solution": "CC BY 2.0",
+    "source": "wikimedia commons"
   }
 }
