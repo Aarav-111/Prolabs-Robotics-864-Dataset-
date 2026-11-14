@@ -2,40 +2,40 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.4,
+  "disk_free_gb": 10.9,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794630925.628105,
-  "updated_iso": "2026-11-14T10:05:27",
-  "uptime_s": 146425,
+  "updated": 1794633668.6759732,
+  "updated_iso": "2026-11-14T10:51:08",
+  "uptime_s": 149168,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 248,
+  "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 24,
-    "archive": 108,
-    "text": 116
+    "text": 116,
+    "archive": 116,
+    "web_images": 24
   },
-  "waiting": 81,
+  "waiting": 97,
   "processes": 1,
   "fields": {
-    "mathematics": 925662,
+    "mathematics": 926585,
     "computer science": 567223,
     "physics": 502898,
     "general": 436311,
-    "engineering": 332781,
-    "medicine": 266457,
+    "engineering": 333371,
+    "medicine": 268643,
     "biology": 234497,
-    "chemistry": 212369,
-    "economics and finance": 133041,
+    "chemistry": 215096,
+    "economics and finance": 135507,
     "earth and space": 126777,
     "statistics": 126739,
-    "materials science": 108184,
+    "materials science": 120598,
     "psychology": 79305,
     "humanities": 78978,
-    "programming": 31800,
+    "programming": 32787,
     "machine learning": 20661,
     "general knowledge": 6600,
     "robotics": 3515
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 63237,
-    "openlifescienceai/medmcqa": 15693,
+    "stack exchange dump": 67874,
+    "openlifescienceai/medmcqa": 17879,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4189681,
-    "originals": 23187,
-    "variants": 4166494,
-    "web_images": 3801,
+    "text": 4211974,
+    "originals": 23215,
+    "variants": 4188759,
+    "web_images": 3807,
     "synthetic_images": 14064,
-    "images": 17865,
+    "images": 17871,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2209590841,
-    "tasks_done": 81262,
+    "tokens": 2220140669,
+    "tasks_done": 81504,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 5800
+    "preference": 6066
   },
   "by_kind": {
-    "archive": 8421,
-    "text": 13522,
-    "web_images": 12877,
+    "archive": 8531,
+    "text": 13621,
+    "web_images": 12901,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2209590841,
-  "per_min": 1.4,
+  "tokens": 2220140669,
+  "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 25000,
-    "queued": 84795,
+    "explored": 25098,
+    "queued": 84696,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "clinical psychology training",
-        "psychology",
-        0
-      ],
-      [
-        "recycled carbon fiber",
-        "engineering",
-        0
-      ],
-      [
-        "catecholamine-secreting tumors",
-        "medicine",
-        0
-      ],
-      [
-        "iq samples",
+        "computer chess",
         "computer science",
         0
       ],
       [
-        "organization development",
-        "",
-        0
-      ],
-      [
-        "sba-16",
+        "quantum sensing",
         "materials science",
+        12414
+      ],
+      [
+        "cloud data sharing",
+        "computer science",
         0
       ],
       [
-        "reconfigurable assembly systems",
+        "analytical mechanics",
         "engineering",
         0
       ],
       [
-        "sorbent",
-        "",
-        0
-      ],
-      [
-        "furfuryl alcohol",
+        "ship production",
         "engineering",
         0
       ],
       [
-        "chronic mental illness",
-        "psychology",
+        "atropisomers",
+        "chemistry",
         0
       ],
       [
-        "nucleos(t)ide analogues",
+        "bis(indolyl)methanes",
+        "chemistry",
+        0
+      ],
+      [
+        "spinal cord anatomy",
         "medicine",
         0
       ],
       [
-        "mems packaging",
-        "engineering",
+        "forest pests",
+        "earth and space",
+        0
+      ],
+      [
+        "ray tracing (physics)",
+        "",
+        0
+      ],
+      [
+        "tax knowledge",
+        "economics and finance",
+        0
+      ],
+      [
+        "magnetotail",
+        "earth and space",
         0
       ]
     ],
-    "in_progress": 119,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794630925.593911,
-    "cpu": 50.1,
+    "time": 1794633668.6742249,
+    "cpu": 16.8,
     "cpu_cores": [
-      46.8,
-      44.1,
-      40.4,
-      36.6,
-      65.8,
-      59.7,
-      59.0,
-      48.9
+      23.6,
+      19.7,
+      15.5,
+      13.6,
+      23.9,
+      25.8,
+      9.0,
+      4.0
     ],
-    "mem": 83.3,
-    "mem_used_gb": 3.67,
+    "mem": 73.4,
+    "mem_used_gb": 3.34,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 183.7,
+    "proc_mem_mb": 340.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 23168633856,
-    "net_tx": 21470868480,
-    "down_kbps": 836.9,
-    "up_kbps": 841.8,
-    "disk_free_gb": 10.4,
+    "net_rx": 23220507648,
+    "net_tx": 21528388608,
+    "down_kbps": 194.5,
+    "up_kbps": 125.5,
+    "disk_free_gb": 10.9,
     "load": [
-      4.72,
-      5.84,
-      6.46
+      7.34,
+      9.5,
+      8.15
     ],
     "cores": 8
   },
-  "disk_mb": 193.6,
+  "disk_mb": 196.0,
   "github": {
-    "state": "error",
-    "error": "RuntimeError: fatal: unable to access 'https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git/': Recv failure: Connection reset by peer",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794629825.196645,
-    "next_sync_s": 295,
-    "commits": 115
+    "last_push": 1794632663.623105,
+    "next_sync_s": 286,
+    "commits": 116
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "remote-sensing image classification",
-    "problem": "The map shows the results of a retrospective analysis of the transformation of shallow habitats of the Chernobyl NPP cooling reservoir caused by the its descent (2014-2020) and a graph of corresponding changes in the floristic and coenotic structure of the phytal. After the shutdown of the last power unit, the reservoir lost its functional purpose. At the end of 2014, the pumping of water from the Pripyat River stopped, the water level began to decrease, and in the summer of 2018 the area of the cooling reservoir was reduced by half. This visualization is based on the analysis and\u2026",
-    "solution": "CC BY 4.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "quantum sensing",
+    "problem": "Q: Find the explanation for the observed quantization of conductance in the integer Hall effect and fractional Hall effect systems, and how does the quantization of conductance depend on the magnetic field strength.",
+    "solution": "A: The integer and fractional quantum Hall effects are phenomena observed in two-dimensional electron systems when they are subjected to a strong magnetic field. These effects manifest as quantized values of the Hall conductance, which is a measure of the current flow in response to an applied voltage. In the integer quantum Hall effect (IQHE), the Hall conductance is quantized in integer\u2026",
+    "source": "huggingface"
   }
 }
