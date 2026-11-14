@@ -2,42 +2,42 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 6.8,
+  "disk_free_gb": 6.7,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794663613.2877162,
-  "updated_iso": "2026-11-14T19:10:13",
-  "uptime_s": 179112,
+  "updated": 1794663900.079062,
+  "updated_iso": "2026-11-14T19:15:00",
+  "uptime_s": 179399,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 24,
+    "text": 116,
     "archive": 116,
-    "text": 116
+    "web_images": 24
   },
-  "waiting": 146,
+  "waiting": 245,
   "processes": 1,
   "fields": {
-    "computer science": 1134042,
+    "computer science": 1136525,
     "mathematics": 928130,
     "general": 716318,
     "engineering": 567099,
     "physics": 502898,
-    "medicine": 358846,
+    "medicine": 359917,
     "chemistry": 315561,
-    "biology": 313424,
+    "biology": 313591,
     "economics and finance": 234393,
-    "earth and space": 220780,
+    "earth and space": 221774,
     "materials science": 205462,
-    "humanities": 136769,
+    "humanities": 137622,
     "psychology": 136195,
     "statistics": 126739,
-    "programming": 51483,
+    "programming": 51833,
     "machine learning": 20661,
-    "general knowledge": 13543,
+    "general knowledge": 13744,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 115344,
-    "openlifescienceai/medmcqa": 36141,
-    "qiaojin/PubMedQA": 5725,
+    "stack exchange dump": 115895,
+    "openlifescienceai/medmcqa": 37043,
+    "qiaojin/PubMedQA": 5894,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5981741,
-    "originals": 32728,
-    "variants": 5949013,
-    "web_images": 6957,
+    "text": 5987860,
+    "originals": 32755,
+    "variants": 5955105,
+    "web_images": 6989,
     "synthetic_images": 14064,
-    "images": 21021,
+    "images": 21053,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2922329518,
-    "tasks_done": 103462,
+    "tokens": 2924425873,
+    "tasks_done": 103735,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 10102
+    "preference": 10235
   },
   "by_kind": {
-    "archive": 15169,
-    "text": 20963,
-    "web_images": 20879,
+    "archive": 15276,
+    "text": 21049,
+    "web_images": 20959,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2922329518,
-  "per_min": 1088.0,
+  "tokens": 2924425873,
+  "per_min": 1290.5,
   "topics": {
     "known": 109914,
-    "explored": 32440,
-    "queued": 77354,
+    "explored": 32526,
+    "queued": 77268,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "model-based testing",
+        "spatio-temporal queries",
         "computer science",
         0
       ],
       [
-        "bearing fault detection",
-        "engineering",
-        0
-      ],
-      [
-        "rhizobial inoculants",
+        "hormone residues",
         "biology",
         0
       ],
       [
-        "toronto alexithymia scale",
-        "medicine",
-        0
-      ],
-      [
-        "eavesdropper",
-        "engineering",
-        0
-      ],
-      [
-        "rice breeding",
-        "biology",
-        0
-      ],
-      [
-        "mine reclamation",
+        "catchment hydrology",
         "earth and space",
         0
       ],
       [
-        "enterprise rehabilitation",
-        "economics and finance",
+        "corrosion mechanism",
+        "materials science",
         0
       ],
       [
-        "campus network security",
+        "legislature",
+        "",
+        0
+      ],
+      [
+        "new jersey coastal zone",
+        "earth and space",
+        0
+      ],
+      [
+        "pairwise key establishment",
         "computer science",
         0
       ],
       [
-        "school environmental management",
-        "earth and space",
+        "fgfr2b",
+        "biology",
         0
       ],
       [
-        "chemokine gradients",
+        "central nervous system development",
+        "biology",
+        0
+      ],
+      [
+        "alk mutations",
         "medicine",
         0
       ],
       [
-        "speech outcomes",
-        "medicine",
-        2898
+        "capacitive power transfer",
+        "engineering",
+        0
+      ],
+      [
+        "intragenerational mobility",
+        "humanities",
+        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794663613.286614,
-    "cpu": 38.8,
+    "time": 1794663900.077678,
+    "cpu": 51.0,
     "cpu_cores": [
-      55.6,
-      52.0,
-      38.7,
+      73.6,
+      72.1,
+      66.8,
+      64.4,
       39.3,
-      42.8,
-      42.4,
-      24.1,
-      15.7
+      40.6,
+      28.3,
+      23.3
     ],
-    "mem": 82.4,
-    "mem_used_gb": 2.64,
+    "mem": 80.9,
+    "mem_used_gb": 2.71,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 99.3,
+    "proc_mem_mb": 204.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32521415680,
-    "net_tx": 32083550208,
-    "down_kbps": 31.1,
-    "up_kbps": 47.7,
+    "net_rx": 32662464512,
+    "net_tx": 32291333120,
+    "down_kbps": 804.0,
+    "up_kbps": 1084.4,
     "disk_free_gb": 6.7,
     "load": [
-      5.57,
-      3.8,
-      3.46
+      2.79,
+      3.37,
+      3.36
     ],
     "cores": 8
   },
-  "disk_mb": 699.4,
+  "disk_mb": 701.8,
   "github": {
     "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (2 MB), your data is kept here",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794662455.6640692,
-    "next_sync_s": 282,
-    "commits": 201
+    "last_push": 1794663662.908628,
+    "next_sync_s": 296,
+    "commits": 202
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "missing data",
-    "problem": "Scholia's missing page for the topic of Q1757694 (data quality), as of 18 January 2019, highlighting curation needs.",
-    "solution": "CC BY-SA 4.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "dominating sets",
+    "problem": "Generating All Minimal Edge Dominating Sets with Incremental-Polynomial Delay For an arbitrary undirected simple graph G with m edges, we give an algorithm with running time O(m^4 |L|^2) to generate the set L of all minimal edge dominating sets of G. For bipartite graphs we obtain a better result; we show that their minimal edge dominating sets can be enumerated in time O(m^4 |L|).",
+    "solution": "In fact our results are stronger; both algorithms generate the next minimal edge dominating set with incremental-polynomial delay O(m^5 |L|) and O(m^4 |L|) respectively, when L is the set of already generated minimal edge dominating sets. Our algorithms are tailored for and solve the equivalent problems of enumerating minimal (vertex) dominating sets of line graphs and line graphs of bipartite\u2026",
+    "source": "arxiv"
   }
 }
