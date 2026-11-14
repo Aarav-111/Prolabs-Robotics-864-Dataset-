@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 6.9,
+  "disk_free_gb": 6.8,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794662348.8734531,
-  "updated_iso": "2026-11-14T18:49:08",
-  "uptime_s": 177848,
+  "updated": 1794662387.139622,
+  "updated_iso": "2026-11-14T18:49:50",
+  "uptime_s": 177886,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 249,
   "busy_by_kind": {
-    "text": 116,
-    "archive": 116,
+    "text": 110,
+    "archive": 115,
     "web_images": 24
   },
-  "waiting": 231,
+  "waiting": 212,
   "processes": 1,
   "fields": {
     "computer science": 1125379,
@@ -69,21 +69,21 @@
     "text": 5958891,
     "originals": 32612,
     "variants": 5926279,
-    "web_images": 6929,
+    "web_images": 6937,
     "synthetic_images": 14064,
-    "images": 20993,
+    "images": 21001,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2913636233,
-    "tasks_done": 103155,
+    "tasks_done": 103254,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
-    "archive": 15069,
-    "text": 20870,
-    "web_images": 20765,
+    "archive": 15117,
+    "text": 20888,
+    "web_images": 20802,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2913636233,
-  "per_min": 1188.5,
+  "per_min": 1194.6,
   "topics": {
     "known": 109914,
-    "explored": 32347,
-    "queued": 77447,
+    "explored": 32367,
+    "queued": 77435,
     "space": 6594840,
     "next": [
       [
@@ -149,113 +149,113 @@
     ],
     "recent": [
       [
-        "spatial language",
-        "psychology",
-        0
-      ],
-      [
-        "dry weight",
-        "",
-        0
-      ],
-      [
-        "non-destructive methods",
-        "biology",
-        0
-      ],
-      [
-        "protein-energy malnutrition",
+        "laser resurfacing",
         "medicine",
         0
       ],
       [
-        "disease burden",
-        "",
-        0
-      ],
-      [
-        "training set",
-        "",
-        0
-      ],
-      [
-        "distortion (music)",
-        "",
-        0
-      ],
-      [
-        "internal models",
+        "taurine",
         "biology",
         0
       ],
       [
-        "luffa",
+        "linguistic variation and morphology",
+        "humanities",
+        0
+      ],
+      [
+        "neural network training",
+        "computer science",
+        0
+      ],
+      [
+        "psychoanalytic listening",
+        "psychology",
+        0
+      ],
+      [
+        "vascular biomechanics",
+        "engineering",
+        0
+      ],
+      [
+        "listeriosis",
         "biology",
         0
       ],
       [
-        "polymer nanocomposite synthesis and irradiation",
-        "materials science",
+        "environmental health planning",
+        "earth and space",
         0
       ],
       [
-        "soundness",
+        "hybrid system",
         "",
         0
       ],
       [
-        "clothing behavior",
-        "economics and finance",
+        "fault tree analysis",
+        "engineering",
+        0
+      ],
+      [
+        "flexible strain sensors",
+        "engineering",
+        0
+      ],
+      [
+        "seneca",
+        "humanities",
         0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 111,
     "focus_left": 0
   },
   "system": {
-    "time": 1794662348.872612,
-    "cpu": 50.6,
+    "time": 1794662387.089067,
+    "cpu": 45.3,
     "cpu_cores": [
-      59.0,
-      50.7,
-      48.8,
-      47.7,
-      66.8,
-      55.5,
-      47.4,
-      29.4
+      45.7,
+      47.6,
+      42.2,
+      35.8,
+      54.8,
+      55.6,
+      49.0,
+      31.8
     ],
-    "mem": 81.2,
-    "mem_used_gb": 2.7,
+    "mem": 82.1,
+    "mem_used_gb": 2.63,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 186.5,
+    "proc_mem_mb": 162.8,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32418166784,
-    "net_tx": 31963547648,
-    "down_kbps": 1491.3,
-    "up_kbps": 959.6,
-    "disk_free_gb": 6.9,
+    "net_rx": 32438390784,
+    "net_tx": 31981834240,
+    "down_kbps": 349.0,
+    "up_kbps": 453.2,
+    "disk_free_gb": 6.8,
     "load": [
-      3.07,
-      3.11,
-      3.23
+      3.22,
+      3.14,
+      3.24
     ],
     "cores": 8
   },
-  "disk_mb": 693.5,
+  "disk_mb": 696.3,
   "github": {
-    "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (2 MB), your data is kept here",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794662107.625841,
-    "next_sync_s": 298,
-    "commits": 199
+    "last_push": 1794662384.08217,
+    "next_sync_s": 260,
+    "commits": 200
   },
   "last_sample": {
     "type": "web image",
-    "topic": "small sample size problem",
-    "problem": "Red dwarf. Main sequence star of spectal type M.",
+    "topic": "scramjet",
+    "problem": "Riscramjet Engine High Subsonic / Transonic Phase",
     "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
