@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 6.7,
+  "disk_free_gb": 6.6,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794663900.079062,
-  "updated_iso": "2026-11-14T19:15:00",
-  "uptime_s": 179399,
+  "updated": 1794663913.355031,
+  "updated_iso": "2026-11-14T19:15:13",
+  "uptime_s": 179413,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 245,
+  "waiting": 231,
   "processes": 1,
   "fields": {
     "computer science": 1136525,
@@ -69,21 +69,21 @@
     "text": 5987860,
     "originals": 32755,
     "variants": 5955105,
-    "web_images": 6989,
+    "web_images": 6991,
     "synthetic_images": 14064,
-    "images": 21053,
+    "images": 21055,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2924425873,
-    "tasks_done": 103735,
+    "tasks_done": 103760,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
     "archive": 15276,
-    "text": 21049,
-    "web_images": 20959,
+    "text": 21057,
+    "web_images": 20976,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2924425873,
-  "per_min": 1290.5,
+  "per_min": 1238.3,
   "topics": {
     "known": 109914,
-    "explored": 32526,
-    "queued": 77268,
+    "explored": 32534,
+    "queued": 77260,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,46 @@
     ],
     "recent": [
       [
+        "system a",
+        "biology",
+        0
+      ],
+      [
+        "science museums",
+        "humanities",
+        0
+      ],
+      [
+        "vehicle platooning",
+        "engineering",
+        0
+      ],
+      [
+        "white matter rarefaction",
+        "biology",
+        0
+      ],
+      [
+        "skin preparation",
+        "medicine",
+        0
+      ],
+      [
+        "cern director-general",
+        "humanities",
+        0
+      ],
+      [
+        "energy literacy",
+        "earth and space",
+        0
+      ],
+      [
+        "glorious revolution",
+        "humanities",
+        0
+      ],
+      [
         "spatio-temporal queries",
         "computer science",
         0
@@ -167,96 +207,56 @@
         "corrosion mechanism",
         "materials science",
         0
-      ],
-      [
-        "legislature",
-        "",
-        0
-      ],
-      [
-        "new jersey coastal zone",
-        "earth and space",
-        0
-      ],
-      [
-        "pairwise key establishment",
-        "computer science",
-        0
-      ],
-      [
-        "fgfr2b",
-        "biology",
-        0
-      ],
-      [
-        "central nervous system development",
-        "biology",
-        0
-      ],
-      [
-        "alk mutations",
-        "medicine",
-        0
-      ],
-      [
-        "capacitive power transfer",
-        "engineering",
-        0
-      ],
-      [
-        "intragenerational mobility",
-        "humanities",
-        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794663900.077678,
-    "cpu": 51.0,
+    "time": 1794663913.353857,
+    "cpu": 28.4,
     "cpu_cores": [
-      73.6,
-      72.1,
-      66.8,
-      64.4,
-      39.3,
-      40.6,
-      28.3,
-      23.3
+      27.6,
+      23.4,
+      18.4,
+      16.1,
+      49.3,
+      47.0,
+      27.3,
+      18.8
     ],
-    "mem": 80.9,
-    "mem_used_gb": 2.71,
+    "mem": 80.3,
+    "mem_used_gb": 2.76,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 204.9,
+    "proc_mem_mb": 234.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32662464512,
-    "net_tx": 32291333120,
-    "down_kbps": 804.0,
-    "up_kbps": 1084.4,
-    "disk_free_gb": 6.7,
+    "net_rx": 32673732608,
+    "net_tx": 32305816576,
+    "down_kbps": 696.9,
+    "up_kbps": 950.5,
+    "disk_free_gb": 6.6,
     "load": [
-      2.79,
-      3.37,
+      2.96,
+      3.39,
       3.36
     ],
     "cores": 8
   },
-  "disk_mb": 701.8,
+  "disk_mb": 702.2,
   "github": {
-    "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794663662.908628,
-    "next_sync_s": 296,
-    "commits": 202
+    "last_push": 1794663913.0304341,
+    "next_sync_s": 282,
+    "commits": 203
   },
   "last_sample": {
-    "type": "text",
-    "topic": "dominating sets",
-    "problem": "Generating All Minimal Edge Dominating Sets with Incremental-Polynomial Delay For an arbitrary undirected simple graph G with m edges, we give an algorithm with running time O(m^4 |L|^2) to generate the set L of all minimal edge dominating sets of G. For bipartite graphs we obtain a better result; we show that their minimal edge dominating sets can be enumerated in time O(m^4 |L|).",
-    "solution": "In fact our results are stronger; both algorithms generate the next minimal edge dominating set with incremental-polynomial delay O(m^5 |L|) and O(m^4 |L|) respectively, when L is the set of already generated minimal edge dominating sets. Our algorithms are tailored for and solve the equivalent problems of enumerating minimal (vertex) dominating sets of line graphs and line graphs of bipartite\u2026",
-    "source": "arxiv"
+    "type": "web image",
+    "topic": "lantibiotics",
+    "problem": "Festival of Economics 2012 - Trento",
+    "solution": "CC BY-SA 3.0",
+    "source": "wikimedia commons"
   }
 }
