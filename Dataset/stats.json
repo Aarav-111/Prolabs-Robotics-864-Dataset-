@@ -2,40 +2,40 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.3,
+  "disk_free_gb": 10.7,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794635493.710227,
-  "updated_iso": "2026-11-14T11:21:44",
-  "uptime_s": 150993,
+  "updated": 1794636091.253103,
+  "updated_iso": "2026-11-14T11:31:31",
+  "uptime_s": 151590,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 255,
+  "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 23,
+    "web_images": 24,
     "text": 116,
     "archive": 116
   },
-  "waiting": 133,
+  "waiting": 231,
   "processes": 1,
   "fields": {
     "mathematics": 926585,
-    "computer science": 605042,
+    "computer science": 617809,
     "physics": 502898,
-    "general": 452952,
-    "engineering": 366972,
-    "medicine": 270884,
-    "biology": 241473,
-    "chemistry": 223724,
-    "economics and finance": 148776,
-    "earth and space": 141288,
-    "materials science": 128812,
+    "general": 458996,
+    "engineering": 369741,
+    "medicine": 279436,
+    "biology": 251397,
+    "chemistry": 230974,
+    "economics and finance": 159748,
+    "earth and space": 151495,
+    "materials science": 134415,
     "statistics": 126739,
-    "humanities": 86148,
-    "psychology": 80700,
-    "programming": 34833,
+    "psychology": 86916,
+    "humanities": 86694,
+    "programming": 34947,
     "machine learning": 20661,
     "general knowledge": 7232,
     "robotics": 3515
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 73752,
-    "openlifescienceai/medmcqa": 19642,
+    "stack exchange dump": 73866,
+    "openlifescienceai/medmcqa": 20008,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4365117,
-    "originals": 24061,
-    "variants": 4341056,
-    "web_images": 4015,
+    "text": 4446081,
+    "originals": 24559,
+    "variants": 4421522,
+    "web_images": 4045,
     "synthetic_images": 14064,
-    "images": 18079,
+    "images": 18109,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2278202592,
-    "tasks_done": 82775,
+    "tokens": 2311586506,
+    "tasks_done": 83030,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 6408
+    "preference": 6454
   },
   "by_kind": {
-    "archive": 8998,
-    "text": 14026,
-    "web_images": 13300,
+    "archive": 9122,
+    "text": 14142,
+    "web_images": 13315,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2278202592,
-  "per_min": 612.6,
+  "tokens": 2311586506,
+  "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 25503,
-    "queued": 84291,
+    "explored": 25619,
+    "queued": 84175,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "pipefish",
-        "biology",
-        0
+        "oral dysplasia",
+        "medicine",
+        4788
       ],
       [
-        "black report",
-        "humanities",
-        0
+        "anomalous experiences",
+        "psychology",
+        2505
       ],
       [
-        "business process execution",
-        "economics and finance",
-        2326
-      ],
-      [
-        "furniture design",
-        "engineering",
-        3287
-      ],
-      [
-        "crop mapping",
-        "earth and space",
-        4967
-      ],
-      [
-        "diffusion in solution",
-        "chemistry",
-        4257
-      ],
-      [
-        "point cloud classification",
-        "computer science",
-        4175
-      ],
-      [
-        "tandem solar cells",
-        "engineering",
-        4502
-      ],
-      [
-        "morphogenesis",
+        "pesticide",
         "",
-        2931
+        6044
       ],
       [
-        "market power",
-        "economics and finance",
-        3659
+        "digital geometry",
+        "computer science",
+        5580
       ],
       [
-        "gene transfer",
-        "biology",
-        3756
+        "global illumination",
+        "computer science",
+        7187
       ],
       [
-        "ultraviolet photoelectron spectroscopy",
+        "smoke suppression",
         "materials science",
-        3747
+        4101
+      ],
+      [
+        "topoisomerase poisons",
+        "biology",
+        3613
+      ],
+      [
+        "agricultural emissions",
+        "earth and space",
+        3967
+      ],
+      [
+        "serine protease inhibitors",
+        "biology",
+        2865
+      ],
+      [
+        "cystinosis",
+        "medicine",
+        3398
+      ],
+      [
+        "electroless copper plating",
+        "materials science",
+        1502
+      ],
+      [
+        "team flow",
+        "psychology",
+        3711
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794635493.433783,
-    "cpu": 28.4,
+    "time": 1794636091.25185,
+    "cpu": 55.0,
     "cpu_cores": [
-      16.0,
-      12.8,
-      9.6,
-      8.1,
-      53.1,
-      52.6,
-      45.2,
-      29.9
+      57.0,
+      51.7,
+      51.7,
+      52.5,
+      69.4,
+      62.0,
+      53.6,
+      42.0
     ],
-    "mem": 74.9,
-    "mem_used_gb": 3.19,
+    "mem": 77.1,
+    "mem_used_gb": 3.02,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 227.2,
+    "proc_mem_mb": 692.6,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 23828315136,
-    "net_tx": 22334238720,
-    "down_kbps": 367.5,
-    "up_kbps": 596.1,
-    "disk_free_gb": 10.3,
+    "net_rx": 24004245504,
+    "net_tx": 22647257088,
+    "down_kbps": 1003.9,
+    "up_kbps": 892.0,
+    "disk_free_gb": 10.7,
     "load": [
-      3.15,
-      3.05,
-      3.78
+      3.3,
+      3.43,
+      3.61
     ],
     "cores": 8
   },
-  "disk_mb": 218.9,
+  "disk_mb": 232.0,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794635535.100663,
-    "next_sync_s": 98,
-    "commits": 125
+    "last_push": 1794636075.347828,
+    "next_sync_s": 293,
+    "commits": 126
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "sports prediction",
-    "problem": "Prediction market platform for sports and real-world outcomes",
-    "solution": "CC BY-SA 4.0",
-    "source": "wikimedia commons"
+    "type": "archive Q&A",
+    "topic": "openlifescienceai/medmcqa",
+    "problem": "Q: Here is a problem to solve. Which of the following will cause an increase in the prevalence of disease? A) Immigration of healthy persons B) Increased cure rate of disease C) Longer duration of disease D) Increased death rate in disease",
+    "solution": "A: Answer: C) Longer duration of disease Explanation: Prevalence depends upon 2 factors, the incidence (I) and duration of illness (D). Given the assumption that the population is stable, and incidence and duration are unchanging, the relationship between incidence and prevalence is, P = I* D = Incidence * mean duration Thus when duration increases prevalence also increases. Ref: Park's Textbook\u2026",
+    "source": "huggingface"
   }
 }
