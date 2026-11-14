@@ -2,42 +2,42 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.6,
+  "disk_free_gb": 11.3,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794646893.468927,
-  "updated_iso": "2026-11-14T14:31:33",
-  "uptime_s": 162393,
+  "updated": 1794648520.1875288,
+  "updated_iso": "2026-11-14T14:58:40",
+  "uptime_s": 164019,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 250,
+  "in_flight": 254,
   "busy_by_kind": {
-    "web_images": 24,
-    "archive": 113,
-    "text": 113
+    "web_images": 23,
+    "text": 115,
+    "archive": 116
   },
-  "waiting": 234,
+  "waiting": 73,
   "processes": 1,
   "fields": {
+    "computer science": 933973,
     "mathematics": 926955,
-    "computer science": 926148,
-    "general": 610213,
+    "general": 621107,
     "physics": 502898,
-    "engineering": 477562,
-    "medicine": 316585,
-    "chemistry": 291300,
-    "biology": 286622,
-    "economics and finance": 199617,
-    "earth and space": 186531,
+    "engineering": 484020,
+    "medicine": 324713,
+    "chemistry": 295612,
+    "biology": 287919,
+    "economics and finance": 200540,
+    "earth and space": 187786,
     "materials science": 178889,
     "statistics": 126739,
-    "humanities": 115143,
+    "humanities": 115500,
     "psychology": 101321,
-    "programming": 43753,
+    "programming": 43954,
     "machine learning": 20661,
-    "general knowledge": 9593,
+    "general knowledge": 11545,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,48 +60,44 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 92197,
+    "stack exchange dump": 95297,
     "openlifescienceai/medmcqa": 25304,
     "qiaojin/PubMedQA": 3231,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5319928,
-    "originals": 29260,
-    "variants": 5290668,
-    "web_images": 5437,
+    "text": 5363530,
+    "originals": 29485,
+    "variants": 5334045,
+    "web_images": 5587,
     "synthetic_images": 14064,
-    "images": 19501,
+    "images": 19651,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2666392290,
-    "tasks_done": 90890,
+    "tokens": 2683365883,
+    "tasks_done": 91526,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 8147
+    "preference": 8243
   },
   "by_kind": {
-    "archive": 11715,
-    "text": 16953,
-    "web_images": 15771,
+    "archive": 11873,
+    "text": 17140,
+    "web_images": 16062,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2666392290,
+  "tokens": 2683365883,
   "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 28430,
-    "queued": 81367,
+    "explored": 28618,
+    "queued": 81178,
     "space": 6594840,
     "next": [
-      [
-        "epistemology",
-        "humanities"
-      ],
       [
         "semantics",
         "humanities"
@@ -145,117 +141,121 @@
       [
         "structural biology",
         "biology"
+      ],
+      [
+        "chemical engineering",
+        "engineering"
       ]
     ],
     "recent": [
       [
-        "fully homomorphic encryption",
-        "computer science",
-        3373
-      ],
-      [
-        "model-agnostic meta-learning",
-        "computer science",
-        5583
-      ],
-      [
-        "test coverage",
-        "computer science",
-        4569
-      ],
-      [
-        "metronidazole",
-        "",
+        "necrotizing periodontitis",
+        "medicine",
         0
       ],
       [
-        "image sensor noise",
-        "engineering",
-        0
-      ],
-      [
-        "soil moisture monitoring",
+        "carbonic anhydrase inhibition",
         "biology",
         0
       ],
       [
-        "footprint",
+        "occupational health legislation",
+        "medicine",
+        0
+      ],
+      [
+        "southern ocean",
+        "earth and space",
+        0
+      ],
+      [
+        "gese2",
+        "materials science",
+        0
+      ],
+      [
+        "moderated mediation",
         "",
         0
       ],
       [
-        "portuguese inquisition",
+        "epistemology",
         "humanities",
         0
       ],
       [
-        "color image compression",
+        "hydrostatic bearings",
+        "engineering",
+        0
+      ],
+      [
+        "election security",
         "computer science",
-        4507
+        0
       ],
       [
-        "caenorhabditis elegans",
-        "",
-        3528
+        "atrioventricular canal",
+        "biology",
+        0
       ],
       [
-        "exploration-exploitation balance",
-        "computer science",
-        6166
+        "couple stress",
+        "engineering",
+        0
       ],
       [
-        "motor synchronization",
-        "psychology",
-        1226
+        "power systems and technologies",
+        "engineering",
+        0
       ]
     ],
     "in_progress": 117,
     "focus_left": 0
   },
   "system": {
-    "time": 1794646893.46783,
-    "cpu": 47.5,
+    "time": 1794648520.1859999,
+    "cpu": 52.0,
     "cpu_cores": [
-      36.5,
-      31.1,
-      27.2,
-      23.1,
-      74.2,
+      72.2,
       70.8,
-      64.8,
-      52.4
+      67.2,
+      67.5,
+      43.7,
+      46.0,
+      29.1,
+      19.1
     ],
-    "mem": 80.1,
-    "mem_used_gb": 2.78,
+    "mem": 81.1,
+    "mem_used_gb": 2.74,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 626.4,
+    "proc_mem_mb": 72.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 27294653440,
-    "net_tx": 27015315456,
-    "down_kbps": 517.7,
-    "up_kbps": 521.6,
-    "disk_free_gb": 11.6,
+    "net_rx": 27532751872,
+    "net_tx": 27281512448,
+    "down_kbps": 31.8,
+    "up_kbps": 52.3,
+    "disk_free_gb": 11.3,
     "load": [
-      2.79,
-      2.96,
-      2.91
+      14.15,
+      5.76,
+      3.95
     ],
     "cores": 8
   },
-  "disk_mb": 549.3,
+  "disk_mb": 577.4,
   "github": {
     "state": "error",
     "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794645545.744396,
-    "next_sync_s": 0,
-    "commits": 146
+    "last_push": 1794646956.9758651,
+    "next_sync_s": 280,
+    "commits": 147
   },
   "last_sample": {
     "type": "web image",
-    "topic": "spatial audio",
-    "problem": "On Wednesday, June 1st, Prime Minister Sheikh Hasina delivered the chief guest's speech at an international seminar concerning the National Spatial Data Infrastructure (NSDI). PID. The English description and title of this file were generated using a large language model (Google Gemini - `gemini-3.1-flash-lite`) from the original Bengali description provided by the Press Information Department. Show prompts used: Translation prompt: ``` Translate the following Bengali text into English in encyclopedic style. You may rearrange words or sentences for clarity, but retain all information. Do not\u2026",
+    "topic": "family needs",
+    "problem": "Security forces personnel listen to a morning briefing prior to the starts of the Arctic Thunder Special Needs and Family Day, July 29, 2016. All police activities associated with an Air Force base, from securing the perimeter of the base to being a dog handler, fall under this career field. (U.S Air Force photo by Airman 1st Class Javier Alvarez) Unit: Joint Base Elmendorf-Richardson Public Affairs",
     "solution": "Public domain",
     "source": "wikimedia commons"
   }
