@@ -2,42 +2,42 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.3,
+  "disk_free_gb": 10.3,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794648520.1875288,
-  "updated_iso": "2026-11-14T14:58:40",
-  "uptime_s": 164019,
+  "updated": 1794648805.705455,
+  "updated_iso": "2026-11-14T15:03:25",
+  "uptime_s": 164305,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 254,
+  "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 23,
-    "text": 115,
-    "archive": 116
+    "text": 116,
+    "archive": 116,
+    "web_images": 24
   },
-  "waiting": 73,
+  "waiting": 249,
   "processes": 1,
   "fields": {
-    "computer science": 933973,
-    "mathematics": 926955,
-    "general": 621107,
+    "computer science": 944711,
+    "mathematics": 927156,
+    "general": 625473,
     "physics": 502898,
-    "engineering": 484020,
-    "medicine": 324713,
-    "chemistry": 295612,
-    "biology": 287919,
-    "economics and finance": 200540,
-    "earth and space": 187786,
+    "engineering": 491147,
+    "medicine": 325868,
+    "chemistry": 297938,
+    "biology": 289323,
+    "economics and finance": 202507,
+    "earth and space": 188171,
     "materials science": 178889,
     "statistics": 126739,
     "humanities": 115500,
     "psychology": 101321,
-    "programming": 43954,
+    "programming": 45043,
     "machine learning": 20661,
-    "general knowledge": 11545,
+    "general knowledge": 11947,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 95297,
-    "openlifescienceai/medmcqa": 25304,
-    "qiaojin/PubMedQA": 3231,
+    "stack exchange dump": 98886,
+    "openlifescienceai/medmcqa": 25973,
+    "qiaojin/PubMedQA": 3717,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5363530,
-    "originals": 29485,
-    "variants": 5334045,
-    "web_images": 5587,
+    "text": 5394690,
+    "originals": 29644,
+    "variants": 5365046,
+    "web_images": 5635,
     "synthetic_images": 14064,
-    "images": 19651,
+    "images": 19699,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2683365883,
-    "tasks_done": 91526,
+    "tokens": 2696318550,
+    "tasks_done": 91857,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 8243
+    "preference": 8398
   },
   "by_kind": {
-    "archive": 11873,
-    "text": 17140,
-    "web_images": 16062,
+    "archive": 11989,
+    "text": 17255,
+    "web_images": 16162,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2683365883,
-  "per_min": 0.0,
+  "tokens": 2696318550,
+  "per_min": 6248.5,
   "topics": {
     "known": 109914,
-    "explored": 28618,
-    "queued": 81178,
+    "explored": 28732,
+    "queued": 81062,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "necrotizing periodontitis",
-        "medicine",
-        0
-      ],
-      [
-        "carbonic anhydrase inhibition",
-        "biology",
-        0
-      ],
-      [
-        "occupational health legislation",
-        "medicine",
-        0
-      ],
-      [
-        "southern ocean",
-        "earth and space",
-        0
-      ],
-      [
-        "gese2",
-        "materials science",
-        0
-      ],
-      [
-        "moderated mediation",
-        "",
-        0
-      ],
-      [
-        "epistemology",
-        "humanities",
-        0
-      ],
-      [
-        "hydrostatic bearings",
+        "static load test",
         "engineering",
         0
       ],
       [
-        "election security",
+        "mediating effect of self-esteem",
+        "psychology",
+        0
+      ],
+      [
+        "mucopolysaccharidosis type i",
+        "medicine",
+        0
+      ],
+      [
+        "conflict resolution strategies",
+        "economics and finance",
+        0
+      ],
+      [
+        "network diameter",
         "computer science",
         0
       ],
       [
-        "atrioventricular canal",
+        "on-chip esd protection",
+        "engineering",
+        0
+      ],
+      [
+        "body expression activities",
+        "psychology",
+        0
+      ],
+      [
+        "glycated proteins",
         "biology",
         0
       ],
       [
-        "couple stress",
-        "engineering",
+        "electric current",
+        "",
         0
       ],
       [
-        "power systems and technologies",
-        "engineering",
+        "ynamides",
+        "chemistry",
+        0
+      ],
+      [
+        "arrow-debreu model",
+        "economics and finance",
+        939
+      ],
+      [
+        "nuclear organization",
+        "biology",
         0
       ]
     ],
-    "in_progress": 117,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794648520.1859999,
-    "cpu": 52.0,
+    "time": 1794648805.7043998,
+    "cpu": 46.2,
     "cpu_cores": [
-      72.2,
-      70.8,
-      67.2,
-      67.5,
-      43.7,
-      46.0,
-      29.1,
-      19.1
+      56.7,
+      54.6,
+      52.5,
+      52.5,
+      49.5,
+      49.5,
+      32.1,
+      21.9
     ],
-    "mem": 81.1,
-    "mem_used_gb": 2.74,
+    "mem": 80.5,
+    "mem_used_gb": 2.83,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 72.4,
+    "proc_mem_mb": 180.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 27532751872,
-    "net_tx": 27281512448,
-    "down_kbps": 31.8,
-    "up_kbps": 52.3,
-    "disk_free_gb": 11.3,
+    "net_rx": 27583704064,
+    "net_tx": 27316098048,
+    "down_kbps": 255.3,
+    "up_kbps": 131.3,
+    "disk_free_gb": 12.2,
     "load": [
-      14.15,
-      5.76,
-      3.95
+      4.34,
+      4.97,
+      4.11
     ],
     "cores": 8
   },
-  "disk_mb": 577.4,
+  "disk_mb": 586.7,
   "github": {
-    "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794646956.9758651,
-    "next_sync_s": 280,
-    "commits": 147
+    "last_push": 1794648645.495137,
+    "next_sync_s": 296,
+    "commits": 148
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "family needs",
-    "problem": "Security forces personnel listen to a morning briefing prior to the starts of the Arctic Thunder Special Needs and Family Day, July 29, 2016. All police activities associated with an Air Force base, from securing the perimeter of the base to being a dog handler, fall under this career field. (U.S Air Force photo by Airman 1st Class Javier Alvarez) Unit: Joint Base Elmendorf-Richardson Public Affairs",
-    "solution": "Public domain",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "arrow-debreu model",
+    "problem": "Infinite Horizon Markov Economies In this paper, we study a generalization of Markov games and pseudo-games that we call Markov pseudo-games, which, like the former, captures time and uncertainty, and like the latter, allows for the players' actions to determine the set of actions available to the other players. In the same vein as Arrow and Debreu, we intend for this model to be rich enough to\u2026",
+    "solution": "We then prove the existence of a game-theoretic equilibrium in our model, which in turn implies the existence of a general equilibrium in the corresponding economies. Finally, going beyond Arrow and Debreu, we introduce a solution method for Markov pseudo-games and prove its polynomial-time convergence. We then provide an application of Markov pseudo-games to infinite-horizon Markov exchange\u2026",
+    "source": "arxiv"
   }
 }
