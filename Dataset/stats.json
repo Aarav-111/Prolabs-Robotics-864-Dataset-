@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794638547.31059,
-  "updated_iso": "2026-11-14T12:12:27",
-  "uptime_s": 154047,
+  "updated": 1794638560.916702,
+  "updated_iso": "2026-11-14T12:12:43",
+  "uptime_s": 154060,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 255,
+  "in_flight": 253,
   "busy_by_kind": {
     "web_images": 24,
-    "text": 115,
+    "text": 113,
     "archive": 116
   },
-  "waiting": 250,
+  "waiting": 209,
   "processes": 1,
   "fields": {
     "mathematics": 926955,
@@ -75,14 +75,14 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2369290469,
-    "tasks_done": 84134,
+    "tasks_done": 84155,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 6979
   },
   "by_kind": {
     "archive": 9581,
-    "text": 14542,
+    "text": 14563,
     "web_images": 13560,
     "synthetic_images": 0,
     "vla": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2369290469,
-  "per_min": 3055.7,
+  "per_min": 2796.7,
   "topics": {
     "known": 109914,
-    "explored": 26019,
-    "queued": 83776,
+    "explored": 26041,
+    "queued": 83757,
     "space": 6594840,
     "next": [
       [
@@ -149,97 +149,97 @@
     ],
     "recent": [
       [
-        "vaginal microbiota",
+        "cyanide biodegradation",
         "biology",
         0
       ],
       [
-        "motor unit recruitment",
+        "tibial tuberosity advancement",
+        "medicine",
+        0
+      ],
+      [
+        "phosphorus-nitrogen heterocycles",
+        "chemistry",
+        0
+      ],
+      [
+        "lymphatic development",
+        "medicine",
+        0
+      ],
+      [
+        "readmission prediction",
+        "computer science",
+        0
+      ],
+      [
+        "type 1 diabetes prevention",
+        "biology",
+        0
+      ],
+      [
+        "driver-vehicle interaction",
+        "humanities",
+        0
+      ],
+      [
+        "recycled glass",
         "engineering",
         0
       ],
       [
-        "electrokinetic treatment",
-        "earth and space",
-        0
-      ],
-      [
-        "descurainia sophia",
+        "subdomain iia",
         "biology",
         0
       ],
       [
-        "oxazolone derivatives",
-        "chemistry",
+        "reactor safety analysis",
+        "engineering",
         0
       ],
       [
-        "retracted advertisement",
-        "medicine",
+        "flood myth",
+        "",
         0
       ],
       [
-        "endomarketing",
-        "economics and finance",
-        0
-      ],
-      [
-        "steroid derivatives",
-        "chemistry",
-        0
-      ],
-      [
-        "fishermen associations",
-        "earth and space",
-        0
-      ],
-      [
-        "fuhrman grade",
-        "medicine",
-        0
-      ],
-      [
-        "wildlife crossings",
-        "earth and space",
-        0
-      ],
-      [
-        "outdoor leadership",
-        "humanities",
+        "school counseling programs",
+        "psychology",
         0
       ]
     ],
-    "in_progress": 119,
+    "in_progress": 116,
     "focus_left": 0
   },
   "system": {
-    "time": 1794638547.308274,
-    "cpu": 27.4,
+    "time": 1794638560.888462,
+    "cpu": 24.1,
     "cpu_cores": [
-      27.9,
-      22.0,
-      19.4,
-      14.3,
-      41.8,
+      12.4,
+      10.8,
+      7.3,
+      5.7,
       46.8,
-      28.1,
-      19.3
+      49.5,
+      40.9,
+      20.0
     ],
-    "mem": 78.9,
-    "mem_used_gb": 2.88,
+    "mem": 79.3,
+    "mem_used_gb": 2.86,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 208.5,
+    "proc_mem_mb": 231.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 24674095104,
-    "net_tx": 23503122432,
-    "down_kbps": 598.2,
-    "up_kbps": 892.2,
+    "net_rx": 24679981056,
+    "net_tx": 23511907328,
+    "down_kbps": 182.8,
+    "up_kbps": 309.5,
     "disk_free_gb": 10.4,
     "load": [
-      2.22,
-      2.76,
-      2.99
+      2.16,
+      2.73,
+      2.97
     ],
     "cores": 8
   },
@@ -249,7 +249,7 @@
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 1794638546.262955,
-    "next_sync_s": 232,
+    "next_sync_s": 219,
     "commits": 133
   },
   "last_sample": {
