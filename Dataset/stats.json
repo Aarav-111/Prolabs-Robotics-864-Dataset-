@@ -7,30 +7,30 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794661121.5524218,
-  "updated_iso": "2026-11-14T18:28:45",
-  "uptime_s": 176621,
+  "updated": 1794661197.8778481,
+  "updated_iso": "2026-11-14T18:29:57",
+  "uptime_s": 176697,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 243,
+  "in_flight": 256,
   "busy_by_kind": {
+    "text": 116,
     "archive": 116,
-    "text": 103,
     "web_images": 24
   },
-  "waiting": 211,
+  "waiting": 245,
   "processes": 1,
   "fields": {
     "computer science": 1119177,
     "mathematics": 928130,
     "general": 699861,
-    "engineering": 558243,
+    "engineering": 563612,
     "physics": 502898,
     "medicine": 352797,
     "chemistry": 314471,
     "biology": 310209,
-    "economics and finance": 232248,
-    "earth and space": 219100,
+    "economics and finance": 234393,
+    "earth and space": 219994,
     "materials science": 205462,
     "humanities": 136769,
     "psychology": 135113,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5926302,
-    "originals": 32436,
-    "variants": 5893866,
+    "text": 5934710,
+    "originals": 32482,
+    "variants": 5902228,
     "web_images": 6837,
     "synthetic_images": 14064,
     "images": 20901,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2901463176,
-    "tasks_done": 101993,
+    "tokens": 2904560830,
+    "tasks_done": 102073,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
-    "archive": 14793,
-    "text": 20466,
-    "web_images": 20284,
+    "archive": 14794,
+    "text": 20529,
+    "web_images": 20299,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2901463176,
-  "per_min": 1822.7,
+  "tokens": 2904560830,
+  "per_min": 3427.4,
   "topics": {
     "known": 109914,
-    "explored": 31943,
-    "queued": 77864,
+    "explored": 32006,
+    "queued": 77788,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "mobile ipv6",
-        "engineering",
-        0
-      ],
-      [
-        "iron pnictide superconductors",
-        "materials science",
-        0
-      ],
-      [
-        "thin blood smear",
+        "post-quantum cryptography",
         "computer science",
         0
       ],
       [
-        "reconfigurable robots",
+        "edna",
+        "earth and space",
+        0
+      ],
+      [
+        "robotic manipulation",
         "engineering",
         0
       ],
       [
-        "tax culture",
+        "library services",
+        "humanities",
+        0
+      ],
+      [
+        "operating expenses to operating income",
         "economics and finance",
         0
       ],
       [
-        "pseudaulacaspis pentagona",
-        "biology",
-        0
-      ],
-      [
-        "protein-ligand interactions",
-        "medicine",
-        0
-      ],
-      [
-        "time series databases",
+        "active appearance models",
         "computer science",
         0
       ],
       [
-        "development (topology)",
+        "free electron model",
+        "materials science",
+        0
+      ],
+      [
+        "introductory psychology",
+        "psychology",
+        0
+      ],
+      [
+        "tilt (camera)",
         "",
         0
       ],
       [
-        "software",
-        "computer science",
-        0
-      ],
-      [
-        "biological control of invasive species",
+        "double-stranded dna",
         "biology",
         0
       ],
       [
-        "beamline",
+        "aircraft emissions reduction",
+        "engineering",
+        0
+      ],
+      [
+        "industrial production",
         "",
         0
       ]
     ],
-    "in_progress": 107,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794661121.4906628,
-    "cpu": 39.7,
+    "time": 1794661197.874977,
+    "cpu": 41.5,
     "cpu_cores": [
-      44.1,
-      41.0,
-      37.6,
-      33.3,
-      47.8,
-      51.3,
-      39.9,
-      23.2
+      52.8,
+      52.1,
+      44.2,
+      40.8,
+      44.4,
+      47.4,
+      31.7,
+      18.8
     ],
-    "mem": 83.0,
-    "mem_used_gb": 2.56,
+    "mem": 82.8,
+    "mem_used_gb": 2.57,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 135.1,
+    "proc_mem_mb": 99.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32002912256,
-    "net_tx": 31385964544,
-    "down_kbps": 337.0,
-    "up_kbps": 404.3,
+    "net_rx": 32024134656,
+    "net_tx": 31414253568,
+    "down_kbps": 326.7,
+    "up_kbps": 477.2,
     "disk_free_gb": 7.0,
     "load": [
-      4.6,
-      3.75,
-      3.58
+      3.95,
+      3.8,
+      3.62
     ],
     "cores": 8
   },
-  "disk_mb": 691.3,
+  "disk_mb": 692.5,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794661089.634919,
-    "next_sync_s": 279,
-    "commits": 191
+    "last_push": 1794661196.871629,
+    "next_sync_s": 203,
+    "commits": 192
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "environmental review",
-    "problem": "A public meeting on June 6, 2017, kicked off the scoping process for an environmental review of the only red wolf population that exists in the wild",
-    "solution": "Public domain",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "haptic interface",
+    "problem": "Investigating the Perception of Translational Shape-Changing Haptic Interfaces Shape-changing haptic interfaces (SCHIs) are a promising and emerging field. However, compared to more established stimulus modalities, such as vibration, there is sparse literature on the perception of dynamic shapes. Furthermore, the influence of properties such as grasp types and displacement magnitude/direction\u2026",
+    "solution": "This work attempts to initiate a formal perceptual evaluation of SCHIs via a psychophysical user study involving a 1-DOF translational shape-changing interface that can move its body with 1.25-micrometer resolution. Participants completed a Method of Constant Stimulus study while holding the device with three different grasps. Stimuli direction occurred both toward and away from the thumb, while\u2026",
+    "source": "arxiv"
   }
 }
