@@ -2,40 +2,40 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 7.7,
+  "disk_free_gb": 7.5,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794657858.659918,
-  "updated_iso": "2026-11-14T17:34:18",
-  "uptime_s": 173358,
+  "updated": 1794659027.695632,
+  "updated_iso": "2026-11-14T17:53:47",
+  "uptime_s": 174527,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 193,
   "busy_by_kind": {
-    "archive": 116,
-    "text": 116,
-    "web_images": 24
+    "archive": 82,
+    "text": 95,
+    "web_images": 16
   },
-  "waiting": 240,
+  "waiting": 143,
   "processes": 1,
   "fields": {
     "computer science": 1087965,
     "mathematics": 928130,
-    "general": 680585,
+    "general": 682264,
     "engineering": 536119,
     "physics": 502898,
-    "medicine": 348570,
+    "medicine": 348845,
     "chemistry": 314471,
-    "biology": 304269,
-    "economics and finance": 226206,
-    "earth and space": 213643,
+    "biology": 308531,
+    "economics and finance": 228924,
+    "earth and space": 214638,
     "materials science": 198539,
-    "humanities": 134793,
+    "humanities": 134906,
     "psychology": 131463,
     "statistics": 126739,
-    "programming": 50527,
+    "programming": 51483,
     "machine learning": 20661,
     "general knowledge": 13543,
     "robotics": 3515
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 113298,
-    "openlifescienceai/medmcqa": 34814,
+    "stack exchange dump": 114254,
+    "openlifescienceai/medmcqa": 35089,
     "qiaojin/PubMedQA": 5725,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5818519,
-    "originals": 31866,
-    "variants": 5786653,
-    "web_images": 6524,
+    "text": 5829517,
+    "originals": 31918,
+    "variants": 5797599,
+    "web_images": 6551,
     "synthetic_images": 14064,
-    "images": 20588,
+    "images": 20615,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2860765867,
-    "tasks_done": 99565,
+    "tokens": 2865166214,
+    "tasks_done": 99895,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 9830
+    "preference": 9994
   },
   "by_kind": {
-    "archive": 14189,
-    "text": 19725,
-    "web_images": 19200,
+    "archive": 14300,
+    "text": 19833,
+    "web_images": 19316,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2860765867,
-  "per_min": 4680.4,
+  "tokens": 2865166214,
+  "per_min": 3661.3,
   "topics": {
     "known": 109914,
-    "explored": 31202,
-    "queued": 78592,
+    "explored": 31310,
+    "queued": 78505,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "mapper algorithm",
+        "biopolymer",
+        "",
+        0
+      ],
+      [
+        "iot definition",
         "computer science",
-        2848
+        0
       ],
       [
-        "interior color",
-        "psychology",
-        2623
-      ],
-      [
-        "pentameric crp",
+        "storage temperature",
         "biology",
         0
       ],
       [
-        "bipolar hemiarthroplasty",
-        "medicine",
+        "innovation activity of enterprises",
+        "economics and finance",
         0
       ],
       [
-        "image annotation",
-        "computer science",
+        "j. m. w. turner",
+        "humanities",
         0
       ],
       [
-        "seo tools",
-        "computer science",
+        "hexagonal crystal system",
+        "",
         0
       ],
       [
-        "precipitation hardening",
+        "altruistic values",
+        "earth and space",
+        995
+      ],
+      [
+        "modern research methods",
+        "humanities",
+        0
+      ],
+      [
+        "myxosporeans",
+        "biology",
+        0
+      ],
+      [
+        "thermoelastic stress analysis",
+        "engineering",
+        0
+      ],
+      [
+        "root image analysis",
+        "biology",
+        0
+      ],
+      [
+        "p(vdf-trfe)",
         "materials science",
         0
-      ],
-      [
-        "currency recognition and detection",
-        "computer science",
-        0
-      ],
-      [
-        "air pollution exposure",
-        "earth and space",
-        2876
-      ],
-      [
-        "benign paroxysmal positional vertigo",
-        "biology",
-        0
-      ],
-      [
-        "e-learning course development",
-        "computer science",
-        1423
-      ],
-      [
-        "centrifugal distortion constants",
-        "chemistry",
-        445
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 99,
     "focus_left": 0
   },
   "system": {
-    "time": 1794657858.658986,
-    "cpu": 53.0,
+    "time": 1794659027.6943529,
+    "cpu": 50.2,
     "cpu_cores": [
-      67.7,
-      67.2,
-      71.0,
-      71.0,
-      54.1,
-      45.9,
-      30.6,
-      16.1
+      54.9,
+      52.1,
+      50.3,
+      48.3,
+      55.1,
+      57.1,
+      49.3,
+      34.6
     ],
-    "mem": 82.9,
-    "mem_used_gb": 2.56,
+    "mem": 83.0,
+    "mem_used_gb": 2.6,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 244.8,
+    "proc_mem_mb": 120.2,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 31240243200,
-    "net_tx": 30523251712,
-    "down_kbps": 3504.1,
-    "up_kbps": 3760.4,
-    "disk_free_gb": 7.7,
+    "net_rx": 31293833216,
+    "net_tx": 30591981568,
+    "down_kbps": 472.0,
+    "up_kbps": 296.0,
+    "disk_free_gb": 7.5,
     "load": [
-      4.61,
-      3.67,
-      3.48
+      8.36,
+      5.15,
+      4.09
     ],
     "cores": 8
   },
-  "disk_mb": 700.5,
+  "disk_mb": 706.2,
   "github": {
     "state": "error",
     "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794657632.086453,
-    "next_sync_s": 248,
-    "commits": 177
+    "last_push": 1794657930.978046,
+    "next_sync_s": 263,
+    "commits": 178
   },
   "last_sample": {
-    "type": "text",
-    "topic": "mapper algorithm",
-    "problem": "A Mapper Algorithm with implicit intervals and its optimization The Mapper algorithm is an essential tool for visualizing complex, high dimensional data in topology data analysis (TDA) and has been widely used in biomedical research. It outputs a combinatorial graph whose structure implies the shape of the data. However,the need for manual parameter tuning and fixed intervals, along with fixed\u2026",
-    "solution": "Variants of the standard Mapper algorithms have been developed to address these limitations, yet most of them still require manual tuning of parameters. Additionally, many of these variants, including the standard version found in the literature, were built within a deterministic framework and overlooked the uncertainty inherent in the data. To relax these limitations, in this work, we introduce\u2026",
-    "source": "arxiv"
+    "type": "archive Q&A",
+    "topic": "stack exchange dump",
+    "problem": "I used to use vim during the last years for editing configs and scripts on remote servers. A couple of weeks ago I decided to take the next step and try to use (Mac)vim as my regular editor besides Sublime Text 2. Now I reached a point where I would like to create my first plugin. My plugin will define ~16 global variables which could be assigned by an user in order to adjust certain properties\u2026",
+    "solution": "The `if exists(...)` is indeed the canonical configuration idiom and the way to go. Of course, you can do a little meta-programming to reduce the duplication (something like `function! s:SetDefault( varname, default )`); some plugins do that. It's good that you intend to allow a great level of customization, on the other hand, unless your plugin deals with a very complex issue (in a text\u2026",
+    "source": "stackexchange"
   }
 }
