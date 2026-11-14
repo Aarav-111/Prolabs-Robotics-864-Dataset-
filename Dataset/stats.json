@@ -7,31 +7,31 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794654493.586192,
-  "updated_iso": "2026-11-14T16:38:13",
-  "uptime_s": 169993,
+  "updated": 1794654642.151216,
+  "updated_iso": "2026-11-14T16:40:42",
+  "uptime_s": 170141,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 24,
     "text": 116,
+    "web_images": 24,
     "archive": 116
   },
-  "waiting": 236,
+  "waiting": 237,
   "processes": 1,
   "fields": {
     "computer science": 1028794,
     "mathematics": 927748,
-    "general": 667188,
-    "engineering": 525279,
+    "general": 668785,
+    "engineering": 525473,
     "physics": 502898,
     "medicine": 340863,
     "chemistry": 309790,
-    "biology": 295882,
-    "economics and finance": 220375,
-    "earth and space": 205452,
-    "materials science": 191033,
+    "biology": 296275,
+    "economics and finance": 221038,
+    "earth and space": 205831,
+    "materials science": 191345,
     "humanities": 131611,
     "statistics": 126739,
     "psychology": 117740,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5675136,
-    "originals": 31108,
-    "variants": 5644028,
-    "web_images": 6186,
+    "text": 5678674,
+    "originals": 31127,
+    "variants": 5647547,
+    "web_images": 6218,
     "synthetic_images": 14064,
-    "images": 20250,
+    "images": 20282,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2806818498,
-    "tasks_done": 96267,
+    "tokens": 2808186955,
+    "tasks_done": 96375,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 9610
   },
   "by_kind": {
-    "archive": 13369,
-    "text": 18685,
-    "web_images": 17762,
+    "archive": 13375,
+    "text": 18724,
+    "web_images": 17825,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2806818498,
-  "per_min": 3316.1,
+  "tokens": 2808186955,
+  "per_min": 1039.6,
   "topics": {
     "known": 109914,
-    "explored": 30162,
-    "queued": 79632,
+    "explored": 30201,
+    "queued": 79593,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "personal data",
-        "humanities",
-        0
-      ],
-      [
-        "mobile learning",
-        "computer science",
-        0
-      ],
-      [
-        "petrology",
-        "earth and space",
-        0
-      ],
-      [
-        "klinefelter syndrome",
-        "biology",
-        0
-      ],
-      [
-        "online learning",
+        "law enforcement",
         "",
         0
       ],
       [
-        "ukrainian foreign trade",
-        "economics and finance",
+        "web application",
+        "",
         0
       ],
       [
-        "german economic history",
-        "economics and finance",
-        0
-      ],
-      [
-        "resilience promotion",
-        "psychology",
-        0
-      ],
-      [
-        "label disambiguation",
-        "computer science",
-        0
-      ],
-      [
-        "leaf blade width",
-        "biology",
-        0
-      ],
-      [
-        "pierre robin sequence",
+        "horticultural therapy",
         "medicine",
         0
       ],
       [
-        "digital burnout",
+        "peroxiredoxin 1",
+        "biology",
+        0
+      ],
+      [
+        "preprocedural anxiety",
         "psychology",
-        634
+        0
+      ],
+      [
+        "thyroid carcinoma",
+        "",
+        0
+      ],
+      [
+        "supplier management",
+        "economics and finance",
+        0
+      ],
+      [
+        "isotopes of carbon",
+        "",
+        0
+      ],
+      [
+        "bilirubin",
+        "",
+        1597
+      ],
+      [
+        "gut microbiota metabolites",
+        "biology",
+        0
+      ],
+      [
+        "prevalence",
+        "",
+        0
+      ],
+      [
+        "currency options",
+        "economics and finance",
+        663
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794654493.5850089,
-    "cpu": 36.9,
+    "time": 1794654642.150066,
+    "cpu": 44.2,
     "cpu_cores": [
-      41.5,
-      41.5,
-      36.9,
-      35.0,
-      48.1,
-      43.9,
-      28.6,
-      19.8
+      49.7,
+      47.8,
+      46.5,
+      40.3,
+      55.6,
+      50.5,
+      36.8,
+      26.9
     ],
-    "mem": 80.6,
-    "mem_used_gb": 2.69,
+    "mem": 79.6,
+    "mem_used_gb": 2.73,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 111.2,
+    "proc_mem_mb": 212.3,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 28792850432,
-    "net_tx": 28574640128,
-    "down_kbps": 167.1,
-    "up_kbps": 120.1,
+    "net_rx": 28845733888,
+    "net_tx": 28634779648,
+    "down_kbps": 795.0,
+    "up_kbps": 508.1,
     "disk_free_gb": 11.7,
     "load": [
-      4.37,
-      4.63,
-      3.49
+      4.82,
+      4.51,
+      3.6
     ],
     "cores": 8
   },
-  "disk_mb": 685.3,
+  "disk_mb": 676.1,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (6 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794654491.442819,
-    "next_sync_s": 143,
-    "commits": 165
+    "last_push": 1794654562.875184,
+    "next_sync_s": 296,
+    "commits": 166
   },
   "last_sample": {
-    "type": "text",
-    "topic": "digital burnout",
-    "problem": "AI-Driven Feedback Loops in Digital Technologies: Psychological Impacts on User Behaviour and Well-Being The rapid spread of digital technologies has produced data-driven feedback loops, wearable devices, social media networks, and mobile applications that shape user behavior, motivation, and mental well-being. While these systems encourage self-improvement and the development of healthier\u2026",
-    "solution": "Employing a descriptive survey method, the study collected data from 200 purposely selected users to assess changes in behaviour, motivation, and mental well-being related to health, social, and lifestyle applications. Results indicate that while feedback mechanisms facilitate goal attainment and social interconnection through streaks and badges, among other components, they also enhance\u2026",
-    "source": "arxiv"
+    "type": "web image",
+    "topic": "currency options",
+    "problem": "An option to withdraw British Pounds, Euro's, and United States Dollars at a GWK Travelex-branded automatic teller machine, that is located in the Schiphol international airport, Haarlemmermeer.",
+    "solution": "CC BY-SA 4.0",
+    "source": "wikimedia commons"
   }
 }
