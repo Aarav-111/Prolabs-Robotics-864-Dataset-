@@ -2,37 +2,37 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 5.9,
+  "disk_free_gb": 5.8,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794664758.4298759,
-  "updated_iso": "2026-11-14T19:29:18",
-  "uptime_s": 180258,
+  "updated": 1794665014.077753,
+  "updated_iso": "2026-11-14T19:33:34",
+  "uptime_s": 180513,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 251,
   "busy_by_kind": {
-    "text": 116,
-    "archive": 116,
+    "archive": 114,
+    "text": 113,
     "web_images": 24
   },
-  "waiting": 242,
+  "waiting": 241,
   "processes": 1,
   "fields": {
-    "computer science": 1175329,
+    "computer science": 1186516,
     "mathematics": 928130,
-    "general": 745559,
-    "engineering": 569372,
+    "general": 749141,
+    "engineering": 573976,
     "physics": 502898,
     "medicine": 360118,
-    "biology": 319218,
+    "biology": 319513,
     "chemistry": 315561,
     "economics and finance": 235287,
-    "earth and space": 223533,
-    "materials science": 207787,
-    "humanities": 141505,
+    "earth and space": 223734,
+    "materials science": 210260,
+    "humanities": 142106,
     "psychology": 138859,
     "statistics": 126739,
     "programming": 51833,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 6075531,
-    "originals": 33217,
-    "variants": 6042314,
-    "web_images": 7131,
+    "text": 6098474,
+    "originals": 33330,
+    "variants": 6065144,
+    "web_images": 7166,
     "synthetic_images": 14064,
-    "images": 21195,
+    "images": 21230,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2956415382,
-    "tasks_done": 104554,
+    "tokens": 2964795537,
+    "tasks_done": 104779,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
-    "archive": 15509,
-    "text": 21312,
-    "web_images": 21282,
+    "archive": 15527,
+    "text": 21386,
+    "web_images": 21415,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2956415382,
-  "per_min": 3260.2,
+  "tokens": 2964795537,
+  "per_min": 4987.0,
   "topics": {
     "known": 109914,
-    "explored": 32789,
-    "queued": 77005,
+    "explored": 32863,
+    "queued": 76934,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "cancer research trends",
-        "biology",
-        1528
+        "bayesian network classifiers",
+        "computer science",
+        1488
       ],
       [
-        "18th-century german literature",
-        "humanities",
-        201
+        "supervised classification",
+        "computer science",
+        3958
       ],
       [
-        "alum",
-        "earth and space",
-        201
-      ],
-      [
-        "authoritative parenting",
-        "psychology",
+        "microcontroller",
+        "",
         0
       ],
       [
-        "orac",
-        "medicine",
-        0
-      ],
-      [
-        "synchronous primary tumors",
-        "medicine",
-        0
-      ],
-      [
-        "conjoint analysis",
-        "economics and finance",
-        0
-      ],
-      [
-        "home robots",
-        "psychology",
-        0
-      ],
-      [
-        "safety-critical systems",
+        "starlink",
         "engineering",
         0
       ],
       [
-        "cartels",
-        "economics and finance",
+        "health and environment",
+        "earth and space",
         0
       ],
       [
-        "service-oriented architecture",
+        "appetite",
+        "biology",
+        0
+      ],
+      [
+        "free access",
+        "",
+        0
+      ],
+      [
+        "digital switching systems",
+        "engineering",
+        0
+      ],
+      [
+        "policy learning",
+        "humanities",
+        0
+      ],
+      [
+        "soil moisture and remote sensing",
+        "earth and space",
+        0
+      ],
+      [
+        "urban logistics",
+        "humanities",
+        0
+      ],
+      [
+        "control plane",
         "computer science",
-        0
-      ],
-      [
-        "tropocollagen",
-        "materials science",
         0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 117,
     "focus_left": 0
   },
   "system": {
-    "time": 1794664758.427541,
-    "cpu": 42.2,
+    "time": 1794665014.076263,
+    "cpu": 39.4,
     "cpu_cores": [
-      46.9,
-      47.5,
-      39.0,
-      39.6,
-      49.5,
-      52.0,
-      36.4,
-      27.3
+      38.7,
+      36.2,
+      33.3,
+      29.0,
+      53.2,
+      53.1,
+      44.1,
+      27.7
     ],
-    "mem": 82.5,
-    "mem_used_gb": 2.58,
+    "mem": 82.3,
+    "mem_used_gb": 2.61,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 127.5,
+    "proc_mem_mb": 395.7,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 33229203456,
-    "net_tx": 33138834432,
-    "down_kbps": 724.1,
-    "up_kbps": 1186.6,
-    "disk_free_gb": 5.9,
+    "net_rx": 33364189184,
+    "net_tx": 33360434176,
+    "down_kbps": 491.7,
+    "up_kbps": 868.0,
+    "disk_free_gb": 5.8,
     "load": [
-      3.5,
-      3.61,
-      3.55
+      3.53,
+      3.44,
+      3.47
     ],
     "cores": 8
   },
-  "disk_mb": 712.7,
+  "disk_mb": 711.8,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (2 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794664757.488561,
-    "next_sync_s": 121,
-    "commits": 213
+    "last_push": 1794664793.152847,
+    "next_sync_s": 166,
+    "commits": 214
   },
   "last_sample": {
     "type": "text",
-    "topic": "cancer research trends",
-    "problem": "From Data to Insights: A Comprehensive Survey on Advanced Applications in Thyroid Cancer Research Thyroid cancer, the most prevalent endocrine cancer, has gained significant global attention due to its impact on public health. Extensive research efforts have been dedicated to leveraging artificial intelligence (AI) methods for the early detection of this disease, aiming to reduce its morbidity\u2026",
-    "solution": "To address this knowledge gap, we conducted a systematic review and developed a comprehensive taxonomy of machine learning-based applications in thyroid cancer pathogenesis, diagnosis, and prognosis. Our primary objective was to facilitate the research community's ability to stay abreast of technological advancements and potentially lead the emerging trends in this field. This survey presents a\u2026",
+    "topic": "bayesian network classifiers",
+    "problem": "Towards the Next-generation Bayesian Network Classifiers Bayesian network classifiers provide a feasible solution to tabular data classification, with a number of merits like high time and memory efficiency, and great explainability. However, due to the parameter explosion and data sparsity issues, Bayesian network classifiers are restricted to low-order feature dependency modeling, making them\u2026",
+    "solution": "In this paper, we propose a novel paradigm to design high-order Bayesian network classifiers, by learning distributional representations for feature values, as what has been done in word embedding and graph representation learning. The learned distributional representations are encoded with the semantic relatedness between different features through their observed co-occurrence patterns in\u2026",
     "source": "arxiv"
   }
 }
