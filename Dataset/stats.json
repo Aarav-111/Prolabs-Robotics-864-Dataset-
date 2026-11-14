@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.8,
+  "disk_free_gb": 11.7,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794654454.0490491,
-  "updated_iso": "2026-11-14T16:37:34",
-  "uptime_s": 169953,
+  "updated": 1794654493.586192,
+  "updated_iso": "2026-11-14T16:38:13",
+  "uptime_s": 169993,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 247,
+  "waiting": 236,
   "processes": 1,
   "fields": {
     "computer science": 1028794,
@@ -30,11 +30,11 @@
     "chemistry": 309790,
     "biology": 295882,
     "economics and finance": 220375,
-    "earth and space": 205338,
+    "earth and space": 205452,
     "materials science": 191033,
     "humanities": 131611,
     "statistics": 126739,
-    "psychology": 117106,
+    "psychology": 117740,
     "programming": 50527,
     "machine learning": 20661,
     "general knowledge": 13158,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5674388,
-    "originals": 31103,
-    "variants": 5643285,
+    "text": 5675136,
+    "originals": 31108,
+    "variants": 5644028,
     "web_images": 6186,
     "synthetic_images": 14064,
     "images": 20250,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2806507775,
-    "tasks_done": 96217,
+    "tokens": 2806818498,
+    "tasks_done": 96267,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 9610
   },
   "by_kind": {
-    "archive": 13361,
-    "text": 18661,
-    "web_images": 17744,
+    "archive": 13369,
+    "text": 18685,
+    "web_images": 17762,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2806507775,
-  "per_min": 4058.7,
+  "tokens": 2806818498,
+  "per_min": 3316.1,
   "topics": {
     "known": 109914,
-    "explored": 30138,
-    "queued": 79656,
+    "explored": 30162,
+    "queued": 79632,
     "space": 6594840,
     "next": [
       [
@@ -117,10 +117,6 @@
       [
         "physiology",
         "biology"
-      ],
-      [
-        "meteorology",
-        "earth and space"
       ],
       [
         "antennas",
@@ -145,118 +141,122 @@
       [
         "systems biology",
         "biology"
+      ],
+      [
+        "enzymes",
+        "biology"
       ]
     ],
     "recent": [
       [
-        "reverberation",
-        "computer science",
-        0
-      ],
-      [
-        "competitive learning",
-        "computer science",
-        0
-      ],
-      [
-        "nfc",
-        "computer science",
-        0
-      ],
-      [
-        "luxury goods",
-        "economics and finance",
-        0
-      ],
-      [
-        "women in the labour market",
+        "personal data",
         "humanities",
         0
       ],
       [
-        "campus free speech",
-        "humanities",
-        0
-      ],
-      [
-        "reflectivity",
-        "",
-        0
-      ],
-      [
-        "solar reactor",
-        "engineering",
-        0
-      ],
-      [
-        "electronic voting machines",
+        "mobile learning",
         "computer science",
         0
       ],
       [
-        "ce-qual-w2",
+        "petrology",
         "earth and space",
         0
       ],
       [
-        "offset (computer science)",
+        "klinefelter syndrome",
+        "biology",
+        0
+      ],
+      [
+        "online learning",
         "",
         0
       ],
       [
-        "1,4-disubstituted triazoles",
-        "chemistry",
+        "ukrainian foreign trade",
+        "economics and finance",
         0
+      ],
+      [
+        "german economic history",
+        "economics and finance",
+        0
+      ],
+      [
+        "resilience promotion",
+        "psychology",
+        0
+      ],
+      [
+        "label disambiguation",
+        "computer science",
+        0
+      ],
+      [
+        "leaf blade width",
+        "biology",
+        0
+      ],
+      [
+        "pierre robin sequence",
+        "medicine",
+        0
+      ],
+      [
+        "digital burnout",
+        "psychology",
+        634
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794654454.0471108,
-    "cpu": 32.0,
+    "time": 1794654493.5850089,
+    "cpu": 36.9,
     "cpu_cores": [
-      38.5,
+      41.5,
+      41.5,
+      36.9,
+      35.0,
+      48.1,
       43.9,
-      32.2,
-      30.0,
-      36.2,
-      34.9,
-      22.1,
-      17.7
+      28.6,
+      19.8
     ],
-    "mem": 80.9,
-    "mem_used_gb": 2.72,
+    "mem": 80.6,
+    "mem_used_gb": 2.69,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 99.2,
+    "proc_mem_mb": 111.2,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 28781108224,
-    "net_tx": 28559283200,
-    "down_kbps": 45.0,
-    "up_kbps": 31.1,
-    "disk_free_gb": 11.8,
+    "net_rx": 28792850432,
+    "net_tx": 28574640128,
+    "down_kbps": 167.1,
+    "up_kbps": 120.1,
+    "disk_free_gb": 11.7,
     "load": [
-      5.3,
-      4.79,
+      4.37,
+      4.63,
       3.49
     ],
     "cores": 8
   },
-  "disk_mb": 690.8,
+  "disk_mb": 685.3,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794654453.349717,
-    "next_sync_s": 183,
-    "commits": 164
+    "last_push": 1794654491.442819,
+    "next_sync_s": 143,
+    "commits": 165
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "elastocaloric effect",
-    "problem": "\u06cc\u06a9 \u0646\u0645\u0648\u0646\u0647 \u0622\u0632\u0645\u0627\u06cc\u0634\u06af\u0627\u0647\u06cc \u0633\u06cc\u0633\u062a\u0645 \u0633\u0631\u0645\u0627\u06cc\u0634\u06cc \u0628\u0631 \u067e\u0627\u06cc\u0647 \u0627\u062b\u0631 \u0627\u0644\u0627\u0633\u062a\u0648\u06a9\u0627\u0644\u0631\u06cc\u06a9",
-    "solution": "CC BY 4.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "digital burnout",
+    "problem": "AI-Driven Feedback Loops in Digital Technologies: Psychological Impacts on User Behaviour and Well-Being The rapid spread of digital technologies has produced data-driven feedback loops, wearable devices, social media networks, and mobile applications that shape user behavior, motivation, and mental well-being. While these systems encourage self-improvement and the development of healthier\u2026",
+    "solution": "Employing a descriptive survey method, the study collected data from 200 purposely selected users to assess changes in behaviour, motivation, and mental well-being related to health, social, and lifestyle applications. Results indicate that while feedback mechanisms facilitate goal attainment and social interconnection through streaks and badges, among other components, they also enhance\u2026",
+    "source": "arxiv"
   }
 }
