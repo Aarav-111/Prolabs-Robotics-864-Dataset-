@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794639527.7436428,
-  "updated_iso": "2026-11-14T12:28:47",
-  "uptime_s": 155027,
+  "updated": 1794639577.759347,
+  "updated_iso": "2026-11-14T12:29:40",
+  "uptime_s": 155077,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 254,
   "busy_by_kind": {
-    "text": 116,
+    "text": 114,
     "web_images": 24,
     "archive": 116
   },
-  "waiting": 243,
+  "waiting": 240,
   "processes": 1,
   "fields": {
     "mathematics": 926955,
@@ -69,21 +69,21 @@
     "text": 4732257,
     "originals": 26088,
     "variants": 4706169,
-    "web_images": 4488,
+    "web_images": 4501,
     "synthetic_images": 14064,
-    "images": 18552,
+    "images": 18565,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2447763910,
-    "tasks_done": 84672,
+    "tasks_done": 84762,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 7092
   },
   "by_kind": {
-    "archive": 9805,
-    "text": 14794,
-    "web_images": 13622,
+    "archive": 9854,
+    "text": 14830,
+    "web_images": 13627,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2447763910,
-  "per_min": 4539.8,
+  "per_min": 4471.0,
   "topics": {
     "known": 109914,
-    "explored": 26271,
-    "queued": 83523,
+    "explored": 26307,
+    "queued": 83489,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "physical design",
+        "chaetotaxy",
+        "biology",
+        0
+      ],
+      [
+        "peak-to-average power ratio reduction",
         "engineering",
         0
       ],
       [
-        "p3ht:pcbm",
-        "engineering",
-        0
-      ],
-      [
-        "steroidal saponins",
+        "fluorine in organic chemistry",
         "chemistry",
         0
       ],
       [
-        "msme development",
-        "economics and finance",
+        "women in geography",
+        "humanities",
         0
       ],
       [
-        "brain informatics",
+        "hygrothermal properties of building materials",
+        "engineering",
+        0
+      ],
+      [
+        "keratin intermediate filaments",
+        "biology",
+        0
+      ],
+      [
+        "nvh",
+        "engineering",
+        0
+      ],
+      [
+        "voicexml",
         "computer science",
         0
       ],
       [
-        "translation theory",
+        "anthropological method",
         "humanities",
         0
       ],
       [
-        "sexual infidelity",
-        "psychology",
-        0
-      ],
-      [
-        "radical education",
-        "humanities",
-        0
-      ],
-      [
-        "ai-driven personalization",
+        "stock market dynamics",
         "economics and finance",
         0
       ],
       [
-        "asteroid discovery",
-        "earth and space",
+        "coercion resistance",
+        "computer science",
         0
       ],
       [
-        "hospital quality assurance",
+        "cannabis policy",
         "medicine",
-        0
-      ],
-      [
-        "international cooperation in science",
-        "humanities",
         0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 118,
     "focus_left": 0
   },
   "system": {
-    "time": 1794639527.7412748,
-    "cpu": 23.2,
+    "time": 1794639577.737939,
+    "cpu": 27.4,
     "cpu_cores": [
-      23.4,
-      19.7,
-      15.9,
-      12.3,
+      14.3,
+      11.8,
+      7.2,
+      5.6,
+      57.3,
+      50.6,
       43.5,
-      39.5,
-      23.1,
-      8.6
+      29.0
     ],
-    "mem": 77.5,
-    "mem_used_gb": 3.02,
+    "mem": 77.1,
+    "mem_used_gb": 3.05,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 215.3,
+    "proc_mem_mb": 352.6,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 25131556864,
-    "net_tx": 24210262016,
-    "down_kbps": 130.0,
-    "up_kbps": 77.9,
+    "net_rx": 25168932864,
+    "net_tx": 24257670144,
+    "down_kbps": 111.2,
+    "up_kbps": 103.2,
     "disk_free_gb": 10.4,
     "load": [
-      2.05,
-      3.06,
-      3.13
+      1.88,
+      2.85,
+      3.04
     ],
     "cores": 8
   },
-  "disk_mb": 340.2,
+  "disk_mb": 340.8,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794639498.8550222,
-    "next_sync_s": 210,
-    "commits": 136
+    "last_push": 1794639557.092182,
+    "next_sync_s": 160,
+    "commits": 137
   },
   "last_sample": {
     "type": "web image",
-    "topic": "arts-based therapy",
-    "problem": "Illustration of martial arts form named 'The nine ghosts draw their sabres' fromYijin jing(Classic of Transforming the Sinews), woodblock print pasted into MS. Woodcut pasted into MS",
-    "solution": "CC BY 4.0",
+    "topic": "fuel cladding",
+    "problem": "INL's High-Performance Computing Center and Visualization Lab allows detailed modeling and simulation of nuclear fuel performance.",
+    "solution": "CC BY 2.0",
     "source": "wikimedia commons"
   }
 }
