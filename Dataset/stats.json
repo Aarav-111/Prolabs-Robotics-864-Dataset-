@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 13.0,
+  "disk_free_gb": 13.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794655417.629856,
-  "updated_iso": "2026-11-14T16:53:37",
-  "uptime_s": 170917,
+  "updated": 1794655450.219718,
+  "updated_iso": "2026-11-14T16:54:10",
+  "uptime_s": 170949,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "web_images": 24
   },
-  "waiting": 246,
+  "waiting": 229,
   "processes": 1,
   "fields": {
     "computer science": 1041027,
@@ -75,15 +75,15 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2820626338,
-    "tasks_done": 97216,
+    "tasks_done": 97250,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 9610
   },
   "by_kind": {
-    "archive": 13593,
-    "text": 18967,
-    "web_images": 18205,
+    "archive": 13602,
+    "text": 18980,
+    "web_images": 18217,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2820626338,
-  "per_min": 4573.6,
+  "per_min": 2859.8,
   "topics": {
     "known": 109914,
-    "explored": 30444,
-    "queued": 79350,
+    "explored": 30457,
+    "queued": 79337,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "reinterpretation",
-        "",
+        "hindlimb unloading",
+        "medicine",
         0
       ],
       [
-        "zinc ion detection",
-        "chemistry",
+        "skeletal muscle atrophy",
+        "biology",
         0
       ],
       [
-        "wheel-rail contact",
+        "vehicle wake",
         "engineering",
         0
       ],
       [
-        "footedness",
-        "biology",
-        0
-      ],
-      [
-        "fungal pigments",
-        "biology",
-        0
-      ],
-      [
-        "closed abdominal trauma",
+        "membrane skeleton",
         "medicine",
         0
       ],
       [
-        "graphitized carbon black",
+        "selective estrogen receptor degrader",
+        "medicine",
+        0
+      ],
+      [
+        "zirconium metal-organic frameworks",
         "chemistry",
         0
       ],
       [
-        "financial distress prediction",
-        "economics and finance",
+        "cantharidin",
+        "biology",
         0
       ],
       [
-        "western perceptions of the east",
-        "humanities",
-        0
-      ],
-      [
-        "cladistics",
-        "",
-        0
-      ],
-      [
-        "negative refractive index",
+        "oxide scale",
         "materials science",
         0
       ],
       [
-        "poison control centers",
-        "medicine",
+        "herpetology",
+        "biology",
+        0
+      ],
+      [
+        "unifac",
+        "chemistry",
+        0
+      ],
+      [
+        "battered women",
+        "humanities",
+        0
+      ],
+      [
+        "single-page applications",
+        "computer science",
         0
       ]
     ],
@@ -213,44 +213,44 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794655417.628622,
-    "cpu": 39.9,
+    "time": 1794655450.21857,
+    "cpu": 36.3,
     "cpu_cores": [
-      51.9,
-      50.5,
-      45.2,
-      41.8,
+      35.5,
+      45.8,
       39.7,
-      42.1,
-      27.2,
-      20.6
+      30.4,
+      54.9,
+      44.3,
+      28.2,
+      12.1
     ],
-    "mem": 81.9,
-    "mem_used_gb": 2.64,
+    "mem": 81.5,
+    "mem_used_gb": 2.65,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 95.5,
+    "proc_mem_mb": 174.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 29062689792,
-    "net_tx": 28916390912,
-    "down_kbps": 85.0,
-    "up_kbps": 60.5,
+    "net_rx": 29069553664,
+    "net_tx": 28924812288,
+    "down_kbps": 95.6,
+    "up_kbps": 68.4,
     "disk_free_gb": 13.0,
     "load": [
-      3.34,
-      3.49,
-      3.38
+      3.01,
+      3.39,
+      3.35
     ],
     "cores": 8
   },
-  "disk_mb": 683.9,
+  "disk_mb": 681.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794655415.919901,
-    "next_sync_s": 122,
-    "commits": 170
+    "last_push": 1794655450.140658,
+    "next_sync_s": 90,
+    "commits": 171
   },
   "last_sample": {
     "type": "web image",
