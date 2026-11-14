@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794629335.568204,
-  "updated_iso": "2026-11-14T09:38:55",
-  "uptime_s": 144835,
+  "updated": 1794629375.5794182,
+  "updated_iso": "2026-11-14T09:39:35",
+  "uptime_s": 144875,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 255,
+  "in_flight": 256,
   "busy_by_kind": {
     "web_images": 24,
-    "text": 115,
+    "text": 116,
     "archive": 116
   },
-  "waiting": 237,
+  "waiting": 245,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
@@ -69,21 +69,21 @@
     "text": 4153059,
     "originals": 22960,
     "variants": 4130099,
-    "web_images": 3536,
+    "web_images": 3542,
     "synthetic_images": 14064,
-    "images": 17600,
+    "images": 17606,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2194252286,
-    "tasks_done": 79868,
+    "tasks_done": 79878,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 5641
   },
   "by_kind": {
     "archive": 8074,
-    "text": 13043,
-    "web_images": 12300,
+    "text": 13052,
+    "web_images": 12301,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2194252286,
-  "per_min": 548.4,
+  "per_min": 448.2,
   "topics": {
     "known": 109914,
-    "explored": 24520,
-    "queued": 85275,
+    "explored": 24529,
+    "queued": 85265,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,51 @@
     ],
     "recent": [
       [
+        "ai use cases",
+        "computer science",
+        0
+      ],
+      [
+        "sublimation (psychology)",
+        "",
+        0
+      ],
+      [
+        "phthalideisoquinoline alkaloids",
+        "chemistry",
+        0
+      ],
+      [
+        "mongolic languages",
+        "humanities",
+        0
+      ],
+      [
+        "latency reduction",
+        "computer science",
+        0
+      ],
+      [
+        "hypercalcemia",
+        "medicine",
+        0
+      ],
+      [
+        "cable fault detection",
+        "engineering",
+        0
+      ],
+      [
+        "detonation performance",
+        "materials science",
+        0
+      ],
+      [
+        "aerogels",
+        "materials science",
+        0
+      ],
+      [
         "pvc membrane",
         "chemistry",
         0
@@ -162,84 +207,39 @@
         "process analytical technology",
         "chemistry",
         0
-      ],
-      [
-        "diaryl disulfides",
-        "chemistry",
-        0
-      ],
-      [
-        "pressurized gasification",
-        "engineering",
-        0
-      ],
-      [
-        "reaction mechanism",
-        "",
-        0
-      ],
-      [
-        "bayesian clustering",
-        "computer science",
-        0
-      ],
-      [
-        "computer graphics and visualization techniques",
-        "computer science",
-        0
-      ],
-      [
-        "default logic",
-        "computer science",
-        0
-      ],
-      [
-        "linear economy",
-        "economics and finance",
-        0
-      ],
-      [
-        "[3]ferrocenophane",
-        "chemistry",
-        0
-      ],
-      [
-        "anticancer drug design",
-        "chemistry",
-        0
       ]
     ],
-    "in_progress": 119,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794629335.567338,
-    "cpu": 18.8,
+    "time": 1794629375.5785081,
+    "cpu": 21.2,
     "cpu_cores": [
-      27.3,
-      25.6,
       21.5,
-      16.7,
-      31.9,
-      19.3,
-      5.7,
-      2.6
+      18.2,
+      13.8,
+      12.8,
+      23.6,
+      49.8,
+      25.9,
+      4.5
     ],
-    "mem": 65.4,
-    "mem_used_gb": 3.36,
+    "mem": 72.8,
+    "mem_used_gb": 3.75,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 171.1,
+    "proc_mem_mb": 90.6,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 22283390976,
-    "net_tx": 20175315968,
-    "down_kbps": 280.8,
-    "up_kbps": 177.3,
+    "net_rx": 22305327104,
+    "net_tx": 20218005504,
+    "down_kbps": 725.5,
+    "up_kbps": 1556.4,
     "disk_free_gb": 10.5,
     "load": [
-      2.87,
-      3.55,
-      5.56
+      3.5,
+      3.61,
+      5.48
     ],
     "cores": 8
   },
@@ -248,14 +248,14 @@
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794629312.176608,
-    "next_sync_s": 117,
-    "commits": 109
+    "last_push": 1794629373.96278,
+    "next_sync_s": 77,
+    "commits": 110
   },
   "last_sample": {
     "type": "web image",
-    "topic": "wetland regulation",
-    "problem": "Mount Pulag, at 2,928 metres above sea level, is the highest peak in Luzon and the third highest mountain in the Philippines, straddling the borders of Benguet, Ifugao, and Nueva Vizcaya. The protected landscape receives an average annual rainfall of 4,489 millimetres, creating boggy, waterlogged conditions along lower trail sections, particularly during the wet season. It is managed under the National Integrated Protected Areas System, with strict regulations to preserve its exceptional biodiversity",
+    "topic": "cultivar",
+    "problem": "Purple Phalaenopsis Mini cultivar",
     "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
