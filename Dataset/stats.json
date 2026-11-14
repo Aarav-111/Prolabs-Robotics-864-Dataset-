@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794662049.2623858,
-  "updated_iso": "2026-11-14T18:44:09",
-  "uptime_s": 177548,
+  "updated": 1794662075.367681,
+  "updated_iso": "2026-11-14T18:44:35",
+  "uptime_s": 177575,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "web_images": 24
   },
-  "waiting": 230,
+  "waiting": 242,
   "processes": 1,
   "fields": {
     "computer science": 1120739,
@@ -75,15 +75,15 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2911487672,
-    "tasks_done": 102907,
+    "tasks_done": 102931,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
     "archive": 15025,
-    "text": 20786,
-    "web_images": 20645,
+    "text": 20794,
+    "web_images": 20661,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -94,8 +94,8 @@
   "per_min": 0.2,
   "topics": {
     "known": 109914,
-    "explored": 32263,
-    "queued": 77531,
+    "explored": 32271,
+    "queued": 77523,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,46 @@
     ],
     "recent": [
       [
+        "torture survivors",
+        "psychology",
+        0
+      ],
+      [
+        "information systems in enterprises",
+        "economics and finance",
+        0
+      ],
+      [
+        "chloride diffusion",
+        "engineering",
+        0
+      ],
+      [
+        "non-isothermal decomposition",
+        "materials science",
+        0
+      ],
+      [
+        "dining rooms",
+        "engineering",
+        0
+      ],
+      [
+        "zinc accumulation",
+        "biology",
+        0
+      ],
+      [
+        "transmission line inspection robot",
+        "engineering",
+        0
+      ],
+      [
+        "particle decay",
+        "",
+        0
+      ],
+      [
         "moringa oleifera",
         "biology",
         0
@@ -167,90 +207,50 @@
         "jouissance",
         "psychology",
         0
-      ],
-      [
-        "artoolkit",
-        "computer science",
-        0
-      ],
-      [
-        "salivary gland dysfunction",
-        "medicine",
-        0
-      ],
-      [
-        "school accountability",
-        "humanities",
-        0
-      ],
-      [
-        "ai tutors",
-        "computer science",
-        0
-      ],
-      [
-        "placenta accreta spectrum",
-        "medicine",
-        0
-      ],
-      [
-        "industrial energy conservation",
-        "engineering",
-        0
-      ],
-      [
-        "energy-growth nexus",
-        "economics and finance",
-        0
-      ],
-      [
-        "tic disorders",
-        "psychology",
-        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794662049.260201,
-    "cpu": 30.5,
+    "time": 1794662075.366285,
+    "cpu": 32.2,
     "cpu_cores": [
-      49.7,
-      44.0,
-      46.9,
-      41.9,
-      20.9,
-      27.7,
-      9.4,
-      3.6
+      45.9,
+      40.1,
+      41.3,
+      38.5,
+      34.0,
+      32.9,
+      18.8,
+      6.4
     ],
-    "mem": 83.1,
+    "mem": 83.2,
     "mem_used_gb": 2.54,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 164.5,
+    "proc_mem_mb": 93.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32325370880,
-    "net_tx": 31840345088,
-    "down_kbps": 466.2,
-    "up_kbps": 368.5,
+    "net_rx": 32336755712,
+    "net_tx": 31853689856,
+    "down_kbps": 417.1,
+    "up_kbps": 509.0,
     "disk_free_gb": 6.9,
     "load": [
-      2.9,
+      3.0,
       3.13,
       3.28
     ],
     "cores": 8
   },
-  "disk_mb": 695.1,
+  "disk_mb": 695.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794661745.316193,
-    "next_sync_s": 296,
-    "commits": 197
+    "last_push": 1794662074.428213,
+    "next_sync_s": 270,
+    "commits": 198
   },
   "last_sample": {
     "type": "web image",
