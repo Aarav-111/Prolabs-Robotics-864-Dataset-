@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794666436.291765,
-  "updated_iso": "2026-11-14T19:57:16",
-  "uptime_s": 181935,
+  "updated": 1794666485.1613061,
+  "updated_iso": "2026-11-14T19:58:05",
+  "uptime_s": 181984,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 255,
   "busy_by_kind": {
-    "text": 116,
+    "text": 115,
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 246,
+  "waiting": 215,
   "processes": 1,
   "fields": {
     "computer science": 1208518,
@@ -75,14 +75,14 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2997334997,
-    "tasks_done": 106191,
+    "tasks_done": 106247,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
-    "archive": 15861,
-    "text": 21796,
+    "archive": 15910,
+    "text": 21803,
     "web_images": 22083,
     "synthetic_images": 0,
     "vla": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2997334997,
-  "per_min": 3423.9,
+  "per_min": 3222.4,
   "topics": {
     "known": 109914,
-    "explored": 33273,
-    "queued": 76521,
+    "explored": 33280,
+    "queued": 76515,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,41 @@
     ],
     "recent": [
       [
+        "sideband",
+        "",
+        0
+      ],
+      [
+        "kicking technique",
+        "engineering",
+        0
+      ],
+      [
+        "gene expression dynamics",
+        "biology",
+        0
+      ],
+      [
+        "conflict of laws",
+        "",
+        0
+      ],
+      [
+        "chaperone-usher pathway",
+        "biology",
+        0
+      ],
+      [
+        "spatial distribution of economic activity",
+        "economics and finance",
+        0
+      ],
+      [
+        "agroecosystem design",
+        "biology",
+        0
+      ],
+      [
         "qr codes",
         "computer science",
         0
@@ -172,74 +207,39 @@
         "free spectral range",
         "engineering",
         0
-      ],
-      [
-        "non-cognitive traits",
-        "psychology",
-        1688
-      ],
-      [
-        "drug prescribing",
-        "medicine",
-        0
-      ],
-      [
-        "intonation",
-        "psychology",
-        0
-      ],
-      [
-        "icosahedral symmetry",
-        "materials science",
-        0
-      ],
-      [
-        "coal mine accidents",
-        "engineering",
-        0
-      ],
-      [
-        "laccase immobilization",
-        "biology",
-        0
-      ],
-      [
-        "game-playing programs",
-        "computer science",
-        0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 119,
     "focus_left": 0
   },
   "system": {
-    "time": 1794666436.290147,
-    "cpu": 39.4,
+    "time": 1794666485.160128,
+    "cpu": 34.6,
     "cpu_cores": [
-      54.9,
-      54.9,
-      59.2,
-      58.4,
-      34.9,
-      32.2,
-      15.3,
-      6.0
+      42.9,
+      49.6,
+      40.3,
+      44.2,
+      36.7,
+      36.2,
+      17.9,
+      9.3
     ],
-    "mem": 82.7,
-    "mem_used_gb": 2.58,
+    "mem": 83.7,
+    "mem_used_gb": 2.51,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 180.8,
+    "proc_mem_mb": 99.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 34232352768,
-    "net_tx": 34641278976,
-    "down_kbps": 628.8,
-    "up_kbps": 956.8,
+    "net_rx": 34255337472,
+    "net_tx": 34674121728,
+    "down_kbps": 1333.8,
+    "up_kbps": 1238.4,
     "disk_free_gb": 5.4,
     "load": [
-      3.39,
-      3.54,
-      3.48
+      3.3,
+      3.5,
+      3.47
     ],
     "cores": 8
   },
@@ -248,9 +248,9 @@
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794666435.3313012,
-    "next_sync_s": 124,
-    "commits": 224
+    "last_push": 1794666457.235105,
+    "next_sync_s": 75,
+    "commits": 225
   },
   "last_sample": {
     "type": "web image",
