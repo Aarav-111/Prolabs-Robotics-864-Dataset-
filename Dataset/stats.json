@@ -7,33 +7,33 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794666200.8746119,
-  "updated_iso": "2026-11-14T19:53:20",
-  "uptime_s": 181700,
+  "updated": 1794666414.16934,
+  "updated_iso": "2026-11-14T19:56:54",
+  "uptime_s": 181913,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
     "text": 116,
-    "web_images": 24,
-    "archive": 116
+    "archive": 116,
+    "web_images": 24
   },
-  "waiting": 235,
+  "waiting": 242,
   "processes": 1,
   "fields": {
-    "computer science": 1203632,
+    "computer science": 1208518,
     "mathematics": 928130,
     "general": 760994,
-    "engineering": 583745,
+    "engineering": 588202,
     "physics": 502898,
-    "medicine": 360825,
+    "medicine": 364272,
     "biology": 325066,
     "chemistry": 315561,
     "economics and finance": 250142,
     "earth and space": 226547,
-    "materials science": 212115,
+    "materials science": 213627,
     "humanities": 145963,
-    "psychology": 140091,
+    "psychology": 141779,
     "statistics": 126739,
     "programming": 51833,
     "machine learning": 20661,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 6168084,
-    "originals": 33717,
-    "variants": 6134367,
-    "web_images": 7383,
+    "text": 6184074,
+    "originals": 33804,
+    "variants": 6150270,
+    "web_images": 7424,
     "synthetic_images": 14064,
-    "images": 21447,
+    "images": 21488,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2991025810,
-    "tasks_done": 105990,
+    "tokens": 2997334997,
+    "tasks_done": 106172,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
     "archive": 15857,
-    "text": 21712,
-    "web_images": 21970,
+    "text": 21796,
+    "web_images": 22068,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2991025810,
-  "per_min": 1101.7,
+  "tokens": 2997334997,
+  "per_min": 3461.2,
   "topics": {
     "known": 109914,
-    "explored": 33189,
-    "queued": 76605,
+    "explored": 33273,
+    "queued": 76521,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "quality assurance",
+        "qr codes",
+        "computer science",
+        0
+      ],
+      [
+        "h1n1 influenza",
+        "medicine",
+        3268
+      ],
+      [
+        "variable (mathematics)",
         "",
         0
       ],
       [
-        "drowsy driving",
-        "psychology",
-        0
-      ],
-      [
-        "formal contexts",
-        "computer science",
-        0
-      ],
-      [
-        "hemispheric asymmetry in neuroscience",
-        "biology",
-        0
-      ],
-      [
-        "spiht",
-        "computer science",
-        0
-      ],
-      [
-        "mental health apps",
-        "psychology",
-        0
-      ],
-      [
-        "english renaissance literature",
-        "humanities",
-        0
-      ],
-      [
-        "agent mobility",
-        "computer science",
-        0
-      ],
-      [
-        "letters of credit",
-        "humanities",
-        0
-      ],
-      [
-        "ds-cdma",
-        "computer science",
-        0
-      ],
-      [
-        "thymocytes",
-        "biology",
-        0
-      ],
-      [
-        "weakly compressible sph",
+        "transcranial focused ultrasound",
         "engineering",
+        4031
+      ],
+      [
+        "free spectral range",
+        "engineering",
+        0
+      ],
+      [
+        "non-cognitive traits",
+        "psychology",
+        1688
+      ],
+      [
+        "drug prescribing",
+        "medicine",
+        0
+      ],
+      [
+        "intonation",
+        "psychology",
+        0
+      ],
+      [
+        "icosahedral symmetry",
+        "materials science",
+        0
+      ],
+      [
+        "coal mine accidents",
+        "engineering",
+        0
+      ],
+      [
+        "laccase immobilization",
+        "biology",
+        0
+      ],
+      [
+        "game-playing programs",
+        "computer science",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794666200.873712,
-    "cpu": 26.0,
+    "time": 1794666414.1672509,
+    "cpu": 30.7,
     "cpu_cores": [
-      29.2,
-      25.8,
-      21.1,
-      17.1,
-      39.3,
-      45.1,
-      20.8,
-      10.1
+      42.2,
+      48.0,
+      38.0,
+      39.0,
+      26.2,
+      32.8,
+      12.6,
+      6.5
     ],
-    "mem": 80.7,
-    "mem_used_gb": 2.64,
+    "mem": 83.1,
+    "mem_used_gb": 2.55,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 150.3,
+    "proc_mem_mb": 66.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 34102910976,
-    "net_tx": 34446495744,
-    "down_kbps": 491.9,
-    "up_kbps": 394.2,
+    "net_rx": 34208181248,
+    "net_tx": 34614817792,
+    "down_kbps": 176.9,
+    "up_kbps": 102.3,
     "disk_free_gb": 5.4,
     "load": [
-      2.71,
-      3.27,
-      3.39
+      3.52,
+      3.58,
+      3.49
     ],
     "cores": 8
   },
-  "disk_mb": 744.9,
+  "disk_mb": 742.0,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794666198.4038389,
-    "next_sync_s": 57,
-    "commits": 222
+    "last_push": 1794666235.710041,
+    "next_sync_s": 146,
+    "commits": 223
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "jewish inscriptions",
-    "problem": "This media file is uploaded with Wiki Loves Muziris 2019.",
-    "solution": "CC BY-SA 4.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "h1n1 influenza",
+    "problem": "Age-specific contacts and travel patterns in the spatial spread of 2009 H1N1 influenza pandemic Confirmed cases during the early stage of the 2009 H1N1 pdm in various countries showed an age shift between importations and local transmission cases, with adults mainly responsible for seeding unaffected regions and children most frequently driving community outbreaks. We introduce a multi-host\u2026",
+    "solution": "We derive the expression for the global invasion potential of the epidemic that depends on disease transmissibility, transportation network and mobility features, demographic profile and mixing pattern. Highly assortative mixing favor the spatial containment of the epidemic, this effect being contrasted by an increase in the social activity of adults vs. children. Heterogeneity of the mobility\u2026",
+    "source": "arxiv"
   }
 }
