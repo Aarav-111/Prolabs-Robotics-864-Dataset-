@@ -7,24 +7,24 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794638514.571811,
-  "updated_iso": "2026-11-14T12:11:54",
-  "uptime_s": 154014,
+  "updated": 1794638547.31059,
+  "updated_iso": "2026-11-14T12:12:27",
+  "uptime_s": 154047,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 255,
   "busy_by_kind": {
     "web_images": 24,
-    "text": 116,
+    "text": 115,
     "archive": 116
   },
-  "waiting": 246,
+  "waiting": 250,
   "processes": 1,
   "fields": {
     "mathematics": 926955,
-    "computer science": 651701,
+    "computer science": 651902,
     "physics": 502898,
-    "general": 491878,
+    "general": 492481,
     "engineering": 390635,
     "medicine": 283548,
     "biology": 264152,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4593245,
-    "originals": 25370,
-    "variants": 4567875,
-    "web_images": 4363,
+    "text": 4594049,
+    "originals": 25374,
+    "variants": 4568675,
+    "web_images": 4369,
     "synthetic_images": 14064,
-    "images": 18427,
+    "images": 18433,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2368850789,
-    "tasks_done": 84093,
+    "tokens": 2369290469,
+    "tasks_done": 84134,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 6979
   },
   "by_kind": {
     "archive": 9581,
-    "text": 14507,
-    "web_images": 13554,
+    "text": 14542,
+    "web_images": 13560,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2368850789,
-  "per_min": 3506.3,
+  "tokens": 2369290469,
+  "per_min": 3055.7,
   "topics": {
     "known": 109914,
-    "explored": 25984,
-    "queued": 83810,
+    "explored": 26019,
+    "queued": 83776,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "pediatric ethics",
+        "vaginal microbiota",
+        "biology",
+        0
+      ],
+      [
+        "motor unit recruitment",
+        "engineering",
+        0
+      ],
+      [
+        "electrokinetic treatment",
+        "earth and space",
+        0
+      ],
+      [
+        "descurainia sophia",
+        "biology",
+        0
+      ],
+      [
+        "oxazolone derivatives",
+        "chemistry",
+        0
+      ],
+      [
+        "retracted advertisement",
         "medicine",
         0
       ],
       [
-        "electric vehicles and infrastructure",
-        "engineering",
-        0
-      ],
-      [
-        "tourism marketing",
+        "endomarketing",
         "economics and finance",
-        582
-      ],
-      [
-        "rights management",
-        "computer science",
-        225
-      ],
-      [
-        "feynman gate",
-        "computer science",
         0
       ],
       [
-        "sea ice concentration",
-        "earth and space",
-        4307
-      ],
-      [
-        "experimental aesthetics",
-        "biology",
-        3843
-      ],
-      [
-        "sub-pixel edge detection",
-        "computer science",
-        1467
-      ],
-      [
-        "ant colony optimization algorithms",
-        "",
-        3622
-      ],
-      [
-        "air traffic control",
-        "engineering",
-        2566
-      ],
-      [
-        "binary diffusion",
+        "steroid derivatives",
         "chemistry",
-        3259
+        0
       ],
       [
-        "indentation",
-        "",
-        1865
+        "fishermen associations",
+        "earth and space",
+        0
+      ],
+      [
+        "fuhrman grade",
+        "medicine",
+        0
+      ],
+      [
+        "wildlife crossings",
+        "earth and space",
+        0
+      ],
+      [
+        "outdoor leadership",
+        "humanities",
+        0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 119,
     "focus_left": 0
   },
   "system": {
-    "time": 1794638514.5701818,
-    "cpu": 25.6,
+    "time": 1794638547.308274,
+    "cpu": 27.4,
     "cpu_cores": [
-      26.9,
-      20.5,
-      15.9,
-      17.6,
-      40.6,
-      42.9,
-      25.6,
-      15.4
+      27.9,
+      22.0,
+      19.4,
+      14.3,
+      41.8,
+      46.8,
+      28.1,
+      19.3
     ],
-    "mem": 79.2,
-    "mem_used_gb": 2.86,
+    "mem": 78.9,
+    "mem_used_gb": 2.88,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 140.6,
+    "proc_mem_mb": 208.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 24648787968,
-    "net_tx": 23469587456,
-    "down_kbps": 239.6,
-    "up_kbps": 197.4,
+    "net_rx": 24674095104,
+    "net_tx": 23503122432,
+    "down_kbps": 598.2,
+    "up_kbps": 892.2,
     "disk_free_gb": 10.4,
     "load": [
-      2.58,
-      2.9,
-      3.05
+      2.22,
+      2.76,
+      2.99
     ],
     "cores": 8
   },
-  "disk_mb": 290.0,
+  "disk_mb": 294.8,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794638443.098872,
-    "next_sync_s": 265,
-    "commits": 132
+    "last_push": 1794638546.262955,
+    "next_sync_s": 232,
+    "commits": 133
   },
   "last_sample": {
     "type": "web image",
-    "topic": "mental state attribution",
-    "problem": "In 2014, webcomic creator Ellipsis Hana Stephens (known as Tarol Hunt \"Thunt\" Stephens at the time)[1], best known for creating Goblins, suffered a nervous breakdown and went on hiatus. After two months, her wife persuaded her to draw what she was feeling; she produced this image. She subsequently described it as follows:[2] \"So a lot of you have already seen the picture. The thing I drew when my brain had more shaky cam than Man of Steel. Drawing this was a huge help at the time, since communicating just\u2026 wasn\u2019t something I could do and I needed to express myself in some way. I honestly\u2026",
-    "solution": "CC BY 4.0",
+    "topic": "tourism marketing",
+    "problem": "29 Nov 2012 North America and Mainland Europe hold the key to tourism growth next year, according to Tourism Ireland, as it launched its marketing plans for 2013 today. The plans will see visitor numbers to the island of Ireland increase by +5% to 7.6 million in 2013, contributing \u20ac3.7 billion (+6%) to the economies, north and south. 2012 looks set to be one of the strongest years ever for visitors from North America to Ireland (since the previous high of 2007, when we welcomed over one million visitors). And, with the number of airline seats from the United States to Ireland set to grow by\u2026",
+    "solution": "CC BY-SA 2.0",
     "source": "wikimedia commons"
   }
 }
