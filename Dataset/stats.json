@@ -7,25 +7,25 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794626883.151965,
-  "updated_iso": "2026-11-14T08:58:03",
-  "uptime_s": 142382,
+  "updated": 1794626916.490717,
+  "updated_iso": "2026-11-14T08:58:39",
+  "uptime_s": 142416,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 255,
   "busy_by_kind": {
     "web_images": 24,
-    "text": 116,
+    "text": 115,
     "archive": 116
   },
-  "waiting": 228,
+  "waiting": 218,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
     "computer science": 532783,
     "physics": 502898,
     "general": 410453,
-    "engineering": 315857,
+    "engineering": 316058,
     "medicine": 253092,
     "biology": 218282,
     "chemistry": 206022,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4040885,
-    "originals": 22337,
-    "variants": 4018548,
-    "web_images": 3353,
+    "text": 4041086,
+    "originals": 22338,
+    "variants": 4018748,
+    "web_images": 3358,
     "synthetic_images": 14064,
-    "images": 17417,
+    "images": 17422,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2148437848,
-    "tasks_done": 79287,
+    "tokens": 2148506950,
+    "tasks_done": 79301,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 5338
   },
   "by_kind": {
     "archive": 7840,
-    "text": 12789,
-    "web_images": 12207,
+    "text": 12792,
+    "web_images": 12219,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2148437848,
-  "per_min": 8868.5,
+  "tokens": 2148506950,
+  "per_min": 6744.8,
   "topics": {
     "known": 109914,
-    "explored": 24266,
-    "queued": 85528,
+    "explored": 24269,
+    "queued": 85526,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,21 @@
     ],
     "recent": [
       [
+        "direct-sequence uwb",
+        "engineering",
+        201
+      ],
+      [
+        "falsified medicines directive",
+        "medicine",
+        0
+      ],
+      [
+        "cryogenic insulation",
+        "engineering",
+        0
+      ],
+      [
         "fdg-pet",
         "medicine",
         13347
@@ -192,71 +207,56 @@
         "financial management behavior",
         "economics and finance",
         5147
-      ],
-      [
-        "url classification",
-        "computer science",
-        5300
-      ],
-      [
-        "air pollution governance",
-        "earth and space",
-        2714
-      ],
-      [
-        "fibrillar network",
-        "materials science",
-        3437
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 119,
     "focus_left": 0
   },
   "system": {
-    "time": 1794626883.150501,
-    "cpu": 26.1,
+    "time": 1794626916.412648,
+    "cpu": 45.5,
     "cpu_cores": [
-      43.5,
-      38.4,
-      35.5,
-      32.3,
-      29.0,
-      18.9,
-      9.2,
-      1.8
+      59.9,
+      57.3,
+      55.3,
+      53.6,
+      33.6,
+      39.2,
+      21.3,
+      44.0
     ],
-    "mem": 78.0,
-    "mem_used_gb": 3.03,
+    "mem": 83.1,
+    "mem_used_gb": 4.33,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 191.3,
+    "proc_mem_mb": 166.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 21266312192,
-    "net_tx": 18697860096,
-    "down_kbps": 892.0,
-    "up_kbps": 806.3,
+    "net_rx": 21324616704,
+    "net_tx": 18781369344,
+    "down_kbps": 1988.7,
+    "up_kbps": 2704.2,
     "disk_free_gb": 11.3,
     "load": [
-      4.55,
-      5.72,
-      7.58
+      3.88,
+      5.43,
+      7.41
     ],
     "cores": 8
   },
-  "disk_mb": 145.1,
+  "disk_mb": 149.0,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794626798.66125,
-    "next_sync_s": 185,
-    "commits": 102
+    "last_push": 1794626913.8453481,
+    "next_sync_s": 151,
+    "commits": 103
   },
   "last_sample": {
-    "type": "archive Q&A",
-    "topic": "openlifescienceai/medmcqa",
-    "problem": "User: Okay, so: A woman died within 5 years of marriage under suspicious circumstances. Her parents complained that her in laws used to frequently demand for dowry. Under which of the following sections can be a magistrate authorize autopsy of the case? A) Section 302 IPC B) Section 174 Cr Pc C) Section 174 Cr Pc D) Section 304 IPC",
-    "solution": "Assistant: So here's the trick. Answer: C) Section 174 Cr Pc Explanation: ref: The Essentials Forensic Medicine & Toxicology Dr.K.S. Narayana Reddy 32nd edition pg no 280 S.174 (3)Cr.P.C. Procedure in dowry (suicide,suspected murder ,request by a relative; doubt of cause of death, police look at necessary ) police has to enqire and repo.dowry death occur either by mmurder of a married woomenor\u2026",
-    "source": "huggingface"
+    "type": "text",
+    "topic": "direct-sequence uwb",
+    "problem": "Frequency-Domain Group-based Shrinkage Estimators for UWB Systems In this work, we propose low-complexity adaptive biased estimation algorithms, called group-based shrinkage estimators (GSEs), for parameter estimation and interference suppression scenarios with mechanisms to automatically adjust the shrinkage factors. The proposed estimation algorithms divide the target parameter vector into a\u2026",
+    "solution": "GSE schemes improve the performance of the conventional least squares (LS) estimator in terms of the mean-squared error (MSE), while requiring a very modest increase in complexity. An MSE analysis is presented which indicates the lower bounds of the GSE schemes with different group sizes. We prove that our proposed schemes outperform the biased estimation with only one shrinkage factor and the\u2026",
+    "source": "arxiv"
   }
 }
