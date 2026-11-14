@@ -2,37 +2,37 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 12.2,
+  "disk_free_gb": 12.0,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794653021.0337632,
-  "updated_iso": "2026-11-14T16:13:41",
-  "uptime_s": 168520,
+  "updated": 1794653225.0973692,
+  "updated_iso": "2026-11-14T16:17:05",
+  "uptime_s": 168724,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
     "text": 116,
-    "archive": 116,
-    "web_images": 24
+    "web_images": 24,
+    "archive": 116
   },
-  "waiting": 237,
+  "waiting": 234,
   "processes": 1,
   "fields": {
-    "computer science": 1021883,
+    "computer science": 1026854,
     "mathematics": 927748,
-    "general": 661253,
+    "general": 663374,
     "engineering": 523716,
     "physics": 502898,
-    "medicine": 337150,
+    "medicine": 337261,
     "chemistry": 308727,
     "biology": 295882,
     "economics and finance": 220375,
-    "earth and space": 201685,
+    "earth and space": 205141,
     "materials science": 189692,
-    "humanities": 130785,
+    "humanities": 131611,
     "statistics": 126739,
     "psychology": 117106,
     "programming": 48692,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5647548,
-    "originals": 30984,
-    "variants": 5616564,
-    "web_images": 6102,
+    "text": 5659033,
+    "originals": 31048,
+    "variants": 5627985,
+    "web_images": 6118,
     "synthetic_images": 14064,
-    "images": 20166,
+    "images": 20182,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2795398312,
-    "tasks_done": 95640,
+    "tokens": 2799780902,
+    "tasks_done": 95816,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 9440
   },
   "by_kind": {
-    "archive": 13143,
-    "text": 18492,
-    "web_images": 17554,
+    "archive": 13195,
+    "text": 18564,
+    "web_images": 17606,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2795398312,
-  "per_min": 1852.7,
+  "tokens": 2799780902,
+  "per_min": 2430.2,
   "topics": {
     "known": 109914,
-    "explored": 29969,
-    "queued": 79825,
+    "explored": 30041,
+    "queued": 79753,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "waste management plan",
-        "medicine",
-        359
-      ],
-      [
-        "in-service degradation",
-        "materials science",
-        201
-      ],
-      [
-        "driver fatigue",
-        "psychology",
-        0
-      ],
-      [
-        "atmospheric temperature",
-        "",
-        0
-      ],
-      [
-        "carbazole synthesis",
-        "chemistry",
-        0
-      ],
-      [
-        "polyamine transport",
+        "tick-borne pathogens",
         "biology",
         0
       ],
       [
-        "coffee value chain",
-        "biology",
-        0
-      ],
-      [
-        "vegetable prices",
-        "economics and finance",
-        0
-      ],
-      [
-        "rfid",
+        "td-scdma",
         "computer science",
         0
       ],
       [
-        "heap leaching",
-        "materials science",
+        "bloom filters",
+        "computer science",
         0
       ],
       [
-        "surfactants",
+        "organolithium reactivity",
         "chemistry",
         0
       ],
       [
-        "agricultural information infrastructure",
-        "economics and finance",
+        "co2 migration",
+        "earth and space",
+        3146
+      ],
+      [
+        "semiconductor laser theory",
+        "",
+        1341
+      ],
+      [
+        "race and medicine",
+        "humanities",
+        826
+      ],
+      [
+        "pathognomonic",
+        "",
+        579
+      ],
+      [
+        "beaked whales",
+        "earth and space",
+        310
+      ],
+      [
+        "relaxation (psychology)",
+        "",
+        201
+      ],
+      [
+        "vasospasm",
+        "medicine",
+        111
+      ],
+      [
+        "primary care",
+        "",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794653021.0016892,
-    "cpu": 29.5,
+    "time": 1794653225.0957708,
+    "cpu": 41.0,
     "cpu_cores": [
-      18.1,
-      13.7,
-      10.4,
-      8.3,
-      55.1,
-      59.0,
-      42.5,
-      29.6
+      50.7,
+      50.0,
+      45.7,
+      45.9,
+      50.0,
+      44.0,
+      29.2,
+      13.1
     ],
-    "mem": 79.9,
-    "mem_used_gb": 2.78,
+    "mem": 81.1,
+    "mem_used_gb": 2.7,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 149.2,
+    "proc_mem_mb": 184.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 28642202624,
-    "net_tx": 28427832320,
-    "down_kbps": 85.7,
-    "up_kbps": 88.8,
-    "disk_free_gb": 12.2,
+    "net_rx": 28692646912,
+    "net_tx": 28477507584,
+    "down_kbps": 1427.7,
+    "up_kbps": 1312.5,
+    "disk_free_gb": 12.0,
     "load": [
-      2.54,
-      2.17,
-      2.4
+      2.55,
+      2.32,
+      2.41
     ],
     "cores": 8
   },
-  "disk_mb": 679.0,
+  "disk_mb": 681.7,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794652998.013341,
-    "next_sync_s": 199,
-    "commits": 159
+    "last_push": 1794653045.6700978,
+    "next_sync_s": 296,
+    "commits": 160
   },
   "last_sample": {
-    "type": "text",
-    "topic": "waste management plan",
-    "problem": "Dynamic Planning of Bicycle Stations in Dockless Public Bicycle-sharing System Using Gated Graph Neural Network Benefiting from convenient cycling and flexible parking locations, the Dockless Public Bicycle-sharing (DL-PBS) network becomes increasingly popular in many countries. However, redundant and low-utility stations waste public urban space and maintenance costs of DL-PBS vendors. In this\u2026",
-    "solution": "The BSDP system contains four modules: bicycle drop-off location clustering, bicycle-station graph modeling, bicycle-station location prediction, and bicycle-station layout recommendation. In the bicycle drop-off location clustering module, candidate bicycle stations are clustered from each spatio-temporal subset of the large-scale cycling trajectory records. In the bicycle-station graph\u2026",
-    "source": "arxiv"
+    "type": "web image",
+    "topic": "race and medicine",
+    "problem": "Eastern Spot-billed Duck, Tenn\u014dji Park, Osaka.",
+    "solution": "CC BY-SA 4.0",
+    "source": "wikimedia commons"
   }
 }
