@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794660802.6606169,
-  "updated_iso": "2026-11-14T18:23:22",
-  "uptime_s": 176302,
+  "updated": 1794660856.712689,
+  "updated_iso": "2026-11-14T18:24:16",
+  "uptime_s": 176356,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,10 +18,10 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 228,
+  "waiting": 207,
   "processes": 1,
   "fields": {
-    "computer science": 1118775,
+    "computer science": 1119177,
     "mathematics": 928130,
     "general": 695971,
     "engineering": 554007,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5917261,
-    "originals": 32390,
-    "variants": 5884871,
+    "text": 5917663,
+    "originals": 32392,
+    "variants": 5885271,
     "web_images": 6790,
     "synthetic_images": 14064,
     "images": 20854,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2898122368,
-    "tasks_done": 101651,
+    "tokens": 2898259371,
+    "tasks_done": 101703,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
-    "archive": 14711,
-    "text": 20367,
-    "web_images": 20122,
+    "archive": 14712,
+    "text": 20402,
+    "web_images": 20138,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2898122368,
-  "per_min": 3719.3,
+  "tokens": 2898259371,
+  "per_min": 3801.6,
   "topics": {
     "known": 109914,
-    "explored": 31844,
-    "queued": 77950,
+    "explored": 31879,
+    "queued": 77915,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "pddl",
-        "computer science",
-        0
-      ],
-      [
-        "mininet",
-        "computer science",
-        4424
-      ],
-      [
-        "session (web analytics)",
-        "",
-        1032
-      ],
-      [
-        "energy fraud",
+        "printing orientation",
         "engineering",
-        404
+        0
       ],
       [
-        "mushy zone",
-        "materials science",
-        533
-      ],
-      [
-        "phyllanthus amarus",
-        "medicine",
-        147
-      ],
-      [
-        "unstructured clinical data",
+        "information systems",
         "computer science",
         0
       ],
       [
-        "reciprocal translocation",
+        "brazil-india relations",
+        "economics and finance",
+        0
+      ],
+      [
+        "filtered-x lms algorithm",
+        "computer science",
+        201
+      ],
+      [
+        "periodical essays",
+        "humanities",
+        0
+      ],
+      [
+        "ikonos",
+        "computer science",
+        201
+      ],
+      [
+        "phytophthora ramorum",
         "biology",
         0
       ],
       [
-        "iodine maps",
+        "sucrose accumulation",
+        "biology",
+        0
+      ],
+      [
+        "business influence on politics",
+        "economics and finance",
+        0
+      ],
+      [
+        "motorcycle repair manual",
         "engineering",
         0
       ],
       [
-        "argument (complex analysis)",
-        "",
+        "gamma camera",
+        "medicine",
         0
       ],
       [
-        "perfluoroalkyl acids",
-        "earth and space",
-        0
-      ],
-      [
-        "non-innovative business units",
-        "economics and finance",
+        "vehicle interior noise",
+        "engineering",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794660802.659393,
-    "cpu": 33.6,
+    "time": 1794660856.711339,
+    "cpu": 37.5,
     "cpu_cores": [
-      38.6,
-      38.1,
-      32.7,
-      33.8,
-      43.2,
-      46.5,
-      25.0,
-      11.3
+      47.2,
+      44.5,
+      39.4,
+      36.5,
+      43.3,
+      43.1,
+      27.2,
+      19.2
     ],
-    "mem": 80.7,
+    "mem": 81.2,
     "mem_used_gb": 2.65,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 188.8,
+    "proc_mem_mb": 135.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 31870437376,
-    "net_tx": 31235324928,
-    "down_kbps": 291.9,
-    "up_kbps": 304.1,
+    "net_rx": 31887432704,
+    "net_tx": 31255239680,
+    "down_kbps": 413.6,
+    "up_kbps": 440.8,
     "disk_free_gb": 7.0,
     "load": [
-      3.26,
-      3.63,
-      3.58
+      2.85,
+      3.42,
+      3.5
     ],
     "cores": 8
   },
-  "disk_mb": 684.1,
+  "disk_mb": 687.8,
   "github": {
-    "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794659765.4044921,
-    "next_sync_s": 296,
-    "commits": 187
+    "last_push": 1794660854.4299362,
+    "next_sync_s": 242,
+    "commits": 188
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "dental morphology",
-    "problem": "Denture humaine : num\u00e9rotation - En rouge : num\u00e9rotation introduite par la F\u00e9d\u00e9ration dentaire internationale en 1970 (norme ISO 3950-1984). - Dans ce syst\u00e8me, on ajoute 4 au premier chiffre pour d\u00e9signer une dent de lait. - En vert : num\u00e9rotation traditionnelle (Universal Numbering System). - Les dents de lait y sont associ\u00e9es aux lettres de A \u00e0 T, dans le m\u00eame sens de rotation. Composition personnelle \u00e0 partir d'une feuille de soins dentaires de la S\u00e9curit\u00e9 sociale, destin\u00e9e aux Fran\u00e7ais de l'\u00e9tranger.",
-    "solution": "Public domain",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "filtered-x lms algorithm",
+    "problem": "Distributed Multichannel Active Noise Control with Asynchronous Communication Distributed multichannel active noise control (DMCANC) offers effective noise reduction across large spatial areas by distributing the computational load of centralized control to multiple low-cost nodes. Conventional DMCANC methods, however, typically assume synchronous communication and require frequent data\u2026",
+    "solution": "To enhance efficiency and adaptability, this work proposes an asynchronous communication strategy where each node executes a weight-constrained filtered-x LMS (WCFxLMS) algorithm and independently requests communication only when its local noise reduction performance degrades. Upon request, other nodes transmit the weight difference between their local control filter and the center point in\u2026",
+    "source": "arxiv"
   }
 }
