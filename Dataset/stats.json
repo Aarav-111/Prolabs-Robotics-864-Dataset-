@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794664340.112739,
-  "updated_iso": "2026-11-14T19:22:20",
-  "uptime_s": 179839,
+  "updated": 1794664383.902111,
+  "updated_iso": "2026-11-14T19:23:10",
+  "uptime_s": 179883,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 252,
   "busy_by_kind": {
-    "text": 116,
     "archive": 116,
-    "web_images": 24
+    "text": 115,
+    "web_images": 21
   },
-  "waiting": 234,
+  "waiting": 216,
   "processes": 1,
   "fields": {
     "computer science": 1156552,
@@ -69,21 +69,21 @@
     "text": 6031476,
     "originals": 32987,
     "variants": 5998489,
-    "web_images": 7040,
+    "web_images": 7057,
     "synthetic_images": 14064,
-    "images": 21104,
+    "images": 21121,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2940536668,
-    "tasks_done": 104111,
+    "tasks_done": 104184,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
     "archive": 15393,
-    "text": 21187,
-    "web_images": 21080,
+    "text": 21195,
+    "web_images": 21145,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2940536668,
-  "per_min": 6633.3,
+  "per_min": 5646.6,
   "topics": {
     "known": 109914,
-    "explored": 32664,
-    "queued": 77130,
+    "explored": 32672,
+    "queued": 77123,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,46 @@
     ],
     "recent": [
       [
+        "mentoring skills",
+        "humanities",
+        0
+      ],
+      [
+        "stable diffusion",
+        "computer science",
+        0
+      ],
+      [
+        "office buildings",
+        "engineering",
+        0
+      ],
+      [
+        "hot corrosion",
+        "materials science",
+        0
+      ],
+      [
+        "electrical discharge machining",
+        "engineering",
+        0
+      ],
+      [
+        "glass fiber",
+        "",
+        0
+      ],
+      [
+        "seismometer installation",
+        "earth and space",
+        0
+      ],
+      [
+        "vehicular edge computing",
+        "computer science",
+        0
+      ],
+      [
         "drainage network extraction",
         "earth and space",
         0
@@ -167,78 +207,38 @@
         "resilience scale",
         "psychology",
         0
-      ],
-      [
-        "aluminum foam",
-        "engineering",
-        0
-      ],
-      [
-        "epilepsy diagnosis",
-        "biology",
-        3871
-      ],
-      [
-        "shortest path problem",
-        "",
-        5823
-      ],
-      [
-        "cognitive bias",
-        "",
-        4283
-      ],
-      [
-        "pelagic zone",
-        "",
-        374
-      ],
-      [
-        "unsupervised classification",
-        "computer science",
-        3306
-      ],
-      [
-        "tiantong national forest park",
-        "biology",
-        0
-      ],
-      [
-        "local food",
-        "biology",
-        0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 119,
     "focus_left": 0
   },
   "system": {
-    "time": 1794664340.111888,
-    "cpu": 23.8,
+    "time": 1794664383.786578,
+    "cpu": 36.9,
     "cpu_cores": [
-      23.7,
-      22.8,
-      18.1,
-      14.3,
-      46.6,
-      39.8,
-      20.3,
-      5.4
+      33.1,
+      30.8,
+      26.1,
+      23.5,
+      52.5,
+      54.1,
+      46.2,
+      29.5
     ],
-    "mem": 80.7,
-    "mem_used_gb": 2.75,
+    "mem": 81.5,
+    "mem_used_gb": 2.7,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 194.1,
+    "proc_mem_mb": 173.6,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32928855040,
-    "net_tx": 32700420096,
-    "down_kbps": 460.5,
-    "up_kbps": 378.3,
+    "net_rx": 32971154432,
+    "net_tx": 32752545792,
+    "down_kbps": 578.0,
+    "up_kbps": 855.8,
     "disk_free_gb": 6.0,
     "load": [
-      3.17,
-      3.7,
+      3.35,
+      3.69,
       3.55
     ],
     "cores": 8
@@ -249,14 +249,14 @@
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 1794664315.429591,
-    "next_sync_s": 237,
+    "next_sync_s": 193,
     "commits": 208
   },
   "last_sample": {
     "type": "web image",
-    "topic": "binder jetting",
-    "problem": "3D printer using the Binder Jetting technology; an inkjet spit bar injects colored binding agent into a powder bed building up a colorful object (here: flowers) layer by layer",
-    "solution": "CC BY-SA 4.0",
+    "topic": "distributed arithmetic",
+    "problem": "Mathematical image of an arithmetic billiard. Example (of a periodic path) with the numbers 35 and 14.",
+    "solution": "CC0",
     "source": "wikimedia commons"
   }
 }
