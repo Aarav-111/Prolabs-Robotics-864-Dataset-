@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.6,
+  "disk_free_gb": 12.2,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794650820.5493262,
-  "updated_iso": "2026-11-14T15:37:00",
-  "uptime_s": 166320,
+  "updated": 1794652922.618478,
+  "updated_iso": "2026-11-14T16:12:02",
+  "uptime_s": 168422,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,26 +18,26 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 209,
+  "waiting": 231,
   "processes": 1,
   "fields": {
-    "computer science": 967952,
+    "computer science": 1021883,
     "mathematics": 927748,
-    "general": 651154,
-    "engineering": 503828,
+    "general": 661253,
+    "engineering": 523716,
     "physics": 502898,
-    "medicine": 332587,
-    "chemistry": 303236,
-    "biology": 291442,
-    "economics and finance": 214175,
-    "earth and space": 194086,
-    "materials science": 185604,
+    "medicine": 336791,
+    "chemistry": 308727,
+    "biology": 295882,
+    "economics and finance": 220375,
+    "earth and space": 201685,
+    "materials science": 189491,
+    "humanities": 130785,
     "statistics": 126739,
-    "humanities": 125384,
-    "psychology": 103826,
-    "programming": 46583,
+    "psychology": 117106,
+    "programming": 48692,
     "machine learning": 20661,
-    "general knowledge": 13010,
+    "general knowledge": 13158,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,51 +60,47 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 103166,
-    "openlifescienceai/medmcqa": 27899,
+    "stack exchange dump": 108122,
+    "openlifescienceai/medmcqa": 29756,
     "qiaojin/PubMedQA": 4633,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5510311,
-    "originals": 30264,
-    "variants": 5480047,
-    "web_images": 5882,
+    "text": 5646988,
+    "originals": 30981,
+    "variants": 5616007,
+    "web_images": 6087,
     "synthetic_images": 14064,
-    "images": 19946,
+    "images": 20151,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2741323119,
-    "tasks_done": 93616,
+    "tokens": 2795164615,
+    "tasks_done": 95574,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 8986
+    "preference": 9440
   },
   "by_kind": {
-    "archive": 12519,
-    "text": 17828,
-    "web_images": 16818,
+    "archive": 13143,
+    "text": 18470,
+    "web_images": 17510,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2741323119,
-  "per_min": 527.0,
+  "tokens": 2795164615,
+  "per_min": 1730.7,
   "topics": {
     "known": 109914,
-    "explored": 29305,
-    "queued": 80489,
+    "explored": 29947,
+    "queued": 79847,
     "space": 6594840,
     "next": [
       [
         "semantics",
         "humanities"
-      ],
-      [
-        "radiology",
-        "medicine"
       ],
       [
         "biostatistics",
@@ -145,67 +141,71 @@
       [
         "chemical engineering",
         "engineering"
+      ],
+      [
+        "systems biology",
+        "biology"
       ]
     ],
     "recent": [
       [
-        "iris segmentation",
-        "computer science",
+        "carbon clusters",
+        "chemistry",
         0
       ],
       [
-        "heterogeneous graphs",
-        "computer science",
-        0
-      ],
-      [
-        "pareto optimal solutions",
-        "computer science",
-        0
-      ],
-      [
-        "aerodynamic flow control",
-        "engineering",
-        0
-      ],
-      [
-        "drill",
-        "",
-        0
-      ],
-      [
-        "fuzzy rules",
-        "computer science",
-        0
-      ],
-      [
-        "co2/n2 separation",
-        "engineering",
-        0
-      ],
-      [
-        "construct 2",
-        "computer science",
-        0
-      ],
-      [
-        "polythiophene",
-        "materials science",
-        0
-      ],
-      [
-        "cellulitis",
+        "bakery workers",
         "medicine",
         0
       ],
       [
-        "graphene transfer",
+        "afghan mujahideen",
+        "humanities",
+        0
+      ],
+      [
+        "full-duplex base station",
+        "engineering",
+        0
+      ],
+      [
+        "streptococcal pharyngitis",
+        "medicine",
+        0
+      ],
+      [
+        "receptor desensitization",
+        "biology",
+        0
+      ],
+      [
+        "gingival hypertrophy",
+        "medicine",
+        0
+      ],
+      [
+        "systemic family therapy",
+        "psychology",
+        0
+      ],
+      [
+        "bauxite processing",
+        "earth and space",
+        0
+      ],
+      [
+        "6fda",
         "materials science",
         0
       ],
       [
-        "k-struvite",
-        "materials science",
+        "silylation",
+        "",
+        0
+      ],
+      [
+        "exam stress",
+        "psychology",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794650820.548119,
-    "cpu": 29.0,
+    "time": 1794652922.617406,
+    "cpu": 32.2,
     "cpu_cores": [
-      38.6,
-      51.3,
-      36.9,
-      39.6,
-      20.2,
-      33.5,
-      8.6,
-      3.0
+      26.6,
+      22.9,
+      20.9,
+      13.3,
+      55.3,
+      50.7,
+      40.0,
+      28.6
     ],
-    "mem": 80.5,
-    "mem_used_gb": 2.76,
+    "mem": 80.1,
+    "mem_used_gb": 2.78,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 145.1,
+    "proc_mem_mb": 257.2,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 28055530496,
-    "net_tx": 27782344704,
-    "down_kbps": 27.2,
-    "up_kbps": 26.2,
-    "disk_free_gb": 11.6,
+    "net_rx": 28607745024,
+    "net_tx": 28394252288,
+    "down_kbps": 173.0,
+    "up_kbps": 108.6,
+    "disk_free_gb": 12.2,
     "load": [
-      2.72,
-      2.95,
-      3.09
+      1.97,
+      2.09,
+      2.41
     ],
     "cores": 8
   },
-  "disk_mb": 622.4,
+  "disk_mb": 676.0,
   "github": {
     "state": "error",
     "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794650472.935524,
-    "next_sync_s": 240,
-    "commits": 156
+    "last_push": 1794651003.948135,
+    "next_sync_s": 298,
+    "commits": 158
   },
   "last_sample": {
     "type": "web image",
-    "topic": "binary alloy phase diagrams",
-    "problem": "Binary phase diagram of AlCu. Attention: Diagram have illustrative and educational value. Some of the points and temperatures \u200b\u200bover time may change due to the use better equipment and get much more pure alloys. Diagram made \u200b\u200bon the basis of numerous dates from the literature in Polish and English language.",
-    "solution": "CC BY-SA 3.0",
+    "topic": "bitcoin",
+    "problem": "Holding Bitcoin cryptocurrency coin in hand. Stock photography by Satheesh Sankaran",
+    "solution": "CC BY 2.0",
     "source": "wikimedia commons"
   }
 }
