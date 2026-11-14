@@ -2,28 +2,28 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 6.0,
+  "disk_free_gb": 5.9,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794664647.843161,
-  "updated_iso": "2026-11-14T19:27:36",
-  "uptime_s": 180147,
+  "updated": 1794664718.9487538,
+  "updated_iso": "2026-11-14T19:28:38",
+  "uptime_s": 180218,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 252,
+  "in_flight": 256,
   "busy_by_kind": {
-    "text": 114,
+    "text": 116,
     "archive": 116,
-    "web_images": 22
+    "web_images": 24
   },
-  "waiting": 221,
+  "waiting": 234,
   "processes": 1,
   "fields": {
-    "computer science": 1171712,
+    "computer science": 1175329,
     "mathematics": 928130,
-    "general": 745339,
+    "general": 745559,
     "engineering": 569372,
     "physics": 502898,
     "medicine": 360118,
@@ -31,9 +31,9 @@
     "chemistry": 315561,
     "economics and finance": 235287,
     "earth and space": 223332,
-    "materials science": 206599,
+    "materials science": 207787,
+    "humanities": 141304,
     "psychology": 138859,
-    "humanities": 138726,
     "statistics": 126739,
     "programming": 51833,
     "machine learning": 20661,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 6065998,
-    "originals": 33165,
-    "variants": 6032833,
-    "web_images": 7095,
+    "text": 6073601,
+    "originals": 33206,
+    "variants": 6040395,
+    "web_images": 7131,
     "synthetic_images": 14064,
-    "images": 21159,
+    "images": 21195,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2952936525,
-    "tasks_done": 104354,
+    "tokens": 2955634348,
+    "tasks_done": 104507,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
-    "archive": 15466,
-    "text": 21252,
-    "web_images": 21188,
+    "archive": 15506,
+    "text": 21307,
+    "web_images": 21243,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2952936525,
-  "per_min": 6931.2,
+  "tokens": 2955634348,
+  "per_min": 3354.4,
   "topics": {
     "known": 109914,
-    "explored": 32741,
-    "queued": 77068,
+    "explored": 32784,
+    "queued": 77010,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "transport and logistics innovations",
+        "synchronous primary tumors",
+        "medicine",
+        0
+      ],
+      [
+        "conjoint analysis",
+        "economics and finance",
+        0
+      ],
+      [
+        "home robots",
+        "psychology",
+        0
+      ],
+      [
+        "safety-critical systems",
         "engineering",
         0
       ],
       [
-        "prostaglandin e2",
-        "",
+        "cartels",
+        "economics and finance",
         0
       ],
       [
-        "cattle reproduction",
-        "biology",
-        0
-      ],
-      [
-        "stem technologies",
-        "humanities",
-        0
-      ],
-      [
-        "popular unity",
-        "humanities",
-        2578
-      ],
-      [
-        "sparse arrays",
+        "service-oriented architecture",
         "computer science",
         0
       ],
       [
-        "solid-state lighting",
+        "tropocollagen",
         "materials science",
         0
       ],
       [
-        "collective litigation",
-        "humanities",
+        "gstm1",
+        "biology",
         0
       ],
       [
-        "water contact angle",
-        "materials science",
+        "pericardial disease",
+        "medicine",
         0
       ],
       [
-        "body orifice",
-        "",
+        "information technology curriculum",
+        "computer science",
         0
       ],
       [
-        "social security disability insurance",
-        "humanities",
+        "plant pathogenic phytoplasma",
+        "biology",
         0
       ],
       [
-        "plasticity",
-        "materials science",
+        "micromonospora",
+        "biology",
         0
       ]
     ],
-    "in_progress": 102,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794664647.814341,
-    "cpu": 44.2,
+    "time": 1794664718.947467,
+    "cpu": 29.5,
     "cpu_cores": [
-      47.4,
-      45.9,
-      41.8,
-      40.0,
-      53.0,
-      54.5,
-      43.0,
-      28.2
+      55.9,
+      46.7,
+      40.6,
+      39.0,
+      18.6,
+      23.9,
+      8.2,
+      3.0
     ],
-    "mem": 82.4,
-    "mem_used_gb": 2.61,
+    "mem": 83.4,
+    "mem_used_gb": 2.53,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 158.7,
+    "proc_mem_mb": 96.2,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 33147890688,
-    "net_tx": 33025656832,
-    "down_kbps": 942.1,
-    "up_kbps": 1192.9,
-    "disk_free_gb": 6.0,
+    "net_rx": 33208717312,
+    "net_tx": 33101777920,
+    "down_kbps": 28.9,
+    "up_kbps": 22.0,
+    "disk_free_gb": 5.9,
     "load": [
-      4.02,
-      3.72,
-      3.58
+      3.43,
+      3.61,
+      3.55
     ],
     "cores": 8
   },
-  "disk_mb": 713.2,
+  "disk_mb": 712.7,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794664650.48457,
-    "next_sync_s": 232,
-    "commits": 211
+    "last_push": 1794664697.166804,
+    "next_sync_s": 161,
+    "commits": 212
   },
   "last_sample": {
     "type": "web image",
-    "topic": "research data repositories",
-    "problem": "Illustration used for digital preservation topics",
-    "solution": "CC BY 2.5 dk",
+    "topic": "propositional satisfiability",
+    "problem": "Crossover gadget as shown in D. Lichtenstein's Planar Formulae and Their Uses (1982) used to prove the NP-completeness of Planar SAT. The left side shows a crossing and the right side shows the crossover gadget. Small dots denote clauses, black and red edges denote non-inverted and inverted edges respectively.",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
