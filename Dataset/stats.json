@@ -2,40 +2,40 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 14.8,
+  "disk_free_gb": 11.3,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794624898.176246,
-  "updated_iso": "2026-11-14T08:25:00",
-  "uptime_s": 140397,
+  "updated": 1794626789.601774,
+  "updated_iso": "2026-11-14T08:56:29",
+  "uptime_s": 142289,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 252,
+  "in_flight": 256,
   "busy_by_kind": {
-    "text": 112,
     "web_images": 24,
+    "text": 116,
     "archive": 116
   },
-  "waiting": 227,
+  "waiting": 222,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
-    "computer science": 509788,
+    "computer science": 532783,
     "physics": 502898,
-    "general": 402167,
-    "engineering": 300264,
-    "medicine": 232341,
-    "biology": 211222,
-    "chemistry": 202156,
+    "general": 410453,
+    "engineering": 315857,
+    "medicine": 252311,
+    "biology": 218282,
+    "chemistry": 206022,
+    "economics and finance": 128788,
     "statistics": 126739,
-    "economics and finance": 120931,
-    "earth and space": 107824,
-    "materials science": 88200,
-    "psychology": 71310,
-    "humanities": 68109,
-    "programming": 28505,
+    "earth and space": 116170,
+    "materials science": 104289,
+    "psychology": 78294,
+    "humanities": 68406,
+    "programming": 29502,
     "machine learning": 20661,
     "robotics": 3515,
     "general knowledge": 3476
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 52414,
-    "openlifescienceai/medmcqa": 13988,
+    "stack exchange dump": 54855,
+    "openlifescienceai/medmcqa": 14912,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3921651,
-    "originals": 21642,
-    "variants": 3900009,
-    "web_images": 3306,
+    "text": 4039991,
+    "originals": 22336,
+    "variants": 4017655,
+    "web_images": 3341,
     "synthetic_images": 14064,
-    "images": 17370,
+    "images": 17405,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2100158427,
-    "tasks_done": 78983,
+    "tokens": 2147982815,
+    "tasks_done": 79248,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 5153
+    "preference": 5310
   },
   "by_kind": {
-    "archive": 7690,
-    "text": 12677,
-    "web_images": 12165,
+    "archive": 7820,
+    "text": 12789,
+    "web_images": 12188,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2100158427,
-  "per_min": 1164.9,
+  "tokens": 2147982815,
+  "per_min": 127921.7,
   "topics": {
     "known": 109914,
-    "explored": 24154,
-    "queued": 85644,
+    "explored": 24266,
+    "queued": 85528,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "exploratory analysis",
-        "",
-        0
-      ],
-      [
-        "environmental dynamism",
-        "economics and finance",
-        0
-      ],
-      [
-        "cell encapsulation",
-        "materials science",
-        0
-      ],
-      [
-        "trace element analysis",
-        "chemistry",
-        0
-      ],
-      [
-        "outcome harmonization",
-        "humanities",
-        0
-      ],
-      [
-        "standardized incidence ratio",
+        "fdg-pet",
         "medicine",
-        201
+        13347
       ],
       [
-        "automated verification",
+        "ti-6al-7nb",
+        "materials science",
+        9568
+      ],
+      [
+        "maxsat",
         "computer science",
-        14563
+        9436
       ],
       [
-        "hepatic alkaline phosphatase",
-        "medicine",
-        8599
+        "gene-lifestyle interaction",
+        "biology",
+        3618
       ],
       [
-        "children's rights advocacy",
-        "humanities",
-        4868
-      ],
-      [
-        "n2o decomposition",
-        "materials science",
-        8509
-      ],
-      [
-        "underwater acoustic localization",
+        "bulk heterojunction solar cells",
         "engineering",
-        12870
+        5485
       ],
       [
-        "cultivar",
-        "",
-        7270
+        "catalyst stability",
+        "engineering",
+        4584
+      ],
+      [
+        "savanna dynamics",
+        "earth and space",
+        4076
+      ],
+      [
+        "career development and diversity",
+        "psychology",
+        3712
+      ],
+      [
+        "financial management behavior",
+        "economics and finance",
+        5147
+      ],
+      [
+        "url classification",
+        "computer science",
+        5300
+      ],
+      [
+        "air pollution governance",
+        "earth and space",
+        2714
+      ],
+      [
+        "fibrillar network",
+        "materials science",
+        3437
       ]
     ],
-    "in_progress": 116,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794624898.039019,
-    "cpu": 51.0,
+    "time": 1794626789.600854,
+    "cpu": 37.4,
     "cpu_cores": [
-      63.9,
-      61.8,
-      59.5,
-      56.1,
-      38.8,
-      55.4,
-      22.3,
-      50.4
+      44.2,
+      40.9,
+      35.8,
+      32.7,
+      48.6,
+      42.7,
+      36.4,
+      18.0
     ],
-    "mem": 74.8,
-    "mem_used_gb": 3.92,
+    "mem": 80.1,
+    "mem_used_gb": 2.87,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 102.4,
+    "proc_mem_mb": 704.2,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 21031031808,
-    "net_tx": 18347112448,
-    "down_kbps": 953.4,
-    "up_kbps": 854.6,
-    "disk_free_gb": 14.8,
+    "net_rx": 21187712000,
+    "net_tx": 18601346048,
+    "down_kbps": 1474.6,
+    "up_kbps": 1445.9,
+    "disk_free_gb": 11.3,
     "load": [
-      5.47,
-      10.94,
-      9.96
+      5.13,
+      6.22,
+      7.97
     ],
     "cores": 8
   },
-  "disk_mb": 125.6,
+  "disk_mb": 145.4,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 1794624890.7660851,
-    "next_sync_s": 56,
+    "next_sync_s": 278,
     "commits": 101
   },
   "last_sample": {
-    "type": "text",
-    "topic": "standardized incidence ratio",
-    "problem": "A causal inference framework for cancer cluster investigations using publicly available data Often, a community becomes alarmed when high rates of cancer are noticed, and residents suspect that the cancer cases could be caused by a known source of hazard. In response, the CDC recommends that departments of health perform a standardized incidence ratio (SIR) analysis to determine whether the\u2026",
-    "solution": "In this paper we propose a novel causal inference approach to cancer cluster investigations, rooted in the potential outcomes framework. Assuming that a source of hazard representing a potential cause of increased cancer rates in the community is identified a priori, we introduce a new estimand called the causal SIR (cSIR). The cSIR is a ratio defined as the expected cancer incidence in the\u2026",
-    "source": "arxiv"
+    "type": "archive Q&A",
+    "topic": "stack exchange dump",
+    "problem": "Q: Consider the following problem. Suppose `System.identityHashCode(object1)==123` and `object1` is garbage collected. Is it possible that a new created `object2` can have the same identity hash code as `object1` had before it was GC'ed ?",
+    "solution": "A: Is it possible that a new created object2 can have the same identity hash code as object1 got before it was GC'ed ? Yes it is. The identity hashcode might be derived from the address of the object when the approach is first called for the object. (Or it might be generated some other way. The spec allows a lot of different mechanisms to be used.) So, if the GC collects `object1`, and a new\u2026",
+    "source": "stackexchange"
   }
 }
