@@ -7,26 +7,26 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794629795.370989,
-  "updated_iso": "2026-11-14T09:46:35",
-  "uptime_s": 145295,
+  "updated": 1794630925.628105,
+  "updated_iso": "2026-11-14T10:05:27",
+  "uptime_s": 146425,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 248,
   "busy_by_kind": {
     "web_images": 24,
-    "text": 116,
-    "archive": 116
+    "archive": 108,
+    "text": 116
   },
-  "waiting": 207,
+  "waiting": 81,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
-    "computer science": 564210,
+    "computer science": 567223,
     "physics": 502898,
-    "general": 432432,
-    "engineering": 327283,
-    "medicine": 262835,
+    "general": 436311,
+    "engineering": 332781,
+    "medicine": 266457,
     "biology": 234497,
     "chemistry": 212369,
     "economics and finance": 133041,
@@ -35,7 +35,7 @@
     "materials science": 108184,
     "psychology": 79305,
     "humanities": 78978,
-    "programming": 31605,
+    "programming": 31800,
     "machine learning": 20661,
     "general knowledge": 6600,
     "robotics": 3515
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 63042,
+    "stack exchange dump": 63237,
     "openlifescienceai/medmcqa": 15693,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4173474,
-    "originals": 23090,
-    "variants": 4150384,
-    "web_images": 3623,
+    "text": 4189681,
+    "originals": 23187,
+    "variants": 4166494,
+    "web_images": 3801,
     "synthetic_images": 14064,
-    "images": 17687,
+    "images": 17865,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2202880571,
-    "tasks_done": 80172,
+    "tokens": 2209590841,
+    "tasks_done": 81262,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 5641
+    "preference": 5800
   },
   "by_kind": {
-    "archive": 8190,
-    "text": 13185,
-    "web_images": 12346,
+    "archive": 8421,
+    "text": 13522,
+    "web_images": 12877,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2202880571,
-  "per_min": 4106.0,
+  "tokens": 2209590841,
+  "per_min": 1.4,
   "topics": {
     "known": 109914,
-    "explored": 24662,
-    "queued": 85132,
+    "explored": 25000,
+    "queued": 84795,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "poetry criticism",
-        "humanities",
-        0
-      ],
-      [
-        "supercritical water",
-        "engineering",
-        0
-      ],
-      [
-        "random microstructure",
-        "engineering",
-        0
-      ],
-      [
-        "fermi level",
-        "",
-        0
-      ],
-      [
-        "extraintestinal manifestations",
-        "medicine",
-        0
-      ],
-      [
-        "cyclopropenes",
-        "chemistry",
-        0
-      ],
-      [
-        "brucella: diagnosis, epidemiology, treatment",
-        "medicine",
-        0
-      ],
-      [
-        "diversity gain",
-        "engineering",
-        0
-      ],
-      [
-        "articulation disorders",
+        "clinical psychology training",
         "psychology",
         0
       ],
       [
-        "tortoises",
-        "earth and space",
+        "recycled carbon fiber",
+        "engineering",
         0
       ],
       [
-        "security token",
+        "catecholamine-secreting tumors",
+        "medicine",
+        0
+      ],
+      [
+        "iq samples",
+        "computer science",
+        0
+      ],
+      [
+        "organization development",
         "",
         0
       ],
       [
-        "monochloramine",
-        "earth and space",
+        "sba-16",
+        "materials science",
+        0
+      ],
+      [
+        "reconfigurable assembly systems",
+        "engineering",
+        0
+      ],
+      [
+        "sorbent",
+        "",
+        0
+      ],
+      [
+        "furfuryl alcohol",
+        "engineering",
+        0
+      ],
+      [
+        "chronic mental illness",
+        "psychology",
+        0
+      ],
+      [
+        "nucleos(t)ide analogues",
+        "medicine",
+        0
+      ],
+      [
+        "mems packaging",
+        "engineering",
         0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 119,
     "focus_left": 0
   },
   "system": {
-    "time": 1794629795.369846,
-    "cpu": 34.8,
+    "time": 1794630925.593911,
+    "cpu": 50.1,
     "cpu_cores": [
-      54.7,
-      57.1,
-      51.0,
-      50.7,
-      23.1,
-      29.4,
-      9.3,
-      2.9
+      46.8,
+      44.1,
+      40.4,
+      36.6,
+      65.8,
+      59.7,
+      59.0,
+      48.9
     ],
-    "mem": 84.2,
-    "mem_used_gb": 2.5,
+    "mem": 83.3,
+    "mem_used_gb": 3.67,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 85.9,
+    "proc_mem_mb": 183.7,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 22727504896,
-    "net_tx": 20803030016,
-    "down_kbps": 396.3,
-    "up_kbps": 268.6,
+    "net_rx": 23168633856,
+    "net_tx": 21470868480,
+    "down_kbps": 836.9,
+    "up_kbps": 841.8,
     "disk_free_gb": 10.4,
     "load": [
-      7.55,
-      4.97,
-      5.32
+      4.72,
+      5.84,
+      6.46
     ],
     "cores": 8
   },
-  "disk_mb": 168.5,
+  "disk_mb": 193.6,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "RuntimeError: fatal: unable to access 'https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git/': Recv failure: Connection reset by peer",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794629724.117985,
-    "next_sync_s": 259,
-    "commits": 114
+    "last_push": 1794629825.196645,
+    "next_sync_s": 295,
+    "commits": 115
   },
   "last_sample": {
     "type": "web image",
-    "topic": "aquatic environment",
-    "problem": "Covered passage beneath the laboratory block; the Food, Nutrition and Health Building courtyard is visible through the opening. Aquatic Ecosystems Research Laboratory (AERL), 2202 Main Mall, University of British Columbia, Vancouver. Designed by Patkau Architects, completed 2006.",
-    "solution": "CC BY-SA 4.0",
+    "topic": "remote-sensing image classification",
+    "problem": "The map shows the results of a retrospective analysis of the transformation of shallow habitats of the Chernobyl NPP cooling reservoir caused by the its descent (2014-2020) and a graph of corresponding changes in the floristic and coenotic structure of the phytal. After the shutdown of the last power unit, the reservoir lost its functional purpose. At the end of 2014, the pumping of water from the Pripyat River stopped, the water level began to decrease, and in the summer of 2018 the area of the cooling reservoir was reduced by half. This visualization is based on the analysis and\u2026",
+    "solution": "CC BY 4.0",
     "source": "wikimedia commons"
   }
 }
