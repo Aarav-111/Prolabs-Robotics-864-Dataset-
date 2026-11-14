@@ -2,38 +2,38 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 12.2,
+  "disk_free_gb": 12.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794648913.823787,
-  "updated_iso": "2026-11-14T15:05:14",
-  "uptime_s": 164413,
+  "updated": 1794649149.5444212,
+  "updated_iso": "2026-11-14T15:09:09",
+  "uptime_s": 164649,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "text": 116,
     "archive": 116,
+    "text": 116,
     "web_images": 24
   },
-  "waiting": 232,
+  "waiting": 248,
   "processes": 1,
   "fields": {
-    "computer science": 944711,
+    "computer science": 958936,
     "mathematics": 927156,
-    "general": 625473,
+    "general": 629277,
     "physics": 502898,
     "engineering": 491147,
-    "medicine": 325868,
-    "chemistry": 297938,
-    "biology": 289323,
-    "economics and finance": 202507,
-    "earth and space": 188171,
+    "medicine": 326557,
+    "chemistry": 300607,
+    "biology": 289688,
+    "economics and finance": 209036,
+    "earth and space": 188281,
     "materials science": 178889,
     "statistics": 126739,
-    "humanities": 115500,
+    "humanities": 117309,
     "psychology": 101321,
     "programming": 45043,
     "machine learning": 20661,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5394690,
-    "originals": 29644,
-    "variants": 5365046,
-    "web_images": 5640,
+    "text": 5424890,
+    "originals": 29810,
+    "variants": 5395080,
+    "web_images": 5669,
     "synthetic_images": 14064,
-    "images": 19704,
+    "images": 19733,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2696318550,
-    "tasks_done": 91903,
+    "tokens": 2707345679,
+    "tasks_done": 92115,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 8398
   },
   "by_kind": {
-    "archive": 11989,
-    "text": 17258,
-    "web_images": 16205,
+    "archive": 12054,
+    "text": 17357,
+    "web_images": 16253,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2696318550,
-  "per_min": 291.1,
+  "tokens": 2707345679,
+  "per_min": 6075.2,
   "topics": {
     "known": 109914,
-    "explored": 28735,
-    "queued": 81059,
+    "explored": 28834,
+    "queued": 80960,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "wittig-horner reaction",
-        "chemistry",
+        "iron chalcogenides",
+        "materials science",
         0
       ],
       [
-        "lipid rafts",
-        "biology",
+        "interplanetary spaceflight",
+        "",
         0
       ],
       [
-        "approximate message passing",
-        "computer science",
+        "electrochromic windows",
+        "materials science",
         0
       ],
       [
-        "static load test",
+        "power gating",
         "engineering",
         0
       ],
       [
-        "mediating effect of self-esteem",
-        "psychology",
-        0
-      ],
-      [
-        "mucopolysaccharidosis type i",
+        "sigmoid sinus thrombosis",
         "medicine",
         0
       ],
       [
-        "conflict resolution strategies",
-        "economics and finance",
-        0
-      ],
-      [
-        "network diameter",
-        "computer science",
-        0
-      ],
-      [
-        "on-chip esd protection",
+        "diamond-like carbon",
         "engineering",
         0
       ],
       [
-        "body expression activities",
-        "psychology",
-        0
-      ],
-      [
-        "glycated proteins",
+        "fgfr amplification",
         "biology",
         0
       ],
       [
-        "electric current",
-        "",
+        "spinal stabilization",
+        "medicine",
+        0
+      ],
+      [
+        "circular design",
+        "engineering",
+        0
+      ],
+      [
+        "wind shear detection",
+        "engineering",
+        0
+      ],
+      [
+        "scanner data",
+        "economics and finance",
+        5423
+      ],
+      [
+        "vertical irregularity",
+        "engineering",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794648913.809599,
-    "cpu": 22.7,
+    "time": 1794649149.543354,
+    "cpu": 36.9,
     "cpu_cores": [
-      25.6,
-      28.3,
-      15.2,
-      13.3,
-      32.7,
-      38.5,
-      18.7,
-      9.8
+      33.3,
+      28.6,
+      24.3,
+      19.7,
+      59.7,
+      55.1,
+      44.9,
+      29.9
     ],
-    "mem": 80.1,
-    "mem_used_gb": 2.79,
+    "mem": 79.6,
+    "mem_used_gb": 2.83,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 167.9,
+    "proc_mem_mb": 410.0,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 27604265984,
-    "net_tx": 27340113920,
-    "down_kbps": 123.3,
-    "up_kbps": 91.3,
-    "disk_free_gb": 12.2,
+    "net_rx": 27646328832,
+    "net_tx": 27370768384,
+    "down_kbps": 596.3,
+    "up_kbps": 336.0,
+    "disk_free_gb": 12.1,
     "load": [
-      3.6,
-      4.48,
-      4.02
+      2.91,
+      3.68,
+      3.77
     ],
     "cores": 8
   },
-  "disk_mb": 581.3,
+  "disk_mb": 581.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794648877.3555908,
-    "next_sync_s": 188,
-    "commits": 150
+    "last_push": 1794649086.412054,
+    "next_sync_s": 295,
+    "commits": 152
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "remote desktop services",
-    "problem": "Dot Matrix fluorescent RDS Display on a Sony home receiver from 90s. The name shown belongs to a well-known italian private network.",
-    "solution": "CC BY-SA 3.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "scanner data",
+    "problem": "In-vivo imaging with a low-cost MRI scanner and cloud data processing in low-resource settings Purpose: To demonstrate in-vivo imaging with a low-cost, low-field MRI scanner built and operated in Africa, and to show how systematic hardware and software improvements can mitigate the main operational limitations encountered in low-resource environments. Methods: A 46 mT Halbach scanner located at\u2026",
+    "solution": "Noise performance was quantified using a standardized protocol and in-vivo brain images were acquired with three-dimensional RARE sequences. Distortion correction was implemented using cloud-based reconstructions incorporating magnetic field maps. Results: The revamped system reached noise levels routinely below three times the thermal limit and demonstrated stable operation over multi-day\u2026",
+    "source": "arxiv"
   }
 }
