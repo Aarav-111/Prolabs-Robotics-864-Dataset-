@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 7.5,
+  "disk_free_gb": 7.6,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794659180.074271,
-  "updated_iso": "2026-11-14T17:56:20",
-  "uptime_s": 174679,
+  "updated": 1794659409.399734,
+  "updated_iso": "2026-11-14T18:00:09",
+  "uptime_s": 174909,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,22 +18,22 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 239,
+  "waiting": 242,
   "processes": 1,
   "fields": {
-    "computer science": 1087965,
+    "computer science": 1091142,
     "mathematics": 928130,
-    "general": 682264,
-    "engineering": 536119,
+    "general": 689176,
+    "engineering": 542994,
     "physics": 502898,
     "medicine": 349054,
     "chemistry": 314471,
     "biology": 308531,
     "economics and finance": 229125,
-    "earth and space": 214638,
+    "earth and space": 215798,
     "materials science": 198539,
     "humanities": 134906,
-    "psychology": 131463,
+    "psychology": 131628,
     "statistics": 126739,
     "programming": 51483,
     "machine learning": 20661,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5829927,
-    "originals": 31919,
-    "variants": 5798008,
-    "web_images": 6563,
+    "text": 5848216,
+    "originals": 32020,
+    "variants": 5816196,
+    "web_images": 6570,
     "synthetic_images": 14064,
-    "images": 20627,
+    "images": 20634,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2865320672,
-    "tasks_done": 100026,
+    "tokens": 2872152977,
+    "tasks_done": 100182,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
-    "archive": 14327,
-    "text": 19882,
-    "web_images": 19366,
+    "archive": 14364,
+    "text": 19939,
+    "web_images": 19428,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2865320672,
-  "per_min": 842.5,
+  "tokens": 2872152977,
+  "per_min": 3714.2,
   "topics": {
     "known": 109914,
-    "explored": 31359,
-    "queued": 78435,
+    "explored": 31416,
+    "queued": 78378,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "field of view",
+        "excretion",
+        "",
+        5570
+      ],
+      [
+        "icu mortality prediction",
+        "computer science",
+        3177
+      ],
+      [
+        "flight envelope",
+        "engineering",
+        2649
+      ],
+      [
+        "water vapor",
         "",
         0
       ],
       [
-        "phased array ultrasonic testing",
+        "millimeter-wave communication",
+        "engineering",
+        2287
+      ],
+      [
+        "linker",
+        "",
+        1342
+      ],
+      [
+        "solar panel waste",
         "engineering",
         0
       ],
       [
-        "negligence rule",
-        "economics and finance",
+        "interval analysis",
+        "computer science",
         0
       ],
       [
-        "nursing ethics",
+        "male hypogonadism",
         "medicine",
         0
       ],
       [
-        "health spending efficiency",
-        "economics and finance",
+        "amazon mechanical turk",
+        "computer science",
         0
       ],
       [
-        "carbon aerogels",
-        "materials science",
-        0
-      ],
-      [
-        "re-aim framework",
-        "medicine",
-        0
-      ],
-      [
-        "modified apelblat equation",
-        "materials science",
-        0
-      ],
-      [
-        "pressure ulcer prevention",
-        "medicine",
-        0
-      ],
-      [
-        "wind energy",
-        "engineering",
-        0
-      ],
-      [
-        "hydrogen aircraft",
-        "engineering",
-        0
-      ],
-      [
-        "tunicamycin",
+        "furocoumarins",
         "biology",
+        0
+      ],
+      [
+        "metalloporphyrins",
+        "materials science",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794659180.07259,
-    "cpu": 43.3,
+    "time": 1794659409.398635,
+    "cpu": 39.0,
     "cpu_cores": [
-      52.1,
-      45.0,
-      45.2,
-      42.5,
-      47.9,
-      47.5,
-      36.8,
-      29.5
+      38.2,
+      40.3,
+      31.4,
+      30.1,
+      60.2,
+      50.8,
+      42.6,
+      18.7
     ],
-    "mem": 82.7,
-    "mem_used_gb": 2.57,
+    "mem": 81.4,
+    "mem_used_gb": 2.69,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 286.4,
+    "proc_mem_mb": 363.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 31338502144,
-    "net_tx": 30637185024,
-    "down_kbps": 194.4,
-    "up_kbps": 106.2,
-    "disk_free_gb": 7.5,
+    "net_rx": 31376179200,
+    "net_tx": 30670920704,
+    "down_kbps": 345.8,
+    "up_kbps": 210.1,
+    "disk_free_gb": 7.6,
     "load": [
-      3.46,
-      4.37,
-      3.94
+      3.13,
+      3.66,
+      3.72
     ],
     "cores": 8
   },
-  "disk_mb": 699.4,
+  "disk_mb": 690.6,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794659178.903969,
-    "next_sync_s": 111,
-    "commits": 183
+    "last_push": 1794659236.213887,
+    "next_sync_s": 184,
+    "commits": 184
   },
   "last_sample": {
     "type": "text",
-    "topic": "accounting textbooks",
-    "problem": "Aligning LLMs for the Classroom with Knowledge-Based Retrieval -- A Comparative RAG Study Large language models like ChatGPT are increasingly used in classrooms, but they often provide outdated or fabricated information that can mislead students. Retrieval Augmented Generation (RAG) improves reliability of LLMs by grounding responses in external resources. We investigate two accessible RAG\u2026",
-    "solution": "Existing comparative studies fail to account for pedagogical factors such as educational disciplines, question types, and practical deployment costs. Using a novel dataset, EduScopeQA, of 3,176 questions across academic subjects, we measure performance on various educational query types, from specific facts to broad thematic discussions. We also evaluate system alignment with a dataset of\u2026",
+    "topic": "excretion",
+    "problem": "Properties of the accretion ring in an X-ray binary, and accretion and excretion two-layer flows from it We study properties of an accretion ring in a steady mass flow from a companion star to a compact object in an X-ray binary. The accretion ring is a place where matter inflowing from a companion star sojourns for a while to bifurcate to accretion and excretion flows due to angular momentum\u2026",
+    "solution": "Two internal flows are expected to appear in the thick envelope. One is a mass spreading flow bifurcating to a thick accretion flow and a thick excretion flow, as a result of the angular momentum transfer within the ring-envelope. The other is a cooling flow toward the envelope center governed by radiative cooling under an effect of X-ray irradiation. This cooling flow eventually forms a core in\u2026",
     "source": "arxiv"
   }
 }
