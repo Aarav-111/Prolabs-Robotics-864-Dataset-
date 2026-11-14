@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 6.2,
+  "disk_free_gb": 6.1,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794663970.915679,
-  "updated_iso": "2026-11-14T19:16:10",
-  "uptime_s": 179470,
+  "updated": 1794664107.56488,
+  "updated_iso": "2026-11-14T19:18:27",
+  "uptime_s": 179607,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,17 +18,17 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 238,
+  "waiting": 231,
   "processes": 1,
   "fields": {
-    "computer science": 1136525,
+    "computer science": 1147612,
     "mathematics": 928130,
-    "general": 716318,
+    "general": 721066,
     "engineering": 567099,
     "physics": 502898,
     "medicine": 359917,
     "chemistry": 315561,
-    "biology": 313591,
+    "biology": 313819,
     "economics and finance": 234393,
     "earth and space": 221774,
     "materials science": 205462,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5987860,
-    "originals": 32755,
-    "variants": 5955105,
-    "web_images": 6999,
+    "text": 6003923,
+    "originals": 32848,
+    "variants": 5971075,
+    "web_images": 7002,
     "synthetic_images": 14064,
-    "images": 21063,
+    "images": 21066,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2924425873,
-    "tasks_done": 103796,
+    "tokens": 2930329912,
+    "tasks_done": 103916,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
-    "archive": 15285,
-    "text": 21073,
-    "web_images": 20987,
+    "archive": 15347,
+    "text": 21104,
+    "web_images": 21014,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2924425873,
-  "per_min": 747.0,
+  "tokens": 2930329912,
+  "per_min": 3955.5,
   "topics": {
     "known": 109914,
-    "explored": 32550,
-    "queued": 77244,
+    "explored": 32581,
+    "queued": 77213,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "system-on-chip testing",
+        "ai hype",
         "computer science",
-        0
+        4196
       ],
       [
-        "fisheries regulation",
-        "biology",
-        0
+        "non-classical logic",
+        "computer science",
+        2160
       ],
       [
-        "computerized accounting",
-        "economics and finance",
-        0
-      ],
-      [
-        "meteotsunamis",
-        "engineering",
-        0
-      ],
-      [
-        "low-cost diagnostic device",
-        "engineering",
-        0
-      ],
-      [
-        "carprofen",
+        "sirt1 activators",
         "medicine",
         0
       ],
       [
-        "railway signaling",
-        "engineering",
+        "homeostasis",
+        "",
+        3145
+      ],
+      [
+        "plant growth and agriculture techniques",
+        "biology",
         0
       ],
       [
-        "driving fitness",
+        "withanolide d",
         "medicine",
         0
       ],
       [
-        "radar tracking",
+        "cooperative spectrum sensing",
         "computer science",
+        3652
+      ],
+      [
+        "non-thermal effects",
+        "biology",
         0
       ],
       [
-        "government research funding",
+        "lingual frenotomy",
+        "medicine",
+        0
+      ],
+      [
+        "e-pharmacy",
+        "medicine",
+        0
+      ],
+      [
+        "hospital marketing",
         "economics and finance",
         0
       ],
       [
-        "corpus luteum",
-        "biology",
-        0
-      ],
-      [
-        "hippo/yap signaling",
-        "biology",
+        "psychoanalysis, philosophy, and politics",
+        "psychology",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794663970.914411,
-    "cpu": 31.8,
+    "time": 1794664107.5616262,
+    "cpu": 34.2,
     "cpu_cores": [
-      40.4,
-      34.4,
-      29.4,
-      25.1,
-      39.4,
-      47.8,
-      25.2,
-      13.2
+      41.4,
+      42.6,
+      50.0,
+      35.5,
+      42.2,
+      35.7,
+      18.7,
+      7.6
     ],
-    "mem": 80.5,
-    "mem_used_gb": 2.77,
+    "mem": 82.2,
+    "mem_used_gb": 2.62,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 180.9,
+    "proc_mem_mb": 224.0,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32714975232,
-    "net_tx": 32365676544,
-    "down_kbps": 1258.2,
-    "up_kbps": 1260.6,
-    "disk_free_gb": 6.2,
+    "net_rx": 32782062592,
+    "net_tx": 32475788288,
+    "down_kbps": 116.0,
+    "up_kbps": 50.0,
+    "disk_free_gb": 6.1,
     "load": [
-      3.27,
-      3.44,
-      3.39
+      3.79,
+      3.63,
+      3.46
     ],
     "cores": 8
   },
-  "disk_mb": 699.4,
+  "disk_mb": 699.3,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794663970.60154,
-    "next_sync_s": 225,
-    "commits": 205
+    "last_push": 1794664039.199959,
+    "next_sync_s": 88,
+    "commits": 206
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "course improvement",
-    "problem": "Print in album Photographs MWW Marlborough Brook, Pegan Filters, improvement of Lake Cochituate, Vol. 1. Massachusetts Metropolitan District Commission; Massachusetts Department of Conservation and Recreation; Massachusetts Water Resources Authority",
-    "solution": "Public domain",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "ai hype",
+    "problem": "Beyond the Hype: Embeddings vs. Prompting for Multiclass Classification Tasks Are traditional classification approaches irrelevant in this era of AI hype? We show that there are multiclass classification problems where predictive models holistically outperform LLM prompt-based frameworks. Given text and images from home-service project descriptions provided by Thumbtack customers, we build\u2026",
+    "solution": "We find that the embeddings approach outperforms the best LLM prompts in terms of accuracy, calibration, latency, and financial cost. In particular, the embeddings approach has 49.5\\% higher accuracy than the prompting approach, and its superiority is consistent across text-only, image-only, and text-image problem descriptions. Furthermore, it yields well-calibrated probabilities, which we later\u2026",
+    "source": "arxiv"
   }
 }
