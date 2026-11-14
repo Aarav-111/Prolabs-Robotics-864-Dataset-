@@ -2,14 +2,14 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 7.4,
+  "disk_free_gb": 7.0,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794659612.5381591,
-  "updated_iso": "2026-11-14T18:03:32",
-  "uptime_s": 175112,
+  "updated": 1794660802.6606169,
+  "updated_iso": "2026-11-14T18:23:22",
+  "uptime_s": 176302,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,22 +18,22 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 227,
+  "waiting": 228,
   "processes": 1,
   "fields": {
-    "computer science": 1100627,
+    "computer science": 1118775,
     "mathematics": 928130,
-    "general": 690307,
-    "engineering": 544451,
+    "general": 695971,
+    "engineering": 554007,
     "physics": 502898,
-    "medicine": 351025,
+    "medicine": 352797,
     "chemistry": 314471,
-    "biology": 308531,
-    "economics and finance": 229241,
-    "earth and space": 216252,
-    "materials science": 199139,
-    "humanities": 134906,
-    "psychology": 132321,
+    "biology": 309696,
+    "economics and finance": 232248,
+    "earth and space": 219100,
+    "materials science": 205462,
+    "humanities": 136769,
+    "psychology": 135113,
     "statistics": 126739,
     "programming": 51483,
     "machine learning": 20661,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5864123,
-    "originals": 32106,
-    "variants": 5832017,
-    "web_images": 6632,
+    "text": 5917261,
+    "originals": 32390,
+    "variants": 5884871,
+    "web_images": 6790,
     "synthetic_images": 14064,
-    "images": 20696,
+    "images": 20854,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2878070185,
-    "tasks_done": 100482,
+    "tokens": 2898122368,
+    "tasks_done": 101651,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
-    "archive": 14443,
-    "text": 20016,
-    "web_images": 19572,
+    "archive": 14711,
+    "text": 20367,
+    "web_images": 20122,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2878070185,
-  "per_min": 7392.8,
+  "tokens": 2898122368,
+  "per_min": 3719.3,
   "topics": {
     "known": 109914,
-    "explored": 31493,
-    "queued": 78301,
+    "explored": 31844,
+    "queued": 77950,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "agricultural production efficiency",
-        "economics and finance",
-        0
-      ],
-      [
-        "eleutheroside e",
-        "medicine",
-        0
-      ],
-      [
-        "bicarbonate",
-        "",
-        0
-      ],
-      [
-        "rock art",
-        "humanities",
-        0
-      ],
-      [
-        "microbial applications in construction materials",
-        "earth and space",
-        0
-      ],
-      [
-        "el tor biotype",
-        "biology",
-        0
-      ],
-      [
-        "network reconfiguration",
-        "engineering",
-        0
-      ],
-      [
-        "online trade",
-        "economics and finance",
-        0
-      ],
-      [
-        "vehicle license plate recognition",
+        "pddl",
         "computer science",
         0
       ],
       [
-        "multilingual education and policy",
-        "humanities",
-        0
+        "mininet",
+        "computer science",
+        4424
       ],
       [
-        "container index",
+        "session (web analytics)",
+        "",
+        1032
+      ],
+      [
+        "energy fraud",
+        "engineering",
+        404
+      ],
+      [
+        "mushy zone",
+        "materials science",
+        533
+      ],
+      [
+        "phyllanthus amarus",
         "medicine",
+        147
+      ],
+      [
+        "unstructured clinical data",
+        "computer science",
         0
       ],
       [
-        "chemical weed control",
+        "reciprocal translocation",
         "biology",
+        0
+      ],
+      [
+        "iodine maps",
+        "engineering",
+        0
+      ],
+      [
+        "argument (complex analysis)",
+        "",
+        0
+      ],
+      [
+        "perfluoroalkyl acids",
+        "earth and space",
+        0
+      ],
+      [
+        "non-innovative business units",
+        "economics and finance",
         0
       ]
     ],
@@ -213,49 +213,49 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794659612.535678,
-    "cpu": 33.3,
+    "time": 1794660802.659393,
+    "cpu": 33.6,
     "cpu_cores": [
-      49.1,
-      39.4,
-      34.1,
-      39.1,
-      34.9,
-      37.7,
-      20.2,
-      11.8
+      38.6,
+      38.1,
+      32.7,
+      33.8,
+      43.2,
+      46.5,
+      25.0,
+      11.3
     ],
-    "mem": 83.4,
-    "mem_used_gb": 2.52,
+    "mem": 80.7,
+    "mem_used_gb": 2.65,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 121.3,
+    "proc_mem_mb": 188.8,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 31457177600,
-    "net_tx": 30754928640,
-    "down_kbps": 261.0,
-    "up_kbps": 162.8,
-    "disk_free_gb": 7.4,
+    "net_rx": 31870437376,
+    "net_tx": 31235324928,
+    "down_kbps": 291.9,
+    "up_kbps": 304.1,
+    "disk_free_gb": 7.0,
     "load": [
-      2.75,
-      3.24,
-      3.52
+      3.26,
+      3.63,
+      3.58
     ],
     "cores": 8
   },
-  "disk_mb": 691.9,
+  "disk_mb": 684.1,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794659611.5409448,
-    "next_sync_s": 283,
-    "commits": 186
+    "last_push": 1794659765.4044921,
+    "next_sync_s": 296,
+    "commits": 187
   },
   "last_sample": {
     "type": "web image",
-    "topic": "mumps",
-    "problem": "Mumps. Child with mumps.",
+    "topic": "dental morphology",
+    "problem": "Denture humaine : num\u00e9rotation - En rouge : num\u00e9rotation introduite par la F\u00e9d\u00e9ration dentaire internationale en 1970 (norme ISO 3950-1984). - Dans ce syst\u00e8me, on ajoute 4 au premier chiffre pour d\u00e9signer une dent de lait. - En vert : num\u00e9rotation traditionnelle (Universal Numbering System). - Les dents de lait y sont associ\u00e9es aux lettres de A \u00e0 T, dans le m\u00eame sens de rotation. Composition personnelle \u00e0 partir d'une feuille de soins dentaires de la S\u00e9curit\u00e9 sociale, destin\u00e9e aux Fran\u00e7ais de l'\u00e9tranger.",
     "solution": "Public domain",
     "source": "wikimedia commons"
   }
