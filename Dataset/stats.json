@@ -2,23 +2,23 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.1,
+  "disk_free_gb": 10.0,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794622710.231041,
-  "updated_iso": "2026-11-14T07:48:48",
-  "uptime_s": 138209,
+  "updated": 1794622735.7304032,
+  "updated_iso": "2026-11-14T07:48:56",
+  "uptime_s": 138235,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 255,
   "busy_by_kind": {
     "text": 116,
-    "archive": 116,
+    "archive": 115,
     "web_images": 24
   },
-  "waiting": 232,
+  "waiting": 217,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
@@ -28,7 +28,7 @@
     "engineering": 257724,
     "medicine": 211899,
     "biology": 193654,
-    "chemistry": 176609,
+    "chemistry": 177413,
     "statistics": 126739,
     "economics and finance": 112009,
     "earth and space": 105633,
@@ -60,28 +60,28 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 49465,
+    "stack exchange dump": 50269,
     "openlifescienceai/medmcqa": 13359,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3737660,
-    "originals": 20550,
-    "variants": 3717110,
+    "text": 3738464,
+    "originals": 20554,
+    "variants": 3717910,
     "web_images": 3280,
     "synthetic_images": 14064,
     "images": 17344,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2021024348,
-    "tasks_done": 78658,
+    "tokens": 2021639730,
+    "tasks_done": 78659,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 4991
+    "preference": 5004
   },
   "by_kind": {
-    "archive": 7535,
+    "archive": 7536,
     "text": 12555,
     "web_images": 12117,
     "synthetic_images": 0,
@@ -90,8 +90,8 @@
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2021024348,
-  "per_min": 528.8,
+  "tokens": 2021639730,
+  "per_min": 1072.2,
   "topics": {
     "known": 109914,
     "explored": 24032,
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794622710.210034,
-    "cpu": 62.4,
+    "time": 1794622735.677676,
+    "cpu": 73.4,
     "cpu_cores": [
-      53.1,
-      50.6,
-      46.6,
-      45.1,
-      83.8,
-      79.6,
-      69.5,
-      70.9
+      91.0,
+      89.9,
+      89.1,
+      88.5,
+      47.8,
+      62.0,
+      37.1,
+      82.2
     ],
-    "mem": 84.6,
-    "mem_used_gb": 2.68,
+    "mem": 76.7,
+    "mem_used_gb": 3.32,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 92.0,
+    "proc_mem_mb": 119.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 19655943168,
-    "net_tx": 17098160128,
-    "down_kbps": 203.0,
-    "up_kbps": 115.8,
+    "net_rx": 19665462272,
+    "net_tx": 17103845376,
+    "down_kbps": 365.0,
+    "up_kbps": 218.0,
     "disk_free_gb": 10.0,
     "load": [
-      7.39,
-      5.94,
-      5.78
+      11.66,
+      7.03,
+      6.17
     ],
     "cores": 8
   },
-  "disk_mb": 100.0,
+  "disk_mb": 99.8,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 1794622707.935494,
-    "next_sync_s": 250,
+    "next_sync_s": 224,
     "commits": 96
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "pearl formation",
-    "problem": "Pearl Harbor, Hawaii (Aug. 18, 2006) - Chief petty officer (CPO) selectees stationed in Pearl Harbor, run in formation during the initial phase of CPO training. The newly selected, but not yet promoted CPO selects will endure six weeks of arduous physical fitness and team building exercises as they begin their transition from first class petty officers to Navy chiefs. U.S. Navy photo by Mass Communication Specialist 1st Class Dennis C. Cantrell (RELEASED)",
-    "solution": "Public domain",
-    "source": "wikimedia commons"
+    "type": "archive Q&A",
+    "topic": "stack exchange dump",
+    "problem": "A friend recently sent me the following chemistry joke: As a lover of puns, I'd like to enjoy it, but I think that it is actually false the way it is phrased. A solution is defined as: \"a homogeneous mixture composed of two or more substances\" Alcohol alone would not constitute a mixture of multiple substances and would therefore not be a solution. But in English the word \"alcohol\" is also\u2026",
+    "solution": "Technically, alcohol is the name of a class of organic compounds containing one or several hydroxyl groups. Colloquially, the term \"alcohol\" is understood as you have described: A solution (of varying degree of purity) of ethanol and water. Pure ethanol is impossible to create via the traditional method of purification (atmospheric distillation) as the water-ethanol mixture is azeotropic:\u00b9 An\u2026",
+    "source": "stackexchange"
   }
 }
