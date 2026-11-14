@@ -2,40 +2,40 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.0,
+  "disk_free_gb": 14.0,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794622735.7304032,
-  "updated_iso": "2026-11-14T07:48:56",
-  "uptime_s": 138235,
+  "updated": 1794624755.2449431,
+  "updated_iso": "2026-11-14T08:22:35",
+  "uptime_s": 140254,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 255,
   "busy_by_kind": {
-    "text": 116,
-    "archive": 115,
-    "web_images": 24
+    "web_images": 24,
+    "text": 115,
+    "archive": 116
   },
-  "waiting": 217,
+  "waiting": 213,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
+    "computer science": 509788,
     "physics": 502898,
-    "computer science": 480543,
-    "general": 383016,
-    "engineering": 257724,
-    "medicine": 211899,
-    "biology": 193654,
-    "chemistry": 177413,
+    "general": 402167,
+    "engineering": 300264,
+    "medicine": 231897,
+    "biology": 211222,
+    "chemistry": 201553,
     "statistics": 126739,
-    "economics and finance": 112009,
-    "earth and space": 105633,
-    "materials science": 76514,
+    "economics and finance": 120931,
+    "earth and space": 107824,
+    "materials science": 88200,
     "psychology": 71310,
-    "humanities": 62280,
-    "programming": 27635,
+    "humanities": 68109,
+    "programming": 28224,
     "machine learning": 20661,
     "robotics": 3515,
     "general knowledge": 3476
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 50269,
-    "openlifescienceai/medmcqa": 13359,
+    "stack exchange dump": 51530,
+    "openlifescienceai/medmcqa": 13745,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 3738464,
-    "originals": 20554,
-    "variants": 3717910,
-    "web_images": 3280,
+    "text": 3920323,
+    "originals": 21638,
+    "variants": 3898685,
+    "web_images": 3289,
     "synthetic_images": 14064,
-    "images": 17344,
+    "images": 17353,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2021639730,
-    "tasks_done": 78659,
+    "tokens": 2099508579,
+    "tasks_done": 78938,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 5004
+    "preference": 5117
   },
   "by_kind": {
-    "archive": 7536,
-    "text": 12555,
-    "web_images": 12117,
+    "archive": 7675,
+    "text": 12671,
+    "web_images": 12141,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2021639730,
-  "per_min": 1072.2,
+  "tokens": 2099508579,
+  "per_min": 8536.3,
   "topics": {
     "known": 109914,
-    "explored": 24032,
-    "queued": 85762,
+    "explored": 24148,
+    "queued": 85647,
     "space": 6594840,
     "next": [
       [
@@ -127,10 +127,6 @@
         "humanities"
       ],
       [
-        "geophysics",
-        "earth and space"
-      ],
-      [
         "exoplanets",
         "earth and space"
       ],
@@ -145,118 +141,122 @@
       [
         "planetary science",
         "earth and space"
+      ],
+      [
+        "physiology",
+        "biology"
       ]
     ],
     "recent": [
       [
-        "cryoconite",
-        "earth and space",
-        5010
-      ],
-      [
-        "remote-sensing image classification",
+        "automated verification",
         "computer science",
-        11528
+        14563
       ],
       [
-        "single image dehazing",
-        "computer science",
-        9833
-      ],
-      [
-        "fkbp51",
-        "biology",
-        4982
-      ],
-      [
-        "bloom",
-        "",
-        6355
-      ],
-      [
-        "counselor-client relationship",
-        "psychology",
-        0
-      ],
-      [
-        "quinoxaline-2,3-dione",
-        "chemistry",
-        0
-      ],
-      [
-        "rlc circuits",
-        "engineering",
-        0
-      ],
-      [
-        "british columbia record",
-        "engineering",
-        0
-      ],
-      [
-        "clozapine",
+        "hepatic alkaline phosphatase",
         "medicine",
-        0
+        8599
       ],
       [
-        "business administration theory",
-        "economics and finance",
-        0
+        "children's rights advocacy",
+        "humanities",
+        4868
       ],
       [
-        "comprehensive genomic profiling",
+        "n2o decomposition",
+        "materials science",
+        8509
+      ],
+      [
+        "underwater acoustic localization",
+        "engineering",
+        12870
+      ],
+      [
+        "cultivar",
+        "",
+        7270
+      ],
+      [
+        "solvent polarity",
+        "chemistry",
+        5686
+      ],
+      [
+        "affective touch",
         "biology",
-        0
+        5151
+      ],
+      [
+        "surface nuclear magnetic resonance",
+        "chemistry",
+        7047
+      ],
+      [
+        "loop diuretics",
+        "medicine",
+        4068
+      ],
+      [
+        "vehicle fuel economy",
+        "engineering",
+        7534
+      ],
+      [
+        "2d animation",
+        "computer science",
+        5812
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 119,
     "focus_left": 0
   },
   "system": {
-    "time": 1794622735.677676,
-    "cpu": 73.4,
+    "time": 1794624755.24251,
+    "cpu": 52.2,
     "cpu_cores": [
-      91.0,
-      89.9,
-      89.1,
-      88.5,
-      47.8,
-      62.0,
-      37.1,
-      82.2
+      59.6,
+      55.1,
+      50.9,
+      48.2,
+      67.5,
+      57.0,
+      43.9,
+      35.7
     ],
-    "mem": 76.7,
-    "mem_used_gb": 3.32,
+    "mem": 87.2,
+    "mem_used_gb": 3.57,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 119.5,
+    "proc_mem_mb": 438.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 19665462272,
-    "net_tx": 17103845376,
-    "down_kbps": 365.0,
-    "up_kbps": 218.0,
-    "disk_free_gb": 10.0,
+    "net_rx": 20634405888,
+    "net_tx": 18082546688,
+    "down_kbps": 4366.2,
+    "up_kbps": 2218.9,
+    "disk_free_gb": 14.0,
     "load": [
-      11.66,
-      7.03,
-      6.17
+      12.92,
+      14.86,
+      10.98
     ],
     "cores": 8
   },
-  "disk_mb": 99.8,
+  "disk_mb": 125.0,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794622707.935494,
-    "next_sync_s": 224,
-    "commits": 96
+    "last_push": 1794623310.00629,
+    "next_sync_s": 199,
+    "commits": 99
   },
   "last_sample": {
     "type": "archive Q&A",
     "topic": "stack exchange dump",
-    "problem": "A friend recently sent me the following chemistry joke: As a lover of puns, I'd like to enjoy it, but I think that it is actually false the way it is phrased. A solution is defined as: \"a homogeneous mixture composed of two or more substances\" Alcohol alone would not constitute a mixture of multiple substances and would therefore not be a solution. But in English the word \"alcohol\" is also\u2026",
-    "solution": "Technically, alcohol is the name of a class of organic compounds containing one or several hydroxyl groups. Colloquially, the term \"alcohol\" is understood as you have described: A solution (of varying degree of purity) of ethanol and water. Pure ethanol is impossible to create via the traditional method of purification (atmospheric distillation) as the water-ethanol mixture is azeotropic:\u00b9 An\u2026",
+    "problem": "I am trying to create a WtForms SelectField which will show all the various programming languages available to choose from. Its almost impossible to type all the programming languages listed here in the select field. How to implement this kind of select field. Code ``` class SkillForm(Form): skill = SelectField('Languages', choices=[('c++', 'C++'), ('python', 'Python'), ('text', 'Plain Text')])\u2026",
+    "solution": "You can get all the languages from the website running a script: ``` #Get the html import urllib2 response = urllib2.urlopen('http://en.wikipedia.org/wiki/List_of_programming_languages') html = response.read() #Parse it with beautifulsoup from bs4 import BeautifulSoup soup = BeautifulSoup(html) langs = [] #Parse all the links. for link in soup.find_all('a'): #Last link after ZPL, the last\u2026",
     "source": "stackexchange"
   }
 }
