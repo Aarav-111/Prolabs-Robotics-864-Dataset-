@@ -2,43 +2,43 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.3,
+  "disk_free_gb": 10.5,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794626916.490717,
-  "updated_iso": "2026-11-14T08:58:39",
-  "uptime_s": 142416,
+  "updated": 1794629160.304916,
+  "updated_iso": "2026-11-14T09:36:00",
+  "uptime_s": 144660,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 255,
+  "in_flight": 245,
   "busy_by_kind": {
     "web_images": 24,
-    "text": 115,
-    "archive": 116
+    "text": 110,
+    "archive": 111
   },
-  "waiting": 218,
+  "waiting": 209,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
-    "computer science": 532783,
+    "computer science": 564210,
     "physics": 502898,
-    "general": 410453,
-    "engineering": 316058,
-    "medicine": 253092,
-    "biology": 218282,
-    "chemistry": 206022,
-    "economics and finance": 128788,
+    "general": 430887,
+    "engineering": 327283,
+    "medicine": 257176,
+    "biology": 231829,
+    "chemistry": 210154,
+    "economics and finance": 131929,
     "statistics": 126739,
-    "earth and space": 116170,
-    "materials science": 104289,
-    "psychology": 78294,
-    "humanities": 68406,
-    "programming": 29615,
+    "earth and space": 122677,
+    "materials science": 108184,
+    "psychology": 78495,
+    "humanities": 76365,
+    "programming": 30392,
     "machine learning": 20661,
-    "robotics": 3515,
-    "general knowledge": 3476
+    "general knowledge": 6600,
+    "robotics": 3515
   },
   "topic_fields": {
     "": 7597,
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 54968,
+    "stack exchange dump": 61522,
     "openlifescienceai/medmcqa": 15693,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4041086,
-    "originals": 22338,
-    "variants": 4018748,
-    "web_images": 3358,
+    "text": 4151539,
+    "originals": 22956,
+    "variants": 4128583,
+    "web_images": 3454,
     "synthetic_images": 14064,
-    "images": 17422,
+    "images": 17518,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2148506950,
-    "tasks_done": 79301,
+    "tokens": 2192790741,
+    "tasks_done": 79766,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 5338
+    "preference": 5584
   },
   "by_kind": {
-    "archive": 7840,
-    "text": 12792,
-    "web_images": 12219,
+    "archive": 8041,
+    "text": 13018,
+    "web_images": 12256,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2148506950,
-  "per_min": 6744.8,
+  "tokens": 2192790741,
+  "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 24269,
-    "queued": 85526,
+    "explored": 24495,
+    "queued": 85305,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "direct-sequence uwb",
-        "engineering",
-        201
-      ],
-      [
-        "falsified medicines directive",
-        "medicine",
-        0
-      ],
-      [
-        "cryogenic insulation",
-        "engineering",
-        0
-      ],
-      [
-        "fdg-pet",
-        "medicine",
-        13347
-      ],
-      [
-        "ti-6al-7nb",
-        "materials science",
-        9568
-      ],
-      [
-        "maxsat",
+        "proprietary software",
         "computer science",
-        9436
+        7169
       ],
       [
-        "gene-lifestyle interaction",
-        "biology",
-        3618
-      ],
-      [
-        "bulk heterojunction solar cells",
-        "engineering",
-        5485
-      ],
-      [
-        "catalyst stability",
-        "engineering",
-        4584
-      ],
-      [
-        "savanna dynamics",
+        "urban ecological security",
         "earth and space",
-        4076
+        5290
       ],
       [
-        "career development and diversity",
-        "psychology",
-        3712
+        "bone tissue",
+        "",
+        5843
       ],
       [
-        "financial management behavior",
-        "economics and finance",
-        5147
+        "temporal knowledge graphs",
+        "computer science",
+        6468
+      ],
+      [
+        "pharmacodynamic interactions",
+        "medicine",
+        3606
+      ],
+      [
+        "single image super-resolution",
+        "computer science",
+        7284
+      ],
+      [
+        "standing dead trees",
+        "biology",
+        5050
+      ],
+      [
+        "misconceptions",
+        "humanities",
+        4959
+      ],
+      [
+        "blood-contacting devices",
+        "materials science",
+        3729
+      ],
+      [
+        "electronic computers",
+        "computer science",
+        3172
+      ],
+      [
+        "flavanone synthesis",
+        "chemistry",
+        0
+      ],
+      [
+        "advanced polymer synthesis and characterization",
+        "chemistry",
+        0
       ]
     ],
-    "in_progress": 119,
+    "in_progress": 114,
     "focus_left": 0
   },
   "system": {
-    "time": 1794626916.412648,
-    "cpu": 45.5,
+    "time": 1794629160.3009841,
+    "cpu": 31.3,
     "cpu_cores": [
-      59.9,
-      57.3,
-      55.3,
-      53.6,
-      33.6,
-      39.2,
-      21.3,
-      44.0
+      25.9,
+      23.4,
+      18.9,
+      16.6,
+      55.6,
+      48.3,
+      35.3,
+      26.5
     ],
-    "mem": 83.1,
-    "mem_used_gb": 4.33,
+    "mem": 73.8,
+    "mem_used_gb": 4.16,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 166.5,
+    "proc_mem_mb": 750.3,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 21324616704,
-    "net_tx": 18781369344,
-    "down_kbps": 1988.7,
-    "up_kbps": 2704.2,
-    "disk_free_gb": 11.3,
+    "net_rx": 22132772864,
+    "net_tx": 19976016896,
+    "down_kbps": 397.7,
+    "up_kbps": 763.3,
+    "disk_free_gb": 10.5,
     "load": [
-      3.88,
-      5.43,
-      7.41
+      4.21,
+      4.35,
+      6.26
     ],
     "cores": 8
   },
-  "disk_mb": 149.0,
+  "disk_mb": 175.1,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "RuntimeError: fatal: unable to access 'https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git/': Recv failure: Connection reset by peer",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794626913.8453481,
-    "next_sync_s": 151,
-    "commits": 103
+    "last_push": 1794627047.6763258,
+    "next_sync_s": 0,
+    "commits": 104
   },
   "last_sample": {
-    "type": "text",
-    "topic": "direct-sequence uwb",
-    "problem": "Frequency-Domain Group-based Shrinkage Estimators for UWB Systems In this work, we propose low-complexity adaptive biased estimation algorithms, called group-based shrinkage estimators (GSEs), for parameter estimation and interference suppression scenarios with mechanisms to automatically adjust the shrinkage factors. The proposed estimation algorithms divide the target parameter vector into a\u2026",
-    "solution": "GSE schemes improve the performance of the conventional least squares (LS) estimator in terms of the mean-squared error (MSE), while requiring a very modest increase in complexity. An MSE analysis is presented which indicates the lower bounds of the GSE schemes with different group sizes. We prove that our proposed schemes outperform the biased estimation with only one shrinkage factor and the\u2026",
-    "source": "arxiv"
+    "type": "archive Q&A",
+    "topic": "stack exchange dump",
+    "problem": "Q: I have been programming in php for many, many years and have used output buffering in several of my classes and class methods. Recently, while writing a template class, my mind began to roam. The following is where my mind went : This is just an example. ``` class someClass { protected $contents; public function __construct() { ob_start(); // execute some code here. } private function\u2026",
+    "solution": "A: Debugging is the biggest benefit, especially when responding to ajax requests ( ie. must return valid json even on errors, when you have no control over the other endpoint ) so you cache all out put and if a shutdown is hit ( -via- register_shutdown_function() ) you format the output as json - with the appropriate error and trace data ect. that's the biggest use i have for it. You'll have\u2026",
+    "source": "stackexchange"
   }
 }
