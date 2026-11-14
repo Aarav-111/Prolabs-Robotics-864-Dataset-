@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794648879.0487309,
-  "updated_iso": "2026-11-14T15:04:39",
-  "uptime_s": 164378,
+  "updated": 1794648913.823787,
+  "updated_iso": "2026-11-14T15:05:14",
+  "uptime_s": 164413,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "archive": 116,
     "web_images": 24
   },
-  "waiting": 250,
+  "waiting": 232,
   "processes": 1,
   "fields": {
     "computer science": 944711,
@@ -75,15 +75,15 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2696318550,
-    "tasks_done": 91886,
+    "tasks_done": 91903,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 8398
   },
   "by_kind": {
     "archive": 11989,
-    "text": 17257,
-    "web_images": 16189,
+    "text": 17258,
+    "web_images": 16205,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2696318550,
-  "per_min": 351.0,
+  "per_min": 291.1,
   "topics": {
     "known": 109914,
-    "explored": 28734,
-    "queued": 81060,
+    "explored": 28735,
+    "queued": 81059,
     "space": 6594840,
     "next": [
       [
@@ -148,6 +148,11 @@
       ]
     ],
     "recent": [
+      [
+        "wittig-horner reaction",
+        "chemistry",
+        0
+      ],
       [
         "lipid rafts",
         "biology",
@@ -202,54 +207,49 @@
         "electric current",
         "",
         0
-      ],
-      [
-        "ynamides",
-        "chemistry",
-        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794648879.046792,
-    "cpu": 37.5,
+    "time": 1794648913.809599,
+    "cpu": 22.7,
     "cpu_cores": [
-      42.0,
-      39.0,
-      29.8,
-      24.0,
-      50.0,
-      46.3,
-      38.1,
-      31.0
+      25.6,
+      28.3,
+      15.2,
+      13.3,
+      32.7,
+      38.5,
+      18.7,
+      9.8
     ],
-    "mem": 81.5,
-    "mem_used_gb": 2.85,
+    "mem": 80.1,
+    "mem_used_gb": 2.79,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 101.4,
+    "proc_mem_mb": 167.9,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 27599218688,
-    "net_tx": 27333116928,
-    "down_kbps": 55.2,
-    "up_kbps": 38.6,
+    "net_rx": 27604265984,
+    "net_tx": 27340113920,
+    "down_kbps": 123.3,
+    "up_kbps": 91.3,
     "disk_free_gb": 12.2,
     "load": [
-      3.48,
-      4.59,
-      4.04
+      3.6,
+      4.48,
+      4.02
     ],
     "cores": 8
   },
-  "disk_mb": 586.9,
+  "disk_mb": 581.3,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
     "last_push": 1794648877.3555908,
-    "next_sync_s": 222,
+    "next_sync_s": 188,
     "commits": 150
   },
   "last_sample": {
