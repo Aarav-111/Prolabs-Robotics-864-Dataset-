@@ -7,29 +7,29 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794664107.56488,
-  "updated_iso": "2026-11-14T19:18:27",
-  "uptime_s": 179607,
+  "updated": 1794664283.241212,
+  "updated_iso": "2026-11-14T19:21:23",
+  "uptime_s": 179782,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "text": 116,
     "archive": 116,
+    "text": 116,
     "web_images": 24
   },
-  "waiting": 231,
+  "waiting": 245,
   "processes": 1,
   "fields": {
-    "computer science": 1147612,
+    "computer science": 1156552,
     "mathematics": 928130,
-    "general": 721066,
-    "engineering": 567099,
+    "general": 734202,
+    "engineering": 567610,
     "physics": 502898,
-    "medicine": 359917,
+    "medicine": 360118,
+    "biology": 317690,
     "chemistry": 315561,
-    "biology": 313819,
-    "economics and finance": 234393,
+    "economics and finance": 235287,
     "earth and space": 221774,
     "materials science": 205462,
     "humanities": 137622,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 6003923,
-    "originals": 32848,
-    "variants": 5971075,
-    "web_images": 7002,
+    "text": 6031476,
+    "originals": 32987,
+    "variants": 5998489,
+    "web_images": 7023,
     "synthetic_images": 14064,
-    "images": 21066,
+    "images": 21087,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2930329912,
-    "tasks_done": 103916,
+    "tokens": 2940536668,
+    "tasks_done": 104073,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
-    "archive": 15347,
-    "text": 21104,
-    "web_images": 21014,
+    "archive": 15391,
+    "text": 21182,
+    "web_images": 21049,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2930329912,
-  "per_min": 3955.5,
+  "tokens": 2940536668,
+  "per_min": 8756.1,
   "topics": {
     "known": 109914,
-    "explored": 32581,
-    "queued": 77213,
+    "explored": 32659,
+    "queued": 77135,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "ai hype",
-        "computer science",
-        4196
+        "epilepsy diagnosis",
+        "biology",
+        3871
       ],
       [
-        "non-classical logic",
-        "computer science",
-        2160
-      ],
-      [
-        "sirt1 activators",
-        "medicine",
-        0
-      ],
-      [
-        "homeostasis",
+        "shortest path problem",
         "",
-        3145
+        5823
       ],
       [
-        "plant growth and agriculture techniques",
-        "biology",
-        0
+        "cognitive bias",
+        "",
+        4283
       ],
       [
-        "withanolide d",
-        "medicine",
-        0
+        "pelagic zone",
+        "",
+        374
       ],
       [
-        "cooperative spectrum sensing",
+        "unsupervised classification",
         "computer science",
-        3652
+        3306
       ],
       [
-        "non-thermal effects",
+        "tiantong national forest park",
         "biology",
         0
       ],
       [
-        "lingual frenotomy",
-        "medicine",
+        "local food",
+        "biology",
         0
       ],
       [
-        "e-pharmacy",
-        "medicine",
+        "wild rice",
+        "biology",
         0
       ],
       [
-        "hospital marketing",
-        "economics and finance",
+        "cloudlets",
+        "computer science",
         0
       ],
       [
-        "psychoanalysis, philosophy, and politics",
-        "psychology",
+        "porous organic frameworks",
+        "materials science",
+        0
+      ],
+      [
+        "protein\u2013protein interaction",
+        "",
+        2027
+      ],
+      [
+        "kofi annan",
+        "humanities",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794664107.5616262,
-    "cpu": 34.2,
+    "time": 1794664283.239074,
+    "cpu": 58.5,
     "cpu_cores": [
-      41.4,
-      42.6,
-      50.0,
-      35.5,
-      42.2,
-      35.7,
-      18.7,
-      7.6
+      79.3,
+      76.9,
+      76.7,
+      76.3,
+      49.5,
+      51.0,
+      36.5,
+      21.2
     ],
-    "mem": 82.2,
-    "mem_used_gb": 2.62,
+    "mem": 83.1,
+    "mem_used_gb": 2.55,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 224.0,
+    "proc_mem_mb": 287.3,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32782062592,
-    "net_tx": 32475788288,
-    "down_kbps": 116.0,
-    "up_kbps": 50.0,
+    "net_rx": 32890255360,
+    "net_tx": 32646944768,
+    "down_kbps": 1475.3,
+    "up_kbps": 1295.0,
     "disk_free_gb": 6.1,
     "load": [
-      3.79,
-      3.63,
-      3.46
+      3.91,
+      3.8,
+      3.57
     ],
     "cores": 8
   },
-  "disk_mb": 699.3,
+  "disk_mb": 705.0,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794664039.199959,
-    "next_sync_s": 88,
-    "commits": 206
+    "last_push": 1794664202.731264,
+    "next_sync_s": 294,
+    "commits": 207
   },
   "last_sample": {
     "type": "text",
-    "topic": "ai hype",
-    "problem": "Beyond the Hype: Embeddings vs. Prompting for Multiclass Classification Tasks Are traditional classification approaches irrelevant in this era of AI hype? We show that there are multiclass classification problems where predictive models holistically outperform LLM prompt-based frameworks. Given text and images from home-service project descriptions provided by Thumbtack customers, we build\u2026",
-    "solution": "We find that the embeddings approach outperforms the best LLM prompts in terms of accuracy, calibration, latency, and financial cost. In particular, the embeddings approach has 49.5\\% higher accuracy than the prompting approach, and its superiority is consistent across text-only, image-only, and text-image problem descriptions. Furthermore, it yields well-calibrated probabilities, which we later\u2026",
+    "topic": "epilepsy diagnosis",
+    "problem": "Shorter duration of slow wave sleep is related to symptoms of depression in patients with epilepsy Slow wave sleep duration and spectral abnormalities are related to both epilepsy and depression, but it is unclear how depressive symptoms in patients with epilepsy are affected by slow wave sleep duration and clinical factors, and how the spectral characteristics of slow wave sleep reflect a\u2026",
+    "solution": "Depressive symptoms were documented with the Beck Depression Inventory (BDI). At least mild depressive symptoms (BDI>9) were found among 23 patients with focal epilepsy, 5 patients with generalised epilepsy, and 6 patients who had no epilepsy diagnosis. Slow wave sleep duration was shorter for patients with at least mild depressive symptoms (p=.004), independently from epilepsy diagnosis,\u2026",
     "source": "arxiv"
   }
 }
