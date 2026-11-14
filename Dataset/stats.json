@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794659093.20633,
-  "updated_iso": "2026-11-14T17:54:53",
-  "uptime_s": 174592,
+  "updated": 1794659125.703905,
+  "updated_iso": "2026-11-14T17:55:25",
+  "uptime_s": 174625,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "web_images": 24
   },
-  "waiting": 246,
+  "waiting": 244,
   "processes": 1,
   "fields": {
     "computer science": 1087965,
@@ -75,15 +75,15 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2865237363,
-    "tasks_done": 99963,
+    "tasks_done": 99984,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
-    "archive": 14320,
+    "archive": 14322,
     "text": 19856,
-    "web_images": 19336,
+    "web_images": 19355,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,7 +91,7 @@
     "seed_concepts": 0
   },
   "tokens": 2865237363,
-  "per_min": 1441.3,
+  "per_min": 1093.3,
   "topics": {
     "known": 109914,
     "explored": 31333,
@@ -213,44 +213,44 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794659093.20318,
-    "cpu": 32.6,
+    "time": 1794659125.701757,
+    "cpu": 26.8,
     "cpu_cores": [
-      48.0,
-      44.1,
-      40.5,
-      43.5,
-      30.3,
-      33.3,
-      13.6,
-      7.2
+      38.4,
+      37.9,
+      37.7,
+      35.0,
+      21.9,
+      30.4,
+      11.9,
+      1.4
     ],
     "mem": 82.8,
-    "mem_used_gb": 2.58,
+    "mem_used_gb": 2.57,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 86.8,
+    "proc_mem_mb": 156.2,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 31315523584,
-    "net_tx": 30610733056,
-    "down_kbps": 99.5,
-    "up_kbps": 63.2,
+    "net_rx": 31323558912,
+    "net_tx": 30619445248,
+    "down_kbps": 58.9,
+    "up_kbps": 38.5,
     "disk_free_gb": 7.5,
     "load": [
-      5.43,
-      4.9,
-      4.07
+      4.16,
+      4.64,
+      4.0
     ],
     "cores": 8
   },
-  "disk_mb": 707.4,
+  "disk_mb": 703.4,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794659091.8070478,
-    "next_sync_s": 198,
-    "commits": 180
+    "last_push": 1794659124.735116,
+    "next_sync_s": 165,
+    "commits": 181
   },
   "last_sample": {
     "type": "web image",
