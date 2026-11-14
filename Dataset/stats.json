@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794637132.5299919,
-  "updated_iso": "2026-11-14T11:48:52",
-  "uptime_s": 152632,
+  "updated": 1794638180.812945,
+  "updated_iso": "2026-11-14T12:06:20",
+  "uptime_s": 153680,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,14 +18,14 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 229,
+  "waiting": 0,
   "processes": 1,
   "fields": {
     "mathematics": 926585,
     "computer science": 648669,
     "physics": 502898,
     "general": 485429,
-    "engineering": 384269,
+    "engineering": 386298,
     "medicine": 280992,
     "biology": 259323,
     "chemistry": 237451,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4551906,
-    "originals": 25152,
-    "variants": 4526754,
-    "web_images": 4268,
+    "text": 4553935,
+    "originals": 25163,
+    "variants": 4528772,
+    "web_images": 4279,
     "synthetic_images": 14064,
-    "images": 18332,
+    "images": 18343,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2353113534,
-    "tasks_done": 83713,
+    "tokens": 2353896311,
+    "tasks_done": 83769,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 6693
   },
   "by_kind": {
-    "archive": 9390,
-    "text": 14382,
-    "web_images": 13490,
+    "archive": 9421,
+    "text": 14387,
+    "web_images": 13510,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2353113534,
-  "per_min": 7779.2,
+  "tokens": 2353896311,
+  "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 25859,
-    "queued": 83935,
+    "explored": 25864,
+    "queued": 83930,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,31 @@
     ],
     "recent": [
       [
+        "structural engineering and vibration analysis",
+        "engineering",
+        0
+      ],
+      [
+        "indian copyright law",
+        "computer science",
+        0
+      ],
+      [
+        "bod removal",
+        "earth and space",
+        0
+      ],
+      [
+        "reef-building corals",
+        "earth and space",
+        0
+      ],
+      [
+        "gradient elasticity",
+        "engineering",
+        2029
+      ],
+      [
         "brats dataset",
         "computer science",
         0
@@ -182,81 +207,56 @@
         "red pigment production",
         "biology",
         0
-      ],
-      [
-        "labour resources",
-        "economics and finance",
-        0
-      ],
-      [
-        "nanopore fabrication",
-        "engineering",
-        0
-      ],
-      [
-        "lateral earth pressure",
-        "engineering",
-        0
-      ],
-      [
-        "rna research and splicing",
-        "biology",
-        0
-      ],
-      [
-        "tam polarization",
-        "biology",
-        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794637132.5287821,
-    "cpu": 22.5,
+    "time": 1794638180.804338,
+    "cpu": 86.0,
     "cpu_cores": [
-      28.6,
-      23.9,
-      23.3,
-      16.9,
-      31.3,
-      34.7,
-      15.5,
-      6.4
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      83.2,
+      72.8,
+      70.0,
+      60.7
     ],
-    "mem": 77.9,
-    "mem_used_gb": 2.96,
+    "mem": 78.3,
+    "mem_used_gb": 2.95,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 222.0,
+    "proc_mem_mb": 127.0,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 24449281024,
-    "net_tx": 23199503360,
-    "down_kbps": 1160.0,
-    "up_kbps": 653.5,
+    "net_rx": 24489062400,
+    "net_tx": 23253295104,
+    "down_kbps": 38.5,
+    "up_kbps": 38.9,
     "disk_free_gb": 10.6,
     "load": [
-      1.97,
-      2.62,
-      3.06
+      3.52,
+      2.84,
+      3.07
     ],
     "cores": 8
   },
-  "disk_mb": 283.3,
+  "disk_mb": 282.8,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794637086.061933,
-    "next_sync_s": 226,
-    "commits": 129
+    "last_push": 1794637174.244618,
+    "next_sync_s": 297,
+    "commits": 130
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "robot navigation",
-    "problem": "Diagram of first floor hallway of CL building at HCC",
-    "solution": "CC BY-SA 3.0",
-    "source": "wikimedia commons"
+    "type": "text",
+    "topic": "gradient elasticity",
+    "problem": "The Boussinesq Problem in Dipolar Gradient Elasticity The three-dimensional axisymmetric Boussinesq problem of an isotropic half-space subjected to a concentrated normal quasi-static load is studied within the framework of linear dipolar gradient elasticity. Our main concern is to determine possible deviations from the predictions of classical linear elastostatics when a more refined theory is\u2026",
+    "solution": "The use of the theory of gradient elasticity is intended here to model the response of materials with microstructure in a manner that the classical theory cannot afford. A linear version of this theory results by considering a linear isotropic expression for the strain-energy density that depends on strain-gradient terms, in addition to the standard strain terms appearing in classical\u2026",
+    "source": "arxiv"
   }
 }
