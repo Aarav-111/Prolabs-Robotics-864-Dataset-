@@ -2,42 +2,42 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 8.1,
+  "disk_free_gb": 7.9,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794656274.955266,
-  "updated_iso": "2026-11-14T17:08:00",
-  "uptime_s": 171774,
+  "updated": 1794657550.942959,
+  "updated_iso": "2026-11-14T17:29:10",
+  "uptime_s": 173050,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 254,
+  "in_flight": 256,
   "busy_by_kind": {
-    "archive": 115,
-    "text": 115,
+    "text": 116,
+    "archive": 116,
     "web_images": 24
   },
-  "waiting": 231,
+  "waiting": 219,
   "processes": 1,
   "fields": {
-    "computer science": 1041027,
-    "mathematics": 927748,
-    "general": 672041,
-    "engineering": 525674,
+    "computer science": 1083381,
+    "mathematics": 928130,
+    "general": 675902,
+    "engineering": 531828,
     "physics": 502898,
-    "medicine": 342570,
-    "chemistry": 310100,
-    "biology": 299434,
-    "economics and finance": 221670,
-    "earth and space": 206032,
-    "materials science": 195924,
+    "medicine": 348570,
+    "chemistry": 314026,
+    "biology": 304160,
+    "economics and finance": 226206,
+    "earth and space": 207105,
+    "materials science": 198539,
     "humanities": 134793,
+    "psychology": 128840,
     "statistics": 126739,
-    "psychology": 122779,
     "programming": 50527,
     "machine learning": 20661,
-    "general knowledge": 13158,
+    "general knowledge": 13543,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 111020,
-    "openlifescienceai/medmcqa": 32987,
-    "qiaojin/PubMedQA": 5004,
+    "stack exchange dump": 113298,
+    "openlifescienceai/medmcqa": 34814,
+    "qiaojin/PubMedQA": 5725,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5713173,
-    "originals": 31308,
-    "variants": 5681865,
-    "web_images": 6319,
+    "text": 5795246,
+    "originals": 31736,
+    "variants": 5763510,
+    "web_images": 6471,
     "synthetic_images": 14064,
-    "images": 20383,
+    "images": 20535,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2821011297,
-    "tasks_done": 98026,
+    "tokens": 2851980072,
+    "tasks_done": 99241,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 9610
+    "preference": 9830
   },
   "by_kind": {
-    "archive": 13788,
-    "text": 19238,
-    "web_images": 18551,
+    "archive": 14122,
+    "text": 19641,
+    "web_images": 19027,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2821011297,
-  "per_min": 199.2,
+  "tokens": 2851980072,
+  "per_min": 3514.2,
   "topics": {
     "known": 109914,
-    "explored": 30715,
-    "queued": 79080,
+    "explored": 31118,
+    "queued": 78676,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "irradiated graphite",
-        "materials science",
-        0
-      ],
-      [
-        "phenology",
-        "",
-        0
-      ],
-      [
-        "iron aluminides",
-        "engineering",
-        0
-      ],
-      [
-        "cybersex addiction",
-        "psychology",
-        0
-      ],
-      [
-        "floristics",
-        "",
-        0
-      ],
-      [
-        "electrical and electromagnetic research",
-        "engineering",
-        0
-      ],
-      [
-        "political action committees",
-        "economics and finance",
-        0
-      ],
-      [
-        "leukocyte classification",
-        "computer science",
-        0
-      ],
-      [
-        "thiophene synthesis",
+        "ceric ammonium nitrate",
         "chemistry",
         0
       ],
       [
-        "amino acid signaling",
-        "biology",
+        "anaesthetic vapours",
+        "medicine",
         0
       ],
       [
-        "web application vulnerabilities",
+        "public order",
+        "",
+        0
+      ],
+      [
+        "pottery reconstruction",
         "computer science",
         0
       ],
       [
-        "glucose uptake",
-        "",
+        "earthquake detection",
+        "computer science",
+        0
+      ],
+      [
+        "equalization tank",
+        "earth and space",
+        0
+      ],
+      [
+        "colorado water law",
+        "humanities",
+        0
+      ],
+      [
+        "catalytic exchange",
+        "medicine",
+        0
+      ],
+      [
+        "rice aroma",
+        "biology",
+        0
+      ],
+      [
+        "additive manufacturing of concrete",
+        "engineering",
+        0
+      ],
+      [
+        "retinal nerve fiber layer thickness",
+        "medicine",
+        0
+      ],
+      [
+        "zero-dispersion wavelength",
+        "engineering",
         0
       ]
     ],
-    "in_progress": 119,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794656274.954116,
-    "cpu": 41.6,
+    "time": 1794657550.9409542,
+    "cpu": 13.7,
     "cpu_cores": [
-      42.4,
-      40.1,
-      39.7,
-      33.7,
-      52.3,
-      54.4,
-      41.9,
-      28.7
+      21.7,
+      18.2,
+      15.8,
+      15.8,
+      13.5,
+      22.8,
+      2.0,
+      0.5
     ],
-    "mem": 81.8,
-    "mem_used_gb": 2.64,
+    "mem": 82.1,
+    "mem_used_gb": 2.62,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 99.7,
+    "proc_mem_mb": 134.8,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 30675040256,
-    "net_tx": 29827852288,
-    "down_kbps": 126.1,
-    "up_kbps": 154.9,
-    "disk_free_gb": 8.1,
+    "net_rx": 31121277952,
+    "net_tx": 30379450368,
+    "down_kbps": 156.0,
+    "up_kbps": 103.7,
+    "disk_free_gb": 7.9,
     "load": [
-      3.77,
-      3.63,
-      3.53
+      3.17,
+      3.39,
+      3.41
     ],
     "cores": 8
   },
-  "disk_mb": 658.9,
+  "disk_mb": 691.1,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794656155.660063,
-    "next_sync_s": 167,
-    "commits": 174
+    "last_push": 1794656370.058429,
+    "next_sync_s": 249,
+    "commits": 175
   },
   "last_sample": {
     "type": "web image",
-    "topic": "insecticide-treated nets",
-    "problem": "GHSC-PSM worked together with the Ethiopian government structures at different levels to efficiently and effectively distribute over 4.1 million long lasting insecticide-treated nets (LLINs) in four regional states of the country in less than two months. GHSC-PSM uses locally available means to ensure the cost-effective and timely distribution of LLINs to communities. Residents of Ambasel in northeastern Ethiopia, Amhara State, show remarkable commitment working with GHSC-PSM and walk for up to eight hours carrying 2,400 LLINs together with donkeys en route to reach Gishen Mariam town. The\u2026",
-    "solution": "Public domain",
+    "topic": "attribute reduction",
+    "problem": "Green's Mill, Sneinton, Nottingham, is a brick tower mill, in Sneinton, Nottingham, with connections to George Green, the mathematician. This is a photo of listed building number 1246256. The interior was destroyed in a fire in 1947, but it is operational again, using recovered equipment from similar styled mills.",
+    "solution": "CC BY-SA 3.0",
     "source": "wikimedia commons"
   }
 }
