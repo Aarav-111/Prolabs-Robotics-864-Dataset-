@@ -2,40 +2,40 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.8,
+  "disk_free_gb": 11.6,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794645477.8438542,
-  "updated_iso": "2026-11-14T14:07:57",
-  "uptime_s": 160977,
+  "updated": 1794646893.468927,
+  "updated_iso": "2026-11-14T14:31:33",
+  "uptime_s": 162393,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 250,
   "busy_by_kind": {
-    "archive": 116,
-    "text": 116,
-    "web_images": 24
+    "web_images": 24,
+    "archive": 113,
+    "text": 113
   },
-  "waiting": 250,
+  "waiting": 234,
   "processes": 1,
   "fields": {
     "mathematics": 926955,
-    "computer science": 847028,
-    "general": 587723,
+    "computer science": 926148,
+    "general": 610213,
     "physics": 502898,
-    "engineering": 467178,
-    "medicine": 312392,
-    "chemistry": 289875,
-    "biology": 283495,
-    "economics and finance": 189324,
-    "earth and space": 178836,
-    "materials science": 176816,
+    "engineering": 477562,
+    "medicine": 316585,
+    "chemistry": 291300,
+    "biology": 286622,
+    "economics and finance": 199617,
+    "earth and space": 186531,
+    "materials science": 178889,
     "statistics": 126739,
-    "humanities": 106138,
-    "psychology": 99022,
-    "programming": 42820,
+    "humanities": 115143,
+    "psychology": 101321,
+    "programming": 43753,
     "machine learning": 20661,
     "general knowledge": 9593,
     "robotics": 3515
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 90314,
-    "openlifescienceai/medmcqa": 24308,
+    "stack exchange dump": 92197,
+    "openlifescienceai/medmcqa": 25304,
     "qiaojin/PubMedQA": 3231,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5166891,
-    "originals": 28428,
-    "variants": 5138463,
-    "web_images": 5218,
+    "text": 5319928,
+    "originals": 29260,
+    "variants": 5290668,
+    "web_images": 5437,
     "synthetic_images": 14064,
-    "images": 19282,
+    "images": 19501,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2609324247,
-    "tasks_done": 89726,
+    "tokens": 2666392290,
+    "tasks_done": 90890,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 7951
+    "preference": 8147
   },
   "by_kind": {
-    "archive": 11358,
-    "text": 16569,
-    "web_images": 15348,
+    "archive": 11715,
+    "text": 16953,
+    "web_images": 15771,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2609324247,
-  "per_min": 4506.6,
+  "tokens": 2666392290,
+  "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 28046,
-    "queued": 81748,
+    "explored": 28430,
+    "queued": 81367,
     "space": 6594840,
     "next": [
       [
@@ -123,10 +123,6 @@
         "humanities"
       ],
       [
-        "analog circuits",
-        "engineering"
-      ],
-      [
         "physiology",
         "biology"
       ],
@@ -145,118 +141,122 @@
       [
         "microbiology",
         "biology"
+      ],
+      [
+        "structural biology",
+        "biology"
       ]
     ],
     "recent": [
       [
-        "supercritical pressure",
-        "engineering",
-        3514
-      ],
-      [
-        "straight line detection",
+        "fully homomorphic encryption",
         "computer science",
-        1902
+        3373
       ],
       [
-        "euro",
-        "economics and finance",
-        1322
+        "model-agnostic meta-learning",
+        "computer science",
+        5583
       ],
       [
-        "school public relations",
-        "humanities",
-        1186
+        "test coverage",
+        "computer science",
+        4569
       ],
       [
-        "ocean governance",
-        "earth and space",
-        124
-      ],
-      [
-        "jiles-atherton model",
-        "materials science",
-        198
-      ],
-      [
-        "mihaly csikszentmihalyi",
-        "psychology",
+        "metronidazole",
+        "",
         0
       ],
       [
-        "chemoselective hydrogenation",
-        "chemistry",
+        "image sensor noise",
+        "engineering",
         0
       ],
       [
-        "sea cucumber aquaculture",
+        "soil moisture monitoring",
         "biology",
         0
       ],
       [
-        "radical copolymerization",
-        "chemistry",
+        "footprint",
+        "",
         0
       ],
       [
-        "database architecture",
+        "portuguese inquisition",
+        "humanities",
+        0
+      ],
+      [
+        "color image compression",
         "computer science",
-        0
+        4507
       ],
       [
-        "triorganotin(iv) complexes",
-        "chemistry",
-        0
+        "caenorhabditis elegans",
+        "",
+        3528
+      ],
+      [
+        "exploration-exploitation balance",
+        "computer science",
+        6166
+      ],
+      [
+        "motor synchronization",
+        "psychology",
+        1226
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 117,
     "focus_left": 0
   },
   "system": {
-    "time": 1794645477.842876,
-    "cpu": 27.7,
+    "time": 1794646893.46783,
+    "cpu": 47.5,
     "cpu_cores": [
-      24.9,
-      21.1,
-      19.5,
-      13.6,
-      55.2,
-      45.1,
-      31.4,
-      10.9
+      36.5,
+      31.1,
+      27.2,
+      23.1,
+      74.2,
+      70.8,
+      64.8,
+      52.4
     ],
-    "mem": 79.2,
-    "mem_used_gb": 2.8,
+    "mem": 80.1,
+    "mem_used_gb": 2.78,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 301.8,
+    "proc_mem_mb": 626.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 26879688704,
-    "net_tx": 26511442944,
-    "down_kbps": 126.9,
-    "up_kbps": 372.1,
-    "disk_free_gb": 11.8,
+    "net_rx": 27294653440,
+    "net_tx": 27015315456,
+    "down_kbps": 517.7,
+    "up_kbps": 521.6,
+    "disk_free_gb": 11.6,
     "load": [
-      2.37,
-      2.7,
-      2.79
+      2.79,
+      2.96,
+      2.91
     ],
     "cores": 8
   },
-  "disk_mb": 497.2,
+  "disk_mb": 549.3,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794645416.6933272,
-    "next_sync_s": 104,
-    "commits": 145
+    "last_push": 1794645545.744396,
+    "next_sync_s": 0,
+    "commits": 146
   },
   "last_sample": {
-    "type": "text",
-    "topic": "supercritical pressure",
-    "problem": "A Volume-of-Fluid method for variable-density, two-phase flows at supercritical pressure A two-phase, low-Mach-number flow solver is created and verified for variable-density liquid and gas with phase change. The interface is sharply captured using a split Volume-of-Fluid method generalized for a non-divergence-free liquid velocity and with mass exchange across the interface. Mass conservation\u2026",
-    "solution": "This model is implemented for two-phase mixtures at supercritical pressure but subcritical temperature conditions for the liquid, as it is common in the early times of liquid hydrocarbon injection under real-engine conditions. The dissolution of the gas species into the liquid phase is enhanced, and vaporization or condensation can occur simultaneously at different interface locations. Greater\u2026",
-    "source": "arxiv"
+    "type": "web image",
+    "topic": "spatial audio",
+    "problem": "On Wednesday, June 1st, Prime Minister Sheikh Hasina delivered the chief guest's speech at an international seminar concerning the National Spatial Data Infrastructure (NSDI). PID. The English description and title of this file were generated using a large language model (Google Gemini - `gemini-3.1-flash-lite`) from the original Bengali description provided by the Press Information Department. Show prompts used: Translation prompt: ``` Translate the following Bengali text into English in encyclopedic style. You may rearrange words or sentences for clarity, but retain all information. Do not\u2026",
+    "solution": "Public domain",
+    "source": "wikimedia commons"
   }
 }
