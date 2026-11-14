@@ -12,7 +12,7 @@ This file and `stats.json` are rewritten on every sync.
 | Topics explored / known | 33,539 / 109,914 |
 | Approx. text tokens | 3,024,009,948 |
 | Running since | 2026-11-12T17:25:00 |
-| Updated | 2026-11-14T20:56:23 |
+| Updated | 2026-11-14T21:01:24 |
 
 ## Layout
 - `text/*.jsonl.gz` - one JSON object per line: `question`, `expected_answer`, `messages` (chat SFT), `problem`, `solution`, `topic`, `source`, `url`, `license`, `quality_score`, DataGen fields. The `text` field is `Question:` then `Expected answer:`.
