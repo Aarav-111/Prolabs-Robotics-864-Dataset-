@@ -7,24 +7,24 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794662075.367681,
-  "updated_iso": "2026-11-14T18:44:35",
-  "uptime_s": 177575,
+  "updated": 1794662348.8734531,
+  "updated_iso": "2026-11-14T18:49:08",
+  "uptime_s": 177848,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "archive": 116,
     "text": 116,
+    "archive": 116,
     "web_images": 24
   },
-  "waiting": 242,
+  "waiting": 231,
   "processes": 1,
   "fields": {
-    "computer science": 1120739,
+    "computer science": 1125379,
     "mathematics": 928130,
     "general": 708666,
-    "engineering": 566015,
+    "engineering": 567099,
     "physics": 502898,
     "medicine": 354502,
     "chemistry": 314471,
@@ -33,7 +33,7 @@
     "earth and space": 219994,
     "materials science": 205462,
     "humanities": 136769,
-    "psychology": 135994,
+    "psychology": 136195,
     "statistics": 126739,
     "programming": 51483,
     "machine learning": 20661,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5952966,
-    "originals": 32579,
-    "variants": 5920387,
-    "web_images": 6919,
+    "text": 5958891,
+    "originals": 32612,
+    "variants": 5926279,
+    "web_images": 6929,
     "synthetic_images": 14064,
-    "images": 20983,
+    "images": 20993,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2911487672,
-    "tasks_done": 102931,
+    "tokens": 2913636233,
+    "tasks_done": 103155,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
-    "archive": 15025,
-    "text": 20794,
-    "web_images": 20661,
+    "archive": 15069,
+    "text": 20870,
+    "web_images": 20765,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2911487672,
-  "per_min": 0.2,
+  "tokens": 2913636233,
+  "per_min": 1188.5,
   "topics": {
     "known": 109914,
-    "explored": 32271,
-    "queued": 77523,
+    "explored": 32347,
+    "queued": 77447,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "torture survivors",
+        "spatial language",
         "psychology",
         0
       ],
       [
-        "information systems in enterprises",
-        "economics and finance",
-        0
-      ],
-      [
-        "chloride diffusion",
-        "engineering",
-        0
-      ],
-      [
-        "non-isothermal decomposition",
-        "materials science",
-        0
-      ],
-      [
-        "dining rooms",
-        "engineering",
-        0
-      ],
-      [
-        "zinc accumulation",
-        "biology",
-        0
-      ],
-      [
-        "transmission line inspection robot",
-        "engineering",
-        0
-      ],
-      [
-        "particle decay",
+        "dry weight",
         "",
         0
       ],
       [
-        "moringa oleifera",
+        "non-destructive methods",
         "biology",
         0
       ],
       [
-        "focused electron beam induced deposition",
+        "protein-energy malnutrition",
+        "medicine",
+        0
+      ],
+      [
+        "disease burden",
+        "",
+        0
+      ],
+      [
+        "training set",
+        "",
+        0
+      ],
+      [
+        "distortion (music)",
+        "",
+        0
+      ],
+      [
+        "internal models",
+        "biology",
+        0
+      ],
+      [
+        "luffa",
+        "biology",
+        0
+      ],
+      [
+        "polymer nanocomposite synthesis and irradiation",
         "materials science",
         0
       ],
       [
-        "suicidality",
-        "psychology",
+        "soundness",
+        "",
         0
       ],
       [
-        "jouissance",
-        "psychology",
+        "clothing behavior",
+        "economics and finance",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794662075.366285,
-    "cpu": 32.2,
+    "time": 1794662348.872612,
+    "cpu": 50.6,
     "cpu_cores": [
-      45.9,
-      40.1,
-      41.3,
-      38.5,
-      34.0,
-      32.9,
-      18.8,
-      6.4
+      59.0,
+      50.7,
+      48.8,
+      47.7,
+      66.8,
+      55.5,
+      47.4,
+      29.4
     ],
-    "mem": 83.2,
-    "mem_used_gb": 2.54,
+    "mem": 81.2,
+    "mem_used_gb": 2.7,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 93.1,
+    "proc_mem_mb": 186.5,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32336755712,
-    "net_tx": 31853689856,
-    "down_kbps": 417.1,
-    "up_kbps": 509.0,
+    "net_rx": 32418166784,
+    "net_tx": 31963547648,
+    "down_kbps": 1491.3,
+    "up_kbps": 959.6,
     "disk_free_gb": 6.9,
     "load": [
-      3.0,
-      3.13,
-      3.28
+      3.07,
+      3.11,
+      3.23
     ],
     "cores": 8
   },
-  "disk_mb": 695.4,
+  "disk_mb": 693.5,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (2 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794662074.428213,
-    "next_sync_s": 270,
-    "commits": 198
+    "last_push": 1794662107.625841,
+    "next_sync_s": 298,
+    "commits": 199
   },
   "last_sample": {
     "type": "web image",
-    "topic": "career information",
-    "problem": "20200212- Amb Fischer - Wali - Career Center-5775",
-    "solution": "Public domain",
+    "topic": "small sample size problem",
+    "problem": "Red dwarf. Main sequence star of spectal type M.",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
