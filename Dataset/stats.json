@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794636659.99355,
-  "updated_iso": "2026-11-14T11:41:00",
-  "uptime_s": 152159,
+  "updated": 1794637063.830438,
+  "updated_iso": "2026-11-14T11:47:43",
+  "uptime_s": 152563,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,26 +18,26 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 225,
+  "waiting": 244,
   "processes": 1,
   "fields": {
     "mathematics": 926585,
-    "computer science": 641536,
+    "computer science": 648669,
     "physics": 502898,
-    "general": 479065,
-    "engineering": 376347,
-    "medicine": 280149,
-    "biology": 254608,
-    "chemistry": 231739,
+    "general": 485429,
+    "engineering": 384269,
+    "medicine": 280992,
+    "biology": 259323,
+    "chemistry": 237451,
     "economics and finance": 160310,
     "earth and space": 151696,
-    "materials science": 140804,
+    "materials science": 147145,
     "statistics": 126739,
     "psychology": 90050,
     "humanities": 86694,
-    "programming": 35145,
+    "programming": 35596,
     "machine learning": 20661,
-    "general knowledge": 7863,
+    "general knowledge": 8001,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 75298,
-    "openlifescienceai/medmcqa": 20253,
+    "stack exchange dump": 76221,
+    "openlifescienceai/medmcqa": 21096,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4512287,
-    "originals": 24926,
-    "variants": 4487361,
-    "web_images": 4163,
+    "text": 4551906,
+    "originals": 25152,
+    "variants": 4526754,
+    "web_images": 4256,
     "synthetic_images": 14064,
-    "images": 18227,
+    "images": 18320,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2336167457,
-    "tasks_done": 83407,
+    "tokens": 2353113534,
+    "tasks_done": 83561,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 6536
+    "preference": 6693
   },
   "by_kind": {
-    "archive": 9266,
-    "text": 14261,
-    "web_images": 13429,
+    "archive": 9305,
+    "text": 14330,
+    "web_images": 13475,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2336167457,
-  "per_min": 0.0,
+  "tokens": 2353113534,
+  "per_min": 7584.5,
   "topics": {
     "known": 109914,
-    "explored": 25738,
-    "queued": 84056,
+    "explored": 25807,
+    "queued": 83987,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "testbed",
-        "",
-        2809
-      ],
-      [
-        "patient data",
-        "",
-        5352
-      ],
-      [
-        "planet",
-        "",
-        4926
-      ],
-      [
-        "frequent itemsets",
-        "computer science",
-        0
-      ],
-      [
-        "fluctuational electrodynamics",
+        "windows ce",
         "engineering",
-        760
+        0
       ],
       [
-        "sign language dataset",
-        "computer science",
-        3523
+        "necrophagous insects",
+        "biology",
+        0
       ],
       [
-        "robot navigation",
-        "computer science",
-        3704
-      ],
-      [
-        "digital carbon footprint",
-        "engineering",
-        3161
-      ],
-      [
-        "quora",
+        "hadoop",
         "computer science",
         0
       ],
       [
-        "urinary sodium-to-potassium ratio",
-        "medicine",
-        0
-      ],
-      [
-        "glass properties",
+        "clay exfoliation",
         "materials science",
-        3901
+        0
       ],
       [
-        "surgical bleeding control",
+        "injury prevalence",
         "medicine",
+        0
+      ],
+      [
+        "halal cosmetics",
+        "economics and finance",
+        0
+      ],
+      [
+        "arabic language proficiency",
+        "humanities",
+        0
+      ],
+      [
+        "chronic hiv infection",
+        "biology",
+        0
+      ],
+      [
+        "iot use cases",
+        "computer science",
+        0
+      ],
+      [
+        "virtual reality interaction",
+        "computer science",
+        5702
+      ],
+      [
+        "sustainable bioeconomy",
+        "biology",
+        0
+      ],
+      [
+        "color design",
+        "psychology",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794636659.991145,
-    "cpu": 23.7,
+    "time": 1794637063.8292742,
+    "cpu": 25.7,
     "cpu_cores": [
-      22.1,
-      20.5,
-      16.2,
-      12.6,
-      52.1,
-      38.5,
-      21.7,
-      6.2
+      23.7,
+      21.2,
+      21.8,
+      14.4,
+      45.8,
+      40.0,
+      27.6,
+      11.0
     ],
-    "mem": 74.2,
-    "mem_used_gb": 3.24,
+    "mem": 76.5,
+    "mem_used_gb": 3.05,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 710.7,
+    "proc_mem_mb": 560.3,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 24240503808,
-    "net_tx": 22952557568,
-    "down_kbps": 453.6,
-    "up_kbps": 584.3,
-    "disk_free_gb": 10.7,
+    "net_rx": 24412379136,
+    "net_tx": 23164056576,
+    "down_kbps": 1342.1,
+    "up_kbps": 1194.3,
+    "disk_free_gb": 10.6,
     "load": [
-      4.08,
-      3.5,
-      3.54
+      2.97,
+      2.92,
+      3.2
     ],
     "cores": 8
   },
-  "disk_mb": 259.2,
+  "disk_mb": 276.9,
   "github": {
     "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (3 MB), your data is kept here",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794636124.187619,
-    "next_sync_s": 294,
-    "commits": 127
+    "last_push": 1794636702.3133261,
+    "next_sync_s": 295,
+    "commits": 128
   },
   "last_sample": {
-    "type": "text",
-    "topic": "testbed",
-    "problem": "Federated Cybersecurity Testbed as a Service (FCTaaS): A framework to federate cybersecurity testbeds Rapid technological change is reshaping society through emerging domains such as autonomous vehicles and smart manufacturing, creating new research challenges in system design, operation, security, and training. Researchers often rely on testbeds to reproduce experimental scenarios, collect and\u2026",
-    "solution": "Moreover, access to specialized testbeds is often limited to a small group of researchers, leaving valuable infrastructure underutilized during its operational lifetime. This paper presents FCTaaS, a Federated Cybersecurity Testbed as a Service framework that enables heterogeneous cybersecurity testbeds to participate in a single experiment across geographical boundaries. By connecting\u2026",
-    "source": "arxiv"
+    "type": "web image",
+    "topic": "coating adhesion strength",
+    "problem": "Schematic drawing of a pneumatic piston for evaluating the pull-off strength of a coating system from painted substrates, according to ASTM D 4541 (A3) and ISO 4624. (Legends in brazilian portuguese)",
+    "solution": "CC BY-SA 3.0",
+    "source": "wikimedia commons"
   }
 }
