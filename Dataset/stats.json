@@ -7,33 +7,33 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794661351.99243,
-  "updated_iso": "2026-11-14T18:32:32",
-  "uptime_s": 176851,
+  "updated": 1794661489.730565,
+  "updated_iso": "2026-11-14T18:34:49",
+  "uptime_s": 176989,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "text": 116,
     "archive": 116,
+    "text": 116,
     "web_images": 24
   },
-  "waiting": 231,
+  "waiting": 211,
   "processes": 1,
   "fields": {
-    "computer science": 1119177,
+    "computer science": 1120739,
     "mathematics": 928130,
-    "general": 700872,
-    "engineering": 564330,
+    "general": 708666,
+    "engineering": 564644,
     "physics": 502898,
-    "medicine": 354140,
+    "medicine": 354502,
     "chemistry": 314471,
-    "biology": 312389,
+    "biology": 313109,
     "economics and finance": 234393,
     "earth and space": 219994,
     "materials science": 205462,
     "humanities": 136769,
-    "psychology": 135113,
+    "psychology": 135994,
     "statistics": 126739,
     "programming": 51483,
     "machine learning": 20661,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5939962,
-    "originals": 32511,
-    "variants": 5907451,
-    "web_images": 6861,
+    "text": 5951595,
+    "originals": 32572,
+    "variants": 5919023,
+    "web_images": 6882,
     "synthetic_images": 14064,
-    "images": 20925,
+    "images": 20946,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2906599518,
-    "tasks_done": 102204,
+    "tokens": 2910964270,
+    "tasks_done": 102355,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
-    "archive": 14829,
-    "text": 20546,
-    "web_images": 20378,
+    "archive": 14907,
+    "text": 20595,
+    "web_images": 20402,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2906599518,
-  "per_min": 2753.0,
+  "tokens": 2910964270,
+  "per_min": 3402.8,
   "topics": {
     "known": 109914,
-    "explored": 32023,
-    "queued": 77771,
+    "explored": 32072,
+    "queued": 77722,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "cheloniidae",
-        "earth and space",
-        0
-      ],
-      [
-        "napping",
-        "psychology",
-        0
-      ],
-      [
-        "symbiosis",
-        "",
-        0
-      ],
-      [
-        "radical",
-        "",
-        0
-      ],
-      [
-        "teleconnections",
-        "earth and space",
-        0
-      ],
-      [
-        "deep water culture",
-        "biology",
-        0
-      ],
-      [
-        "farmers' markets",
-        "biology",
-        0
-      ],
-      [
-        "brics summit",
-        "economics and finance",
-        0
-      ],
-      [
-        "target costing",
-        "economics and finance",
-        0
-      ],
-      [
-        "incra",
-        "humanities",
-        0
-      ],
-      [
-        "sirna",
-        "biology",
-        1867
-      ],
-      [
-        "pain management and treatment",
+        "occupational sensitization",
         "medicine",
-        1343
+        0
+      ],
+      [
+        "trade names",
+        "economics and finance",
+        0
+      ],
+      [
+        "panel data",
+        "economics and finance",
+        0
+      ],
+      [
+        "crewed spacecraft",
+        "engineering",
+        0
+      ],
+      [
+        "solar thermal desalination",
+        "engineering",
+        0
+      ],
+      [
+        "genetic risk prediction",
+        "biology",
+        0
+      ],
+      [
+        "joint source-channel coding",
+        "computer science",
+        0
+      ],
+      [
+        "neutron temperature",
+        "",
+        0
+      ],
+      [
+        "lung ultrasound",
+        "medicine",
+        0
+      ],
+      [
+        "fish immunology",
+        "biology",
+        0
+      ],
+      [
+        "scalp",
+        "",
+        4437
+      ],
+      [
+        "fusarium graminearum",
+        "biology",
+        0
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794661351.989999,
-    "cpu": 44.4,
+    "time": 1794661489.7281768,
+    "cpu": 31.9,
     "cpu_cores": [
-      56.5,
-      48.4,
-      50.2,
-      40.7,
-      52.3,
-      48.8,
-      38.1,
-      19.9
+      46.5,
+      42.2,
+      37.9,
+      38.8,
+      33.8,
+      34.3,
+      15.2,
+      6.8
     ],
-    "mem": 81.5,
-    "mem_used_gb": 2.66,
+    "mem": 82.1,
+    "mem_used_gb": 2.6,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 138.1,
+    "proc_mem_mb": 118.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 32062448640,
-    "net_tx": 31461501952,
-    "down_kbps": 232.5,
-    "up_kbps": 521.5,
+    "net_rx": 32150759424,
+    "net_tx": 31584410624,
+    "down_kbps": 419.6,
+    "up_kbps": 417.3,
     "disk_free_gb": 6.9,
     "load": [
-      2.84,
-      3.36,
-      3.46
+      3.67,
+      3.54,
+      3.52
     ],
     "cores": 8
   },
-  "disk_mb": 691.7,
+  "disk_mb": 693.9,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794661236.27075,
-    "next_sync_s": 48,
-    "commits": 193
+    "last_push": 1794661412.1358988,
+    "next_sync_s": 253,
+    "commits": 194
   },
   "last_sample": {
     "type": "web image",
-    "topic": "silica gel",
-    "problem": "Silica gel crystal close up",
-    "solution": "CC BY 4.0",
+    "topic": "treated wastewater irrigation",
+    "problem": "\u05ea\u05d1\u05d5\u05d0\u05d4 \u05e9\u05d2\u05d5\u05d3\u05dc\u05d4 \u05d1\u05de\u05d9 \u05e7\u05d5\u05dc\u05d7\u05d9\u05df \u05d1\u05e9\u05d3\u05d5\u05ea \u05de\u05e9\u05de\u05e8 \u05d4\u05e0\u05d2\u05d1",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
