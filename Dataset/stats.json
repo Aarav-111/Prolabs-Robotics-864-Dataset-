@@ -2,38 +2,38 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 5.8,
+  "disk_free_gb": 5.5,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794665118.729342,
-  "updated_iso": "2026-11-14T19:35:18",
-  "uptime_s": 180618,
+  "updated": 1794665988.942135,
+  "updated_iso": "2026-11-14T19:49:48",
+  "uptime_s": 181488,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 251,
   "busy_by_kind": {
+    "archive": 111,
     "text": 116,
-    "archive": 116,
     "web_images": 24
   },
-  "waiting": 236,
+  "waiting": 239,
   "processes": 1,
   "fields": {
-    "computer science": 1186516,
+    "computer science": 1200424,
     "mathematics": 928130,
-    "general": 749141,
-    "engineering": 573976,
+    "general": 760994,
+    "engineering": 583745,
     "physics": 502898,
-    "medicine": 360118,
-    "biology": 319513,
+    "medicine": 360710,
+    "biology": 325066,
     "chemistry": 315561,
-    "economics and finance": 235287,
-    "earth and space": 223734,
-    "materials science": 210260,
-    "humanities": 142106,
-    "psychology": 138859,
+    "economics and finance": 250142,
+    "earth and space": 226547,
+    "materials science": 212115,
+    "humanities": 145451,
+    "psychology": 139568,
     "statistics": 126739,
     "programming": 51833,
     "machine learning": 20661,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 6098474,
-    "originals": 33330,
-    "variants": 6065144,
-    "web_images": 7216,
+    "text": 6163726,
+    "originals": 33692,
+    "variants": 6130034,
+    "web_images": 7333,
     "synthetic_images": 14064,
-    "images": 21280,
+    "images": 21397,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2964795537,
-    "tasks_done": 104992,
+    "tokens": 2989335928,
+    "tasks_done": 105695,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10235
   },
   "by_kind": {
-    "archive": 15582,
-    "text": 21424,
-    "web_images": 21535,
+    "archive": 15787,
+    "text": 21673,
+    "web_images": 21785,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2964795537,
-  "per_min": 4603.9,
+  "tokens": 2989335928,
+  "per_min": 6353.1,
   "topics": {
     "known": 109914,
-    "explored": 32901,
-    "queued": 76893,
+    "explored": 33150,
+    "queued": 76644,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "jpeg",
-        "computer science",
-        0
-      ],
-      [
-        "high-temperature shape memory alloys",
-        "materials science",
-        0
-      ],
-      [
-        "graphite production",
-        "materials science",
-        0
-      ],
-      [
-        "ridge count",
-        "biology",
-        0
-      ],
-      [
-        "dam safety monitoring",
-        "engineering",
-        0
-      ],
-      [
-        "image forgery detection",
-        "computer science",
-        0
-      ],
-      [
-        "antisocial personality disorder",
-        "psychology",
-        0
-      ],
-      [
-        "ischemic moyamoya disease",
+        "herald patch",
         "medicine",
         0
       ],
       [
-        "session initiation protocol",
+        "persuasive system design",
+        "computer science",
+        0
+      ],
+      [
+        "public goods game",
+        "economics and finance",
+        4536
+      ],
+      [
+        "dice coefficient",
+        "computer science",
+        4993
+      ],
+      [
+        "cultural revolution",
+        "humanities",
+        1348
+      ],
+      [
+        "first employment",
+        "economics and finance",
+        4581
+      ],
+      [
+        "bolted joints",
         "engineering",
-        0
+        758
       ],
       [
-        "fodder",
-        "",
-        0
+        "liveness detection",
+        "computer science",
+        2457
       ],
       [
-        "school-based agricultural education",
+        "ischnocera",
         "biology",
         0
       ],
       [
-        "student performance analysis",
-        "computer science",
+        "blunt liver injury",
+        "medicine",
+        0
+      ],
+      [
+        "biofilter",
+        "engineering",
+        0
+      ],
+      [
+        "vnotes",
+        "medicine",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794665118.728173,
-    "cpu": 38.8,
+    "time": 1794665988.9407759,
+    "cpu": 37.3,
     "cpu_cores": [
-      50.9,
-      38.0,
-      36.3,
-      39.4,
-      43.3,
-      56.6,
-      30.6,
-      15.3
+      53.5,
+      43.7,
+      47.8,
+      45.9,
+      36.9,
+      38.5,
+      21.1,
+      10.9
     ],
-    "mem": 81.1,
-    "mem_used_gb": 2.62,
+    "mem": 83.3,
+    "mem_used_gb": 2.54,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 232.9,
+    "proc_mem_mb": 120.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 33455049728,
-    "net_tx": 33476832256,
-    "down_kbps": 989.3,
-    "up_kbps": 1492.7,
-    "disk_free_gb": 5.8,
+    "net_rx": 33968711680,
+    "net_tx": 34259584000,
+    "down_kbps": 2092.4,
+    "up_kbps": 3774.0,
+    "disk_free_gb": 5.5,
     "load": [
-      3.71,
-      3.58,
-      3.52
+      3.84,
+      3.42,
+      3.44
     ],
     "cores": 8
   },
-  "disk_mb": 717.7,
+  "disk_mb": 732.8,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (2 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794665116.811978,
-    "next_sync_s": 62,
-    "commits": 217
+    "last_push": 1794665137.1646988,
+    "next_sync_s": 269,
+    "commits": 218
   },
   "last_sample": {
     "type": "web image",
-    "topic": "school management information system",
-    "problem": "Singapore Management University.",
-    "solution": "CC BY 2.5",
+    "topic": "variant filtering",
+    "problem": "Wikidata site links table layout mockup (variant 2): after adding",
+    "solution": "CC BY-SA 3.0",
     "source": "wikimedia commons"
   }
 }
