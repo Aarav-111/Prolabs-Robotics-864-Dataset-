@@ -7,37 +7,37 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794634030.530751,
-  "updated_iso": "2026-11-14T10:57:10",
-  "uptime_s": 149530,
+  "updated": 1794634811.216432,
+  "updated_iso": "2026-11-14T11:10:11",
+  "uptime_s": 150310,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "archive": 116,
     "text": 116,
-    "web_images": 24
+    "web_images": 24,
+    "archive": 116
   },
-  "waiting": 245,
+  "waiting": 234,
   "processes": 1,
   "fields": {
     "mathematics": 926585,
-    "computer science": 579995,
+    "computer science": 600759,
     "physics": 502898,
-    "general": 436784,
-    "engineering": 339932,
-    "medicine": 269500,
-    "biology": 234497,
-    "chemistry": 216327,
-    "economics and finance": 135507,
-    "earth and space": 131163,
+    "general": 442638,
+    "engineering": 352772,
+    "medicine": 270884,
+    "biology": 236511,
+    "chemistry": 217049,
+    "economics and finance": 138402,
+    "earth and space": 135404,
     "statistics": 126739,
-    "materials science": 120711,
-    "humanities": 83435,
-    "psychology": 79305,
-    "programming": 34414,
+    "materials science": 121716,
+    "humanities": 84132,
+    "psychology": 80700,
+    "programming": 34714,
     "machine learning": 20661,
-    "general knowledge": 6600,
+    "general knowledge": 7232,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 70164,
-    "openlifescienceai/medmcqa": 18736,
+    "stack exchange dump": 71818,
+    "openlifescienceai/medmcqa": 19642,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4244451,
-    "originals": 23390,
-    "variants": 4221061,
-    "web_images": 3836,
+    "text": 4299194,
+    "originals": 23686,
+    "variants": 4275508,
+    "web_images": 3918,
     "synthetic_images": 14064,
-    "images": 17900,
+    "images": 17982,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2232152148,
-    "tasks_done": 81769,
+    "tokens": 2253243743,
+    "tasks_done": 82445,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 6139
+    "preference": 6273
   },
   "by_kind": {
-    "archive": 8577,
-    "text": 13717,
-    "web_images": 13024,
+    "archive": 8842,
+    "text": 13903,
+    "web_images": 13249,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2232152148,
-  "per_min": 5878.9,
+  "tokens": 2253243743,
+  "per_min": 1430.0,
   "topics": {
     "known": 109914,
-    "explored": 25194,
-    "queued": 84600,
+    "explored": 25380,
+    "queued": 84414,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "high-temperature high-pressure water",
-        "engineering",
-        4073
-      ],
-      [
-        "uml diagrams",
-        "computer science",
-        3038
-      ],
-      [
-        "private libraries",
-        "humanities",
-        2038
-      ],
-      [
-        "vegetation history",
-        "earth and space",
-        1029
-      ],
-      [
-        "sports video analysis",
-        "computer science",
-        0
-      ],
-      [
-        "ipsec",
-        "computer science",
-        0
-      ],
-      [
-        "ie matrix",
-        "economics and finance",
-        0
-      ],
-      [
-        "phase equilibria and thermodynamics",
-        "chemistry",
-        568
-      ],
-      [
-        "educational technology and assessment",
-        "computer science",
-        0
-      ],
-      [
-        "dangun myth",
-        "humanities",
-        0
-      ],
-      [
-        "sequencing batch reactor",
-        "earth and space",
-        0
-      ],
-      [
-        "stimulation",
+        "peripheral nervous system",
         "",
         0
+      ],
+      [
+        "maximum energy product",
+        "materials science",
+        0
+      ],
+      [
+        "elkonin",
+        "psychology",
+        0
+      ],
+      [
+        "15n nmr",
+        "chemistry",
+        0
+      ],
+      [
+        "network attached storage",
+        "computer science",
+        0
+      ],
+      [
+        "vascular tone",
+        "medicine",
+        0
+      ],
+      [
+        "dual-energy imaging",
+        "engineering",
+        7012
+      ],
+      [
+        "open source ecosystem",
+        "computer science",
+        4343
+      ],
+      [
+        "cross-modal hashing",
+        "computer science",
+        5204
+      ],
+      [
+        "mars express",
+        "earth and space",
+        2137
+      ],
+      [
+        "acetic acid",
+        "",
+        3597
+      ],
+      [
+        "gesture control",
+        "computer science",
+        3120
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794634030.5291169,
-    "cpu": 40.4,
+    "time": 1794634811.2152362,
+    "cpu": 29.2,
     "cpu_cores": [
-      51.2,
-      47.3,
-      48.5,
-      37.1,
-      55.8,
+      32.0,
+      29.0,
+      22.5,
+      17.9,
+      45.7,
       43.9,
-      30.5,
-      9.5
+      28.5,
+      14.9
     ],
-    "mem": 84.0,
-    "mem_used_gb": 2.47,
+    "mem": 82.7,
+    "mem_used_gb": 2.59,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 301.0,
+    "proc_mem_mb": 71.6,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 23304350720,
-    "net_tx": 21609286656,
-    "down_kbps": 232.5,
-    "up_kbps": 150.7,
+    "net_rx": 23572768768,
+    "net_tx": 21970554880,
+    "down_kbps": 738.6,
+    "up_kbps": 452.8,
     "disk_free_gb": 10.7,
     "load": [
-      4.78,
-      5.67,
-      6.67
+      3.3,
+      3.82,
+      4.77
     ],
     "cores": 8
   },
-  "disk_mb": 185.3,
+  "disk_mb": 201.0,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (4 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794633984.076085,
-    "next_sync_s": 295,
-    "commits": 121
+    "last_push": 1794634127.5843892,
+    "next_sync_s": 216,
+    "commits": 122
   },
   "last_sample": {
-    "type": "text",
-    "topic": "high-temperature high-pressure water",
-    "problem": "Copper passivation procedure for water-filled copper cells for applications in metrology In the framework of the European research project MeteoMet, the LNE-CNAM and the LNE-CETIAT are developing novel copper cells for the determination of the water vapour pressure equation and the measurement of the triple point of water temperature at the highest degree of accuracy. The Water Vapour Pressure\u2026",
-    "solution": "The Triple Point of Water (TPW, temperature 273,16 K) plays a key role in thermometry, because of its threefold function. On one side, it defines the temperature unit, the kelvin. On the other side, it is the reference point in Standard Platinum Resistance Thermometer (SPRT) calibrations, according to the International Temperature Scale of 1990 (ITS-90). Finally, it is the connection point\u2026",
-    "source": "arxiv"
+    "type": "web image",
+    "topic": "visible difference",
+    "problem": "This high school annual documents the students, teachers, clubs, athletics, and other events of the 1987-1988 school year.",
+    "solution": "Public domain",
+    "source": "wikimedia commons"
   }
 }
