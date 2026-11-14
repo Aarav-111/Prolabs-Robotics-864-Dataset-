@@ -7,28 +7,28 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794660891.976883,
-  "updated_iso": "2026-11-14T18:24:51",
-  "uptime_s": 176391,
+  "updated": 1794661042.394697,
+  "updated_iso": "2026-11-14T18:27:22",
+  "uptime_s": 176542,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "text": 116,
     "archive": 116,
+    "text": 116,
     "web_images": 24
   },
-  "waiting": 237,
+  "waiting": 230,
   "processes": 1,
   "fields": {
     "computer science": 1119177,
     "mathematics": 928130,
-    "general": 695971,
-    "engineering": 554007,
+    "general": 699861,
+    "engineering": 558243,
     "physics": 502898,
     "medicine": 352797,
     "chemistry": 314471,
-    "biology": 309696,
+    "biology": 310209,
     "economics and finance": 232248,
     "earth and space": 219100,
     "materials science": 205462,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5917663,
-    "originals": 32392,
-    "variants": 5885271,
-    "web_images": 6790,
+    "text": 5926302,
+    "originals": 32436,
+    "variants": 5893866,
+    "web_images": 6803,
     "synthetic_images": 14064,
-    "images": 20854,
+    "images": 20867,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2898259371,
-    "tasks_done": 101734,
+    "tokens": 2901463176,
+    "tasks_done": 101896,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 10019
   },
   "by_kind": {
-    "archive": 14725,
-    "text": 20420,
-    "web_images": 20138,
+    "archive": 14791,
+    "text": 20445,
+    "web_images": 20209,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2898259371,
-  "per_min": 3794.8,
+  "tokens": 2901463176,
+  "per_min": 1987.0,
   "topics": {
     "known": 109914,
-    "explored": 31897,
-    "queued": 77897,
+    "explored": 31922,
+    "queued": 77872,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "population density",
+        "silica gel",
         "",
-        0
+        1967
       ],
       [
-        "wash fastness",
-        "materials science",
-        0
+        "complication",
+        "",
+        1923
       ],
       [
-        "bouguer gravity anomalies",
-        "earth and space",
-        0
-      ],
-      [
-        "microdeletion syndromes",
-        "biology",
-        0
-      ],
-      [
-        "llc resonant converter",
+        "magnetic anomaly detection",
         "engineering",
-        0
+        1895
       ],
       [
-        "rise model",
-        "economics and finance",
-        0
+        "trigger voltage",
+        "engineering",
+        1426
       ],
       [
-        "selenium",
-        "",
-        0
-      ],
-      [
-        "holstein calves",
-        "biology",
-        0
-      ],
-      [
-        "principalship",
-        "humanities",
-        0
-      ],
-      [
-        "computerized dynamic assessment",
-        "psychology",
-        0
-      ],
-      [
-        "specialist nurses",
+        "small bowel resection",
         "medicine",
         0
       ],
       [
-        "school teachers",
-        "",
+        "fuel cell durability",
+        "engineering",
         0
+      ],
+      [
+        "blue food",
+        "biology",
+        0
+      ],
+      [
+        "adhesion measurement",
+        "engineering",
+        0
+      ],
+      [
+        "weak solution existence and uniqueness",
+        "engineering",
+        227
+      ],
+      [
+        "electricity market liberalization",
+        "engineering",
+        0
+      ],
+      [
+        "honey bee pests",
+        "biology",
+        111
+      ],
+      [
+        "solar collectors",
+        "engineering",
+        688
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794660891.9750268,
-    "cpu": 33.7,
+    "time": 1794661042.393451,
+    "cpu": 40.0,
     "cpu_cores": [
-      22.9,
-      18.3,
-      12.2,
-      8.3,
-      59.5,
-      58.2,
-      55.2,
-      36.0
+      65.5,
+      66.2,
+      62.8,
+      66.5,
+      18.0,
+      26.5,
+      10.3,
+      3.9
     ],
-    "mem": 81.4,
-    "mem_used_gb": 2.67,
+    "mem": 82.1,
+    "mem_used_gb": 2.62,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 167.5,
+    "proc_mem_mb": 247.1,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 31897754624,
-    "net_tx": 31266137088,
-    "down_kbps": 157.1,
-    "up_kbps": 201.4,
+    "net_rx": 31948270592,
+    "net_tx": 31331823616,
+    "down_kbps": 325.8,
+    "up_kbps": 263.8,
     "disk_free_gb": 7.0,
     "load": [
-      2.48,
-      3.26,
-      3.44
+      3.48,
+      3.4,
+      3.46
     ],
     "cores": 8
   },
-  "disk_mb": 685.1,
+  "disk_mb": 686.9,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794660890.767589,
-    "next_sync_s": 207,
-    "commits": 189
+    "last_push": 1794660940.7240262,
+    "next_sync_s": 56,
+    "commits": 190
   },
   "last_sample": {
     "type": "text",
-    "topic": "filtered-x lms algorithm",
-    "problem": "Distributed Multichannel Active Noise Control with Asynchronous Communication Distributed multichannel active noise control (DMCANC) offers effective noise reduction across large spatial areas by distributing the computational load of centralized control to multiple low-cost nodes. Conventional DMCANC methods, however, typically assume synchronous communication and require frequent data\u2026",
-    "solution": "To enhance efficiency and adaptability, this work proposes an asynchronous communication strategy where each node executes a weight-constrained filtered-x LMS (WCFxLMS) algorithm and independently requests communication only when its local noise reduction performance degrades. Upon request, other nodes transmit the weight difference between their local control filter and the center point in\u2026",
+    "topic": "silica gel",
+    "problem": "Imprinting Macroscopic Fracture during Gelation: A Mechanism for Tuning Colloidal Gels Colloidal gels form through the sol-gel transition of attractive particle suspensions, where local aggregation leads to a space-spanning network with solid-like properties. Their microstructure and mechanical properties are highly sensitive to external perturbations, which can substantially alter the pathway\u2026",
+    "solution": "Using large-amplitude oscillatory shear (LAOS), we vary both the strain amplitude and the duration of oscillatory forcing, varying between one and two times the gelation time. We find that sufficiently large strain amplitudes, or prolonged exposure to oscillations in the nonlinear regime, alter irreversibly the gel properties: the storage modulus $G'$ decreases while its frequency dependence\u2026",
     "source": "arxiv"
   }
 }
