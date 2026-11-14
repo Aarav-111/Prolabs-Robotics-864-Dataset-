@@ -7,18 +7,18 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794635315.7935638,
-  "updated_iso": "2026-11-14T11:18:35",
-  "uptime_s": 150815,
+  "updated": 1794635429.650146,
+  "updated_iso": "2026-11-14T11:20:36",
+  "uptime_s": 150929,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 255,
   "busy_by_kind": {
-    "web_images": 24,
-    "text": 115,
+    "web_images": 23,
+    "text": 116,
     "archive": 116
   },
-  "waiting": 244,
+  "waiting": 210,
   "processes": 1,
   "fields": {
     "mathematics": 926585,
@@ -69,21 +69,21 @@
     "text": 4365117,
     "originals": 24061,
     "variants": 4341056,
-    "web_images": 3973,
+    "web_images": 4015,
     "synthetic_images": 14064,
-    "images": 18037,
+    "images": 18079,
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2278202592,
-    "tasks_done": 82739,
+    "tasks_done": 82773,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 6395
+    "preference": 6408
   },
   "by_kind": {
-    "archive": 8984,
-    "text": 14024,
-    "web_images": 13280,
+    "archive": 8998,
+    "text": 14026,
+    "web_images": 13298,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,11 +91,11 @@
     "seed_concepts": 0
   },
   "tokens": 2278202592,
-  "per_min": 7030.1,
+  "per_min": 913.5,
   "topics": {
     "known": 109914,
-    "explored": 25501,
-    "queued": 84294,
+    "explored": 25503,
+    "queued": 84291,
     "space": 6594840,
     "next": [
       [
@@ -149,6 +149,16 @@
     ],
     "recent": [
       [
+        "pipefish",
+        "biology",
+        0
+      ],
+      [
+        "black report",
+        "humanities",
+        0
+      ],
+      [
         "business process execution",
         "economics and finance",
         2326
@@ -197,66 +207,56 @@
         "ultraviolet photoelectron spectroscopy",
         "materials science",
         3747
-      ],
-      [
-        "transformers electrical",
-        "engineering",
-        0
-      ],
-      [
-        "economic law theory",
-        "economics and finance",
-        0
       ]
     ],
-    "in_progress": 119,
+    "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794635315.7926888,
-    "cpu": 18.8,
+    "time": 1794635429.573416,
+    "cpu": 26.0,
     "cpu_cores": [
-      20.0,
-      17.1,
-      14.6,
-      10.0,
-      32.5,
-      30.0,
-      17.1,
-      9.8
+      18.7,
+      15.8,
+      11.0,
+      9.1,
+      46.8,
+      46.5,
+      38.1,
+      22.6
     ],
-    "mem": 73.9,
-    "mem_used_gb": 3.26,
+    "mem": 75.4,
+    "mem_used_gb": 3.13,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 651.7,
+    "proc_mem_mb": 246.6,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 23752410112,
-    "net_tx": 22240133120,
-    "down_kbps": 940.5,
-    "up_kbps": 730.4,
+    "net_rx": 23811238912,
+    "net_tx": 22301201408,
+    "down_kbps": 1149.9,
+    "up_kbps": 1019.8,
     "disk_free_gb": 10.3,
     "load": [
-      3.41,
-      3.31,
-      4.04
+      2.56,
+      2.99,
+      3.81
     ],
     "cores": 8
   },
-  "disk_mb": 211.9,
+  "disk_mb": 219.7,
   "github": {
-    "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (3 MB), your data is kept here",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794634866.357256,
-    "next_sync_s": 276,
-    "commits": 123
+    "last_push": 1794635364.5329258,
+    "next_sync_s": 162,
+    "commits": 124
   },
   "last_sample": {
-    "type": "archive Q&A",
-    "topic": "stack exchange dump",
-    "problem": "Instruction: Solve the following problem and explain the reasoning. Input: Here's a fun one! In chemical notation, can I safely assume that the notation of - a single lower-case latin character - followed by a hyphen - followed by an Element upper-case latin character (and possibly more characters) should always be typeset as - italic lower-case character - hyphen (i.e. never is a bond) -\u2026",
-    "solution": "Response: Easy - let's go. tl;dr: That's probably a good approach. So, there are at least three different things here. None of these abbreviations are standardised as far as I'm aware[1], so whatever is done is going to be just as non-standard as any other approach. - Specific shorthands for alkyl functional groups: t-Bu, i-Pr, n-Bu, c-Hex I've seen the approach you've suggested used for these,\u2026",
-    "source": "stackexchange"
+    "type": "web image",
+    "topic": "budget participation",
+    "problem": "Handshake between Simon Harris, Irish Deputy Prime Minster (T\u00e1naiste) and Minister for Finance, and Piotr Serafin, European Commissioner for Budget, Anti-Fraud and Public Administration (from left to right)",
+    "solution": "CC BY 4.0",
+    "source": "wikimedia commons"
   }
 }
