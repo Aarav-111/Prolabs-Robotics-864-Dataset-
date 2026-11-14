@@ -2,42 +2,42 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 11.4,
+  "disk_free_gb": 11.8,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794643498.82168,
-  "updated_iso": "2026-11-14T13:34:58",
-  "uptime_s": 158998,
+  "updated": 1794645349.716898,
+  "updated_iso": "2026-11-14T14:05:49",
+  "uptime_s": 160849,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
   "busy_by_kind": {
-    "web_images": 24,
     "text": 116,
-    "archive": 116
+    "archive": 116,
+    "web_images": 24
   },
-  "waiting": 15,
+  "waiting": 228,
   "processes": 1,
   "fields": {
     "mathematics": 926955,
-    "computer science": 775189,
-    "general": 571920,
+    "computer science": 845126,
+    "general": 587723,
     "physics": 502898,
-    "engineering": 446781,
-    "medicine": 305651,
-    "biology": 279759,
-    "chemistry": 270299,
-    "economics and finance": 177730,
-    "earth and space": 170992,
-    "materials science": 165093,
+    "engineering": 463664,
+    "medicine": 312392,
+    "chemistry": 289875,
+    "biology": 283495,
+    "economics and finance": 188002,
+    "earth and space": 178712,
+    "materials science": 176618,
     "statistics": 126739,
-    "humanities": 102570,
-    "psychology": 94992,
-    "programming": 41755,
+    "humanities": 104952,
+    "psychology": 99022,
+    "programming": 42820,
     "machine learning": 20661,
-    "general knowledge": 9086,
+    "general knowledge": 9593,
     "robotics": 3515
   },
   "topic_fields": {
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 87201,
-    "openlifescienceai/medmcqa": 23593,
+    "stack exchange dump": 90314,
+    "openlifescienceai/medmcqa": 24308,
     "qiaojin/PubMedQA": 3231,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4988468,
-    "originals": 27475,
-    "variants": 4960993,
-    "web_images": 4921,
+    "text": 5158645,
+    "originals": 28386,
+    "variants": 5130259,
+    "web_images": 5202,
     "synthetic_images": 14064,
-    "images": 18985,
+    "images": 19266,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2543102958,
-    "tasks_done": 87945,
+    "tokens": 2606277713,
+    "tasks_done": 89567,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 7583
+    "preference": 7951
   },
   "by_kind": {
-    "archive": 10768,
-    "text": 15999,
-    "web_images": 14727,
+    "archive": 11257,
+    "text": 16542,
+    "web_images": 15317,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2543102958,
-  "per_min": 2227.3,
+  "tokens": 2606277713,
+  "per_min": 9218.9,
   "topics": {
     "known": 109914,
-    "explored": 27476,
-    "queued": 82318,
+    "explored": 28019,
+    "queued": 81775,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "cycloaromatization",
-        "chemistry",
+        "wave\u2013particle duality",
+        "",
         0
       ],
       [
-        "brand competition",
-        "economics and finance",
-        0
-      ],
-      [
-        "toffoli gate",
+        "wavelet denoising",
         "computer science",
         0
       ],
       [
-        "clothing expenditure",
-        "economics and finance",
+        "fused magnesia",
+        "materials science",
         0
       ],
       [
-        "radiative cooling",
-        "engineering",
+        "host-guest interactions",
+        "chemistry",
         0
       ],
       [
-        "connective tissue growth factor research",
-        "biology",
+        "cadmium complexes",
+        "chemistry",
         0
       ],
       [
-        "pastoral livelihoods",
-        "earth and space",
+        "humanistic psychotherapy",
+        "psychology",
         0
       ],
       [
-        "passive continental margin",
-        "earth and space",
+        "halide complexes",
+        "chemistry",
         0
       ],
       [
-        "environmental fees",
-        "earth and space",
+        "image texture",
+        "",
         0
       ],
       [
-        "enzymatic esterification",
-        "biology",
+        "mobile and web applications",
+        "computer science",
         0
       ],
       [
-        "series circuits",
-        "engineering",
+        "biomaterials",
+        "materials science",
         0
       ],
       [
-        "inter-firm partnerships",
-        "economics and finance",
+        "test of memory malingering",
+        "psychology",
         0
+      ],
+      [
+        "neural architecture search",
+        "computer science",
+        6303
       ]
     ],
     "in_progress": 120,
     "focus_left": 0
   },
   "system": {
-    "time": 1794643498.82081,
-    "cpu": 34.0,
+    "time": 1794645349.716079,
+    "cpu": 33.2,
     "cpu_cores": [
-      52.8,
-      49.7,
-      45.1,
-      42.1,
-      24.5,
-      33.2,
-      14.3,
-      10.7
+      43.7,
+      47.0,
+      38.7,
+      35.9,
+      37.2,
+      33.9,
+      19.1,
+      10.4
     ],
-    "mem": 78.0,
-    "mem_used_gb": 2.97,
+    "mem": 79.5,
+    "mem_used_gb": 2.81,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 204.1,
+    "proc_mem_mb": 249.8,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 26225639424,
-    "net_tx": 25698665472,
-    "down_kbps": 1694.0,
-    "up_kbps": 1492.9,
-    "disk_free_gb": 11.3,
+    "net_rx": 26840015872,
+    "net_tx": 26466715648,
+    "down_kbps": 844.3,
+    "up_kbps": 494.3,
+    "disk_free_gb": 11.8,
     "load": [
-      3.23,
-      2.9,
-      2.69
+      2.55,
+      2.94,
+      2.89
     ],
     "cores": 8
   },
-  "disk_mb": 430.9,
+  "disk_mb": 496.2,
   "github": {
-    "state": "pushed",
-    "error": "",
+    "state": "error",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794643150.1407518,
-    "next_sync_s": 294,
-    "commits": 143
+    "last_push": 1794643537.99136,
+    "next_sync_s": 232,
+    "commits": 144
   },
   "last_sample": {
-    "type": "archive Q&A",
-    "topic": "stack exchange dump",
-    "problem": "I'm new to C# and am trying to wrap my mind around object oriented programming. Here's what I am trying to accomplish: I've got a Windows Form application with Form1 and a separate class called connect (same namespace). I understand that it is good practice to use backgroundworkers when executing lengthy amounts of code (so as not to freeze the UI). So I've created a background worker in Form1\u2026",
-    "solution": "You could break your steps of the connect class into separate methods and invoke them sequentially as below.You dont have to trigger the progresschanged event from connect class object. ``` private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e) { ConnectClass conObject= new ConnectClass(); backgroundWorker.ReportProgress(30, \"Connecting ...\"); conObject.Connect();\u2026",
-    "source": "stackexchange"
+    "type": "web image",
+    "topic": "distributed access control",
+    "problem": "Access control solutions from Axis Communications",
+    "solution": "CC0",
+    "source": "wikimedia commons"
   }
 }
