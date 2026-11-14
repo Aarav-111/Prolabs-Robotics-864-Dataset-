@@ -2,40 +2,40 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 10.7,
+  "disk_free_gb": 10.3,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794634811.216432,
-  "updated_iso": "2026-11-14T11:10:11",
-  "uptime_s": 150310,
+  "updated": 1794635315.7935638,
+  "updated_iso": "2026-11-14T11:18:35",
+  "uptime_s": 150815,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 255,
   "busy_by_kind": {
-    "text": 116,
     "web_images": 24,
+    "text": 115,
     "archive": 116
   },
-  "waiting": 234,
+  "waiting": 244,
   "processes": 1,
   "fields": {
     "mathematics": 926585,
-    "computer science": 600759,
+    "computer science": 605042,
     "physics": 502898,
-    "general": 442638,
-    "engineering": 352772,
+    "general": 452952,
+    "engineering": 366972,
     "medicine": 270884,
-    "biology": 236511,
-    "chemistry": 217049,
-    "economics and finance": 138402,
-    "earth and space": 135404,
+    "biology": 241473,
+    "chemistry": 223724,
+    "economics and finance": 148776,
+    "earth and space": 141288,
+    "materials science": 128812,
     "statistics": 126739,
-    "materials science": 121716,
-    "humanities": 84132,
+    "humanities": 86148,
     "psychology": 80700,
-    "programming": 34714,
+    "programming": 34833,
     "machine learning": 20661,
     "general knowledge": 7232,
     "robotics": 3515
@@ -60,42 +60,42 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 71818,
+    "stack exchange dump": 73752,
     "openlifescienceai/medmcqa": 19642,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4299194,
-    "originals": 23686,
-    "variants": 4275508,
-    "web_images": 3918,
+    "text": 4365117,
+    "originals": 24061,
+    "variants": 4341056,
+    "web_images": 3973,
     "synthetic_images": 14064,
-    "images": 17982,
+    "images": 18037,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2253243743,
-    "tasks_done": 82445,
+    "tokens": 2278202592,
+    "tasks_done": 82739,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 6273
+    "preference": 6395
   },
   "by_kind": {
-    "archive": 8842,
-    "text": 13903,
-    "web_images": 13249,
+    "archive": 8984,
+    "text": 14024,
+    "web_images": 13280,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2253243743,
-  "per_min": 1430.0,
+  "tokens": 2278202592,
+  "per_min": 7030.1,
   "topics": {
     "known": 109914,
-    "explored": 25380,
-    "queued": 84414,
+    "explored": 25501,
+    "queued": 84294,
     "space": 6594840,
     "next": [
       [
@@ -149,114 +149,114 @@
     ],
     "recent": [
       [
-        "peripheral nervous system",
-        "",
-        0
+        "business process execution",
+        "economics and finance",
+        2326
       ],
       [
-        "maximum energy product",
-        "materials science",
-        0
-      ],
-      [
-        "elkonin",
-        "psychology",
-        0
-      ],
-      [
-        "15n nmr",
-        "chemistry",
-        0
-      ],
-      [
-        "network attached storage",
-        "computer science",
-        0
-      ],
-      [
-        "vascular tone",
-        "medicine",
-        0
-      ],
-      [
-        "dual-energy imaging",
+        "furniture design",
         "engineering",
-        7012
+        3287
       ],
       [
-        "open source ecosystem",
-        "computer science",
-        4343
-      ],
-      [
-        "cross-modal hashing",
-        "computer science",
-        5204
-      ],
-      [
-        "mars express",
+        "crop mapping",
         "earth and space",
-        2137
+        4967
       ],
       [
-        "acetic acid",
-        "",
-        3597
+        "diffusion in solution",
+        "chemistry",
+        4257
       ],
       [
-        "gesture control",
+        "point cloud classification",
         "computer science",
-        3120
+        4175
+      ],
+      [
+        "tandem solar cells",
+        "engineering",
+        4502
+      ],
+      [
+        "morphogenesis",
+        "",
+        2931
+      ],
+      [
+        "market power",
+        "economics and finance",
+        3659
+      ],
+      [
+        "gene transfer",
+        "biology",
+        3756
+      ],
+      [
+        "ultraviolet photoelectron spectroscopy",
+        "materials science",
+        3747
+      ],
+      [
+        "transformers electrical",
+        "engineering",
+        0
+      ],
+      [
+        "economic law theory",
+        "economics and finance",
+        0
       ]
     ],
-    "in_progress": 120,
+    "in_progress": 119,
     "focus_left": 0
   },
   "system": {
-    "time": 1794634811.2152362,
-    "cpu": 29.2,
+    "time": 1794635315.7926888,
+    "cpu": 18.8,
     "cpu_cores": [
-      32.0,
-      29.0,
-      22.5,
-      17.9,
-      45.7,
-      43.9,
-      28.5,
-      14.9
+      20.0,
+      17.1,
+      14.6,
+      10.0,
+      32.5,
+      30.0,
+      17.1,
+      9.8
     ],
-    "mem": 82.7,
-    "mem_used_gb": 2.59,
+    "mem": 73.9,
+    "mem_used_gb": 3.26,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 71.6,
+    "proc_mem_mb": 651.7,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 23572768768,
-    "net_tx": 21970554880,
-    "down_kbps": 738.6,
-    "up_kbps": 452.8,
-    "disk_free_gb": 10.7,
+    "net_rx": 23752410112,
+    "net_tx": 22240133120,
+    "down_kbps": 940.5,
+    "up_kbps": 730.4,
+    "disk_free_gb": 10.3,
     "load": [
-      3.3,
-      3.82,
-      4.77
+      3.41,
+      3.31,
+      4.04
     ],
     "cores": 8
   },
-  "disk_mb": 201.0,
+  "disk_mb": 211.9,
   "github": {
     "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (4 MB), your data is kept here",
+    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (3 MB), your data is kept here",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794634127.5843892,
-    "next_sync_s": 216,
-    "commits": 122
+    "last_push": 1794634866.357256,
+    "next_sync_s": 276,
+    "commits": 123
   },
   "last_sample": {
-    "type": "web image",
-    "topic": "visible difference",
-    "problem": "This high school annual documents the students, teachers, clubs, athletics, and other events of the 1987-1988 school year.",
-    "solution": "Public domain",
-    "source": "wikimedia commons"
+    "type": "archive Q&A",
+    "topic": "stack exchange dump",
+    "problem": "Instruction: Solve the following problem and explain the reasoning. Input: Here's a fun one! In chemical notation, can I safely assume that the notation of - a single lower-case latin character - followed by a hyphen - followed by an Element upper-case latin character (and possibly more characters) should always be typeset as - italic lower-case character - hyphen (i.e. never is a bond) -\u2026",
+    "solution": "Response: Easy - let's go. tl;dr: That's probably a good approach. So, there are at least three different things here. None of these abbreviations are standardised as far as I'm aware[1], so whatever is done is going to be just as non-standard as any other approach. - Specific shorthands for alkyl functional groups: t-Bu, i-Pr, n-Bu, c-Hex I've seen the approach you've suggested used for these,\u2026",
+    "source": "stackexchange"
   }
 }
