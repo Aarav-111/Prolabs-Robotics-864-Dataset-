@@ -2,35 +2,35 @@
   "state": "running",
   "offline": false,
   "disk_low": false,
-  "disk_free_gb": 12.0,
+  "disk_free_gb": 11.9,
   "product": "Parallel Web Technologies",
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794653225.0973692,
-  "updated_iso": "2026-11-14T16:17:05",
-  "uptime_s": 168724,
+  "updated": 1794654337.9435441,
+  "updated_iso": "2026-11-14T16:35:37",
+  "uptime_s": 169837,
   "workers": 256,
   "effective_workers": 256,
-  "in_flight": 256,
+  "in_flight": 253,
   "busy_by_kind": {
+    "web_images": 21,
     "text": 116,
-    "web_images": 24,
     "archive": 116
   },
-  "waiting": 234,
+  "waiting": 2,
   "processes": 1,
   "fields": {
-    "computer science": 1026854,
+    "computer science": 1028794,
     "mathematics": 927748,
-    "general": 663374,
-    "engineering": 523716,
+    "general": 667188,
+    "engineering": 525279,
     "physics": 502898,
     "medicine": 337261,
     "chemistry": 308727,
     "biology": 295882,
     "economics and finance": 220375,
-    "earth and space": 205141,
+    "earth and space": 205338,
     "materials science": 189692,
     "humanities": 131611,
     "statistics": 126739,
@@ -66,36 +66,36 @@
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 5659033,
-    "originals": 31048,
-    "variants": 5627985,
-    "web_images": 6118,
+    "text": 5666547,
+    "originals": 31086,
+    "variants": 5635461,
+    "web_images": 6173,
     "synthetic_images": 14064,
-    "images": 20182,
+    "images": 20237,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2799780902,
-    "tasks_done": 95816,
+    "tokens": 2802596821,
+    "tasks_done": 96010,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 9440
   },
   "by_kind": {
-    "archive": 13195,
-    "text": 18564,
-    "web_images": 17606,
+    "archive": 13259,
+    "text": 18612,
+    "web_images": 17688,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2799780902,
-  "per_min": 2430.2,
+  "tokens": 2802596821,
+  "per_min": 0.0,
   "topics": {
     "known": 109914,
-    "explored": 30041,
-    "queued": 79753,
+    "explored": 30089,
+    "queued": 79705,
     "space": 6594840,
     "next": [
       [
@@ -149,63 +149,63 @@
     ],
     "recent": [
       [
-        "tick-borne pathogens",
-        "biology",
+        "infrared camouflage",
+        "engineering",
         0
       ],
       [
-        "td-scdma",
-        "computer science",
-        0
-      ],
-      [
-        "bloom filters",
-        "computer science",
-        0
-      ],
-      [
-        "organolithium reactivity",
-        "chemistry",
-        0
-      ],
-      [
-        "co2 migration",
-        "earth and space",
-        3146
-      ],
-      [
-        "semiconductor laser theory",
-        "",
-        1341
-      ],
-      [
-        "race and medicine",
+        "education, safety, and science studies",
         "humanities",
-        826
+        0
       ],
       [
-        "pathognomonic",
+        "lipopolysaccharide",
         "",
-        579
+        0
       ],
       [
-        "beaked whales",
+        "two-dimensional digital filters",
+        "computer science",
+        0
+      ],
+      [
+        "pollutant dispersion",
         "earth and space",
-        310
+        0
       ],
       [
-        "relaxation (psychology)",
+        "itil v3",
+        "economics and finance",
+        0
+      ],
+      [
+        "reading programs",
+        "humanities",
+        0
+      ],
+      [
+        "social work curriculum",
+        "humanities",
+        0
+      ],
+      [
+        "loam",
         "",
-        201
+        0
       ],
       [
-        "vasospasm",
-        "medicine",
-        111
+        "post-irradiation examination",
+        "materials science",
+        0
       ],
       [
-        "primary care",
-        "",
+        "license plate identification",
+        "computer science",
+        0
+      ],
+      [
+        "qualitative-quantitative integration",
+        "humanities",
         0
       ]
     ],
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794653225.0957708,
-    "cpu": 41.0,
+    "time": 1794654337.939878,
+    "cpu": 36.1,
     "cpu_cores": [
-      50.7,
-      50.0,
-      45.7,
-      45.9,
-      50.0,
-      44.0,
-      29.2,
-      13.1
+      46.4,
+      43.2,
+      42.8,
+      40.2,
+      33.0,
+      35.4,
+      25.2,
+      22.3
     ],
     "mem": 81.1,
-    "mem_used_gb": 2.7,
+    "mem_used_gb": 2.77,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 184.9,
+    "proc_mem_mb": 92.2,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 28692646912,
-    "net_tx": 28477507584,
-    "down_kbps": 1427.7,
-    "up_kbps": 1312.5,
-    "disk_free_gb": 12.0,
+    "net_rx": 28749020160,
+    "net_tx": 28527801344,
+    "down_kbps": 0.1,
+    "up_kbps": 0.1,
+    "disk_free_gb": 11.9,
     "load": [
-      2.55,
-      2.32,
-      2.41
+      13.99,
+      4.95,
+      3.34
     ],
     "cores": 8
   },
-  "disk_mb": 681.7,
+  "disk_mb": 690.3,
   "github": {
-    "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794653045.6700978,
-    "next_sync_s": 296,
-    "commits": 160
+    "last_push": 1794653317.007027,
+    "next_sync_s": 0,
+    "commits": 161
   },
   "last_sample": {
     "type": "web image",
-    "topic": "race and medicine",
-    "problem": "Eastern Spot-billed Duck, Tenn\u014dji Park, Osaka.",
-    "solution": "CC BY-SA 4.0",
+    "topic": "beaked whales",
+    "problem": "Blainville's beaked whale (Mesoplodon densirostris).",
+    "solution": "Public domain",
     "source": "wikimedia commons"
   }
 }
