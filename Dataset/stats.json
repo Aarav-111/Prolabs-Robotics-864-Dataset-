@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794626789.601774,
-  "updated_iso": "2026-11-14T08:56:29",
-  "uptime_s": 142289,
+  "updated": 1794626883.151965,
+  "updated_iso": "2026-11-14T08:58:03",
+  "uptime_s": 142382,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 222,
+  "waiting": 228,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
@@ -26,7 +26,7 @@
     "physics": 502898,
     "general": 410453,
     "engineering": 315857,
-    "medicine": 252311,
+    "medicine": 253092,
     "biology": 218282,
     "chemistry": 206022,
     "economics and finance": 128788,
@@ -35,7 +35,7 @@
     "materials science": 104289,
     "psychology": 78294,
     "humanities": 68406,
-    "programming": 29502,
+    "programming": 29615,
     "machine learning": 20661,
     "robotics": 3515,
     "general knowledge": 3476
@@ -60,38 +60,38 @@
     "statistics": 962
   },
   "by_source": {
-    "stack exchange dump": 54855,
-    "openlifescienceai/medmcqa": 14912,
+    "stack exchange dump": 54968,
+    "openlifescienceai/medmcqa": 15693,
     "qiaojin/PubMedQA": 2431,
     "allenai/ai2_arc": 0
   },
   "counts": {
-    "text": 4039991,
-    "originals": 22336,
-    "variants": 4017655,
-    "web_images": 3341,
+    "text": 4040885,
+    "originals": 22337,
+    "variants": 4018548,
+    "web_images": 3353,
     "synthetic_images": 14064,
-    "images": 17405,
+    "images": 17417,
     "vla_episodes": 14064,
     "vla_frames": 173566,
-    "tokens": 2147982815,
-    "tasks_done": 79248,
+    "tokens": 2148437848,
+    "tasks_done": 79287,
     "tasks_failed": 10,
     "topics_added": 108651,
-    "preference": 5310
+    "preference": 5338
   },
   "by_kind": {
-    "archive": 7820,
+    "archive": 7840,
     "text": 12789,
-    "web_images": 12188,
+    "web_images": 12207,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
     "seed": 0,
     "seed_concepts": 0
   },
-  "tokens": 2147982815,
-  "per_min": 127921.7,
+  "tokens": 2148437848,
+  "per_min": 8868.5,
   "topics": {
     "known": 109914,
     "explored": 24266,
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794626789.600854,
-    "cpu": 37.4,
+    "time": 1794626883.150501,
+    "cpu": 26.1,
     "cpu_cores": [
-      44.2,
-      40.9,
-      35.8,
-      32.7,
-      48.6,
-      42.7,
-      36.4,
-      18.0
+      43.5,
+      38.4,
+      35.5,
+      32.3,
+      29.0,
+      18.9,
+      9.2,
+      1.8
     ],
-    "mem": 80.1,
-    "mem_used_gb": 2.87,
+    "mem": 78.0,
+    "mem_used_gb": 3.03,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 704.2,
+    "proc_mem_mb": 191.3,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 21187712000,
-    "net_tx": 18601346048,
-    "down_kbps": 1474.6,
-    "up_kbps": 1445.9,
+    "net_rx": 21266312192,
+    "net_tx": 18697860096,
+    "down_kbps": 892.0,
+    "up_kbps": 806.3,
     "disk_free_gb": 11.3,
     "load": [
-      5.13,
-      6.22,
-      7.97
+      4.55,
+      5.72,
+      7.58
     ],
     "cores": 8
   },
-  "disk_mb": 145.4,
+  "disk_mb": 145.1,
   "github": {
-    "state": "error",
-    "error": "The upload was too slow for GitHub (timeout) - the next push is smaller (1 MB), your data is kept here",
+    "state": "pushed",
+    "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794624890.7660851,
-    "next_sync_s": 278,
-    "commits": 101
+    "last_push": 1794626798.66125,
+    "next_sync_s": 185,
+    "commits": 102
   },
   "last_sample": {
     "type": "archive Q&A",
-    "topic": "stack exchange dump",
-    "problem": "Q: Consider the following problem. Suppose `System.identityHashCode(object1)==123` and `object1` is garbage collected. Is it possible that a new created `object2` can have the same identity hash code as `object1` had before it was GC'ed ?",
-    "solution": "A: Is it possible that a new created object2 can have the same identity hash code as object1 got before it was GC'ed ? Yes it is. The identity hashcode might be derived from the address of the object when the approach is first called for the object. (Or it might be generated some other way. The spec allows a lot of different mechanisms to be used.) So, if the GC collects `object1`, and a new\u2026",
-    "source": "stackexchange"
+    "topic": "openlifescienceai/medmcqa",
+    "problem": "User: Okay, so: A woman died within 5 years of marriage under suspicious circumstances. Her parents complained that her in laws used to frequently demand for dowry. Under which of the following sections can be a magistrate authorize autopsy of the case? A) Section 302 IPC B) Section 174 Cr Pc C) Section 174 Cr Pc D) Section 304 IPC",
+    "solution": "Assistant: So here's the trick. Answer: C) Section 174 Cr Pc Explanation: ref: The Essentials Forensic Medicine & Toxicology Dr.K.S. Narayana Reddy 32nd edition pg no 280 S.174 (3)Cr.P.C. Procedure in dowry (suicide,suspected murder ,request by a relative; doubt of cause of death, police look at necessary ) police has to enqire and repo.dowry death occur either by mmurder of a married woomenor\u2026",
+    "source": "huggingface"
   }
 }
