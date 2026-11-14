@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794629242.6339111,
-  "updated_iso": "2026-11-14T09:37:22",
-  "uptime_s": 144742,
+  "updated": 1794629273.686572,
+  "updated_iso": "2026-11-14T09:37:53",
+  "uptime_s": 144773,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 256,
@@ -18,7 +18,7 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 247,
+  "waiting": 253,
   "processes": 1,
   "fields": {
     "mathematics": 925662,
@@ -91,7 +91,7 @@
     "seed_concepts": 0
   },
   "tokens": 2194252286,
-  "per_min": 1147.8,
+  "per_min": 833.5,
   "topics": {
     "known": 109914,
     "explored": 24495,
@@ -213,44 +213,44 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794629242.6254468,
-    "cpu": 34.7,
+    "time": 1794629273.685642,
+    "cpu": 22.7,
     "cpu_cores": [
-      52.9,
-      46.3,
-      46.0,
-      43.6,
-      28.2,
-      32.0,
-      12.3,
-      16.8
+      24.3,
+      21.6,
+      16.5,
+      13.2,
+      53.9,
+      34.4,
+      11.0,
+      6.9
     ],
-    "mem": 87.3,
-    "mem_used_gb": 3.27,
+    "mem": 86.3,
+    "mem_used_gb": 4.92,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 109.3,
+    "proc_mem_mb": 85.4,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 22217904128,
-    "net_tx": 20079521792,
-    "down_kbps": 658.0,
-    "up_kbps": 1127.5,
+    "net_rx": 22233990144,
+    "net_tx": 20109239296,
+    "down_kbps": 533.0,
+    "up_kbps": 953.6,
     "disk_free_gb": 10.5,
     "load": [
-      2.62,
-      3.8,
-      5.87
+      2.34,
+      3.62,
+      5.74
     ],
     "cores": 8
   },
-  "disk_mb": 184.5,
+  "disk_mb": 184.1,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794629240.868875,
-    "next_sync_s": 210,
-    "commits": 107
+    "last_push": 1794629271.861946,
+    "next_sync_s": 179,
+    "commits": 108
   },
   "last_sample": {
     "type": "web image",
