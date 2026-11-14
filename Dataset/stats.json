@@ -7,9 +7,9 @@
   "developer": "Prolabs Robotics",
   "started": 1794484500.8004212,
   "started_iso": "2026-11-12T17:25:00",
-  "updated": 1794635429.650146,
-  "updated_iso": "2026-11-14T11:20:36",
-  "uptime_s": 150929,
+  "updated": 1794635493.710227,
+  "updated_iso": "2026-11-14T11:21:44",
+  "uptime_s": 150993,
   "workers": 256,
   "effective_workers": 256,
   "in_flight": 255,
@@ -18,7 +18,7 @@
     "text": 116,
     "archive": 116
   },
-  "waiting": 210,
+  "waiting": 133,
   "processes": 1,
   "fields": {
     "mathematics": 926585,
@@ -75,7 +75,7 @@
     "vla_episodes": 14064,
     "vla_frames": 173566,
     "tokens": 2278202592,
-    "tasks_done": 82773,
+    "tasks_done": 82775,
     "tasks_failed": 10,
     "topics_added": 108651,
     "preference": 6408
@@ -83,7 +83,7 @@
   "by_kind": {
     "archive": 8998,
     "text": 14026,
-    "web_images": 13298,
+    "web_images": 13300,
     "synthetic_images": 0,
     "vla": 0,
     "expand": 0,
@@ -91,7 +91,7 @@
     "seed_concepts": 0
   },
   "tokens": 2278202592,
-  "per_min": 913.5,
+  "per_min": 612.6,
   "topics": {
     "known": 109914,
     "explored": 25503,
@@ -213,50 +213,50 @@
     "focus_left": 0
   },
   "system": {
-    "time": 1794635429.573416,
-    "cpu": 26.0,
+    "time": 1794635493.433783,
+    "cpu": 28.4,
     "cpu_cores": [
-      18.7,
-      15.8,
-      11.0,
-      9.1,
-      46.8,
-      46.5,
-      38.1,
-      22.6
+      16.0,
+      12.8,
+      9.6,
+      8.1,
+      53.1,
+      52.6,
+      45.2,
+      29.9
     ],
-    "mem": 75.4,
-    "mem_used_gb": 3.13,
+    "mem": 74.9,
+    "mem_used_gb": 3.19,
     "mem_total_gb": 8.0,
-    "proc_mem_mb": 246.6,
+    "proc_mem_mb": 227.2,
     "threads": 260,
     "proc_cpu": 0.0,
-    "net_rx": 23811238912,
-    "net_tx": 22301201408,
-    "down_kbps": 1149.9,
-    "up_kbps": 1019.8,
+    "net_rx": 23828315136,
+    "net_tx": 22334238720,
+    "down_kbps": 367.5,
+    "up_kbps": 596.1,
     "disk_free_gb": 10.3,
     "load": [
-      2.56,
-      2.99,
-      3.81
+      3.15,
+      3.05,
+      3.78
     ],
     "cores": 8
   },
-  "disk_mb": 219.7,
+  "disk_mb": 218.9,
   "github": {
     "state": "pushed",
     "error": "",
     "repo": "https://github.com/Aarav-111/Prolabs-Robotics-864-Dataset-.git",
-    "last_push": 1794635364.5329258,
-    "next_sync_s": 162,
-    "commits": 124
+    "last_push": 1794635535.100663,
+    "next_sync_s": 98,
+    "commits": 125
   },
   "last_sample": {
     "type": "web image",
-    "topic": "budget participation",
-    "problem": "Handshake between Simon Harris, Irish Deputy Prime Minster (T\u00e1naiste) and Minister for Finance, and Piotr Serafin, European Commissioner for Budget, Anti-Fraud and Public Administration (from left to right)",
-    "solution": "CC BY 4.0",
+    "topic": "sports prediction",
+    "problem": "Prediction market platform for sports and real-world outcomes",
+    "solution": "CC BY-SA 4.0",
     "source": "wikimedia commons"
   }
 }
